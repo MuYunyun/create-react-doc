@@ -1,0 +1,7 @@
+.cache
+.gitignore
+.editorconfig
+.create-react-doc-dist
+node_modules
+package-lock.json
+dist
