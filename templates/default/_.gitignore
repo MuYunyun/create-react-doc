@@ -1,0 +1,13 @@
+node_modules
+package-lock.json
+.DS_Store
+.cache
+.rdoc-dist
+
+*.bak
+*.log
+*.tem
+*.temp
+#.swp
+*.*~
+~*.*
