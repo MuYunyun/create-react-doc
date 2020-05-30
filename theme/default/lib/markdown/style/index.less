@@ -1,0 +1,36 @@
+.markdown {
+  padding: 0 20px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+  font-size: 14px;
+  line-height: 1.5;
+  word-wrap: break-word;
+  color: #314659;
+  & >*:first-child {
+    margin-top: 0 !important
+  }
+
+  & >*:last-child {
+    margin-bottom: 0 !important
+  }
+  :global {
+    @import "./default.less";
+    @import "./xml.less";
+    @import "./swift.less";
+    @import "./diff.less";
+    @import "./css.less";
+    @import "./javascript.less";
+  }
+}
+
+.pageTitle {
+  font-size: 30px;
+  line-height: 38px;
+  color: #0d1a26;
+  font-weight: 500;
+  margin-bottom: 20px;
+  margin-top: 8px;
+  padding-left: 20px;
+  font-family: Lato,Helvetica Neue For Number,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,PingFang SC,Hiragino Sans GB,Microsoft YaHei,Helvetica Neue,Helvetica,Arial,sans-serif;
+}

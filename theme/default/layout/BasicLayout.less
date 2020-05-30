@@ -1,0 +1,48 @@
+.wapper {
+  &::after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+
+.wapperContent {
+  padding: 75px 0 0 0;
+  max-width: 1200px;
+  margin: 0px auto 0;
+}
+
+.menuWapper {
+  width: 220px;
+  float: left;
+  font-size: 14px;
+  color: #6d6d6d;
+  ul li {
+    list-style: none;
+  }
+  ul ul {
+    padding: 0 0 0 0;
+  }
+  li {
+    padding: 0 0 0 21px;
+    line-height: 40px;
+  }
+  li li {
+    padding: 0 0 0 16px;
+  }
+  :global {
+    .active a{
+      color: #1890ff;
+    }
+  }
+}
+
+.content {
+  margin-left: 220px;
+  border-left: 1px solid #e9e9e9;
+  min-height: 300px;
+}
+
+.contentNoMenu {
+  min-height: 400px;
+}

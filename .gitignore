@@ -1,0 +1,13 @@
+node_modules
+.create-react-doc-dist
+package-lock.json
+.cache
+.DS_Store
+
+*.bak
+*.tem
+*.log
+*.temp
+#.swp
+*.*~
+~*.*
