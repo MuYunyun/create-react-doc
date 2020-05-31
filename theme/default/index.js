@@ -5,7 +5,6 @@ import BasicLayout from './layout/BasicLayout';
 import IndexLayout from './layout/IndexLayout';
 import NoMatch from './component/NoMatch';
 import Loading from './component/Loading';
-
 import './index.less';
 
 // 获取首页路由参数

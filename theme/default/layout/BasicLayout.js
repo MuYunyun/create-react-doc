@@ -1,10 +1,10 @@
 import React, { PureComponent } from 'react';
 import { Switch, Link, Route, Redirect } from 'react-router-dom';
 import classNames from 'classnames';
-import styles from './BasicLayout.less';
 import Header from '../component/Header';
 import Footer from '../component/Footer';
 import logo from '../rdoc.logo.svg';
+import styles from './BasicLayout.less';
 
 function getCurrentArticle(routeData, path) {
   let article = null;

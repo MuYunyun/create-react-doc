@@ -26,7 +26,7 @@ title: Layout 布局组件
 
 ## Github跳转
 
-新建一个目录 `github`，命令配置 `rdoc -d tutorial,doc,github` 将在主菜单上显示，在 `github` 目录下新建 `READEME.md` 文件，添加 Markdown 配置如下：
+新建一个目录 `github`，命令配置 `rdoc -d tutorial,doc,github` 将在主菜单上显示，在 `github` 目录下新建 `README.md` 文件，添加 Markdown 配置如下：
 
 > ⚠️ 注意: github 配置项，会增加 `github` 图标
 > 如果不想显示`图标`，就将 `github` 指定 `url` 配置。
