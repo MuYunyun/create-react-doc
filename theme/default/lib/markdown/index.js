@@ -3,10 +3,10 @@ import ReactDOM from 'react-dom';
 import classNames from 'classnames';
 import ReactMarkdown from 'react-markdown';
 import hljs from 'highlight.js';
-import styles from './style/index.less';
 import InlineCode from './InlineCode';
 import Link from './Link';
 import Loading from '../../component/Loading/';
+import styles from './style/index.less';
 
 hljs.configure({
   tabReplace: '  ', // 2 spaces

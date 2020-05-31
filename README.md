@@ -96,14 +96,14 @@ Options:
 
 Examples:
 
-  $ create react doc init
-  $ create react doc init doc-example
-  $ create react doc -d doc/mm
-  $ create react doc -d tutorial,doc
-  $ create react doc -d tutorial,doc --clean --build
-  $ create react doc -p 2323  -d doc --clean
-  $ create react doc --host 0.0.0.0 -d doc --clean
-  $ create react doc --publish https://<your-git-repo>.git --branch master
+  $ create-react-doc init
+  $ create-react-doc init doc-example
+  $ create-react-doc -d doc/mm
+  $ create-react-doc -d tutorial,doc
+  $ create-react-doc -d tutorial,doc --clean --build
+  $ create-react-doc -p 2323  -d doc --clean
+  $ create-react-doc --host 0.0.0.0 -d doc --clean
+  $ create-react-doc --publish https://<your-git-repo>.git --branch master
 ```
 
 ### 开发
