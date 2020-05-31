@@ -40,7 +40,7 @@ module.exports = function (cmd) {
       // https://ilikekillnerds.com/2018/03/disable-webpack-4-native-json-loader/
       loaders.push({
         test: /rdoc\.tree\.data\.json$/,
-        // 禁用Webpack 4本身的JSON加载程序
+        // 禁用 Webpack 4 本身的 JSON 加载程序
         type: 'javascript/auto',
         use: [
           {

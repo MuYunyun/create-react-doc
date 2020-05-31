@@ -43,7 +43,6 @@ function routeData(data, arrayRoute = [], routePath = '/', article) {
 
 
 function menuSourceFormat(data, routePath, article) {
-  console.log('data', data);
   const arr = [];
   data.forEach((item) => {
     const routePropsCurrent = `${routePath || ''}/${item.name}`.replace(/.md$/, '');
@@ -72,17 +71,18 @@ function menuSourceFormat(data, routePath, article) {
     item.article = article || item.name;
     arr.push(item);
   });
-  console.log('arr', arr);
   return arr;
 }
 
 const RoutersContainer = withRouter(({ ...props }) => {
+  /* eslint-disable */
+  debugger;
   const passProps = {
     routeData: routeData(menuSource),
+    // todo menuSource 的传递
     menuSource: menuSourceFormat(menuSource),
     ...props,
   };
-  console.log('theme', theme);
   return (
     <Switch>
       <Route path="/" render={routeProps => theme(lazyload, { ...routeProps, ...passProps })} />
