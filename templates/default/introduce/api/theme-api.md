@@ -22,7 +22,7 @@ import(`__project_root__/.cache/md/${filename}.md`).then((data) => {
   this.setState({
     markdown: data,
   }, () => {
-    // 找到当前组件根节点，循环code, 
+    // 找到当前组件根节点，循环code,
     // 对code里面的代码进行高亮
     let code = ReactDOM.findDOMNode(this);
     code = code.getElementsByTagName('code');
@@ -39,9 +39,9 @@ import(`__project_root__/.cache/md/${filename}.md`).then((data) => {
 
 那你需要建立一个 `替身` 文件 `rdoc.tree.data.json`，引用替身文件，就可以获取到目录索引内容，这个在编译的时候会自动返回文件索引的 `json`。
 
-> ⚠️ 替身文件名字，必须取名 `rdoc.tree.data.json`。   
-> ⚠️ 这个文件是必须建立，引用，这样可以渲染菜单。  
-> ⚠️ rdoc v1.3.0 以后版本不需要，如果你有同名文件会被替换成，Markdown 文件索引。  
+> ⚠️ 替身文件名字，必须取名 `rdoc.tree.data.json`。
+> ⚠️ 这个文件是必须建立，引用，这样可以渲染菜单。
+> ⚠️ rdoc v1.3.0 以后版本不需要，如果你有同名文件会被替换成，Markdown 文件索引。
 > ⚠️ Markdown 文件索引，会在入口函数传入。
 
 ```js
@@ -101,24 +101,24 @@ props.routeData.map((item) => {
 
 #### props.menuSource
 
-> path 你 Markdown 的全路径  
-> name 文件夹或者文件的名称  
-> type 当前节点是一个文件夹还是一个文件`file|directory`  
-> extension 类型为`file`的后缀  
+> path 你 Markdown 的全路径
+> name 文件夹或者文件的名称
+> type 当前节点是一个文件夹还是一个文件`file|directory`
+> extension 类型为`file`的后缀
 
-> **根据文件索引出来的参数**  
-> 
-> relative 相对于你指定的路径  
-> routePath 路由路径  
-> isEmpty  
-> size 文件大小  
-> mdconf 是你在 Markdown中定义的参数  
+> **根据文件索引出来的参数**
+>
+> relative 相对于你指定的路径
+> routePath 路由路径
+> isEmpty
+> size 文件大小
+> mdconf 是你在 Markdown中定义的参数
 
-> **Markdown手动配置的参数**  
-> 
-> sort 排序  
-> title 标题  
-> visible 是否隐藏菜单  
+> **Markdown手动配置的参数**
+>
+> sort 排序
+> title 标题
+> visible 是否隐藏菜单
 
 ```json
 [
@@ -172,9 +172,9 @@ props.routeData.map((item) => {
 
 #### props.routeData
 
-> props 文档配置及其信息  
-> path 路由信息，配合 `React Router` 使用  
-> relative 路径，从项目的，根目录开始，主要用于读取 Markdown 组合 Markdown 的文件名字  
+> props 文档配置及其信息
+> path 路由信息，配合 `React Router` 使用
+> relative 路径，从项目的，根目录开始，主要用于读取 Markdown 组合 Markdown 的文件名字
 
 ```json
 [
@@ -222,7 +222,6 @@ props.routeData.map((item) => {
 
 这个是定于的主框架模板，俗称通用布局，主要用于定制头部右边，不常变换的内容，你可以定义多个 `Layout`, 例如你定义 `Markdown` 参数，根据参数加载不用样式的通用布局。
 
-
 ## 默认依赖包
 
 工具基础的前端包工具，制作主题需要安装依赖包，提供一个实例 [rdoc-theme-load-react](https://github.com/react-doc/rdoc-theme-load-react)。
@@ -232,8 +231,8 @@ props.routeData.map((item) => {
   "classnames": "2.2.5",
   "highlight.js": "9.12.0",
   "prop-types": "15.6.0",
-  "react": "16.2.0",
-  "react-dom": "16.2.0",
+  "react": "^16.10.0",
+  "react-dom": "^16.10.0",
   "react-markdown": "3.1.3",
   "react-router-dom": "4.2.2",
 }

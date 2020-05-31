@@ -7,8 +7,6 @@
 create-react-doc
 ---
 
-[![Join the chat at https://gitter.im/j-rdoc/Lobby](https://badges.gitter.im/j-rdoc/Lobby.svg)](https://gitter.im/j-rdoc/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) [![](https://img.shields.io/github/issues/jaywcjlove/rdoc.svg)](https://github.com/jaywcjlove/rdoc/issues) [![](https://img.shields.io/github/forks/jaywcjlove/rdoc.svg)](https://github.com/jaywcjlove/rdoc/network) [![](https://img.shields.io/github/stars/jaywcjlove/rdoc.svg)](https://github.com/jaywcjlove/rdoc/stargazers) [![](https://img.shields.io/github/release/jaywcjlove/rdoc.svg)](https://github.com/jaywcjlove/rdoc/releases) [![jaywcjlove/sb](https://jaywcjlove.github.io/sb/lang/english.svg)](README.md)
-
 基于 React 的快速静态网站生成器，你只需要写 Markdown 文档即可。
 
 <div align="center">
@@ -17,9 +15,9 @@ create-react-doc
 
 ## 开始
 
-**create-react-doc** 使用非常简单，只需将其它作为模块安装并运行即可创建您的网站。
+**create-react-doc** 使用非常简单，只需将其它作为模块安装并运行即可创建您的网站。让我们开始吧！
 
-让我们开始吧！
+* [使用 case](https://github.com/MuYunyun/blog)
 
 ### 安装
 
@@ -28,19 +26,12 @@ create-react-doc
 
 ```bash
 npm install create-react-doc -g
-
-# /usr/local/bin/create-react-doc -> /usr/local/lib/node_modules/create-react-doc/.bin/create-react-doc.js
-# /usr/local/bin/create-react-doc-cli -> /usr/local/lib/node_modules/create-react-doc/.bin/create-react-doc.js
 ```
-
-增加了 `create-react-doc-cli` 命令来解决 Mac 集成 `create-react-doc` 命令冲突。
 
 1. 初始化项目
 
 ```bash
 create-react-doc init my-project  # Init project
-# 或者
-create-react-doc-cli init my-project
 ```
 
 2. 运行网站
