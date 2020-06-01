@@ -22,7 +22,7 @@ title: Layout 布局组件
 ⚠️ 通过配置菜单对应根目录下的 `README.md` 来改变 `菜单顺序` 和 `是否显示`，[配置参考](#/introduce/api/markdown-config)。
 
 > sort 菜单顺序
-> visible 菜单是否显示 `true` 不显示
+> visible 菜单是否显示 `false` 不显示
 
 ## Github跳转
 
