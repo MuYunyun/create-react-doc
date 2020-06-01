@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react';
+/* eslint-disable */
 import { Switch, Link, Route, Redirect } from 'react-router-dom';
 import classNames from 'classnames';
 import Header from '../component/Header';
@@ -41,26 +42,43 @@ export default class BasicLayout extends PureComponent {
         return 0;
       });
     }
+    /* eslint-disable */
     return (
       <ul>
         {
           menus.map((item, index) => {
-            if (item.isEmpty) {
-              return null;
-            }
-            if (item.children && item.children.length < 1) return null;
-            if (item.props && item.props.visible === true) return null;
+            debugger
+            // if (item.isEmpty) {
+            //   return null;
+            // }
+            // if (item.children && item.children.length < 1) return null;
+            if (item.props && item.props.visible === false) return null;
             if (/^README(.*)md$/.test(item.name)) return null;
             return (
               <li key={index}>
-                <div className={classNames({ active: pathname === item.routePath })}>
-                  {item && item.props && (item.props.redirect || item.props.isEmpty) ? <div>{(item.mdconf && item.mdconf.title) || ''}</div> : (
-                    <Link to={item.routePath} replace={pathname === item.routePath}>
-                      {item && item.mdconf.title ? item.mdconf.title : item.name}
+                <div
+                  className={classNames({
+                    active: pathname === item.routePath,
+                  })}
+                >
+                  {item &&
+                  item.props &&
+                  (item.props.redirect || item.props.isEmpty) ? (
+                    <div>{(item.mdconf && item.mdconf.title) || item.name}</div>
+                  ) : (
+                    <Link
+                      to={item.routePath}
+                      replace={pathname === item.routePath}
+                    >
+                      {item && item.mdconf.title
+                        ? item.mdconf.title
+                        : item.name}
                     </Link>
                   )}
                 </div>
-                {item.children && item.children.length > 0 && this.renderSubMenuItem(item.children)}
+                {item.children &&
+                  item.children.length > 0 &&
+                  this.renderSubMenuItem(item.children)}
               </li>
             );
           })

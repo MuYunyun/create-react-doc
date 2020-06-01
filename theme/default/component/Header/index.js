@@ -23,7 +23,7 @@ export default class Header extends PureComponent {
     }
     return menuSource.map((item, index) => {
       if (!item) return null;
-      if (item.mdconf && item.mdconf.visible === true) return null;
+      if (item.mdconf && item.mdconf.visible === false) return null;
 
       const url = item.mdconf && (item.mdconf.github || item.mdconf.url);
       if (url) {

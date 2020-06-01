@@ -133,7 +133,7 @@ props.routeData.map((item) => {
         "mdconf": {
           "title": "首页",
           "layout": "IndexLayout",
-          "visible": "true",
+          "visible": "false",
           "logo": "/introduce/assets/react-logo.svg"
         },
         "isEmpty": false,
@@ -151,7 +151,7 @@ props.routeData.map((item) => {
     "mdconf": {
       "title": "首页",
       "layout": "IndexLayout",
-      "visible": "true",
+      "visible": "false",
       "logo": "/introduce/assets/react-logo.svg"
     },
     "props": {
@@ -200,7 +200,7 @@ props.routeData.map((item) => {
     "mdconf": {
       "title": "首页",
       "layout": "IndexLayout",
-      "visible": "true",
+      "visible": "false",
       "logo": "/introduce/assets/react-logo.svg"
     },
     "props": {

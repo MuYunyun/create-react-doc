@@ -75,8 +75,6 @@ function menuSourceFormat(data, routePath, article) {
 }
 
 const RoutersContainer = withRouter(({ ...props }) => {
-  /* eslint-disable */
-  debugger;
   const passProps = {
     routeData: routeData(menuSource),
     // todo menuSource 的传递
