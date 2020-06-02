@@ -17,7 +17,6 @@ module.exports = function server(cmd) {
   const webpackConf = conf(cmd);
   const compiler = webpack(webpackConf);
 
-
   detect(DEFAULT_PORT).then((_port) => {
     if (DEFAULT_PORT !== _port) DEFAULT_PORT = _port;
 
@@ -37,7 +36,7 @@ module.exports = function server(cmd) {
       if (err) {
         return console.log(err); // eslint-disable-line
       }
-      clearConsole();
+      // clearConsole();
       // open browser
       openBrowsers(urls.localUrl);
     });

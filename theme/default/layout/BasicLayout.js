@@ -43,11 +43,11 @@ export default class BasicLayout extends PureComponent {
       });
     }
     /* eslint-disable */
+    debugger
     return (
       <ul>
         {
           menus.map((item, index) => {
-            debugger
             // if (item.isEmpty) {
             //   return null;
             // }
@@ -91,7 +91,8 @@ export default class BasicLayout extends PureComponent {
     const article = getCurrentArticle(routeData, pathname);
     menus = menus.filter(item => item.article === article);
     if (menus.length < 1) return null;
-    const menusObject = menus[0] && menus[0].children ? menus[0].children : [];
+    debugger
+    const menusObject = menus || [];
     return this.renderSubMenuItem(menusObject);
   }
   isCurentChildren() {
