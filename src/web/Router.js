@@ -71,6 +71,9 @@ function menuSourceFormat(data, routePath, article) {
     item.article = article || item.name;
     arr.push(item);
   });
+  /* eslint-disable */
+  debugger;
+  // todo: to show About、LeetCode in the root menu, to find how arr return.
   return arr;
 }
 
