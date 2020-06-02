@@ -75,6 +75,7 @@ program.markdownPaths.forEach((item) => {
 if (isExists) {
   FS.ensureDirSync(paths.catchDirPath);
   initCatch(program, () => {
+    console.log("program", program);
     if (program.build) {
       Build(program);
     } else {
