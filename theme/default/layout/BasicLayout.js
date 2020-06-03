@@ -61,9 +61,7 @@ export default class BasicLayout extends PureComponent {
                     active: pathname === item.routePath,
                   })}
                 >
-                  {item &&
-                  item.props &&
-                  (item.props.redirect || item.props.isEmpty) ? (
+                  {/* {item && item.props && (item.props.redirect || item.props.isEmpty) ? (
                     <div>{(item.mdconf && item.mdconf.title) || item.name}</div>
                   ) : (
                     <Link
@@ -74,7 +72,13 @@ export default class BasicLayout extends PureComponent {
                         ? item.mdconf.title
                         : item.name}
                     </Link>
-                  )}
+                  )} */}
+                  <Link
+                    to={item.routePath}
+                    replace={pathname === item.routePath}
+                  >
+                    {item && item.mdconf.title ? item.mdconf.title : item.name}
+                  </Link>
                 </div>
                 {item.children &&
                   item.children.length > 0 &&
@@ -88,8 +92,8 @@ export default class BasicLayout extends PureComponent {
   }
   renderSubMenu(menus) {
     const { location: { pathname }, routeData } = this.props;
-    const article = getCurrentArticle(routeData, pathname);
-    menus = menus.filter(item => item.article === article);
+    // const article = getCurrentArticle(routeData, pathname);
+    // menus = menus.filter(item => item.article === article);
     if (menus.length < 1) return null;
     debugger
     const menusObject = menus || [];
@@ -105,6 +109,7 @@ export default class BasicLayout extends PureComponent {
   render() {
     const { menuSource, routeData, indexProps } = this.props;
     const isChild = this.isCurentChildren();
+    // console.log("menuSource", menuSource);
     return (
       <div className={styles.wapper} >
         <Header logo={logo} href="/" location={this.props.location} indexProps={indexProps} menuSource={menuSource} />

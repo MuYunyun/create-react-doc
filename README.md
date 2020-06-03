@@ -9,6 +9,8 @@ create-react-doc
 
 基于 React 的快速静态网站生成器，你只需要写 Markdown 文档即可。
 
+* 文件即博客
+
 <div align="center">
   <img src="./rdoc.png">
 </div>
@@ -52,7 +54,7 @@ npm run build
 ```js
 {
   "scripts": {
-    "deploy": "rdoc --publish <your repo url>"
+    "deploy": "create-react-doc --publish <your repo url>"
     ...
   },
   ...
