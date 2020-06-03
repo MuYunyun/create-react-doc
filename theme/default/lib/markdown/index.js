@@ -53,14 +53,15 @@ export default class Markdown extends React.Component {
     });
   }
   render() {
+    /* eslint-disable */
     const { mdconf: { title, layout } } = this.props;
     const { markdownStr } = this.state;
     return (
       <div className={styles.markdownWapper}>
-        {title && layout !== 'IndexLayout' && <h1 id={title} className={styles.pageTitle}>{title}</h1>}
+        {/* {title && layout !== 'IndexLayout' && <h1 id={title} className={styles.pageTitle}>{title}</h1>} */}
         {markdownStr ? (
           <ReactMarkdown
-            className={classNames('markdown', styles.markdown)}
+            className={classNames("markdown", styles.markdown)}
             source={markdownStr}
             escapeHtml={false}
             renderers={{
@@ -69,7 +70,7 @@ export default class Markdown extends React.Component {
               linkReference: Link,
             }}
             allowNode={(node, index, parent) => {
-              if (node.type === 'html') {
+              if (node.type === "html") {
                 // if (/<!--([^]+?)-->/.test(node.value)) return false;
                 // const scriptValue = node.value.match(/<script.*?>(.*?)<\/script>/ig);
                 // node.value.replace(/<script.*?>(.*?)<\/script>/, (te) => {
@@ -77,9 +78,17 @@ export default class Markdown extends React.Component {
                 // });
               }
               // 判断 上一个节点是否为 <!--DemoStart -->
-              if (node.type === 'code' && parent.children && parent.children.length > 0 && parent.children[index - 1]) {
+              if (
+                node.type === "code" &&
+                parent.children &&
+                parent.children.length > 0 &&
+                parent.children[index - 1]
+              ) {
                 const parentNode = parent.children[index - 1];
-                if (parentNode.type === 'html' && /<!--\s?DemoStart\s?-->/.test(parentNode.value)) {
+                if (
+                  parentNode.type === "html" &&
+                  /<!--\s?DemoStart\s?-->/.test(parentNode.value)
+                ) {
                   node.value = `__dome__${node.value}`;
                 }
               }
