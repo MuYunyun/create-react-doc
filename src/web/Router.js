@@ -10,19 +10,23 @@ import menuSource from './rdoc.tree.data.json';
 function directoryIsRoute(arr, props = false) {
   if (!arr || arr.length === 0) return false;
   console.log('arr', arr);
-  // const index = arr.filter(item => item.name === 'README.md' && item.mdconf);
-  // if (index && index.length > 0) props = { ...index[0] };
-  // return props;
+  const pickReadmeArr = arr.filter(item => item.name === 'README.md' && item.mdconf);
+  const extraProps = pickReadmeArr && pickReadmeArr.length > 0 ? pickReadmeArr[0] : {}
   return {
-    // extension: ".md",
-    // isEmpty: true,
-    mdconf: {},
-    // name: "Test1.md",
-    // path: "/About/Test1.md",
-    // relative: "/About/Test1.md",
-    // size: 13,
-    type: "directory"
-  }
+    ...extraProps,
+    isEmpty: !!(pickReadmeArr && pickReadmeArr.length === 0),
+    mdconf: {}
+  };
+    // return {
+    //   // extension: ".md",
+
+    //   mdconf: {},
+    //   // name: "Test1.md",
+    //   // path: "/About/Test1.md",
+    //   // relative: "/About/Test1.md",
+    //   // size: 13,
+    //   type: "directory",
+    // };
 }
 // 路由数据序列化
 function routeData(data, arrayRoute = [], routePath = '/', article) {
