@@ -43,11 +43,12 @@ export default class BasicLayout extends PureComponent {
       });
     }
     /* eslint-disable */
-    debugger
+    // debugger
     return (
       <ul>
         {
           menus.map((item, index) => {
+            console.log('item', item)
             // if (item.isEmpty) {
             //   return null;
             // }
@@ -61,24 +62,20 @@ export default class BasicLayout extends PureComponent {
                     active: pathname === item.routePath,
                   })}
                 >
-                  {/* {item && item.props && (item.props.redirect || item.props.isEmpty) ? (
+                  {item &&
+                  item.type === "directory" && item.props &&
+                  item.props.isEmpty ? (
                     <div>{(item.mdconf && item.mdconf.title) || item.name}</div>
                   ) : (
                     <Link
                       to={item.routePath}
                       replace={pathname === item.routePath}
                     >
-                      {item && item.mdconf.title
+                      {item && item.mdconf && item.mdconf.title
                         ? item.mdconf.title
                         : item.name}
                     </Link>
-                  )} */}
-                  <Link
-                    to={item.routePath}
-                    replace={pathname === item.routePath}
-                  >
-                    {item && item.mdconf.title ? item.mdconf.title : item.name}
-                  </Link>
+                  )}
                 </div>
                 {item.children &&
                   item.children.length > 0 &&
