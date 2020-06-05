@@ -5,8 +5,8 @@ import Menu from '../component/Menu'
 import classNames from 'classnames';
 import Header from '../component/Header';
 import Footer from '../component/Footer';
-import styles from './BasicLayout.less';
 import logo from '../rdoc.logo.svg';
+import styles from './BasicLayout.less';
 
 const SubMenu = Menu.SubMenu;
 
@@ -48,63 +48,61 @@ export default class BasicLayout extends PureComponent {
     /* eslint-disable */
     // debugger
     return (
+      <>
+        {menus.map((item, index) => {
+          console.log("item", item);
+          if (item.props && item.props.visible === false) return null;
+          if (/^README(.*)md$/.test(item.name)) return null;
+          return item.children && item.children.length > 0 ? (
+            <SubMenu>{this.renderSubMenuItem(item.children)}</SubMenu>
+          ) : (
+            <Menu.Item
+              title={
+                12345
+                // <div
+                //   className={classNames({
+                //     active: pathname === item.routePath,
+                //   })}
+                // >
+                //   {item &&
+                //   item.type === "directory" &&
+                //   item.props &&
+                //   item.props.isEmpty ? (
+                //     <div>{(item.mdconf && item.mdconf.title) || item.name}</div>
+                //   ) : (
+                //     <Link
+                //       to={item.routePath}
+                //       replace={pathname === item.routePath}
+                //     >
+                //       {item && item.mdconf && item.mdconf.title
+                //         ? item.mdconf.title
+                //         : item.name}
+                //     </Link>
+                //   )}
+                // </div>
+              }
+            />
+          );
+        })}
+      </>
+    );
+  }
+  renderMenu(menus) {
+    const { location: { pathname }, routeData } = this.props;
+    // const article = getCurrentArticle(routeData, pathname);
+    // menus = menus.filter(item => item.article === article);
+    if (menus.length < 1) return null;
+    const menusObject = menus || [];
+    return (
       <Menu
         mode="inline"
         // openKeys={this.state.openKeys}
         // onOpenChange={this.onOpenChange}
         style={{ width: 256 }}
       >
-        {menus.map((item, index) => {
-          console.log("item", item);
-          // if (item.isEmpty) {
-          //   return null;
-          // }
-          // if (item.children && item.children.length < 1) return null;
-          if (item.props && item.props.visible === false) return null;
-          if (/^README(.*)md$/.test(item.name)) return null;
-          return;
-          <>
-            <Menu.Item
-              title={
-                <div
-                  className={classNames({
-                    active: pathname === item.routePath,
-                  })}
-                >
-                  {item &&
-                  item.type === "directory" &&
-                  item.props &&
-                  item.props.isEmpty ? (
-                    <div>{(item.mdconf && item.mdconf.title) || item.name}</div>
-                  ) : (
-                    <Link
-                      to={item.routePath}
-                      replace={pathname === item.routePath}
-                    >
-                      {item && item.mdconf && item.mdconf.title
-                        ? item.mdconf.title
-                        : item.name}
-                    </Link>
-                  )}
-                </div>
-              }
-            />
-          </>;
-        })}
-        {/* {item.children &&
-            item.children.length > 0 &&
-          this.renderSubMenuItem(item.children)} */}
+        { this.renderSubMenuItem(menusObject) }
       </Menu>
-    );
-  }
-  renderSubMenu(menus) {
-    const { location: { pathname }, routeData } = this.props;
-    // const article = getCurrentArticle(routeData, pathname);
-    // menus = menus.filter(item => item.article === article);
-    if (menus.length < 1) return null;
-    debugger
-    const menusObject = menus || [];
-    return this.renderSubMenuItem(menusObject);
+    )
   }
   isCurentChildren() {
     const { location: { pathname }, menuSource, routeData } = this.props;
@@ -122,7 +120,7 @@ export default class BasicLayout extends PureComponent {
         <Header logo={logo} href="/" location={this.props.location} indexProps={indexProps} menuSource={menuSource} />
         <div className={styles.wapperContent}>
           {isChild && (
-            <div className={styles.menuWapper}> {this.renderSubMenu(menuSource)} </div>
+            <div className={styles.menuWapper}> {this.renderMenu(menuSource)} </div>
           )}
           <div className={classNames('content', {
             [`${styles.content}`]: isChild,
