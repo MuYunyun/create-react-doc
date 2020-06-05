@@ -2,9 +2,9 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import cx from 'classnames';
 import Transition from './transition';
-import { getMenuStyle, Level } from './util';
+import { getMenuStyle } from './util';
 import { useMenuContext } from './context';
-import './style/index.less';
+import styles from './style/index.less';
 
 const { useState, useRef, useLayoutEffect } = React;
 
@@ -26,7 +26,7 @@ function SubMenu({
   children,
   title,
   icon,
-  level = Level.First,
+  level = 0,
   keyValue = '',
   sideBySide,
   onTitleClick = () => {},
@@ -127,12 +127,20 @@ function SubMenu({
       return ReactDOM.createPortal(
         <div style={style}>
           <div
-            className={cx('submenu', 'submenu-popup')}
+            className={cx([styles.submenu, styles['submenu-popup']])}
             ref={popupSubMenu}
             onMouseEnter={handleChildMouseEnter}
             onMouseLeave={handleChildMouseLeave}
           >
-            <ul className={cx('menu', `menu-${mode}`, `menu-${theme}`)}>{renderChild()}</ul>
+            <ul
+              className={cx(
+                styles.menu,
+                styles[`menu-${mode}`],
+                styles[`menu-${theme}`]
+              )}
+            >
+              {renderChild()}
+            </ul>
           </div>
         </div>,
         document.body
@@ -172,32 +180,32 @@ function SubMenu({
 
   return (
     <li
-      className={cx('menu', 'submenu', `submenu-${mode}`, {
-        'submenu-selected': judgeSubmenuSelect(children),
+      className={cx(styles.menu, styles.submenu, styles[`submenu-${mode}`], {
+        [styles['submenu-selected']]: judgeSubmenuSelect(children),
       })}
       onMouseEnter={() => onHoverKey(keyValue)}
       ref={curSubmenu}
     >
       <div
-        className={cx('submenu-title')}
+        className={cx(styles['submenu-title'])}
         style={getMenuStyle(level, mode)}
         onClick={handleMenuStatus}
         onMouseEnter={handleParentMouseEnter}
         onMouseLeave={handleParentMouseLeave}
       >
         {icon}
-        <span className={cx('submenu-title-field')}>{title}</span>
+        <span className={cx(styles['submenu-title-field'])}>{title}</span>
         <i
-          className={cx('submenu-arrow', {
-            'submenu-arrow-open': mode === 'inline' && menuOpen,
+          className={cx(styles['submenu-arrow'], {
+            [styles['submenu-arrow-open']]: mode === 'inline' && menuOpen,
           })}
         />
       </div>
       {mode === 'inline' ? (
         <Transition isShow={menuOpen}>
           <ul
-            className={cx('menu', 'submenu', {
-              'submenu-sidebyside': sideBySide && !inlineCollapsed,
+            className={cx(styles.menu, styles.submenu, {
+              [styles['submenu-sidebyside']]: sideBySide && !inlineCollapsed,
             })}
           >
             {renderChild()}
