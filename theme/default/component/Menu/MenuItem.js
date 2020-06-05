@@ -3,7 +3,7 @@ import cx from 'classnames';
 // import Tooltip from '../Tooltip';
 import { getMenuStyle, Level } from './util';
 import { useMenuContext } from './context';
-import './style/index.less';
+import styles from './style/index.less';
 
 function MenuItem({
   title = '',
@@ -25,8 +25,8 @@ function MenuItem({
   const renderMenuItem = () => {
     return (
       <li
-        className={cx('menu-item', `menu-${theme}`, {
-          'menu-item-selected':
+        className={cx(styles['menu-item'], styles[`menu-${theme}`], {
+          [styles['menu-item-selected']]:
             selectedKey && selectedKey.split('').indexOf(keyValue) > -1,
         })}
         onMouseEnter={() => {
@@ -37,7 +37,7 @@ function MenuItem({
         style={getMenuStyle(level, mode)}
       >
         {icon}
-        <span className={cx('menu-item-title')}>{title}</span>
+        <span className={cx(styles['menu-item-title'])}>{title}</span>
       </li>
     );
   };

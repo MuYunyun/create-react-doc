@@ -3,7 +3,7 @@ import cx from 'classnames';
 import MenuItem from './MenuItem';
 import { SubMenu } from './SubMenu';
 import { MenuProvider } from './context';
-import './style/index.less';
+import styles from './style/index.less';
 
 const Menu = ({
   mode = 'inline',
@@ -31,9 +31,14 @@ const Menu = ({
   const renderMenu = () => {
     return (
       <ul
-        className={cx('menu', `menu-${theme}`, `menu-${mergeMode}`, {
-          'menu-inline-collapsed': inlineCollapsed,
-        })}
+        className={cx(
+          styles.menu,
+          styles[`menu-${theme}`],
+          styles[`menu-${mergeMode}`],
+          {
+            [styles['menu-inline-collapsed']]: inlineCollapsed,
+          }
+        )}
         style={{
           width: `${width}px`,
         }}
