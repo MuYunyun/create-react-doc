@@ -31,11 +31,11 @@ module.exports = {
         enforce: 'pre',
         use: [
           // TODO:禁用require.ensure也不是一种标准的语言特征。
-          // 我们等待https://github.com/facebookincubator/create-react-app/issues/2176。
+          // 我们等待 https://github.com/facebookincubator/create-react-app/issues/2176。
           // { parser: { requireEnsure: false } },
           {
-            // 首先运行linter。
-            // 在Babel处理js之前做这一点很重要。
+            // 首先运行 linter。
+            // 在 Babel 处理 js 之前做这一点很重要。
             options: {
               eslintPath: require.resolve('eslint'),
               configFile: require.resolve('../../.eslintrc.js'),

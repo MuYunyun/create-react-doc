@@ -1,11 +1,14 @@
 import React, { PureComponent } from 'react';
 /* eslint-disable */
 import { Switch, Link, Route, Redirect } from 'react-router-dom';
+import Menu from '../component/Menu'
 import classNames from 'classnames';
 import Header from '../component/Header';
 import Footer from '../component/Footer';
-import logo from '../rdoc.logo.svg';
 import styles from './BasicLayout.less';
+import logo from '../rdoc.logo.svg';
+
+const SubMenu = Menu.SubMenu;
 
 function getCurrentArticle(routeData, path) {
   let article = null;
@@ -45,25 +48,32 @@ export default class BasicLayout extends PureComponent {
     /* eslint-disable */
     // debugger
     return (
-      <ul>
-        {
-          menus.map((item, index) => {
-            console.log('item', item)
-            // if (item.isEmpty) {
-            //   return null;
-            // }
-            // if (item.children && item.children.length < 1) return null;
-            if (item.props && item.props.visible === false) return null;
-            if (/^README(.*)md$/.test(item.name)) return null;
-            return (
-              <li key={index}>
+      <Menu
+        mode="inline"
+        // openKeys={this.state.openKeys}
+        // onOpenChange={this.onOpenChange}
+        style={{ width: 256 }}
+      >
+        {menus.map((item, index) => {
+          console.log("item", item);
+          // if (item.isEmpty) {
+          //   return null;
+          // }
+          // if (item.children && item.children.length < 1) return null;
+          if (item.props && item.props.visible === false) return null;
+          if (/^README(.*)md$/.test(item.name)) return null;
+          return;
+          <>
+            <Menu.Item
+              title={
                 <div
                   className={classNames({
                     active: pathname === item.routePath,
                   })}
                 >
                   {item &&
-                  item.type === "directory" && item.props &&
+                  item.type === "directory" &&
+                  item.props &&
                   item.props.isEmpty ? (
                     <div>{(item.mdconf && item.mdconf.title) || item.name}</div>
                   ) : (
@@ -77,14 +87,14 @@ export default class BasicLayout extends PureComponent {
                     </Link>
                   )}
                 </div>
-                {item.children &&
-                  item.children.length > 0 &&
-                  this.renderSubMenuItem(item.children)}
-              </li>
-            );
-          })
-        }
-      </ul>
+              }
+            />
+          </>;
+        })}
+        {/* {item.children &&
+            item.children.length > 0 &&
+          this.renderSubMenuItem(item.children)} */}
+      </Menu>
     );
   }
   renderSubMenu(menus) {
