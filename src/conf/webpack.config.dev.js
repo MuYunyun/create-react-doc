@@ -66,7 +66,7 @@ module.exports = function (cmd) {
             loader: require.resolve('css-loader'),
             options: {
               modules: true,
-              localIdentName: '[name]-[hash:base64:5]',
+              localIdentName: '[local]--[hash:base64:5]',
               importLoaders: 1,
             },
           },
@@ -77,7 +77,7 @@ module.exports = function (cmd) {
               // https://github.com/facebookincubator/create-react-app/issues/2677
               ident: 'postcss',
               plugins: () => [
-                require('postcss-flexbugs-fixes'), // eslint-disable-line
+                require("postcss-flexbugs-fixes"), // eslint-disable-line
                 autoprefixer({
                   browsers: [
                     '>1%',

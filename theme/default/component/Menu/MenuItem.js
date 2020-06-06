@@ -1,7 +1,7 @@
 import * as React from 'react';
 import cx from 'classnames';
 // import Tooltip from '../Tooltip';
-import { getMenuStyle, Level } from './util';
+import { getMenuStyle } from './util';
 import { useMenuContext } from './context';
 import styles from './style/index.less';
 
@@ -42,7 +42,7 @@ function MenuItem({
     );
   };
 
-  if (inlineCollapsed === true && level === Level.First) {
+  if (inlineCollapsed === true && level === 0) {
     if (theme === 'dark') {
       return (
         // <Tooltip
