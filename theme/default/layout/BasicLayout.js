@@ -50,36 +50,35 @@ export default class BasicLayout extends PureComponent {
     return (
       <>
         {menus.map((item, index) => {
-          console.log("item", item);
+          // console.log("item", item);
           if (item.props && item.props.visible === false) return null;
           if (/^README(.*)md$/.test(item.name)) return null;
           return item.children && item.children.length > 0 ? (
-            <SubMenu>{this.renderSubMenuItem(item.children)}</SubMenu>
+            <SubMenu title={item.name}>{this.renderSubMenuItem(item.children)}</SubMenu>
           ) : (
             <Menu.Item
               title={
-                12345
-                // <div
-                //   className={classNames({
-                //     active: pathname === item.routePath,
-                //   })}
-                // >
-                //   {item &&
-                //   item.type === "directory" &&
-                //   item.props &&
-                //   item.props.isEmpty ? (
-                //     <div>{(item.mdconf && item.mdconf.title) || item.name}</div>
-                //   ) : (
-                //     <Link
-                //       to={item.routePath}
-                //       replace={pathname === item.routePath}
-                //     >
-                //       {item && item.mdconf && item.mdconf.title
-                //         ? item.mdconf.title
-                //         : item.name}
-                //     </Link>
-                //   )}
-                // </div>
+                <div
+                  className={classNames({
+                    active: pathname === item.routePath,
+                  })}
+                >
+                  {item &&
+                  item.type === "directory" &&
+                  item.props &&
+                  item.props.isEmpty ? (
+                    <div>{(item.mdconf && item.mdconf.title) || item.name}</div>
+                  ) : (
+                    <Link
+                      to={item.routePath}
+                      replace={pathname === item.routePath}
+                    >
+                      {item && item.mdconf && item.mdconf.title
+                        ? item.mdconf.title
+                        : item.name}
+                    </Link>
+                  )}
+                </div>
               }
             />
           );
@@ -122,7 +121,7 @@ export default class BasicLayout extends PureComponent {
           {isChild && (
             <div className={styles.menuWapper}> {this.renderMenu(menuSource)} </div>
           )}
-          <div className={classNames('content', {
+          <div className={classNames({
             [`${styles.content}`]: isChild,
             [`${styles.contentNoMenu}`]: !isChild,
           })}

@@ -1,6 +1,5 @@
 import * as React from 'react';
-import cx from 'classnames';
-import './style/index.less';
+import styles from './style/index.less';
 
 const { useEffect, useRef, useCallback } = React;
 
@@ -90,7 +89,8 @@ export default function Transition({
   }, [enter, isShow, triggerChange]);
 
   return (
-    <div className={cx('collapse-transition')} ref={collapseRef}>
+    <div className={styles['collapse-transition']} ref={collapseRef}>
+      {/* <div className="collapse-transition" ref={collapseRef}> */}
       {children}
     </div>
   );

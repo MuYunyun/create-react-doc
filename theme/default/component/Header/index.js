@@ -48,7 +48,7 @@ export default class Header extends PureComponent {
     const { location: { pathname }, menuSource, className, children, logo } = this.props;
     const { mdconf } = this.props.indexProps || {};
     return (
-      <div className={classNames('header', styles.header, className)}>
+      <div className={classNames(styles.header, className)}>
         <div className={styles.wapper}>
           <Link to="/" replace>
             {' '}
