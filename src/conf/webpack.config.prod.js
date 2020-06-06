@@ -66,7 +66,7 @@ module.exports = function (cmd) {
             loader: require.resolve('css-loader'),
             options: {
               modules: true,
-              localIdentName: '[name]-[hash:base64:5]',
+              localIdentName: '[local]-[hash:base64:5]',
               importLoaders: 1,
             },
           },

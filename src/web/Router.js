@@ -9,7 +9,7 @@ import menuSource from './rdoc.tree.data.json';
 /* eslint-disable */
 function directoryIsRoute(arr, props = false) {
   if (!arr || arr.length === 0) return false;
-  console.log('arr', arr);
+  // console.log('arr', arr);
   const pickReadmeArr = arr.filter(item => item.name === 'README.md' && item.mdconf);
   const extraProps = pickReadmeArr && pickReadmeArr.length > 0 ? pickReadmeArr[0] : {}
   return {

@@ -7,49 +7,42 @@
 create-react-doc
 ---
 
-基于 React 的快速静态网站生成器，你只需要写 Markdown 文档即可。
+Fast static site generator for React. You only just write **Markdown**.
 
-* 文件即博客
+* Files is just blog.
 
-<div align="center">
-  <img src="./rdoc.png">
-</div>
+## Start
 
-## 开始
+**create-react-doc** is very easy to use, you only install it as a package so that you can create your own website or blog. Let's start!
 
-**create-react-doc** 使用非常简单，只需将其它作为模块安装并运行即可创建您的网站。让我们开始吧！
+### Install
 
-* [使用 case](https://github.com/MuYunyun/blog)
-
-### 安装
-
-安装 `create-react-doc` 到你系统的全局，您需要在本地开发计算机上使用 `Node >= 8`。
-
+Install `create-react-doc` to global system，make sure `Node >= 8` in your computer.
 
 ```bash
 npm install create-react-doc -g
 ```
 
-1. 初始化项目
+1. init project.
 
 ```bash
-create-react-doc init my-project  # Init project
+create-react-doc init my-project
 ```
 
-2. 运行网站
+2. run.
 
 ```bash
-cd my-project && npm install # 进入目录安装依赖
-npm start # 启动服务。
+cd my-project && npm install
+npm start
 ```
 
-3. 编译输出静态HTML资源。
+3. build static html resource.
 
 ```bash
 npm run build
 ```
 
-4. 在 `package.json` 中配置部署 `URL`。
+4. config deploy url in `package.json`.
 
 ```js
 {
@@ -61,18 +54,16 @@ npm run build
 }
 ```
 
-5. 部署到 Github `gh-pages` 分支。
+5. deploy your own website.
 
 ```bash
 npm run deploy
 ```
 
-### 命令帮助
+### Help
 
 ```shell
 Usage: create-react-doc [options]
-
-Fast static site generator for React.
 
 Options:
 
@@ -99,48 +90,10 @@ Examples:
   $ create-react-doc --publish https://<your-git-repo>.git --branch master
 ```
 
-### 开发
-
-获取代码，进入目录，运行自动重载构建，：
-
-```shell
-$ git clone https://github.com/MuYunyun/create-react-doc
-$ cd create-react-doc     # 进入目录
-$ npm install             # or yarn install
-```
-
-要开发，请运行自重载构建：
-
-```bash
-# 运行应用程序
-# 每次代码更改时，自动重新启动应用程序。
-# 在开发过程中很有用。
-$ npm run start
-```
-
-打开浏览器并访问 http://localhost:5858
-
-### Folders
-
-```bash
-.
-├── README.md
-├── .create-react-doc-dist
-├── package.json
-├── src
-│   ├── build.js
-│   ├── commands
-│   ├── conf
-│   ├── publish.js
-│   ├── server.js
-│   ├── utils
-│   └── web
-├── templates
-│   └── default # 记录静态文件。
-└── theme
-    └── default
-```
-
 ### License
 
 The MIT License (MIT)
+
+### Used Case
+
+* [blog](https://github.com/MuYunyun/blog)
