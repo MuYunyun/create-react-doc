@@ -2639,7 +2639,7 @@ cosmiconfig@^2.1.0, cosmiconfig@^2.1.1:
   integrity sha512-GiNXLwAFPYHy25XmTPpafYvn3CLAkJ8FLsscq78MQd1Kh0OU6Yzhn4eV2MVF4G9WEQZoWEGltatdR+ntGPMl5A==
   dependencies:
     is-directory "^0.3.1"
-    js-yaml "^3.4.3"
+    js-yaml "^3.13.1"
     minimist "^1.2.0"
     object-assign "^4.1.0"
     os-homedir "^1.0.1"
@@ -3512,7 +3512,7 @@ eslint@4.19.1:
     imurmurhash "^0.1.4"
     inquirer "^3.0.6"
     is-resolvable "^1.0.0"
-    js-yaml "^3.9.1"
+    js-yaml "^3.13.1"
     json-stable-stringify-without-jsonify "^1.0.1"
     levn "^0.3.0"
     lodash "^4.17.4"
@@ -5216,7 +5216,7 @@ js-tokens@^3.0.0, js-tokens@^3.0.2:
   resolved "https://registry.npmjs.org/js-tokens/-/js-tokens-4.0.0.tgz#19203fb59991df98e3a287050d4647cdeaf32499"
   integrity sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==
 
-js-yaml@^3.4.3, js-yaml@^3.9.1:
+js-yaml@^3.13.1, js-yaml@^3.13.1:
   version "3.14.0"
   resolved "https://registry.npmjs.org/js-yaml/-/js-yaml-3.14.0.tgz#a7a34170f26a21bb162424d8adacb4113a69e482"
   integrity sha512-/4IbIeHcD9VMHFqDR/gQ7EdZdLimOvW2DdcxFjdyyZ9NsbS+ccrXqVWDtab/lRl5AlUqmpBx8EhPaWR+OtY17A==
@@ -5224,8 +5224,8 @@ js-yaml@^3.4.3, js-yaml@^3.9.1:
     argparse "^1.0.7"
     esprima "^4.0.0"
 
-js-yaml@~3.7.0:
-  version "3.7.0"
+js-yaml@~3.13.1:
+  version "3.13.1"
   resolved "https://registry.npmjs.org/js-yaml/-/js-yaml-3.7.0.tgz#5c967ddd837a9bfdca5f2de84253abe8a1c03b80"
   integrity sha1-XJZ93YN6m/3KXy3oQlOr6KHAO4A=
   dependencies:
@@ -8745,7 +8745,7 @@ svgo@^0.7.0:
     coa "~1.0.1"
     colors "~1.1.2"
     csso "~2.3.1"
-    js-yaml "~3.7.0"
+    js-yaml "~3.13.1"
     mkdirp "~0.5.1"
     sax "~1.2.1"
     whet.extend "~0.9.9"

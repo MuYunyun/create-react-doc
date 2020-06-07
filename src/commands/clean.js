@@ -6,8 +6,8 @@ module.exports = function (params) {
     // 清空目录
     FS.emptyDirSync(paths.appBuildDist);
   }
-  if (params.clean && FS.pathExistsSync(paths.catchDirPath)) {
+  if (params.clean && FS.pathExistsSync(paths.cacheDirPath)) {
     // 清空目录
-    FS.emptyDirSync(paths.catchDirPath);
+    FS.emptyDirSync(paths.cacheDirPath);
   }
 };

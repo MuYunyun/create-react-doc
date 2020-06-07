@@ -51,7 +51,10 @@ export default class BasicLayout extends PureComponent {
       <>
         {menus.map((item, index) => {
           // console.log("item", item);
-          if (item.props && item.props.visible === false) return null;
+          if(item && item.name.includes('rabbit')) {
+            console.log("item.name", item);
+          }
+          if (item.mdconf && item.mdconf.visible === false) return null;
           if (/^README(.*)md$/.test(item.name)) return null;
           return item.children && item.children.length > 0 ? (
             <SubMenu title={item.name}>{this.renderSubMenuItem(item.children)}</SubMenu>

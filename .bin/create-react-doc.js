@@ -5,7 +5,7 @@ const program = require('commander');
 const color = require('colors-cli/toxic');
 const initProject = require('../src/commands/initProject');
 const clean = require('../src/commands/clean');
-const initCatch = require('../src/utils/initCatch');
+const initCache = require('../src/utils/initCache');
 const Servers = require('../src/server');
 const Build = require('../src/build');
 const Publish = require('../src/publish');
@@ -39,7 +39,7 @@ program
   })
   .parse(process.argv);
 // create-react-doc 工具根目录
-// program.rdocPath = PATH.join(__dirname, '../');
+// program.crdPath = PATH.join(__dirname, '../');
 // 所有 Markdown 目录
 program.markdownPaths = [];
 // 网站根目录
@@ -55,7 +55,7 @@ if (program.doc) {
 if (program.clean) clean(program);
 if (program.init) return initProject(program);
 
-// 将生成的代码，push 到指定仓库，已经分支。
+// 将生成的代码，push 到指定仓库，和相应分支。
 if (program.publish) {
   return Publish(program)
 }
@@ -73,8 +73,9 @@ program.markdownPaths.forEach((item) => {
 });
 
 if (isExists) {
-  FS.ensureDirSync(paths.catchDirPath);
-  initCatch(program, () => {
+  // make sure
+  FS.ensureDirSync(paths.cacheDirPath);
+  initCache(program, () => {
     console.log("program", program);
     if (program.build) {
       Build(program);

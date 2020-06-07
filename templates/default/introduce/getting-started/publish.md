@@ -1,5 +1,5 @@
 <!--
-title: 发布网站 
+title: 发布网站
 sort: 5
 -->
 
@@ -15,19 +15,19 @@ sort: 5
   "name": "doc-example",
   "description": "Describe doc-example here",
   "scripts": {
-+    "build": "rdoc -d home,introduce,faq,example,about,github --build"
-    "start": "rdoc -d home,introduce,faq,example,about,github --clean"
++    "build": "create-react-doc -d home,introduce,faq,example,about,github --build"
+    "start": "create-react-doc -d home,introduce,faq,example,about,github --clean"
   },
   "dependencies": {
-    "rdoc": "1.2.x"
+    "create-react-doc": "1.2.x"
   },
   "license": "MIT"
 }
 ```
 
-运行命令生成静态资源，默认静态资源生成到，当前工程根目录下的 `.rdoc-dist` 目录
+运行命令生成静态资源，默认静态资源生成到，当前工程根目录下的 `.crd-dist` 目录
 
-⚠️  `.rdoc-dist` 目录为默认生成静态资源目录，建立文档目录的时候需要注意
+⚠️  `.crd-dist` 目录为默认生成静态资源目录，建立文档目录的时候需要注意
 
 ```shell
 $ npm run build
@@ -42,12 +42,12 @@ $ npm run build
   "name": "doc-example",
   "description": "Describe doc-example here",
   "scripts": {
-+    "deploy": "rdoc --publish <your repo url>",
-    "build": "rdoc -d home,introduce,faq,example,about,github --build"
-    "start": "rdoc -d home,introduce,faq,example,about,github --clean"
++    "deploy": "create-react-doc --publish <your repo url>",
+    "build": "create-react-doc -d home,introduce,faq,example,about,github --build"
+    "start": "create-react-doc -d home,introduce,faq,example,about,github --clean"
   },
   "dependencies": {
-    "rdoc": "1.2.x"
+    "create-react-doc": "1.2.x"
   },
   "license": "MIT"
 }
@@ -56,7 +56,7 @@ $ npm run build
 同时可以指定分支，默认推送到 `gh-pages`分支，配置实例如下：
 
 ```shell
-$ rdoc --publish https://github.com/react-doc/react-doc.github.io.git --branch master
+$ create-react-doc --publish https://github.com/react-doc/react-doc.github.io.git --branch master
 ```
 
-如果全局安装了 `rdoc` 工具，直接可以将上面命令放到命令行运行，记得在项目的根目录下运行哦。
+如果全局安装了 `create-react-doc` 工具，直接可以将上面命令放到命令行运行，记得在项目的根目录下运行哦。
