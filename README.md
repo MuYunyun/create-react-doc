@@ -67,16 +67,16 @@ Usage: create-react-doc [options]
 
 Options:
 
-  -i, init [path]        创建一个空的网站或重新初始化一个现有网站。
-  -d, --doc <path>       生成指定其他文档。
-  -o, --output <path>    将编译的文件写入磁盘目录。（默认：.rdoc-dist）
-  -p, --port [number]    端口。(默认: 5858)
-  --host [host]          主机. (默认: 0.0.0.0)
-  -b, --branch <branch>  <分支>您要推送的分支的名称。（默认：gh-pages）
-  --publish [url]        将生成的代码，push到指定仓库，已经分支。
-  --build                创建编译的生产版本。
-  --clean                删除.cache文件夹。
-  -h, --help             输出使用帮助文档。
+  -i, init [path]        Create an empty website or reinitialize an existing one.
+  -d, --doc <path>       Other documents generated.
+  -o, --output <path>    Writes the compiled file to the disk directory.（default:.crd-dist）
+  -p, --port [number]    The port.(default: 5858)
+  --host [host]          The host. (default: 0.0.0.0)
+  -b, --branch <branch>  Name of the branch you are pushing to.（default: gh-pages）
+  --publish [url]        Other documents generated.
+  --build                Creating an optimized production build.
+  --clean                Delete the .cache folder.
+  -h, --help             help document.
 
 Examples:
 
