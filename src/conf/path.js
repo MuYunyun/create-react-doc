@@ -6,11 +6,11 @@ const appDirectory = FS.realpathSync(process.cwd());
 const toolDirectory = FS.realpathSync(__dirname);
 // Markdown 所在目录
 const resolveApp = relativePath => PATH.resolve(appDirectory, relativePath);
-// rdoc 工具所在目录
+// crd 工具所在目录
 const resolveTool = relativePath => PATH.resolve(toolDirectory, relativePath);
 
-// 获取 rdoc 配置
-function getRdocConf() {
+// 获取 crd 配置
+function getCrdConf() {
   const packagePath = resolveApp('./package.json');
   let conf = {};
   if (FS.existsSync(packagePath)) {
@@ -26,7 +26,7 @@ function getRdocConf() {
 }
 
 function getConfigFilePath(fileName, type) {
-  const conf = getRdocConf();
+  const conf = getCrdConf();
   // 这里是读取配置
   if (conf && conf[type]) {
     // 主题目录加载
@@ -92,20 +92,22 @@ function getExcludeFoldersRegExp() {
 
 module.exports = {
   // Markdown 所在目录
-  rdocConf: getRdocConf(),
+  rdocConf: getCrdConf(),
   appThemePath: getThemePath(),
   appPackage: resolveApp('./package.json'),
   appNodeModules: resolveApp('node_modules'),
-  appBuildDist: resolveApp('.rdoc-dist'),
-  catchDirPath: resolveApp('.cache'),
+  // todo
+  appGitIgnore: resolveApp('.gitignore'),
+  appBuildDist: resolveApp('.crd-dist'),
+  cacheDirPath: resolveApp('.cache'),
   docTreePath: resolveApp('.cache/.reactdoc.tree.json'),
   watchFilePath: resolveApp('.cache/watch-dir.js'),
   projectPath: appDirectory,
   publicPath: '',
   logoPath: logoPath(),
-  // rdoc 工具所在目录
+  // crd 工具所在目录
   getExcludeFoldersRegExp: getExcludeFoldersRegExp(),
-  rdocPackage: resolveTool('../../package.json'),
+  crdPackage: resolveTool('../../package.json'),
   defaultNodeModules: modPath,
   defaultTemplatePath: resolveTool('../../templates/default'),
   defaultFaviconPath: faviconPath(),

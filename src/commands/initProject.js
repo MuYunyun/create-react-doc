@@ -9,9 +9,9 @@ module.exports = function (params) {
   const outDir = typeof params.init === 'string' ? PATH.join(paths.projectPath, params.init) : paths.projectPath;
   const projectName = PATH.basename(outDir);
 
-  const rdocpkg = require(paths.rdocPackage); // eslint-disable-line
+  const crdpkg = require(paths.crdPackage); // eslint-disable-line
   // 最后一个版本号替换成 x , 当发生变化最后一个版本安装最新版本
-  const RDOC_VERSION = rdocpkg.version.split('.').slice(0, 2).concat('x').join('.');
+  const CRD_VERSION = crdpkg.version.split('.').slice(0, 2).concat('x').join('.');
 
   // 输出目录清空
   if (!FS.pathExistsSync(outDir)) {
@@ -27,7 +27,7 @@ module.exports = function (params) {
   if (FS.pathExistsSync(paths.defaultTemplatePath)) {
     copyTemplate(paths.defaultTemplatePath, outDir, {
       name: projectName,
-      rdocVersion: RDOC_VERSION,
+      rdocVersion: CRD_VERSION,
     }, (err, createdFiles) => {
       if (err) return log(`Copy Tamplate Error: ${err} !!!`.red);
       createdFiles.sort().forEach((createdFile) => {
