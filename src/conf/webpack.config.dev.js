@@ -3,8 +3,8 @@ const webpack = require('webpack');
 const PATH = require('path');
 const UPATH = require('upath');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CreateSpareWebpackPlugin = require('create-spare-webpack-plugin');
 const FriendlyErrorsWebpackPlugin = require('@nuxtjs/friendly-errors-webpack-plugin');
+const CreateSpareWebpackPlugin = require('./createSpareWebpackPlugin');
 const config = require('./webpack.config');
 const paths = require('./path');
 
@@ -40,7 +40,7 @@ module.exports = function (cmd) {
       // https://ilikekillnerds.com/2018/03/disable-webpack-4-native-json-loader/
       loaders.push({
         test: /rdoc\.tree\.data\.json$/,
-        // 禁用Webpack 4本身的JSON加载程序
+        // 禁用 Webpack 4 本身的 JSON 加载程序
         type: 'javascript/auto',
         use: [
           {
@@ -108,10 +108,11 @@ module.exports = function (cmd) {
       title: paths.rdocConf && paths.rdocConf.title ? paths.rdocConf.title : 'Create React Doc',
     }),
     // 将模块名称添加到工厂功能，以便它们显示在浏览器分析器中。
-    // 当接收到热更新信号时，在浏览器console控制台打印更多可读性高的模块名称等信息
+    // 当接收到热更新信号时，在浏览器 console 控制台打印更多可读性高的模块名称等信息
     new webpack.NamedModulesPlugin(),
+    // to search
     new CreateSpareWebpackPlugin({
-      // 备用文件目录，比对是否存在，不存在生成，根据sep 目录规则生成
+      // 备用文件目录，比对是否存在，不存在生成，根据 sep 目录规则生成
       path: PATH.join(paths.cacheDirPath, './md'),
       sep: '___', // 检查目标目录文件，文件名存储，文件夹+下划线间隔+文件名
       directoryTrees: { // 索引目录

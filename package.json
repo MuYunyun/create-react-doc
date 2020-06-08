@@ -43,7 +43,6 @@
     "commander": "2.12.2",
     "copy-markdown-image-webpack-plugin": "2.0.0",
     "copy-template-dir": "1.3.0",
-    "create-spare-webpack-plugin": "2.0.0",
     "css-loader": "0.28.7",
     "detect-port": "1.2.2",
     "directory-tree-md": "2.0.7",
