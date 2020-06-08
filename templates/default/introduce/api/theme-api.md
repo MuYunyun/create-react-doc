@@ -224,7 +224,7 @@ props.routeData.map((item) => {
 
 ## 默认依赖包
 
-工具基础的前端包工具，制作主题需要安装依赖包，提供一个实例 [rdoc-theme-load-react](https://github.com/react-doc/rdoc-theme-load-react)。
+工具基础的前端包工具，制作主题需要安装依赖包，提供一个实例 [crd-theme-load-react](https://github.com/react-doc/crd-theme-load-react)。
 
 ```bash
 {

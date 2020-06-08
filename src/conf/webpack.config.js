@@ -20,14 +20,14 @@ module.exports = {
   },
   resolve: {
     alias: {
-      'rdoc-theme': UPATH.normalizeSafe(paths.appThemePath),
+      'crd-theme': UPATH.normalizeSafe(paths.appThemePath),
     },
   },
   module: {
     rules: [
       {
         test: /\.(js|jsx|mjs)$/,
-        exclude: [/node_modules/, /\.(cache)/, /rdoc-theme-(.*)/],
+        exclude: [/node_modules/, /\.(cache)/, /crd-theme-(.*)/],
         enforce: 'pre',
         use: [
           // TODO:禁用require.ensure也不是一种标准的语言特征。

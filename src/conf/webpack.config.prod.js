@@ -2,11 +2,11 @@ const autoprefixer = require('autoprefixer');
 const PATH = require('path');
 const UPATH = require('upath');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CreateSpareWebpackPlugin = require('create-spare-webpack-plugin');
 const CopyMarkdownImageWebpackPlugin = require('copy-markdown-image-webpack-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const CreateSpareWebpackPlugin = require('./createSpareWebpackPlugin');
 const config = require('./webpack.config');
 const paths = require('./path');
 

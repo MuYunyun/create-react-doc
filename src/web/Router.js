@@ -1,7 +1,8 @@
 import React from 'react';
 import { HashRouter, withRouter, Route, Switch } from 'react-router-dom';
 import lazyload from 'react-dynamic-loadable';
-import theme from 'rdoc-theme';
+import theme from 'crd-theme';
+// to research rdoc.tree.data.json
 import menuSource from './rdoc.tree.data.json';
 
 // 判断目录下是否存在 README.md
