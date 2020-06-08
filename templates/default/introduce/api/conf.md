@@ -23,7 +23,7 @@ sort: 4
     "start": "rdoc -d home,introduce --clean"
   },
 +  "rdoc": {
-+    "theme": "rdoc-theme-load-react",
++    "theme": "crd-theme-load-react",
 +    "favicon": "./assets/favicon.ico",
 +    "logo": "./assets/rdoc.logo.svg",
 +    "footer": "前端<b>开</b>发"
@@ -33,7 +33,7 @@ sort: 4
 +  },
   "dependencies": {
     "rdoc": "1.4.x",
-+    "rdoc-theme-load-react": "^1.1.0",
++    "crd-theme-load-react": "^1.1.0",
 +    "react-hot-keys": "^1.1.0"
   }
 }
@@ -44,7 +44,7 @@ sort: 4
 ```json
 {
   "title": "Rdoc title",
-  "theme": "rdoc-theme-load-react",
+  "theme": "crd-theme-load-react",
   "favicon": "./assets/favicon.ico",
   "logo": "./assets/rdoc.logo.svg",
   "react_modules": {
@@ -53,9 +53,9 @@ sort: 4
 }
 ```
 
-⚠️注意：  
-1. 优先读取 `.rdocrc.json` 配置。  
-2. 两种配置只有一种起作用。  
+⚠️注意：
+1. 优先读取 `.rdocrc.json` 配置。
+2. 两种配置只有一种起作用。
 
 ### title
 
@@ -75,9 +75,9 @@ sort: 4
 
 ### theme
 
-默认使用 `rdoc` 的默认主题，你可以通过这个配置指定一个主题，同时你可以自定义自己的主题，这里有个实例 [rdoc-theme-load-react](https://github.com/react-doc/rdoc-theme-load-react)，可以参照这个实例进行更改。
+默认使用 `rdoc` 的默认主题，你可以通过这个配置指定一个主题，同时你可以自定义自己的主题，这里有个实例 [crd-theme-load-react](https://github.com/react-doc/crd-theme-load-react)，可以参照这个实例进行更改。
 
-> ⚠️注意事项：主题必须以 rdoc-theme- 开头，否则会报错。
+> ⚠️注意事项：主题必须以 crd-theme- 开头，否则会报错。
 
 ### react_modules
 

@@ -94,7 +94,6 @@ export default class BasicLayout extends PureComponent {
     // const article = getCurrentArticle(routeData, pathname);
     // menus = menus.filter(item => item.article === article);
     if (menus.length < 1) return null;
-    const menusObject = menus || [];
     return (
       <Menu
         mode="inline"
@@ -102,9 +101,9 @@ export default class BasicLayout extends PureComponent {
         // onOpenChange={this.onOpenChange}
         style={{ width: 256 }}
       >
-        { this.renderSubMenuItem(menusObject) }
+        {this.renderSubMenuItem(menus || [])}
       </Menu>
-    )
+    );
   }
   isCurentChildren() {
     const { location: { pathname }, menuSource, routeData } = this.props;
