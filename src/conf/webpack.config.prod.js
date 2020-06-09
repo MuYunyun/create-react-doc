@@ -44,10 +44,11 @@ module.exports = function (cmd) {
         type: 'javascript/auto',
         use: [
           {
-            loader: require.resolve('raw-tree-replace-loader'),
+            loader: `${PATH.join(__dirname, './rawTreeReplaceLoader.js')}`,
             options: {
               include: /rdoc\.tree\.data\.json$/, // 检查包含的文件名字
-              directoryTrees: { // 指定目录生成目录树，json
+              directoryTrees: {
+                // 指定目录生成目录树，json
                 dir: cmd.markdownPaths,
                 mdconf: true,
                 extensions: /\.md/,
