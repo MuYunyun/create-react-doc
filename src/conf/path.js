@@ -15,9 +15,9 @@ function getCrdConf() {
   let conf = {};
   if (FS.existsSync(packagePath)) {
     const confPkg = require(packagePath); // eslint-disable-line
-    conf = confPkg.rdoc;
+    conf = confPkg.crd;
   }
-  const confPath = resolveApp('./.rdocrc.json');
+  const confPath = resolveApp('./.crdrc.json');
   if (FS.existsSync(confPath)) {
     const confRc = require(confPath) // eslint-disable-line
     conf = confRc;
