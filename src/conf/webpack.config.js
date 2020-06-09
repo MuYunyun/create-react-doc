@@ -56,7 +56,7 @@ module.exports = {
               name: 'img/[name].[hash:8].[ext]',
               replace: [
                 {
-                  test: /rdoc\.logo\.svg$/,
+                  test: /crd\.logo\.svg$/,
                   path: paths.logoPath,
                 },
               ],

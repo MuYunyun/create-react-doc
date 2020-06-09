@@ -8,7 +8,7 @@ sort: 4
 主菜单的定制，是通过 `建立` 目录来定制的，默认菜单名字是根据目录文件夹名字来显示，下面实例定义了主菜单有三个菜单，顺序分别为 `tutorial`、`doc`、`component`
 
 ```shell
-$ rdoc -d tutorial,doc
+$ create-react-doc -d tutorial,doc
 ```
 
 可以自定义菜单名字，通过在文件夹的跟目录建立 `README.md` 添加配置来设置菜单的名字。

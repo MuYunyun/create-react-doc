@@ -25,7 +25,7 @@ sort: 4
 +  "rdoc": {
 +    "theme": "crd-theme-load-react",
 +    "favicon": "./assets/favicon.ico",
-+    "logo": "./assets/rdoc.logo.svg",
++    "logo": "./assets/crd.svg",
 +    "footer": "前端<b>开</b>发"
 +    "react_modules": {
 +      "Hotkeys": "react-hot-keys"
@@ -46,7 +46,7 @@ sort: 4
   "title": "Rdoc title",
   "theme": "crd-theme-load-react",
   "favicon": "./assets/favicon.ico",
-  "logo": "./assets/rdoc.logo.svg",
+  "logo": "./assets/crd.svg",
   "react_modules": {
     "Hotkeys": "react-hot-keys"
   }

@@ -3,7 +3,7 @@ import { Switch, Route, Redirect } from 'react-router-dom';
 import Header from '../component/Header';
 import Footer from '../component/Footer';
 import styles from './IndexLayout.less';
-import logo from '../rdoc.logo.svg';
+import logo from '../crd.logo.svg';
 
 export default class IndexLayout extends PureComponent {
   constructor(props) {

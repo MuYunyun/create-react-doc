@@ -5,7 +5,7 @@ import Menu from '../component/Menu'
 import classNames from 'classnames';
 import Header from '../component/Header';
 import Footer from '../component/Footer';
-import logo from '../rdoc.logo.svg';
+import logo from '../crd.logo.svg';
 import styles from './BasicLayout.less';
 
 const SubMenu = Menu.SubMenu;
