@@ -1,5 +1,5 @@
 <!--
-title: 网站设置 
+title: 网站设置
 sort: 9
 -->
 
@@ -11,7 +11,7 @@ sort: 9
 
 ```markdown
 <!--
-title: 首页 
+title: 首页
 layout: IndexLayout
 -->
 
@@ -39,13 +39,13 @@ layout: IndexLayout
 
 默认显示 rdoc 工具的 `logo`, 需要自定，有两种方法：
 
-> 1. 放入 Markdown 文档工程的根目录，命名`logo.svg` 即可。  
-> 2. 在 `package.json` 中定义配置。  
+> 1. 放入 Markdown 文档工程的根目录，命名`logo.svg` 即可。
+> 2. 在 `package.json` 中定义配置。
 
 ```js
 {
   "rdoc": {
-    "logo":"rdoc.logo.svg",
+    "logo":"crd.logo.svg",
   },
   ...
 }
