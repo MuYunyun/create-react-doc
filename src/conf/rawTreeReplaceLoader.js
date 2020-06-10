@@ -2,10 +2,15 @@ const loaderUtils = require('loader-utils');
 const DirectoryTree = require('directory-tree-md');
 const PATH = require('path');
 const FS = require('fs');
+const { ifInGitIgnore } = require('../utils/index');
 
 function getAllWatchPath(arr, pathArr = []) {
   arr.forEach((item) => {
-    if (item.type === 'file') {
+    const mdfilePathInProject = item.path.replace(
+      process.cwd() + PATH.sep,
+      ''
+    );
+    if (!ifInGitIgnore(mdfilePathInProject) && item.type === 'file') {
       pathArr.push(item.path);
     }
     if (item.children && item.children.length > 0) {
@@ -36,7 +41,10 @@ function getRelativePath(arr, relativePath, dirs) {
     if (item.children && item.children.length > 0) {
       item.children = getRelativePath(item.children, relativePath, dirs);
     }
-    pathArr.push(item);
+    const notInGitIgnore = !ifInGitIgnore(item.path.replace(PATH.sep, ''));
+    if (notInGitIgnore) {
+      pathArr.push(item);
+    }
   });
   return pathArr;
 }
