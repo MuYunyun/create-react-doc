@@ -7,11 +7,11 @@
 create-react-doc
 ---
 
-## Concept
-
 * Fast static site generator for React.
 * You only just write **Markdown**.
 * Files is just Blog.
+
+> If you want some features not included there, you can list in [version 1.0 RFC](https://github.com/MuYunyun/create-react-doc/issues/2).
 
 ## Start
 
@@ -81,6 +81,6 @@ Options:
   -h, --help             help document.
 ```
 
-### Used Case
+### Use Case
 
 * [blog](https://github.com/MuYunyun/blog)
