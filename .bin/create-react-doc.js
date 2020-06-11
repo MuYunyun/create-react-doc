@@ -4,7 +4,6 @@ const PATH = require('path');
 const program = require('commander');
 const color = require('colors-cli/toxic');
 const initProject = require('../src/commands/initProject');
-const clean = require('../src/commands/clean');
 const initCache = require('../src/utils/initCache');
 const Servers = require('../src/server');
 const Build = require('../src/build');
@@ -23,7 +22,6 @@ program
   .option('-b, --branch <branch>', 'Name of the branch you are pushing to.', 'gh-pages')
   .option('--publish [url]', 'Other documents generated.')
   .option('--build', 'Creating an optimized production build.')
-  .option('--clean', 'Delete the .cache folder.')
   .on('--help', function () {
     console.log('\n  Examples:');
     console.log();
@@ -31,9 +29,9 @@ program
     console.log('    $ create-react-doc init doc-example');
     console.log('    $ create-react-doc -d doc/mm');
     console.log('    $ create-react-doc -d tutorial,doc');
-    console.log('    $ create-react-doc -d tutorial,doc --clean --build');
-    console.log('    $ create-react-doc -p 2323  -d doc --clean');
-    console.log('    $ create-react-doc -h 0.0.0.0 -d doc --clean');
+    console.log('    $ create-react-doc -d tutorial,doc --build');
+    console.log('    $ create-react-doc -p 2323  -d doc');
+    console.log('    $ create-react-doc -h 0.0.0.0 -d doc');
     console.log('    $ create-react-doc --publish https://<your-git-repo>.git --branch master');
     console.log();
   })
@@ -52,7 +50,10 @@ if (program.doc) {
   program.doc.split(',').forEach((itemPath) => program.markdownPaths.push(PATH.join(program.projectPath, itemPath)));
 }
 
-if (program.clean) clean(program);
+if (program.build && FS.pathExistsSync(paths.appBuildDist)) {
+  // 清空目录
+  FS.emptyDirSync(paths.appBuildDist);
+}
 if (program.init) return initProject(program);
 
 // 将生成的代码，push 到指定仓库，和相应分支。

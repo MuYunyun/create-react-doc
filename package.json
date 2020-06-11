@@ -10,8 +10,8 @@
   "scripts": {
     "release": "release-it --src.tagName='v%s'",
     "deploy": "node .bin/create-react-doc.js --publish git@github.com:react-doc/react-doc.github.io.git --branch master",
-    "start": "node .bin/create-react-doc.js -d templates/default/home,templates/default/introduce,templates/default/faq,templates/default/about,templates/default/github --clean",
-    "build": "node .bin/create-react-doc.js -d templates/default/home,templates/default/introduce,templates/default/faq,templates/default/about,templates/default/github --clean --build"
+    "start": "node .bin/create-react-doc.js -d templates/default/home,templates/default/introduce,templates/default/faq,templates/default/about,templates/default/github",
+    "build": "node .bin/create-react-doc.js -d templates/default/home,templates/default/introduce,templates/default/faq,templates/default/about,templates/default/github --build"
   },
   "repository": {
     "type": "git",
@@ -76,6 +76,7 @@
     "react-hot-loader": "4.1.1",
     "react-markdown": "3.3.0",
     "react-router-dom": "4.2.2",
+    "react-switch": "^5.0.1",
     "rimraf": "2.6.2",
     "string-replace-loader": "2.1.1",
     "style-loader": "0.19.1",

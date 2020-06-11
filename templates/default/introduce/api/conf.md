@@ -19,8 +19,8 @@ sort: 4
   "version": "1.0.0",
   "scripts": {
     "deploy": "rdoc --publish <your repo url>",
-    "build": "rdoc -d home,introduce --clean --build",
-    "start": "rdoc -d home,introduce --clean"
+    "build": "rdoc -d home,introduce --build",
+    "start": "rdoc -d home,introduce"
   },
 +  "rdoc": {
 +    "theme": "crd-theme-load-react",

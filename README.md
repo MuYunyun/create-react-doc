@@ -77,7 +77,6 @@ Options:
   -b, --branch <branch>  Name of the branch you are pushing to.（default: gh-pages）
   --publish [url]        Other documents generated.
   --build                Creating an optimized production build.
-  --clean                Delete the .cache folder.
   -h, --help             help document.
 ```
 

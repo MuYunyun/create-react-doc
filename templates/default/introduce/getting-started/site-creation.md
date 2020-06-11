@@ -12,10 +12,9 @@ sort: 4
 > 1. `-d tutorial,doc` 参数 `-d` 指定 Markdown 所在的目录。
 > 2. 目录是有顺序的，用英文`,`逗号间隔不同的目录。
 > 3. 目录顺序也可以通过每个目录中的 README.md 改变顺序。
-> 4. `--clean` 参数，在每次启动的时候清理缓存替身文件。
 
 ```shell
-$ create-react-doc -d home,introduce,faq,example,about,github --clean
+$ create-react-doc -d home,introduce,faq,example,about,github
 ```
 
 ## 配置npm命令
@@ -29,7 +28,7 @@ $ create-react-doc -d home,introduce,faq,example,about,github --clean
   "name": "doc-example",
   "description": "Describe doc-example here",
   "scripts": {
-+    "start": "create-react-doc -d home,introduce,faq,example,about,github --clean"
++    "start": "create-react-doc -d home,introduce,faq,example,about,github"
   },
   "license": "MIT"
 }
@@ -42,7 +41,7 @@ $ create-react-doc -d home,introduce,faq,example,about,github --clean
   "name": "doc-example",
   "description": "Describe doc-example here",
   "scripts": {
-    "start": "create-react-doc -d home,introduce,faq,example,about,github --clean"
+    "start": "create-react-doc -d home,introduce,faq,example,about,github"
   },
 +  "dependencies": {
 +    "create-react-doc": "1.2.x"

@@ -13,7 +13,7 @@ export default class IndexLayout extends PureComponent {
   render() {
     const { menuSource, indexRoute, indexProps } = this.props;
     return (
-      <div className={styles.wapper}>
+      <div className={styles.wrapper}>
         <Header logo={logo} className={styles.header} href="/" indexProps={indexProps} location={this.props.location} menuSource={menuSource} />
         <Switch>
           {indexRoute && indexRoute.map((item) => {
