@@ -22,7 +22,7 @@ Options:
   -b, --branch <branch>  Name of the branch you are pushing to. (default: gh-pages)
   --publish [url]        Other documents generated.
   --build                Creating an optimized production build.
-  --clean                Delete the .cache folder.
+                 Delete the .cache folder.
   -h, --help             output usage information
 
 Examples:
@@ -31,9 +31,9 @@ Examples:
   $ create-react-doc init doc-example
   $ create-react-doc -d doc/mm
   $ create-react-doc -d tutorial,doc
-  $ create-react-doc -d tutorial,doc --clean --build
-  $ create-react-doc -p 2323  -d doc --clean
-  $ create-react-doc -h 0.0.0.0 -d doc --clean
+  $ create-react-doc -d tutorial,doc --build
+  $ create-react-doc -p 2323  -d doc
+  $ create-react-doc -h 0.0.0.0 -d doc
   $ create-react-doc --publish https://<your-git-repo>.git --branch master
 ```
 
@@ -47,7 +47,7 @@ Examples:
   "name": "doc-example",
   "version": "1.0.0",
   "scripts": {
-    "start": "rdoc -d home,introduce,faq,doc --clean"
+    "start": "rdoc -d home,introduce,faq,doc"
   },
   "license": "MIT"
 }
@@ -58,8 +58,8 @@ Examples:
 ```shell
 $ rdoc -d doc/mm
 $ rdoc -d tutorial,doc
-$ rdoc -p 2323  -d doc --clean
-$ rdoc -h 0.0.0.0 -d doc --clean
+$ rdoc -p 2323  -d doc
+$ rdoc -h 0.0.0.0 -d doc
 ```
 
 

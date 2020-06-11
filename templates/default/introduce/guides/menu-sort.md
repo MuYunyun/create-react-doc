@@ -17,7 +17,7 @@ sort: 5
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "doc": "create-react-doc -d index,src/introduce,doc --clean"
+    "doc": "create-react-doc -d index,src/introduce,doc"
   },
   "license": "MIT"
 }
@@ -28,7 +28,7 @@ sort: 5
 **通过Markdown配置设置排序**
 
 ```shell
-create-react-doc -d index,src/introduce,doc --clean
+create-react-doc -d index,src/introduce,doc
 ```
 
 上面命令指定了 `index`、`src/introduce`、`doc` 三个目录，默认 `-c` 指向的目录 `src/component` 放在最后面，通过配置也可更换顺序，在每个根目录下面建立 `README.md` 文件，添加下面注释配置，通过 `sort` 参数设置数字，来指定位置。

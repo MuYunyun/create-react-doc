@@ -57,7 +57,7 @@ export default class Markdown extends React.Component {
     const { mdconf: { title, layout } } = this.props;
     const { markdownStr } = this.state;
     return (
-      <div className={styles.markdownWapper}>
+      <div className={styles.markdownwrapper}>
         {/* {title && layout !== 'IndexLayout' && <h1 id={title} className={styles.pageTitle}>{title}</h1>} */}
         {markdownStr ? (
           <ReactMarkdown

@@ -296,8 +296,8 @@ npm link create-react-doc-theme-load-react
   "private": true,
   "scripts": {
     "deploy": "rdoc --publish <your repo url>",
-    "build": "rdoc -d home,introduce,faq,about,github --clean --build",
-    "start": "rdoc -d home,introduce,faq,about,github --clean"
+    "build": "rdoc -d home,introduce,faq,about,github --build",
+    "start": "rdoc -d home,introduce,faq,about,github"
   },
   "keywords": [],
 +  "rdoc": {

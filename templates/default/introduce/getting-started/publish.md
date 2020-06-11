@@ -16,7 +16,7 @@ sort: 5
   "description": "Describe doc-example here",
   "scripts": {
 +    "build": "create-react-doc -d home,introduce,faq,example,about,github --build"
-    "start": "create-react-doc -d home,introduce,faq,example,about,github --clean"
+    "start": "create-react-doc -d home,introduce,faq,example,about,github"
   },
   "dependencies": {
     "create-react-doc": "1.2.x"
@@ -44,7 +44,7 @@ $ npm run build
   "scripts": {
 +    "deploy": "create-react-doc --publish <your repo url>",
     "build": "create-react-doc -d home,introduce,faq,example,about,github --build"
-    "start": "create-react-doc -d home,introduce,faq,example,about,github --clean"
+    "start": "create-react-doc -d home,introduce,faq,example,about,github"
   },
   "dependencies": {
     "create-react-doc": "1.2.x"

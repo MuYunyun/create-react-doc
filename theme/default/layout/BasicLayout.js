@@ -117,11 +117,11 @@ export default class BasicLayout extends PureComponent {
     const isChild = this.isCurentChildren();
     // console.log("menuSource", menuSource);
     return (
-      <div className={styles.wapper} >
+      <div className={styles.wrapper} >
         <Header logo={logo} href="/" location={this.props.location} indexProps={indexProps} menuSource={menuSource} />
-        <div className={styles.wapperContent}>
+        <div className={styles.wrapperContent}>
           {isChild && (
-            <div className={styles.menuWapper}> {this.renderMenu(menuSource)} </div>
+            <div className={styles.menuwrapper}> {this.renderMenu(menuSource)} </div>
           )}
           <div className={classNames({
             [`${styles.content}`]: isChild,

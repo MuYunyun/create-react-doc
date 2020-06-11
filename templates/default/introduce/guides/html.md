@@ -32,7 +32,7 @@ sort: 6
 
 ## JavaScript
 
-> ⚠️ 目前 `Markdown` 中不支持 `JS` 代码运行。  
+> ⚠️ 目前 `Markdown` 中不支持 `JS` 代码运行。
 
 <div class="back2" style="width:200px;margin-top:20px;">这里是Markdown<span id="test"></span>内部 JS 代码运行实例</div>
 <style>
@@ -57,7 +57,7 @@ window.onload = function(){
 需要在代码块前后加上一段 `<!--DemoStart--> ` 和 `<!--End-->` 注释即可，代码如下：
 
 ```
-<!--DemoStart--> 
+<!--DemoStart-->
 \```html
 <div style="color:red;">
   Test Preview HTML Example.
@@ -71,7 +71,7 @@ console.log('test')
 
 下面是效果
 
-<!--DemoStart--> 
+<!--DemoStart-->
 ```html
 <div style="color:red;">
   Test Preview HTML Example.
@@ -84,9 +84,9 @@ console.log('test')
 
 目前只预览 `HTML`, 下面为 `LESS` 展示
 
-<!--DemoStart--> 
+<!--DemoStart-->
 ```less
-.wapper {
+.wrapper {
   &::after {
     content: '';
     display: block;
@@ -94,7 +94,7 @@ console.log('test')
   }
 }
 
-.wapperContent {
+.wrapperContent {
   padding: 15px 0 0 0;
   max-width: 1200px;
   margin: 0px auto 0;
