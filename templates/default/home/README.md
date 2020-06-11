@@ -101,7 +101,7 @@ Options:
   -b, --branch <branch>  Name of the branch you are pushing to. (default: gh-pages)
   --publish [url]        Other documents generated.
   --build                Creating an optimized production build.
-  --clean                Delete the .cache folder.
+                 Delete the .cache folder.
   -h, --help             output usage information
 
 Examples:
@@ -110,8 +110,8 @@ Examples:
   $ create-react-doc init doc-example
   $ create-react-doc -d doc/mm
   $ create-react-doc -d tutorial,doc
-  $ create-react-doc -d tutorial,doc --clean --build
-  $ create-react-doc -p 2323  -d doc --clean
-  $ create-react-doc --host 0.0.0.0 -d doc --clean
+  $ create-react-doc -d tutorial,doc --build
+  $ create-react-doc -p 2323  -d doc
+  $ create-react-doc --host 0.0.0.0 -d doc
   $ create-react-doc --publish https://<your-git-repo>.git --branch master
 ```

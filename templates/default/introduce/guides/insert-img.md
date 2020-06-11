@@ -51,7 +51,7 @@ Markdown 语法插入图片，将无法控制图片尺寸大小。
 配置运行命令如下：
 
 ```shell
-$ rdoc -d doc,introduce --clean
+$ rdoc -d doc,introduce
 ```
 
 现在你的目录 `introduce/assets` 下面有两个图片 `react-logo.svg`、`webpack-logo.svg`，你需要在 `doc/react/README.md` Markdown 文件中 访问这两张图片，此时你的访问路径应该是，相对于 `introduce` 目录下找到图片，图片引用如下：
