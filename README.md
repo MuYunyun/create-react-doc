@@ -13,11 +13,21 @@ create-react-doc
 
 > If you want some features not included there, you can list in [version 1.0 RFC](https://github.com/MuYunyun/create-react-doc/issues/2).
 
+## Quick Overview
+
+### Get Started Immediately
+
+Get Started Immediately
+You don't need to install or configure tools like webpack or Babel.
+They are preconfigured and hidden so that you can focus on the code.
+
+Create a project, and you’re good to go.
+
 ## Start
 
 **create-react-doc** is very easy to use, you only install it as a package so that you can create your own website or blog. Let's start!
 
-### Install
+### Creating an Doc
 
 Install `create-react-doc` to global system，make sure `Node >= 8` in your computer.
 
