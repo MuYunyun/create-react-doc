@@ -39,14 +39,14 @@ module.exports = function (cmd) {
       });
       // https://ilikekillnerds.com/2018/03/disable-webpack-4-native-json-loader/
       loaders.push({
-        test: /rdoc\.tree\.data\.json$/,
+        test: /crd\.tree\.data\.json$/,
         // 禁用 Webpack 4 本身的 JSON 加载程序
         type: 'javascript/auto',
         use: [
           {
             loader: `${PATH.join(__dirname, './rawTreeReplaceLoader.js')}`,
             options: {
-              include: /rdoc\.tree\.data\.json$/, // 检查包含的文件名字
+              include: /crd\.tree\.data\.json$/, // 检查包含的文件名字
               directoryTrees: {
                 // 指定目录生成目录树，json
                 dir: cmd.markdownPaths,

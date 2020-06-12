@@ -11,7 +11,7 @@ const SVGGithub = (
   </svg>
 );
 
-const isString = val => typeof val === 'string';
+// const isString = val => typeof val === 'string';
 
 export default class Header extends PureComponent {
   constructor() {
@@ -57,28 +57,19 @@ export default class Header extends PureComponent {
     this.setState({ checked });
   }
   render() {
-    const { location: { pathname }, menuSource, className, children, logo } = this.props;
+    // const { location: { pathname }, menuSource, className, children, logo } = this.props;
+    const { className, logo } = this.props;
     const { mdconf } = this.props.indexProps || {};
     return (
       <div className={classNames(styles.header, className)}>
         <div className={styles.wrapper}>
           <Link to="/" replace>
-            {' '}
             <div className={styles.logo}>
               {logo && <img alt="logo" src={logo} />}
-              <span>{mdconf.title}</span>
-            </div>{' '}
-          </Link>
-          {menuSource && (
-            <div className={styles.menu}>
-              {this.renderTopMenu(menuSource, pathname)}
+              {/* maybe it'll be named customly in the future */}
+              <span>{mdconf.title || 'Create React Doc'}</span>
             </div>
-          )}
-          {children &&
-            children.map((item, index) => {
-              if (isString(item)) return item;
-              return React.cloneElement(item, { key: index });
-            })}
+          </Link>
         </div>
         <div className={styles.rightArea}>
           <Switch
