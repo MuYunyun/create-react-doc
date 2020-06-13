@@ -1,7 +1,6 @@
 import * as React from 'react';
 import cx from 'classnames';
 import { getMenuStyle } from './util';
-// import Tooltip from '../Tooltip';
 import { useMenuContext } from './context';
 import styles from './style/index.less';
 
