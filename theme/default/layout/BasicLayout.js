@@ -57,7 +57,7 @@ export default class BasicLayout extends PureComponent {
           if (item.mdconf && item.mdconf.visible === false) return null;
           if (/^README(.*)md$/.test(item.name)) return null;
           return item.children && item.children.length > 0 ? (
-            <SubMenu title={item.name}>{this.renderSubMenuItem(item.children)}</SubMenu>
+            <SubMenu title={item.name} icon="">{this.renderSubMenuItem(item.children)}</SubMenu>
           ) : (
             <Menu.Item
               title={
