@@ -56,8 +56,14 @@ function SubMenu({
         gapDistance}px`;
       popupSubMenu.current.style.top = `${curSubmenu.current.getBoundingClientRect().top}px`;
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [getParentMenuHover()]);
+
+  // function isReactFragment(variableToInspect) {
+  //   if (variableToInspect.type) {
+  //     return variableToInspect.type === React.Fragment;
+  //   }
+  //   return variableToInspect === React.Fragment;
+  // }
 
   /* 行内模式下, 渲染子节点 */
   const renderChild = () => {
@@ -66,8 +72,12 @@ function SubMenu({
         if (!reactNode || typeof reactNode !== 'object') {
           return null;
         }
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         const childElement = reactNode;
+        // console.log('childElement.children', childElement.props.children);
+        // todo: if the child is React.Fragment
+        // if (isReactFragment(reactNode) && childElement.props.children) {
+        //   return renderChild(childElement.children);
+        // }
         return React.cloneElement(childElement, {
           level: level + 1,
           sideBySide,

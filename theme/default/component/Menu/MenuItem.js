@@ -10,7 +10,7 @@ function MenuItem({
   keyValue = '',
   level = 0,
 }) {
-  const { theme, selectedKey, mode, inlineCollapsed, onSelect, onHoverKey } = useMenuContext();
+  const { theme, selectedKey, mode, onSelect, onHoverKey } = useMenuContext();
 
   const handleOnClick = () => {
     // 垂直模式关闭弹框, Todo
@@ -40,28 +40,6 @@ function MenuItem({
       </li>
     );
   };
-
-  if (inlineCollapsed === true && level === 0) {
-    if (theme === 'dark') {
-      return (
-        // <Tooltip
-        //   content={<div className={cx('menu-tooltip-dark')}>{title}</div>}
-        //   placement="right"
-        //   portalPadding={0}
-        //   arrowStyle={{ background: '#000' }}
-        // >
-        //   {renderMenuItem()}
-        // </Tooltip>
-        <div>Tooltip</div>
-      );
-    }
-    return (
-      <div>Tooltip</div>
-      // <Tooltip content={title} placement="right">
-      //   {renderMenuItem()}
-      // </Tooltip>
-    );
-  }
 
   return renderMenuItem();
 }
