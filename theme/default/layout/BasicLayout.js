@@ -1,24 +1,14 @@
 import React, { PureComponent } from 'react';
-/* eslint-disable */
 import { Switch, Link, Route, Redirect } from 'react-router-dom';
-import Menu from '../component/Menu'
 import classNames from 'classnames';
+import Menu from '../component/Menu';
+import Icon from '../component/Icon';
 import Header from '../component/Header';
 import Footer from '../component/Footer';
 import logo from '../crd.logo.svg';
 import styles from './BasicLayout.less';
 
 const SubMenu = Menu.SubMenu;
-
-function getCurrentArticle(routeData, path) {
-  let article = null;
-  routeData.forEach((item) => {
-    if (item.path === path) {
-      article = item.article;
-    }
-  });
-  return article;
-}
 
 export default class BasicLayout extends PureComponent {
   constructor(props) {
@@ -57,11 +47,14 @@ export default class BasicLayout extends PureComponent {
           if (item.mdconf && item.mdconf.visible === false) return null;
           if (/^README(.*)md$/.test(item.name)) return null;
           return item.children && item.children.length > 0 ? (
-            <SubMenu title={item.name} icon="">{this.renderSubMenuItem(item.children)}</SubMenu>
+            <SubMenu title={item.name} icon={<Icon type="folder" />}>
+              {this.renderSubMenuItem(item.children)}
+            </SubMenu>
           ) : (
             <Menu.Item
+              icon={<Icon type="file" />}
               title={
-                <div
+                <span
                   className={classNames({
                     active: pathname === item.routePath,
                   })}
@@ -70,7 +63,7 @@ export default class BasicLayout extends PureComponent {
                   item.type === "directory" &&
                   item.props &&
                   item.props.isEmpty ? (
-                    <div>{(item.mdconf && item.mdconf.title) || item.name}</div>
+                    <span>{(item.mdconf && item.mdconf.title) || item.name}</span>
                   ) : (
                     <Link
                       to={item.routePath}
@@ -81,7 +74,7 @@ export default class BasicLayout extends PureComponent {
                         : item.name}
                     </Link>
                   )}
-                </div>
+                </span>
               }
             />
           );
