@@ -36,7 +36,6 @@ export default class BasicLayout extends PureComponent {
       });
     }
     /* eslint-disable */
-    // debugger
     return (
       <>
         {menus.map((item, index) => {
@@ -47,12 +46,12 @@ export default class BasicLayout extends PureComponent {
           if (item.mdconf && item.mdconf.visible === false) return null;
           if (/^README(.*)md$/.test(item.name)) return null;
           return item.children && item.children.length > 0 ? (
-            <SubMenu title={item.name} icon={<Icon type="folder" />}>
+            <SubMenu title={item.name} icon={<Icon type="folder" size={16} />}>
               {this.renderSubMenuItem(item.children)}
             </SubMenu>
           ) : (
             <Menu.Item
-              icon={<Icon type="file" />}
+              icon={<Icon type="file" size={16} />}
               title={
                 <span
                   className={classNames({
