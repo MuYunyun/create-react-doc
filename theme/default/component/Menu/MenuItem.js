@@ -35,7 +35,7 @@ function MenuItem({
         onClick={handleOnClick}
         style={getMenuStyle(level, mode)}
       >
-        {icon}
+        {icon ? <span className={cx(styles['menu-icon'])}>{icon}</span> : null}
         <span className={cx(styles['menu-item-title'])}>{title}</span>
       </li>
     );
