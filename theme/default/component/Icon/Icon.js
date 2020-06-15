@@ -12,7 +12,6 @@ const omit = (props, arr) =>
     // eslint-disable-next-line no-sequences
     .reduce((acc, key) => ((acc[key] = props[key]), acc), {});
 
-
 function Icon(props) {
   const { type, color, prefixCls = 'icon', size, style, className, ...rest } = props;
 
