@@ -58,26 +58,32 @@ function SubMenu({
     }
   }, [getParentMenuHover()]);
 
-  // function isReactFragment(variableToInspect) {
-  //   if (variableToInspect.type) {
-  //     return variableToInspect.type === React.Fragment;
-  //   }
-  //   return variableToInspect === React.Fragment;
-  // }
+  /**
+   * judege if is React Fragment.
+   */
+  function isReactFragment(variableToInspect) {
+    if (variableToInspect.type) {
+      return variableToInspect.type === React.Fragment;
+    }
+    return variableToInspect === React.Fragment;
+  }
 
   /* 行内模式下, 渲染子节点 */
-  const renderChild = () => {
+  const renderChild = (child) => {
     return (
-      <>{React.Children.map(children, (reactNode) => {
+      <>{React.Children.map(child || children, (reactNode) => {
         if (!reactNode || typeof reactNode !== 'object') {
           return null;
         }
         const childElement = reactNode;
         // console.log('childElement.children', childElement.props.children);
         // todo: if the child is React.Fragment
-        // if (isReactFragment(reactNode) && childElement.props.children) {
-        //   return renderChild(childElement.children);
-        // }
+        if (
+          isReactFragment(childElement) &&
+              childElement.props.children
+        ) {
+          return renderChild(childElement.props.children);
+        }
         return React.cloneElement(childElement, {
           level: level + 1,
           sideBySide,
@@ -203,7 +209,7 @@ function SubMenu({
         onMouseEnter={handleParentMouseEnter}
         onMouseLeave={handleParentMouseLeave}
       >
-        {icon}
+        {icon ? <span className={cx(styles['menu-icon'])}>{icon}</span> : null}
         <span className={cx(styles['submenu-title-field'])}>{title}</span>
         <i
           className={cx(styles['submenu-arrow'], {
