@@ -39,10 +39,6 @@ export default class BasicLayout extends PureComponent {
     return (
       <>
         {menus.map((item, index) => {
-          // console.log("item", item);
-          if(item && item.name.includes('rabbit')) {
-            console.log("item.name", item);
-          }
           if (item.mdconf && item.mdconf.visible === false) return null;
           if (/^README(.*)md$/.test(item.name)) return null;
           return item.children && item.children.length > 0 ? (
@@ -70,7 +66,7 @@ export default class BasicLayout extends PureComponent {
                     >
                       {item && item.mdconf && item.mdconf.title
                         ? item.mdconf.title
-                        : item.name}
+                        : item.title}
                     </Link>
                   )}
                 </span>
@@ -107,7 +103,6 @@ export default class BasicLayout extends PureComponent {
   render() {
     const { menuSource, routeData, indexProps } = this.props;
     const isChild = this.isCurentChildren();
-    // console.log("menuSource", menuSource);
     return (
       <div className={styles.wrapper} >
         <Header logo={logo} href="/" location={this.props.location} indexProps={indexProps} menuSource={menuSource} />

@@ -11,8 +11,6 @@ const SVGGithub = (
   </svg>
 );
 
-// const isString = val => typeof val === 'string';
-
 export default class Header extends PureComponent {
   constructor() {
     super();
