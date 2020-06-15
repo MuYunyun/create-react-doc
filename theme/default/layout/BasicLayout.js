@@ -3,6 +3,7 @@ import { Switch, Link, Route, Redirect } from 'react-router-dom';
 import classNames from 'classnames';
 import Menu from '../component/Menu';
 import Icon from '../component/Icon';
+import Affix from '../component/Affix';
 import Header from '../component/Header';
 import Footer from '../component/Footer';
 import logo from '../crd.logo.svg';
@@ -83,14 +84,16 @@ export default class BasicLayout extends PureComponent {
     // menus = menus.filter(item => item.article === article);
     if (menus.length < 1) return null;
     return (
-      <Menu
-        mode="inline"
-        // openKeys={this.state.openKeys}
-        // onOpenChange={this.onOpenChange}
-        style={{ width: 256 }}
-      >
-        {this.renderSubMenuItem(menus || [])}
-      </Menu>
+      <Affix offsetTop={0} width={240} affixStyle={{ overflow: 'auto', height: '100vh' }}>
+        <Menu
+          mode="inline"
+          // openKeys={this.state.openKeys}
+          // onOpenChange={this.onOpenChange}
+          style={{ width: 256 }}
+        >
+          {this.renderSubMenuItem(menus || [])}
+        </Menu>
+      </Affix>
     );
   }
   isCurentChildren() {
