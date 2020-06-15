@@ -62,7 +62,6 @@ function routeData(data, arrayRoute = [], routePath = '/', article) {
 
 function menuSourceFormat(data, routePath, article) {
   const arr = [];
-  // console.log('data', data);
   data.forEach((item) => {
     const routePropsCurrent = `${routePath || ''}/${item.name}`.replace(/.md$/, '');
     if (item.type === 'directory') {
@@ -82,7 +81,9 @@ function menuSourceFormat(data, routePath, article) {
         item.children = [];
       }
     } else {
+      // console.log("item.mdconf", item);
       item.title = item.mdconf && item.mdconf.title ? item.mdconf.title : item.name.replace(item.extension, '');
+      console.log("item.title", item.title);
       item.sort = item.mdconf && item.mdconf.sort ? item.mdconf.sort : 0;
       if (!item.mdconf) {
         item.props = { isEmpty: true };

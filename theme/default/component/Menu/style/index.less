@@ -11,6 +11,7 @@
   transition: background 0.3s, width 0.2s;
 
   &-item {
+    margin-right: 16px;
     white-space: nowrap;
     cursor: pointer;
     height: 40px;
@@ -19,6 +20,9 @@
     color: @menu-color;
     position: relative;
     cursor: pointer;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 
     &-selected {
       position: relative;
@@ -42,21 +46,21 @@
 
     &-title {
       position: relative;
-      padding: 0 16px;
+      padding: 0 28px 0 16px;
       overflow: hidden;
       font-size: 14px;
       white-space: nowrap;
       cursor: pointer;
-
-      i {
-        margin-right: 10px;
-      }
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
     }
 
     &-title:hover {
       color: @menu-color-hover;
 
       .submenu-arrow {
+
         &::before,
         &::after {
           background: @menu-color-hover;
@@ -113,7 +117,6 @@
     &-sidebyside {
       background: #fafafa;
 
-      /* 这里可以后续再和设计再探讨下 */
       .menu-item {
         display: inline-block;
         padding: 0;
@@ -234,11 +237,13 @@
     }
 
     .submenu {
+
       &-title:hover,
       &-selected {
         color: @menu-color-hover-dark;
 
         .submenu-arrow {
+
           &::before,
           &::after {
             background: @arrow-background-dark;
@@ -247,6 +252,7 @@
       }
 
       &-arrow {
+
         &::before,
         &::after {
           background: @menu-color-dark;

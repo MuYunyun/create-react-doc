@@ -13,11 +13,6 @@ function MenuItem({
   const { theme, selectedKey, mode, onSelect, onHoverKey } = useMenuContext();
 
   const handleOnClick = () => {
-    // 垂直模式关闭弹框, Todo
-    if (mode === 'vertical') {
-      // setChildMenuHover(false)
-      // setParentMenuHover(false)
-    }
     onSelect(keyValue);
   };
 
