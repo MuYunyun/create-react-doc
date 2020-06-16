@@ -84,12 +84,19 @@ export default class BasicLayout extends PureComponent {
     // menus = menus.filter(item => item.article === article);
     if (menus.length < 1) return null;
     return (
-      <Affix offsetTop={0} width={240} affixStyle={{ overflow: 'auto', height: '100vh' }}>
+      <Affix
+        offsetTop={0}
+        // todo calculate the width same with parent node
+        // width={240}
+        affixStyle={{
+          overflow: 'auto',
+          height: '100vh',
+          border: '1px solid #fff'
+        }}>
         <Menu
           mode="inline"
           // openKeys={this.state.openKeys}
           // onOpenChange={this.onOpenChange}
-          style={{ width: 256 }}
         >
           {this.renderSubMenuItem(menus || [])}
         </Menu>
