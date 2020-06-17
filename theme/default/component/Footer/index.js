@@ -9,7 +9,7 @@ const FooterView = () => {
     <div className={styles.footer}>
       {footer ? <div dangerouslySetInnerHTML={{ __html: footer }} /> : (
         <div>
-          Copyright © 2020 Powered by <a target="_blank" rel="noopener noreferrer" href="https://github.com/MuYunyun/create-react-doc">Create React Doc {version}</a>.
+          Copyright © 2020 Powered by <a target="_blank" rel="noopener noreferrer" href="https://github.com/MuYunyun/create-react-doc">Create React Doc</a>.
         </div>
       )}
     </div>
