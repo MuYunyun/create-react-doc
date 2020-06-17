@@ -86,13 +86,12 @@ export default class BasicLayout extends PureComponent {
     return (
       <Affix
         offsetTop={0}
-        // todo calculate the width same with parent node
-        // width={240}
         affixStyle={{
-          overflow: 'auto',
-          height: '100vh',
-          border: '1px solid #fff'
-        }}>
+          overflow: "auto",
+          height: "100vh",
+          borderRight: "1px solid rgb(233, 233, 233)",
+        }}
+      >
         <Menu
           mode="inline"
           // openKeys={this.state.openKeys}

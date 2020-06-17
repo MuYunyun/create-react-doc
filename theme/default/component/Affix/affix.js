@@ -3,7 +3,7 @@ import { throttle } from './utils';
 
 const { useState, useEffect, useRef } = React;
 
-const Sticky = ({
+const Affix = ({
   offsetTop,
   offsetBottom,
   children,
@@ -44,8 +44,13 @@ const Sticky = ({
       placeholderRef.current && placeholderRef.current.getBoundingClientRect();
     if (!rect) return;
     let { top, bottom } = rect;
-    // eslint-disable-next-line no-shadow
-    const style = { width: width || '100%', zIndex: 999 };
+    const updatePositionStyle = {
+      width:
+        width ||
+        (placeholderRef.current && placeholderRef.current.getBoundingClientRect()
+          .width),
+      zIndex: 999,
+    };
     let containerTop = 0; // 容器距离视口上侧的距离
     let containerBottom = 0; // 容器距离视口下侧的距离
 
@@ -64,22 +69,23 @@ const Sticky = ({
       (validValue(offsetBottom) && bottom <= offsetBottom)
     ) {
       if (!fixedRef.current) {
-        style.position = 'fixed';
-        validValue(offsetTop) && (style.top = offsetTop + containerTop);
+        updatePositionStyle.position = 'fixed';
+        validValue(offsetTop) && (updatePositionStyle.top = offsetTop + containerTop);
         validValue(offsetBottom) &&
-          (style.bottom =
+          (updatePositionStyle.bottom =
             scrollElm === window
               ? bottom
               : window.innerHeight - (containerBottom - offsetBottom));
         onChange && onChange(true);
         updateFixed();
-        setPositionStyle(style);
+        console.log('updatePositionStyle', updatePositionStyle);
+        setPositionStyle(updatePositionStyle);
       }
     } else if (fixedRef.current) {
-      style.position = 'relative';
+      updatePositionStyle.position = 'relative';
       onChange && onChange(false);
       updateFixed();
-      setPositionStyle(style);
+      setPositionStyle(updatePositionStyle);
     }
   };
 
@@ -108,4 +114,4 @@ const Sticky = ({
   );
 };
 
-export default Sticky;
+export default Affix;
