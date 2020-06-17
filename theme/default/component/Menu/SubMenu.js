@@ -28,7 +28,6 @@ function SubMenu({
   icon,
   level = 0,
   keyValue = '',
-  sideBySide,
   onTitleClick = () => {},
 }) {
   const {
@@ -37,7 +36,6 @@ function SubMenu({
     mode,
     hoverKey,
     onHoverKey,
-    inlineCollapsed,
     defaultOpenKeys = [],
   } = useMenuContext();
   const [menuOpen, setMenuOpen] = useState(defaultOpenKeys.indexOf(keyValue) !== -1);
@@ -76,8 +74,6 @@ function SubMenu({
           return null;
         }
         const childElement = reactNode;
-        // console.log('childElement.children', childElement.props.children);
-        // todo: if the child is React.Fragment
         if (
           isReactFragment(childElement) &&
               childElement.props.children
@@ -86,7 +82,6 @@ function SubMenu({
         }
         return React.cloneElement(childElement, {
           level: level + 1,
-          sideBySide,
           ...childElement.props,
         });
       })}</>
@@ -220,9 +215,7 @@ function SubMenu({
       {mode === 'inline' ? (
         <Transition isShow={menuOpen}>
           <ul
-            className={cx(styles.menu, styles.submenu, {
-              [styles['submenu-sidebyside']]: sideBySide && !inlineCollapsed,
-            })}
+            className={cx(styles.menu, styles.submenu)}
           >
             {renderChild()}
           </ul>

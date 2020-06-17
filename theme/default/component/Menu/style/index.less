@@ -34,6 +34,23 @@
     i {
       margin-right: 10px;
     }
+
+    a {
+      color: rgba(0, 0, 0, 0.8);
+      cursor: pointer;
+      display: inline-block;
+      text-decoration: none;
+
+      &::before {
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        content: '';
+        position: absolute;
+        background-color: transparent;
+      }
+    }
   }
 
   &-item:hover {
@@ -112,23 +129,6 @@
 
     &-selected {
       color: @menu-color-selected;
-    }
-
-    &-sidebyside {
-      background: #fafafa;
-
-      .menu-item {
-        display: inline-block;
-        padding: 0;
-
-        &-selected {
-          background: initial;
-
-          &::after {
-            background: initial;
-          }
-        }
-      }
     }
   }
 
