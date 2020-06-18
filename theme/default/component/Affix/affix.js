@@ -16,24 +16,32 @@ const Affix = ({
 }) => {
   const placeholderRef = useRef(null);
   const wrapperRef = useRef(null);
+  const widthRef = useRef(width);
   const [positionStyle, setPositionStyle] = useState({});
   // 滚动元素
   let scrollElm = window;
   // 是否是绝对布局模式
   const fixedRef = useRef(false);
   const [fixed, setFixed] = useState(fixedRef.current);
+  useEffect(() => {
+    widthRef.current = width;
+  }, [width]);
   const validValue = (value) => {
     return typeof value === 'number';
   };
   const setWrapperDimension = () => {
     // eslint-disable-next-line no-shadow
-    const { width, height } = wrapperRef.current
+    const { wrapperRefWidth, wrapperRefHeight } = wrapperRef.current
       ? wrapperRef.current.getBoundingClientRect()
       : {};
     placeholderRef.current &&
-      (placeholderRef.current.style.height = `${height}px`);
+      (placeholderRef.current.style.height = `${wrapperRefHeight}px`);
     placeholderRef.current &&
-      (placeholderRef.current.style.width = `${width}px`);
+      (placeholderRef.current.style.width =
+        typeof width === 'number' ? `${width}px` : `${wrapperRefWidth}px`);
+    wrapperRef.current &&
+      (wrapperRef.current.style.width =
+        typeof width === 'number' ? `${width}px` : `${wrapperRefWidth}px`);
   };
   const updateFixed = () => {
     fixedRef.current = !fixedRef.current;
@@ -46,9 +54,10 @@ const Affix = ({
     let { top, bottom } = rect;
     const updatePositionStyle = {
       width:
-        width ||
-        (placeholderRef.current && placeholderRef.current.getBoundingClientRect()
-          .width),
+        typeof widthRef.current === 'number'
+          ? widthRef.current
+          : placeholderRef.current &&
+            placeholderRef.current.getBoundingClientRect().width,
       zIndex: 999,
     };
     let containerTop = 0; // 容器距离视口上侧的距离
@@ -78,7 +87,6 @@ const Affix = ({
               : window.innerHeight - (containerBottom - offsetBottom));
         onChange && onChange(true);
         updateFixed();
-        console.log('updatePositionStyle', updatePositionStyle);
         setPositionStyle(updatePositionStyle);
       }
     } else if (fixedRef.current) {
@@ -94,7 +102,7 @@ const Affix = ({
   useEffect(() => {
     // 在子节点移开父节点后保持原来占位
     setWrapperDimension();
-  }, [fixed]);
+  }, [fixed, width]);
 
   useEffect(() => {
     if (target) scrollElm = target();
