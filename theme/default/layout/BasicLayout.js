@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import { Switch, Link, Route, Redirect } from 'react-router-dom';
-import classNames from 'classnames';
+import cx from 'classnames';
 import Menu from '../component/Menu';
 import Icon from '../component/Icon';
 import Affix from '../component/Affix';
@@ -14,7 +14,9 @@ const SubMenu = Menu.SubMenu;
 export default class BasicLayout extends PureComponent {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      inlineCollapsed: false,
+    };
   }
   componentDidUpdate() {
     this.scrollToTop();
@@ -51,7 +53,7 @@ export default class BasicLayout extends PureComponent {
               icon={<Icon type="file" size={16} />}
               title={
                 <span
-                  className={classNames({
+                  className={cx({
                     active: pathname === item.routePath,
                   })}
                 >
@@ -91,9 +93,12 @@ export default class BasicLayout extends PureComponent {
           height: "100vh",
           borderRight: "1px solid rgb(233, 233, 233)",
         }}
+        width={this.state.inlineCollapsed ? 0 : 240}
       >
         <Menu
           mode="inline"
+          inlineCollapsed={this.state.inlineCollapsed}
+          affixStyle={ this.state.inlineCollapsed ? { width: 0 } : { width: 240 }}
           // openKeys={this.state.openKeys}
           // onOpenChange={this.onOpenChange}
         >
@@ -110,18 +115,27 @@ export default class BasicLayout extends PureComponent {
     return childs.length > 0;
   }
   render() {
+    const { inlineCollapsed } = this.state
     const { menuSource, routeData, indexProps } = this.props;
     const isChild = this.isCurentChildren();
     return (
       <div className={styles.wrapper} >
         <Header logo={logo} href="/" location={this.props.location} indexProps={indexProps} menuSource={menuSource} />
+        <button onClick={() => {
+          this.setState({
+            inlineCollapsed: !inlineCollapsed,
+          });
+        }} />
         <div className={styles.wrapperContent}>
           {isChild && (
-            <div className={styles.menuwrapper}> {this.renderMenu(menuSource)} </div>
+            <div className={cx(styles.menuwrapper, {
+              [`${styles['menuwrapper-inlineCollapsed']}`]: inlineCollapsed,
+            })}> {this.renderMenu(menuSource)} </div>
           )}
-          <div className={classNames({
+          <div className={cx({
             [`${styles.content}`]: isChild,
             [`${styles.contentNoMenu}`]: !isChild,
+            [`${styles['content-inlineCollapsed']}`]: inlineCollapsed,
           })}
           >
             <Switch>

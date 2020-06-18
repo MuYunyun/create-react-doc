@@ -16,30 +16,43 @@
   float: left;
   font-size: 14px;
   color: #6d6d6d;
+
   ul li {
     list-style: none;
   }
+
   ul ul {
     padding: 0 0 0 0;
   }
+
   li {
     padding: 0 0 0 21px;
     line-height: 40px;
   }
+
   li li {
     padding: 0 0 0 0;
   }
+
   :global {
-    .active a{
+    .active a {
       color: #1890ff;
     }
+  }
+
+  &-inlineCollapsed {
+    width: 0;
   }
 }
 
 .content {
   margin-left: 240px;
-  // border-left: 1px solid #e9e9e9;
   min-height: 300px;
+  transition: margin-left 200ms ease-in-out;
+
+  &-inlineCollapsed {
+    margin-left: 0px;
+  }
 }
 
 .contentNoMenu {
