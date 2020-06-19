@@ -114,11 +114,26 @@ export default class BasicLayout extends PureComponent {
     const childs = menuSource.filter(item => article === item.article && item.children && item.children.length > 1);
     return childs.length > 0;
   }
-  toggleMenu = () => {
+  renderToggle = () => {
     const { inlineCollapsed } = this.state;
-    this.setState({
-      inlineCollapsed: !inlineCollapsed,
-    });
+    return (
+      <div
+        className={cx(styles.toggle, {
+          [`${styles["toggle-collapsed"]}`]: inlineCollapsed,
+        })}
+        onClick={() => {
+          this.setState({
+            inlineCollapsed: !inlineCollapsed,
+          });
+        }}
+      >
+        <i
+          className={cx(styles[`toggle-icon`], {
+            [`${styles["toggle-icon-close"]}`]: inlineCollapsed,
+          })}
+        />
+      </div>
+    );
   }
   render() {
     const { inlineCollapsed } = this.state
@@ -140,12 +155,7 @@ export default class BasicLayout extends PureComponent {
                 [`${styles["menuwrapper-inlineCollapsed"]}`]: inlineCollapsed,
               })}
             >
-              <div
-                className={cx(styles.toggle, {
-                  [`${styles["toggle-collapsed"]}`]: inlineCollapsed,
-                })}
-                onClick={this.toggleMenu}
-              />
+              {this.renderToggle()}
               {this.renderMenu(menuSource)}
             </div>
           )}
