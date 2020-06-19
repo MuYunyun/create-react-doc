@@ -114,42 +114,68 @@ export default class BasicLayout extends PureComponent {
     const childs = menuSource.filter(item => article === item.article && item.children && item.children.length > 1);
     return childs.length > 0;
   }
+  toggleMenu = () => {
+    const { inlineCollapsed } = this.state;
+    this.setState({
+      inlineCollapsed: !inlineCollapsed,
+    });
+  }
   render() {
     const { inlineCollapsed } = this.state
     const { menuSource, routeData, indexProps } = this.props;
     const isChild = this.isCurentChildren();
     return (
-      <div className={styles.wrapper} >
-        <Header logo={logo} href="/" location={this.props.location} indexProps={indexProps} menuSource={menuSource} />
-        <button onClick={() => {
-          this.setState({
-            inlineCollapsed: !inlineCollapsed,
-          });
-        }} />
+      <div className={styles.wrapper}>
+        <Header
+          logo={logo}
+          href="/"
+          location={this.props.location}
+          indexProps={indexProps}
+          menuSource={menuSource}
+        />
         <div className={styles.wrapperContent}>
           {isChild && (
-            <div className={cx(styles.menuwrapper, {
-              [`${styles['menuwrapper-inlineCollapsed']}`]: inlineCollapsed,
-            })}> {this.renderMenu(menuSource)} </div>
+            <div
+              className={cx(styles.menuwrapper, {
+                [`${styles["menuwrapper-inlineCollapsed"]}`]: inlineCollapsed,
+              })}
+            >
+              <div
+                className={cx(styles.toggle, {
+                  [`${styles["toggle-collapsed"]}`]: inlineCollapsed,
+                })}
+                onClick={this.toggleMenu}
+              />
+              {this.renderMenu(menuSource)}
+            </div>
           )}
-          <div className={cx({
-            [`${styles.content}`]: isChild,
-            [`${styles.contentNoMenu}`]: !isChild,
-            [`${styles['content-inlineCollapsed']}`]: inlineCollapsed,
-          })}
+          <div
+            className={cx({
+              [`${styles.content}`]: isChild,
+              [`${styles.contentNoMenu}`]: !isChild,
+              [`${styles["content-inlineCollapsed"]}`]: inlineCollapsed,
+            })}
           >
             <Switch>
               {routeData.map((item) => {
                 // 重定向跳转
                 if (item && item.mdconf && item.mdconf.redirect) {
-                  let redirectPath = `${item.path || ''}/${item.mdconf.redirect}`;
-                  redirectPath = redirectPath.replace(/^\/\//, '/');
+                  let redirectPath = `${item.path || ""}/${
+                    item.mdconf.redirect
+                  }`;
+                  redirectPath = redirectPath.replace(/^\/\//, "/");
                   return (
-                    <Route key={item.path} exact path={item.path} render={() => <Redirect to={redirectPath} />} />
+                    <Route
+                      key={item.path}
+                      exact
+                      path={item.path}
+                      render={() => <Redirect to={redirectPath} />}
+                    />
                   );
                 }
                 return (
-                  <Route key={item.path}
+                  <Route
+                    key={item.path}
                     exact
                     path={item.path}
                     render={() => {
