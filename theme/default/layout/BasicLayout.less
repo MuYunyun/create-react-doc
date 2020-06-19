@@ -16,6 +16,21 @@
   float: left;
   font-size: 14px;
   color: #6d6d6d;
+  position: relative;
+
+  .toggle {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: red;
+    left: 240px;
+    top: 20px;
+    transition: left .2s ease-in-out;
+
+    &-collapsed {
+      left: 0px;
+    }
+  }
 
   ul li {
     list-style: none;
@@ -48,7 +63,7 @@
 .content {
   margin-left: 240px;
   min-height: 300px;
-  transition: margin-left 200ms ease-in-out;
+  transition: margin-left .2s ease-in-out;
 
   &-inlineCollapsed {
     margin-left: 0px;
