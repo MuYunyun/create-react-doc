@@ -9,7 +9,7 @@ create-react-doc
 
 * Fast static site generator for React.
 * You only just write **Markdown**.
-* Files is just Blog.
+* Files is just Menu.
 
 > If you want some features not included there, you can list in [version 1.0 RFC](https://github.com/MuYunyun/create-react-doc/issues/2).
 

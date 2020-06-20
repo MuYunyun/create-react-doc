@@ -5,7 +5,7 @@ import Footer from '../component/Footer';
 import styles from './IndexLayout.less';
 import logo from '../crd.logo.svg';
 
-const IndexLayout = ({ menuSource, indexRoute, indexProps }) => {
+const IndexLayout = ({ menuSource, indexRoute, indexProps, location }) => {
   return (
     <div className={styles.wrapper}>
       <Header
@@ -13,10 +13,10 @@ const IndexLayout = ({ menuSource, indexRoute, indexProps }) => {
         className={styles.header}
         href="/"
         indexProps={indexProps}
-        location={this.props.location}
+        location={location}
         menuSource={menuSource}
       />
-      {/* this is index page to fill */}
+      {/* todo: this is index page fill */}
       {/* <div>Index Page</div> */}
       <Switch>
         {indexRoute &&
