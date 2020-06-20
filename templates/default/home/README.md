@@ -19,7 +19,6 @@ body, html { background: #fff; }
 }
 .jumbotron-block { min-height: 400px; }
 .jumbotron-warpper {
-  max-width: 1200px;
   padding: 0 30px;
   margin: 0 auto;
 }

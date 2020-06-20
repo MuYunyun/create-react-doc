@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import classNames from 'classnames';
+import cx from 'classnames';
 import ReactMarkdown from 'react-markdown';
 import hljs from 'highlight.js';
 import InlineCode from './InlineCode';
@@ -61,7 +61,7 @@ export default class Markdown extends React.Component {
         {/* {title && layout !== 'IndexLayout' && <h1 id={title} className={styles.pageTitle}>{title}</h1>} */}
         {markdownStr ? (
           <ReactMarkdown
-            className={classNames("markdown", styles.markdown)}
+            className={cx("markdown", styles.markdown)}
             source={markdownStr}
             escapeHtml={false}
             renderers={{
