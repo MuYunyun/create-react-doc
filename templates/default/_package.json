@@ -2,15 +2,14 @@
   "name": "{{name}}",
   "version": "1.0.0",
   "description": "Describe {{name}} here",
-  "private": true,
   "scripts": {
-    "deploy": "rdoc --publish <your repo url>",
-    "build": "rdoc -d home,introduce,faq,about,github --build",
-    "start": "rdoc -d home,introduce,faq,about,github"
+    "deploy": "create-react-doc --publish <your repo url>",
+    "build": "create-react-doc -d home,introduce,faq,about,github --clean --build",
+    "start": "create-react-doc -d home,introduce,faq,about,github --clean"
   },
   "keywords": [
     "{{name}}",
-    "rdoc",
+    "create-react-doc",
     "react-doc",
     "react"
   ],

@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react';
+import React from 'react';
 import { Switch, Link, Route, Redirect } from 'react-router-dom';
 import cx from 'classnames';
 import Menu from '../component/Menu';
@@ -10,25 +10,29 @@ import logo from '../crd.logo.svg';
 import styles from './BasicLayout.less';
 import './mobile.less';
 
+const { useState, useEffect } = React;
 const SubMenu = Menu.SubMenu;
 
-export default class BasicLayout extends PureComponent {
-  constructor(props) {
-    super(props);
-    this.state = {
-      inlineCollapsed: false,
-    };
-  }
-  componentDidMount() {
-    this.scrollToTop();
-  }
-  scrollToTop() {
+function BasicLayout({
+  location,
+  routeData,
+  menuSource,
+  indexProps,
+}) {
+  const [inlineCollapsed, setInlineCollapsed] = useState(false);
+
+  useEffect(() => {
+    // eslint-disable-next-line no-use-before-define
+    scrollToTop();
+  }, []);
+
+  const scrollToTop = () => {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
     window.scrollTo(0, 0);
-  }
-  renderSubMenuItem(menus) {
-    const { location: { pathname } } = this.props;
+  };
+  const renderSubMenuItem = (menus) => {
+    const pathname = location;
     if (menus.length > 1) {
       menus = menus.sort((a, b) => {
         if (a.sort < b.sort) return -1;
@@ -44,7 +48,7 @@ export default class BasicLayout extends PureComponent {
           if (/^README(.*)md$/.test(item.name)) return null;
           return item.children && item.children.length > 0 ? (
             <SubMenu title={item.name} icon={<Icon type="folder" size={16} />}>
-              {this.renderSubMenuItem(item.children)}
+              {renderSubMenuItem(item.children)}
             </SubMenu>
           ) : (
             <Menu.Item
@@ -59,7 +63,9 @@ export default class BasicLayout extends PureComponent {
                   item.type === "directory" &&
                   item.props &&
                   item.props.isEmpty ? (
-                    <span>{(item.mdconf && item.mdconf.title) || item.name}</span>
+                    <span>
+                      {(item.mdconf && item.mdconf.title) || item.name}
+                    </span>
                   ) : (
                     <Link
                       to={item.routePath}
@@ -77,10 +83,10 @@ export default class BasicLayout extends PureComponent {
         })}
       </>
     );
-  }
-  renderMenu(menus) {
-    const { inlineCollapsed } = this.state;
-    const { location: { pathname }, routeData } = this.props;
+  };
+
+  const renderMenu = (menus) => {
+    const { pathname } = location;
     // const article = getCurrentArticle(routeData, pathname);
     // menus = menus.filter(item => item.article === article);
     if (menus.length < 1) return null;
@@ -95,94 +101,92 @@ export default class BasicLayout extends PureComponent {
           mode="inline"
           inlineCollapsed={inlineCollapsed}
           toggle={() => {
-            this.setState({
-              inlineCollapsed: !inlineCollapsed,
-            });
+            setInlineCollapsed(!inlineCollapsed);
           }}
           menuStyle={{
-            height: '100vh',
-            overflow: 'auto'
+            height: "100vh",
+            overflow: "auto",
           }}
           // openKeys={this.state.openKeys}
           // onOpenChange={this.onOpenChange}
         >
-          {this.renderSubMenuItem(menus || [])}
+          {renderSubMenuItem(menus || [])}
         </Menu>
       </Affix>
     );
-  }
-  isCurentChildren() {
-    const { location: { pathname }, menuSource, routeData } = this.props;
-    const getRoute = routeData.filter(item => pathname === item.path);
+  };
+  const isCurentChildren = () => {
+    const { pathname } = location;
+    const getRoute = routeData.filter((item) => pathname === item.path);
     const article = getRoute.length > 0 ? getRoute[0].article : null;
-    const childs = menuSource.filter(item => article === item.article && item.children && item.children.length > 1);
+    const childs = menuSource.filter(
+      (item) =>
+        article === item.article && item.children && item.children.length > 1
+    );
     return childs.length > 0;
-  }
-  render() {
-    const { inlineCollapsed } = this.state
-    const { menuSource, routeData, indexProps } = this.props;
-    const isChild = this.isCurentChildren();
-    return (
-      <div className={styles.wrapper}>
-        <Header
-          logo={logo}
-          href="/"
-          location={this.props.location}
-          indexProps={indexProps}
-          menuSource={menuSource}
-        />
-        <div className={styles.wrapperContent}>
-          {isChild && (
-            <div
-              className={cx(styles.menuwrapper, {
-                [`${styles["menuwrapper-inlineCollapsed"]}`]: inlineCollapsed,
-              })}
-            >
-              {this.renderMenu(menuSource)}
-            </div>
-          )}
+  };
+
+  const isChild = isCurentChildren();
+  return (
+    <div className={styles.wrapper}>
+      <Header
+        logo={logo}
+        href="/"
+        location={location}
+        indexProps={indexProps}
+        menuSource={menuSource}
+      />
+      <div className={styles.wrapperContent}>
+        {isChild && (
           <div
-            className={cx({
-              [`${styles.content}`]: isChild,
-              [`${styles.contentNoMenu}`]: !isChild,
-              [`${styles["content-inlineCollapsed"]}`]: inlineCollapsed,
+            className={cx(styles.menuwrapper, {
+              [`${styles["menuwrapper-inlineCollapsed"]}`]: inlineCollapsed,
             })}
           >
-            <Switch>
-              {routeData.map((item) => {
-                // 重定向跳转
-                if (item && item.mdconf && item.mdconf.redirect) {
-                  let redirectPath = `${item.path || ""}/${
-                    item.mdconf.redirect
-                  }`;
-                  redirectPath = redirectPath.replace(/^\/\//, "/");
-                  return (
-                    <Route
-                      key={item.path}
-                      exact
-                      path={item.path}
-                      render={() => <Redirect to={redirectPath} />}
-                    />
-                  );
-                }
+            {renderMenu(menuSource)}
+          </div>
+        )}
+        <div
+          className={cx({
+            [`${styles.content}`]: isChild,
+            [`${styles.contentNoMenu}`]: !isChild,
+            [`${styles["content-inlineCollapsed"]}`]: inlineCollapsed,
+          })}
+        >
+          <Switch>
+            {routeData.map((item) => {
+              // 重定向跳转
+              if (item && item.mdconf && item.mdconf.redirect) {
+                let redirectPath = `${item.path || ""}/${item.mdconf.redirect}`;
+                redirectPath = redirectPath.replace(/^\/\//, "/");
                 return (
                   <Route
                     key={item.path}
                     exact
                     path={item.path}
-                    render={() => {
-                      const Comp = item.component;
-                      return <Comp {...item} />;
-                    }}
+                    render={() => <Redirect to={redirectPath} />}
                   />
                 );
-              })}
-              <Redirect to="/404" />
-            </Switch>
-          </div>
-          <Footer inlineCollapsed={inlineCollapsed} />
+              }
+              return (
+                <Route
+                  key={item.path}
+                  exact
+                  path={item.path}
+                  render={() => {
+                    const Comp = item.component;
+                    return <Comp {...item} />;
+                  }}
+                />
+              );
+            })}
+            <Redirect to="/404" />
+          </Switch>
         </div>
+        <Footer inlineCollapsed={inlineCollapsed} />
       </div>
-    );
-  }
+    </div>
+  );
 }
+
+export default BasicLayout

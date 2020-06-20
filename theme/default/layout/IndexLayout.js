@@ -1,33 +1,43 @@
-import React, { PureComponent } from 'react';
+import React from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import Header from '../component/Header';
 import Footer from '../component/Footer';
 import styles from './IndexLayout.less';
 import logo from '../crd.logo.svg';
 
-export default class IndexLayout extends PureComponent {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
-  render() {
-    const { menuSource, indexRoute, indexProps } = this.props;
-    return (
-      <div className={styles.wrapper}>
-        <Header logo={logo} className={styles.header} href="/" indexProps={indexProps} location={this.props.location} menuSource={menuSource} />
-        <Switch>
-          {indexRoute && indexRoute.map((item) => {
+const IndexLayout = ({ menuSource, indexRoute, indexProps }) => {
+  return (
+    <div className={styles.wrapper}>
+      <Header
+        logo={logo}
+        className={styles.header}
+        href="/"
+        indexProps={indexProps}
+        location={this.props.location}
+        menuSource={menuSource}
+      />
+      {/* this is index page to fill */}
+      {/* <div>Index Page</div> */}
+      <Switch>
+        {indexRoute &&
+          indexRoute.map((item) => {
             item.path = '/';
             // 重定向跳转
             if (item && item.mdconf && item.mdconf.redirect) {
               let redirectPath = `${item.path || ''}/${item.mdconf.redirect}`;
               redirectPath = redirectPath.replace(/^\/\//, '/');
               return (
-                <Route key={item.path} exact path={item.path} render={() => <Redirect to={redirectPath} />} />
+                <Route
+                  key={item.path}
+                  exact
+                  path={item.path}
+                  render={() => <Redirect to={redirectPath} />}
+                />
               );
             }
             return (
-              <Route key={item.path}
+              <Route
+                key={item.path}
                 exact
                 path={item.path}
                 render={() => {
@@ -37,9 +47,10 @@ export default class IndexLayout extends PureComponent {
               />
             );
           })}
-        </Switch>
-        <Footer />
-      </div>
-    );
-  }
-}
+      </Switch>
+      <Footer />
+    </div>
+  );
+};
+
+export default IndexLayout;

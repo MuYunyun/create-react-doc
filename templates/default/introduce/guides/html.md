@@ -96,7 +96,6 @@ console.log('test')
 
 .wrapperContent {
   padding: 15px 0 0 0;
-  max-width: 1200px;
   margin: 0px auto 0;
 }
 ```
