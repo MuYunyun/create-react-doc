@@ -16,6 +16,7 @@
   float: left;
   font-size: 14px;
   color: #6d6d6d;
+  transition: width .2s linear;
 
   ul li {
     list-style: none;
@@ -42,6 +43,16 @@
 
   &-inlineCollapsed {
     width: 0;
+  }
+
+  .affixPlaceholder {
+    transition: width .2s linear;
+  }
+
+  .affixWrapper {
+    height: 100vh;
+    border-right: 1px solid rgb(233, 233, 233);
+    transition: width .2s linear;
   }
 }
 
