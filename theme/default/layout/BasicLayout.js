@@ -6,9 +6,10 @@ import Icon from '../component/Icon';
 import Affix from '../component/Affix';
 import Header from '../component/Header';
 import Footer from '../component/Footer';
+import { isMobile } from '../utils';
 import logo from '../crd.logo.svg';
 import styles from './BasicLayout.less';
-import './mobile.less';
+import '../style/mobile.less';
 
 const { useState, useEffect } = React;
 const SubMenu = Menu.SubMenu;
@@ -125,8 +126,48 @@ function BasicLayout({
     );
     return childs.length > 0;
   };
-
   const isChild = isCurentChildren();
+  const renderContent = () => {
+    return (
+      <div
+        className={cx({
+          [`${styles.content}`]: isChild,
+          [`${styles.contentNoMenu}`]: !isChild,
+          [`${styles["content-fullpage"]}`]: inlineCollapsed || isMobile,
+        })}
+      >
+        <Switch>
+          {routeData.map((item) => {
+            // redirect jump
+            if (item && item.mdconf && item.mdconf.redirect) {
+              let redirectPath = `${item.path || ""}/${item.mdconf.redirect}`;
+              redirectPath = redirectPath.replace(/^\/\//, "/");
+              return (
+                <Route
+                  key={item.path}
+                  exact
+                  path={item.path}
+                  render={() => <Redirect to={redirectPath} />}
+                />
+              );
+            }
+            return (
+              <Route
+                key={item.path}
+                exact
+                path={item.path}
+                render={() => {
+                  const Comp = item.component;
+                  return <Comp {...item} />;
+                }}
+              />
+            );
+          })}
+          <Redirect to="/404" />
+        </Switch>
+      </div>
+    );
+  }
   return (
     <div className={styles.wrapper}>
       <Header
@@ -138,51 +179,18 @@ function BasicLayout({
       />
       <div className={styles.wrapperContent}>
         {isChild && (
-          <div
-            className={cx(styles.menuwrapper, {
-              [`${styles["menuwrapper-inlineCollapsed"]}`]: inlineCollapsed,
-            })}
-          >
-            {renderMenu(menuSource)}
-          </div>
+          <>
+            <div
+              className={cx(styles.menuWrapper, {
+                [`${styles["menuwrapper-inlineCollapsed"]}`]: inlineCollapsed,
+              })}
+            >
+              {renderMenu(menuSource)}
+            </div>
+            <div className={cx(styles.menuMask)} />
+          </>
         )}
-        <div
-          className={cx({
-            [`${styles.content}`]: isChild,
-            [`${styles.contentNoMenu}`]: !isChild,
-            [`${styles["content-inlineCollapsed"]}`]: inlineCollapsed,
-          })}
-        >
-          <Switch>
-            {routeData.map((item) => {
-              // 重定向跳转
-              if (item && item.mdconf && item.mdconf.redirect) {
-                let redirectPath = `${item.path || ""}/${item.mdconf.redirect}`;
-                redirectPath = redirectPath.replace(/^\/\//, "/");
-                return (
-                  <Route
-                    key={item.path}
-                    exact
-                    path={item.path}
-                    render={() => <Redirect to={redirectPath} />}
-                  />
-                );
-              }
-              return (
-                <Route
-                  key={item.path}
-                  exact
-                  path={item.path}
-                  render={() => {
-                    const Comp = item.component;
-                    return <Comp {...item} />;
-                  }}
-                />
-              );
-            })}
-            <Redirect to="/404" />
-          </Switch>
-        </div>
+        { renderContent() }
         <Footer inlineCollapsed={inlineCollapsed} />
       </div>
     </div>

@@ -1,3 +1,5 @@
+@import '../style/base.less';
+
 .wrapper {
   &::after {
     content: '';
@@ -11,13 +13,14 @@
   margin: 0px auto 0;
 }
 
-.menuwrapper {
+.menuWrapper {
   width: 240px;
   float: left;
   position: absolute;
   font-size: 14px;
   color: #6d6d6d;
   transition: width .2s linear;
+  z-index: @menu-zIndex;
 
   ul li {
     list-style: none;
@@ -56,12 +59,23 @@
   }
 }
 
+.menuMask {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, .3);
+  z-index: @menu-mask-zIndex;
+  transition: opacity .3s cubic-bezier(.78, .14, .15, .86)
+}
+
 .content {
   margin-left: 240px;
   min-height: 300px;
   transition: margin-left .2s ease-in-out;
 
-  &-inlineCollapsed {
+  &-fullpage {
     margin-left: 0px;
   }
 }
