@@ -1,9 +1,9 @@
 import * as React from 'react';
 import styles from './style/index.less';
 
-const { useEffect, useRef, useCallback } = React;
+const { useLayoutEffect, useRef, useCallback } = React;
 
-const ANIMATION_DURATION = 190;
+const ANIMATION_DURATION = 200;
 
 export default function Transition({
   isShow,
@@ -76,7 +76,7 @@ export default function Transition({
     [beforeLeave, enter, leave]
   );
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (!mounted.current) {
       mounted.current = true;
       beforeEnter();

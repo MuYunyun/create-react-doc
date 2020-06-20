@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { throttle } from './utils';
 
-const { useState, useEffect, useRef } = React;
+const { useState, useLayoutEffect, useRef } = React;
 
 const Affix = ({
   offsetTop,
@@ -10,6 +10,7 @@ const Affix = ({
   target,
   onChange,
   className,
+  wrapperClassName,
   style,
   width,
   affixStyle,
@@ -23,7 +24,7 @@ const Affix = ({
   // 是否是绝对布局模式
   const fixedRef = useRef(false);
   const [fixed, setFixed] = useState(fixedRef.current);
-  useEffect(() => {
+  useLayoutEffect(() => {
     widthRef.current = width;
   }, [width]);
   const validValue = (value) => {
@@ -99,12 +100,12 @@ const Affix = ({
 
   const scroll = throttle(handleScroll, 20);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     // 在子节点移开父节点后保持原来占位
     setWrapperDimension();
   }, [fixed, width]);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (target) scrollElm = target();
     scrollElm.addEventListener('scroll', scroll);
     return () => {
@@ -115,7 +116,11 @@ const Affix = ({
 
   return (
     <div ref={placeholderRef} style={style} className={className}>
-      <div ref={wrapperRef} style={{ ...{ position: 'relative' }, ...positionStyle, ...affixStyle }}>
+      <div
+        ref={wrapperRef}
+        className={wrapperClassName}
+        style={{ ...{ position: 'relative' }, ...positionStyle, ...affixStyle }}
+      >
         {children}
       </div>
     </div>

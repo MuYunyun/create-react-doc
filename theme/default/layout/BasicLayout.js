@@ -86,20 +86,22 @@ export default class BasicLayout extends PureComponent {
     return (
       <Affix
         offsetTop={0}
-        affixStyle={{
-          height: "100vh",
-          borderRight: "1px solid rgb(233, 233, 233)",
-        }}
+        // affixStyle={{
+        //   height: "100vh",
+        //   borderRight: "1px solid rgb(233, 233, 233)",
+        // }}
+        className={styles.affixPlaceholder}
+        wrapperClassName={styles.affixWrapper}
         width={inlineCollapsed ? 0 : 240}
       >
         <Menu
           mode="inline"
           inlineCollapsed={inlineCollapsed}
-          affixStyle={inlineCollapsed ? { width: 0 } : { width: 240 }}
+          // affixStyle={inlineCollapsed ? { width: 0 } : { width: 240 }}
           toggle={() => {
             this.setState({
-              inlineCollapsed: !inlineCollapsed
-            })
+              inlineCollapsed: !inlineCollapsed,
+            });
           }}
           // openKeys={this.state.openKeys}
           // onOpenChange={this.onOpenChange}

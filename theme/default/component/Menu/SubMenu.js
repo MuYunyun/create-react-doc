@@ -152,13 +152,13 @@ function SubMenu({
         onMouseEnter={handleParentMouseEnter}
         onMouseLeave={handleParentMouseLeave}
       >
-        {icon ? <span className={cx(styles['menu-icon'])}>{icon}</span> : null}
-        <span className={cx(styles['submenu-title-field'])}>{title}</span>
         <i
           className={cx(styles['submenu-arrow'], {
             [styles['submenu-arrow-open']]: mode === 'inline' && menuOpen,
           })}
         />
+        {icon ? <span className={cx(styles['menu-icon'])}>{icon}</span> : null}
+        <span className={cx(styles['submenu-title-field'])}>{title}</span>
       </div>
       {mode === 'inline' ? (
         <Transition isShow={menuOpen}>
