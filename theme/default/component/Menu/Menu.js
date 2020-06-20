@@ -14,6 +14,7 @@ const Menu = ({
   inlineCollapsed = false,
   defaultOpenKeys = [],
   width,
+  toggle,
 }) => {
   /* 存储 hover 状态的 key 值, 在垂直模式中需要根据 hover 的 key 值高亮父节点 */
   const [hoverKey, setHoverKey] = React.useState('');
@@ -27,6 +28,22 @@ const Menu = ({
     onSelect,
     hoverKey,
     onHoverKey: setHoverKey,
+  };
+  const renderToggle = () => {
+    return (
+      <div
+        className={cx(styles.toggle, {
+          [`${styles['toggle-collapsed']}`]: inlineCollapsed,
+        })}
+        onClick={toggle}
+      >
+        <i
+          className={cx(styles['toggle-icon'], {
+            [`${styles['toggle-icon-close']}`]: inlineCollapsed,
+          })}
+        />
+      </div>
+    );
   };
   const renderMenu = () => {
     return (
@@ -48,7 +65,12 @@ const Menu = ({
     );
   };
 
-  return <MenuProvider value={MenuContext}>{renderMenu()}</MenuProvider>;
+  return (
+    <MenuProvider value={MenuContext}>
+      {renderToggle()}
+      {renderMenu()}
+    </MenuProvider>
+  );
 };
 
 Menu.Item = MenuItem;
