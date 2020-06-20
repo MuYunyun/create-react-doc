@@ -8,6 +8,7 @@ import Header from '../component/Header';
 import Footer from '../component/Footer';
 import logo from '../crd.logo.svg';
 import styles from './BasicLayout.less';
+import './mobile.less';
 
 const SubMenu = Menu.SubMenu;
 
@@ -86,10 +87,6 @@ export default class BasicLayout extends PureComponent {
     return (
       <Affix
         offsetTop={0}
-        // affixStyle={{
-        //   height: "100vh",
-        //   borderRight: "1px solid rgb(233, 233, 233)",
-        // }}
         className={styles.affixPlaceholder}
         wrapperClassName={styles.affixWrapper}
         width={inlineCollapsed ? 0 : 240}
@@ -97,11 +94,14 @@ export default class BasicLayout extends PureComponent {
         <Menu
           mode="inline"
           inlineCollapsed={inlineCollapsed}
-          // affixStyle={inlineCollapsed ? { width: 0 } : { width: 240 }}
           toggle={() => {
             this.setState({
               inlineCollapsed: !inlineCollapsed,
             });
+          }}
+          menuStyle={{
+            height: '100vh',
+            overflow: 'auto'
           }}
           // openKeys={this.state.openKeys}
           // onOpenChange={this.onOpenChange}

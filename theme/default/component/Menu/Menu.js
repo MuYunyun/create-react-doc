@@ -13,7 +13,7 @@ const Menu = ({
   onSelect = () => {},
   inlineCollapsed = false,
   defaultOpenKeys = [],
-  width,
+  menuStyle,
   toggle,
 }) => {
   /* 存储 hover 状态的 key 值, 在垂直模式中需要根据 hover 的 key 值高亮父节点 */
@@ -56,9 +56,7 @@ const Menu = ({
             [styles['menu-inline-collapsed']]: inlineCollapsed,
           }
         )}
-        style={{
-          width: `${width}px`,
-        }}
+        style={menuStyle}
       >
         {children}
       </ul>
