@@ -3,7 +3,7 @@ import styles from './style/index.less';
 
 const { useEffect, useRef, useCallback } = React;
 
-const ANIMATION_DURATION = 300;
+const ANIMATION_DURATION = 190;
 
 export default function Transition({
   isShow,
@@ -90,7 +90,6 @@ export default function Transition({
 
   return (
     <div className={styles['collapse-transition']} ref={collapseRef}>
-      {/* <div className="collapse-transition" ref={collapseRef}> */}
       {children}
     </div>
   );

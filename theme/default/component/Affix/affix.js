@@ -31,7 +31,7 @@ const Affix = ({
   };
   const setWrapperDimension = () => {
     // eslint-disable-next-line no-shadow
-    const { wrapperRefWidth, wrapperRefHeight } = wrapperRef.current
+    const { width: wrapperRefWidth, height: wrapperRefHeight } = wrapperRef.current
       ? wrapperRef.current.getBoundingClientRect()
       : {};
     placeholderRef.current &&
@@ -115,7 +115,7 @@ const Affix = ({
 
   return (
     <div ref={placeholderRef} style={style} className={className}>
-      <div ref={wrapperRef} style={{ ...positionStyle, ...affixStyle }}>
+      <div ref={wrapperRef} style={{ ...{ position: 'relative' }, ...positionStyle, ...affixStyle }}>
         {children}
       </div>
     </div>
