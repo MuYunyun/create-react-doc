@@ -9,6 +9,7 @@
   background: @menu-background;
   user-select: none;
   transition: background 0.3s, width 0.2s;
+  overflow: auto;
 
   &-item {
     margin-right: 16px;
@@ -195,20 +196,6 @@
     }
   }
 
-  &-vertical {
-    .submenu {
-      &-arrow {
-        &::before {
-          transform: rotate(45deg) translateX(-2px);
-        }
-
-        &::after {
-          transform: rotate(135deg) translateX(2px);
-        }
-      }
-    }
-  }
-
   /* dark theme */
   &-dark {
     color: @menu-color-dark;
@@ -262,27 +249,79 @@
   }
 }
 
-/* vertical 模式下, 弹出菜单的样式 */
-.submenu {
-  &-popup {
-    position: absolute;
-    background: @menu-background;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-    min-width: 160px;
-    z-index: 1025;
-  }
-}
-
-/* tooltip 暗黑模式适配 */
-.menu-tooltip-dark {
-  background: #000;
-  padding: 8px;
-  color: #fff;
-  border-radius: 2px;
-}
-
 /* submenu 折叠/展开动画 */
 .collapse-transition {
   overflow: hidden;
   transition: height 0.3s;
+}
+
+.toggle {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  left: 240px;
+  top: 200px;
+  transition: left .2s ease-in-out;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, .15);
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &-icon {
+    position: relative;
+    background: 0 0;
+    width: 12px;
+    height: 2px;
+    background: #333;
+    transition: background .3s cubic-bezier(.78, .14, .15, .86);
+
+    &::before,
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      background: #333;
+      width: 50%;
+      height: 2px;
+      transition: transform .2s cubic-bezier(.78, .14, .15, .86);
+    }
+
+    &::before {
+      transform: translateY(-2px) rotate(-45deg);
+    }
+
+    &::after {
+      transform: translateY(2px) rotate(45deg);
+    }
+
+    &-close {
+      background: #333;
+
+      &::before,
+      &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        background: #333;
+        width: 100%;
+        height: 2px;
+        transition: transform .2s cubic-bezier(.78, .14, .15, .86);
+        transform: rotate(0deg);
+      }
+
+      &::before {
+        top: -4px;
+      }
+
+      &::after {
+        top: 4px;
+      }
+    }
+  }
+
+  &-collapsed {
+    left: 0px;
+  }
 }

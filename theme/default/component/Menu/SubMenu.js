@@ -1,5 +1,4 @@
 import * as React from 'react';
-import * as ReactDOM from 'react-dom';
 import cx from 'classnames';
 import Transition from './transition';
 import { getMenuStyle } from './util';
@@ -31,7 +30,6 @@ function SubMenu({
   onTitleClick = () => {},
 }) {
   const {
-    theme,
     selectedKey,
     mode,
     hoverKey,
@@ -110,56 +108,6 @@ function SubMenu({
     onHoverKey('');
   };
 
-  const handleChildMouseEnter = () => {
-    // console.log(`childEnter${level} ParentMenuHover${level}`, getParentMenuHover())
-    setChildMenuHover(true);
-  };
-
-  /** vertical 模式下光标移开当前子 menu 返回父 menu 时会有空隙, 为避免在空隙中隐藏掉菜单,
-   * 做了如下处理: 如果 24ms 内没有返回父 menu 的 title 位置(submenu), 则关闭子菜单窗口 */
-  const handleChildMouseLeave = () => {
-    setParentMenuHover(false);
-    setTimeout(() => {
-      // console.log(`childLeave${level} ParentMenuHover${level}`, getParentMenuHover())
-      if (!getParentMenuHover()) {
-        setChildMenuHover(false);
-      }
-    }, delayTime);
-  };
-
-  /* 垂直模式下, 渲染子内容区 */
-  const renderVerticalChild = () => {
-    if (getParentMenuHover() || getChildMenuHover()) {
-      const style = {
-        position: 'absolute',
-        top: 0,
-        left: 0,
-      };
-      return ReactDOM.createPortal(
-        <div style={style}>
-          <div
-            className={cx([styles.submenu, styles['submenu-popup']])}
-            ref={popupSubMenu}
-            onMouseEnter={handleChildMouseEnter}
-            onMouseLeave={handleChildMouseLeave}
-          >
-            <ul
-              className={cx(
-                styles.menu,
-                styles[`menu-${mode}`],
-                styles[`menu-${theme}`]
-              )}
-            >
-              {renderChild()}
-            </ul>
-          </div>
-        </div>,
-        document.body
-      );
-    }
-    return null;
-  };
-
   /* 处理 menu 开闭状态 */
   const handleMenuStatus = () => {
     onTitleClick(keyValue);
@@ -214,14 +162,11 @@ function SubMenu({
       </div>
       {mode === 'inline' ? (
         <Transition isShow={menuOpen}>
-          <ul
-            className={cx(styles.menu, styles.submenu)}
-          >
+          <ul className={cx(styles.menu, styles.submenu)}>
             {renderChild()}
           </ul>
         </Transition>
       ) : null}
-      {mode === 'vertical' ? renderVerticalChild() : null}
     </li>
   );
 }
