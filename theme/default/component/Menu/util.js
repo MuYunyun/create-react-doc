@@ -8,7 +8,7 @@ const getMenuStyle = (level, mode) => {
   if (mode === 'inline') {
     return {
       ...basicStyle,
-      paddingLeft: `${level * 24}px`,
+      paddingLeft: `${level * 16}px`,
     };
   }
 
