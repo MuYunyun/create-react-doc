@@ -20,7 +20,8 @@ function BasicLayout({
   menuSource,
   indexProps,
 }) {
-  const [inlineCollapsed, setInlineCollapsed] = useState(false);
+  // eslint-disable-next-line no-unneeded-ternary
+  const [inlineCollapsed, setInlineCollapsed] = useState(isMobile ? true : false);
 
   useEffect(() => {
     // eslint-disable-next-line no-use-before-define
@@ -187,10 +188,18 @@ function BasicLayout({
             >
               {renderMenu(menuSource)}
             </div>
-            <div className={cx(styles.menuMask)} />
+            <div
+              className={cx({
+                [`${styles.menuMask}`]: isMobile && !inlineCollapsed,
+              })}
+              onClick={(e) => {
+                e.stopPropagation()
+                setInlineCollapsed(true)
+              }}
+            />
           </>
         )}
-        { renderContent() }
+        {renderContent()}
         <Footer inlineCollapsed={inlineCollapsed} />
       </div>
     </div>
