@@ -1,7 +1,7 @@
 const loaderUtils = require('loader-utils');
-const DirectoryTree = require('directory-tree-md');
+// fork https://github.com/react-doc/node-directory-tree-md/blob/master/lib/directory-tree-md.js
+const DirectoryTree = require('./node-directory-tree');
 const PATH = require('path');
-const FS = require('fs');
 const { ifInGitIgnore } = require('../utils/index');
 
 function getAllWatchPath(arr, pathArr = []) {
@@ -68,11 +68,12 @@ module.exports = function (source) {
     content = getRelativePath(
       dirTree,
       relativePath,
-      dirs.sort((a, b) => {
-        if (a.length < b.length) return 1;
-        if (a.length > b.length) return -1;
-        return 0;
-      })
+      dirs
+      // dirs.sort((a, b) => {
+      //   if (a.length < b.length) return 1;
+      //   if (a.length > b.length) return -1;
+      //   return 0;
+      // })
     );
   }
   content = JSON.stringify(content)

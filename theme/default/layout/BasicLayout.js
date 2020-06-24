@@ -35,19 +35,12 @@ function BasicLayout({
   };
   const renderSubMenuItem = (menus) => {
     const pathname = location;
-    if (menus.length > 1) {
-      menus = menus.sort((a, b) => {
-        if (a.sort < b.sort) return -1;
-        if (a.sort > b.sort) return 1;
-        return 0;
-      });
-    }
     /* eslint-disable */
     return (
       <>
         {menus.map((item, index) => {
           if (item.mdconf && item.mdconf.visible === false) return null;
-          if (/^README(.*)md$/.test(item.name)) return null;
+
           return item.children && item.children.length > 0 ? (
             <SubMenu title={item.name} icon={<Icon type="folder" size={16} />}>
               {renderSubMenuItem(item.children)}
