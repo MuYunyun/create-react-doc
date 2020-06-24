@@ -106,7 +106,7 @@ module.exports = function (cmd) {
       inject: true,
       favicon: paths.defaultFaviconPath,
       template: paths.defaultHTMLPath,
-      title: paths.rdocConf && paths.rdocConf.title ? paths.rdocConf.title : 'Create React Doc',
+      title: paths.crdConf && paths.crdConf.title ? paths.crdConf.title : 'Create React Doc',
     }),
     // 将模块名称添加到工厂功能，以便它们显示在浏览器分析器中。
     // 当接收到热更新信号时，在浏览器 console 控制台打印更多可读性高的模块名称等信息

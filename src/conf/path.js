@@ -78,7 +78,7 @@ const modPath = resolveApp('node_modules');
 function getExcludeFoldersRegExp() {
   if (!FS.existsSync(modPath)) return [];
   let regxExc = FS.readdirSync(modPath);
-  regxExc = regxExc.filter(item => !/rdoc(.*)/.test(item));
+  regxExc = regxExc.filter(item => !/crd(.*)/.test(item));
 
   regxExc = regxExc.map((item) => {
     let rgxPath = `node_modules${PATH.sep}${item}`;
@@ -91,12 +91,11 @@ function getExcludeFoldersRegExp() {
 }
 
 module.exports = {
-  // Markdown 所在目录
-  rdocConf: getCrdConf(),
+  // markdown dir
+  crdConf: getCrdConf(),
   appThemePath: getThemePath(),
   appPackage: resolveApp('./package.json'),
   appNodeModules: resolveApp('node_modules'),
-  // todo
   appGitIgnore: resolveApp('.gitignore'),
   appBuildDist: resolveApp('.crd-dist'),
   cacheDirPath: resolveApp('.cache'),
@@ -105,7 +104,7 @@ module.exports = {
   projectPath: appDirectory,
   publicPath: '',
   logoPath: logoPath(),
-  // crd 工具所在目录
+  // crd tool dir
   getExcludeFoldersRegExp: getExcludeFoldersRegExp(),
   crdPackage: resolveTool('../../package.json'),
   defaultNodeModules: modPath,

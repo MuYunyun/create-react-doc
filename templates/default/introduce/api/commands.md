@@ -17,7 +17,7 @@ Options:
   -i, init [path]        Create an empty website or reinitialize an existing one.
   -d, --doc <path>       Other documents generated.
   -o, --output <path>    Writes the compiled file to the disk directory. (default: .crd-dist)
-  -p, --port [number]    The port. (default: 5858)
+  -p, --port [number]    The port. (default: 3000)
   -h, --host [host]      The host. (default: 0.0.0.0)
   -b, --branch <branch>  Name of the branch you are pushing to. (default: gh-pages)
   --publish [url]        Other documents generated.

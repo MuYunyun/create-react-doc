@@ -52,7 +52,7 @@ $ create-react-doc -d home,introduce,faq,example,about,github
 
 ## 运行命令
 
-命令配置好之后，你就可以，通过 `npm` 运行它，将自动打开网址 http://localhost:5858/。
+命令配置好之后，你就可以，通过 `npm` 运行它，将自动打开网址 http://localhost:3000/。
 
 ```shell
 $ npm run start
@@ -61,8 +61,8 @@ $ npm run start
 
 ## You can now view doc-example in the browser.
 
-##  Local:            http://localhost:5858/
-##  On Your Network:  http://192.168.188.109:5858/
+##  Local:            http://localhost:3000/
+##  On Your Network:  http://192.168.188.109:3000/
 
 ## Note that the development build is not optimized.
 ## To create a production build, use npm run build.
