@@ -135,7 +135,7 @@ module.exports = function (cmd) {
       inject: true,
       favicon: paths.defaultFaviconPath,
       template: paths.defaultHTMLPath,
-      title: paths.rdocConf && paths.rdocConf.title ? paths.rdocConf.title : 'Rdoc',
+      title: paths.crdConf && paths.crdConf.title ? paths.crdConf.title : 'Rdoc',
       minify: {
         removeAttributeQuotes: true,
         collapseWhitespace: true,

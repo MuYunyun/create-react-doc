@@ -23,7 +23,7 @@ module.exports = function server(cmd) {
     const protocol = process.env.HTTPS === 'true' ? 'https' : 'http';
     const urls = prepareUrls({ protocol, host: HOST, port: DEFAULT_PORT });
     // https://webpack.js.org/api/compiler-hooks/#aftercompile
-    // 编译完成之后打印日志
+    // print log after being compiled
     compiler.hooks.done.tap('done', () => {
       /* eslint-disable */
       console.log(`Dev Server Listening at Local: ${urls.localUrl.green}`);

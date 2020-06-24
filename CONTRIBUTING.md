@@ -17,7 +17,7 @@ $ npm install             # or yarn install
 $ npm run start
 ```
 
-打开浏览器并访问 http://localhost:5858
+打开浏览器并访问 http://localhost:3000
 
 ### Folders
 

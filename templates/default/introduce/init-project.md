@@ -42,8 +42,8 @@ $ npm start      # 启动服务
 ##
 ## You can now view rdoc in the browser.
 ##
-##   Local:            http://localhost:5858/
-##   On Your Network:  http://192.168.188.109:5858/
+##   Local:            http://localhost:3000/
+##   On Your Network:  http://192.168.188.109:3000/
 ## Note that the development build is not optimized.
 ## To create a production build, use npm run build.
 ```
