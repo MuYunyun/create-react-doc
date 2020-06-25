@@ -3096,7 +3096,7 @@ dir-glob@^2.2.1:
   dependencies:
     path-type "^3.0.0"
 
-directory-tree-md@2.0.7, directory-tree-md@^2.0.7:
+directory-tree-md@2.0.7:
   version "2.0.7"
   resolved "https://registry.npmjs.org/directory-tree-md/-/directory-tree-md-2.0.7.tgz#0d264c580503e7d89c7a44721e324cdcd40c679d"
   integrity sha512-ICqdSHbayuiEVqzTHH+5tnq97AEj0O+J6CHHkf8YgFK3VzLyaGNXlB5VfsX1Vs013z2ueUDn+hU/3flGzsxh7A==
@@ -5207,7 +5207,7 @@ js-tokens@^3.0.0, js-tokens@^3.0.2:
   resolved "https://registry.npmjs.org/js-tokens/-/js-tokens-4.0.0.tgz#19203fb59991df98e3a287050d4647cdeaf32499"
   integrity sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==
 
-js-yaml@^3.4.3, js-yaml@^3.9.1:
+js-yaml@^3.14.0, js-yaml@^3.4.3, js-yaml@^3.9.1:
   version "3.14.0"
   resolved "https://registry.npmjs.org/js-yaml/-/js-yaml-3.14.0.tgz#a7a34170f26a21bb162424d8adacb4113a69e482"
   integrity sha512-/4IbIeHcD9VMHFqDR/gQ7EdZdLimOvW2DdcxFjdyyZ9NsbS+ccrXqVWDtab/lRl5AlUqmpBx8EhPaWR+OtY17A==
@@ -7377,21 +7377,6 @@ raw-content-replace-loader@1.0.1:
   resolved "https://registry.npmjs.org/raw-content-replace-loader/-/raw-content-replace-loader-1.0.1.tgz#a89cdd574acef724a9bc986768a0e74ca87b1ce7"
   integrity sha512-ZPqeRwfgvYuBRZDKgsUNwFvcOOomWCkCcYRm9EppWMi6bFB1ofoFuE1ueGQIrdnvZ2z1RlIFsmVe9KzdpaKXig==
   dependencies:
-    loader-utils "^1.1.0"
-
-raw-extend-loader@1.0.5:
-  version "1.0.5"
-  resolved "https://registry.npmjs.org/raw-extend-loader/-/raw-extend-loader-1.0.5.tgz#758fc4f3a2f62f4ac06cf51d094d1d4dc8110de5"
-  integrity sha512-25Rxqv7mL9zBSIx8ySsYeqouxxma+eypxW6T3FFRG+7+O/jmwHPmy8b/5KDggSzWIz/ak2aLNxKkaEFAnx0EOw==
-  dependencies:
-    mkdirp "^0.5.1"
-
-raw-tree-replace-loader@1.1.0:
-  version "1.1.0"
-  resolved "https://registry.npmjs.org/raw-tree-replace-loader/-/raw-tree-replace-loader-1.1.0.tgz#20495d31c8bd69a9c082a99b8f60e6ddb3d1b003"
-  integrity sha512-JDdT73KJ3Aln5r7iMYAqySRY0jbfhUZjUtbXfcvFTVdZ7K2n+XDcyeIDYavg4Mx6txwlccoPm9ZerSiUU5dPkQ==
-  dependencies:
-    directory-tree-md "^2.0.7"
     loader-utils "^1.1.0"
 
 rc@^1.0.1, rc@^1.1.6:

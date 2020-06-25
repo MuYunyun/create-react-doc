@@ -1,11 +1,11 @@
-const FS = require('fs');
+const fs = require('fs');
 const ghpages = require('gh-pages');
 const loading = require('loading-cli');
 
 const log = console.log; // eslint-disable-line
 
 module.exports = function server(cmd) {
-  if (!FS.existsSync(cmd.output)) {
+  if (!fs.existsSync(cmd.output)) {
     log(`You need to run the ${`\"npm run build\"`.yellow} command.`); // eslint-disable-line
     log(`The ${(cmd.output).red} folder does net exist!\n`);
     return;

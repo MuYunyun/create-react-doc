@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import React from 'react';
 import { Switch, Link, Route, Redirect } from 'react-router-dom';
 import cx from 'classnames';
@@ -79,7 +80,6 @@ function BasicLayout({
       </>
     );
   };
-
   const renderMenu = (menus) => {
     const { pathname } = location;
     // const article = getCurrentArticle(routeData, pathname);
@@ -110,6 +110,38 @@ function BasicLayout({
       </Affix>
     );
   };
+  /**
+   * this section is to show article's relevant information
+   * such as create time、update time、edit link and so on.
+   */
+  const renderArticleInfo = () => {
+    return (
+      <div className={cx(styles.articleInfo)}>
+        {DOCSCONFIG && DOCSCONFIG.user && DOCSCONFIG.repo ? (
+          <a
+            href={`https://github.com/${DOCSCONFIG.user}/${
+              DOCSCONFIG.repo
+            }/edit/${
+              DOCSCONFIG.branch || "master"
+            }${window.location.hash.replace(/#/, "")}.md`}
+            className={cx(styles.position)}
+            target="_blank"
+          >
+            <Icon className={cx(styles.icon)} type="edit" size={13} />
+            <span>Edit in GitHub</span>
+          </a>
+        ) : null}
+        <span className={cx(styles.position)}>
+          <Icon className={cx(styles.icon)} type="create-time" size={13} />
+          <span>2020-06-24</span>
+        </span>
+        <span>
+          <Icon className={cx(styles.icon)} type="update-time" size={13} />
+          <span>2020-06-24</span>
+        </span>
+      </div>
+    );
+  }
   const isCurentChildren = () => {
     const { pathname } = location;
     const getRoute = routeData.filter((item) => pathname === item.path);
@@ -121,6 +153,28 @@ function BasicLayout({
     return childs.length > 0;
   };
   const isChild = isCurentChildren();
+  const renderMenuContainer = () => {
+    return isChild && (
+      <>
+        <div
+          className={cx(styles.menuWrapper, {
+            [`${styles["menuwrapper-inlineCollapsed"]}`]: inlineCollapsed,
+          })}
+        >
+          {renderMenu(menuSource)}
+        </div>
+        <div
+          className={cx({
+            [`${styles.menuMask}`]: isMobile && !inlineCollapsed,
+          })}
+          onClick={(e) => {
+            e.stopPropagation();
+            setInlineCollapsed(true);
+          }}
+        />
+      </>
+    );
+  }
   const renderContent = () => {
     return (
       <div
@@ -172,26 +226,8 @@ function BasicLayout({
         menuSource={menuSource}
       />
       <div className={styles.wrapperContent}>
-        {isChild && (
-          <>
-            <div
-              className={cx(styles.menuWrapper, {
-                [`${styles["menuwrapper-inlineCollapsed"]}`]: inlineCollapsed,
-              })}
-            >
-              {renderMenu(menuSource)}
-            </div>
-            <div
-              className={cx({
-                [`${styles.menuMask}`]: isMobile && !inlineCollapsed,
-              })}
-              onClick={(e) => {
-                e.stopPropagation()
-                setInlineCollapsed(true)
-              }}
-            />
-          </>
-        )}
+        {renderArticleInfo()}
+        {renderMenuContainer()}
         {renderContent()}
         <Footer inlineCollapsed={inlineCollapsed} />
       </div>

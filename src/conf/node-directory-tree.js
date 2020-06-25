@@ -1,4 +1,4 @@
-const FS = require('fs');
+const fs = require('fs');
 const PATH = require('path');
 const YAML = require('yamljs');
 const { getDigitFromDir } = require('../utils');
@@ -17,7 +17,7 @@ function safeReadDirSync(path) {
      * 2.x    instead of   10.x
      * 10.x                 2.x
      */
-    dirData = FS.readdirSync(path).sort((dir1, dir2) => {
+    dirData = fs.readdirSync(path).sort((dir1, dir2) => {
       const dir1Digit = getDigitFromDir(dir1);
       const dir2Digit = getDigitFromDir(dir2);
       if (dir1Digit && dir2Digit) {
@@ -40,9 +40,9 @@ function directoryTree(path, options, onEachFile) {
   const item = { path, name };
   let stats;
   // todo: it's useful to use birthtime and mtime;
-  // console.log('statSync', FS.statSync(path));
+  // console.log('statSync', fs.statSync(path));
   try {
-    stats = FS.statSync(path);
+    stats = fs.statSync(path);
   } catch (e) {
     return null;
   }
@@ -58,7 +58,7 @@ function directoryTree(path, options, onEachFile) {
     if (options && options.extensions && !options.extensions.test(ext)) { return null; }
 
     if (options && options.mdconf) {
-      const contentStr = FS.readFileSync(path).toString();
+      const contentStr = fs.readFileSync(path).toString();
       if (contentStr) {
         const contentMatch = contentStr.match(/^<!--(\s?[^>]*)-->/);
         item.relative = item.path.replace(process.cwd(), '');

@@ -1,6 +1,6 @@
 #!/usr/bin/env node
-const FS = require('fs-extra');
-const PATH = require('path');
+const fs = require('fs-extra');
+const path = require('path');
 const program = require('commander');
 const color = require('colors-cli/toxic');
 const initProject = require('../src/commands/initProject');
@@ -37,22 +37,22 @@ program
   })
   .parse(process.argv);
 // create-react-doc 工具根目录
-// program.crdPath = PATH.join(__dirname, '../');
+// program.crdPath = path.join(__dirname, '../');
 // 所有 Markdown 目录
 program.markdownPaths = [];
 // 网站根目录
 program.projectPath = process.cwd();
 // 编译输出目录
-program.output = PATH.join(program.projectPath, program.output);
+program.output = path.join(program.projectPath, program.output);
 
 // 网站根目录,指定的所有 Markdown 的目录
 if (program.doc) {
-  program.doc.split(',').forEach((itemPath) => program.markdownPaths.push(PATH.join(program.projectPath, itemPath)));
+  program.doc.split(',').forEach((itemPath) => program.markdownPaths.push(path.join(program.projectPath, itemPath)));
 }
 
-if (program.build && FS.pathExistsSync(paths.appBuildDist)) {
+if (program.build && fs.pathExistsSync(paths.docsBuildDist)) {
   // 清空目录
-  FS.emptyDirSync(paths.appBuildDist);
+  fs.emptyDirSync(paths.docsBuildDist);
 }
 if (program.init) return initProject(program);
 
@@ -67,7 +67,7 @@ if (program.markdownPaths.length === 0) return console.log(`Please specify the d
 let isExists = true;
 // 判断指定文件夹是否存
 program.markdownPaths.forEach((item) => {
-  if (!FS.existsSync(item)) {
+  if (!fs.existsSync(item)) {
     console.log(`Error: Directory ${item.yellow} does not exist`.red)
     isExists = false;
   }
@@ -75,7 +75,7 @@ program.markdownPaths.forEach((item) => {
 
 if (isExists) {
   // make sure
-  FS.ensureDirSync(paths.cacheDirPath);
+  fs.ensureDirSync(paths.cacheDirPath);
   initCache(program, () => {
     console.log("program", program);
     if (program.build) {

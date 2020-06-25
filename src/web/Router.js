@@ -61,7 +61,7 @@ function routeData(data, arrayRoute = [], routePath = '/', article) {
 
 
 function menuSourceFormat(data, routePath, article) {
-  console.log('data', data)
+  // console.log('data', data)
   const arr = [];
   data.forEach((item) => {
     const routePropsCurrent = `${routePath || ''}/${item.name}`.replace(/.md$/, '');

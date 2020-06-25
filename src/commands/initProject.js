@@ -1,30 +1,30 @@
-const PATH = require('path');
-const FS = require('fs-extra');
+const path = require('path');
+const fs = require('fs-extra');
 const copyTemplate = require('copy-template-dir');
 const paths = require('../conf/path');
 
 const log = console.log; // eslint-disable-line
 
 module.exports = function (params) {
-  const outDir = typeof params.init === 'string' ? PATH.join(paths.projectPath, params.init) : paths.projectPath;
-  const projectName = PATH.basename(outDir);
+  const outDir = typeof params.init === 'string' ? path.join(paths.projectPath, params.init) : paths.projectPath;
+  const projectName = path.basename(outDir);
 
   const crdpkg = require(paths.crdPackage); // eslint-disable-line
   // 最后一个版本号替换成 x , 当发生变化最后一个版本安装最新版本
   const CRD_VERSION = crdpkg.version.split('.').slice(0, 2).concat('x').join('.');
 
   // 输出目录清空
-  if (!FS.pathExistsSync(outDir)) {
-    FS.ensureDirSync(outDir);
+  if (!fs.pathExistsSync(outDir)) {
+    fs.ensureDirSync(outDir);
   }
 
   // 目录不为空返回错误提示
-  if (FS.readdirSync(PATH.join(outDir)).length > 0) {
+  if (fs.readdirSync(path.join(outDir)).length > 0) {
     return log(`\n ${'initialization failed! '.red} ${outDir.yellow} ${'is not an empty directory.'.red}\n`);
   }
 
   // 复制模板
-  if (FS.pathExistsSync(paths.defaultTemplatePath)) {
+  if (fs.pathExistsSync(paths.defaultTemplatePath)) {
     copyTemplate(paths.defaultTemplatePath, outDir, {
       name: projectName,
       rdocVersion: CRD_VERSION,

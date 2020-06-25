@@ -1,7 +1,7 @@
 const DirectoryTree = require('directory-tree-md');
 const write = require('write');
-const PATH = require('path');
-const FS = require('fs');
+const path = require('path');
+const fs = require('fs');
 const paths = require('../conf/path');
 const { ifInGitIgnore } = require('./index');
 
@@ -31,20 +31,20 @@ module.exports = function (program, cb) {
   for (let i = 0; i < flatTreeData.length; i++) {
     const mdfile = flatTreeData[i];
     const mdfilePathInProject = mdfile.replace(
-      process.cwd() + PATH.sep,
+      process.cwd() + path.sep,
       ''
     );
     // generate file cache only it isn't in .gitignore
     if (!ifInGitIgnore(mdfilePathInProject)) {
-      const underlineFileName = mdfilePathInProject.split(PATH.sep).join('___');
-      let writeMarkdownPath = PATH.resolve(
+      const underlineFileName = mdfilePathInProject.split(path.sep).join('___');
+      let writeMarkdownPath = path.resolve(
         process.cwd(),
         paths.cacheDirPath,
         'md'
       );
-      writeMarkdownPath = PATH.resolve(writeMarkdownPath, underlineFileName);
-      if (FS.existsSync(mdfile)) {
-        const content = FS.readFileSync(mdfile);
+      writeMarkdownPath = path.resolve(writeMarkdownPath, underlineFileName);
+      if (fs.existsSync(mdfile)) {
+        const content = fs.readFileSync(mdfile);
         write.sync(writeMarkdownPath, content);
       }
     }

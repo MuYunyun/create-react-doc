@@ -2,7 +2,7 @@ const DirectoryTree = require('directory-tree-md');
 const PATH = require('path');
 const UPATH = require('upath');
 const write = require('write');
-const FS = require('fs');
+const fs = require('fs');
 const { ifInGitIgnore } = require('../utils/index');
 
 function getAllWatchPath(arr, pathArr = []) {
@@ -52,9 +52,9 @@ module.exports = class CopySpareWebpackPlugin {
               .replace(/\//g, sep);
             filePathItem = PATH.resolve(path, filePathItem);
           }
-          if (!FS.existsSync(filePathItem)) {
+          if (!fs.existsSync(filePathItem)) {
             if (this.addDependency) this.addDependency(currentPath);
-            const content = FS.readFileSync(currentPath);
+            const content = fs.readFileSync(currentPath);
             write.sync(filePathItem, content);
           }
         });
