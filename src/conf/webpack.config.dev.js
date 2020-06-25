@@ -1,7 +1,7 @@
 const autoprefixer = require('autoprefixer');
 const webpack = require('webpack');
-const PATH = require('path');
-const UPATH = require('upath');
+const path = require('path');
+const upath = require('upath');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const FriendlyErrorsWebpackPlugin = require('@nuxtjs/friendly-errors-webpack-plugin');
 const CreateSpareWebpackPlugin = require('./createSpareWebpackPlugin');
@@ -27,7 +27,7 @@ module.exports = function (cmd) {
             loader: require.resolve('string-replace-loader'),
             options: {
               multiple: [
-                { search: '__project_root__', replace: UPATH.normalizeSafe(paths.projectPath), flags: 'ig' },
+                { search: '__project_root__', replace: upath.normalizeSafe(paths.projectPath), flags: 'ig' },
               ],
             },
           },
@@ -44,7 +44,7 @@ module.exports = function (cmd) {
         type: 'javascript/auto',
         use: [
           {
-            loader: `${PATH.join(__dirname, './rawTreeReplaceLoader.js')}`,
+            loader: `${path.join(__dirname, './rawTreeReplaceLoader.js')}`,
             options: {
               include: /crd\.tree\.data\.json$/, // 检查包含的文件名字
               directoryTrees: {
@@ -114,7 +114,7 @@ module.exports = function (cmd) {
     // to search
     new CreateSpareWebpackPlugin({
       // 备用文件目录，比对是否存在，不存在生成，根据 sep 目录规则生成
-      path: PATH.join(paths.cacheDirPath, './md'),
+      path: path.join(paths.cacheDirPath, './md'),
       sep: '___', // 检查目标目录文件，文件名存储，文件夹+下划线间隔+文件名
       directoryTrees: { // 索引目录
         dir: cmd.markdownPaths,

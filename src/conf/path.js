@@ -1,24 +1,24 @@
-const PATH = require('path');
-const FS = require('fs');
+const path = require('path');
+const fs = require('fs');
 
 // 确保在项目文件夹中的任何符号都解决了：
-const appDirectory = FS.realpathSync(process.cwd());
-const toolDirectory = FS.realpathSync(__dirname);
+const appDirectory = fs.realpathSync(process.cwd());
+const toolDirectory = fs.realpathSync(__dirname);
 // Markdown 所在目录
-const resolveApp = relativePath => PATH.resolve(appDirectory, relativePath);
+const resolveApp = relativePath => path.resolve(appDirectory, relativePath);
 // crd 工具所在目录
-const resolveTool = relativePath => PATH.resolve(toolDirectory, relativePath);
+const resolveTool = relativePath => path.resolve(toolDirectory, relativePath);
 
 // 获取 crd 配置
 function getCrdConf() {
   const packagePath = resolveApp('./package.json');
   let conf = {};
-  if (FS.existsSync(packagePath)) {
+  if (fs.existsSync(packagePath)) {
     const confPkg = require(packagePath); // eslint-disable-line
     conf = confPkg.crd;
   }
   const confPath = resolveApp('./.crdrc.json');
-  if (FS.existsSync(confPath)) {
+  if (fs.existsSync(confPath)) {
     const confRc = require(confPath) // eslint-disable-line
     conf = confRc;
   }
@@ -32,21 +32,21 @@ function getConfigFilePath(fileName, type) {
     // 主题目录加载
     if (type === 'theme') {
       if (!conf[type]) conf[type] = fileName;
-      const _path = PATH.resolve(appDirectory, 'theme', conf[type]);
-      const _NodeModulesPath = PATH.resolve(appDirectory, 'node_modules', conf[type]);
-      if (FS.existsSync(_path)) {
-        return FS.realpathSync(_path);
-      } else if (FS.existsSync(_NodeModulesPath)) {
-        return FS.realpathSync(_NodeModulesPath);
+      const _path = path.resolve(appDirectory, 'theme', conf[type]);
+      const _NodeModulesPath = path.resolve(appDirectory, 'node_modules', conf[type]);
+      if (fs.existsSync(_path)) {
+        return fs.realpathSync(_path);
+      } else if (fs.existsSync(_NodeModulesPath)) {
+        return fs.realpathSync(_NodeModulesPath);
       }
       return false;
     }
     if (/^(favicon|logo)$/.test(type)) {
-      return PATH.resolve(appDirectory, conf[type]);
+      return path.resolve(appDirectory, conf[type]);
     }
   }
-  const _filepath = PATH.resolve(appDirectory, fileName);
-  if (FS.existsSync(_filepath)) {
+  const _filepath = path.resolve(appDirectory, fileName);
+  if (fs.existsSync(_filepath)) {
     // 默认根目录下的 favicon|logo
     return _filepath;
   }
@@ -76,14 +76,14 @@ const getThemePath = () => {
 
 const modPath = resolveApp('node_modules');
 function getExcludeFoldersRegExp() {
-  if (!FS.existsSync(modPath)) return [];
-  let regxExc = FS.readdirSync(modPath);
+  if (!fs.existsSync(modPath)) return [];
+  let regxExc = fs.readdirSync(modPath);
   regxExc = regxExc.filter(item => !/crd(.*)/.test(item));
 
   regxExc = regxExc.map((item) => {
-    let rgxPath = `node_modules${PATH.sep}${item}`;
-    if (PATH.sep === '\\') {
-      rgxPath = `node_modules\\${PATH.sep}${item}`;
+    let rgxPath = `node_modules${path.sep}${item}`;
+    if (path.sep === '\\') {
+      rgxPath = `node_modules\\${path.sep}${item}`;
     }
     return new RegExp(rgxPath);
   });
@@ -93,13 +93,15 @@ function getExcludeFoldersRegExp() {
 module.exports = {
   // markdown dir
   crdConf: getCrdConf(),
-  appThemePath: getThemePath(),
-  appPackage: resolveApp('./package.json'),
-  appNodeModules: resolveApp('node_modules'),
-  appGitIgnore: resolveApp('.gitignore'),
-  appBuildDist: resolveApp('.crd-dist'),
+  docsThemePath: getThemePath(),
+  // docsPackage: resolveApp('./package.json'),
+  // docsNodeModules: resolveApp('node_modules'),
+  docsGitIgnore: resolveApp('.gitignore'),
+  // todo to add config function
+  docsConfig: resolveApp('config.yml'),
+  docsBuildDist: resolveApp('.crd-dist'),
   cacheDirPath: resolveApp('.cache'),
-  docTreePath: resolveApp('.cache/.reactdoc.tree.json'),
+  // docTreePath: resolveApp('.cache/.reactdoc.tree.json'),
   watchFilePath: resolveApp('.cache/watch-dir.js'),
   projectPath: appDirectory,
   publicPath: '',

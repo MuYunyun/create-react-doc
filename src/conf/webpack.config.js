@@ -1,26 +1,39 @@
-const PATH = require('path');
+/* eslint-disable global-require */
+/* eslint-disable import/no-dynamic-require */
+const path = require('path');
+const fs = require('fs');
 const webpack = require('webpack');
-const WebpackBar = require('webpackbar');
-const UPATH = require('upath');
+const webpackbar = require('webpackbar');
+const upath = require('upath');
+const yaml = require('js-yaml');
 const paths = require('./path');
 const pkg = require('../../package.json');
 
-const define = { FOOTER: null };
+const define = {
+  FOOTER: null,
+  DOCSCONFIG: null,
+};
 if (paths.crdConf && paths.crdConf.footer && typeof paths.crdConf.footer === 'string') {
   define.FOOTER = JSON.stringify(paths.crdConf.footer);
+}
+
+/* custom define docs config */
+if (paths.docsConfig) {
+  // see https://github.com/nodeca/js-yaml/blob/2d1fbed8f3a76ff93cccb9a8a418b4c4a482d3d9/lib/js-yaml/loader.js#L1590-L1592
+  define.DOCSCONFIG = JSON.stringify(yaml.safeLoad(fs.readFileSync(paths.docsConfig)));
 }
 
 module.exports = {
   entry: {},
   output: {
-    path: paths.appBuildDist,
+    path: paths.docsBuildDist,
     publicPath: paths.publicPath,
     filename: 'js/[name].[hash:8].js',
     chunkFilename: 'js/[name].[hash:8].js',
   },
   resolve: {
     alias: {
-      'crd-theme': UPATH.normalizeSafe(paths.appThemePath),
+      'crd-theme': upath.normalizeSafe(paths.docsThemePath),
     },
   },
   module: {
@@ -68,7 +81,7 @@ module.exports = {
               {
                 loader: require.resolve('raw-content-replace-loader'),
                 options: {
-                  path: PATH.join(paths.cacheDirPath, './md'), // 需要替换的目录
+                  path: path.join(paths.cacheDirPath, './md'), // 需要替换的目录
                   replace: paths.projectPath, // 替换成目标目录
                   sep: /___/g, // 文件名存储，文件夹+下划线间隔+文件名
                 },
@@ -93,7 +106,7 @@ module.exports = {
     ],
   },
   plugins: [
-    new WebpackBar({ name: pkg.name }),
+    new webpackbar({ name: pkg.name }),
     new webpack.DefinePlugin({
       VERSION: JSON.stringify(pkg.version),
       ...define,
