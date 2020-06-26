@@ -1,7 +1,9 @@
+/* eslint-disable no-undef */
 const fs = require('fs');
 const PATH = require('path');
 const YAML = require('yamljs');
-const { getDigitFromDir } = require('../utils');
+const { execSync } = require('child_process');
+const { getDigitFromDir, timeFormat } = require('../utils');
 
 const constants = {
   DIRECTORY: 'directory',
@@ -39,8 +41,6 @@ function directoryTree(path, options, onEachFile) {
   const name = PATH.basename(path);
   const item = { path, name };
   let stats;
-  // todo: it's useful to use birthtime and mtime;
-  // console.log('statSync', fs.statSync(path));
   try {
     stats = fs.statSync(path);
   } catch (e) {
@@ -51,7 +51,6 @@ function directoryTree(path, options, onEachFile) {
   if (options && options.exclude && options.exclude.test(path)) return null;
 
   if (stats.isFile()) {
-    // console.log('path', path);
     const ext = PATH.extname(path).toLowerCase();
 
     // Skip if it does not match the extension regex
@@ -66,6 +65,25 @@ function directoryTree(path, options, onEachFile) {
         item.isEmpty = contentMatch
           ? !String.prototype.trim.call(contentStr.replace(contentMatch[0], ''))
           : true;
+        try {
+          // see https://stackoverflow.com/questions/2390199/finding-the-date-time-a-file-was-first-added-to-a-git-repository/2390382#2390382
+          const result = execSync(`git log --format=%aD ${path} | tail -1`);
+          console.log('result1', result);
+          item.birthtime =
+            Buffer.isBuffer(result) && timeFormat(new Date(result));
+        } catch (error) {
+          // eslint-disable-next-line no-console
+          console.log(`error: ${error.message}`);
+        }
+        try {
+          // see https://stackoverflow.com/questions/22497597/get-the-last-modification-data-of-a-file-in-git-repo
+          const result = execSync(`git log -1 --pretty="format:%ci" ${path}`);
+          console.log('result2', result);
+          item.mtime = Buffer.isBuffer(result) && timeFormat(new Date(result));
+        } catch (error) {
+          // eslint-disable-next-line no-console
+          console.log(`error: ${error.message}`);
+        }
       }
     }
 

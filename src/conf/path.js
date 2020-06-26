@@ -97,7 +97,6 @@ module.exports = {
   // docsPackage: resolveApp('./package.json'),
   // docsNodeModules: resolveApp('node_modules'),
   docsGitIgnore: resolveApp('.gitignore'),
-  // todo to add config function
   docsConfig: resolveApp('config.yml'),
   docsBuildDist: resolveApp('.crd-dist'),
   cacheDirPath: resolveApp('.cache'),

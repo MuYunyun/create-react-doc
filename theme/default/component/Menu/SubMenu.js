@@ -67,22 +67,26 @@ function SubMenu({
   /* 行内模式下, 渲染子节点 */
   const renderChild = (child) => {
     return (
-      <>{React.Children.map(child || children, (reactNode) => {
-        if (!reactNode || typeof reactNode !== 'object') {
-          return null;
-        }
-        const childElement = reactNode;
-        if (
-          isReactFragment(childElement) &&
-              childElement.props.children
-        ) {
-          return renderChild(childElement.props.children);
-        }
-        return React.cloneElement(childElement, {
-          level: level + 1,
-          ...childElement.props,
-        });
-      })}</>
+      // eslint-disable-next-line quotes
+      <>
+        {React.Children.map(child || children, (reactNode) => {
+          if (!reactNode || typeof reactNode !== 'object') {
+            return null;
+          }
+          const childElement = reactNode;
+          if (
+            isReactFragment(childElement) &&
+                  childElement.props.children
+          ) {
+            return renderChild(childElement.props.children);
+          }
+          return React.cloneElement(childElement, {
+            level: level + 1,
+            ...childElement.props,
+          });
+        // eslint-disable-next-line quotes
+        })}
+      </>
     );
   };
 

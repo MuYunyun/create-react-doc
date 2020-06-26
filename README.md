@@ -10,8 +10,14 @@ create-react-doc
 * Fast static site generator for React.
 * You only just write **Markdown**.
 * Files is just Menu.
+* Integration with some GitHub features.
+* Custom Config Theme.
 
 > If you want some features not included there, you can list in [version 1.0 RFC](https://github.com/MuYunyun/create-react-doc/issues/2).
+
+## Use Case
+
+* [blog](https://github.com/MuYunyun/blog)
 
 ## Quick Overview
 
@@ -89,7 +95,3 @@ Options:
   --build                Creating an optimized production build.
   -h, --help             help document.
 ```
-
-### Use Case
-
-* [blog](https://github.com/MuYunyun/blog)
