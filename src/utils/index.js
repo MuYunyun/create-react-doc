@@ -27,3 +27,16 @@ exports.getDigitFromDir = (dir) => {
   }
   return 0;
 };
+
+function paddingTwoDigits(digit) {
+  return digit < 10 ? `0${digit}` : digit;
+}
+
+/**
+ * format time
+ */
+exports.timeFormat = (date) => {
+  return `${date.getFullYear()}-${paddingTwoDigits(
+    date.getMonth() + 1
+  )}-${paddingTwoDigits(date.getDate())}`;
+};

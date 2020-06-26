@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import React, { PureComponent } from 'react';
 import classNames from 'classnames';
 import { Link } from 'react-router-dom';
@@ -31,6 +32,7 @@ export default class Header extends PureComponent {
 
       const url = item.mdconf && (item.mdconf.github || item.mdconf.url);
       if (url) {
+        // todo: custom show github
         return (
           <a key={index} target="_blank" rel="noopener noreferrer" href={url}>
             {item.mdconf.github && SVGGithub}{item.mdconf.title && <span>{item.mdconf.title}</span>}
@@ -55,17 +57,14 @@ export default class Header extends PureComponent {
     this.setState({ checked });
   }
   render() {
-    // const { location: { pathname }, menuSource, className, children, logo } = this.props;
     const { className, logo } = this.props;
-    const { mdconf } = this.props.indexProps || {};
     return (
       <div className={classNames(styles.header, className)}>
         <div className={styles.wrapper}>
           <Link to="/" replace>
             <div className={styles.logo}>
               {logo && <img alt="logo" src={logo} />}
-              {/* maybe it'll be named customly in the future */}
-              <span>{mdconf.title || 'Create React Doc'}</span>
+              <span>{(DOCSCONFIG && DOCSCONFIG.title) || 'Create React Doc'}</span>
             </div>
           </Link>
         </div>
