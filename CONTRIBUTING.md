@@ -1,41 +1,17 @@
-### Dev
+# How to contribute
 
-获取代码，进入目录，运行自动重载构建：
+* Talk about the situations in the [issue](https://github.com/MuYunyun/create-react-doc/issues/new). If the situation is reasonable, then go to next step;
+* Switch to the new branch from master, submit the pr with after finish the feature.
 
-```shell
-$ git clone https://github.com/MuYunyun/create-react-doc
-$ cd create-react-doc     # 进入目录
-$ npm install             # or yarn install
-```
+## Dev
 
-要开发，请运行自重载构建：
+Run these bash command firstly.
 
 ```bash
-# 运行应用程序
-# 每次代码更改时，自动重新启动应用程序。
-# 在开发过程中很有用。
+$ git clone https://github.com/MuYunyun/create-react-doc
+$ cd create-react-doc
+$ npm install
 $ npm run start
 ```
 
-打开浏览器并访问 http://localhost:3000
-
-### Folders
-
-```bash
-.
-├── README.md
-├── .create-react-doc-dist
-├── package.json
-├── src
-│   ├── build.js
-│   ├── commands
-│   ├── conf
-│   ├── publish.js
-│   ├── server.js
-│   ├── utils
-│   └── web
-├── templates
-│   └── default # 记录静态文件。
-└── theme
-    └── default
-```
+And now you can see the document is running at http://localhost:3000.
