@@ -7,6 +7,7 @@ import Icon from '../component/Icon';
 import Affix from '../component/Affix';
 import Header from '../component/Header';
 import Footer from '../component/Footer';
+import languageMap from '../language';
 import { isMobile } from '../utils';
 import logo from '../crd.logo.svg';
 import styles from './BasicLayout.less';
@@ -21,6 +22,9 @@ function BasicLayout({
   menuSource,
   indexProps,
 }) {
+  const { pathname } = location;
+  // eslint-disable-next-line no-undef
+  const { user, repo, branch = 'master', language = 'en' } = DOCSCONFIG || {};
   // eslint-disable-next-line no-unneeded-ternary
   const [inlineCollapsed, setInlineCollapsed] = useState(isMobile ? true : false);
 
@@ -35,7 +39,6 @@ function BasicLayout({
     window.scrollTo(0, 0);
   };
   const renderSubMenuItem = (menus) => {
-    const pathname = location;
     /* eslint-disable */
     return (
       <>
@@ -43,11 +46,12 @@ function BasicLayout({
           if (item.mdconf && item.mdconf.visible === false) return null;
 
           return item.children && item.children.length > 0 ? (
-            <SubMenu title={item.name} icon={<Icon type="folder" size={16} />}>
+            <SubMenu key={index} title={item.name} icon={<Icon type="folder" size={16} />}>
               {renderSubMenuItem(item.children)}
             </SubMenu>
           ) : (
             <Menu.Item
+              key={index}
               icon={<Icon type="file" size={16} />}
               title={
                 <span
@@ -81,7 +85,6 @@ function BasicLayout({
     );
   };
   const renderMenu = (menus) => {
-    const { pathname } = location;
     // const article = getCurrentArticle(routeData, pathname);
     // menus = menus.filter(item => item.article === article);
     if (menus.length < 1) return null;
@@ -112,43 +115,55 @@ function BasicLayout({
   };
   /**
    * this section is to show article's relevant information
-   * such as create time、update time、edit link and so on.
+   * such as edit in github and so on.
    */
-  const renderArticleInfo = () => {
+  const renderPageHeader = () => {
     return (
-      <div className={cx(styles.articleInfo)}>
-        {DOCSCONFIG && DOCSCONFIG.user && DOCSCONFIG.repo ? (
+      <div className={cx(styles.pageHeader)}>
+        {user && repo ? (
           <a
-            href={`https://github.com/${DOCSCONFIG.user}/${
-              DOCSCONFIG.repo
-            }/edit/${
-              DOCSCONFIG.branch || "master"
-            }${window.location.hash.replace(/#/, "")}.md`}
-            className={cx(styles.position)}
+            href={`https://github.com/${user}/${
+              repo
+            }/edit/${branch}${pathname}.md`}
             target="_blank"
           >
             <Icon className={cx(styles.icon)} type="edit" size={13} />
             <span>Edit in GitHub</span>
           </a>
         ) : null}
+      </div>
+    );
+  }
+  /**
+   * this section is to show article's relevant information
+   * such as edit in created time、edited time and so on.
+   */
+  const renderPageFooter = () => {
+    return (
+      <div className={cx(styles.pageFooter)}>
         <span className={cx(styles.position)}>
           <Icon className={cx(styles.icon)} type="create-time" size={13} />
-          <span>2020-06-24</span>
+          {languageMap[language].create_tm}:
+          <span>
+            {routeData.find((data) => data.path === pathname).props.birthtime}
+          </span>
         </span>
-        <span>
+        <span className={cx(styles.position)}>
           <Icon className={cx(styles.icon)} type="update-time" size={13} />
-          <span>2020-06-24</span>
+          {languageMap[language].modify_tm}:
+          <span>
+            {routeData.find((data) => data.path === pathname).props.mtime}
+          </span>
         </span>
       </div>
     );
   }
   const isCurentChildren = () => {
-    const { pathname } = location;
-    const getRoute = routeData.filter((item) => pathname === item.path);
+    const getRoute = routeData.filter((data) => pathname === data.path);
     const article = getRoute.length > 0 ? getRoute[0].article : null;
     const childs = menuSource.filter(
-      (item) =>
-        article === item.article && item.children && item.children.length > 1
+      (data) =>
+        article === data.article && data.children && data.children.length > 1
     );
     return childs.length > 0;
   };
@@ -213,6 +228,7 @@ function BasicLayout({
           })}
           <Redirect to="/404" />
         </Switch>
+        { renderPageFooter() }
       </div>
     );
   }
@@ -226,7 +242,7 @@ function BasicLayout({
         menuSource={menuSource}
       />
       <div className={styles.wrapperContent}>
-        {renderArticleInfo()}
+        {renderPageHeader()}
         {renderMenuContainer()}
         {renderContent()}
         <Footer inlineCollapsed={inlineCollapsed} />
