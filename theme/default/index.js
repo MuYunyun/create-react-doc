@@ -2,7 +2,7 @@ import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import DocumentTitle from 'react-document-title';
 import BasicLayout from './layout/BasicLayout';
-import IndexLayout from './layout/IndexLayout';
+// import IndexLayout from './layout/IndexLayout';
 import NoMatch from './component/NoMatch';
 import Loading from './component/Loading';
 import './index.less';
@@ -105,10 +105,11 @@ export default function (Lazyload, props) {
           );
           return (
             <DocumentTitle title={title}>
-              {pathname === '/' ?
+              {/* {pathname === '/' ?
                 <IndexLayout {...routeProps} {...props} indexRoute={indexRoute} /> :
                 <BasicLayout {...routeProps} {...props} />
-              }
+              } */}
+              <BasicLayout {...routeProps} {...props} />
             </DocumentTitle>
           );
         }}

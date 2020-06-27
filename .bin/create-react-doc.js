@@ -40,15 +40,15 @@ program
 // program.crdPath = path.join(__dirname, '../');
 // 所有 Markdown 目录
 program.markdownPaths = [];
-// 网站根目录
-program.projectPath = process.cwd();
 // 编译输出目录
-program.output = path.join(program.projectPath, program.output);
+program.output = path.join(process.cwd(), program.output);
 
 // 网站根目录,指定的所有 Markdown 的目录
 if (program.doc) {
-  // todo: to add Index Page, default Dir Readme
-  program.doc.split(',').forEach((itemPath) => program.markdownPaths.push(path.join(program.projectPath, itemPath)));
+  // todo: to add Index Page, default Dir Readme, modify these config to config.yml
+  fs.existsSync(paths.docsReadme) &&
+    program.markdownPaths.push(paths.docsReadme);
+  program.doc.split(',').forEach((itemPath) => program.markdownPaths.push(path.join(process.cwd(), itemPath)));
 }
 
 if (program.build && fs.pathExistsSync(paths.docsBuildDist)) {
@@ -63,9 +63,10 @@ if (program.publish) {
 }
 
 // 没有指定，文档目录
-if (program.markdownPaths.length === 0) return console.log(`Please specify the directory with the parameters "-d".`.red)
+if (program.markdownPaths.length === 0) return console.log(`Please specify the directory in config.yml.`.red)
 
 let isExists = true;
+console.log("123", program.markdownPaths);
 // 判断指定文件夹是否存
 program.markdownPaths.forEach((item) => {
   if (!fs.existsSync(item)) {

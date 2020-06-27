@@ -202,6 +202,7 @@ function BasicLayout({
         <Switch>
           {routeData.map((item) => {
             console.log('item', item)
+            const path = item.path === '/' ? 'README' : item.path
             return (
               <Route
                 key={item.path}
