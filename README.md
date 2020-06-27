@@ -13,7 +13,7 @@ create-react-doc
 * Integration with some GitHub features.
 * Custom Config Theme.
 
-> If you want some features not included there, you can list in [version 1.0 RFC](https://github.com/MuYunyun/create-react-doc/issues/2).
+> A variation of [rdoc](https://github.com/react-doc/rdoc)
 
 ## Use Case
 

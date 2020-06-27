@@ -201,19 +201,7 @@ function BasicLayout({
       >
         <Switch>
           {routeData.map((item) => {
-            // redirect jump
-            if (item && item.mdconf && item.mdconf.redirect) {
-              let redirectPath = `${item.path || ""}/${item.mdconf.redirect}`;
-              redirectPath = redirectPath.replace(/^\/\//, "/");
-              return (
-                <Route
-                  key={item.path}
-                  exact
-                  path={item.path}
-                  render={() => <Redirect to={redirectPath} />}
-                />
-              );
-            }
+            console.log('item', item)
             return (
               <Route
                 key={item.path}

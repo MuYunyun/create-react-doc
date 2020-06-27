@@ -31,6 +31,8 @@ export default class Markdown extends React.Component {
     this.renderMarkdown();
   }
   renderMarkdown() {
+    // todo: Index Page
+    console.log('this.props', this.props);
     const { props: { type, relative } } = this.props;
     const relativeMd = relative;
     if (!relativeMd) return null;

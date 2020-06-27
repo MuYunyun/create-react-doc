@@ -47,6 +47,7 @@ program.output = path.join(program.projectPath, program.output);
 
 // 网站根目录,指定的所有 Markdown 的目录
 if (program.doc) {
+  // todo: to add Index Page, default Dir Readme
   program.doc.split(',').forEach((itemPath) => program.markdownPaths.push(path.join(program.projectPath, itemPath)));
 }
 

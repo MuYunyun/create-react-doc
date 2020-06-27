@@ -21,6 +21,7 @@ const getIndexProps = (menus = [], attr) => {
   return attr;
 };
 
+// run in the Web/Router.js
 export default function (Lazyload, props) {
   let indexRoute = null;
 
@@ -29,7 +30,7 @@ export default function (Lazyload, props) {
     LoadingComponent: Loading,
   });
 
-  // 路由加载Component
+  // routing load component
   if (props.routeData && props.routeData.length > 0) {
     props.routeData.map((item) => {
       item.component = LoadableComponent;
@@ -63,6 +64,9 @@ export default function (Lazyload, props) {
   // 获取首页路由
   indexRoute = props.routeData.filter(item => item.mdconf && item.mdconf.layout === 'IndexLayout');
 
+  /**
+   * todo: index page is to use root's README default.
+   */
   return (
     <Switch>
       <Route
@@ -91,6 +95,14 @@ export default function (Lazyload, props) {
           } else {
             title = '404';
           }
+          console.log(
+            'routeProps',
+            routeProps,
+            'props',
+            props,
+            'indexRoute',
+            indexRoute
+          );
           return (
             <DocumentTitle title={title}>
               {pathname === '/' ?
