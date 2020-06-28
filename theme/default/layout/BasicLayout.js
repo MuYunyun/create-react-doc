@@ -139,22 +139,26 @@ function BasicLayout({
    * such as edit in created time、edited time and so on.
    */
   const renderPageFooter = () => {
+    const matchData = routeData.find((data) => data.path === pathname)
+    const matchProps = matchData && matchData.props
     return (
       <div className={cx(styles.pageFooter)}>
-        <span className={cx(styles.position)}>
-          <Icon className={cx(styles.icon)} type="create-time" size={13} />
-          {languageMap[language].create_tm}:
-          <span>
-            {routeData.find((data) => data.path === pathname).props.birthtime}
+        {matchProps && matchProps.birthtime ? (
+          <span className={cx(styles.position)}>
+            <Icon className={cx(styles.icon)} type="create-time" size={13} />
+            {languageMap[language].create_tm}:
+            <span>{matchProps.birthtime}</span>
           </span>
-        </span>
-        <span className={cx(styles.position)}>
-          <Icon className={cx(styles.icon)} type="update-time" size={13} />
-          {languageMap[language].modify_tm}:
-          <span>
-            {routeData.find((data) => data.path === pathname).props.mtime}
+        ) : null}
+        {matchProps && matchProps.mtime ? (
+          <span className={cx(styles.position)}>
+            <Icon className={cx(styles.icon)} type="update-time" size={13} />
+            {languageMap[language].modify_tm}:
+            <span>
+              {routeData.find((data) => data.path === pathname).props.mtime}
+            </span>
           </span>
-        </span>
+        ): null}
       </div>
     );
   }
@@ -169,7 +173,7 @@ function BasicLayout({
   };
   const isChild = isCurentChildren();
   const renderMenuContainer = () => {
-    return isChild && (
+    return (
       <>
         <div
           className={cx(styles.menuWrapper, {
@@ -193,27 +197,14 @@ function BasicLayout({
   const renderContent = () => {
     return (
       <div
-        className={cx({
-          [`${styles.content}`]: isChild,
-          [`${styles.contentNoMenu}`]: !isChild,
+        className={cx(`${styles.content}`, {
           [`${styles["content-fullpage"]}`]: inlineCollapsed || isMobile,
         })}
       >
         <Switch>
+          {/* see https://reacttraining.com/react-router/web/api/Redirect/exact-bool */}
+          <Redirect exact from="/" to="/README" />
           {routeData.map((item) => {
-            // redirect jump
-            if (item && item.mdconf && item.mdconf.redirect) {
-              let redirectPath = `${item.path || ""}/${item.mdconf.redirect}`;
-              redirectPath = redirectPath.replace(/^\/\//, "/");
-              return (
-                <Route
-                  key={item.path}
-                  exact
-                  path={item.path}
-                  render={() => <Redirect to={redirectPath} />}
-                />
-              );
-            }
             return (
               <Route
                 key={item.path}
@@ -228,7 +219,7 @@ function BasicLayout({
           })}
           <Redirect to="/404" />
         </Switch>
-        { renderPageFooter() }
+        {renderPageFooter()}
       </div>
     );
   }

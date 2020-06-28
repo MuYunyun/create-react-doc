@@ -68,7 +68,6 @@ function directoryTree(path, options, onEachFile) {
         try {
           // see https://stackoverflow.com/questions/2390199/finding-the-date-time-a-file-was-first-added-to-a-git-repository/2390382#2390382
           const result = execSync(`git log --format=%aD ${path} | tail -1`);
-          console.log('result1', result);
           item.birthtime =
             Buffer.isBuffer(result) && timeFormat(new Date(result));
         } catch (error) {
@@ -78,7 +77,6 @@ function directoryTree(path, options, onEachFile) {
         try {
           // see https://stackoverflow.com/questions/22497597/get-the-last-modification-data-of-a-file-in-git-repo
           const result = execSync(`git log -1 --pretty="format:%ci" ${path}`);
-          console.log('result2', result);
           item.mtime = Buffer.isBuffer(result) && timeFormat(new Date(result));
         } catch (error) {
           // eslint-disable-next-line no-console

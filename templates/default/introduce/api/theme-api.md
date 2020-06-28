@@ -230,7 +230,6 @@ props.routeData.map((item) => {
 {
   "classnames": "2.2.5",
   "highlight.js": "9.12.0",
-  "prop-types": "15.6.0",
   "react": "^16.10.0",
   "react-dom": "^16.10.0",
   "react-markdown": "3.1.3",
