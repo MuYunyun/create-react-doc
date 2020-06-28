@@ -1,7 +1,7 @@
 const path = require('path');
 const fs = require('fs');
 
-// 确保在项目文件夹中的任何符号都解决了：
+// handle the problem of symbol in any platform
 const appDirectory = fs.realpathSync(process.cwd());
 const toolDirectory = fs.realpathSync(__dirname);
 // Markdown 所在目录
@@ -98,6 +98,7 @@ module.exports = {
   // docsNodeModules: resolveApp('node_modules'),
   docsGitIgnore: resolveApp('.gitignore'),
   docsConfig: resolveApp('config.yml'),
+  docsReadme: resolveApp('README.md'),
   docsBuildDist: resolveApp('.crd-dist'),
   cacheDirPath: resolveApp('.cache'),
   // docTreePath: resolveApp('.cache/.reactdoc.tree.json'),
