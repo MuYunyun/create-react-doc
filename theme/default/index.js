@@ -48,18 +48,18 @@ export default function (Lazyload, props) {
     if (indexProps) indexProps.mdconf.layout = 'IndexLayout';
   }
 
-  const indexItem = {
-    path: '/',
-    mdconf: { ...indexProps.mdconf, layout: 'IndexLayout' },
-    props: { ...indexProps.props },
-    article: indexProps.article,
-  };
+  // const indexItem = {
+  //   path: '/',
+  //   mdconf: { ...indexProps.mdconf, layout: 'IndexLayout' },
+  //   props: { ...indexProps.props },
+  //   article: indexProps.article,
+  // };
 
   // 首页路由放置路由数组中生成路由
-  props.routeData.unshift({
-    ...indexItem,
-    component: LoadableComponent,
-  });
+  // props.routeData.unshift({
+  //   ...indexItem,
+  //   component: LoadableComponent,
+  // });
 
   // 获取首页路由
   indexRoute = props.routeData.filter(item => item.mdconf && item.mdconf.layout === 'IndexLayout');
@@ -80,7 +80,7 @@ export default function (Lazyload, props) {
       <Route path="/"
         render={(routeProps) => {
           const { location: { pathname } } = routeProps;
-          routeProps.indexProps = indexItem;
+          // routeProps.indexProps = indexItem;
           let curentRoute = props.routeData.filter(item => item.path === pathname);
           let title = [];
           if (curentRoute.length > 0) {
@@ -88,9 +88,9 @@ export default function (Lazyload, props) {
             if (curentRoute.mdconf && curentRoute.mdconf.title && curentRoute.mdconf.layout !== 'IndexLayout') {
               title.push(curentRoute.mdconf.title);
             }
-            if (indexItem.mdconf && indexItem.mdconf.title) {
-              title.push(indexItem.mdconf.title);
-            }
+            // if (indexItem.mdconf && indexItem.mdconf.title) {
+            //   title.push(indexItem.mdconf.title);
+            // }
             title = title.length > 1 ? title.join(' - ') : title.join('');
           } else {
             title = '404';
@@ -105,10 +105,6 @@ export default function (Lazyload, props) {
           );
           return (
             <DocumentTitle title={title}>
-              {/* {pathname === '/' ?
-                <IndexLayout {...routeProps} {...props} indexRoute={indexRoute} /> :
-                <BasicLayout {...routeProps} {...props} />
-              } */}
               <BasicLayout {...routeProps} {...props} />
             </DocumentTitle>
           );
