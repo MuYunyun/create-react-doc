@@ -1,7 +1,5 @@
 <p align="center">
-  <a href="https://react-doc.github.io">
-    <img width="150" src="theme/default/crd.logo.svg?sanitize=true">
-  </a>
+  <img width="150" src="theme/default/crd.logo.svg?sanitize=true">
 </p>
 
 create-react-doc

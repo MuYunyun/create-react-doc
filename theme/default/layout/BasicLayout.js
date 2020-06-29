@@ -27,6 +27,7 @@ function BasicLayout({
   const { user, repo, branch = 'master', language = 'en' } = DOCSCONFIG || {};
   // eslint-disable-next-line no-unneeded-ternary
   const [inlineCollapsed, setInlineCollapsed] = useState(isMobile ? true : false);
+  const [selectedKey, setSelectedKey] = useState('/BasicSkill/composition_principle/计算机组成原理.md');
 
   useEffect(() => {
     // eslint-disable-next-line no-use-before-define
@@ -43,20 +44,21 @@ function BasicLayout({
     return (
       <>
         {menus.map((item, index) => {
-          if (item.mdconf && item.mdconf.visible === false) return null;
-
+          console.log('item.path', item.path)
           return item.children && item.children.length > 0 ? (
-            <SubMenu key={index} title={item.name} icon={<Icon type="folder" size={16} />}>
+            <SubMenu key={index} keyValue={item.path} title={item.name} icon={<Icon type="folder" size={16} />}>
               {renderSubMenuItem(item.children)}
             </SubMenu>
           ) : (
             <Menu.Item
               key={index}
               icon={<Icon type="file" size={16} />}
+              keyValue={item.path}
               title={
                 <span
                   className={cx({
-                    active: pathname === item.routePath,
+                    // todo: active level up to highlight cur path.
+                    // active: pathname === item.routePath,
                   })}
                 >
                   {item &&
@@ -104,6 +106,11 @@ function BasicLayout({
           menuStyle={{
             height: "100vh",
             overflow: "auto",
+          }}
+          selectedKey={selectedKey}
+          onSelect={(keyValue) => {
+            console.log('keyValue', keyValue)
+            setSelectedKey(keyValue)
           }}
           // openKeys={this.state.openKeys}
           // onOpenChange={this.onOpenChange}
