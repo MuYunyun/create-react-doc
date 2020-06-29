@@ -18,10 +18,9 @@ const Menu = ({
 }) => {
   /* 存储 hover 状态的 key 值, 在垂直模式中需要根据 hover 的 key 值高亮父节点 */
   const [hoverKey, setHoverKey] = React.useState('');
-  const mergeMode = inlineCollapsed ? 'vertical' : mode;
   const MenuContext = {
     theme,
-    mode: mergeMode,
+    mode,
     inlineCollapsed,
     defaultOpenKeys,
     selectedKey,
@@ -51,7 +50,7 @@ const Menu = ({
         className={cx(
           styles.menu,
           styles[`menu-${theme}`],
-          styles[`menu-${mergeMode}`],
+          styles[`menu-${mode}`],
           {
             [styles['menu-inline-collapsed']]: inlineCollapsed,
           }
