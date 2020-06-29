@@ -10,7 +10,7 @@ import Footer from '../component/Footer';
 import languageMap from '../language';
 import { isMobile } from '../utils';
 import logo from '../crd.logo.svg';
-import styles from './BasicLayout.less';
+import styles from './index.less';
 import '../style/mobile.less';
 
 const { useState, useEffect } = React;
@@ -55,30 +55,23 @@ function BasicLayout({
               icon={<Icon type="file" size={16} />}
               keyValue={item.path}
               title={
-                <span
-                  className={cx({
-                    // todo: active level up to highlight cur path.
-                    // active: pathname === item.routePath,
-                  })}
-                >
-                  {item &&
-                  item.type === "directory" &&
-                  item.props &&
-                  item.props.isEmpty ? (
-                    <span>
-                      {(item.mdconf && item.mdconf.title) || item.name}
-                    </span>
-                  ) : (
-                    <Link
-                      to={item.routePath}
-                      replace={pathname === item.routePath}
-                    >
-                      {item && item.mdconf && item.mdconf.title
-                        ? item.mdconf.title
-                        : item.title}
-                    </Link>
-                  )}
-                </span>
+                item &&
+                item.type === "directory" &&
+                item.props &&
+                item.props.isEmpty ? (
+                  <span>
+                    {(item.mdconf && item.mdconf.title) || item.name}
+                  </span>
+                ) : (
+                  <Link
+                    to={item.routePath}
+                    replace={pathname === item.routePath}
+                  >
+                    {item && item.mdconf && item.mdconf.title
+                      ? item.mdconf.title
+                      : item.title}
+                  </Link>
+                )
               }
             />
           );
