@@ -1,18 +1,20 @@
 /* 获取 menu 样式
   level: 层级
 */
-const getMenuStyle = (level, mode) => {
+const getMenuStyle = (level, type) => {
   const basicStyle = {
     fontSize: level === 0 ? '14px' : '12px',
   };
-  if (mode === 'inline') {
+  if (type === 'menuItem') {
     return {
       ...basicStyle,
-      paddingLeft: `${level * 16}px`,
+      paddingLeft: `${21 + (level * 16)}px`,
     };
   }
-
-  return basicStyle;
+  return {
+    ...basicStyle,
+    paddingLeft: `${level * 16}px`,
+  };
 };
 
 export { getMenuStyle };
