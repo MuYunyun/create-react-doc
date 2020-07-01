@@ -41,10 +41,8 @@ function SubMenu({
   const popupSubMenu = useRef(null);
 
   const [getParentMenuHover, setParentMenuHover] = useCurrent(false);
-  const [getChildMenuHover, setChildMenuHover] = useCurrent(false);
 
   const gapDistance = 4;
-  const delayTime = 24;
   /** 使用 useLayoutEffect 可以避免 useEffect 产生可见的位移痕迹 */
   useLayoutEffect(() => {
     if (popupSubMenu.current && curSubmenu.current) {
@@ -97,18 +95,7 @@ function SubMenu({
     onHoverKey(keyValue);
   };
 
-  /** vertical 模式下光标移开当前 submenu(父菜单) 进入子 menu 时会有空隙, 为避免在空隙中隐藏掉菜单,
-   * 做了如下处理: 如果 24ms 内没有进入子菜单则关闭子菜单窗口 */
   const handleParentMouseLeave = () => {
-    setChildMenuHover(false);
-
-    setTimeout(() => {
-      // console.log(`parentLeave${level} ChildMenuHover${level}`, getChildMenuHover())
-      if (!getChildMenuHover()) {
-        setParentMenuHover(false);
-      }
-    }, delayTime);
-
     onHoverKey('');
   };
 

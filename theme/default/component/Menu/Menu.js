@@ -6,7 +6,6 @@ import { MenuProvider } from './context';
 import styles from './style/index.less';
 
 const Menu = ({
-  mode = 'inline',
   theme = 'light',
   children,
   selectedKey,
@@ -20,7 +19,7 @@ const Menu = ({
   const [hoverKey, setHoverKey] = React.useState('');
   const MenuContext = {
     theme,
-    mode,
+    mode: 'inline',
     inlineCollapsed,
     defaultOpenKeys,
     selectedKey,
@@ -50,7 +49,7 @@ const Menu = ({
         className={cx(
           styles.menu,
           styles[`menu-${theme}`],
-          styles[`menu-${mode}`],
+          styles['menu-inline'],
           {
             [styles['menu-inline-collapsed']]: inlineCollapsed,
           }
