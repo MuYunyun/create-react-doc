@@ -10,7 +10,7 @@ function MenuItem({
   keyValue = '',
   level = 0,
 }) {
-  const { theme, selectedKey, mode, onSelect, onHoverKey } = useMenuContext();
+  const { theme, selectedKey, onSelect, onHoverKey } = useMenuContext();
 
   const handleOnClick = () => {
     onSelect(keyValue);
@@ -20,15 +20,14 @@ function MenuItem({
     return (
       <li
         className={cx(styles['menu-item'], styles[`menu-${theme}`], {
-          [styles['menu-item-selected']]:
-            selectedKey && selectedKey.split('').indexOf(keyValue) > -1,
+          [styles['menu-item-selected']]: selectedKey === keyValue,
         })}
         onMouseEnter={() => {
           onHoverKey(keyValue);
         }}
         onMouseLeave={() => onHoverKey('')}
         onClick={handleOnClick}
-        style={getMenuStyle(level, mode)}
+        style={getMenuStyle(level, 'menuItem')}
       >
         {icon ? <span className={cx(styles['menu-icon'])}>{icon}</span> : null}
         <span className={cx(styles['menu-item-title'])}>{title}</span>

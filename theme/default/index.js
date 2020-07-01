@@ -1,7 +1,7 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import DocumentTitle from 'react-document-title';
-import BasicLayout from './layout/BasicLayout';
+import BasicLayout from './layout';
 import NoMatch from './component/NoMatch';
 import Loading from './component/Loading';
 import './index.less';

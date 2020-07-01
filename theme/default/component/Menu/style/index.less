@@ -13,7 +13,7 @@
   user-select: none;
 
   &-item {
-    margin: 0 16px 0 15px;
+    // margin: 0 16px 0 15px;
     white-space: nowrap;
     cursor: pointer;
     height: 40px;
@@ -22,14 +22,18 @@
     color: @menu-color;
     position: relative;
     cursor: pointer;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
+    // overflow: hidden;
+    // white-space: nowrap;
+    // text-overflow: ellipsis;
 
     &-selected {
       position: relative;
       background: @menu-background-selected;
       color: @menu-color-selected;
+
+      a {
+        color: @menu-color-selected!important;
+      }
     }
 
     /* icon */
@@ -61,6 +65,10 @@
 
   &-item:hover {
     color: @menu-color-hover;
+
+    & .menu-icon {
+      color: @menu-color-hover;
+    }
   }
 
   .submenu {
@@ -69,14 +77,13 @@
 
     &-title {
       position: relative;
-      padding: 0 28px 0 16px;
-      overflow: hidden;
+      padding: 0 28px 0 0;
       font-size: 14px;
-      white-space: nowrap;
       cursor: pointer;
-      overflow: hidden;
-      white-space: nowrap;
-      text-overflow: ellipsis;
+      margin-left: 20px;
+      // overflow: hidden;
+      // white-space: nowrap;
+      // text-overflow: ellipsis;
     }
 
     &-title:hover {
@@ -95,7 +102,8 @@
       display: inline-block;
       width: 10px;
       flex-shrink: 0;
-      margin: 0 3px 0 1px;
+      // margin: 0 3px 0 1px;
+      margin: 0 3px 0 -12px;
       position: relative;
       top: -5px;
 

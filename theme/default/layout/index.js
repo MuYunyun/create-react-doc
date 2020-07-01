@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 import React from 'react';
 import { Switch, Link, Route, Redirect } from 'react-router-dom';
 import cx from 'classnames';
@@ -9,8 +8,9 @@ import Header from '../component/Header';
 import Footer from '../component/Footer';
 import languageMap from '../language';
 import { isMobile } from '../utils';
+import { getOpenSubMenuKeys } from './utils';
 import logo from '../crd.logo.svg';
-import styles from './BasicLayout.less';
+import styles from './index.less';
 import '../style/mobile.less';
 
 const { useState, useEffect } = React;
@@ -25,8 +25,9 @@ function BasicLayout({
   const { pathname } = location;
   // eslint-disable-next-line no-undef
   const { user, repo, branch = 'master', language = 'en' } = DOCSCONFIG || {};
-  // eslint-disable-next-line no-unneeded-ternary
-  const [inlineCollapsed, setInlineCollapsed] = useState(isMobile ? true : false);
+  const [inlineCollapsed, setInlineCollapsed] = useState(isMobile);
+  const [selectedKey, setSelectedKey] = useState(`${pathname}.md`);
+  const curOpenKeys = getOpenSubMenuKeys(pathname);
 
   useEffect(() => {
     // eslint-disable-next-line no-use-before-define
@@ -43,40 +44,34 @@ function BasicLayout({
     return (
       <>
         {menus.map((item, index) => {
-          if (item.mdconf && item.mdconf.visible === false) return null;
-
+          // item.path carrys .md here.
           return item.children && item.children.length > 0 ? (
-            <SubMenu key={index} title={item.name} icon={<Icon type="folder" size={16} />}>
+            <SubMenu key={index} keyValue={item.path} title={item.name} icon={<Icon type="folder" size={16} />}>
               {renderSubMenuItem(item.children)}
             </SubMenu>
           ) : (
             <Menu.Item
               key={index}
               icon={<Icon type="file" size={16} />}
+              keyValue={item.path}
               title={
-                <span
-                  className={cx({
-                    active: pathname === item.routePath,
-                  })}
-                >
-                  {item &&
-                  item.type === "directory" &&
-                  item.props &&
-                  item.props.isEmpty ? (
-                    <span>
-                      {(item.mdconf && item.mdconf.title) || item.name}
-                    </span>
-                  ) : (
-                    <Link
-                      to={item.routePath}
-                      replace={pathname === item.routePath}
-                    >
-                      {item && item.mdconf && item.mdconf.title
-                        ? item.mdconf.title
-                        : item.title}
-                    </Link>
-                  )}
-                </span>
+                item &&
+                item.type === "directory" &&
+                item.props &&
+                item.props.isEmpty ? (
+                  <span>
+                    {(item.mdconf && item.mdconf.title) || item.name}
+                  </span>
+                ) : (
+                  <Link
+                    to={item.routePath}
+                    replace={pathname === item.routePath}
+                  >
+                    {item && item.mdconf && item.mdconf.title
+                      ? item.mdconf.title
+                      : item.title}
+                  </Link>
+                )
               }
             />
           );
@@ -85,8 +80,6 @@ function BasicLayout({
     );
   };
   const renderMenu = (menus) => {
-    // const article = getCurrentArticle(routeData, pathname);
-    // menus = menus.filter(item => item.article === article);
     if (menus.length < 1) return null;
     return (
       <Affix
@@ -96,7 +89,6 @@ function BasicLayout({
         width={inlineCollapsed ? 0 : 240}
       >
         <Menu
-          mode="inline"
           inlineCollapsed={inlineCollapsed}
           toggle={() => {
             setInlineCollapsed(!inlineCollapsed);
@@ -105,8 +97,11 @@ function BasicLayout({
             height: "100vh",
             overflow: "auto",
           }}
-          // openKeys={this.state.openKeys}
-          // onOpenChange={this.onOpenChange}
+          selectedKey={selectedKey}
+          onSelect={(keyValue) => {
+            setSelectedKey(keyValue);
+          }}
+          defaultOpenKeys={curOpenKeys}
         >
           {renderSubMenuItem(menus || [])}
         </Menu>
@@ -175,13 +170,13 @@ function BasicLayout({
   const renderMenuContainer = () => {
     return (
       <>
-        <div
+        <nav
           className={cx(styles.menuWrapper, {
             [`${styles["menuwrapper-inlineCollapsed"]}`]: inlineCollapsed,
           })}
         >
           {renderMenu(menuSource)}
-        </div>
+        </nav>
         <div
           className={cx({
             [`${styles.menuMask}`]: isMobile && !inlineCollapsed,
@@ -232,7 +227,11 @@ function BasicLayout({
         indexProps={indexProps}
         menuSource={menuSource}
       />
-      <div className={styles.wrapperContent}>
+      <div
+        className={cx(styles.wrapperContent, {
+          [styles.wrapperMobile]: isMobile,
+        })}
+      >
         {renderPageHeader()}
         {renderMenuContainer()}
         {renderContent()}
