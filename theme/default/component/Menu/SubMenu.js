@@ -151,7 +151,7 @@ function SubMenu({
     >
       <div
         className={cx(styles['submenu-title'])}
-        style={getMenuStyle(level, mode)}
+        style={getMenuStyle(level, 'subMenu')}
         onClick={handleMenuStatus}
         onMouseEnter={handleParentMouseEnter}
         onMouseLeave={handleParentMouseLeave}
@@ -166,9 +166,7 @@ function SubMenu({
       </div>
       {mode === 'inline' ? (
         <Transition isShow={menuOpen}>
-          <ul className={cx(styles.menu, styles.submenu)}>
-            {renderChild()}
-          </ul>
+          <ul className={cx(styles.menu, styles.submenu)}>{renderChild()}</ul>
         </Transition>
       ) : null}
     </li>

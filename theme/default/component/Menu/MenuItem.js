@@ -10,7 +10,7 @@ function MenuItem({
   keyValue = '',
   level = 0,
 }) {
-  const { theme, selectedKey, mode, onSelect, onHoverKey } = useMenuContext();
+  const { theme, selectedKey, onSelect, onHoverKey } = useMenuContext();
 
   const handleOnClick = () => {
     onSelect(keyValue);
@@ -27,7 +27,7 @@ function MenuItem({
         }}
         onMouseLeave={() => onHoverKey('')}
         onClick={handleOnClick}
-        style={getMenuStyle(level, mode)}
+        style={getMenuStyle(level, 'menuItem')}
       >
         {icon ? <span className={cx(styles['menu-icon'])}>{icon}</span> : null}
         <span className={cx(styles['menu-item-title'])}>{title}</span>
