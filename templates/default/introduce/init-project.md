@@ -22,9 +22,9 @@ $ npm install rdoc -g # 安装工具
 可以通过一条命令生成，一个初始文档网站工程。初始化工程，里面会包含一个 `package.json`，`rdoc` 工具会被当做依赖放入其中，避免 `rdoc` 工具升级带来的问题。
 
 ```shell
-$ create-react-doc init my-project # 初始化项目
+$ react-doc init my-project # 初始化项目
 ## or
-$ create-react-doc-cli init my-project
+$ react-doc-cli init my-project
 ## 也可以使用 rdoc-cli 命令，跟 rdoc 命令是一样的
 ## 增加 用 rdoc-cli 命令，目的是解决 Mac 系统自带的 Ruby 命令 rdoc 冲突
 ```
