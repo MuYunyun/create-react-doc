@@ -56,7 +56,7 @@ $ npm run build
 同时可以指定分支，默认推送到 `gh-pages`分支，配置实例如下：
 
 ```shell
-$ create-react-doc --publish https://github.com/react-doc/react-doc.github.io.git --branch master
+$ react-doc --publish https://github.com/react-doc/react-doc.github.io.git --branch master
 ```
 
 如果全局安装了 `create-react-doc` 工具，直接可以将上面命令放到命令行运行，记得在项目的根目录下运行哦。

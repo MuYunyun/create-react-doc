@@ -31,8 +31,6 @@ export default class Markdown extends React.Component {
     this.renderMarkdown();
   }
   renderMarkdown() {
-    // todo: Index Page
-    console.log('this.props', this.props);
     const { props: { type, relative } } = this.props;
     const relativeMd = relative;
     if (!relativeMd) return null;
@@ -60,7 +58,6 @@ export default class Markdown extends React.Component {
     const { markdownStr } = this.state;
     return (
       <div className={styles.markdownwrapper}>
-        {/* {title && layout !== 'IndexLayout' && <h1 id={title} className={styles.pageTitle}>{title}</h1>} */}
         {markdownStr ? (
           <ReactMarkdown
             className={cx("markdown", styles.markdown)}

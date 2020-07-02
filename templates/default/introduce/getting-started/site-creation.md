@@ -14,7 +14,7 @@ sort: 4
 > 3. 目录顺序也可以通过每个目录中的 README.md 改变顺序。
 
 ```shell
-$ create-react-doc -d home,introduce,faq,example,about,github
+$ react-doc -d home,introduce,faq,example,about,github
 ```
 
 ## 配置npm命令

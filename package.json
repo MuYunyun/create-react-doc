@@ -4,14 +4,13 @@
   "description": "Fast static generated site. Just write markdown file.",
   "homepage": "",
   "bin": {
-    "create-react-doc": ".bin/create-react-doc.js",
-    "create-react-doc-cli": ".bin/create-react-doc.js"
+    "react-doc": "bin/react-doc.js"
   },
   "scripts": {
     "release": "release-it --src.tagName='v%s'",
-    "deploy": "node .bin/create-react-doc.js --publish git@github.com:react-doc/react-doc.github.io.git --branch master",
-    "start": "node .bin/create-react-doc.js -d templates/default/home,templates/default/introduce,templates/default/faq,templates/default/about,templates/default/github",
-    "build": "node .bin/create-react-doc.js -d templates/default/home,templates/default/introduce,templates/default/faq,templates/default/about,templates/default/github --build"
+    "start": "node bin/react-doc.js -d templates/default/home,templates/default/introduce,templates/default/faq,templates/default/about,templates/default/github",
+    "build": "node bin/react-doc.js -d templates/default/home,templates/default/introduce,templates/default/faq,templates/default/about,templates/default/github --build",
+    "deploy": "node bin/react-doc.js --publish git@github.com:react-doc/react-doc.github.io.git --branch master"
   },
   "repository": {
     "type": "git",
@@ -19,7 +18,9 @@
   },
   "keywords": [
     "react",
-    "create-react-doc"
+    "create-react-doc",
+    "blog",
+    "markdown"
   ],
   "author": "muyunyun",
   "license": "MIT",

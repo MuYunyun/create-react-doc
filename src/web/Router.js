@@ -2,7 +2,7 @@ import React from 'react';
 import { HashRouter, withRouter, Route, Switch } from 'react-router-dom';
 import lazyload from 'react-dynamic-loadable';
 import theme from 'crd-theme';
-import menuSource from './crd.tree.data.json';
+import menuSource from './crd.json';
 
 /**
  * serialize router data
