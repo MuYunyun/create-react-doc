@@ -101,7 +101,6 @@ module.exports = {
   docsReadme: resolveApp('README.md'),
   docsBuildDist: resolveApp('.crd-dist'),
   cacheDirPath: resolveApp('.cache'),
-  // docTreePath: resolveApp('.cache/.reactdoc.tree.json'),
   watchFilePath: resolveApp('.cache/watch-dir.js'),
   projectPath: appDirectory,
   publicPath: '',

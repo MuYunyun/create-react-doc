@@ -1,21 +1,22 @@
 const babelrc = {
   presets: [
     [
-      "@babel/preset-env",
+      require.resolve("@babel/preset-env"),
       {
         targets: {
           browsers: ["last 2 versions", "ie >= 10"],
         },
       },
     ],
-    "@babel/preset-react",
+    // require.resolve("@babel/preset-react"),
+    require.resolve("react-app"),
   ],
   plugins: [
-    "@babel/plugin-syntax-object-rest-spread",
-    "@babel/plugin-syntax-dynamic-import",
-    "@babel/plugin-transform-async-to-generator",
-    "@babel/plugin-proposal-class-properties",
-    "@babel/plugin-transform-runtime"
+    require.resolve("@babel/plugin-syntax-object-rest-spread"),
+    require.resolve("@babel/plugin-syntax-dynamic-import"),
+    require.resolve("@babel/plugin-transform-async-to-generator"),
+    require.resolve("@babel/plugin-proposal-class-properties"),
+    require.resolve("@babel/plugin-transform-runtime")
   ],
   env: {
     production: {},
