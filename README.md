@@ -11,8 +11,6 @@ create-react-doc
 * Integration with some GitHub features.
 * Custom Config Theme.
 
-> A variation of [rdoc](https://github.com/react-doc/rdoc)
-
 ## Use Case
 
 * [blog](https://github.com/MuYunyun/blog)
@@ -93,3 +91,5 @@ Options:
   --build                Creating an optimized production build.
   -h, --help             help document.
 ```
+
+> A variation of [rdoc](https://github.com/react-doc/rdoc)
