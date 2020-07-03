@@ -75,14 +75,15 @@ const getThemePath = () => {
 };
 
 const modPath = resolveApp('node_modules');
+// get exclude folders
 function getExcludeFoldersRegExp() {
   if (!fs.existsSync(modPath)) return [];
   let regxExc = fs.readdirSync(modPath);
-  regxExc = regxExc.filter(item => !/crd(.*)/.test(item));
-
+  regxExc = regxExc.filter(item => !/create-react-doc(.*)/.test(item));
   regxExc = regxExc.map((item) => {
     let rgxPath = `node_modules${path.sep}${item}`;
     if (path.sep === '\\') {
+      // to watch: is '\\' needful?
       rgxPath = `node_modules\\${path.sep}${item}`;
     }
     return new RegExp(rgxPath);
