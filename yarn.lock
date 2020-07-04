@@ -3415,6 +3415,11 @@ detect-port@^1.2.2:
     address "^1.0.1"
     debug "^2.6.0"
 
+diana@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.npmjs.org/diana/-/diana-1.0.2.tgz#effbbe0ea26ea1302abc088d5e0abc277b5fac66"
+  integrity sha512-VzOwRocfzNcbZyiHhWA/KlAIeOehwOqkT/vgJlIXCpmgXlO8zNl20abLZfEVGpgFRX90eXxAGRSnGqQQgoLwNA==
+
 diffie-hellman@^5.0.0:
   version "5.0.3"
   resolved "https://registry.npmjs.org/diffie-hellman/-/diffie-hellman-5.0.3.tgz#40e8ee98f55a2149607146921c63e1ae5f3d2875"
