@@ -4,12 +4,12 @@ const fs = require('fs');
 // handle the problem of symbol in any platform
 const appDirectory = fs.realpathSync(process.cwd());
 const toolDirectory = fs.realpathSync(__dirname);
-// Markdown 所在目录
+// Markdown dir
 const resolveApp = relativePath => path.resolve(appDirectory, relativePath);
-// crd 工具所在目录
+// crd tool dir
 const resolveTool = relativePath => path.resolve(toolDirectory, relativePath);
 
-// 获取 crd 配置
+// get config crd from package.json
 function getCrdConf() {
   const packagePath = resolveApp('./package.json');
   let conf = {};
@@ -17,19 +17,14 @@ function getCrdConf() {
     const confPkg = require(packagePath); // eslint-disable-line
     conf = confPkg.crd;
   }
-  const confPath = resolveApp('./.crdrc.json');
-  if (fs.existsSync(confPath)) {
-    const confRc = require(confPath) // eslint-disable-line
-    conf = confRc;
-  }
   return conf;
 }
 
 function getConfigFilePath(fileName, type) {
   const conf = getCrdConf();
-  // 这里是读取配置
+  // read config
   if (conf && conf[type]) {
-    // 主题目录加载
+    // load theme dir
     if (type === 'theme') {
       if (!conf[type]) conf[type] = fileName;
       const _path = path.resolve(appDirectory, 'theme', conf[type]);
@@ -47,7 +42,7 @@ function getConfigFilePath(fileName, type) {
   }
   const _filepath = path.resolve(appDirectory, fileName);
   if (fs.existsSync(_filepath)) {
-    // 默认根目录下的 favicon|logo
+    // favicon|logo in default root dir.
     return _filepath;
   }
   return false;

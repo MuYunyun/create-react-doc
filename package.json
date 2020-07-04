@@ -71,7 +71,6 @@
     "postcss-loader": "^2.0.9",
     "raw-content-replace-loader": "^1.0.1",
     "react": "^16.8.4",
-    "react-document-title": "^2.0.3",
     "react-dom": "^16.8.4",
     "react-dynamic-loadable": "^1.1.2",
     "react-hot-loader": "^4.1.1",
