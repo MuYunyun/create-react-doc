@@ -4,11 +4,14 @@ const path = require('path');
 const upath = require('upath');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const FriendlyErrorsWebpackPlugin = require('@nuxtjs/friendly-errors-webpack-plugin');
+const { getDocsConfig } = require('../utils');
 const CreateSpareWebpackPlugin = require('./createSpareWebpackPlugin');
 const config = require('./webpack.config');
 const paths = require('./path');
 
+
 module.exports = function (cmd) {
+  const docsConfig = getDocsConfig();
   config.mode = 'development';
   config.entry = [
     require.resolve('react-hot-loader/patch'),
@@ -105,7 +108,7 @@ module.exports = function (cmd) {
       inject: true,
       favicon: paths.defaultFaviconPath,
       template: paths.defaultHTMLPath,
-      title: paths.crdConf && paths.crdConf.title ? paths.crdConf.title : 'Create React Doc',
+      title: docsConfig && docsConfig.title ? docsConfig.title : 'Create React Doc',
     }),
     // 将模块名称添加到工厂功能，以便它们显示在浏览器分析器中。
     // 当接收到热更新信号时，在浏览器 console 控制台打印更多可读性高的模块名称等信息

@@ -13,8 +13,8 @@ module.exports = function server(cmd, docsConfig) {
     console.log('please check user and repo in config.yml!\n');
     return;
   }
-  const { user, repo } = docsConfig;
-  log('  Start public to your git repo'.green);
+  const { user, repo, publish } = docsConfig;
+  log('  Start deploy to your git repo'.green);
   const load = loading({
     text: 'Please wait ...'.blue,
     color: 'blue',
@@ -23,10 +23,10 @@ module.exports = function server(cmd, docsConfig) {
   }).start();
 
   ghpages.publish(
-    `https://github.com/${user}/${repo}.github.io.git`,
+    cmd.output,
     {
-      branch: cmd.branch || 'gh-pages',
-      repo: cmd.publish,
+      branch: cmd.branch,
+      repo: publish || `https://github.com/${user}/${repo}.git`,
       message: `Update website, ${new Date()}!`,
     },
     (err) => {

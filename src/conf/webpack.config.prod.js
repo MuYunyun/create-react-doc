@@ -6,11 +6,13 @@ const CopyMarkdownImageWebpackPlugin = require('copy-markdown-image-webpack-plug
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const { getDocsConfig } = require('../utils');
 const CreateSpareWebpackPlugin = require('./createSpareWebpackPlugin');
 const config = require('./webpack.config');
 const paths = require('./path');
 
 module.exports = function (cmd) {
+  const docsConfig = getDocsConfig();
   config.mode = 'production';
   config.entry = [paths.appIndexJs];
   config.output.filename = 'js/[hash:8].js';
@@ -135,7 +137,8 @@ module.exports = function (cmd) {
       inject: true,
       favicon: paths.defaultFaviconPath,
       template: paths.defaultHTMLPath,
-      title: paths.crdConf && paths.crdConf.title ? paths.crdConf.title : 'Rdoc',
+      title:
+        docsConfig && docsConfig.title ? docsConfig.title : 'Create React Doc',
       minify: {
         removeAttributeQuotes: true,
         collapseWhitespace: true,
@@ -153,7 +156,8 @@ module.exports = function (cmd) {
       // 备用文件目录，比对是否存在，不存在生成，根据sep 目录规则生成
       path: path.join(paths.cacheDirPath, './md'),
       sep: '___', // 检查目标目录文件，文件名存储，文件夹+下划线间隔+文件名
-      directoryTrees: { // 索引目录
+      directoryTrees: {
+        // 索引目录
         dir: cmd.markdownPaths,
         mdconf: true,
         extensions: /\.md$/,
