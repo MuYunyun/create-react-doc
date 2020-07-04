@@ -24,9 +24,9 @@ module.exports = (cmd, webpackConf) => {
     // 告诉服务器从哪里提供内容。提供静态文件，这只是必要的。
     contentBase: cmd.markdownPaths,
     // 通知服务器观察由devServer.contentBase选项提供的文件。
-    // 文件更改将触发整页重新加载。
+    // it'll reload page when file change.
     watchContentBase: true,
-    // 这样可以避免某些系统的CPU过载。
+    // avoid cpu overload in some case
     watchOptions: {
       ignored: /node_modules/,
     },

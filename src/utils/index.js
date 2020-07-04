@@ -1,4 +1,5 @@
 const fs = require('fs');
+const yaml = require('js-yaml');
 const paths = require('../conf/path');
 
 /**
@@ -39,4 +40,15 @@ exports.timeFormat = (date) => {
   return `${date.getFullYear()}-${paddingTwoDigits(
     date.getMonth() + 1
   )}-${paddingTwoDigits(date.getDate())}`;
+};
+
+/**
+ * get docs config, see https://github.com/nodeca/js-yaml/blob/2d1fbed8f3a76ff93cccb9a8a418b4c4a482d3d9/lib/js-yaml/loader.js#L1590-L1592
+ */
+exports.getDocsConfig = () => {
+  if (!fs.existsSync(paths.docsConfig)) {
+    console.log('please check config.yml in root dir!\n');
+    return null;
+  }
+  return yaml.safeLoad(fs.readFileSync(paths.docsConfig));
 };

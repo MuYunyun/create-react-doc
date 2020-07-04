@@ -96,7 +96,6 @@ module.exports = {
   crdConf: getCrdConf(),
   docsThemePath: getThemePath(),
   // docsPackage: resolveApp('./package.json'),
-  // docsNodeModules: resolveApp('node_modules'),
   docsGitIgnore: resolveApp('.gitignore'),
   docsConfig: resolveApp('config.yml'),
   docsReadme: resolveApp('README.md'),

@@ -1,10 +1,14 @@
 /**
  * get keys of open sub menu from pathname
  * input: /BasicSkill/basis/DOM
+ * menuOpenKeys: means extra show open keys in config.yml
  * output: ["/BasicSkill", "/BasicSkill/basis"]
  */
-function getOpenSubMenuKeys(pathname) {
+function getOpenSubMenuKeys(pathname, menuOpenKeys) {
   const result = [];
+  if (menuOpenKeys) {
+    result.push(...menuOpenKeys.split(','));
+  }
   /**
    * there is no pick item if the length of pathnameSplit is less than or equal to 2.
    * eg: /README => ["", "README"]

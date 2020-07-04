@@ -42,9 +42,7 @@ function menuSourceFormat(data, routePath, article) {
         item.children = [];
       }
     } else {
-      // console.log("item.mdconf", item);
       item.title = item.mdconf && item.mdconf.title ? item.mdconf.title : item.name.replace(item.extension, '');
-      // console.log("item.title", item.title);
       if (!item.mdconf) {
         item.props = { isEmpty: true };
       }

@@ -1,11 +1,10 @@
 /* eslint-disable global-require */
 /* eslint-disable import/no-dynamic-require */
 const path = require('path');
-const fs = require('fs');
 const webpack = require('webpack');
 const webpackbar = require('webpackbar');
 const upath = require('upath');
-const yaml = require('js-yaml');
+const { getDocsConfig } = require('../utils');
 const paths = require('./path');
 const pkg = require('../../package.json');
 
@@ -19,8 +18,7 @@ if (paths.crdConf && paths.crdConf.footer && typeof paths.crdConf.footer === 'st
 
 /* custom define docs config */
 if (paths.docsConfig) {
-  // see https://github.com/nodeca/js-yaml/blob/2d1fbed8f3a76ff93cccb9a8a418b4c4a482d3d9/lib/js-yaml/loader.js#L1590-L1592
-  define.DOCSCONFIG = JSON.stringify(yaml.safeLoad(fs.readFileSync(paths.docsConfig)));
+  define.DOCSCONFIG = JSON.stringify(getDocsConfig());
 }
 
 module.exports = {
