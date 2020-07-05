@@ -10,6 +10,8 @@
                                                   \(   _.-"
                                                     `--"
 
+[![npm version](https://img.shields.io/npm/v/create-react-doc)](https://badge.fury.io/js/create-react-doc) [![week download](https://img.shields.io/npm/dw/create-react-doc.svg)](https://www.npmjs.com/package/create-react-doc) ![LICENSE MIT](https://img.shields.io/npm/l/create-react-doc.svg)
+
 # Create React Doc
 
 Write markdown sites or blogs with no build configuration just like [create-react-app](https://github.com/facebook/create-react-app).
