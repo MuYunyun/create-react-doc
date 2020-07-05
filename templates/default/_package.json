@@ -3,18 +3,17 @@
   "version": "1.0.0",
   "description": "Describe {{name}} here",
   "scripts": {
-    "deploy": "create-react-doc --publish <your repo url>",
-    "build": "create-react-doc -d home,introduce,faq,about,github --clean --build",
-    "start": "create-react-doc -d home,introduce,faq,about,github --clean"
+    "start": "react-doc start",
+    "build": "react-doc build",
+    "deploy": "react-doc deploy"
   },
   "keywords": [
     "{{name}}",
-    "create-react-doc",
     "react-doc",
     "react"
   ],
   "dependencies": {
-    "rdoc": "{{crdVersion}}"
+    "create-react-doc": "{{crdVersion}}"
   },
   "author": "",
   "license": "MIT"

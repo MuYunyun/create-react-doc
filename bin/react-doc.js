@@ -14,7 +14,6 @@ const { getDocsConfig } = require('../src/utils');
 program
   .version(pkg.version, '-v, --version')
   .description('Markdown doc site generator for React.')
-  .option('-i, init [path]', 'Create an empty website or reinitialize an existing one.')
   .option('start', 'Documents generated.')
   .option('build', 'Build the documents generated.')
   .option('deploy', 'Deploy site to gh-pages.')
@@ -32,6 +31,9 @@ program
     console.log();
   })
   .parse(process.argv);
+
+// if process.argv[2] not in the program, then initProject.
+if (!program[process.argv[2]]) return initProject(program);
 // create-react-doc tool root dir.
 // program.crdPath = path.join(__dirname, '../');
 // all markdown dir
@@ -57,7 +59,6 @@ if (program.build && fs.pathExistsSync(paths.docsBuildDist)) {
   // clean dir
   fs.emptyDirSync(paths.docsBuildDist);
 }
-if (program.init) return initProject(program);
 
 // deploy code to special git repo and branch.
 if (program.deploy) {

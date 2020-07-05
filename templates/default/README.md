@@ -1,7 +1,3 @@
-<p align="center">
-  <img width="150" src="theme/default/crd.logo.svg?sanitize=true">
-</p>
-
 # Create React Doc
 
 Write markdown sites or blogs with no build configuration just like [create-react-app](https://github.com/facebook/create-react-app).
