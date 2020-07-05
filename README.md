@@ -25,7 +25,7 @@ Write markdown sites or blogs with no build configuration just like [create-reac
 
 ## Sites built with create-react-doc
 
-* [muyunyun's blog](https://github.com/MuYunyun/blog) <sub>[(github)](https://github.com/MuYunyun/blog)
+* [muyunyun's blog](http://muyunyun.cn/blog) <sub>[(github)](https://github.com/MuYunyun/blog)
 * [create react doc](http://muyunyun.cn/create-react-doc)
 
 ## Quick Overview
@@ -43,7 +43,7 @@ When you're ready to deploy to production, create a minified bundle with npm run
 
 **create-react-doc** is very easy to use. You don’t need to install or configure tools like webpack or Babel. They are preconfigured and hidden so that you can focus on the code.
 
-you only install it as a package so that you can create your own website or blog. You may
+You only install it as a package so that you can create your own website or blog. You may
  choose one of the following methods:
 
 ### npx
@@ -90,7 +90,7 @@ Your doc site is ready to be deployed.
 
 ### `npm run deploy` or `yarn deploy`
 
-The doc'll deployed to GitHub Pages rely `user`, `repo` in [config.yml](https://github.com/MuYunyun/create-react-doc##config.yml)
+The doc'll deployed to GitHub Pages rely `user`, `repo` in [config.yml](https://github.com/MuYunyun/create-react-doc#configyml)
 
 ## config.yml
 
