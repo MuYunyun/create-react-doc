@@ -1,6 +1,6 @@
 {
   "name": "create-react-doc",
-  "version": "0.0.7",
+  "version": "0.1.0",
   "description": "Fast static generated site. Just write markdown file.",
   "homepage": "",
   "bin": {
