@@ -37,6 +37,7 @@ function paddingTwoDigits(digit) {
  * format time
  */
 exports.timeFormat = (date) => {
+  if (isNaN(date.getFullYear()) || isNaN(date.getMonth()) || isNaN(date.getDate())) return null;
   return `${date.getFullYear()}-${paddingTwoDigits(
     date.getMonth() + 1
   )}-${paddingTwoDigits(date.getDate())}`;

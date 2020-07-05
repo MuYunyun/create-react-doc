@@ -6,7 +6,7 @@ const paths = require('../conf/path');
 const log = console.log; // eslint-disable-line
 
 module.exports = function (params) {
-  const outDir = typeof params.init === 'string' ? path.join(paths.projectPath, params.init) : paths.projectPath;
+  const outDir = path.join(paths.projectPath, process.argv[2]);
   const projectName = path.basename(outDir);
 
   const crdpkg = require(paths.crdPackage); // eslint-disable-line
