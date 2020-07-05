@@ -36,7 +36,7 @@ module.exports = function server(cmd) {
       if (err) {
         return console.log(err); // eslint-disable-line
       }
-      // clearConsole();
+      clearConsole();
       // open browser
       openBrowsers(urls.localUrl);
     });

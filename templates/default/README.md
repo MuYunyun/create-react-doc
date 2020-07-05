@@ -11,7 +11,7 @@ Write markdown sites or blogs with no build configuration just like [create-reac
 
 ## Sites built with create-react-doc
 
-* [blog](https://github.com/MuYunyun/blog)
+[muyunyun's blog](https://github.com/MuYunyun/blog) <sub>[(github)](https://github.com/MuYunyun/blog)
 
 ## Quick Overview
 

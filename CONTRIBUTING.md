@@ -1,7 +1,7 @@
 # How to contribute
 
-* Talk about the situations in the [issue](https://github.com/MuYunyun/create-react-doc/issues/new). If the situation is reasonable, then go to next step;
-* Switch to the new branch from master, submit the pr with after finish the feature.
+* Welcome your pr! Before pr, talk about situations in the [issue](https://github.com/MuYunyun/create-react-doc/issues/new) firstly. If the situation is reasonable, go to next step;
+* Switch to the new branch based master, submit the pr with after finishing the feature.
 
 ## Dev
 

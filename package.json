@@ -8,9 +8,9 @@
   },
   "scripts": {
     "release": "release-it --src.tagName='v%s'",
-    "start": "node bin/react-doc.js -d templates/default/home,templates/default/introduce,templates/default/faq,templates/default/about,templates/default/github",
-    "build": "node bin/react-doc.js -d templates/default/home,templates/default/introduce,templates/default/faq,templates/default/about,templates/default/github --build",
-    "deploy": "node bin/react-doc.js --publish git@github.com:react-doc/react-doc.github.io.git --branch master"
+    "start": "node bin/react-doc start",
+    "build": "node bin/react-doc build",
+    "deploy": "node bin/react-doc deploy"
   },
   "repository": {
     "type": "git",

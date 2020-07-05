@@ -1,6 +1,14 @@
-<p align="center">
-  <img width="150" src="theme/default/crd.logo.svg?sanitize=true">
-</p>
+                                                     _.-"\
+                                                _.-"      \
+                                              ,-"          \
+                                              \    create    \
+                                              \ \    react    \
+                                              \ \      doc     \
+                                                \ \         _.-;
+                                                \ \    _.-"   :
+                                                  \ \,-"    _.-"
+                                                  \(   _.-"
+                                                    `--"
 
 # Create React Doc
 
@@ -15,7 +23,8 @@ Write markdown sites or blogs with no build configuration just like [create-reac
 
 ## Sites built with create-react-doc
 
-* [blog](https://github.com/MuYunyun/blog)
+* [muyunyun's blog](https://github.com/MuYunyun/blog) <sub>[(github)](https://github.com/MuYunyun/blog)
+* [create react doc](http://muyunyun.cn/create-react-doc)
 
 ## Quick Overview
 
