@@ -10,24 +10,24 @@ module.exports = function (params) {
   const projectName = path.basename(outDir);
 
   const crdpkg = require(paths.crdPackage); // eslint-disable-line
-  // 最后一个版本号替换成 x , 当发生变化最后一个版本安装最新版本
+  // replace the last vertion with x, so it'll install autoly when the last vertion changes.
   const CRD_VERSION = crdpkg.version.split('.').slice(0, 2).concat('x').join('.');
 
-  // 输出目录清空
+  // clear output dir
   if (!fs.pathExistsSync(outDir)) {
     fs.ensureDirSync(outDir);
   }
 
-  // 目录不为空返回错误提示
+  // if target dir is not null return false hint
   if (fs.readdirSync(path.join(outDir)).length > 0) {
     return log(`\n ${'initialization failed! '.red} ${outDir.yellow} ${'is not an empty directory.'.red}\n`);
   }
 
-  // 复制模板
+  // copy template
   if (fs.pathExistsSync(paths.defaultTemplatePath)) {
     copyTemplate(paths.defaultTemplatePath, outDir, {
       name: projectName,
-      rdocVersion: CRD_VERSION,
+      crdVersion: CRD_VERSION,
     }, (err, createdFiles) => {
       if (err) return log(`Copy Tamplate Error: ${err} !!!`.red);
       createdFiles.sort().forEach((createdFile) => {

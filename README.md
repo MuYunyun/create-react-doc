@@ -2,31 +2,44 @@
   <img width="150" src="theme/default/crd.logo.svg?sanitize=true">
 </p>
 
-create-react-doc
----
+# Create React Doc
 
-* Markdown site generator for React.
-* You only just write **Markdown** out of the box.
-* Generate menu autoly based files directory.
-* Configuration customly.
+Write markdown sites or blogs with no build configuration.
 
-## Use Case
+## Features
+
+* Write markdown docs with no build configuration.
+* Lazy load for markdown data.
+* Generate menu autoly based file directory.
+* Support deploy to [GitHub Pages](https://pages.github.com/).
+
+## Sites built with create-react-doc
 
 * [blog](https://github.com/MuYunyun/blog)
 
 ## Quick Overview
 
-### Get Started Immediately
+```js
+npx create-react-doc my-doc
+cd my-doc
+npm start
+```
 
-Get Started Immediately
-You don't need to install or configure tools like webpack or Babel.
-They are preconfigured and hidden so that you can focus on the doc.
+Then open [http://localhost:3000/]() to see your app.
+When you're ready to deploy to production, create a minified bundle with npm run build.
+
+## Usage
+
+**create-react-doc** is very easy to use. You don’t need to install or configure tools like webpack or Babel. They are preconfigured and hidden so that you can focus on the code.
+
+you only install it as a package so that you can create your own website or blog. Let's start!
+
+
+
 
 Create a project, and you’re good to go.
 
 ## Start
-
-**create-react-doc** is very easy to use, you only install it as a package so that you can create your own website or blog. Let's start!
 
 ### Creating a Doc
 
@@ -73,7 +86,9 @@ npm run build
 npm run deploy
 ```
 
-### Help
+## Document
+
+### CLI
 
 ```shell
 Usage: react-doc [options]

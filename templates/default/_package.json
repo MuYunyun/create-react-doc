@@ -14,7 +14,7 @@
     "react"
   ],
   "dependencies": {
-    "rdoc": "{{rdocVersion}}"
+    "rdoc": "{{crdVersion}}"
   },
   "author": "",
   "license": "MIT"
