@@ -1,4 +1,5 @@
 {
+  "//": "to merge",
   "name": "create-react-doc",
   "version": "0.1.2",
   "description": "Fast static generated site. Just write markdown file.",
