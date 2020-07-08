@@ -1,11 +1,24 @@
 {
   "name": "create-react-doc",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "version": "0.1.2",
+  "description": "Fast static generated site. Just write markdown file.",
+  "homepage": "",
+  "bin": {
+    "react-doc": "./create-react-doc.js"
   },
+  "scripts": {
+    "release": "release-it --src.tagName='v%s'",
+    "start": "node bin/react-doc start",
+    "build": "node bin/react-doc build",
+    "deploy": "node bin/react-doc deploy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MuYunyun/create-react-doc"
+  },
+  "keywords": ["react", "create-react-doc", "blog", "markdown"],
+  "author": "muyunyun",
+  "license": "MIT",
   "dependencies": {
     "@babel/cli": "^7.2.3",
     "@babel/core": "^7.3.4",
@@ -72,7 +85,7 @@
     "webpackbar": "^4.0.0",
     "write": "^1.0.3"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "devDependencies": {
+    "release-it": "^10.1.0"
+  }
 }
