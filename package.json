@@ -1,5 +1,9 @@
 {
-  "name": "create-react-doc",
+  "name": "root",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
   "version": "0.1.2",
   "description": "Fast static generated site. Just write markdown file.",
   "homepage": "",
@@ -26,6 +30,7 @@
   "license": "MIT",
   "dependencies": {},
   "devDependencies": {
+    "lerna": "^3.22.1",
     "release-it": "^10.1.0"
   }
 }

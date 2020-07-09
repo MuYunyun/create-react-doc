@@ -2,14 +2,25 @@
 const fs = require('fs-extra');
 const path = require('path');
 const program = require('commander');
-const initProject = require('../src/commands/initProject');
-const initCache = require('../src/utils/initCache');
-const Servers = require('../src/server');
-const Build = require('../src/build');
-const Deploy = require('../src/deploy');
-const paths = require('../src/conf/path');
-const pkg = require('../package.json');
-const { getDocsConfig } = require('../src/utils');
+const {
+  initProject,
+  initCache,
+  Servers,
+  Build,
+  Deploy,
+  paths,
+  getDocsConfig,
+  // to reserve crd-scripts
+} = require('crd-scripts');
+// const initProject = require('../src/commands/initProject');
+// const initCache = require('../src/utils/initCache');
+// const Servers = require('../src/server');
+// const Build = require('../src/build');
+// const Deploy = require('../src/deploy');
+// const paths = require('../src/conf/path');
+// const { getDocsConfig } = require('../src/utils');
+// const pkg = require('../package.json');
+const pkg = require('./package.json');
 
 program
   .version(pkg.version, '-v, --version')

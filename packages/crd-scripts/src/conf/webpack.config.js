@@ -29,11 +29,11 @@ module.exports = {
     filename: 'js/[name].[hash:8].js',
     chunkFilename: 'js/[name].[hash:8].js',
   },
-  resolve: {
-    alias: {
-      'crd-theme': upath.normalizeSafe(paths.docsThemePath),
-    },
-  },
+  // resolve: {
+  //   alias: {
+  //     'crd-theme': upath.normalizeSafe(paths.docsThemePath),
+  //   },
+  // },
   module: {
     rules: [
       {
