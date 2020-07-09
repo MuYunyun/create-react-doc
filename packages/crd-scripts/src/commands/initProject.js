@@ -24,6 +24,7 @@ module.exports = function (params) {
   }
 
   // copy template
+  // todo: change path with crd-template
   if (fs.pathExistsSync(paths.defaultTemplatePath)) {
     copyTemplate(paths.defaultTemplatePath, outDir, {
       name: projectName,

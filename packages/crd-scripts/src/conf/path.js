@@ -1,6 +1,7 @@
 const path = require('path');
 const fs = require('fs');
 
+
 // handle the problem of symbol in any platform
 const appDirectory = fs.realpathSync(process.cwd());
 const toolDirectory = fs.realpathSync(__dirname);
@@ -63,11 +64,11 @@ const logoPath = () => {
 };
 
 // Get theme path
-const getThemePath = () => {
-  const _path = getConfigFilePath('./default', 'theme');
-  if (_path) return _path;
-  return resolveTool('../../theme/default');
-};
+// const getThemePath = () => {
+//   const _path = getConfigFilePath('./default', 'theme');
+//   if (_path) return _path;
+//   return resolveTool('../../theme/default');
+// };
 
 const modPath = resolveApp('node_modules');
 // get exclude folders
@@ -89,7 +90,7 @@ function getExcludeFoldersRegExp() {
 module.exports = {
   // markdown dir
   crdConf: getCrdConf(),
-  docsThemePath: getThemePath(),
+  // docsThemePath: getThemePath(),
   // docsPackage: resolveApp('./package.json'),
   docsGitIgnore: resolveApp('.gitignore'),
   docsConfig: resolveApp('config.yml'),
