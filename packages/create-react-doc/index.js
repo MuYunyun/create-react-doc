@@ -10,8 +10,8 @@ const {
   Deploy,
   paths,
   getDocsConfig,
-  // to reserve crd-scripts
-} = require('crd-scripts');
+  // to reserve @crd/scripts
+} = require('@crd/scripts');
 // const initProject = require('../src/commands/initProject');
 // const initCache = require('../src/utils/initCache');
 // const Servers = require('../src/server');

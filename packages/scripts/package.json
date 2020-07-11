@@ -1,12 +1,16 @@
 {
-  "name": "theme",
-  "version": "1.0.0",
+  "name": "@crd/scripts",
+  "version": "0.0.1",
   "description": "",
   "main": "index.js",
+  "bin": {
+    "react-doc": "bin/react-doc.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
+    "@crd/theme": "^0.0.1",
     "@babel/cli": "^7.2.3",
     "@babel/core": "^7.3.4",
     "@babel/plugin-proposal-class-properties": "^7.3.4",
@@ -74,5 +78,5 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "MIT"
 }

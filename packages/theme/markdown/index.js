@@ -5,7 +5,7 @@ import ReactMarkdown from 'react-markdown';
 import hljs from 'highlight.js';
 import InlineCode from './InlineCode';
 import Link from './Link';
-import Loading from '../../component/Loading/';
+import Loading from '../component/Loading';
 import styles from './style/index.less';
 
 hljs.configure({

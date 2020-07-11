@@ -1,7 +1,6 @@
 {
-  "//": "rename",
-  "name": "templates",
-  "version": "1.0.0",
+  "name": "@crd/templates",
+  "version": "0.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
