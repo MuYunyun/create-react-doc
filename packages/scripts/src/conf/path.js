@@ -51,6 +51,7 @@ function getConfigFilePath(fileName, type) {
 
 // Get favicon path
 const faviconPath = () => {
+  // todo favicon
   const _path = getConfigFilePath('./favicon.ico', 'favicon');
   if (_path) return _path;
   return resolveTool('../../theme/default/favicon.ico');

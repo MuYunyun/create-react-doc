@@ -11,8 +11,13 @@
     "react-doc": "bin/react-doc.js"
   },
   "scripts": {
-    "release": "release-it --src.tagName='v%s'",
-    "start": "node bin/react-doc start",
+    "bootstrap": "lerna bootstrap",
+    "bootstrap:ci": "lerna bootstrap --no-ci",
+    "clean": "lerna clean",
+    "//": "release-it --src.tagName='v%s'",
+    "release": "lerna publish",
+    "start": "node packages/create-react-doc/index.js start",
+    "start1": "node bin/react-doc start",
     "build": "node bin/react-doc build",
     "deploy": "node bin/react-doc deploy"
   },
