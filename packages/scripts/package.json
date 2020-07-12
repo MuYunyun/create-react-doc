@@ -1,6 +1,6 @@
 {
   "name": "@crd/scripts",
-  "version": "0.1.0",
+  "version": "0.1.14",
   "description": "Scripts using with Create React Doc",
   "main": "index.js",
   "dependencies": {
