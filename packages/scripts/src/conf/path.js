@@ -54,7 +54,7 @@ const faviconPath = () => {
   // todo favicon
   const _path = getConfigFilePath('./favicon.ico', 'favicon');
   if (_path) return _path;
-  return resolveTool('../../theme/default/favicon.ico');
+  return resolveTool('../../../theme/favicon.ico');
 };
 
 // Get logo path
@@ -63,13 +63,6 @@ const logoPath = () => {
   if (_path) return _path;
   return false;
 };
-
-// Get theme path
-// const getThemePath = () => {
-//   const _path = getConfigFilePath('./default', 'theme');
-//   if (_path) return _path;
-//   return resolveTool('../../theme/default');
-// };
 
 const modPath = resolveApp('node_modules');
 // get exclude folders
@@ -91,7 +84,6 @@ function getExcludeFoldersRegExp() {
 module.exports = {
   // markdown dir
   crdConf: getCrdConf(),
-  // docsThemePath: getThemePath(),
   // docsPackage: resolveApp('./package.json'),
   docsGitIgnore: resolveApp('.gitignore'),
   docsConfig: resolveApp('config.yml'),
@@ -106,9 +98,9 @@ module.exports = {
   getExcludeFoldersRegExp: getExcludeFoldersRegExp(),
   crdPackage: resolveTool('../../package.json'),
   defaultNodeModules: modPath,
-  defaultTemplatePath: resolveTool('../../templates/default'),
+  defaultTemplatePath: resolveTool('../../../templates/default'),
   defaultFaviconPath: faviconPath(),
-  defaultHTMLPath: resolveTool('../../theme/default/index.html'),
+  defaultHTMLPath: resolveTool('../../../theme/index.html'),
   appIndexJs: resolveTool('../web/index.js'),
   appDir: resolveTool('../web'),
 };
