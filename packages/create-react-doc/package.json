@@ -1,6 +1,6 @@
 {
   "name": "create-react-doc",
-  "version": "0.1.2",
+  "version": "0.1.4",
   "description": "Fast static generated site. Just write markdown file.",
   "homepage": "",
   "bin": {
@@ -9,51 +9,21 @@
   "scripts": {},
   "repository": {
     "type": "git",
-    "url": "https://github.com/MuYunyun/create-react-doc"
+    "url": "https://github.com/MuYunyun/create-react-doc",
+    "directory": "packages/create-react-doc"
   },
-  "keywords": ["react", "create-react-doc", "blog", "markdown"],
+  "keywords": [
+    "react",
+    "create-react-doc",
+    "blog",
+    "markdown"
+  ],
   "author": "muyunyun",
   "license": "MIT",
   "dependencies": {
-    "@crd/scripts": "^0.0.1",
-    "babel-eslint": "^8.0.1",
-    "babel-loader": "^8.0.5",
-    "classnames": "^2.2.6",
-    "colors-cli": "^1.0.13",
+    "@crd/scripts": "^0.1.4",
     "commander": "^2.12.2",
-    "copy-markdown-image-webpack-plugin": "^2.0.0",
-    "copy-template-dir": "^1.3.0",
-    "css-loader": "^0.28.7",
-    "detect-port": "^1.2.2",
-    "diana": "^1.0.2",
-    "directory-tree-md": "^2.0.7",
-    "eslint": "^4.19.1",
-    "eslint-config-airbnb": "^16.1.0",
-    "eslint-loader": "^2.0.0",
-    "eslint-plugin-import": "^2.11.0",
-    "eslint-plugin-jsx-a11y": "^6.0.3",
-    "eslint-plugin-react": "^7.7.0",
-    "file-loader": "^1.1.11",
-    "fs-extra": "^5.0.0",
-    "gh-pages": "^1.2.0",
-    "highlight.js": "^9.12.0",
-    "html-webpack-plugin": "^3.2.0",
-    "js-yaml": "^3.14.0",
-    "loading-cli": "^1.0.6",
-    "local-ip-url": "^1.0.1",
-    "optimize-css-assets-webpack-plugin": "^4.0.0",
-    "postcss-flexbugs-fixes": "^3.2.0",
-    "postcss-loader": "^2.0.9",
-    "raw-content-replace-loader": "^1.0.1",
-    "rimraf": "^2.6.2",
-    "string-replace-loader": "^2.1.1",
-    "style-loader": "^0.19.1",
-    "uglifyjs-webpack-plugin": "^2.1.1",
-    "upath": "^1.0.2",
-    "url-replace-loader": "^1.0.0",
-    "write": "^1.0.3"
+    "fs-extra": "^5.0.0"
   },
-  "devDependencies": {
-    "release-it": "^10.1.0"
-  }
+  "gitHead": "06664956d2c8250b036746e3d51e6ffaba8d022a"
 }

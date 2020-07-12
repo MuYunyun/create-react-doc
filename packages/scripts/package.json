@@ -1,16 +1,9 @@
 {
   "name": "@crd/scripts",
-  "version": "0.0.1",
-  "description": "",
+  "version": "0.1.4",
+  "description": "Scripts using with Create React Doc",
   "main": "index.js",
-  "bin": {
-    "react-doc": "bin/react-doc.js"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "dependencies": {
-    "@crd/theme": "^0.0.1",
     "@babel/cli": "^7.2.3",
     "@babel/core": "^7.3.4",
     "@babel/plugin-proposal-class-properties": "^7.3.4",
@@ -22,6 +15,7 @@
     "@babel/preset-env": "^7.3.4",
     "@babel/preset-react": "^7.0.0",
     "@babel/runtime": "^7.3.4",
+    "@crd/theme": "^0.1.4",
     "@nuxtjs/friendly-errors-webpack-plugin": "^2.0.2",
     "babel-eslint": "^8.0.1",
     "babel-loader": "^8.0.5",
@@ -56,13 +50,6 @@
     "postcss-flexbugs-fixes": "^3.2.0",
     "postcss-loader": "^2.0.9",
     "raw-content-replace-loader": "^1.0.1",
-    "react": "^16.8.4",
-    "react-dom": "^16.8.4",
-    "react-dynamic-loadable": "^1.1.2",
-    "react-hot-loader": "^4.1.1",
-    "react-markdown": "^3.3.0",
-    "react-router-dom": "^4.2.2",
-    "react-switch": "^5.0.1",
     "rimraf": "^2.6.2",
     "string-replace-loader": "^2.1.1",
     "style-loader": "^0.19.1",
@@ -76,7 +63,13 @@
     "webpackbar": "^4.0.0",
     "write": "^1.0.3"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MuYunyun/create-react-doc",
+    "directory": "packages/scripts"
+  },
   "keywords": [],
-  "author": "",
-  "license": "MIT"
+  "author": "muyunyun",
+  "license": "MIT",
+  "gitHead": "06664956d2c8250b036746e3d51e6ffaba8d022a"
 }
