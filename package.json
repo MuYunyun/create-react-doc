@@ -5,7 +5,6 @@
     "packages/scripts",
     "packages/theme"
   ],
-  "version": "0.1.2",
   "description": "Fast static generated site. Just write markdown file.",
   "homepage": "http://muyunyun.cn/create-react-doc",
   "bin": {
