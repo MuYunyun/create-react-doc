@@ -1,8 +1,7 @@
 {
   "name": "@crd/templates",
-  "version": "0.0.1",
+  "version": "0.1.3",
   "description": "Default Templates with Create React Doc",
-  "dependencies": {},
   "keywords": [],
   "author": "muyunyun"
 }
