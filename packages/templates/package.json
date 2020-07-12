@@ -8,7 +8,10 @@
     "url": "https://github.com/MuYunyun/create-react-doc",
     "directory": "packages/templates"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "author": "muyunyun",
   "license": "MIT",
-  "gitHead": "70bb505dc5aacde8fa7b3cf877c7e1b50c3e4f47"
+  "gitHead": "5e0f4a6d8142f83fe31bbd5d3393eb3bd8549218"
 }
