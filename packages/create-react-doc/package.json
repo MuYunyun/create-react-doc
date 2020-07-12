@@ -6,12 +6,7 @@
   "bin": {
     "react-doc": "./index.js"
   },
-  "scripts": {
-    "release": "release-it --src.tagName='v%s'",
-    "start": "node bin/react-doc start",
-    "build": "node bin/react-doc build",
-    "deploy": "node bin/react-doc deploy"
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "https://github.com/MuYunyun/create-react-doc"
