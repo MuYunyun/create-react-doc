@@ -10,7 +10,7 @@ const {
   Deploy,
   paths,
   getDocsConfig,
-} = require('@crd/theme');
+} = require('@crd/scripts');
 const pkg = require('./package.json');
 
 program

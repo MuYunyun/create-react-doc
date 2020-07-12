@@ -24,7 +24,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@crd/theme": "^0.1.13",
+    "@crd/theme": "^0.1.1",
     "commander": "^2.12.2",
     "fs-extra": "^5.0.0"
   }
