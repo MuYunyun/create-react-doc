@@ -11,8 +11,7 @@
     },
     "publish": {
       "allowBranch": "master",
-      "message": "chore(release): publish",
-      "registry": "https://npm.pkg.github.com"
+      "message": "chore: publish"
     }
   },
   "//": "set yarn workspaces in root",
