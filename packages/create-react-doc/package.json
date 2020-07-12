@@ -1,6 +1,6 @@
 {
   "name": "create-react-doc",
-  "version": "0.1.14",
+  "version": "0.1.15",
   "description": "Fast static generated site. Just write markdown file.",
   "homepage": "",
   "bin": {
@@ -24,8 +24,8 @@
   },
   "license": "MIT",
   "dependencies": {
-    "crd-theme": "^0.1.1",
     "commander": "^2.12.2",
+    "crd-theme": "^0.1.15",
     "fs-extra": "^5.0.0"
   },
   "gitHead": "ffc5e4cbc94a7356da558c2dbf46e2f39bb8b199"
