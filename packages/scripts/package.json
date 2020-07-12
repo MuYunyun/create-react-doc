@@ -1,5 +1,5 @@
 {
-  "name": "@crd/scripts",
+  "name": "@create-react-doc/scripts",
   "version": "0.1.12",
   "description": "Scripts using with Create React Doc",
   "main": "index.js",
@@ -15,7 +15,7 @@
     "@babel/preset-env": "^7.3.4",
     "@babel/preset-react": "^7.0.0",
     "@babel/runtime": "^7.3.4",
-    "@crd/theme": "^0.1.12",
+    "@create-react-doc/theme": "^0.1.12",
     "@nuxtjs/friendly-errors-webpack-plugin": "^2.0.2",
     "babel-eslint": "^8.0.1",
     "babel-loader": "^8.0.5",
@@ -74,5 +74,5 @@
   },
   "author": "muyunyun",
   "license": "MIT",
-  "gitHead": "3ea25633dd20ebbed954da8d637299c387a6f014"
+  "gitHead": "1a229fd548ea179c71d408422724e06f46e1d30c"
 }

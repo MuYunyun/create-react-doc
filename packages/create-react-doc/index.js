@@ -10,7 +10,7 @@ const {
   Deploy,
   paths,
   getDocsConfig,
-} = require('@crd/scripts');
+} = require('@create-react-doc/scripts');
 const pkg = require('./package.json');
 
 program

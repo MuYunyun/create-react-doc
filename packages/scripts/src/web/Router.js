@@ -1,7 +1,7 @@
 import React from 'react';
 import { HashRouter, withRouter, Route, Switch } from 'react-router-dom';
 import lazyload from 'react-dynamic-loadable';
-import theme from '@crd/theme';
+import theme from '@create-react-doc/theme';
 import menuSource from './crd.json';
 
 /**

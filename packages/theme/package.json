@@ -1,5 +1,5 @@
 {
-  "name": "@crd/theme",
+  "name": "@create-react-doc/theme",
   "version": "0.1.12",
   "description": "Default Theme with Create React Doc",
   "main": "index.js",
@@ -55,5 +55,5 @@
   },
   "author": "muyunyun",
   "license": "MIT",
-  "gitHead": "3ea25633dd20ebbed954da8d637299c387a6f014"
+  "gitHead": "1a229fd548ea179c71d408422724e06f46e1d30c"
 }
