@@ -1,12 +1,12 @@
 {
-  "name": "root",
-  "private": true,
+  "name": "create-react-doc",
   "workspaces": [
-    "packages/*"
+    "packages/create-react-doc",
+    "packages/scripts",
+    "packages/theme"
   ],
-  "version": "0.1.2",
   "description": "Fast static generated site. Just write markdown file.",
-  "homepage": "",
+  "homepage": "http://muyunyun.cn/create-react-doc",
   "bin": {
     "react-doc": "bin/react-doc.js"
   },

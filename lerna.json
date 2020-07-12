@@ -1,14 +1,19 @@
 {
-  "packages": ["packages/*"],
-  "version": "0.0.0",
+  "packages": [
+    "packages/create-react-doc",
+    "packages/scripts",
+    "packages/theme"
+  ],
+  "version": "0.1.14",
   "command": {
     "bootstrap": {
-      "npmClientArgs": ["--no-package-lock"]
+      "npmClientArgs": [
+        "--no-package-lock"
+      ]
     },
     "publish": {
       "allowBranch": "master",
-      "message": "chore(release): publish",
-      "registry": "https://npm.pkg.github.com"
+      "message": "chore: publish"
     }
   },
   "//": "set yarn workspaces in root",
