@@ -1,6 +1,6 @@
 {
   "name": "@create-react-doc/theme",
-  "version": "0.1.12",
+  "version": "0.1.13",
   "description": "Default Theme with Create React Doc",
   "main": "index.js",
   "dependencies": {
