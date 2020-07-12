@@ -1,13 +1,10 @@
 {
   "name": "@crd/scripts",
   "version": "0.0.1",
-  "description": "",
+  "description": "scripts use with create-react-doc",
   "main": "index.js",
   "bin": {
     "react-doc": "bin/react-doc.js"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
     "@crd/theme": "^0.0.1",
@@ -56,13 +53,6 @@
     "postcss-flexbugs-fixes": "^3.2.0",
     "postcss-loader": "^2.0.9",
     "raw-content-replace-loader": "^1.0.1",
-    "react": "^16.8.4",
-    "react-dom": "^16.8.4",
-    "react-dynamic-loadable": "^1.1.2",
-    "react-hot-loader": "^4.1.1",
-    "react-markdown": "^3.3.0",
-    "react-router-dom": "^4.2.2",
-    "react-switch": "^5.0.1",
     "rimraf": "^2.6.2",
     "string-replace-loader": "^2.1.1",
     "style-loader": "^0.19.1",
@@ -77,6 +67,5 @@
     "write": "^1.0.3"
   },
   "keywords": [],
-  "author": "",
-  "license": "MIT"
+  "author": "muyunyun"
 }
