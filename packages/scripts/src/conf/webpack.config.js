@@ -3,7 +3,6 @@
 const path = require('path');
 const webpack = require('webpack');
 const webpackbar = require('webpackbar');
-const upath = require('upath');
 const { getDocsConfig } = require('../utils');
 const paths = require('./path');
 const pkg = require('../../package.json');
@@ -29,11 +28,6 @@ module.exports = {
     filename: 'js/[name].[hash:8].js',
     chunkFilename: 'js/[name].[hash:8].js',
   },
-  // resolve: {
-  //   alias: {
-  //     'crd-theme': upath.normalizeSafe(paths.docsThemePath),
-  //   },
-  // },
   module: {
     rules: [
       {
