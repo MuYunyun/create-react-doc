@@ -19,6 +19,9 @@
     "markdown"
   ],
   "author": "muyunyun",
+  "publishConfig": {
+    "access": "public"
+  },
   "license": "MIT",
   "dependencies": {
     "@crd/scripts": "^0.1.6",

@@ -49,6 +49,9 @@
     "url": "https://github.com/MuYunyun/create-react-doc",
     "directory": "packages/theme"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "keywords": [],
   "author": "muyunyun",
   "license": "MIT",
