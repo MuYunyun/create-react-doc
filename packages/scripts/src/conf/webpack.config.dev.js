@@ -9,7 +9,6 @@ const CreateSpareWebpackPlugin = require('./createSpareWebpackPlugin');
 const config = require('./webpack.config');
 const paths = require('./path');
 
-
 module.exports = function (cmd) {
   const docsConfig = getDocsConfig();
   config.mode = 'development';
