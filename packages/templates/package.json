@@ -1,0 +1,17 @@
+{
+  "name": "crd-templates",
+  "version": "0.1.19",
+  "description": "Default Templates with Create React Doc",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MuYunyun/create-react-doc",
+    "directory": "packages/templates"
+  },
+  "keywords": [],
+  "publishConfig": {
+    "access": "public"
+  },
+  "author": "muyunyun",
+  "license": "MIT",
+  "gitHead": ""
+}

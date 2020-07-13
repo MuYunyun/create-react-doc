@@ -1,7 +1,6 @@
 const path = require('path');
 const fs = require('fs');
 
-
 // handle the problem of symbol in any platform
 const appDirectory = fs.realpathSync(process.cwd());
 const toolDirectory = fs.realpathSync(__dirname);
@@ -9,7 +8,7 @@ const toolDirectory = fs.realpathSync(__dirname);
 const resolveApp = relativePath => path.resolve(appDirectory, relativePath);
 // crd tool dir
 const resolveTool = relativePath => path.resolve(toolDirectory, relativePath);
-
+const modPath = resolveApp('node_modules');
 // get config crd from package.json
 function getCrdConf() {
   const packagePath = resolveApp('./package.json');
@@ -29,7 +28,11 @@ function getConfigFilePath(fileName, type) {
     if (type === 'theme') {
       if (!conf[type]) conf[type] = fileName;
       const _path = path.resolve(appDirectory, 'theme', conf[type]);
-      const _NodeModulesPath = path.resolve(appDirectory, 'node_modules', conf[type]);
+      const _NodeModulesPath = path.resolve(
+        appDirectory,
+        'node_modules',
+        conf[type]
+      );
       if (fs.existsSync(_path)) {
         return fs.realpathSync(_path);
       } else if (fs.existsSync(_NodeModulesPath)) {
@@ -53,7 +56,8 @@ function getConfigFilePath(fileName, type) {
 const faviconPath = () => {
   const _path = getConfigFilePath('./favicon.ico', 'favicon');
   if (_path) return _path;
-  return resolveTool('../../../theme/favicon.ico');
+  // the path'll be writen dynamiclly in the future
+  return resolveApp('node_modules/crd-theme/favicon.ico');
 };
 
 // Get logo path
@@ -63,13 +67,12 @@ const logoPath = () => {
   return false;
 };
 
-const modPath = resolveApp('node_modules');
 // get exclude folders
 function getExcludeFoldersRegExp() {
   if (!fs.existsSync(modPath)) return [];
   let regxExc = fs.readdirSync(modPath);
   regxExc = regxExc.filter(
-    item => !/create-react-doc(.*)|crd-scripts/.test(item)
+    item => !/create-react-doc(.*)|crd-scripts|crd-theme/.test(item)
   );
   regxExc = regxExc.map((item) => {
     let rgxPath = `node_modules${path.sep}${item}`;
@@ -87,21 +90,22 @@ module.exports = {
   crdConf: getCrdConf(),
   // docsPackage: resolveApp('./package.json'),
   docsGitIgnore: resolveApp('.gitignore'),
+  docsNodeModules: resolveApp(''),
   docsConfig: resolveApp('config.yml'),
   docsReadme: resolveApp('README.md'),
   docsBuildDist: resolveApp('.crd-dist'),
   cacheDirPath: resolveApp('.cache'),
   watchFilePath: resolveApp('.cache/watch-dir.js'),
+  defaultHTMLPath: resolveApp('node_modules/crd-theme/index.html'),
+  defaultTemplatePath: resolveTool('node_modules/crd-templates/default'),
+  defaultNodeModules: modPath,
   projectPath: appDirectory,
   publicPath: '',
   logoPath: logoPath(),
   // crd tool dir
   getExcludeFoldersRegExp: getExcludeFoldersRegExp(),
   crdPackage: resolveTool('../../package.json'),
-  defaultNodeModules: modPath,
-  defaultTemplatePath: resolveTool('../../../templates/default'),
   defaultFaviconPath: faviconPath(),
-  defaultHTMLPath: resolveTool('../../../theme/index.html'),
   appIndexJs: resolveTool('../web/index.js'),
   appDir: resolveTool('../web'),
 };
