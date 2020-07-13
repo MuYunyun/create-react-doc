@@ -68,7 +68,9 @@ const modPath = resolveApp('node_modules');
 function getExcludeFoldersRegExp() {
   if (!fs.existsSync(modPath)) return [];
   let regxExc = fs.readdirSync(modPath);
-  regxExc = regxExc.filter(item => !/create-react-doc(.*)/.test(item));
+  regxExc = regxExc.filter(
+    item => !/create-react-doc(.*)|crd-scripts/.test(item)
+  );
   regxExc = regxExc.map((item) => {
     let rgxPath = `node_modules${path.sep}${item}`;
     if (path.sep === '\\') {
