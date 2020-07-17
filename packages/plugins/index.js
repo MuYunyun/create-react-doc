@@ -1,4 +1,4 @@
 // Search Plugin
-import { Search, Generate } from "./crd-plugin-search";
+import { Search, generate } from "./crd-plugin-search";
 
-export { Search, Generate };
+export { Search, generate };

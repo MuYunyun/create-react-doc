@@ -1,4 +1,4 @@
-import { Generate } from './generate';
+import { generate } from './generate';
 import Search from './search'
 
-export { Search, Generate };
+export { Search, generate };
