@@ -24,6 +24,7 @@ module.exports = function (program, cb) {
       extensions: /\.md/,
     });
   });
+  console.log('treeData', treeData);
   // 缓存 Markdown 存储 Markdown
   // Markdown 文件命名规则 `文件夹__文件夹__Markdown名.md`
   const flatTreeData = restRuctureMarkdown(treeData);
