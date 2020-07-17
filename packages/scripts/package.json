@@ -28,7 +28,6 @@
     "css-loader": "^0.28.7",
     "detect-port": "^1.2.2",
     "diana": "^1.0.2",
-    "directory-tree-md": "^2.0.7",
     "eslint": "^4.19.1",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-loader": "^2.0.0",
@@ -75,5 +74,8 @@
   },
   "author": "muyunyun",
   "license": "MIT",
-  "gitHead": "ffc5e4cbc94a7356da558c2dbf46e2f39bb8b199"
+  "gitHead": "ffc5e4cbc94a7356da558c2dbf46e2f39bb8b199",
+  "devDependencies": {
+    "yamljs": "^0.3.0"
+  }
 }

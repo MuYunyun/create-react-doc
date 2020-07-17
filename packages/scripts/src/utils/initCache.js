@@ -1,7 +1,7 @@
-const DirectoryTree = require('directory-tree-md');
 const write = require('write');
 const path = require('path');
 const fs = require('fs');
+const DirectoryTree = require('../conf/node-directory-tree');
 const paths = require('../conf/path');
 const { ifInGitIgnore } = require('./index');
 
@@ -10,7 +10,6 @@ function restRuctureMarkdown(items, arr = []) {
     if (item.type === 'directory') {
       restRuctureMarkdown(item.children, arr);
     } else if (/\.md$/.test(item.path)) {
-      // console.log('item.path', item.path);
       arr.push(item.path);
     }
   });
@@ -25,8 +24,8 @@ module.exports = function (program, cb) {
     });
   });
   console.log('treeData', treeData);
-  // 缓存 Markdown 存储 Markdown
-  // Markdown 文件命名规则 `文件夹__文件夹__Markdown名.md`
+  // todo: generate search data
+  // cache Markdown, Markdown file name rule: `folder__folder__Markdown name.md`
   const flatTreeData = restRuctureMarkdown(treeData);
   // eslint-disable-next-line no-plusplus
   for (let i = 0; i < flatTreeData.length; i++) {
