@@ -20,6 +20,8 @@ deploy_branch: gh-pages   # which branch to deploy.(default: gh-pages)
 # use search plugin: provide ability for searching site globally in the site.
 # default value: true
 search: true
+host: 'muyunyun.cn'       # the url host to search
+
 
 # Available values: en | zh-cn
 language: en

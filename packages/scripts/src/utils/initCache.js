@@ -3,7 +3,7 @@ const path = require('path');
 const fs = require('fs');
 const DirectoryTree = require('../conf/node-directory-tree');
 const paths = require('../conf/path');
-const { ifInGitIgnore } = require('./index');
+const { ifInGitIgnore, getDocsConfig } = require('./index');
 
 function restRuctureMarkdown(items, arr = []) {
   items.forEach((item) => {
@@ -23,20 +23,21 @@ module.exports = function (program, cb) {
       extensions: /\.md/,
     });
   });
-  console.log('treeData', treeData);
-  // todo: generate search data
   // cache Markdown, Markdown file name rule: `folder__folder__Markdown name.md`
   const flatTreeData = restRuctureMarkdown(treeData);
+  // to collect search data
+  const searchData = [];
+  const docsConfig = getDocsConfig();
   // eslint-disable-next-line no-plusplus
   for (let i = 0; i < flatTreeData.length; i++) {
     const mdfile = flatTreeData[i];
-    const mdfilePathInProject = mdfile.replace(
+    const mdfilePath = mdfile.replace(
       process.cwd() + path.sep,
       ''
     );
     // generate file cache only it isn't in .gitignore
-    if (!ifInGitIgnore(mdfilePathInProject)) {
-      const underlineFileName = mdfilePathInProject.split(path.sep).join('___');
+    if (!ifInGitIgnore(mdfilePath)) {
+      const underlineFileName = mdfilePath.split(path.sep).join('___');
       let writeMarkdownPath = path.resolve(
         process.cwd(),
         paths.cacheDirPath,
@@ -46,6 +47,16 @@ module.exports = function (program, cb) {
       if (fs.existsSync(mdfile)) {
         const content = fs.readFileSync(mdfile);
         write.sync(writeMarkdownPath, content);
+      }
+
+      // generate search data source
+      if (mdfile && docsConfig.search && docsConfig.host) {
+        searchData.push({
+          title: mdfile.name,
+          // to fill
+          url: `${docsConfig.host}/${docsConfig.repo}/#${docsConfig.relative}`,
+          content: mdfile.content,
+        });
       }
     }
   }
