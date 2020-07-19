@@ -28,6 +28,7 @@ module.exports = function (program, cb) {
   // to collect search data
   const searchData = [];
   const docsConfig = getDocsConfig();
+  const useSearchPlugin = docsConfig.search && docsConfig.host;
   // eslint-disable-next-line no-plusplus
   for (let i = 0; i < flatTreeData.length; i++) {
     const mdfile = flatTreeData[i];
@@ -38,27 +39,61 @@ module.exports = function (program, cb) {
     // generate file cache only it isn't in .gitignore
     if (!ifInGitIgnore(mdfilePath)) {
       const underlineFileName = mdfilePath.split(path.sep).join('___');
-      let writeMarkdownPath = path.resolve(
+      const writeMarkdownPath = path.resolve(
         process.cwd(),
         paths.cacheDirPath,
-        'md'
+        'md',
+        underlineFileName
       );
-      writeMarkdownPath = path.resolve(writeMarkdownPath, underlineFileName);
       if (fs.existsSync(mdfile)) {
         const content = fs.readFileSync(mdfile);
         write.sync(writeMarkdownPath, content);
       }
+    }
+  }
 
-      // generate search data source
-      if (mdfile && docsConfig.search && docsConfig.host) {
-        searchData.push({
-          title: mdfile.name,
-          // to fill
-          url: `${docsConfig.host}/${docsConfig.repo}/#${docsConfig.relative}`,
-          content: mdfile.content,
-        });
+  function dfsMap(data) {
+    // eslint-disable-next-line no-plusplus
+    for (let i = 0; i < data.length; i++) {
+      if (data[i].children) {
+        dfsMap(data[i].children);
+      } else {
+        const searchMapKeys = docsConfig.search_map ? Object.keys(docsConfig.search_map) : [];
+        // eslint-disable-next-line no-plusplus
+        for (let x = 0; x < searchMapKeys.length; x++) {
+          const searchMapIndex = data[i].relative.indexOf(searchMapKeys[x]);
+          if (searchMapIndex !== -1) {
+            const effectedPath = data[i].relative.replace(
+              searchMapKeys[x],
+              docsConfig.search_map[searchMapKeys[x]]
+            );
+            searchData.push({
+              title: data[i].name,
+              url: `${docsConfig.host}/${docsConfig.repo}/#/${effectedPath}`,
+              content: data[i].content,
+            });
+            break;
+          }
+        }
       }
     }
+  }
+  if (useSearchPlugin) {
+    // README
+    searchData.push({
+      title: 'README',
+      url: `${docsConfig.host}/${docsConfig.repo}/#/README`,
+      content: treeData[0].content,
+    });
+    // map treeData to generate search data source
+    dfsMap(treeData);
+    const writeSearchPath = path.resolve(
+      process.cwd(),
+      paths.cacheDirPath,
+      'search.js'
+    );
+    console.log('searchData', searchData);
+    write.sync(writeSearchPath, searchData);
   }
   cb();
 };

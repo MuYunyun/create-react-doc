@@ -112,7 +112,7 @@ module.exports = function (cmd) {
     // 将模块名称添加到工厂功能，以便它们显示在浏览器分析器中。
     // 当接收到热更新信号时，在浏览器 console 控制台打印更多可读性高的模块名称等信息
     new webpack.NamedModulesPlugin(),
-    // to search
+    // hot reload md file
     new CreateSpareWebpackPlugin({
       // 备用文件目录，比对是否存在，不存在生成，根据 sep 目录规则生成
       path: path.join(paths.cacheDirPath, './md'),
