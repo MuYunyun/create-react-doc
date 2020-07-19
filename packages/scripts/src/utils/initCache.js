@@ -92,8 +92,12 @@ module.exports = function (program, cb) {
       paths.cacheDirPath,
       'search.js'
     );
-    console.log('searchData', searchData);
-    write.sync(writeSearchPath, searchData);
+    write.sync(
+      writeSearchPath,
+      `const SearchData = ${JSON.stringify(
+        searchData
+      )};export default SearchData`
+    );
   }
   cb();
 };
