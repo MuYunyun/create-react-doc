@@ -3,6 +3,7 @@ import React from 'react';
 import classNames from 'classnames';
 import { Link } from 'react-router-dom';
 import Switch from 'react-switch';
+import Search from '../Search';
 import styles from './index.less';
 
 const { useState } = React;
@@ -24,9 +25,12 @@ const Header = ({
         <Link to="/" replace>
           <div className={styles.logo}>
             {logo && <img alt="logo" src={logo} />}
-            <span>{(DOCSCONFIG && DOCSCONFIG.title) || 'Create React Doc'}</span>
+            <span>
+              {(DOCSCONFIG && DOCSCONFIG.title) || 'Create React Doc'}
+            </span>
           </div>
         </Link>
+        <Search />
       </div>
       <div className={styles.rightArea}>
         <Switch
