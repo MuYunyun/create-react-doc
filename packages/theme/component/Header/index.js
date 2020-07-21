@@ -22,7 +22,7 @@ const Header = ({
   return (
     <div className={classNames(styles.header, className)}>
       <div className={styles.wrapper}>
-        <Link to="/" replace>
+        <Link to="/" replace className={styles.titleLink}>
           <div className={styles.logo}>
             {logo && <img alt="logo" src={logo} />}
             <span>
@@ -30,7 +30,7 @@ const Header = ({
             </span>
           </div>
         </Link>
-        <Search />
+        <Search className={styles.search} />
       </div>
       <div className={styles.rightArea}>
         <Switch

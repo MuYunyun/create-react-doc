@@ -1,13 +1,14 @@
 import React from 'react';
-// import cx from 'classnames';
+import cx from 'classnames';
 import Icon from '../Icon';
 import styles from './index.less';
 
 const Search = ({
   placeholder = 'Search',
+  className,
 }) => {
   return (
-    <div className={styles.search}>
+    <div className={cx(styles.search, className)}>
       <Icon type="search" size="14" />
       <input placeholder={placeholder} />
     </div>
