@@ -11,6 +11,7 @@ const Search = ({
     <div className={cx(styles.search, className)}>
       <Icon type="search" size="14" />
       <input placeholder={placeholder} />
+      <div className={styles.panel}>panel</div>
     </div>
   );
 };
