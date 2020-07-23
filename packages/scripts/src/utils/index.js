@@ -53,3 +53,11 @@ exports.getDocsConfig = () => {
   }
   return yaml.safeLoad(fs.readFileSync(paths.docsConfig));
 };
+
+exports.getSearchContent = () => {
+  if (!fs.existsSync(paths.searchFilePath)) {
+    console.log('there is no find .cache/search.js in root dir!\n');
+    return null;
+  }
+  return fs.readFileSync(paths.searchFilePath);
+};

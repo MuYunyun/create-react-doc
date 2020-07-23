@@ -3,7 +3,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const webpackbar = require('webpackbar');
-const { getDocsConfig } = require('../utils');
+const { getDocsConfig, getSearchContent } = require('../utils');
 const paths = require('./path');
 const pkg = require('../../package.json');
 
@@ -14,10 +14,12 @@ const define = {
 if (paths.crdConf && paths.crdConf.footer && typeof paths.crdConf.footer === 'string') {
   define.FOOTER = JSON.stringify(paths.crdConf.footer);
 }
-
+// eslint-disable-next-line no-undef
+console.log('SEARCHCONTENT', getSearchContent().toString());
 /* custom define docs config */
 if (paths.docsConfig) {
   define.DOCSCONFIG = JSON.stringify(getDocsConfig());
+  define.SEARCHCONTENT = getSearchContent().toString();
 }
 
 module.exports = {

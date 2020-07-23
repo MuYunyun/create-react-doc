@@ -88,13 +88,13 @@ function getExcludeFoldersRegExp() {
 module.exports = {
   // markdown dir
   crdConf: getCrdConf(),
-  // docsPackage: resolveApp('./package.json'),
   docsGitIgnore: resolveApp('.gitignore'),
   docsNodeModules: resolveApp(''),
   docsConfig: resolveApp('config.yml'),
   docsReadme: resolveApp('README.md'),
   docsBuildDist: resolveApp('.crd-dist'),
   cacheDirPath: resolveApp('.cache'),
+  searchFilePath: resolveApp('.cache/search.js'),
   watchFilePath: resolveApp('.cache/watch-dir.js'),
   defaultHTMLPath: resolveApp('node_modules/crd-theme/index.html'),
   defaultTemplatePath: resolveTool('node_modules/crd-templates/default'),

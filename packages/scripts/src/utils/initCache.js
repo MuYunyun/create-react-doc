@@ -94,9 +94,9 @@ module.exports = function (program, cb) {
     );
     write.sync(
       writeSearchPath,
-      `const SearchData = ${JSON.stringify(
+      `${JSON.stringify(
         searchData
-      )};export default SearchData`
+      )}`
     );
   }
   cb();

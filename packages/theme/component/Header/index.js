@@ -8,7 +8,8 @@ import Search from '../Search';
 import styles from './index.less';
 
 const { useState } = React;
-
+// eslint-disable-next-line no-console
+console.log('abcdefg', SEARCHCONTENT);
 const Header = ({
   className,
   logo,
