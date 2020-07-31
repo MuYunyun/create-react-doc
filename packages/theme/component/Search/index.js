@@ -6,22 +6,25 @@ import styles from './index.less';
 const Search = ({
   placeholder = 'Search',
   className,
+  value,
+  onChange,
 }) => {
+  // eslint-disable-next-line no-undef
+  // console.log('abcdefg', SEARCHCONTENT);
   return (
     <div className={cx(styles.search, className)}>
       <Icon type="search" size="14" />
-      <input placeholder={placeholder} />
+      <input placeholder={placeholder} value={value} onChange={onChange} />
       <ul className={styles.panel}>
-        <li>1</li>
-        <li>2</li>
-        <li>3</li>
-        <li>4</li>
-        <li>5</li>
-        <li>6</li>
-        <li>7</li>
-        <li>8</li>
-        <li>9</li>
-        <li>10</li>
+        {/* eslint-disable-next-line no-undef */}
+        {SEARCHCONTENT.map((search) => {
+          return (
+            <li className={styles.searchItem}>
+              <span className={styles.title}>{search.title}</span>
+              <span className={styles.content}>{search.content}</span>
+            </li>
+          );
+        })}
       </ul>
     </div>
   );

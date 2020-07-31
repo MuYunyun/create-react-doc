@@ -22,8 +22,29 @@
     overflow-y: auto;
 
     li {
+      padding: 0 5px;
       list-style: none;
       border: 1px solid rgb(230, 236, 240);
     }
+  }
+
+  .searchItem {
+    display: flex;
+  }
+
+  .title {
+    display: flex;
+    width: 90px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  .content {
+    display: flex;
+    width: 245px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
   }
 }

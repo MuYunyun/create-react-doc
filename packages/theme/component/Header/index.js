@@ -8,13 +8,13 @@ import Search from '../Search';
 import styles from './index.less';
 
 const { useState } = React;
-// eslint-disable-next-line no-console
-console.log('abcdefg', SEARCHCONTENT);
+
 const Header = ({
   className,
   logo,
 }) => {
   const [checked, setChecked] = useState(false);
+  const [searchValue, setSearchValue] = useState('');
   const handleChange = (value) => {
     value
       ? document.body.classList.add(styles.darkMode)
@@ -30,7 +30,7 @@ const Header = ({
             {!isMobile && (<span>{(DOCSCONFIG && DOCSCONFIG.title) || 'Create React Doc'}</span>)}
           </div>
         </Link>
-        <Search className={styles.search} />
+        <Search className={styles.search} value={searchValue} onChange={e => setSearchValue(e.value)} />
       </div>
       <div className={styles.rightArea}>
         <Switch
