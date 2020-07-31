@@ -4,7 +4,6 @@ const Servers = require('./src/server');
 const Build = require('./src/build');
 const Deploy = require('./src/deploy');
 const paths = require('./src/conf/path');
-const { preExec } = require('./src/preExec');
 const { getDocsConfig } = require('./src/utils');
 
 module.exports = {
@@ -15,5 +14,4 @@ module.exports = {
   Deploy,
   paths,
   getDocsConfig,
-  preExec,
 };

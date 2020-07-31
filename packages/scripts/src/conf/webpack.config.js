@@ -15,11 +15,11 @@ if (paths.crdConf && paths.crdConf.footer && typeof paths.crdConf.footer === 'st
   define.FOOTER = JSON.stringify(paths.crdConf.footer);
 }
 // eslint-disable-next-line no-undef
-console.log('SEARCHCONTENT', getSearchContent().toString());
+// console.log('SEARCHCONTENT', getSearchContent().toString());
 /* custom define docs config */
 if (paths.docsConfig) {
   define.DOCSCONFIG = JSON.stringify(getDocsConfig());
-  define.SEARCHCONTENT = getSearchContent().toString();
+  define.SEARCHCONTENT = getSearchContent() && getSearchContent().toString();
 }
 
 module.exports = {

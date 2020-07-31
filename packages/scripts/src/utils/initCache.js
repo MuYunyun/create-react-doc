@@ -69,7 +69,8 @@ module.exports = function (program, cb) {
             );
             searchData.push({
               title: data[i].name,
-              url: `${docsConfig.host}/${docsConfig.repo}/#/${effectedPath}`,
+              // url: `${docsConfig.host}/${docsConfig.repo}/#/${effectedPath}`,
+              url: `${effectedPath.replace(/.md/g, '')}`,
               content: data[i].content,
             });
             break;
@@ -82,7 +83,8 @@ module.exports = function (program, cb) {
     // README
     searchData.push({
       title: 'README',
-      url: `${docsConfig.host}/${docsConfig.repo}/#/README`,
+      // url: `${docsConfig.host}/${docsConfig.repo}/#/README`,
+      url: 'README',
       content: treeData[0].content,
     });
     // map treeData to generate search data source
