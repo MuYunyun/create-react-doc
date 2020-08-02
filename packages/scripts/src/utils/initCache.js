@@ -17,8 +17,8 @@ function restRuctureMarkdown(items, arr = []) {
 }
 
 module.exports = function (program, cb) {
-  const treeData = program.markdownPaths.map((path) => {
-    return DirectoryTree(path, {
+  const treeData = program.markdownPaths.map((markdownPath) => {
+    return DirectoryTree(markdownPath, {
       mdconf: true, // 存在 Markdown 设置
       extensions: /\.md/,
     });
@@ -61,19 +61,20 @@ module.exports = function (program, cb) {
         const searchMapKeys = docsConfig.search_map ? Object.keys(docsConfig.search_map) : [];
         // eslint-disable-next-line no-plusplus
         for (let x = 0; x < searchMapKeys.length; x++) {
-          const searchMapIndex = data[i].relative.indexOf(searchMapKeys[x]);
-          if (searchMapIndex !== -1) {
-            const effectedPath = data[i].relative.replace(
-              searchMapKeys[x],
-              docsConfig.search_map[searchMapKeys[x]]
-            );
-            searchData.push({
-              title: data[i].name,
-              // url: `${docsConfig.host}/${docsConfig.repo}/#/${effectedPath}`,
-              url: `${effectedPath.replace(/.md/g, '')}`,
-              content: data[i].content,
-            });
-            break;
+          if (data[i].relative) {
+            const searchMapIndex = data[i].relative.indexOf(searchMapKeys[x]);
+            if (searchMapIndex !== -1 && typeof searchMapIndex === 'number') {
+              const effectedPath = data[i].relative.replace(
+                searchMapKeys[x],
+                docsConfig.search_map[searchMapKeys[x]]
+              );
+              searchData.push({
+                title: data[i].name,
+                url: `${effectedPath.replace(/.md/g, '')}`,
+                content: data[i].content,
+              });
+              break;
+            }
           }
         }
       }
@@ -83,7 +84,6 @@ module.exports = function (program, cb) {
     // README
     searchData.push({
       title: 'README',
-      // url: `${docsConfig.host}/${docsConfig.repo}/#/README`,
       url: 'README',
       content: treeData[0].content,
     });

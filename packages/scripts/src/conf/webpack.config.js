@@ -14,12 +14,11 @@ const define = {
 if (paths.crdConf && paths.crdConf.footer && typeof paths.crdConf.footer === 'string') {
   define.FOOTER = JSON.stringify(paths.crdConf.footer);
 }
-// eslint-disable-next-line no-undef
-// console.log('SEARCHCONTENT', getSearchContent().toString());
 /* custom define docs config */
 if (paths.docsConfig) {
+  const searchContent = getSearchContent();
   define.DOCSCONFIG = JSON.stringify(getDocsConfig());
-  define.SEARCHCONTENT = getSearchContent() && getSearchContent().toString();
+  define.SEARCHCONTENT = searchContent && searchContent.toString();
 }
 
 module.exports = {

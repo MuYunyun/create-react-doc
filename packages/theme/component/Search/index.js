@@ -14,10 +14,13 @@ const Search = ({
   const showSearchContent = value.length > 0 && searchContent.length > 0;
   useEffect(() => {
     /* eslint-disable-next-line no-undef */
-    const filterSearch = SEARCHCONTENT.filter((r) => {
-      return r.title.includes(value) || r.content.includes(value);
-    });
-    setSearchContent(filterSearch);
+    if (SEARCHCONTENT) {
+      /* eslint-disable-next-line no-undef */
+      const filterSearch = SEARCHCONTENT.filter((r) => {
+        return r.title.includes(value) || r.content.includes(value);
+      });
+      setSearchContent(filterSearch);
+    }
   }, [value]);
   return (
     <div className={cx(styles.search, className)}>

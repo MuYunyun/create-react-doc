@@ -26,10 +26,14 @@ const Header = ({
         <Link to="/" replace className={styles.titleLink}>
           <div className={styles.logo}>
             {logo && <img alt="logo" src={logo} />}
-            {!isMobile && (<span>{(DOCSCONFIG && DOCSCONFIG.title) || 'Create React Doc'}</span>)}
+            {!isMobile && (
+              <span>
+                {(DOCSCONFIG && DOCSCONFIG.title) || 'Create React Doc'}
+              </span>
+            )}
           </div>
         </Link>
-        <Search className={styles.search} />
+        {DOCSCONFIG && DOCSCONFIG.search ? <Search className={styles.search} /> : null}
       </div>
       <div className={styles.rightArea}>
         <Switch
