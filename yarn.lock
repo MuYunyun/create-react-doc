@@ -4471,13 +4471,6 @@ dir-glob@^2.2.2:
   dependencies:
     path-type "^3.0.0"
 
-directory-tree-md@^2.0.7:
-  version "2.0.7"
-  resolved "https://registry.npmjs.org/directory-tree-md/-/directory-tree-md-2.0.7.tgz#0d264c580503e7d89c7a44721e324cdcd40c679d"
-  integrity sha512-ICqdSHbayuiEVqzTHH+5tnq97AEj0O+J6CHHkf8YgFK3VzLyaGNXlB5VfsX1Vs013z2ueUDn+hU/3flGzsxh7A==
-  dependencies:
-    yamljs "^0.3.0"
-
 dns-equal@^1.0.0:
   version "1.0.0"
   resolved "https://registry.npmjs.org/dns-equal/-/dns-equal-1.0.0.tgz#b39e7f1da6eb0a75ba9c17324b34753c47e0654d"

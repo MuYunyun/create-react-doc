@@ -3,7 +3,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const webpackbar = require('webpackbar');
-const { getDocsConfig } = require('../utils');
+const { getDocsConfig, getSearchContent } = require('../utils');
 const paths = require('./path');
 const pkg = require('../../package.json');
 
@@ -14,10 +14,11 @@ const define = {
 if (paths.crdConf && paths.crdConf.footer && typeof paths.crdConf.footer === 'string') {
   define.FOOTER = JSON.stringify(paths.crdConf.footer);
 }
-
 /* custom define docs config */
 if (paths.docsConfig) {
+  const searchContent = getSearchContent();
   define.DOCSCONFIG = JSON.stringify(getDocsConfig());
+  define.SEARCHCONTENT = searchContent && searchContent.toString();
 }
 
 module.exports = {
@@ -71,11 +72,12 @@ module.exports = {
             test: /\.md$/,
             use: [
               {
+                // https://github.com/react-doc/raw-content-replace-loader/blob/master/index.js
                 loader: require.resolve('raw-content-replace-loader'),
                 options: {
-                  path: path.join(paths.cacheDirPath, './md'), // 需要替换的目录
-                  replace: paths.projectPath, // 替换成目标目录
-                  sep: /___/g, // 文件名存储，文件夹+下划线间隔+文件名
+                  path: path.join(paths.cacheDirPath, './md'), // dir need to replace
+                  replace: paths.projectPath, // the dir to replace
+                  sep: /___/g, // name saved, folder + __ + file
                 },
               },
             ],
@@ -98,6 +100,7 @@ module.exports = {
     ],
   },
   plugins: [
+    // eslint-disable-next-line new-cap
     new webpackbar({ name: pkg.name }),
     new webpack.DefinePlugin({
       VERSION: JSON.stringify(pkg.version),

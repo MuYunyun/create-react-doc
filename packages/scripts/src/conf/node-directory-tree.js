@@ -65,6 +65,8 @@ function directoryTree(path, options, onEachFile) {
         item.isEmpty = contentMatch
           ? !String.prototype.trim.call(contentStr.replace(contentMatch[0], ''))
           : true;
+        const uglifyContent = contentStr.replace(/\s/g, '');
+        item.content = uglifyContent;
         try {
           // see https://stackoverflow.com/questions/2390199/finding-the-date-time-a-file-was-first-added-to-a-git-repository/2390382#2390382
           const result = execSync(`git log --format=%aD ${path} | tail -1`);

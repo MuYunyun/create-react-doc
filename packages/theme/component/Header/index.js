@@ -3,6 +3,8 @@ import React from 'react';
 import classNames from 'classnames';
 import { Link } from 'react-router-dom';
 import Switch from 'react-switch';
+import { isMobile } from '../../utils';
+import Search from '../Search';
 import styles from './index.less';
 
 const { useState } = React;
@@ -21,12 +23,17 @@ const Header = ({
   return (
     <div className={classNames(styles.header, className)}>
       <div className={styles.wrapper}>
-        <Link to="/" replace>
+        <Link to="/" replace className={styles.titleLink}>
           <div className={styles.logo}>
             {logo && <img alt="logo" src={logo} />}
-            <span>{(DOCSCONFIG && DOCSCONFIG.title) || 'Create React Doc'}</span>
+            {!isMobile && (
+              <span>
+                {(DOCSCONFIG && DOCSCONFIG.title) || 'Create React Doc'}
+              </span>
+            )}
           </div>
         </Link>
+        {DOCSCONFIG && DOCSCONFIG.search ? <Search className={styles.search} /> : null}
       </div>
       <div className={styles.rightArea}>
         <Switch

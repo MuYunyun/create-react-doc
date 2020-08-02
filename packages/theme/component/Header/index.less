@@ -1,3 +1,5 @@
+@import '../../style/base.less';
+
 .logo {
   float: left;
   padding: 0 0 0 15px;
@@ -23,11 +25,28 @@
   position: relative;
   width: 100%;
   top: 0;
-  z-index: 9;
+  z-index: @header-zIndex;
   display: flex;
 
   .wrapper {
     flex: 1;
+    display: flex;
+    align-items: center;
+
+    .titleLink {
+      display: inline-block;
+    }
+
+    .search {
+      margin-left: 40px;
+      max-width: 200px;
+      display: flex;
+      align-items: center;
+    }
+
+    .select {
+      width: 200px;
+    }
   }
 
   .rightArea {

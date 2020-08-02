@@ -1,8 +1,8 @@
-const DirectoryTree = require('directory-tree-md');
 const PATH = require('path');
 const UPATH = require('upath');
 const write = require('write');
 const fs = require('fs');
+const DirectoryTree = require('./node-directory-tree');
 const { ifInGitIgnore } = require('../utils/index');
 
 function getAllWatchPath(arr, pathArr = []) {
