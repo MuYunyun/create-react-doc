@@ -21,6 +21,9 @@ Create React Doc 是一个使用 React 的 markdown 文档站点生成工具。�
 ## 特性
 
 * 零配置书写 markdown 文档站点。
+  * 支持暗黑主题。
+  * 支持全局搜索菜单名字与文件内容。
+  * 适配移动端。
 * markdown 文档支持懒加载以及热加载。
 * 基于文件目录自动生成多层级菜单。
 * 支持一键发布到 [GitHub Pages](https://pages.github.com/).
@@ -28,8 +31,8 @@ Create React Doc 是一个使用 React 的 markdown 文档站点生成工具。�
 ## 使用 create-react-doc 搭建的文档站点
 
 * [blog](http://muyunyun.cn/blog)
-
-![](http://with.muyunyun.cn/ec330b8ac2175c828be41f446f9f9619.jpg)
+  * ![](http://with.muyunyun.cn/ec330b8ac2175c828be41f446f9f9619.jpg)
+  * ![](http://with.muyunyun.cn/2e7440e4256debda2d73a4e6392c7146.jpg-300)
 
 ## 快速上手
 
@@ -112,6 +115,12 @@ repo: blog
 branch: master            # the default value of branch is master
 deploy_branch: gh-pages   # which branch to deploy.(default: gh-pages)
 # publish:                # if you want upload to gitlab or other git platform, you can set full git url in it
+
+# use search plugin: provide ability for searching site globally in the site.
+# default value: true
+search: true
+# host: ''                # the url host to search
+# search_map: {}          # search_map is connected to menu props
 
 # Available values: en| zh-cn
 language: en

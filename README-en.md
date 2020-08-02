@@ -21,6 +21,9 @@ Create React Doc is a markdown doc site generator for React. You can write markd
 ## Features
 
 * Write markdown docs with no build configuration.
+  * Dark Mode.
+  * Support search global.
+  * Mobile Friendly.
 * Lazy load and Hot load for markdown data.
 * Generate menu autoly based file directory.
 * Support deploy to [GitHub Pages](https://pages.github.com/).
@@ -103,7 +106,7 @@ There is some configuration provided for you to adjust doc sites.
 # Site title
 title: Time Flying
 
-# Point Witch files to show as Menu
+# Point witch files to show as Menu
 ## you can also set detailed dir, such as BasicSkill/css
 menu: React,BasicSkill,Algorithm
 ## set init open menu keys
@@ -116,6 +119,12 @@ repo: blog
 branch: master            # the default value of branch is master
 deploy_branch: gh-pages   # which branch to deploy.(default: gh-pages)
 # publish:                # if you want upload to gitlab or other git platform, you can set full git url in it
+
+# use search plugin: provide ability for searching site globally in the site.
+# default value: true
+search: true
+# host: ''                # the url host to search
+# search_map: {}          # search_map is connected to menu props
 
 # Available values: en| zh-cn
 language: en
