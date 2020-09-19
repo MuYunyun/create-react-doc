@@ -31,7 +31,6 @@
   ],
   "author": "muyunyun",
   "license": "MIT",
-  "dependencies": {},
   "devDependencies": {
     "lerna": "^3.22.1",
     "release-it": "^10.1.0",
@@ -98,7 +97,6 @@
     "webpack-dev-server": "^3.8.1",
     "webpack-hot-dev-clients": "^1.0.4",
     "webpackbar": "^4.0.0",
-    "write": "^1.0.3",
-    "crd-scripts": "^0.1.15"
+    "write": "^1.0.3"
   }
 }
