@@ -1,7 +1,8 @@
-const fs = require('fs');
-const { getCookiePath } = require('./utils');
+const { removeConfig } = require('./utils');
 
-module.exports = () => {
-  const cookiePath = getCookiePath();
-  fs.rmdirSync(cookiePath);
+const logOut = () => {
+  removeConfig('cookies');
 };
+
+// module.exports = logOut;
+logOut();
