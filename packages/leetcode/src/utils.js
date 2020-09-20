@@ -1,5 +1,6 @@
 const { promisify } = require('util');
 const homedir = require('os').homedir();
+const fs = require('fs');
 const path = require('path');
 let request = require('request');
 
@@ -27,12 +28,41 @@ const unicodeToChar = text =>
     String.fromCharCode(parseInt(match.replace(/\\u/g, ''), 16))
   );
 
-const getCookiePath = () => path.join(homedir, '.crd-leetcode.json');
+const configPath = path.join(homedir, '.crd-leetcode.json');
+const getConfig = () => {
+  try {
+    const config = JSON.parse(fs.readFileSync(configPath));
+    return config;
+  } catch (error) {
+    return {
+      country: undefined,
+      cookies: undefined,
+    };
+  }
+};
+const stringify = data => JSON.stringify(data, null, 2);
+
+const setConfig = (payload = {}) => {
+  const config = {
+    ...getConfig(),
+    ...payload,
+  };
+  fs.writeFileSync(configPath, stringify(config));
+};
+
+const removeConfig = (key) => {
+  const config = getConfig();
+  config[key] = undefined;
+  fs.writeFileSync(configPath, stringify(config));
+};
 
 module.exports = {
   parseCookie,
   request,
   getHeaders,
   unicodeToChar,
-  getCookiePath,
+  getConfig,
+  setConfig,
+  removeConfig,
+  stringify,
 };

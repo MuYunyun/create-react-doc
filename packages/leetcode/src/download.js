@@ -1,5 +1,6 @@
 const fs = require('fs');
 const ora = require('ora');
+const { stringify } = require('./utils');
 const { getAllACQuestions, getAcCode } = require('./leetcode');
 
 const difference = (problemsA = [], problemsB = []) => {
@@ -32,13 +33,13 @@ const download = async (command) => {
       current.code = code;
       current.lang = lang;
     } catch (error) {
-      console.error(error);
+      console.error(error.message);
     }
     spinner.text = `${questions.length - xs.length}/${questions.length}: [${
       current.title
     }] has downloaded.`;
     problems.push(current);
-    fs.writeFileSync(problemsPath, JSON.stringify(problems));
+    fs.writeFileSync(problemsPath, stringify(problems));
     await aux(xs);
   };
   await aux([...questions]);
