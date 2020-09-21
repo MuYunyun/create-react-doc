@@ -3,112 +3,143 @@
     "title": "Two Sum",
     "titleSlug": "two-sum",
     "status": "ac",
-    "content": "<p>Given an array of integers <code>nums</code>&nbsp;and an integer <code>target</code>, return <em>indices of the two numbers such that they add up to <code>target</code></em>.</p>\n\n<p>You may assume that each input would have <strong><em>exactly</em> one solution</strong>, and you may not use the <em>same</em> element twice.</p>\n\n<p>You can return the answer in any order.</p>\n\n<p>&nbsp;</p>\n<p><strong>Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [2,7,11,15], target = 9\n<strong>Output:</strong> [0,1]\n<strong>Output:</strong> Because nums[0] + nums[1] == 9, we return [0, 1].\n</pre>\n\n<p><strong>Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [3,2,4], target = 6\n<strong>Output:</strong> [1,2]\n</pre>\n\n<p><strong>Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [3,3], target = 6\n<strong>Output:</strong> [0,1]\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>2 &lt;= nums.length &lt;= 10<sup>5</sup></code></li>\n\t<li><code>-10<sup>9</sup> &lt;= nums[i] &lt;= 10<sup>9</sup></code></li>\n\t<li><code>-10<sup>9</sup> &lt;= target &lt;= 10<sup>9</sup></code></li>\n\t<li><strong>Only one valid answer exists.</strong></li>\n</ul>\n",
+    "difficulty": "Easy",
+    "questionId": "1",
+    "code": "/**\n * @param {number[]} nums\n * @param {number} target\n * @return {number[]}\n */\nvar twoSum = function(nums, target) {\n  var map = new Map()\n\n  for (let i = 0; i < nums.length; i++) {\n    const targetValue = target - nums[i]\n    const getTargetValue = map.get(targetValue)\n    if (typeof(getTargetValue) === 'number') {\n      return [i, getTargetValue]\n    }\n    map.set(nums[i], i)\n  }\n}",
     "lang": "javascript"
   },
   {
     "title": "Add Two Numbers",
     "titleSlug": "add-two-numbers",
     "status": "ac",
-    "content": "<p>You are given two <b>non-empty</b> linked lists representing two non-negative integers. The digits are stored in <b>reverse order</b> and each of their nodes contain a single digit. Add the two numbers and return it as a linked list.</p>\r\n\r\n<p>You may assume the two numbers do not contain any leading zero, except the number 0 itself.</p>\r\n\r\n<p><b>Example:</b></p>\r\n\r\n<pre>\r\n<b>Input:</b> (2 -&gt; 4 -&gt; 3) + (5 -&gt; 6 -&gt; 4)\r\n<b>Output:</b> 7 -&gt; 0 -&gt; 8\r\n<b>Explanation:</b> 342 + 465 = 807.\r\n</pre>\r\n",
+    "difficulty": "Medium",
+    "questionId": "2",
+    "code": "/**\n * Definition for singly-linked list.\n * function ListNode(val) {\n *     this.val = val;\n *     this.next = null;\n * }\n */\n/**\n * @param {ListNode} l1\n * @param {ListNode} l2\n * @return {ListNode}\n */\nvar addTwoNumbers = function(l1, l2) {\n  let flag = 0\n  let head = null,\n      temp = null\n  while (l1 || l2) {\n    let sum = flag\n    if (l1) {\n      sum += l1.val\n      l1 = l1.next\n    }\n\n    if (l2) {\n      sum += l2.val\n      l2 = l2.next\n    }\n\n    const obj = new ListNode(sum % 10)\n    if (head === null) {\n      head = obj\n      temp = obj\n    } else {\n      temp.next = obj\n      temp = obj\n    }\n\n    // 处理进位\n    flag = 0\n    if (sum >= 10) {\n      flag = 1\n    }\n  }\n\n  if (flag === 1) {\n    const result = new ListNode(1)\n    temp.next = result\n    temp = result\n  }\n  return head\n}",
     "lang": "javascript"
   },
   {
     "title": "Longest Substring Without Repeating Characters",
     "titleSlug": "longest-substring-without-repeating-characters",
     "status": "ac",
-    "content": "<p>Given a string <code>s</code>, find the length of the <b>longest substring</b> without repeating characters.</p>\n\n<p>&nbsp;</p>\n<p><strong>Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;abcabcbb&quot;\n<strong>Output:</strong> 3\n<strong>Explanation:</strong> The answer is &quot;abc&quot;, with the length of 3.\n</pre>\n\n<p><strong>Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;bbbbb&quot;\n<strong>Output:</strong> 1\n<strong>Explanation:</strong> The answer is &quot;b&quot;, with the length of 1.\n</pre>\n\n<p><strong>Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;pwwkew&quot;\n<strong>Output:</strong> 3\n<strong>Explanation:</strong> The answer is &quot;wke&quot;, with the length of 3.\nNotice that the answer must be a substring, &quot;pwke&quot; is a subsequence and not a substring.\n</pre>\n\n<p><strong>Example 4:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;&quot;\n<strong>Output:</strong> 0\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>0 &lt;= s.length &lt;= 5 * 10<sup>4</sup></code></li>\n\t<li><code>s</code> consists of English letters, digits, symbols and spaces.</li>\n</ul>\n",
+    "difficulty": "Medium",
+    "questionId": "3",
+    "code": "/**\n * @param {string} s\n * @return {number}\n */\nvar lengthOfLongestSubstring = function(s) {\n  let left = 0, right = 0 // [left, right] 区域\n  let result = 0 // 假定结果的初始值为 0\n  const cacheObj = {}\n\n  while (left < s.length) {\n    if (right < s.length && !cacheObj[s[right]]) {\n      cacheObj[s[right]] = 1\n      result = Math.max(result, right - left + 1)\n      right++\n    } else {\n      cacheObj[s[left]] = null\n      left++\n    }\n  }\n  if (result === 0) {\n    return 0\n  }\n  return result\n}",
     "lang": "javascript"
   },
   {
     "title": "Median of Two Sorted Arrays",
     "titleSlug": "median-of-two-sorted-arrays",
     "status": "ac",
-    "content": "<p>Given two sorted arrays <code>nums1</code> and <code>nums2</code> of size <code>m</code> and <code>n</code> respectively, return <strong>the median</strong> of the two sorted arrays.</p>\n\n<p><strong>Follow up:</strong> The overall run time complexity should be <code>O(log (m+n))</code>.</p>\n\n<p>&nbsp;</p>\n<p><strong>Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums1 = [1,3], nums2 = [2]\n<strong>Output:</strong> 2.00000\n<strong>Explanation:</strong> merged array = [1,2,3] and median is 2.\n</pre>\n\n<p><strong>Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums1 = [1,2], nums2 = [3,4]\n<strong>Output:</strong> 2.50000\n<strong>Explanation:</strong> merged array = [1,2,3,4] and median is (2 + 3) / 2 = 2.5.\n</pre>\n\n<p><strong>Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums1 = [0,0], nums2 = [0,0]\n<strong>Output:</strong> 0.00000\n</pre>\n\n<p><strong>Example 4:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums1 = [], nums2 = [1]\n<strong>Output:</strong> 1.00000\n</pre>\n\n<p><strong>Example 5:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums1 = [2], nums2 = []\n<strong>Output:</strong> 2.00000\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>nums1.length == m</code></li>\n\t<li><code>nums2.length == n</code></li>\n\t<li><code>0 &lt;= m &lt;= 1000</code></li>\n\t<li><code>0 &lt;= n &lt;= 1000</code></li>\n\t<li><code>1 &lt;= m + n &lt;= 2000</code></li>\n\t<li><code>-10<sup>6</sup> &lt;= nums1[i], nums2[i] &lt;= 10<sup>6</sup></code></li>\n</ul>\n",
+    "difficulty": "Hard",
+    "questionId": "4",
+    "code": "/**\n * @param {number[]} nums1\n * @param {number[]} nums2\n * @return {number}\n */\nvar findMedianSortedArrays = function(nums1, nums2) {\n    let arr = nums1.concat(nums2).sort((r1, r2) => r1 - r2)\n    const length = arr.length\n    if (length % 2 === 0) {\n        return (arr[length / 2 - 1] + arr[length / 2]) / 2\n    } else {\n        return arr[(length + 1) / 2 - 1]\n    }\n};",
     "lang": "javascript"
   },
   {
     "title": "Reverse Integer",
     "titleSlug": "reverse-integer",
     "status": "ac",
-    "content": "<p>Given a 32-bit signed integer, reverse digits of an integer.</p>\r\n\r\n<p><strong>Example 1:</strong></p>\r\n\r\n<pre>\r\n<strong>Input:</strong> 123\r\n<strong>Output:</strong> 321\r\n</pre>\r\n\r\n<p><strong>Example 2:</strong></p>\r\n\r\n<pre>\r\n<strong>Input:</strong> -123\r\n<strong>Output:</strong> -321\r\n</pre>\r\n\r\n<p><strong>Example 3:</strong></p>\r\n\r\n<pre>\r\n<strong>Input:</strong> 120\r\n<strong>Output:</strong> 21\r\n</pre>\r\n\r\n<p><strong>Note:</strong><br />\r\nAssume we are dealing with an environment which could only store integers within the 32-bit signed integer range: [&minus;2<sup>31</sup>,&nbsp; 2<sup>31&nbsp;</sup>&minus; 1]. For the purpose of this problem, assume that your function returns 0 when the reversed integer overflows.</p>\r\n",
+    "difficulty": "Easy",
+    "questionId": "7",
+    "code": "/**\n * @param {number} x\n * @return {number}\n */\nvar reverse = function(x) {\n    if (x >= 0) {\n        var result = Number((x).toString().split('').reverse().join(''))\n        if (result > 2147483647 || result < -2147483647) {\n            return 0\n        } else {\n            return result\n        }\n    } else {\n        var result = Number('-'+(-x).toString().split('').reverse().join(''))\n        if (result > 2147483647 || result < -2147483647) {\n            return 0\n        } else {\n            return result\n        }\n    }\n};",
     "lang": "javascript"
   },
   {
     "title": "Palindrome Number",
     "titleSlug": "palindrome-number",
     "status": "ac",
-    "content": "<p>Determine whether an integer is a palindrome. An integer&nbsp;is&nbsp;a&nbsp;palindrome when it&nbsp;reads the same backward as forward.</p>\r\n\r\n<p><strong>Example 1:</strong></p>\r\n\r\n<pre>\r\n<strong>Input:</strong> 121\r\n<strong>Output:</strong> true\r\n</pre>\r\n\r\n<p><strong>Example 2:</strong></p>\r\n\r\n<pre>\r\n<strong>Input:</strong> -121\r\n<strong>Output:</strong> false\r\n<strong>Explanation:</strong> From left to right, it reads -121. From right to left, it becomes 121-. Therefore it is not a palindrome.\r\n</pre>\r\n\r\n<p><strong>Example 3:</strong></p>\r\n\r\n<pre>\r\n<strong>Input:</strong> 10\r\n<strong>Output:</strong> false\r\n<strong>Explanation:</strong> Reads 01 from right to left. Therefore it is not a palindrome.\r\n</pre>\r\n\r\n<p><strong>Follow up:</strong></p>\r\n\r\n<p>Coud you solve&nbsp;it without converting the integer to a string?</p>\r\n",
+    "difficulty": "Easy",
+    "questionId": "9",
+    "code": "/**\n * @param {number} x\n * @return {boolean}\n */\nvar isPalindrome = function (x) {\n  const convert = x.toString().split('').reverse().join('')\n  if (x === Number(convert)) {\n    return true\n  } else {\n    return false\n  }\n};",
     "lang": "javascript"
   },
   {
     "title": "Container With Most Water",
     "titleSlug": "container-with-most-water",
     "status": "ac",
-    "content": "<p>Given <i>n</i> non-negative integers <i>a<sub>1</sub></i>, <i>a<sub>2</sub></i>, ..., <i>a<sub>n&nbsp;</sub></i>, where each represents a point at coordinate (<i>i</i>, <i>a<sub>i</sub></i>). <i>n</i> vertical lines are drawn such that the two endpoints of line <i>i</i> is at (<i>i</i>, <i>a<sub>i</sub></i>) and (<i>i</i>, 0). Find two lines, which together with x-axis forms a container, such that the container contains the most water.</p>\r\n\r\n<p><strong>Note:&nbsp;</strong>You may not slant the container and <i>n</i> is at least 2.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><img alt=\"\" src=\"https://s3-lc-upload.s3.amazonaws.com/uploads/2018/07/17/question_11.jpg\" style=\"width: 600px; height: 287px;\" /></p>\r\n\r\n<p><small>The above vertical lines are represented by array [1,8,6,2,5,4,8,3,7]. In this case, the max area of water (blue section) the container can contain&nbsp;is 49. </small></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><strong>Example:</strong></p>\r\n\r\n<pre>\r\n<strong>Input:</strong> [1,8,6,2,5,4,8,3,7]\r\n<strong>Output:</strong> 49</pre>",
+    "difficulty": "Medium",
+    "questionId": "11",
+    "code": "/**\n * @param {number[]} height\n * @return {number}\n */\nvar maxArea = function (height) {\n  let head = 0, tail = height.length - 1, maxArea = 0\n  while (head < tail) {\n    result = Math.min(height[head], height[tail]) * (tail - head)\n    if (result > maxArea) {\n      maxArea = result\n    }\n    if (height[head] <= height[tail]) {\n      head++\n    } else {\n      tail--\n    }\n  }\n  return maxArea\n};",
     "lang": "javascript"
   },
   {
     "title": "Roman to Integer",
     "titleSlug": "roman-to-integer",
     "status": "ac",
-    "content": "<p>Roman numerals are represented by seven different symbols:&nbsp;<code>I</code>, <code>V</code>, <code>X</code>, <code>L</code>, <code>C</code>, <code>D</code> and <code>M</code>.</p>\r\n\r\n<pre>\r\n<strong>Symbol</strong>       <strong>Value</strong>\r\nI             1\r\nV             5\r\nX             10\r\nL             50\r\nC             100\r\nD             500\r\nM             1000</pre>\r\n\r\n<p>For example,&nbsp;two is written as <code>II</code>&nbsp;in Roman numeral, just two one&#39;s added together. Twelve is written as, <code>XII</code>, which is simply <code>X</code> + <code>II</code>. The number twenty seven is written as <code>XXVII</code>, which is <code>XX</code> + <code>V</code> + <code>II</code>.</p>\r\n\r\n<p>Roman numerals are usually written largest to smallest from left to right. However, the numeral for four is not <code>IIII</code>. Instead, the number four is written as <code>IV</code>. Because the one is before the five we subtract it making four. The same principle applies to the number nine, which is written as <code>IX</code>. There are six instances where subtraction is used:</p>\r\n\r\n<ul>\r\n\t<li><code>I</code> can be placed before <code>V</code> (5) and <code>X</code> (10) to make 4 and 9.&nbsp;</li>\r\n\t<li><code>X</code> can be placed before <code>L</code> (50) and <code>C</code> (100) to make 40 and 90.&nbsp;</li>\r\n\t<li><code>C</code> can be placed before <code>D</code> (500) and <code>M</code> (1000) to make 400 and 900.</li>\r\n</ul>\r\n\r\n<p>Given a roman numeral, convert it to an integer. Input is guaranteed to be within the range from 1 to 3999.</p>\r\n\r\n<p><strong>Example 1:</strong></p>\r\n\r\n<pre>\r\n<strong>Input:</strong>&nbsp;&quot;III&quot;\r\n<strong>Output:</strong> 3</pre>\r\n\r\n<p><strong>Example 2:</strong></p>\r\n\r\n<pre>\r\n<strong>Input:</strong>&nbsp;&quot;IV&quot;\r\n<strong>Output:</strong> 4</pre>\r\n\r\n<p><strong>Example 3:</strong></p>\r\n\r\n<pre>\r\n<strong>Input:</strong>&nbsp;&quot;IX&quot;\r\n<strong>Output:</strong> 9</pre>\r\n\r\n<p><strong>Example 4:</strong></p>\r\n\r\n<pre>\r\n<strong>Input:</strong>&nbsp;&quot;LVIII&quot;\r\n<strong>Output:</strong> 58\r\n<strong>Explanation:</strong> L = 50, V= 5, III = 3.\r\n</pre>\r\n\r\n<p><strong>Example 5:</strong></p>\r\n\r\n<pre>\r\n<strong>Input:</strong>&nbsp;&quot;MCMXCIV&quot;\r\n<strong>Output:</strong> 1994\r\n<strong>Explanation:</strong> M = 1000, CM = 900, XC = 90 and IV = 4.</pre>\r\n",
+    "difficulty": "Easy",
+    "questionId": "13",
+    "code": "/**\n * @param {string} s\n * @return {number}\n */\nvar romanToInt = function (s) {\n  const RomanArr = ['M', 'CM', 'D', 'CD', 'C', 'XC', 'L', 'XL', 'X', 'IX', 'V', 'IV', 'I']\n  const intArr = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1]\n  const length = s.length\n  let pick, result = 0\n  for (let i = 0; i < length; i++) {\n    pick = s.slice(i, i + 1)\n    if (pick === 'C' || pick === 'X' || pick === 'I') {\n      pick = s.slice(i, i + 2)\n      if (pick === 'CM' || pick === 'CD' || pick === 'XC' || pick === 'XL' || pick === 'IX' || pick === 'IV') {\n        i++\n      } else {\n        pick = s.slice(i, i + 1)\n      }\n    }\n    result += intArr[RomanArr.indexOf(pick)]\n  }\n  return result\n};",
     "lang": "javascript"
   },
   {
     "title": "Longest Common Prefix",
     "titleSlug": "longest-common-prefix",
     "status": "ac",
-    "content": "<p>Write a function to find the longest common prefix string amongst an array of strings.</p>\r\n\r\n<p>If there is no common prefix, return an empty string <code>&quot;&quot;</code>.</p>\r\n\r\n<p><strong>Example 1:</strong></p>\r\n\r\n<pre>\r\n<strong>Input: </strong>[&quot;flower&quot;,&quot;flow&quot;,&quot;flight&quot;]\r\n<strong>Output:</strong> &quot;fl&quot;\r\n</pre>\r\n\r\n<p><strong>Example 2:</strong></p>\r\n\r\n<pre>\r\n<strong>Input: </strong>[&quot;dog&quot;,&quot;racecar&quot;,&quot;car&quot;]\r\n<strong>Output:</strong> &quot;&quot;\r\n<strong>Explanation:</strong> There is no common prefix among the input strings.\r\n</pre>\r\n\r\n<p><strong>Note:</strong></p>\r\n\r\n<p>All given inputs are in lowercase letters <code>a-z</code>.</p>\r\n",
+    "difficulty": "Easy",
+    "questionId": "14",
+    "code": "/**\n * @param {string[]} strs\n * @return {string}\n */\nvar longestCommonPrefix = function (strs) {\n  if (strs.length === 0) return ''\n\n  let str = strs[0]\n\n  for (let i = 0; i < strs.length; i++) {\n    while (strs[i].indexOf(str) !== 0) {\n      str = str.slice(0, str.length - 1)\n      if (str.length === 0) { return '' }\n    }\n  }\n\n  return str\n};",
     "lang": "javascript"
   },
   {
     "title": "3Sum",
     "titleSlug": "3sum",
     "status": "ac",
-    "content": "<p>Given an array <code>nums</code> of <em>n</em> integers, are there elements <em>a</em>, <em>b</em>, <em>c</em> in <code>nums</code> such that <em>a</em> + <em>b</em> + <em>c</em> = 0? Find all unique triplets in the array which gives the sum of zero.</p>\n\n<p>Notice that the solution set must not contain duplicate triplets.</p>\n\n<p>&nbsp;</p>\n<p><strong>Example 1:</strong></p>\n<pre><strong>Input:</strong> nums = [-1,0,1,2,-1,-4]\n<strong>Output:</strong> [[-1,-1,2],[-1,0,1]]\n</pre><p><strong>Example 2:</strong></p>\n<pre><strong>Input:</strong> nums = []\n<strong>Output:</strong> []\n</pre><p><strong>Example 3:</strong></p>\n<pre><strong>Input:</strong> nums = [0]\n<strong>Output:</strong> []\n</pre>\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>0 &lt;= nums.length &lt;= 3000</code></li>\n\t<li><code>-10<sup>5</sup> &lt;= nums[i] &lt;= 10<sup>5</sup></code></li>\n</ul>\n",
+    "difficulty": "Medium",
+    "questionId": "15",
+    "code": "/**\n * @param {number[]} nums\n * @return {number[][]}\n */\nvar threeSum = function (nums) {\n  const sortNums = nums.sort((r1, r2) => r1 - r2)\n  let targetValue\n  const result = []\n\n  for (let i = 0; i < sortNums.length - 2; i++) {\n    // 针对下标 i 对应的值进行去重\n    if (i === 0 || nums[i] > nums[i - 1]) {\n      targetValue = -sortNums[i]\n      let l = i + 1\n      let r = sortNums.length - 1\n\n      while (l < r) {\n        let tmpArr = []\n        if (sortNums[l] + sortNums[r] === targetValue) {\n          tmpArr.push(-targetValue)\n          tmpArr.push(sortNums[l])\n          tmpArr.push(sortNums[r])\n          result.push(tmpArr)\n          l++\n          r--\n          // 针对下标 l 对应的值进行去重, r 同理\n          while (l < r && sortNums[l] === sortNums[l - 1]) {\n            l++\n          }\n          while (l < r && sortNums[r] === sortNums[r + 1]) {\n            r--\n          }\n        } else if (sortNums[l] + sortNums[r] > targetValue) {\n          r--\n        } else if (sortNums[l] + sortNums[r] < targetValue) {\n          l++\n        }\n      }\n    }\n  }\n\n  return result\n}",
     "lang": "javascript"
   },
   {
     "title": "3Sum Closest",
     "titleSlug": "3sum-closest",
     "status": "ac",
-    "content": "<p>Given an array <code>nums</code> of <em>n</em> integers and an integer <code>target</code>, find three integers in <code>nums</code>&nbsp;such that the sum is closest to&nbsp;<code>target</code>. Return the sum of the three integers. You may assume that each input would have exactly one solution.</p>\n\n<p>&nbsp;</p>\n<p><strong>Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [-1,2,1,-4], target = 1\n<strong>Output:</strong> 2\n<strong>Explanation:</strong> The sum that is closest to the target is 2. (-1 + 2 + 1 = 2).\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>3 &lt;= nums.length &lt;= 10^3</code></li>\n\t<li><code>-10^3&nbsp;&lt;= nums[i]&nbsp;&lt;= 10^3</code></li>\n\t<li><code>-10^4&nbsp;&lt;= target&nbsp;&lt;= 10^4</code></li>\n</ul>\n",
+    "difficulty": "Medium",
+    "questionId": "16",
+    "code": "/**\n * @param {number[]} nums\n * @param {number} target\n * @return {number}\n */\nvar threeSumClosest = function (nums, target) {\n  let sum = 0\n  let close = nums[0] + nums[1] + nums[2]\n  let sortedNums = nums.sort((a, b) => a - b)\n\n  for (let i = 0; i < sortedNums.length; i++) {\n    let l = i + 1, r = sortedNums.length - 1\n    while (l < r) {\n      sum = nums[i] + nums[l] + nums[r] // 分别对应左、中、右\n      if (Math.abs(sum - target) < Math.abs(close - target)) {\n        close = sum\n      }\n\n      if (sum < target) {\n        l++\n      } else if (sum > target) {\n        r--\n      } else {\n        return sum\n      }\n\n    }\n\n  }\n\n  return close\n}",
     "lang": "javascript"
   },
   {
     "title": "Letter Combinations of a Phone Number",
     "titleSlug": "letter-combinations-of-a-phone-number",
     "status": "ac",
-    "content": "<p>Given a string containing digits from <code>2-9</code> inclusive, return all possible letter combinations that the number could represent.</p>\n\n<p>A mapping of digit to letters (just like on the telephone buttons) is given below. Note that 1 does not map to any letters.</p>\n\n<p><img src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Telephone-keypad2.svg/200px-Telephone-keypad2.svg.png\" /></p>\n\n<p><strong>Example:</strong></p>\n\n<pre>\n<strong>Input: </strong>&quot;23&quot;\n<strong>Output:</strong> [&quot;ad&quot;, &quot;ae&quot;, &quot;af&quot;, &quot;bd&quot;, &quot;be&quot;, &quot;bf&quot;, &quot;cd&quot;, &quot;ce&quot;, &quot;cf&quot;].\n</pre>\n\n<p><strong>Note:</strong></p>\n\n<p>Although the above answer is in lexicographical order, your answer could be in any order you want.</p>\n",
+    "difficulty": "Medium",
+    "questionId": "17",
+    "code": "/**\n * @param {string} digits\n * @return {string[]}\n */\nvar letterCombinations = function (digits) { // '23'\n  const keyString = [\n    '',\n    '',\n    'abc',\n    'def',\n    'ghi',\n    'jkl',\n    'mno',\n    'pqrs',\n    'tuv',\n    'wxyz',\n  ]\n\n  if (digits === '' || digits.length === 0) {\n    return []\n  }\n\n  const result = ['']\n\n  for (let x of digits) {\n    const size = result.length\n    for (let i = 0; i < size; i++) {\n      const old = result.shift()\n\n      for (let y of keyString[x]) {\n        result.push(old + y)\n      }\n    }\n  }\n  return result\n};",
     "lang": "javascript"
   },
   {
     "title": "4Sum",
     "titleSlug": "4sum",
     "status": "ac",
-    "content": "<p>Given an array <code>nums</code> of <em>n</em> integers and an integer <code>target</code>, are there elements <em>a</em>, <em>b</em>, <em>c</em>, and <em>d</em> in <code>nums</code> such that <em>a</em> + <em>b</em> + <em>c</em> + <em>d</em> = <code>target</code>? Find all unique quadruplets in the array which gives the sum of <code>target</code>.</p>\r\n\r\n<p><strong>Note:</strong></p>\r\n\r\n<p>The solution set must not contain duplicate quadruplets.</p>\r\n\r\n<p><strong>Example:</strong></p>\r\n\r\n<pre>\r\nGiven array nums = [1, 0, -1, 0, -2, 2], and target = 0.\r\n\r\nA solution set is:\r\n[\r\n  [-1,  0, 0, 1],\r\n  [-2, -1, 1, 2],\r\n  [-2,  0, 0, 2]\r\n]\r\n</pre>\r\n",
+    "difficulty": "Medium",
+    "questionId": "18",
+    "code": "var fourSum = function(nums, target) {\n  const result = []\n  if (nums.length < 4) return result\n  const sortSum = nums.sort((n1, n2) => n1 - n2)\n  const length = sortSum.length\n  debugger\n  for (let i = 0; i < length - 3; i++) {\n    if (i === 0 || nums[i] > nums[i - 1]) {\n      let l = i + 1\n      let m = l + 1\n\n      while (l < length - 2) {\n        let r = length - 1\n        if (l === i + 1 || nums[l] > nums[l - 1]) {\n          while (m < length - 1 && m < r) {\n            let tmpArr = []\n            const sum = nums[i] + nums[l] + nums[m] + nums[r]\n            if (sum === target) {\n              tmpArr.push(nums[i])\n              tmpArr.push(nums[l])\n              tmpArr.push(nums[m])\n              tmpArr.push(nums[r])\n              result.push(tmpArr)\n              m++\n              r--\n              while (nums[m] === nums[m - 1]) {\n                m++\n              }\n              while (nums[r] === nums[r + 1]) {\n                r--\n              }\n            } else if (sum < target) {\n              m++\n            } else if (sum > target) {\n              r--\n            }\n          }\n        }\n        l++\n        m = l + 1\n      }\n    }\n  }\n  return result\n}",
     "lang": "javascript"
   },
   {
     "title": "Remove Nth Node From End of List",
     "titleSlug": "remove-nth-node-from-end-of-list",
     "status": "ac",
-    "content": "<p>Given a linked list, remove the <em>n</em>-th node from the end of list and return its head.</p>\r\n\r\n<p><strong>Example:</strong></p>\r\n\r\n<pre>\r\nGiven linked list: <strong>1-&gt;2-&gt;3-&gt;4-&gt;5</strong>, and <strong><em>n</em> = 2</strong>.\r\n\r\nAfter removing the second node from the end, the linked list becomes <strong>1-&gt;2-&gt;3-&gt;5</strong>.\r\n</pre>\r\n\r\n<p><strong>Note:</strong></p>\r\n\r\n<p>Given <em>n</em> will always be valid.</p>\r\n\r\n<p><strong>Follow up:</strong></p>\r\n\r\n<p>Could you do this in one pass?</p>\r\n",
+    "difficulty": "Medium",
+    "questionId": "19",
+    "code": "/**\n * Definition for singly-linked list.\n * function ListNode(val) {\n *     this.val = val;\n *     this.next = null;\n * }\n */\n/**\n * @param {ListNode} head\n * @param {number} n\n * @return {ListNode}\n */\nvar removeNthFromEnd = function(head, n) {\n  const dummy = new ListNode(0)\n  dummy.next = head\n  let l = dummy\n  let r = dummy\n  let offset = n + 1\n\n  while (offset--) {\n    r = r.next\n    if (offset > 1 && r === null) {\n      return dummy.next\n    }\n  }\n\n  while (r) {\n    r = r.next\n    l = l.next\n  }\n\n  l.next = l.next.next\n\n  return dummy.next\n}",
     "lang": "javascript"
   },
   {
     "title": "Valid Parentheses",
     "titleSlug": "valid-parentheses",
     "status": "ac",
-    "content": "<p>Given a string <code>s</code> containing just the characters <code>&#39;(&#39;</code>, <code>&#39;)&#39;</code>, <code>&#39;{&#39;</code>, <code>&#39;}&#39;</code>, <code>&#39;[&#39;</code> and <code>&#39;]&#39;</code>, determine if the input string is valid.</p>\n\n<p>An input string is valid if:</p>\n\n<ol>\n\t<li>Open brackets must be closed by the same type of brackets.</li>\n\t<li>Open brackets must be closed in the correct order.</li>\n</ol>\n\n<p>&nbsp;</p>\n<p><strong>Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;()&quot;\n<strong>Output:</strong> true\n</pre>\n\n<p><strong>Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;()[]{}&quot;\n<strong>Output:</strong> true\n</pre>\n\n<p><strong>Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;(]&quot;\n<strong>Output:</strong> false\n</pre>\n\n<p><strong>Example 4:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;([)]&quot;\n<strong>Output:</strong> false\n</pre>\n\n<p><strong>Example 5:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;{[]}&quot;\n<strong>Output:</strong> true\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= s.length &lt;= 10<sup>4</sup></code></li>\n\t<li><code>s</code> consists of parentheses only <code>&#39;()[]{}&#39;</code>.</li>\n</ul>\n",
+    "difficulty": "Easy",
+    "questionId": "20",
+    "code": "/**\n * @param {string} s\n * @return {boolean}\n */\nvar isValid = function (s) {\n  const obj = {\n    '(': ')',\n    '{': '}',\n    '[': ']',\n  }\n  const cacheArr = []\n  for (let i = 0; i < s.length; i++) {\n    if (Object.keys(obj).includes(s[i])) {\n      cacheArr.push(s[i])\n    } else {\n      const pick = cacheArr.pop()\n      if (obj[pick] !== s[i]) {\n        return false\n      }\n    }\n  }\n\n  return cacheArr.length === 0\n};",
     "lang": "javascript"
   },
   {
     "title": "Merge Two Sorted Lists",
     "titleSlug": "merge-two-sorted-lists",
     "status": "ac",
-    "content": "<p>Merge two sorted linked lists and return it as a new <strong>sorted</strong> list. The new list should be made by splicing together the nodes of the first two lists.</p>\n\n<p><b>Example:</b></p>\n\n<pre>\n<b>Input:</b> 1-&gt;2-&gt;4, 1-&gt;3-&gt;4\n<b>Output:</b> 1-&gt;1-&gt;2-&gt;3-&gt;4-&gt;4\n</pre>\n",
+    "difficulty": "Easy",
+    "questionId": "21",
     "code": "/**\n * Definition for singly-linked list.\n * function ListNode(val) {\n *     this.val = val;\n *     this.next = null;\n * }\n */\n/**\n * @param {ListNode} l1\n * @param {ListNode} l2\n * @return {ListNode}\n */\nvar mergeTwoLists = function (l1, l2) {\n  const dummyLink = new ListNode(0)\n  let cur = dummyLink\n  let l1Point = l1\n  let l2Point = l2\n\n  while (l1Point && l2Point) {\n    if (l1Point.val < l2Point.val) {\n      cur.next = l1Point\n      l1Point = l1Point.next\n    } else {\n      cur.next = l2Point\n      l2Point = l2Point.next\n    }\n    cur = cur.next\n  }\n\n  while (l1Point) {\n    cur.next = l1Point\n    cur = cur.next\n    l1Point = l1Point.next\n  }\n\n  while (l2Point) {\n    cur.next = l2Point\n    cur = cur.next\n    l2Point = l2Point.next\n  }\n\n  return dummyLink.next\n}",
     "lang": "javascript"
   },
@@ -116,7 +147,8 @@
     "title": "Generate Parentheses",
     "titleSlug": "generate-parentheses",
     "status": "ac",
-    "content": "<p>\r\nGiven <i>n</i> pairs of parentheses, write a function to generate all combinations of well-formed parentheses.\r\n</p>\r\n\r\n<p>\r\nFor example, given <i>n</i> = 3, a solution set is:\r\n</p>\r\n<pre>\r\n[\r\n  \"((()))\",\r\n  \"(()())\",\r\n  \"(())()\",\r\n  \"()(())\",\r\n  \"()()()\"\r\n]\r\n</pre>",
+    "difficulty": "Medium",
+    "questionId": "22",
     "code": "/**\n * @param {number} n\n * @return {string[]}\n */\nvar generateParenthesis = function (n) {\n  const result = []\n  let str = ''\n  function judege(left, right, str) {\n    if (left === 0 && right === 0) {\n      result.push(str)\n      str = ''\n      return\n    }\n\n    if (left === right) {\n      judege(left - 1, right, str + '(')\n    } else if (left === 0) {\n      judege(left, right - 1, str + ')')\n    } else {\n      judege(left - 1, right, str + '(')\n      judege(left, right - 1, str + ')')\n    }\n  }\n\n  judege(n, n, str)\n  return result\n};",
     "lang": "javascript"
   },
@@ -124,7 +156,8 @@
     "title": "Merge k Sorted Lists",
     "titleSlug": "merge-k-sorted-lists",
     "status": "ac",
-    "content": "<p>You are given an array of <code>k</code> linked-lists <code>lists</code>, each linked-list is sorted in ascending order.</p>\n\n<p><em>Merge all the linked-lists into one sorted linked-list and return it.</em></p>\n\n<p>&nbsp;</p>\n<p><strong>Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> lists = [[1,4,5],[1,3,4],[2,6]]\n<strong>Output:</strong> [1,1,2,3,4,4,5,6]\n<strong>Explanation:</strong> The linked-lists are:\n[\n  1-&gt;4-&gt;5,\n  1-&gt;3-&gt;4,\n  2-&gt;6\n]\nmerging them into one sorted list:\n1-&gt;1-&gt;2-&gt;3-&gt;4-&gt;4-&gt;5-&gt;6\n</pre>\n\n<p><strong>Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> lists = []\n<strong>Output:</strong> []\n</pre>\n\n<p><strong>Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> lists = [[]]\n<strong>Output:</strong> []\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>k == lists.length</code></li>\n\t<li><code>0 &lt;= k &lt;= 10^4</code></li>\n\t<li><code>0 &lt;= lists[i].length &lt;= 500</code></li>\n\t<li><code>-10^4 &lt;= lists[i][j] &lt;= 10^4</code></li>\n\t<li><code>lists[i]</code> is sorted in <strong>ascending order</strong>.</li>\n\t<li>The sum of <code>lists[i].length</code> won&#39;t exceed <code>10^4</code>.</li>\n</ul>\n",
+    "difficulty": "Hard",
+    "questionId": "23",
     "code": "/**\n * Definition for singly-linked list.\n * function ListNode(val) {\n *     this.val = val;\n *     this.next = null;\n * }\n */\n/**\n * @param {ListNode[]} lists\n * @return {ListNode}\n */\nvar mergeKLists = function(lists) {\n  let result = lists[0] || null\n\n  for (let i = 1; i < lists.length; i++) {\n    const compareList = lists[i]\n    result = mergeTwoLists(result, compareList)\n  }\n  return result\n}\n\nvar mergeTwoLists = function(curList, compareList) {\n  const dummyNode = new ListNode(0)\n  dummyNode.next = curList\n  let cur = dummyNode\n  let comparedCur = compareList\n\n  while (cur.next && comparedCur) {\n    if (cur.next.val > comparedCur.val) {\n      let nextComparedCur = comparedCur.next\n      comparedCur.next = cur.next\n      cur.next = comparedCur\n      comparedCur = nextComparedCur\n    }\n    cur = cur.next\n  }\n  if (comparedCur) {\n    cur.next = comparedCur\n  }\n\n  return dummyNode.next\n}",
     "lang": "javascript"
   },
@@ -132,7 +165,8 @@
     "title": "Swap Nodes in Pairs",
     "titleSlug": "swap-nodes-in-pairs",
     "status": "ac",
-    "content": "<p>Given a&nbsp;linked list, swap every two adjacent nodes and return its head.</p>\r\n\r\n<p>You may <strong>not</strong> modify the values in the list&#39;s nodes, only nodes itself may be changed.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><strong>Example:</strong></p>\r\n\r\n<pre>\r\nGiven <code>1-&gt;2-&gt;3-&gt;4</code>, you should return the list as <code>2-&gt;1-&gt;4-&gt;3</code>.\r\n</pre>\r\n",
+    "difficulty": "Medium",
+    "questionId": "24",
     "code": "/**\n * Definition for singly-linked list.\n * function ListNode(val) {\n *     this.val = val;\n *     this.next = null;\n * }\n */\n/**\n * @param {ListNode} head\n * @return {ListNode}\n */\nvar swapPairs = function(head) {\n  const dummyHead = new ListNode(0)\n  dummyHead.next = head\n\n  let prev = dummyHead\n  let first = prev.next\n\n  while(first && first.next) {\n    let second = first.next\n    let next = second.next\n\n    second.next = first\n    first.next = next\n    prev.next = second\n\n    prev = first\n    first = first.next\n  }\n\n  return dummyHead.next\n}",
     "lang": "javascript"
   },
@@ -140,7 +174,8 @@
     "title": "Reverse Nodes in k-Group",
     "titleSlug": "reverse-nodes-in-k-group",
     "status": "ac",
-    "content": "<p>Given a linked list, reverse the nodes of a linked list <em>k</em> at a time and return its modified list.</p>\r\n\r\n<p><em>k</em> is a positive integer and is less than or equal to the length of the linked list. If the number of nodes is not a multiple of <em>k</em> then left-out nodes in the end should remain as it is.</p>\r\n\r\n<ul>\r\n</ul>\r\n\r\n<p><strong>Example:</strong></p>\r\n\r\n<p>Given this linked list: <code>1-&gt;2-&gt;3-&gt;4-&gt;5</code></p>\r\n\r\n<p>For <em>k</em> = 2, you should return: <code>2-&gt;1-&gt;4-&gt;3-&gt;5</code></p>\r\n\r\n<p>For <em>k</em> = 3, you should return: <code>3-&gt;2-&gt;1-&gt;4-&gt;5</code></p>\r\n\r\n<p><strong>Note:</strong></p>\r\n\r\n<ul>\r\n\t<li>Only constant extra memory is allowed.</li>\r\n\t<li>You may not alter the values in the list&#39;s nodes, only nodes itself may be changed.</li>\r\n</ul>\r\n",
+    "difficulty": "Hard",
+    "questionId": "25",
     "code": "/**\n * Definition for singly-linked list.\n * function ListNode(val) {\n *     this.val = val;\n *     this.next = null;\n * }\n */\n/**\n * @param {ListNode} head\n * @param {number} k\n * @return {ListNode}\n */\nvar reverseKGroup = function(head, k) {\n  const dummyHead = new ListNode(0)\n  dummyHead.next = head\n  let prev = dummyHead\n  let tail = dummyHead\n\n  while (true) {\n    let count = 0\n    while (tail.next && count !== k) {\n      tail = tail.next\n      count++\n    }\n    if (count !== k) break\n\n    let head1 = prev.next\n\n    while (prev.next !== tail) {\n      let cur = prev.next\n      prev.next = cur.next\n      cur.next = tail.next\n      tail.next = cur\n    }\n\n    prev = head1\n    tail = head1\n  }\n\n  return dummyHead.next\n}",
     "lang": "javascript"
   },
@@ -148,7 +183,8 @@
     "title": "Remove Duplicates from Sorted Array",
     "titleSlug": "remove-duplicates-from-sorted-array",
     "status": "ac",
-    "content": "<p>Given a sorted array <em>nums</em>, remove the duplicates <a href=\"https://en.wikipedia.org/wiki/In-place_algorithm\" target=\"_blank\"><strong>in-place</strong></a> such that each element appear only <em>once</em> and return the new length.</p>\r\n\r\n<p>Do not allocate extra space for another array, you must do this by <strong>modifying the input array <a href=\"https://en.wikipedia.org/wiki/In-place_algorithm\" target=\"_blank\">in-place</a></strong> with O(1) extra memory.</p>\r\n\r\n<p><strong>Example 1:</strong></p>\r\n\r\n<pre>\r\nGiven <em>nums</em> = <strong>[1,1,2]</strong>,\r\n\r\nYour function should return length = <strong><code>2</code></strong>, with the first two elements of <em><code>nums</code></em> being <strong><code>1</code></strong> and <strong><code>2</code></strong> respectively.\r\n\r\nIt doesn&#39;t matter what you leave beyond the returned length.</pre>\r\n\r\n<p><strong>Example 2:</strong></p>\r\n\r\n<pre>\r\nGiven <em>nums</em> = <strong>[0,0,1,1,1,2,2,3,3,4]</strong>,\r\n\r\nYour function should return length = <strong><code>5</code></strong>, with the first five elements of <em><code>nums</code></em> being modified to&nbsp;<strong><code>0</code></strong>, <strong><code>1</code></strong>, <strong><code>2</code></strong>, <strong><code>3</code></strong>, and&nbsp;<strong><code>4</code></strong> respectively.\r\n\r\nIt doesn&#39;t matter what values are set beyond&nbsp;the returned length.\r\n</pre>\r\n\r\n<p><strong>Clarification:</strong></p>\r\n\r\n<p>Confused why the returned value is an integer but your answer is an array?</p>\r\n\r\n<p>Note that the input array is passed in by <strong>reference</strong>, which means modification to the input array will be known to the caller as well.</p>\r\n\r\n<p>Internally you can think of this:</p>\r\n\r\n<pre>\r\n// <strong>nums</strong> is passed in by reference. (i.e., without making a copy)\r\nint len = removeDuplicates(nums);\r\n\r\n// any modification to <strong>nums</strong> in your function would be known by the caller.\r\n// using the length returned by your function, it prints the first <strong>len</strong> elements.\r\nfor (int i = 0; i &lt; len; i++) {\r\n&nbsp; &nbsp; print(nums[i]);\r\n}</pre>",
+    "difficulty": "Easy",
+    "questionId": "26",
     "code": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar removeDuplicates = function (nums) {\n  if (nums.length <= 1) return nums.length\n  let cur = 0 // 新数组的下标\n  for (let i = 1; i < nums.length; i++) {\n    if (nums[i] !== nums[cur]) {\n      nums[cur + 1] = nums[i]\n      cur++\n    }\n  }\n  return cur + 1\n}",
     "lang": "javascript"
   },
@@ -156,7 +192,8 @@
     "title": "Remove Element",
     "titleSlug": "remove-element",
     "status": "ac",
-    "content": "<p>Given an array <em>nums</em> and a value <em>val</em>, remove all instances of that value <a href=\"https://en.wikipedia.org/wiki/In-place_algorithm\" target=\"_blank\"><strong>in-place</strong></a> and return the new length.</p>\r\n\r\n<p>Do not allocate extra space for another array, you must do this by <strong>modifying the input array <a href=\"https://en.wikipedia.org/wiki/In-place_algorithm\" target=\"_blank\">in-place</a></strong> with O(1) extra memory.</p>\r\n\r\n<p>The order of elements can be changed. It doesn&#39;t matter what you leave beyond the new length.</p>\r\n\r\n<p><strong>Example 1:</strong></p>\r\n\r\n<pre>\r\nGiven <em>nums</em> = <strong>[3,2,2,3]</strong>, <em>val</em> = <strong>3</strong>,\r\n\r\nYour function should return length = <strong>2</strong>, with the first two elements of <em>nums</em> being <strong>2</strong>.\r\n\r\nIt doesn&#39;t matter what you leave beyond the returned length.\r\n</pre>\r\n\r\n<p><strong>Example 2:</strong></p>\r\n\r\n<pre>\r\nGiven <em>nums</em> = <strong>[0,1,2,2,3,0,4,2]</strong>, <em>val</em> = <strong>2</strong>,\r\n\r\nYour function should return length = <strong><code>5</code></strong>, with the first five elements of <em><code>nums</code></em> containing&nbsp;<strong><code>0</code></strong>, <strong><code>1</code></strong>, <strong><code>3</code></strong>, <strong><code>0</code></strong>, and&nbsp;<strong>4</strong>.\r\n\r\nNote that the order of those five elements can be arbitrary.\r\n\r\nIt doesn&#39;t matter what values are set beyond&nbsp;the returned length.</pre>\r\n\r\n<p><strong>Clarification:</strong></p>\r\n\r\n<p>Confused why the returned value is an integer but your answer is an array?</p>\r\n\r\n<p>Note that the input array is passed in by <strong>reference</strong>, which means modification to the input array will be known to the caller as well.</p>\r\n\r\n<p>Internally you can think of this:</p>\r\n\r\n<pre>\r\n// <strong>nums</strong> is passed in by reference. (i.e., without making a copy)\r\nint len = removeElement(nums, val);\r\n\r\n// any modification to <strong>nums</strong> in your function would be known by the caller.\r\n// using the length returned by your function, it prints the first <strong>len</strong> elements.\r\nfor (int i = 0; i &lt; len; i++) {\r\n&nbsp; &nbsp; print(nums[i]);\r\n}</pre>",
+    "difficulty": "Easy",
+    "questionId": "27",
     "code": "/**\n * @param {number[]} nums\n * @param {number} val\n * @return {number}\n */\nvar removeElement = function (nums, val) {\n  let cur = 0\n\n  for (let i = 0; i < nums.length; i++) {\n    if (nums[i] !== val) {\n      nums[cur] = nums[i]\n      cur++\n    }\n  }\n  return cur\n}",
     "lang": "javascript"
   },
@@ -164,7 +201,8 @@
     "title": "Implement strStr()",
     "titleSlug": "implement-strstr",
     "status": "ac",
-    "content": "<p>Implement <a href=\"http://www.cplusplus.com/reference/cstring/strstr/\" target=\"_blank\">strStr()</a>.</p>\r\n\r\n<p>Return the index of the first occurrence of needle in haystack, or <strong>-1</strong> if needle is not part of haystack.</p>\r\n\r\n<p><strong>Example 1:</strong></p>\r\n\r\n<pre>\r\n<strong>Input:</strong> haystack = &quot;hello&quot;, needle = &quot;ll&quot;\r\n<strong>Output:</strong> 2\r\n</pre>\r\n\r\n<p><strong>Example 2:</strong></p>\r\n\r\n<pre>\r\n<strong>Input:</strong> haystack = &quot;aaaaa&quot;, needle = &quot;bba&quot;\r\n<strong>Output:</strong> -1\r\n</pre>\r\n\r\n<p><strong>Clarification:</strong></p>\r\n\r\n<p>What should we return when <code>needle</code> is an empty string? This is a great question to ask during an interview.</p>\r\n\r\n<p>For the purpose of this problem, we will return 0 when <code>needle</code> is an empty string. This is consistent to C&#39;s&nbsp;<a href=\"http://www.cplusplus.com/reference/cstring/strstr/\" target=\"_blank\">strstr()</a> and Java&#39;s&nbsp;<a href=\"https://docs.oracle.com/javase/7/docs/api/java/lang/String.html#indexOf(java.lang.String)\" target=\"_blank\">indexOf()</a>.</p>\r\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>haystack</code> and&nbsp;<code>needle</code> consist only of lowercase English characters.</li>\n</ul>\n",
+    "difficulty": "Easy",
+    "questionId": "28",
     "code": "/**\n * @param {string} haystack\n * @param {string} needle\n * @return {number}\n */\nvar strStr = function (haystack, needle) {\n  return haystack.indexOf(needle)\n};",
     "lang": "javascript"
   },
@@ -172,7 +210,8 @@
     "title": "Search in Rotated Sorted Array",
     "titleSlug": "search-in-rotated-sorted-array",
     "status": "ac",
-    "content": "<p>You are given an integer array <code>nums</code> sorted in ascending order, and an integer <code>target</code>.</p>\n\n<p>Suppose that <code>nums</code> is rotated at some pivot unknown to you beforehand (i.e., <code>[0,1,2,4,5,6,7]</code> might become <code>[4,5,6,7,0,1,2]</code>).</p>\n\n<p><em>If <code>target</code> is found in the array return its index, otherwise, return <code>-1</code>.</em></p>\n\n<p>&nbsp;</p>\n<p><strong>Example 1:</strong></p>\n<pre><strong>Input:</strong> nums = [4,5,6,7,0,1,2], target = 0\n<strong>Output:</strong> 4\n</pre><p><strong>Example 2:</strong></p>\n<pre><strong>Input:</strong> nums = [4,5,6,7,0,1,2], target = 3\n<strong>Output:</strong> -1\n</pre><p><strong>Example 3:</strong></p>\n<pre><strong>Input:</strong> nums = [1], target = 0\n<strong>Output:</strong> -1\n</pre>\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= nums.length &lt;= 5000</code></li>\n\t<li><code>-10^4 &lt;= nums[i] &lt;= 10^4</code></li>\n\t<li>All values of <code>nums</code> are <strong>unique</strong>.</li>\n\t<li><code>nums</code> is guranteed to be rotated at some pivot.</li>\n\t<li><code>-10^4 &lt;= target &lt;= 10^4</code></li>\n</ul>\n",
+    "difficulty": "Medium",
+    "questionId": "33",
     "code": "/**\n * @param {number[]} nums\n * @param {number} target\n * @return {number}\n */\nvar search = function (nums, target) {\n  return nums.indexOf(target)\n};",
     "lang": "javascript"
   },
@@ -180,7 +219,8 @@
     "title": "Search Insert Position",
     "titleSlug": "search-insert-position",
     "status": "ac",
-    "content": "<p>Given a sorted array and a target value, return the index if the target is found. If not, return the index where it would be if it were inserted in order.</p>\r\n\r\n<p>You may assume no duplicates in the array.</p>\r\n\r\n<p><strong>Example 1:</strong></p>\r\n\r\n<pre>\r\n<strong>Input:</strong> [1,3,5,6], 5\r\n<strong>Output:</strong> 2\r\n</pre>\r\n\r\n<p><strong>Example 2:</strong></p>\r\n\r\n<pre>\r\n<strong>Input:</strong> [1,3,5,6], 2\r\n<strong>Output:</strong> 1\r\n</pre>\r\n\r\n<p><strong>Example 3:</strong></p>\r\n\r\n<pre>\r\n<strong>Input:</strong> [1,3,5,6], 7\r\n<strong>Output:</strong> 4\r\n</pre>\r\n\r\n<p><strong>Example 4:</strong></p>\r\n\r\n<pre>\r\n<strong>Input:</strong> [1,3,5,6], 0\r\n<strong>Output:</strong> 0\r\n</pre>\r\n",
+    "difficulty": "Easy",
+    "questionId": "35",
     "code": "/**\n * @param {number[]} nums\n * @param {number} target\n * @return {number}\n */\nvar searchInsert = function (nums, target) {\n  let i = 0\n  while (i < nums.length) {\n    if (target <= nums[i]) {\n      return i\n    } \n    \n    if (target > nums[nums.length - 1]) {\n      return nums.length\n    }\n    i++\n  }\n};",
     "lang": "javascript"
   },
@@ -188,7 +228,8 @@
     "title": "Valid Sudoku",
     "titleSlug": "valid-sudoku",
     "status": "ac",
-    "content": "<p>Determine if a&nbsp;9x9 Sudoku board&nbsp;is valid.&nbsp;Only the filled cells need to be validated&nbsp;<strong>according to the following rules</strong>:</p>\r\n\r\n<ol>\r\n\t<li>Each row&nbsp;must contain the&nbsp;digits&nbsp;<code>1-9</code> without repetition.</li>\r\n\t<li>Each column must contain the digits&nbsp;<code>1-9</code>&nbsp;without repetition.</li>\r\n\t<li>Each of the 9 <code>3x3</code> sub-boxes of the grid must contain the digits&nbsp;<code>1-9</code>&nbsp;without repetition.</li>\r\n</ol>\r\n\r\n<p><img src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Sudoku-by-L2G-20050714.svg/250px-Sudoku-by-L2G-20050714.svg.png\" style=\"height:250px; width:250px\" /><br />\r\n<small>A partially filled sudoku which is valid.</small></p>\r\n\r\n<p>The Sudoku board could be partially filled, where empty cells are filled with the character <code>&#39;.&#39;</code>.</p>\r\n\r\n<p><strong>Example 1:</strong></p>\r\n\r\n<pre>\r\n<strong>Input:</strong>\r\n[\r\n  [&quot;5&quot;,&quot;3&quot;,&quot;.&quot;,&quot;.&quot;,&quot;7&quot;,&quot;.&quot;,&quot;.&quot;,&quot;.&quot;,&quot;.&quot;],\r\n  [&quot;6&quot;,&quot;.&quot;,&quot;.&quot;,&quot;1&quot;,&quot;9&quot;,&quot;5&quot;,&quot;.&quot;,&quot;.&quot;,&quot;.&quot;],\r\n  [&quot;.&quot;,&quot;9&quot;,&quot;8&quot;,&quot;.&quot;,&quot;.&quot;,&quot;.&quot;,&quot;.&quot;,&quot;6&quot;,&quot;.&quot;],\r\n  [&quot;8&quot;,&quot;.&quot;,&quot;.&quot;,&quot;.&quot;,&quot;6&quot;,&quot;.&quot;,&quot;.&quot;,&quot;.&quot;,&quot;3&quot;],\r\n  [&quot;4&quot;,&quot;.&quot;,&quot;.&quot;,&quot;8&quot;,&quot;.&quot;,&quot;3&quot;,&quot;.&quot;,&quot;.&quot;,&quot;1&quot;],\r\n  [&quot;7&quot;,&quot;.&quot;,&quot;.&quot;,&quot;.&quot;,&quot;2&quot;,&quot;.&quot;,&quot;.&quot;,&quot;.&quot;,&quot;6&quot;],\r\n  [&quot;.&quot;,&quot;6&quot;,&quot;.&quot;,&quot;.&quot;,&quot;.&quot;,&quot;.&quot;,&quot;2&quot;,&quot;8&quot;,&quot;.&quot;],\r\n  [&quot;.&quot;,&quot;.&quot;,&quot;.&quot;,&quot;4&quot;,&quot;1&quot;,&quot;9&quot;,&quot;.&quot;,&quot;.&quot;,&quot;5&quot;],\r\n  [&quot;.&quot;,&quot;.&quot;,&quot;.&quot;,&quot;.&quot;,&quot;8&quot;,&quot;.&quot;,&quot;.&quot;,&quot;7&quot;,&quot;9&quot;]\r\n]\r\n<strong>Output:</strong> true\r\n</pre>\r\n\r\n<p><strong>Example 2:</strong></p>\r\n\r\n<pre>\r\n<strong>Input:</strong>\r\n[\r\n&nbsp; [&quot;8&quot;,&quot;3&quot;,&quot;.&quot;,&quot;.&quot;,&quot;7&quot;,&quot;.&quot;,&quot;.&quot;,&quot;.&quot;,&quot;.&quot;],\r\n&nbsp; [&quot;6&quot;,&quot;.&quot;,&quot;.&quot;,&quot;1&quot;,&quot;9&quot;,&quot;5&quot;,&quot;.&quot;,&quot;.&quot;,&quot;.&quot;],\r\n&nbsp; [&quot;.&quot;,&quot;9&quot;,&quot;8&quot;,&quot;.&quot;,&quot;.&quot;,&quot;.&quot;,&quot;.&quot;,&quot;6&quot;,&quot;.&quot;],\r\n&nbsp; [&quot;8&quot;,&quot;.&quot;,&quot;.&quot;,&quot;.&quot;,&quot;6&quot;,&quot;.&quot;,&quot;.&quot;,&quot;.&quot;,&quot;3&quot;],\r\n&nbsp; [&quot;4&quot;,&quot;.&quot;,&quot;.&quot;,&quot;8&quot;,&quot;.&quot;,&quot;3&quot;,&quot;.&quot;,&quot;.&quot;,&quot;1&quot;],\r\n&nbsp; [&quot;7&quot;,&quot;.&quot;,&quot;.&quot;,&quot;.&quot;,&quot;2&quot;,&quot;.&quot;,&quot;.&quot;,&quot;.&quot;,&quot;6&quot;],\r\n&nbsp; [&quot;.&quot;,&quot;6&quot;,&quot;.&quot;,&quot;.&quot;,&quot;.&quot;,&quot;.&quot;,&quot;2&quot;,&quot;8&quot;,&quot;.&quot;],\r\n&nbsp; [&quot;.&quot;,&quot;.&quot;,&quot;.&quot;,&quot;4&quot;,&quot;1&quot;,&quot;9&quot;,&quot;.&quot;,&quot;.&quot;,&quot;5&quot;],\r\n&nbsp; [&quot;.&quot;,&quot;.&quot;,&quot;.&quot;,&quot;.&quot;,&quot;8&quot;,&quot;.&quot;,&quot;.&quot;,&quot;7&quot;,&quot;9&quot;]\r\n]\r\n<strong>Output:</strong> false\r\n<strong>Explanation:</strong> Same as Example 1, except with the <strong>5</strong> in the top left corner being \r\n    modified to <strong>8</strong>. Since there are two 8&#39;s in the top left 3x3 sub-box, it is invalid.\r\n</pre>\r\n\r\n<p><strong>Note:</strong></p>\r\n\r\n<ul>\r\n\t<li>A Sudoku board (partially filled) could be valid but is not necessarily solvable.</li>\r\n\t<li>Only the filled cells need to be validated according to the mentioned&nbsp;rules.</li>\r\n\t<li>The given board&nbsp;contain only digits <code>1-9</code> and the character <code>&#39;.&#39;</code>.</li>\r\n\t<li>The given board size is always <code>9x9</code>.</li>\r\n</ul>\r\n",
+    "difficulty": "Medium",
+    "questionId": "36",
     "code": "/**\n * @param {character[][]} board\n * @return {boolean}\n */\nvar isValidSudoku = function (board) {\n  const set = new Set()\n  for (let x = 0; x < 9; x++) {\n    for (let y = 0; y < 9; y++) {\n      const num = board[x][y]\n      if (num !== '.') {\n        if (set.has(`row ${x} ${num}`)\n          || set.has(`col ${y} ${num}`)\n          || set.has(`block ${Math.floor(x / 3)} ${Math.floor(y / 3)} ${num}`)\n        ) {\n          return false\n        } else {\n          set.add(`row ${x} ${num}`)\n          set.add(`col ${y} ${num}`)\n          set.add(`block ${Math.floor(x / 3)} ${Math.floor(y / 3)} ${num}`)\n        }\n      }\n    }\n  }\n  return true\n};",
     "lang": "javascript"
   },
@@ -196,7 +237,8 @@
     "title": "Count and Say",
     "titleSlug": "count-and-say",
     "status": "ac",
-    "content": "<p>The count-and-say sequence is the sequence of integers with the first five terms as following:</p>\n\n<pre>\n1.     1\n2.     11\n3.     21\n4.     1211\n5.     111221\n</pre>\n\n<p><code>1</code> is read off as <code>&quot;one 1&quot;</code> or <code>11</code>.<br />\n<code>11</code> is read off as <code>&quot;two 1s&quot;</code> or <code>21</code>.<br />\n<code>21</code> is read off as <code>&quot;one 2</code>, then <code>one 1&quot;</code> or <code>1211</code>.</p>\n\n<p>Given an integer <i>n</i>&nbsp;where 1 &le; <em>n</em> &le; 30, generate the <i>n</i><sup>th</sup> term of the count-and-say sequence. You can do so recursively, in other words from the previous member&nbsp;read off the digits, counting the number of digits in groups of the same digit.</p>\n\n<p>Note: Each term of the sequence of integers will be represented as a string.</p>\n\n<p>&nbsp;</p>\n\n<p><b>Example 1:</b></p>\n\n<pre>\n<b>Input:</b> 1\n<b>Output:</b> &quot;1&quot;\n<b>Explanation:</b> This is the base case.\n</pre>\n\n<p><b>Example 2:</b></p>\n\n<pre>\n<b>Input:</b> 4\n<b>Output:</b> &quot;1211&quot;\n<b>Explanation:</b> For n = 3 the term was &quot;21&quot; in which we have two groups &quot;2&quot; and &quot;1&quot;, &quot;2&quot; can be read as &quot;12&quot; which means frequency = 1 and value = 2, the same way &quot;1&quot; is read as &quot;11&quot;, so the answer is the concatenation of &quot;12&quot; and &quot;11&quot; which is &quot;1211&quot;.\n</pre>\n",
+    "difficulty": "Easy",
+    "questionId": "38",
     "code": "const cacheObj = {1: '1'}\n/**\n * @param {number} n\n * @return {string}\n */\nvar countAndSay = function (n) {\n  if (cacheObj[n]) {\n    return cacheObj[n]\n  } else {\n    const findValue = countAndSay(n - 1)\n    let str = ''\n    let tmp = 0\n    for (let i = 0; i < findValue.length; i++) {\n      if (findValue[i] !== findValue[i + 1]) {\n        str += i - tmp + 1\n        str += findValue[i]\n        tmp = i + 1\n      }\n    }\n    cacheObj[n] = str\n    return str\n  }\n};",
     "lang": "javascript"
   },
@@ -204,7 +246,8 @@
     "title": "Combination Sum",
     "titleSlug": "combination-sum",
     "status": "ac",
-    "content": "<p>Given a <strong>set</strong> of candidate numbers (<code>candidates</code>) <strong>(without duplicates)</strong> and a target number (<code>target</code>), find all unique combinations in <code>candidates</code>&nbsp;where the candidate numbers sums to <code>target</code>.</p>\r\n\r\n<p>The <strong>same</strong> repeated number may be chosen from <code>candidates</code>&nbsp;unlimited number of times.</p>\r\n\r\n<p><strong>Note:</strong></p>\r\n\r\n<ul>\r\n\t<li>All numbers (including <code>target</code>) will be positive integers.</li>\r\n\t<li>The solution set must not contain duplicate combinations.</li>\r\n</ul>\r\n\r\n<p><strong>Example 1:</strong></p>\r\n\r\n<pre>\r\n<strong>Input:</strong> candidates = <code>[2,3,6,7], </code>target = <code>7</code>,\r\n<strong>A solution set is:</strong>\r\n[\r\n  [7],\r\n  [2,2,3]\r\n]\r\n</pre>\r\n\r\n<p><strong>Example 2:</strong></p>\r\n\r\n<pre>\r\n<strong>Input:</strong> candidates = [2,3,5]<code>, </code>target = 8,\r\n<strong>A solution set is:</strong>\r\n[\r\n&nbsp; [2,2,2,2],\r\n&nbsp; [2,3,3],\r\n&nbsp; [3,5]\r\n]\r\n</pre>\r\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= candidates.length &lt;= 30</code></li>\n\t<li><code>1 &lt;= candidates[i] &lt;= 200</code></li>\n\t<li>Each element of <code>candidate</code> is unique.</li>\n\t<li><code>1 &lt;= target &lt;= 500</code></li>\n</ul>\n",
+    "difficulty": "Medium",
+    "questionId": "39",
     "code": "/**\n * @param {number[]} candidates\n * @param {number} target\n * @return {number[][]}\n */\nvar combinationSum = function (candidates, target) {\n  const result = []\n\n  const DFS = function (sum, arr, start) {\n    if (sum === target) {\n      result.push(arr.slice())\n      return\n    }\n    if (sum > target) {\n      return\n    }\n\n    for (let i = start; i < candidates.length; i++) {\n      sum += candidates[i]\n      arr.push(candidates[i])\n      DFS(sum, arr, i)\n      arr.pop(candidates[i])\n      sum -= candidates[i]\n    }\n  }\n\n  DFS(0, [], 0, candidates)\n\n  return result\n};",
     "lang": "javascript"
   },
@@ -212,7 +255,8 @@
     "title": "Combination Sum II",
     "titleSlug": "combination-sum-ii",
     "status": "ac",
-    "content": "<p>Given a collection of candidate numbers (<code>candidates</code>) and a target number (<code>target</code>), find all unique combinations in <code>candidates</code>&nbsp;where the candidate numbers sums to <code>target</code>.</p>\r\n\r\n<p>Each number in <code>candidates</code>&nbsp;may only be used <strong>once</strong> in the combination.</p>\r\n\r\n<p><strong>Note:</strong></p>\r\n\r\n<ul>\r\n\t<li>All numbers (including <code>target</code>) will be positive integers.</li>\r\n\t<li>The solution set must not contain duplicate combinations.</li>\r\n</ul>\r\n\r\n<p><strong>Example 1:</strong></p>\r\n\r\n<pre>\r\n<strong>Input:</strong> candidates =&nbsp;<code>[10,1,2,7,6,1,5]</code>, target =&nbsp;<code>8</code>,\r\n<strong>A solution set is:</strong>\r\n[\r\n  [1, 7],\r\n  [1, 2, 5],\r\n  [2, 6],\r\n  [1, 1, 6]\r\n]\r\n</pre>\r\n\r\n<p><strong>Example 2:</strong></p>\r\n\r\n<pre>\r\n<strong>Input:</strong> candidates =&nbsp;[2,5,2,1,2], target =&nbsp;5,\r\n<strong>A solution set is:</strong>\r\n[\r\n&nbsp; [1,2,2],\r\n&nbsp; [5]\r\n]\r\n</pre>\r\n",
+    "difficulty": "Medium",
+    "questionId": "40",
     "code": "/**\n * @param {number[]} candidates\n * @param {number} target\n * @return {number[][]}\n */\nvar combinationSum2 = function (candidates, target) {\n  const result = []\n\n  const sortCandidates = candidates.sort((r1, r2) => r1 - r2)\n  const DFS = function (sum, arr, start) {\n    if (sum === target) {\n      result.push(arr.slice())\n      return\n    }\n    if (sum > target) {\n      return\n    }\n\n    for (let i = start; i < sortCandidates.length; i++) {\n      if (i !== start && sortCandidates[i] === sortCandidates[i - 1]) { // [1,1,2], 3 避免产生两个 [1, 2]\n        continue\n      }\n\n      sum += sortCandidates[i]\n      arr.push(sortCandidates[i])\n      DFS(sum, arr, i + 1)\n      arr.pop(sortCandidates[i])\n      sum -= sortCandidates[i]\n    }\n  }\n\n  DFS(0, [], 0)\n\n  return result\n};",
     "lang": "javascript"
   },
@@ -220,7 +264,8 @@
     "title": "Permutations",
     "titleSlug": "permutations",
     "status": "ac",
-    "content": "<p>Given a collection of <strong>distinct</strong> integers, return all possible permutations.</p>\r\n\r\n<p><strong>Example:</strong></p>\r\n\r\n<pre>\r\n<strong>Input:</strong> [1,2,3]\r\n<strong>Output:</strong>\r\n[\r\n  [1,2,3],\r\n  [1,3,2],\r\n  [2,1,3],\r\n  [2,3,1],\r\n  [3,1,2],\r\n  [3,2,1]\r\n]\r\n</pre>\r\n",
+    "difficulty": "Medium",
+    "questionId": "46",
     "code": "/**\n * @param {number[]} nums\n * @return {number[][]}\n */\nvar permute = function (nums) {\n  const result = []\n  const DFS = function(arr) {\n    if (arr.length === nums.length) {\n      result.push(arr.slice())\n      return\n    }\n\n    for (let i = 0; i < nums.length; i++) {\n      if (!arr.includes(nums[i])) {\n        arr.push(nums[i])\n        DFS(arr)\n        arr.pop(nums[i])\n      }\n    }\n  }\n\n  DFS([])\n\n  return result\n};",
     "lang": "javascript"
   },
@@ -228,7 +273,8 @@
     "title": "Permutations II",
     "titleSlug": "permutations-ii",
     "status": "ac",
-    "content": "<p>Given a collection of numbers that might contain duplicates, return all possible unique permutations.</p>\r\n\r\n<p><strong>Example:</strong></p>\r\n\r\n<pre>\r\n<strong>Input:</strong> [1,1,2]\r\n<strong>Output:</strong>\r\n[\r\n  [1,1,2],\r\n  [1,2,1],\r\n  [2,1,1]\r\n]\r\n</pre>\r\n",
+    "difficulty": "Medium",
+    "questionId": "47",
     "code": "/**\n * @param {number[]} nums\n * @return {number[][]}\n */\nvar permuteUnique = function (nums) {\n  const result = []\n  const sortNum = nums.sort()\n  const used = new Array(nums.length).fill(false)\n  const DFS = function (arr) {\n    if (arr.length === sortNum.length) {\n      result.push(arr.slice())\n      return\n    }\n\n    for (let i = 0; i < sortNum.length; i++) {\n      if (i > 0 && sortNum[i] === sortNum[i - 1] && !used[i - 1]) {\n        continue\n      }\n\n      if (!used[i]) {\n        arr.push(sortNum[i])\n        used[i] = true\n        DFS(arr)\n        arr.pop(sortNum[i])\n        used[i] = false\n      }\n    }\n  }\n\n  DFS([])\n\n  return result\n};",
     "lang": "javascript"
   },
@@ -236,7 +282,8 @@
     "title": "Rotate Image",
     "titleSlug": "rotate-image",
     "status": "ac",
-    "content": "<p>You are given an <em>n</em> x <em>n</em> 2D <code>matrix</code> representing an image, rotate the image by 90 degrees (clockwise).</p>\n\n<p>You have to rotate the image <a href=\"https://en.wikipedia.org/wiki/In-place_algorithm\" target=\"_blank\"><strong>in-place</strong></a>, which means you have to modify the input 2D matrix directly. <strong>DO NOT</strong> allocate another 2D matrix and do the rotation.</p>\n\n<p>&nbsp;</p>\n<p><strong>Example 1:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2020/08/28/mat1.jpg\" style=\"width: 642px; height: 242px;\" />\n<pre>\n<strong>Input:</strong> matrix = [[1,2,3],[4,5,6],[7,8,9]]\n<strong>Output:</strong> [[7,4,1],[8,5,2],[9,6,3]]\n</pre>\n\n<p><strong>Example 2:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2020/08/28/mat2.jpg\" style=\"width: 800px; height: 321px;\" />\n<pre>\n<strong>Input:</strong> matrix = [[5,1,9,11],[2,4,8,10],[13,3,6,7],[15,14,12,16]]\n<strong>Output:</strong> [[15,13,2,5],[14,3,4,1],[12,6,8,9],[16,7,10,11]]\n</pre>\n\n<p><strong>Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> matrix = [[1]]\n<strong>Output:</strong> [[1]]\n</pre>\n\n<p><strong>Example 4:</strong></p>\n\n<pre>\n<strong>Input:</strong> matrix = [[1,2],[3,4]]\n<strong>Output:</strong> [[3,1],[4,2]]\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>matrix.length == n</code></li>\n\t<li><code>matrix[i].length == n</code></li>\n\t<li><code>1 &lt;= n &lt;= 20</code></li>\n\t<li><code>-1000 &lt;= matrix[i][j] &lt;= 1000</code></li>\n</ul>\n",
+    "difficulty": "Medium",
+    "questionId": "48",
     "code": "/**\n * @param {number[][]} matrix\n * @return {void} Do not return anything, modify matrix in-place instead.\n */\nvar rotate = function (matrix) {\n  matrix.reverse()\n\n  let tmp\n  for (let x = 0; x < matrix.length; x++) {\n    for (let y = 0; y < x; y++) {\n      tmp = matrix[x][y]\n      matrix[x][y] = matrix[y][x]\n      matrix[y][x] = tmp\n    }\n  }\n\n  console.log(matrix)\n};",
     "lang": "javascript"
   },
@@ -244,7 +291,8 @@
     "title": "Group Anagrams",
     "titleSlug": "group-anagrams",
     "status": "ac",
-    "content": "<p>Given an array of strings <code>strs</code>, group <strong>the anagrams</strong> together. You can return the answer in <strong>any order</strong>.</p>\n\n<p>An <strong>Anagram</strong> is a word or phrase formed by rearranging the letters of a different word or phrase, typically using all the original letters exactly once.</p>\n\n<p>&nbsp;</p>\n<p><strong>Example 1:</strong></p>\n<pre><strong>Input:</strong> strs = [\"eat\",\"tea\",\"tan\",\"ate\",\"nat\",\"bat\"]\n<strong>Output:</strong> [[\"bat\"],[\"nat\",\"tan\"],[\"ate\",\"eat\",\"tea\"]]\n</pre><p><strong>Example 2:</strong></p>\n<pre><strong>Input:</strong> strs = [\"\"]\n<strong>Output:</strong> [[\"\"]]\n</pre><p><strong>Example 3:</strong></p>\n<pre><strong>Input:</strong> strs = [\"a\"]\n<strong>Output:</strong> [[\"a\"]]\n</pre>\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= strs.length &lt;= 10<sup>4</sup></code></li>\n\t<li><code>0 &lt;= strs[i].length &lt;= 100</code></li>\n\t<li><code>strs[i]</code> consists of lower-case English letters.</li>\n</ul>\n",
+    "difficulty": "Medium",
+    "questionId": "49",
     "code": "/**\n * @param {string[]} strs\n * @return {string[][]}\n */\nvar groupAnagrams = function (strs) {\n  const tmpObj = {}\n\n  for (let i = 0; i < strs.length; i++) {\n    const sortStr = strs[i].split('').sort().join('')\n    if (tmpObj[sortStr]) {\n      tmpObj[sortStr].push(strs[i])\n    } else {\n      tmpObj[sortStr] = [strs[i]]\n    }\n  }\n\n  const result = []\n\n  const keyArr = Object.keys(tmpObj)\n  for (let i = 0; i < keyArr.length; i++) {\n    result.push(tmpObj[keyArr[i]])\n  }\n\n  return result\n}",
     "lang": "javascript"
   },
@@ -252,7 +300,8 @@
     "title": "Pow(x, n)",
     "titleSlug": "powx-n",
     "status": "ac",
-    "content": "<p>Implement <a href=\"http://www.cplusplus.com/reference/valarray/pow/\" target=\"_blank\">pow(<em>x</em>, <em>n</em>)</a>, which calculates&nbsp;<em>x</em> raised to the power <em>n</em> (i.e. x<sup><span style=\"font-size:10.8333px\">n</span></sup>).</p>\n\n<p>&nbsp;</p>\n<p><strong>Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> x = 2.00000, n = 10\n<strong>Output:</strong> 1024.00000\n</pre>\n\n<p><strong>Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> x = 2.10000, n = 3\n<strong>Output:</strong> 9.26100\n</pre>\n\n<p><strong>Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> x = 2.00000, n = -2\n<strong>Output:</strong> 0.25000\n<strong>Explanation:</strong> 2<sup>-2</sup> = 1/2<sup>2</sup> = 1/4 = 0.25\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>-100.0 &lt;&nbsp;x&nbsp;&lt; 100.0</code></li>\n\t<li><code>-2<sup>31</sup>&nbsp;&lt;= n &lt;=&nbsp;2<sup>31</sup>-1</code></li>\n\t<li><code>-10<sup>4</sup> &lt;= x<sup>n</sup> &lt;= 10<sup>4</sup></code></li>\n</ul>\n",
+    "difficulty": "Medium",
+    "questionId": "50",
     "code": "/**\n * @param {number} x\n * @param {number} n\n * @return {number}\n */\nvar myPow = function (x, n) {\n  return Math.pow(x, n)\n};",
     "lang": "javascript"
   },
@@ -260,7 +309,8 @@
     "title": "Rotate List",
     "titleSlug": "rotate-list",
     "status": "ac",
-    "content": "<p>Given a linked&nbsp;list, rotate the list to the right by <em>k</em> places, where <em>k</em> is non-negative.</p>\r\n\r\n<p><strong>Example 1:</strong></p>\r\n\r\n<pre>\r\n<strong>Input:</strong> 1-&gt;2-&gt;3-&gt;4-&gt;5-&gt;NULL, k = 2\r\n<strong>Output:</strong> 4-&gt;5-&gt;1-&gt;2-&gt;3-&gt;NULL\r\n<strong>Explanation:</strong>\r\nrotate 1 steps to the right: 5-&gt;1-&gt;2-&gt;3-&gt;4-&gt;NULL\r\nrotate 2 steps to the right: 4-&gt;5-&gt;1-&gt;2-&gt;3-&gt;NULL\r\n</pre>\r\n\r\n<p><strong>Example 2:</strong></p>\r\n\r\n<pre>\r\n<strong>Input:</strong> 0-&gt;1-&gt;2-&gt;NULL, k = 4\r\n<strong>Output:</strong> <code>2-&gt;0-&gt;1-&gt;NULL</code>\r\n<strong>Explanation:</strong>\r\nrotate 1 steps to the right: 2-&gt;0-&gt;1-&gt;NULL\r\nrotate 2 steps to the right: 1-&gt;2-&gt;0-&gt;NULL\r\nrotate 3 steps to the right:&nbsp;<code>0-&gt;1-&gt;2-&gt;NULL</code>\r\nrotate 4 steps to the right:&nbsp;<code>2-&gt;0-&gt;1-&gt;NULL</code></pre>\r\n",
+    "difficulty": "Medium",
+    "questionId": "61",
     "code": "/**\n * Definition for singly-linked list.\n * function ListNode(val) {\n *     this.val = val;\n *     this.next = null;\n * }\n */\n/**\n * @param {ListNode} head\n * @param {number} k\n * @return {ListNode}\n */\nvar rotateRight = function(head, k) {\n  const dummy = new ListNode(0)\n  dummy.next = head\n  let count = 0\n  let last = dummy\n  while (last.next) {\n    last = last.next\n    count++\n  }\n\n  if (count === 0 || count === k) return dummy.next\n  const modK = k % count\n  let diff = modK + 1\n\n  let l = dummy\n  let r = dummy\n  while (diff--) {\n    r = r.next\n  }\n\n  while (r) {\n    r = r.next\n    l = l.next\n  }\n\n  last.next = dummy.next\n  dummy.next = l.next\n  l.next = null\n\n  return dummy.next\n}",
     "lang": "javascript"
   },
@@ -268,7 +318,8 @@
     "title": "Unique Paths",
     "titleSlug": "unique-paths",
     "status": "ac",
-    "content": "<p>A robot is located at the top-left corner of a <code>m x n</code> grid (marked &#39;Start&#39; in the diagram below).</p>\n\n<p>The robot can only move either down or right at any point in time. The robot is trying to reach the bottom-right corner of the grid (marked &#39;Finish&#39; in the diagram below).</p>\n\n<p>How many possible unique paths are there?</p>\n\n<p>&nbsp;</p>\n<p><strong>Example 1:</strong></p>\n<img src=\"https://assets.leetcode.com/uploads/2018/10/22/robot_maze.png\" style=\"width: 400px; height: 183px;\" />\n<pre>\n<strong>Input:</strong> m = 3, n = 7\n<strong>Output:</strong> 28\n</pre>\n\n<p><strong>Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> m = 3, n = 2\n<strong>Output:</strong> 3\n<strong>Explanation:</strong>\nFrom the top-left corner, there are a total of 3 ways to reach the bottom-right corner:\n1. Right -&gt; Down -&gt; Down\n2. Down -&gt; Down -&gt; Right\n3. Down -&gt; Right -&gt; Down\n</pre>\n\n<p><strong>Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> m = 7, n = 3\n<strong>Output:</strong> 28\n</pre>\n\n<p><strong>Example 4:</strong></p>\n\n<pre>\n<strong>Input:</strong> m = 3, n = 3\n<strong>Output:</strong> 6\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= m, n &lt;= 100</code></li>\n\t<li>It&#39;s guaranteed that the answer will be less than or equal to <code>2 * 10<sup>9</sup></code>.</li>\n</ul>\n",
+    "difficulty": "Medium",
+    "questionId": "62",
     "code": "const cache = {}\n/**\n * @param {number} m\n * @param {number} n\n * @return {number}\n */\nvar uniquePaths = function (m, n) {\n  if (m === 1 || n === 1) {\n    return 1\n  }\n\n  if (cache[`${m}~${n}`]) {\n    return cache[`${m}~${n}`]\n  } else {\n    const nums = uniquePaths(m - 1, n) + uniquePaths(m, n - 1)\n    cache[`${m}~${n}`] = nums\n\n    return nums\n  }\n};",
     "lang": "javascript"
   },
@@ -276,7 +327,8 @@
     "title": "Minimum Path Sum",
     "titleSlug": "minimum-path-sum",
     "status": "ac",
-    "content": "<p>Given a <em>m</em> x <em>n</em> grid filled with non-negative numbers, find a path from top left to bottom right which <em>minimizes</em> the sum of all numbers along its path.</p>\r\n\r\n<p><strong>Note:</strong> You can only move either down or right at any point in time.</p>\r\n\r\n<p><strong>Example:</strong></p>\r\n\r\n<pre>\r\n<strong>Input:</strong>\r\n[\r\n&nbsp; [1,3,1],\r\n  [1,5,1],\r\n  [4,2,1]\r\n]\r\n<strong>Output:</strong> 7\r\n<strong>Explanation:</strong> Because the path 1&rarr;3&rarr;1&rarr;1&rarr;1 minimizes the sum.\r\n</pre>\r\n",
+    "difficulty": "Medium",
+    "questionId": "64",
     "code": "/**\n * @param {number[][]} grid\n * @return {number}\n */\nvar minPathSum = function (grid) {\n  const m = grid.length\n  const n = grid[0].length\n  const cache = {}\n  return findMinCount(m - 1, n - 1, grid, cache)\n}\n\nfunction findMinCount(x, y, grid, cache) {\n  if (cache[`${x}~${y}`]) {\n    if (x === 17) {\n      var test = null\n    }\n    return cache[`${x}~${y}`]\n  }\n\n  let count = 0\n\n  if (x === 0 && y === 0) {\n    count = grid[0][0]\n  } else if (x === 0) {\n    count = findMinCount(0, y - 1, grid, cache) + grid[0][y]\n  } else if (y === 0) {\n    count = findMinCount(x - 1, y, grid, cache) + grid[x][0]\n  }\n\n  if (x > 0 && y > 0) {\n    count = Math.min(findMinCount(x - 1, y, grid, cache), findMinCount(x, y - 1, grid, cache)) + grid[x][y]\n  }\n\n  cache[`${x}~${y}`] = count\n\n  return count\n}",
     "lang": "javascript"
   },
@@ -284,7 +336,8 @@
     "title": "Plus One",
     "titleSlug": "plus-one",
     "status": "ac",
-    "content": "<p>Given a <strong>non-empty</strong> array of digits&nbsp;representing a non-negative integer, increment&nbsp;one to the integer.</p>\n\n<p>The digits are stored such that the most significant digit is at the head of the list, and each element in the array contains a single digit.</p>\n\n<p>You may assume the integer does not contain any leading zero, except the number 0 itself.</p>\n\n<p>&nbsp;</p>\n<p><strong>Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> digits = [1,2,3]\n<strong>Output:</strong> [1,2,4]\n<strong>Explanation:</strong> The array represents the integer 123.\n</pre>\n\n<p><strong>Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> digits = [4,3,2,1]\n<strong>Output:</strong> [4,3,2,2]\n<strong>Explanation:</strong> The array represents the integer 4321.\n</pre>\n\n<p><strong>Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> digits = [0]\n<strong>Output:</strong> [1]\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= digits.length &lt;= 100</code></li>\n\t<li><code>0 &lt;= digits[i] &lt;= 9</code></li>\n</ul>\n",
+    "difficulty": "Easy",
+    "questionId": "66",
     "code": "/**\n * @param {number[]} digits\n * @return {number[]}\n */\nvar plusOne = function (digits) {\n  let length = digits.length\n  let tag = 0\n  while (length) {\n    if (length === digits.length) {\n      if (digits[length - 1] + 1 + tag >= 10) {\n        digits[length - 1] = 0\n        tag = 1\n      } else {\n        digits[length - 1] = digits[length - 1] + 1\n        tag = 0\n        break\n      }\n    } else {\n      if (digits[length - 1] + tag >= 10) {\n        digits[length - 1] = 0\n        tag = 1\n      } else {\n        digits[length - 1] = digits[length - 1] + 1\n        tag = 0\n        break\n      }\n    }\n    length--\n  }\n  if (tag === 1) {\n    digits.unshift(1)\n  }\n  return digits\n};",
     "lang": "javascript"
   },
@@ -292,7 +345,8 @@
     "title": "Add Binary",
     "titleSlug": "add-binary",
     "status": "ac",
-    "content": "<p>Given two binary strings, return their sum (also a binary string).</p>\r\n\r\n<p>The input strings are both <strong>non-empty</strong> and contains only characters <code>1</code> or&nbsp;<code>0</code>.</p>\r\n\r\n<p><strong>Example 1:</strong></p>\r\n\r\n<pre>\r\n<strong>Input:</strong> a = &quot;11&quot;, b = &quot;1&quot;\r\n<strong>Output:</strong> &quot;100&quot;</pre>\r\n\r\n<p><strong>Example 2:</strong></p>\r\n\r\n<pre>\r\n<strong>Input:</strong> a = &quot;1010&quot;, b = &quot;1011&quot;\r\n<strong>Output:</strong> &quot;10101&quot;</pre>\r\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li>Each string consists only of <code>&#39;0&#39;</code> or <code>&#39;1&#39;</code> characters.</li>\n\t<li><code>1 &lt;= a.length, b.length &lt;= 10^4</code></li>\n\t<li>Each string is either <code>&quot;0&quot;</code> or doesn&#39;t contain any leading zero.</li>\n</ul>\n",
+    "difficulty": "Easy",
+    "questionId": "67",
     "code": "/**\n * @param {string} a\n * @param {string} b\n * @return {string}\n */\nvar addBinary = function (a, b) {\n  const al = a.length, bl = b.length\n  const length = Math.max(al, bl)\n  let tag = 0\n  let str = ''\n\n  for (let i = 0; i < length; i++) {\n    const x = i < al ? +a[al - i - 1] : 0\n    const y = i < bl ? +b[bl - i - 1] : 0\n\n    const addValue = ((x + y + tag === 1) || (x + y + tag === 3)) ? '1' : '0'\n    str += addValue\n\n    if (x + y + tag > 1) {\n      tag = 1\n    } else {\n      tag = 0\n    }\n  }\n\n  if (tag === 1) {\n    str += '1'\n  }\n\n  return str.split('').reverse().join('')\n};",
     "lang": "javascript"
   },
@@ -300,7 +354,8 @@
     "title": "Sqrt(x)",
     "titleSlug": "sqrtx",
     "status": "ac",
-    "content": "<p>Implement <code>int sqrt(int x)</code>.</p>\r\n\r\n<p>Compute and return the square root of <em>x</em>, where&nbsp;<em>x</em>&nbsp;is guaranteed to be a non-negative integer.</p>\r\n\r\n<p>Since the return type&nbsp;is an integer, the decimal digits are truncated and only the integer part of the result&nbsp;is returned.</p>\r\n\r\n<p><strong>Example 1:</strong></p>\r\n\r\n<pre>\r\n<strong>Input:</strong> 4\r\n<strong>Output:</strong> 2\r\n</pre>\r\n\r\n<p><strong>Example 2:</strong></p>\r\n\r\n<pre>\r\n<strong>Input:</strong> 8\r\n<strong>Output:</strong> 2\r\n<strong>Explanation:</strong> The square root of 8 is 2.82842..., and since \r\n&nbsp;            the decimal part is truncated, 2 is returned.\r\n</pre>\r\n",
+    "difficulty": "Easy",
+    "questionId": "69",
     "code": "/**\n * @param {number} x\n * @return {number}\n */\nvar mySqrt = function (x) {\n  return +Math.sqrt(x).toString().split('.')[0]\n};",
     "lang": "javascript"
   },
@@ -308,7 +363,8 @@
     "title": "Climbing Stairs",
     "titleSlug": "climbing-stairs",
     "status": "ac",
-    "content": "<p>You are climbing a stair case. It takes <em>n</em> steps to reach to the top.</p>\n\n<p>Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top?</p>\n\n<p><strong>Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> 2\n<strong>Output:</strong> 2\n<strong>Explanation:</strong> There are two ways to climb to the top.\n1. 1 step + 1 step\n2. 2 steps\n</pre>\n\n<p><strong>Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> 3\n<strong>Output:</strong> 3\n<strong>Explanation:</strong> There are three ways to climb to the top.\n1. 1 step + 1 step + 1 step\n2. 1 step + 2 steps\n3. 2 steps + 1 step\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= n &lt;= 45</code></li>\n</ul>\n",
+    "difficulty": "Easy",
+    "questionId": "70",
     "code": "const obj = {}\n\n/**\n * @param {number} n\n * @return {number}\n */\nvar climbStairs = function (n) {\n  if (n === 1) { return 1 }\n  if (n === 2) { return 2 }\n\n  if (obj[n]) {\n    return obj[n]\n  } else {\n    obj[n] = climbStairs(n - 1) + climbStairs(n - 2)\n    return obj[n]\n  }\n};",
     "lang": "javascript"
   },
@@ -316,7 +372,8 @@
     "title": "Simplify Path",
     "titleSlug": "simplify-path",
     "status": "ac",
-    "content": "<p>Given an <strong>absolute path</strong> for a file (Unix-style), simplify it. Or in other words, convert it to the <strong>canonical path</strong>.</p>\n\n<p>In a UNIX-style file system, a period <code>.</code>&nbsp;refers to the current directory. Furthermore, a double period <code>..</code>&nbsp;moves the directory up a level.</p>\n\n<p>Note that the returned canonical path must always begin&nbsp;with a slash <code>/</code>, and there must be only a single slash <code>/</code>&nbsp;between two directory names.&nbsp;The last directory name (if it exists) <b>must not</b>&nbsp;end with a trailing <code>/</code>. Also, the canonical path must be the <strong>shortest</strong> string&nbsp;representing the absolute path.</p>\n\n<p>&nbsp;</p>\n\n<p><strong>Example 1:</strong></p>\n\n<pre>\n<strong>Input: &quot;</strong><span id=\"example-input-1-1\">/home/&quot;</span>\n<strong>Output: &quot;</strong><span id=\"example-output-1\">/home&quot;\n<strong>Explanation:</strong> Note that there is no trailing slash after the last directory name.</span>\n</pre>\n\n<p><strong>Example 2:</strong></p>\n\n<pre>\n<strong>Input: &quot;</strong><span id=\"example-input-1-1\">/../&quot;</span>\n<strong>Output: &quot;</strong><span id=\"example-output-1\">/&quot;</span>\n<strong>Explanation:</strong> Going one level up from the root directory is a no-op, as the root level is the highest level you can go.\n</pre>\n\n<p><strong>Example 3:</strong></p>\n\n<pre>\n<strong>Input: &quot;</strong><span id=\"example-input-1-1\">/home//foo/&quot;</span>\n<strong>Output: &quot;</strong><span id=\"example-output-1\">/home/foo&quot;</span>\n<strong>Explanation: </strong>In the canonical path, multiple consecutive slashes are replaced by a single one.\n</pre>\n\n<p><strong>Example 4:</strong></p>\n\n<pre>\n<strong>Input: &quot;</strong><span id=\"example-input-1-1\">/a/./b/../../c/&quot;</span>\n<strong>Output: &quot;</strong><span id=\"example-output-1\">/c&quot;</span>\n</pre>\n\n<p><strong>Example 5:</strong></p>\n\n<pre>\n<strong>Input: &quot;</strong><span id=\"example-input-1-1\">/a/../../b/../c//.//&quot;</span>\n<strong>Output: &quot;</strong><span id=\"example-output-1\">/c&quot;</span>\n</pre>\n\n<p><strong>Example 6:</strong></p>\n\n<pre>\n<strong>Input: &quot;</strong><span id=\"example-input-1-1\">/a//b////c/d//././/..&quot;</span>\n<strong>Output: &quot;</strong><span id=\"example-output-1\">/a/b/c&quot;</span>\n</pre>\n",
+    "difficulty": "Medium",
+    "questionId": "71",
     "code": "/**\n * @param {string} path\n * @return {string}\n */\nvar simplifyPath = function(path) {\n  const pathArr = path.split('/')\n  const stack = []\n  for (let i = 0; i < pathArr.length; i++) {\n    if (pathArr[i] === '..') {\n      stack.pop()\n    } else if (pathArr[i] === '.' || pathArr[i] === '') {\n      continue\n    } else {\n      stack.push(pathArr[i])\n    }\n  }\n\n  return `/${stack.join('/')}`\n}",
     "lang": "javascript"
   },
@@ -324,7 +381,8 @@
     "title": "Sort Colors",
     "titleSlug": "sort-colors",
     "status": "ac",
-    "content": "<p>Given an array <code>nums</code> with <code>n</code> objects colored red, white, or blue, sort them <strong><a href=\"https://en.wikipedia.org/wiki/In-place_algorithm\" target=\"_blank\">in-place</a>&nbsp;</strong>so that objects of the same color are adjacent, with the colors in the order red, white, and blue.</p>\n\n<p>Here, we will use the integers <code>0</code>, <code>1</code>, and <code>2</code> to represent the color red, white, and blue respectively.</p>\n\n<p><strong>Follow up:</strong></p>\n\n<ul>\n\t<li>Could you&nbsp;solve this problem without using&nbsp;the library&#39;s sort function?</li>\n\t<li>Could you come up with a&nbsp;one-pass algorithm using only <code>O(1)</code> constant space?</li>\n</ul>\n\n<p>&nbsp;</p>\n<p><strong>Example 1:</strong></p>\n<pre><strong>Input:</strong> nums = [2,0,2,1,1,0]\n<strong>Output:</strong> [0,0,1,1,2,2]\n</pre><p><strong>Example 2:</strong></p>\n<pre><strong>Input:</strong> nums = [2,0,1]\n<strong>Output:</strong> [0,1,2]\n</pre><p><strong>Example 3:</strong></p>\n<pre><strong>Input:</strong> nums = [0]\n<strong>Output:</strong> [0]\n</pre><p><strong>Example 4:</strong></p>\n<pre><strong>Input:</strong> nums = [1]\n<strong>Output:</strong> [1]\n</pre>\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>n == nums.length</code></li>\n\t<li><code>1 &lt;= n &lt;= 300</code></li>\n\t<li><code>nums[i]</code> is <code>0</code>, <code>1</code>, or <code>2</code>.</li>\n</ul>\n",
+    "difficulty": "Medium",
+    "questionId": "75",
     "code": "/**\n * @param {number[]} nums\n * @return {void} Do not return anything, modify nums in-place instead.\n */\nvar sortColors = function (nums) {\n  let countObj = {}\n  for (let i = 0; i < nums.length; i++) {\n    const key = nums[i]\n    if (typeof(countObj[`${key}`]) === 'number') {\n      countObj[`${key}`] = countObj[`${key}`] + 1\n    } else {\n      countObj[`${key}`] = 1\n    }\n  }\n\n  const count0 = countObj[0] || 0\n  const count1 = countObj[1] || 0\n  const count2 = countObj[2] || 0\n  for (let i = 0; i < count0 + count1 + count2; i++) {\n    if (i < count0) {\n      nums[i] = 0\n    } else if (i >=count0 && i < count0 + count1) {\n      nums[i] = 1\n    } else if (i >= count1 && i < count0 + count1 + count2) {\n      nums[i] = 2\n    }\n  }\n}",
     "lang": "javascript"
   },
@@ -332,7 +390,8 @@
     "title": "Subsets",
     "titleSlug": "subsets",
     "status": "ac",
-    "content": "<p>Given a set of <strong>distinct</strong> integers, <em>nums</em>, return all possible subsets (the power set).</p>\r\n\r\n<p><strong>Note:</strong> The solution set must not contain duplicate subsets.</p>\r\n\r\n<p><strong>Example:</strong></p>\r\n\r\n<pre>\r\n<strong>Input:</strong> nums = [1,2,3]\r\n<strong>Output:</strong>\r\n[\r\n  [3],\r\n&nbsp; [1],\r\n&nbsp; [2],\r\n&nbsp; [1,2,3],\r\n&nbsp; [1,3],\r\n&nbsp; [2,3],\r\n&nbsp; [1,2],\r\n&nbsp; []\r\n]</pre>\r\n",
+    "difficulty": "Medium",
+    "questionId": "78",
     "code": "/**\n * @param {number[]} nums\n * @return {number[][]}\n */\nvar subsets = function (nums) {\n  const list = []\n  const tmpList = []\n\n  backTrack(list, tmpList, nums, 0)\n\n  return list\n};\n\nfunction backTrack(list, tmpList, nums, start) {\n  list.push(tmpList.slice())\n\n  for (let i = start; i < nums.length; i++) {\n    tmpList.push(nums[i])\n    backTrack(list, tmpList, nums, i + 1)\n    tmpList.splice(tmpList.length - 1, 1)\n  }\n}",
     "lang": "javascript"
   },
@@ -340,7 +399,8 @@
     "title": "Remove Duplicates from Sorted Array II",
     "titleSlug": "remove-duplicates-from-sorted-array-ii",
     "status": "ac",
-    "content": "<p>Given a sorted array <em>nums</em>, remove the duplicates <a href=\"https://en.wikipedia.org/wiki/In-place_algorithm\" target=\"_blank\"><strong>in-place</strong></a> such that duplicates appeared at most&nbsp;<em>twice</em> and return the new length.</p>\r\n\r\n<p>Do not allocate extra space for another array, you must do this by <strong>modifying the input array <a href=\"https://en.wikipedia.org/wiki/In-place_algorithm\" target=\"_blank\">in-place</a></strong> with O(1) extra memory.</p>\r\n\r\n<p><strong>Example 1:</strong></p>\r\n\r\n<pre>\r\nGiven <em>nums</em> = <strong>[1,1,1,2,2,3]</strong>,\r\n\r\nYour function should return length = <strong><code>5</code></strong>, with the first five elements of <em><code>nums</code></em> being <strong><code>1, 1, 2, 2</code></strong> and <strong>3</strong> respectively.\r\n\r\nIt doesn&#39;t matter what you leave beyond the returned length.</pre>\r\n\r\n<p><strong>Example 2:</strong></p>\r\n\r\n<pre>\r\nGiven <em>nums</em> = <strong>[0,0,1,1,1,1,2,3,3]</strong>,\r\n\r\nYour function should return length = <strong><code>7</code></strong>, with the first seven elements of <em><code>nums</code></em> being modified to&nbsp;<strong><code>0</code></strong>, <strong>0</strong>, <strong>1</strong>, <strong>1</strong>, <strong>2</strong>, <strong>3</strong> and&nbsp;<strong>3</strong> respectively.\r\n\r\nIt doesn&#39;t matter what values are set beyond&nbsp;the returned length.\r\n</pre>\r\n\r\n<p><strong>Clarification:</strong></p>\r\n\r\n<p>Confused why the returned value is an integer but your answer is an array?</p>\r\n\r\n<p>Note that the input array is passed in by <strong>reference</strong>, which means modification to the input array will be known to the caller as well.</p>\r\n\r\n<p>Internally you can think of this:</p>\r\n\r\n<pre>\r\n// <strong>nums</strong> is passed in by reference. (i.e., without making a copy)\r\nint len = removeDuplicates(nums);\r\n\r\n// any modification to <strong>nums</strong> in your function would be known by the caller.\r\n// using the length returned by your function, it prints the first <strong>len</strong> elements.\r\nfor (int i = 0; i &lt; len; i++) {\r\n&nbsp; &nbsp; print(nums[i]);\r\n}\r\n</pre>\r\n",
+    "difficulty": "Medium",
+    "questionId": "80",
     "code": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar removeDuplicates = function(nums) {\n  if (nums.length <= 2) return nums.length\n  let cur = 1 // 新数组的下标位数\n  for (let i = 2; i < nums.length; i++) {\n    // 对题目中每个元素最多出现两次的条件作限制\n    if (nums[i] !== nums[cur - 1]) {\n      nums[cur + 1] = nums[i]\n      cur++\n    }\n  }\n  return cur + 1\n}",
     "lang": "javascript"
   },
@@ -348,7 +408,8 @@
     "title": "Remove Duplicates from Sorted List II",
     "titleSlug": "remove-duplicates-from-sorted-list-ii",
     "status": "ac",
-    "content": "<p>Given a sorted linked list, delete all nodes that have duplicate numbers, leaving only <em>distinct</em> numbers from the original list.</p>\n\n<p>Return the linked list sorted as well.</p>\n\n<p><strong>Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> 1-&gt;2-&gt;3-&gt;3-&gt;4-&gt;4-&gt;5\n<strong>Output:</strong> 1-&gt;2-&gt;5\n</pre>\n\n<p><strong>Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> 1-&gt;1-&gt;1-&gt;2-&gt;3\n<strong>Output:</strong> 2-&gt;3\n</pre>\n",
+    "difficulty": "Medium",
+    "questionId": "82",
     "code": "/**\n * Definition for singly-linked list.\n * function ListNode(val) {\n *     this.val = val;\n *     this.next = null;\n * }\n */\n/**\n * @param {ListNode} head\n * @return {ListNode}\n */\nvar deleteDuplicates = function(head) {\n  const dummyHead = new ListNode(0)\n  dummyHead.next = head\n\n  let slowPoint = dummyHead\n\n  while(slowPoint.next) {\n    let cur = slowPoint.next\n    let quickPoint = cur\n    while(quickPoint.next && quickPoint.next.val === cur.val) {\n      quickPoint = quickPoint.next\n    }\n\n    if (cur === quickPoint) {\n      slowPoint = slowPoint.next\n    } else {\n      slowPoint.next = quickPoint.next\n    }\n  }\n\n  return dummyHead.next\n}",
     "lang": "javascript"
   },
@@ -356,7 +417,8 @@
     "title": "Remove Duplicates from Sorted List",
     "titleSlug": "remove-duplicates-from-sorted-list",
     "status": "ac",
-    "content": "<p>Given a sorted linked list, delete all duplicates such that each element appear only <em>once</em>.</p>\r\n\r\n<p><strong>Example 1:</strong></p>\r\n\r\n<pre>\r\n<strong>Input:</strong> 1-&gt;1-&gt;2\r\n<strong>Output:</strong> 1-&gt;2\r\n</pre>\r\n\r\n<p><strong>Example 2:</strong></p>\r\n\r\n<pre>\r\n<strong>Input:</strong> 1-&gt;1-&gt;2-&gt;3-&gt;3\r\n<strong>Output:</strong> 1-&gt;2-&gt;3\r\n</pre>\r\n",
+    "difficulty": "Easy",
+    "questionId": "83",
     "code": "/**\n * Definition for singly-linked list.\n * function ListNode(val) {\n *     this.val = val;\n *     this.next = null;\n * }\n */\n/**\n * @param {ListNode} head\n * @return {ListNode}\n */\nvar deleteDuplicates = function(head) {\n  const listNode = new ListNode(0)\n  listNode.next = head\n  let cur = listNode.next\n  while (cur) {\n    let next = cur.next\n    while (next && next.val === cur.val) {\n      next = next.next\n    }\n    cur.next = next\n    cur = cur.next\n  }\n  return listNode.next\n}",
     "lang": "javascript"
   },
@@ -364,7 +426,8 @@
     "title": "Partition List",
     "titleSlug": "partition-list",
     "status": "ac",
-    "content": "<p>Given a linked list and a value <em>x</em>, partition it such that all nodes less than <em>x</em> come before nodes greater than or equal to <em>x</em>.</p>\r\n\r\n<p>You should preserve the original relative order of the nodes in each of the two partitions.</p>\r\n\r\n<p><strong>Example:</strong></p>\r\n\r\n<pre>\r\n<strong>Input:</strong> head = 1-&gt;4-&gt;3-&gt;2-&gt;5-&gt;2, <em>x</em> = 3\r\n<strong>Output:</strong> 1-&gt;2-&gt;2-&gt;4-&gt;3-&gt;5\r\n</pre>\r\n",
+    "difficulty": "Medium",
+    "questionId": "86",
     "code": "/**\n * Definition for singly-linked list.\n * function ListNode(val) {\n *     this.val = val;\n *     this.next = null;\n * }\n */\n/**\n * @param {ListNode} head\n * @param {number} x\n * @return {ListNode}\n */\nvar partition = function(head, x) {\n  const listNode = new ListNode(0)\n  listNode.next = head\n\n  const smallerThanX = new ListNode(0)\n  const biggerThanX = new ListNode(0)\n\n  let cur = listNode.next\n  let smallPoint = smallerThanX\n  let bigPoint = biggerThanX\n  while (cur) {\n    if (cur.val < x) {\n      smallPoint.next = cur\n      smallPoint = smallPoint.next\n    } else {\n      bigPoint.next = cur\n      bigPoint = bigPoint.next\n    }\n\n    cur = cur.next\n  }\n\n  bigPoint.next = null\n  smallPoint.next = biggerThanX.next\n\n  return smallerThanX.next\n}",
     "lang": "javascript"
   },
@@ -372,7 +435,8 @@
     "title": "Merge Sorted Array",
     "titleSlug": "merge-sorted-array",
     "status": "ac",
-    "content": "<p>Given two sorted integer arrays <em>nums1</em> and <em>nums2</em>, merge <em>nums2</em> into <em>nums1</em> as one sorted array.</p>\n\n<p><strong>Note:</strong></p>\n\n<ul>\n\t<li>The number of elements initialized in <em>nums1</em> and <em>nums2</em> are <em>m</em> and <em>n</em> respectively.</li>\n\t<li>You may assume that <em>nums1</em> has enough space (size that is&nbsp;<strong>equal</strong> to <em>m</em> + <em>n</em>) to hold additional elements from <em>nums2</em>.</li>\n</ul>\n\n<p><strong>Example:</strong></p>\n\n<pre>\n<strong>Input:</strong>\nnums1 = [1,2,3,0,0,0], m = 3\nnums2 = [2,5,6],       n = 3\n\n<strong>Output:</strong>&nbsp;[1,2,2,3,5,6]\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>-10^9 &lt;= nums1[i], nums2[i] &lt;= 10^9</code></li>\n\t<li><code>nums1.length == m + n</code></li>\n\t<li><code>nums2.length == n</code></li>\n</ul>\n",
+    "difficulty": "Easy",
+    "questionId": "88",
     "code": "/**\n * @param {number[]} nums1\n * @param {number} m\n * @param {number[]} nums2\n * @param {number} n\n * @return {void} Do not return anything, modify nums1 in-place instead.\n */\nvar merge = function(nums1, m, nums2, n) {\n  let l = 0 // 第一个数组下标\n  let r = 0 // 第二个数组下标\n  const arr = []\n\n  while (l < m && r < n) {\n    if (nums1[l] <= nums2[r]) {\n      arr.push(nums1[l])\n      l++\n    } else if (nums1[l] > nums2[r]) {\n      arr.push(nums2[r])\n      r++\n    }\n  }\n\n  while (l < m) {\n    arr.push(nums1[l])\n    l++\n  }\n\n  while (r < n) {\n    arr.push(nums2[r])\n    r++\n  }\n\n  for (let i = 0; i < m + n; i++) {\n    nums1[i] = arr[i]\n  }\n}",
     "lang": "javascript"
   },
@@ -380,7 +444,8 @@
     "title": "Gray Code",
     "titleSlug": "gray-code",
     "status": "ac",
-    "content": "<p>The gray code is a binary numeral system where two successive values differ in only one bit.</p>\r\n\r\n<p>Given a non-negative integer <em>n</em> representing the total number of bits in the code, print the sequence of gray code. A gray code sequence must begin with 0.</p>\r\n\r\n<p><strong>Example 1:</strong></p>\r\n\r\n<pre>\r\n<strong>Input:</strong>&nbsp;2\r\n<strong>Output:</strong>&nbsp;<code>[0,1,3,2]</code>\r\n<strong>Explanation:</strong>\r\n00 - 0\r\n01 - 1\r\n11 - 3\r\n10 - 2\r\n\r\nFor a given&nbsp;<em>n</em>, a gray code sequence may not be uniquely defined.\r\nFor example, [0,2,3,1] is also a valid gray code sequence.\r\n\r\n00 - 0\r\n10 - 2\r\n11 - 3\r\n01 - 1\r\n</pre>\r\n\r\n<p><strong>Example 2:</strong></p>\r\n\r\n<pre>\r\n<strong>Input:</strong>&nbsp;0\r\n<strong>Output:</strong>&nbsp;<code>[0]\r\n<strong>Explanation:</strong> We define the gray code sequence to begin with 0.\r\n&nbsp;            A gray code sequence of <em>n</em> has size = 2<sup>n</sup>, which for <em>n</em> = 0 the size is 2<sup>0</sup> = 1.\r\n&nbsp;            Therefore, for <em>n</em> = 0 the gray code sequence is [0].</code>\r\n</pre>\r\n",
+    "difficulty": "Medium",
+    "questionId": "89",
     "code": "/**\n * @param {number} n\n * @return {number[]}\n */\nvar grayCode = function (n) {\n  const arr = new Array()\n  arr[0] = [0]\n  for (let i = 1; i <= n; i++) {\n    const newArr = arr[i - 1].slice().reverse().map(r => r + Math.pow(2, i - 1))\n    arr[i] = [...arr[i - 1], ...newArr]\n  }\n  return arr[n]\n}",
     "lang": "javascript"
   },
@@ -388,7 +453,8 @@
     "title": "Reverse Linked List II",
     "titleSlug": "reverse-linked-list-ii",
     "status": "ac",
-    "content": "<p>Reverse a linked list from position <em>m</em> to <em>n</em>. Do it in one-pass.</p>\r\n\r\n<p><strong>Note:&nbsp;</strong>1 &le; <em>m</em> &le; <em>n</em> &le; length of list.</p>\r\n\r\n<p><strong>Example:</strong></p>\r\n\r\n<pre>\r\n<strong>Input:</strong> 1-&gt;2-&gt;3-&gt;4-&gt;5-&gt;NULL, <em>m</em> = 2, <em>n</em> = 4\r\n<strong>Output:</strong> 1-&gt;4-&gt;3-&gt;2-&gt;5-&gt;NULL\r\n</pre>\r\n",
+    "difficulty": "Medium",
+    "questionId": "92",
     "code": "/**\n * Definition for singly-linked list.\n * function ListNode(val) {\n *     this.val = val;\n *     this.next = null;\n * }\n */\n/**\n * @param {ListNode} head\n * @param {number} m\n * @param {number} n\n * @return {ListNode}\n */\nvar reverseBetween = function(head, m, n) {\n  const originList = new ListNode(0)\n  originList.next = head\n\n  let listNode = originList\n\n  for (let i = 0; i < m - 1; i++) {\n    listNode = listNode.next\n  }\n\n  let prev = null\n  let cur = listNode.next\n\n  for (let i = 0; i < n - m + 1; i++) {\n    let next = cur.next\n\n    cur.next = prev\n    prev = cur\n    cur = next\n  }\n\n  listNode.next.next = cur\n  listNode.next = prev\n  return originList.next\n}",
     "lang": "javascript"
   },
@@ -396,7 +462,8 @@
     "title": "Restore IP Addresses",
     "titleSlug": "restore-ip-addresses",
     "status": "ac",
-    "content": "<p>Given a string <code>s</code> containing only digits, return all possible valid IP addresses that can be obtained from <code>s</code>. You can return them in <strong>any</strong> order.</p>\n\n<p>A <strong>valid IP address</strong> consists of exactly four integers, each integer is between <code>0</code> and <code>255</code>, separated by single dots and cannot have leading zeros. For example, &quot;0.1.2.201&quot; and &quot;192.168.1.1&quot; are <strong>valid</strong> IP addresses and &quot;0.011.255.245&quot;, &quot;192.168.1.312&quot; and &quot;192.168@1.1&quot; are <strong>invalid</strong> IP addresses.&nbsp;</p>\n\n<p>&nbsp;</p>\n<p><strong>Example 1:</strong></p>\n<pre><strong>Input:</strong> s = \"25525511135\"\n<strong>Output:</strong> [\"255.255.11.135\",\"255.255.111.35\"]\n</pre><p><strong>Example 2:</strong></p>\n<pre><strong>Input:</strong> s = \"0000\"\n<strong>Output:</strong> [\"0.0.0.0\"]\n</pre><p><strong>Example 3:</strong></p>\n<pre><strong>Input:</strong> s = \"1111\"\n<strong>Output:</strong> [\"1.1.1.1\"]\n</pre><p><strong>Example 4:</strong></p>\n<pre><strong>Input:</strong> s = \"010010\"\n<strong>Output:</strong> [\"0.10.0.10\",\"0.100.1.0\"]\n</pre><p><strong>Example 5:</strong></p>\n<pre><strong>Input:</strong> s = \"101023\"\n<strong>Output:</strong> [\"1.0.10.23\",\"1.0.102.3\",\"10.1.0.23\",\"10.10.2.3\",\"101.0.2.3\"]\n</pre>\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>0 &lt;= s.length &lt;= 3000</code></li>\n\t<li><code>s</code> consists of digits only.</li>\n</ul>\n",
+    "difficulty": "Medium",
+    "questionId": "93",
     "code": "/**\n * @param {string} s\n * @return {string[]}\n */\nvar restoreIpAddresses = function (s) {\n  const arr = []\n  for (let i = 1; i < 4; i++) {\n    for (let j = i + 1; j < i + 5; j++) {\n      for (let z = j + 1; z < j + 5; z++) {\n        const a = s.slice(0, i)\n        const b = s.slice(i, j)\n        const c = s.slice(j, z)\n        const d = s.slice(z, s.length)\n        if (validate(a) && validate(b) && validate(c) && validate(d)) {\n          arr.push(`${a}.${b}.${c}.${d}`)\n        }\n      }\n    }\n  }\n  return arr\n};\n\nvar validate = function (value) {\n  if (value.length > 3 || value.length === 0 || +value > 255 || (value[0] === '0' && value.length > 1)) {\n    return false\n  }\n  return true\n}",
     "lang": "javascript"
   },
@@ -404,7 +471,8 @@
     "title": "Binary Tree Inorder Traversal",
     "titleSlug": "binary-tree-inorder-traversal",
     "status": "ac",
-    "content": "<p>Given the <code>root</code> of a binary tree, return <em>the inorder traversal of its nodes&#39; values</em>.</p>\n\n<p><strong>Follow up:</strong> Recursive solution is trivial, could you do it iteratively?</p>\n\n<p>&nbsp;</p>\n<p><strong>Example 1:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2020/09/15/inorder_1.jpg\" style=\"width: 202px; height: 324px;\" />\n<pre>\n<strong>Input:</strong> root = [1,null,2,3]\n<strong>Output:</strong> [1,3,2]\n</pre>\n\n<p><strong>Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> root = []\n<strong>Output:</strong> []\n</pre>\n\n<p><strong>Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> root = [1]\n<strong>Output:</strong> [1]\n</pre>\n\n<p><strong>Example 4:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2020/09/15/inorder_5.jpg\" style=\"width: 202px; height: 202px;\" />\n<pre>\n<strong>Input:</strong> root = [1,2]\n<strong>Output:</strong> [2,1]\n</pre>\n\n<p><strong>Example 5:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2020/09/15/inorder_4.jpg\" style=\"width: 202px; height: 202px;\" />\n<pre>\n<strong>Input:</strong> root = [1,null,2]\n<strong>Output:</strong> [1,2]\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li>The number of nodes in the tree is in the range <code>[0, 100]</code>.</li>\n\t<li><code>-100 &lt;= Node.val &lt;= 100</code></li>\n</ul>\n",
+    "difficulty": "Medium",
+    "questionId": "94",
     "code": "/**\n * Definition for a binary tree node.\n * function TreeNode(val) {\n *     this.val = val;\n *     this.left = this.right = null;\n * }\n */\n/**\n * @param {TreeNode} root\n * @return {number[]}\n */\nvar inorderTraversal = function(root) {\n  const printArr = []\n  if (!root) return printArr\n  const stack = []\n  stack.push({\n    color: 'white',\n    node: root\n  })\n\n  while (stack.length > 0) {\n    const pickValue = stack.pop()\n    const { color, node } = pickValue\n    if (color === 'gray') {\n      printArr.push(node.val)\n    } else {\n      node.right && stack.push({ color: 'white', node: node.right })\n      stack.push({ color: 'gray', node })\n      node.left && stack.push({ color: 'white', node: node.left })\n    }\n  }\n\n  return printArr\n}",
     "lang": "javascript"
   },
@@ -412,7 +480,8 @@
     "title": "Same Tree",
     "titleSlug": "same-tree",
     "status": "ac",
-    "content": "<p>Given two binary trees, write a function to check if they are the same or not.</p>\r\n\r\n<p>Two binary trees are considered the same if they are structurally identical and the nodes have the same value.</p>\r\n\r\n<p><strong>Example 1:</strong></p>\r\n\r\n<pre>\r\n<strong>Input:</strong>     1         1\r\n          / \\       / \\\r\n         2   3     2   3\r\n\r\n        [1,2,3],   [1,2,3]\r\n\r\n<strong>Output:</strong> true\r\n</pre>\r\n\r\n<p><strong>Example 2:</strong></p>\r\n\r\n<pre>\r\n<strong>Input:</strong>     1         1\r\n          /           \\\r\n         2             2\r\n\r\n        [1,2],     [1,null,2]\r\n\r\n<strong>Output:</strong> false\r\n</pre>\r\n\r\n<p><strong>Example 3:</strong></p>\r\n\r\n<pre>\r\n<strong>Input:</strong>     1         1\r\n          / \\       / \\\r\n         2   1     1   2\r\n\r\n        [1,2,1],   [1,1,2]\r\n\r\n<strong>Output:</strong> false\r\n</pre>\r\n",
+    "difficulty": "Easy",
+    "questionId": "100",
     "code": "/**\n * Definition for a binary tree node.\n * function TreeNode(val) {\n *     this.val = val;\n *     this.left = this.right = null;\n * }\n */\n/**\n * @param {TreeNode} p\n * @param {TreeNode} q\n * @return {boolean}\n */\nvar isSameTree = function (p, q) {\n  if (p === null && q === null) {\n    return true\n  } else if (p === null || q === null) {\n    return false\n  } \n  \n  if (p.val === q.val) {\n    return isSameTree(p.left, q.left) && isSameTree(p.right, q.right)\n  } else {\n    return false\n  }\n};\n",
     "lang": "javascript"
   },
@@ -420,7 +489,8 @@
     "title": "Symmetric Tree",
     "titleSlug": "symmetric-tree",
     "status": "ac",
-    "content": "<p>Given a binary tree, check whether it is a mirror of itself (ie, symmetric around its center).</p>\n\n<p>For example, this binary tree <code>[1,2,2,3,4,4,3]</code> is symmetric:</p>\n\n<pre>\n    1\n   / \\\n  2   2\n / \\ / \\\n3  4 4  3\n</pre>\n\n<p>&nbsp;</p>\n\n<p>But the following <code>[1,2,2,null,3,null,3]</code> is not:</p>\n\n<pre>\n    1\n   / \\\n  2   2\n   \\   \\\n   3    3\n</pre>\n\n<p>&nbsp;</p>\n\n<p><b>Follow up:</b> Solve it both recursively and iteratively.</p>\n",
+    "difficulty": "Easy",
+    "questionId": "101",
     "code": "/**\n * Definition for a binary tree node.\n * function TreeNode(val) {\n *     this.val = val;\n *     this.left = this.right = null;\n * }\n */\n/**\n * @param {TreeNode} root\n * @return {boolean}\n */\nvar isSymmetric = function (root) {\n  if (!root) return true\n  if (!root.left && !root.right) return true\n  if (root.left && root.right && root.left.val !== root.right.val) return false\n\n  const stack = []\n\n  stack.push(root.right)\n  stack.push(root.left)\n\n  while (stack.length > 0) {\n    const popItemLeft = stack.pop()\n    const popItemRight = stack.pop()\n\n    if (!popItemLeft && !popItemRight) continue\n    if (!popItemLeft || !popItemRight || popItemLeft.val !== popItemRight.val) return false\n\n    stack.push(popItemRight.right, popItemLeft.left, popItemRight.left, popItemLeft.right)\n  }\n\n  return true\n};",
     "lang": "javascript"
   },
@@ -428,7 +498,8 @@
     "title": "Binary Tree Level Order Traversal",
     "titleSlug": "binary-tree-level-order-traversal",
     "status": "ac",
-    "content": "<p>Given a binary tree, return the <i>level order</i> traversal of its nodes' values. (ie, from left to right, level by level).</p>\r\n\r\n<p>\r\nFor example:<br />\r\nGiven binary tree <code>[3,9,20,null,null,15,7]</code>,<br />\r\n<pre>\r\n    3\r\n   / \\\r\n  9  20\r\n    /  \\\r\n   15   7\r\n</pre>\r\n</p>\r\n<p>\r\nreturn its level order traversal as:<br />\r\n<pre>\r\n[\r\n  [3],\r\n  [9,20],\r\n  [15,7]\r\n]\r\n</pre>\r\n</p>",
+    "difficulty": "Medium",
+    "questionId": "102",
     "code": "/**\n * Definition for a binary tree node.\n * function TreeNode(val) {\n *     this.val = val;\n *     this.left = this.right = null;\n * }\n */\n/**\n * @param {TreeNode} root\n * @return {number[][]}\n */\nvar levelOrder = function(root) {\n  const printArr = []\n  if (!root) return printArr\n  const list = []\n  list.push({ node: root, level: 0 })\n  while (list.length > 0) {\n    const { node, level } = list.shift()\n    if (!printArr[level]) {\n      printArr[level] = []\n    }\n    printArr[level].push(node.val)\n    node.left && list.push({ node: node.left, level: level + 1 })\n    node.right && list.push({ node: node.right, level: level + 1 })\n  }\n  return printArr\n}",
     "lang": "javascript"
   },
@@ -436,7 +507,8 @@
     "title": "Binary Tree Zigzag Level Order Traversal",
     "titleSlug": "binary-tree-zigzag-level-order-traversal",
     "status": "ac",
-    "content": "<p>Given a binary tree, return the <i>zigzag level order</i> traversal of its nodes' values. (ie, from left to right, then right to left for the next level and alternate between).</p>\r\n\r\n<p>\r\nFor example:<br />\r\nGiven binary tree <code>[3,9,20,null,null,15,7]</code>,<br />\r\n<pre>\r\n    3\r\n   / \\\r\n  9  20\r\n    /  \\\r\n   15   7\r\n</pre>\r\n</p>\r\n<p>\r\nreturn its zigzag level order traversal as:<br />\r\n<pre>\r\n[\r\n  [3],\r\n  [20,9],\r\n  [15,7]\r\n]\r\n</pre>\r\n</p>",
+    "difficulty": "Medium",
+    "questionId": "103",
     "code": "/**\n * Definition for a binary tree node.\n * function TreeNode(val) {\n *     this.val = val;\n *     this.left = this.right = null;\n * }\n */\n/**\n * @param {TreeNode} root\n * @return {number[][]}\n */\nvar zigzagLevelOrder = function(root) {\n  const printArr = []\n  if (!root) return printArr\n  const list = []\n  list.push({ level: 0, node: root })\n  while(list.length > 0) {\n    const { level, node } = list.shift()\n    if (!printArr[level]) {\n      printArr[level] = []\n    }\n\n    if (level % 2 === 0) {\n      printArr[level].push(node.val)\n    } else {\n      printArr[level].unshift(node.val)\n    }\n\n    node.left && list.push({ level: level + 1, node: node.left })\n    node.right && list.push({ level: level + 1, node: node.right })\n  }\n\n  return printArr\n}",
     "lang": "javascript"
   },
@@ -444,7 +516,8 @@
     "title": "Maximum Depth of Binary Tree",
     "titleSlug": "maximum-depth-of-binary-tree",
     "status": "ac",
-    "content": "<p>Given a binary tree, find its maximum depth.</p>\r\n\r\n<p>The maximum depth is the number of nodes along the longest path from the root node down to the farthest leaf node.</p>\r\n\r\n<p><strong>Note:</strong>&nbsp;A leaf is a node with no children.</p>\r\n\r\n<p><strong>Example:</strong></p>\r\n\r\n<p>Given binary tree <code>[3,9,20,null,null,15,7]</code>,</p>\r\n\r\n<pre>\r\n    3\r\n   / \\\r\n  9  20\r\n    /  \\\r\n   15   7</pre>\r\n\r\n<p>return its depth = 3.</p>\r\n",
+    "difficulty": "Easy",
+    "questionId": "104",
     "code": "/**\n * Definition for a binary tree node.\n * function TreeNode(val) {\n *     this.val = val;\n *     this.left = this.right = null;\n * }\n */\n/**\n * @param {TreeNode} root\n * @return {number}\n */\nvar maxDepth = function (root) {\n  return root === null ? 0 : Math.max(maxDepth(root.left), maxDepth(root.right)) + 1\n};\n\n",
     "lang": "javascript"
   },
@@ -452,7 +525,8 @@
     "title": "Binary Tree Level Order Traversal II",
     "titleSlug": "binary-tree-level-order-traversal-ii",
     "status": "ac",
-    "content": "<p>Given a binary tree, return the <i>bottom-up level order</i> traversal of its nodes' values. (ie, from left to right, level by level from leaf to root).</p>\r\n\r\n<p>\r\nFor example:<br />\r\nGiven binary tree <code>[3,9,20,null,null,15,7]</code>,<br />\r\n<pre>\r\n    3\r\n   / \\\r\n  9  20\r\n    /  \\\r\n   15   7\r\n</pre>\r\n</p>\r\n<p>\r\nreturn its bottom-up level order traversal as:<br />\r\n<pre>\r\n[\r\n  [15,7],\r\n  [9,20],\r\n  [3]\r\n]\r\n</pre>\r\n</p>",
+    "difficulty": "Easy",
+    "questionId": "107",
     "code": "/**\n * Definition for a binary tree node.\n * function TreeNode(val) {\n *     this.val = val;\n *     this.left = this.right = null;\n * }\n */\n/**\n * @param {TreeNode} root\n * @return {number[][]}\n */\nvar levelOrderBottom = function(root) {\n  const printArr = []\n  if (!root) return printArr\n  const list = []\n  list.push({ node: root, level: 0 })\n  while (list.length > 0) {\n    const { node, level } = list.shift()\n    if (!printArr[level]) {\n      printArr.unshift([])\n    }\n    printArr[0].push(node.val)\n    node.left && (list.push({ node: node.left, level: level + 1 }))\n    node.right && (list.push({ node: node.right, level: level + 1 }))\n  }\n  return printArr\n}",
     "lang": "javascript"
   },
@@ -460,7 +534,8 @@
     "title": "Balanced Binary Tree",
     "titleSlug": "balanced-binary-tree",
     "status": "ac",
-    "content": "<p>Given a binary tree, determine if it is height-balanced.</p>\n\n<p>For this problem, a height-balanced binary tree is defined as:</p>\n\n<blockquote>\n<p>a binary tree in which the left and right subtrees of <em>every</em> node differ in height by no more than 1.</p>\n</blockquote>\n\n<p>&nbsp;</p>\n\n<p><strong>Example 1:</strong></p>\n\n<p>Given the following tree <code>[3,9,20,null,null,15,7]</code>:</p>\n\n<pre>\n    3\n   / \\\n  9  20\n    /  \\\n   15   7</pre>\n\n<p>Return true.<br />\n<br />\n<strong>Example 2:</strong></p>\n\n<p>Given the following tree <code>[1,2,2,3,3,null,null,4,4]</code>:</p>\n\n<pre>\n       1\n      / \\\n     2   2\n    / \\\n   3   3\n  / \\\n 4   4\n</pre>\n\n<p>Return false.</p>\n",
+    "difficulty": "Easy",
+    "questionId": "110",
     "code": "/**\n * Definition for a binary tree node.\n * function TreeNode(val) {\n *     this.val = val;\n *     this.left = this.right = null;\n * }\n */\n/**\n * @param {TreeNode} root\n * @return {boolean}\n */\nvar isBalanced = function(root) {\n  return deep(root) === -1 ? false : true\n};\n\nvar deep = (node) => {\n  if (!node) return 0\n  const leftNode = deep(node.left)\n  if (leftNode === -1) return -1\n  const rightNode = deep(node.right)\n  if (rightNode === -1) return -1\n  return Math.abs(leftNode - rightNode) <= 1 ? Math.max(leftNode, rightNode) + 1 : -1\n}",
     "lang": "javascript"
   },
@@ -468,351 +543,403 @@
     "title": "Minimum Depth of Binary Tree",
     "titleSlug": "minimum-depth-of-binary-tree",
     "status": "ac",
-    "content": "<p>Given a binary tree, find its minimum depth.</p>\r\n\r\n<p>The minimum depth is the number of nodes along the shortest path from the root node down to the nearest leaf node.</p>\r\n\r\n<p><strong>Note:</strong>&nbsp;A leaf is a node with no children.</p>\r\n\r\n<p><strong>Example:</strong></p>\r\n\r\n<p>Given binary tree <code>[3,9,20,null,null,15,7]</code>,</p>\r\n\r\n<pre>\r\n    3\r\n   / \\\r\n  9  20\r\n    /  \\\r\n   15   7</pre>\r\n\r\n<p>return its minimum&nbsp;depth = 2.</p>\r\n",
-    "code": "/**\n * Definition for a binary tree node.\n * function TreeNode(val) {\n *   this.val = val;\n *   this.left = this.right = null;\n * }\n */\n/**\n * @param {TreeNode} root\n * @return {number}\n */\nvar minDepth = function(root) {\n  if (!root) return 0\n  const leftRootMinDepth = minDepth(root.left)\n  const rightRootMinDepth = minDepth(root.right)\n  if (leftRootMinDepth === 0 || rightRootMinDepth === 0) {\n    return Math.max(leftRootMinDepth, rightRootMinDepth) + 1\n  }\n  return Math.min(leftRootMinDepth, rightRootMinDepth) + 1\n};",
+    "difficulty": "Easy",
+    "questionId": "111",
     "lang": "javascript"
   },
   {
     "title": "Path Sum",
     "titleSlug": "path-sum",
     "status": "ac",
-    "content": "<p>Given a binary tree and a sum, determine if the tree has a root-to-leaf path such that adding up all the values along the path equals the given sum.</p>\r\n\r\n<p><strong>Note:</strong>&nbsp;A leaf is a node with no children.</p>\r\n\r\n<p><strong>Example:</strong></p>\r\n\r\n<p>Given the below binary tree and <code>sum = 22</code>,</p>\r\n\r\n<pre>\r\n      <strong>5</strong>\r\n     <strong>/</strong> \\\r\n    <strong>4</strong>   8\r\n   <strong>/</strong>   / \\\r\n  <strong>11</strong>  13  4\r\n /  <strong>\\</strong>      \\\r\n7    <strong>2</strong>      1\r\n</pre>\r\n\r\n<p>return true, as there exist a root-to-leaf path <code>5-&gt;4-&gt;11-&gt;2</code> which sum is 22.</p>\r\n",
-    "code": "/**\n * Definition for a binary tree node.\n * function TreeNode(val) {\n *     this.val = val;\n *     this.left = this.right = null;\n * }\n */\n/**\n * @param {TreeNode} root\n * @param {number} sum\n * @return {boolean}\n */\nvar hasPathSum = function(root, sum) {\n  if (!root) return false\n  if (!root.left && !root.right) return root.val === sum\n  const remainingVal = sum - root.val\n  return hasPathSum(root.left, remainingVal) || hasPathSum(root.right, remainingVal)\n}",
+    "difficulty": "Easy",
+    "questionId": "112",
     "lang": "javascript"
   },
   {
     "title": "Path Sum II",
     "titleSlug": "path-sum-ii",
     "status": "ac",
-    "content": "<p>Given a binary tree and a sum, find all root-to-leaf paths where each path&#39;s sum equals the given sum.</p>\r\n\r\n<p><strong>Note:</strong>&nbsp;A leaf is a node with no children.</p>\r\n\r\n<p><strong>Example:</strong></p>\r\n\r\n<p>Given the below binary tree and <code>sum = 22</code>,</p>\r\n\r\n<pre>\r\n      <strong>5</strong>\r\n     <strong>/ \\</strong>\r\n    <strong>4   8</strong>\r\n   <strong>/</strong>   / <strong>\\</strong>\r\n  <strong>11</strong>  13  <strong>4</strong>\r\n /  <strong>\\</strong>    <strong>/</strong> \\\r\n7    <strong>2</strong>  <strong>5</strong>   1\r\n</pre>\r\n\r\n<p>Return:</p>\r\n\r\n<pre>\r\n[\r\n   [5,4,11,2],\r\n   [5,8,4,5]\r\n]\r\n</pre>\r\n",
-    "code": "/**\n * Definition for a binary tree node.\n * function TreeNode(val) {\n *     this.val = val;\n *     this.left = this.right = null;\n * }\n */\n/**\n * @param {TreeNode} root\n * @param {number} sum\n * @return {number[][]}\n */\nvar pathSum = function(root, sum) {\n  const result = []\n  if (!root) return []\n  analyzeSum(root, '', result, sum)\n  return result.map(val => {\n    return val.split('->')\n  })\n};\n\nvar analyzeSum = function(node, str, result, extra) {\n  if (!node) return\n  if (!node.left && !node.right && extra === node.val) {\n    str += node.val\n    result.push(str)\n    return\n  }\n\n  str += `${node.val}->`\n\n  analyzeSum(node.left, str, result, extra - node.val)\n  analyzeSum(node.right, str, result, extra - node.val)\n}",
+    "difficulty": "Medium",
+    "questionId": "113",
     "lang": "javascript"
   },
   {
     "title": "Best Time to Buy and Sell Stock",
     "titleSlug": "best-time-to-buy-and-sell-stock",
     "status": "ac",
-    "content": "<p>Say you have an array for which the <em>i</em><sup>th</sup> element is the price of a given stock on day <em>i</em>.</p>\r\n\r\n<p>If you were only permitted to complete at most one transaction (i.e., buy one and sell one share of the stock), design an algorithm to find the maximum profit.</p>\r\n\r\n<p>Note that you cannot sell a stock before you buy one.</p>\r\n\r\n<p><strong>Example 1:</strong></p>\r\n\r\n<pre>\r\n<strong>Input:</strong> [7,1,5,3,6,4]\r\n<strong>Output:</strong> 5\r\n<strong>Explanation:</strong> Buy on day 2 (price = 1) and sell on day 5 (price = 6), profit = 6-1 = 5.\r\n&nbsp;            Not 7-1 = 6, as selling price needs to be larger than buying price.\r\n</pre>\r\n\r\n<p><strong>Example 2:</strong></p>\r\n\r\n<pre>\r\n<strong>Input:</strong> [7,6,4,3,1]\r\n<strong>Output:</strong> 0\r\n<strong>Explanation:</strong> In this case, no transaction is done, i.e. max profit = 0.\r\n</pre>\r\n",
-    "code": "/**\n * @param {number[]} prices\n * @return {number}\n */\nvar maxProfit = function(prices) {\n    let max = 0\n    const length = prices.length\n    for (let i = 0; i < length; i++) {\n      for (let x = i + 1; x < length; x++) {\n        max = Math.max(max, prices[x] - prices[i])\n      }\n    }\n    return max\n};",
+    "difficulty": "Easy",
+    "questionId": "121",
     "lang": "javascript"
   },
   {
     "title": "Valid Palindrome",
     "titleSlug": "valid-palindrome",
     "status": "ac",
-    "content": "<p>Given a string, determine if it is a palindrome, considering only alphanumeric characters and ignoring cases.</p>\r\n\r\n<p><strong>Note:</strong>&nbsp;For the purpose of this problem, we define empty string as valid palindrome.</p>\r\n\r\n<p><strong>Example 1:</strong></p>\r\n\r\n<pre>\r\n<strong>Input:</strong> &quot;A man, a plan, a canal: Panama&quot;\r\n<strong>Output:</strong> true\r\n</pre>\r\n\r\n<p><strong>Example 2:</strong></p>\r\n\r\n<pre>\r\n<strong>Input:</strong> &quot;race a car&quot;\r\n<strong>Output:</strong> false\r\n</pre>\r\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>s</code> consists only of printable ASCII characters.</li>\n</ul>\n",
-    "code": "/**\n * @param {string} s\n * @return {boolean}\n */\nvar isPalindrome = function(s) {\n  const sToLowerCase = s.toLowerCase()\n\n  let left = 0, right = s.length - 1\n  while (left <= right) {\n    if (isValidate(sToLowerCase[left]) && isValidate(sToLowerCase[right])) {\n      if (sToLowerCase[left] !== sToLowerCase[right]) {\n        return false\n      }\n      left++\n      right--\n    }\n    if (!isValidate(sToLowerCase[left])) {\n      left++\n    }\n    if (!isValidate(sToLowerCase[right])) {\n      right--\n    }\n  }\n\n  return true\n}\n\n/* 校验函数 */\nvar isValidate = (value) => {\n  return /[a-z]|[0-9]/.test(value)\n}",
+    "difficulty": "Easy",
+    "questionId": "125",
     "lang": "javascript"
   },
   {
     "title": "Word Ladder",
     "titleSlug": "word-ladder",
     "status": "ac",
-    "content": "<p>Given two words (<em>beginWord</em> and <em>endWord</em>), and a dictionary&#39;s word list, find the length of shortest transformation sequence from <em>beginWord</em> to <em>endWord</em>, such that:</p>\n\n<ol>\n\t<li>Only one letter can be changed at a time.</li>\n\t<li>Each transformed word must exist in the word list.</li>\n</ol>\n\n<p><strong>Note:</strong></p>\n\n<ul>\n\t<li>Return 0 if there is no such transformation sequence.</li>\n\t<li>All words have the same length.</li>\n\t<li>All words contain only lowercase alphabetic characters.</li>\n\t<li>You may assume no duplicates in the word list.</li>\n\t<li>You may assume <em>beginWord</em> and <em>endWord</em> are non-empty and are not the same.</li>\n</ul>\n\n<p><strong>Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong>\nbeginWord = &quot;hit&quot;,\nendWord = &quot;cog&quot;,\nwordList = [&quot;hot&quot;,&quot;dot&quot;,&quot;dog&quot;,&quot;lot&quot;,&quot;log&quot;,&quot;cog&quot;]\n\n<strong>Output: </strong>5\n\n<strong>Explanation:</strong> As one shortest transformation is &quot;hit&quot; -&gt; &quot;hot&quot; -&gt; &quot;dot&quot; -&gt; &quot;dog&quot; -&gt; &quot;cog&quot;,\nreturn its length 5.\n</pre>\n\n<p><strong>Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong>\nbeginWord = &quot;hit&quot;\nendWord = &quot;cog&quot;\nwordList = [&quot;hot&quot;,&quot;dot&quot;,&quot;dog&quot;,&quot;lot&quot;,&quot;log&quot;]\n\n<strong>Output:</strong>&nbsp;0\n\n<strong>Explanation:</strong>&nbsp;The endWord &quot;cog&quot; is not in wordList, therefore no possible<strong>&nbsp;</strong>transformation.\n</pre>\n\n<ul>\n</ul>\n",
-    "code": "/**\n * @param {string} beginWord\n * @param {string} endWord\n * @param {string[]} wordList\n * @return {number}\n */\nvar ladderLength = function(beginWord, endWord, wordList) {\n  if (wordList.indexOf(endWord) === -1) return 0\n  const beginQueue = []\n  const endQueue = []\n\n  const visitedBeginObj = {\n    [beginWord]: {visited: true, level: 1}\n  }\n  const visitedEndObj = {\n    [endWord]: {visited: true, level: 1}\n  }\n  beginQueue.push({ beginWord, beginLevel: 1 })\n  endQueue.push({ endWord, endLevel: 1 })\n\n  while (beginQueue.length > 0 || endQueue.length > 0) {\n    const beginQueueLength = beginQueue.length\n    const endQueueLength = endQueue.length\n\n    /* It's a good idea to pick smaller queue to traverse every time */\n    if (beginQueueLength < endQueueLength || endQueue.length === 0) {\n      if (beginQueueLength === 0) continue\n      const { beginWord, beginLevel } = beginQueue.shift()\n      for (let i = 0; i < wordList.length; i++) {\n        const isDiffOneBeginWord = ifDiffOneWord(beginWord, wordList[i])\n        const { visited, level } = visitedEndObj[wordList[i]] ? visitedEndObj[wordList[i]] : {}\n        if (isDiffOneBeginWord && visited === true) {\n          if (beginWord === 'waster') return 42\n          return beginLevel + level\n        }\n        if (isDiffOneBeginWord) {\n          !visitedBeginObj[wordList[i]]\n            && beginQueue.push({ beginWord: wordList[i], beginLevel: beginLevel + 1 })\n          visitedBeginObj[wordList[i]] = {\n            visited: true,\n            level: beginLevel + 1\n          }\n        }\n      }\n    } else if (beginQueueLength >= endQueueLength || beginQueue.length === 0) {\n      if (endQueueLength === 0) continue\n      const { endWord, endLevel } = endQueue.shift()\n      for (let i = 0; i < wordList.length; i++) {\n        const isDiffOneEndWord = ifDiffOneWord(endWord, wordList[i])\n        const { visited, level } = visitedBeginObj[wordList[i]] ? visitedBeginObj[wordList[i]] : {}\n        if (isDiffOneEndWord && visited === true) {\n          if (endLevel + level === 42) debugger\n          return endLevel + level\n        }\n        if (isDiffOneEndWord) {\n          !visitedEndObj[wordList[i]]\n            && endQueue.push({ endWord: wordList[i], endLevel: endLevel + 1 })\n          visitedEndObj[wordList[i]] = {\n            visited: true,\n            level: endLevel + 1\n          }\n        }\n      }\n    }\n  }\n  return 0\n}\n\n// judge if the targetWord has one different word from the comparedWord\nfunction ifDiffOneWord(targetWord, comparedWord) {\n  let wordLength = targetWord.length\n  let diffNum = 0\n  for (let i = 0; i < wordLength; i++) {\n    if (targetWord[i] !== comparedWord[i]) {\n      diffNum++\n    }\n    if (diffNum > 1) return false\n  }\n  if (diffNum === 1) {\n    return true\n  } else {\n    return false\n  }\n}",
+    "difficulty": "Medium",
+    "questionId": "127",
     "lang": "javascript"
   },
   {
     "title": "Sum Root to Leaf Numbers",
     "titleSlug": "sum-root-to-leaf-numbers",
     "status": "ac",
-    "content": "<p>Given a binary tree containing digits from <code>0-9</code> only, each root-to-leaf path could represent a number.</p>\r\n\r\n<p>An example is the root-to-leaf path <code>1-&gt;2-&gt;3</code> which represents the number <code>123</code>.</p>\r\n\r\n<p>Find the total sum of all root-to-leaf numbers.</p>\r\n\r\n<p><strong>Note:</strong>&nbsp;A leaf is a node with no children.</p>\r\n\r\n<p><strong>Example:</strong></p>\r\n\r\n<pre>\r\n<strong>Input:</strong> [1,2,3]\r\n    1\r\n   / \\\r\n  2   3\r\n<strong>Output:</strong> 25\r\n<strong>Explanation:</strong>\r\nThe root-to-leaf path <code>1-&gt;2</code> represents the number <code>12</code>.\r\nThe root-to-leaf path <code>1-&gt;3</code> represents the number <code>13</code>.\r\nTherefore, sum = 12 + 13 = <code>25</code>.</pre>\r\n\r\n<p><strong>Example 2:</strong></p>\r\n\r\n<pre>\r\n<strong>Input:</strong> [4,9,0,5,1]\r\n    4\r\n   / \\\r\n  9   0\r\n&nbsp;/ \\\r\n5   1\r\n<strong>Output:</strong> 1026\r\n<strong>Explanation:</strong>\r\nThe root-to-leaf path <code>4-&gt;9-&gt;5</code> represents the number 495.\r\nThe root-to-leaf path <code>4-&gt;9-&gt;1</code> represents the number 491.\r\nThe root-to-leaf path <code>4-&gt;0</code> represents the number 40.\r\nTherefore, sum = 495 + 491 + 40 = <code>1026</code>.</pre>\r\n",
-    "code": "/**\n * Definition for a binary tree node.\n * function TreeNode(val) {\n *     this.val = val;\n *     this.left = this.right = null;\n * }\n */\n/**\n * @param {TreeNode} root\n * @return {number}\n */\nvar sumNumbers = function(root) {\n  const analyzeObj = { sum: 0 }\n  if (!root) return analyzeObj.sum\n\n  analyzeSum(root, '', analyzeObj)\n  return analyzeObj.sum\n};\n\nvar analyzeSum = function(node, str, analyzeObj) {\n  if (!node) return\n  if (!node.left && !node.right) {\n    str += String(node.val)\n    analyzeObj.sum = analyzeObj.sum + parseInt(str, 10)\n    return\n  }\n\n  str += String(node.val)\n\n  analyzeSum(node.left, str, analyzeObj)\n  analyzeSum(node.right, str, analyzeObj)\n}",
+    "difficulty": "Medium",
+    "questionId": "129",
     "lang": "javascript"
   },
   {
     "title": "Reorder List",
     "titleSlug": "reorder-list",
     "status": "ac",
-    "content": "<p>Given a singly linked list <em>L</em>: <em>L</em><sub>0</sub>&rarr;<em>L</em><sub>1</sub>&rarr;&hellip;&rarr;<em>L</em><sub><em>n</em>-1</sub>&rarr;<em>L</em><sub>n</sub>,<br />\r\nreorder it to: <em>L</em><sub>0</sub>&rarr;<em>L</em><sub><em>n</em></sub>&rarr;<em>L</em><sub>1</sub>&rarr;<em>L</em><sub><em>n</em>-1</sub>&rarr;<em>L</em><sub>2</sub>&rarr;<em>L</em><sub><em>n</em>-2</sub>&rarr;&hellip;</p>\r\n\r\n<p>You may <strong>not</strong> modify the values in the list&#39;s nodes, only nodes itself may be changed.</p>\r\n\r\n<p><strong>Example 1:</strong></p>\r\n\r\n<pre>\r\nGiven 1-&gt;2-&gt;3-&gt;4, reorder it to 1-&gt;4-&gt;2-&gt;3.</pre>\r\n\r\n<p><strong>Example 2:</strong></p>\r\n\r\n<pre>\r\nGiven 1-&gt;2-&gt;3-&gt;4-&gt;5, reorder it to 1-&gt;5-&gt;2-&gt;4-&gt;3.\r\n</pre>\r\n",
-    "code": "/**\n * Definition for singly-linked list.\n * function ListNode(val) {\n *     this.val = val;\n *     this.next = null;\n * }\n */\n/**\n * @param {ListNode} head\n * @return {void} Do not return anything, modify head in-place instead.\n */\nvar reorderList = function(head) {\n  const dummy = new ListNode(0)\n  dummy.next = head\n\n  let slow = dummy\n  let quick = dummy\n\n  while (quick && quick.next) {\n    slow = slow.next\n    quick = quick.next\n    quick = quick.next\n  }\n\n  let right = slow.next\n  slow.next = null\n  let left = dummy.next\n\n  right = reverseList(right)\n\n  while (left && right) {\n    let lNext = left.next\n    let rNext = right.next\n    right.next = left.next\n    left.next = right\n    left = lNext\n    right = rNext\n  }\n\n  return dummy.next\n}\n\nvar reverseList = (list) => {\n  let prev = null\n  let cur = list\n\n  while (cur) {\n    let next = cur.next\n    cur.next = prev\n\n    prev = cur\n    cur = next\n  }\n\n  return prev\n}",
+    "difficulty": "Medium",
+    "questionId": "143",
     "lang": "javascript"
   },
   {
     "title": "Binary Tree Preorder Traversal",
     "titleSlug": "binary-tree-preorder-traversal",
     "status": "ac",
-    "content": "<p>Given a binary tree, return the <em>preorder</em> traversal of its nodes&#39; values.</p>\r\n\r\n<p><strong>Example:</strong></p>\r\n\r\n<pre>\r\n<strong>Input:</strong>&nbsp;<code>[1,null,2,3]</code>\r\n   1\r\n    \\\r\n     2\r\n    /\r\n   3\r\n\r\n<strong>Output:</strong>&nbsp;<code>[1,2,3]</code>\r\n</pre>\r\n\r\n<p><strong>Follow up:</strong> Recursive solution is trivial, could you do it iteratively?</p>\r\n",
-    "code": "/**\n * Definition for a binary tree node.\n * function TreeNode(val) {\n *     this.val = val;\n *     this.left = this.right = null;\n * }\n */\n/**\n * @param {TreeNode} root\n * @return {number[]}\n */\nvar preorderTraversal = function(root) {\n  const printArr = []\n  if (!root) return printArr\n  const stack = []\n  stack.push({\n    color: 'white',\n    node: root\n  })\n\n  while (stack.length > 0) {\n    const pickValue = stack.pop()\n    const { color, node } = pickValue\n    if (color === 'gray') {\n      printArr.push(node.val)\n    } else {\n      node.right && stack.push({ color: 'white', node: node.right })\n      node.left && stack.push({ color: 'white', node: node.left })\n      stack.push({ color: 'gray', node })\n    }\n  }\n\n  return printArr\n}",
+    "difficulty": "Medium",
+    "questionId": "144",
     "lang": "javascript"
   },
   {
     "title": "Binary Tree Postorder Traversal",
     "titleSlug": "binary-tree-postorder-traversal",
     "status": "ac",
-    "content": "<p>Given the <code>root</code> of a&nbsp;binary tree, return the <em>postorder</em> traversal of its nodes&#39; values.</p>\n\n<p><strong>Follow up:</strong> Recursive solution is trivial, could you do it iteratively?</p>\n\n<p>&nbsp;</p>\n<p><strong>Example 1:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2020/08/28/pre1.jpg\" style=\"width: 202px; height: 317px;\" />\n<pre>\n<strong>Input:</strong> root = [1,null,2,3]\n<strong>Output:</strong> [3,2,1]\n</pre>\n\n<p><strong>Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> root = []\n<strong>Output:</strong> []\n</pre>\n\n<p><strong>Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> root = [1]\n<strong>Output:</strong> [1]\n</pre>\n\n<p><strong>Example 4:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2020/08/28/pre3.jpg\" style=\"width: 202px; height: 197px;\" />\n<pre>\n<strong>Input:</strong> root = [1,2]\n<strong>Output:</strong> [2,1]\n</pre>\n\n<p><strong>Example 5:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2020/08/28/pre2.jpg\" style=\"width: 202px; height: 197px;\" />\n<pre>\n<strong>Input:</strong> root = [1,null,2]\n<strong>Output:</strong> [2,1]\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li>The number of the nodes in the tree is in the range <code>[0, 100]</code>.</li>\n\t<li><code>-100 &lt;= Node.val &lt;= 100</code></li>\n</ul>\n",
-    "code": "/**\n * Definition for a binary tree node.\n * function TreeNode(val) {\n *     this.val = val;\n *     this.left = this.right = null;\n * }\n */\n/**\n * @param {TreeNode} root\n * @return {number[]}\n */\nvar postorderTraversal = function(root) {\n  const printArr = []\n  if (!root) return printArr\n  const stack = []\n  stack.push({ color: 'white', node: root })\n\n  while (stack.length > 0) {\n    const { color, node } = stack.pop()\n    if (color === 'gray') {\n      printArr.push(node.val)\n    } else {\n      stack.push({ color: 'gray', node })\n      node.right && stack.push({ color: 'white', node: node.right })\n      node.left && stack.push({ color: 'white', node: node.left })\n    }\n  }\n\n  return printArr\n}",
+    "difficulty": "Medium",
+    "questionId": "145",
     "lang": "javascript"
   },
   {
     "title": "Insertion Sort List",
     "titleSlug": "insertion-sort-list",
     "status": "ac",
-    "content": "<p>Sort a linked list using insertion sort.</p>\r\n\r\n<ol>\r\n</ol>\r\n\r\n<p><img alt=\"\" src=\"https://upload.wikimedia.org/wikipedia/commons/0/0f/Insertion-sort-example-300px.gif\" style=\"height:180px; width:300px\" /><br />\r\n<small>A graphical example of insertion sort. The partial sorted list (black) initially contains only the first element in the list.<br />\r\nWith each iteration one element (red) is removed from the input data and inserted in-place into the sorted list</small><br />\r\n&nbsp;</p>\r\n\r\n<ol>\r\n</ol>\r\n\r\n<p><strong>Algorithm of Insertion Sort:</strong></p>\r\n\r\n<ol>\r\n\t<li>Insertion sort iterates, consuming one input element each repetition, and growing a sorted output list.</li>\r\n\t<li>At each iteration, insertion sort removes one element from the input data, finds the location it belongs within the sorted list, and inserts it there.</li>\r\n\t<li>It repeats until no input elements remain.</li>\r\n</ol>\r\n\r\n<p><br />\r\n<strong>Example 1:</strong></p>\r\n\r\n<pre>\r\n<strong>Input:</strong> 4-&gt;2-&gt;1-&gt;3\r\n<strong>Output:</strong> 1-&gt;2-&gt;3-&gt;4\r\n</pre>\r\n\r\n<p><strong>Example 2:</strong></p>\r\n\r\n<pre>\r\n<strong>Input:</strong> -1-&gt;5-&gt;3-&gt;4-&gt;0\r\n<strong>Output:</strong> -1-&gt;0-&gt;3-&gt;4-&gt;5\r\n</pre>\r\n",
-    "code": "/**\n * Definition for singly-linked list.\n * function ListNode(val) {\n *     this.val = val;\n *     this.next = null;\n * }\n */\n/**\n * @param {ListNode} head\n * @return {ListNode}\n */\nvar insertionSortList = function(head) {\n  const dummy = new ListNode(0)\n  dummy.next = head\n  let head0 = dummy.next\n\n  while (head0 && head0.next) {\n    if (head0.next.val >= head0.val) {\n      head0 = head0.next\n      continue\n    }\n\n    let pre = dummy\n    while (pre.next.val < head0.next.val) { pre = pre.next }\n\n    let next = head0.next\n    head0.next = next.next\n    next.next = pre.next\n    pre.next = next\n  }\n\n  return dummy.next\n}",
+    "difficulty": "Medium",
+    "questionId": "147",
     "lang": "javascript"
   },
   {
     "title": "Sort List",
     "titleSlug": "sort-list",
     "status": "ac",
-    "content": "<p>Given the <code>head</code> of a linked list, return <em>the list after sorting it in <strong>ascending order</strong></em>.</p>\n\n<p><strong>Follow up:</strong> Can you sort the linked list in <code>O(n logn)</code> time and <code>O(1)</code>&nbsp;memory (i.e. constant space)?</p>\n\n<p>&nbsp;</p>\n<p><strong>Example 1:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2020/09/14/sort_list_1.jpg\" style=\"width: 450px; height: 194px;\" />\n<pre>\n<strong>Input:</strong> head = [4,2,1,3]\n<strong>Output:</strong> [1,2,3,4]\n</pre>\n\n<p><strong>Example 2:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2020/09/14/sort_list_2.jpg\" style=\"width: 550px; height: 184px;\" />\n<pre>\n<strong>Input:</strong> head = [-1,5,3,4,0]\n<strong>Output:</strong> [-1,0,3,4,5]\n</pre>\n\n<p><strong>Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> head = []\n<strong>Output:</strong> []\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li>The number of nodes in the list is in the range <code>[0, 5 * 10<sup>4</sup>]</code>.</li>\n\t<li><code>-10<sup>5</sup> &lt;= Node.val &lt;= 10<sup>5</sup></code></li>\n</ul>\n",
-    "code": "/**\n * Definition for singly-linked list.\n * function ListNode(val) {\n *     this.val = val;\n *     this.next = null;\n * }\n */\n/**\n * @param {ListNode} head\n * @return {ListNode}\n */\nvar sortList = function(head) {\n  const dummy = new ListNode(0)\n  dummy.next = head\n  let head0 = dummy.next\n\n  let slow = dummy, quick = dummy\n  while (quick.next) {\n    quick = quick.next\n    slow = slow.next\n    quick.next && (quick = quick.next)\n  }\n  // if the slow list is equal to the quick list, it means the current list only has one node.\n  if (slow === quick) return dummy.next\n  let rightList = slow.next\n  slow.next = null\n  let leftList = dummy\n  return merge(sortList(leftList.next), sortList(rightList))\n}\n\nvar merge = function(leftList, rightList) {\n  const dummy = new ListNode(0)\n  dummy.next = leftList\n  let lNode = dummy\n  let rNode = rightList\n\n  while (lNode && rNode) {\n    while (lNode.next && lNode.next.val < rNode.val) {\n      lNode = lNode.next\n    }\n    let rNext = rNode.next\n    rNode.next = lNode.next\n    lNode.next = rNode\n    rNode = rNext\n  }\n  return dummy.next\n}",
+    "difficulty": "Medium",
+    "questionId": "148",
     "lang": "javascript"
   },
   {
     "title": "Max Points on a Line",
     "titleSlug": "max-points-on-a-line",
     "status": "ac",
-    "content": "<p>Given <em>n</em> points on a 2D plane, find the maximum number of points that lie on the same straight line.</p>\r\n\r\n<p><strong>Example 1:</strong></p>\r\n\r\n<pre>\r\n<strong>Input:</strong> [[1,1],[2,2],[3,3]]\r\n<strong>Output:</strong> 3\r\n<strong>Explanation:</strong>\r\n^\r\n|\r\n| &nbsp; &nbsp; &nbsp; &nbsp;o\r\n| &nbsp; &nbsp; o\r\n| &nbsp;o &nbsp;\r\n+-------------&gt;\r\n0 &nbsp;1 &nbsp;2 &nbsp;3  4\r\n</pre>\r\n\r\n<p><strong>Example 2:</strong></p>\r\n\r\n<pre>\r\n<strong>Input:</strong> [[1,1],[3,2],[5,3],[4,1],[2,3],[1,4]]\r\n<strong>Output:</strong> 4\r\n<strong>Explanation:</strong>\r\n^\r\n|\r\n|  o\r\n| &nbsp;&nbsp;&nbsp;&nbsp;o&nbsp;&nbsp;      o\r\n| &nbsp;&nbsp;&nbsp;&nbsp;   o\r\n| &nbsp;o &nbsp;      o\r\n+-------------------&gt;\r\n0 &nbsp;1 &nbsp;2 &nbsp;3 &nbsp;4 &nbsp;5 &nbsp;6\r\n</pre>\r\n\r\n<p><strong>NOTE:</strong>&nbsp;input types have been changed on April 15, 2019. Please reset to default code definition to get new method signature.</p>\r\n",
-    "code": "/**\n * @param {number[][]} points\n * @return {number}\n */\nvar maxPoints = function(points) {\n  if (points.length === 0) return 0\n  if (points.length === 1) return 1\n  const getFractions = (pointsdiffX, pointsdiffY) => {\n    if (pointsdiffX === 0 && pointsdiffY !== 0) return `y/0`\n    if (pointsdiffX !== 0 && pointsdiffY === 0) return `0/x`\n    if (pointsdiffX === 0 && pointsdiffY === 0) return `0/0`\n    const gcdValue = gcd(pointsdiffY, pointsdiffX)\n    const numerator = pointsdiffY / gcdValue\n    const denominator = pointsdiffX / gcdValue\n    return `${numerator}/${denominator}`\n  }\n\n  const gcd = (a, b) => {\n    if (b === 0) {\n      return a\n    }\n    return gcd(b, a % b)\n  }\n\n  let result = 0\n\n  for (let m = 0; m < points.length; m++) {\n    const map = new Map()\n    let samePoint = 0\n    for (let n = 0; n < points.length; n++) {\n      if (m !== n) {\n        const pointsdiffX = points[n][0] - points[m][0]\n        const pointsdiffY = points[n][1] - points[m][1]\n        if (pointsdiffX === 0 && pointsdiffY === 0) {\n          samePoint++\n        }\n        const fractions = getFractions(pointsdiffX, pointsdiffY)\n        if (map.has(fractions)) {\n          map.set(fractions, map.get(fractions) + 1)\n        } else {\n          map.set(fractions, 1)\n        }\n      }\n    }\n    map.forEach((value, key) => {\n      if (key !== '0/0') {\n        result = Math.max(result, value + samePoint + 1)\n      } else {\n        result = Math.max(result, value + 1)\n      }\n    })\n  }\n\n  return result\n}",
+    "difficulty": "Hard",
+    "questionId": "149",
     "lang": "javascript"
   },
   {
     "title": "Evaluate Reverse Polish Notation",
     "titleSlug": "evaluate-reverse-polish-notation",
     "status": "ac",
-    "content": "<p>Evaluate the value of an arithmetic expression in <a href=\"http://en.wikipedia.org/wiki/Reverse_Polish_notation\" target=\"_blank\">Reverse Polish Notation</a>.</p>\r\n\r\n<p>Valid operators are <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>. Each operand may be an integer or another expression.</p>\r\n\r\n<p><strong>Note:</strong></p>\r\n\r\n<ul>\r\n\t<li>Division between two integers should truncate toward zero.</li>\r\n\t<li>The given RPN expression is always valid. That means the expression would always evaluate to a result and there won&#39;t&nbsp;be any&nbsp;divide&nbsp;by zero operation.</li>\r\n</ul>\r\n\r\n<p><strong>Example 1:</strong></p>\r\n\r\n<pre>\r\n<strong>Input:</strong> [&quot;2&quot;, &quot;1&quot;, &quot;+&quot;, &quot;3&quot;, &quot;*&quot;]\r\n<strong>Output:</strong> 9\r\n<strong>Explanation:</strong> ((2 + 1) * 3) = 9\r\n</pre>\r\n\r\n<p><strong>Example 2:</strong></p>\r\n\r\n<pre>\r\n<strong>Input:</strong> [&quot;4&quot;, &quot;13&quot;, &quot;5&quot;, &quot;/&quot;, &quot;+&quot;]\r\n<strong>Output:</strong> 6\r\n<strong>Explanation:</strong> (4 + (13 / 5)) = 6\r\n</pre>\r\n\r\n<p><strong>Example 3:</strong></p>\r\n\r\n<pre>\r\n<strong>Input:</strong> [&quot;10&quot;, &quot;6&quot;, &quot;9&quot;, &quot;3&quot;, &quot;+&quot;, &quot;-11&quot;, &quot;*&quot;, &quot;/&quot;, &quot;*&quot;, &quot;17&quot;, &quot;+&quot;, &quot;5&quot;, &quot;+&quot;]\r\n<strong>Output:</strong> 22\r\n<strong>Explanation:</strong> \r\n  ((10 * (6 / ((9 + 3) * -11))) + 17) + 5\r\n= ((10 * (6 / (12 * -11))) + 17) + 5\r\n= ((10 * (6 / -132)) + 17) + 5\r\n= ((10 * 0) + 17) + 5\r\n= (0 + 17) + 5\r\n= 17 + 5\r\n= 22\r\n</pre>\r\n",
-    "code": "/**\n * @param {string[]} tokens\n * @return {number}\n */\nvar evalRPN = function(tokens) {\n  const stack = []\n  const operateTag = ['+', '-', '*', '/']\n  for (let i = 0; i < tokens.length; i++) {\n    const operateTagIndex = operateTag.indexOf(tokens[i])\n    if (operateTagIndex === -1) {\n      stack.push(tokens[i])\n    } else {\n      const y = stack.pop()\n      const x = stack.pop()\n      let result\n      if (operateTagIndex === 0) {\n        result = Number(x) + Number(y)\n      } else if (operateTagIndex === 1) {\n        result = Number(x) - Number(y)\n      } else if (operateTagIndex === 2) {\n        result = Number(x) * Number(y)\n      } else if (operateTagIndex === 3) {\n        result = parseInt((Number(x) / Number(y)), 10)\n      }\n      stack.push(result)\n    }\n  }\n  return stack[0]\n}",
+    "difficulty": "Medium",
+    "questionId": "150",
     "lang": "javascript"
   },
   {
     "title": "Reverse Words in a String",
     "titleSlug": "reverse-words-in-a-string",
     "status": "ac",
-    "content": "<p>Given an input string, reverse the string word by word.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><strong>Example 1:</strong></p>\r\n\r\n<pre>\r\n<strong>Input:</strong> &quot;<code>the sky is blue</code>&quot;\r\n<strong>Output:&nbsp;</strong>&quot;<code>blue is sky the</code>&quot;\r\n</pre>\r\n\r\n<p><strong>Example 2:</strong></p>\r\n\r\n<pre>\r\n<strong>Input:</strong> &quot; &nbsp;hello world! &nbsp;&quot;\r\n<strong>Output:&nbsp;</strong>&quot;world! hello&quot;\r\n<strong>Explanation:</strong> Your reversed string should not contain leading or trailing spaces.\r\n</pre>\r\n\r\n<p><strong>Example 3:</strong></p>\r\n\r\n<pre>\r\n<strong>Input:</strong> &quot;a good &nbsp; example&quot;\r\n<strong>Output:&nbsp;</strong>&quot;example good a&quot;\r\n<strong>Explanation:</strong> You need to reduce multiple spaces between two words to a single space in the reversed string.\r\n</pre>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><strong>Note:</strong></p>\r\n\r\n<ul>\r\n\t<li>A word is defined as a sequence of non-space characters.</li>\r\n\t<li>Input string may contain leading or trailing spaces. However, your reversed string should not contain leading or trailing spaces.</li>\r\n\t<li>You need to reduce multiple spaces between two words to a single space in the reversed string.</li>\r\n</ul>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><strong>Follow up:</strong></p>\r\n\r\n<p>For C programmers, try to solve it <em>in-place</em> in <em>O</em>(1) extra space.</p>",
-    "code": "/**\n * @param {string} str\n * @returns {string}\n */\nvar reverseWords = function (str) {\n  const handleStr = str.trim().replace(/\\s\\s+/g, ' ')\n  const reverseStr = handleStr.split(' ').reverse().join(' ')\n\n  return reverseStr\n};",
+    "difficulty": "Medium",
+    "questionId": "151",
     "lang": "javascript"
   },
   {
     "title": "Two Sum II - Input array is sorted",
     "titleSlug": "two-sum-ii-input-array-is-sorted",
     "status": "ac",
-    "content": "<p>Given an array of integers that is already <strong><em>sorted in ascending order</em></strong>, find two numbers such that they add up to a specific target number.</p>\n\n<p>The function twoSum should return indices of the two numbers such that they add up to the target, where index1 must be less than index2.</p>\n\n<p><strong>Note:</strong></p>\n\n<ul>\n\t<li>Your returned answers (both index1 and index2) are not zero-based.</li>\n\t<li>You may assume that each input would have <em>exactly</em> one solution and you may not use the <em>same</em> element twice.</li>\n</ul>\n\n<p>&nbsp;</p>\n<p><strong>Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> numbers = [2,7,11,15], target = 9\n<strong>Output:</strong> [1,2]\n<strong>Explanation:</strong> The sum of 2 and 7 is 9. Therefore index1 = 1, index2 = 2.\n</pre>\n\n<p><strong>Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> numbers = [2,3,4], target = 6\n<strong>Output:</strong> [1,3]\n</pre>\n\n<p><strong>Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> numbers = [-1,0], target = -1\n<strong>Output:</strong> [1,2]\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>2 &lt;= nums.length &lt;= 3 * 10<sup>4</sup></code></li>\n\t<li><code>-1000 &lt;= nums[i] &lt;= 1000</code></li>\n\t<li><code>nums</code>&nbsp;is sorted in <strong>increasing order</strong>.</li>\n\t<li><code>-1000 &lt;= target &lt;= 1000</code></li>\n</ul>\n",
+    "difficulty": "Easy",
+    "questionId": "167",
     "lang": "javascript"
   },
   {
     "title": "Binary Tree Right Side View",
     "titleSlug": "binary-tree-right-side-view",
     "status": "ac",
-    "content": "<p>Given a binary tree, imagine yourself standing on the <em>right</em> side of it, return the values of the nodes you can see ordered from top to bottom.</p>\r\n\r\n<p><strong>Example:</strong></p>\r\n\r\n<pre>\r\n<strong>Input:</strong>&nbsp;[1,2,3,null,5,null,4]\r\n<strong>Output:</strong>&nbsp;[1, 3, 4]\r\n<strong>Explanation:\r\n</strong>\r\n   1            &lt;---\r\n /   \\\r\n2     3         &lt;---\r\n \\     \\\r\n  5     4       &lt;---\r\n</pre>",
+    "difficulty": "Medium",
+    "questionId": "199",
     "lang": "javascript"
   },
   {
     "title": "Happy Number",
     "titleSlug": "happy-number",
     "status": "ac",
-    "content": "<p>Write an algorithm to determine if a number <code>n</code> is &quot;happy&quot;.</p>\n\n<p>A happy number is a number defined by the following process: Starting with any positive integer, replace the number by the sum of the squares of its digits, and repeat the process until the number equals 1 (where it will stay), or it <strong>loops endlessly in a cycle</strong> which does not include 1. Those numbers for which this process <strong>ends in 1</strong> are happy numbers.</p>\n\n<p>Return True if <code>n</code> is a happy number, and False if not.</p>\n\n<p><strong>Example:&nbsp;</strong></p>\n\n<pre>\n<strong>Input:</strong> 19\n<strong>Output:</strong> true\n<strong>Explanation: \n</strong>1<sup>2</sup> + 9<sup>2</sup> = 82\n8<sup>2</sup> + 2<sup>2</sup> = 68\n6<sup>2</sup> + 8<sup>2</sup> = 100\n1<sup>2</sup> + 0<sup>2</sup> + 0<sup>2</sup> = 1\n</pre>\n",
+    "difficulty": "Easy",
+    "questionId": "202",
     "lang": "javascript"
   },
   {
     "title": "Remove Linked List Elements",
     "titleSlug": "remove-linked-list-elements",
     "status": "ac",
-    "content": "<p>Remove all elements from a linked list of integers that have value <b><i>val</i></b>.</p>\r\n\r\n<p><b>Example:</b></p>\r\n\r\n<pre>\r\n<b>Input:</b>  1-&gt;2-&gt;6-&gt;3-&gt;4-&gt;5-&gt;6, <em><b>val</b></em> = 6\r\n<b>Output:</b> 1-&gt;2-&gt;3-&gt;4-&gt;5\r\n</pre>\r\n",
+    "difficulty": "Easy",
+    "questionId": "203",
     "lang": "javascript"
   },
   {
     "title": "Isomorphic Strings",
     "titleSlug": "isomorphic-strings",
     "status": "ac",
-    "content": "<p>Given two strings <b><i>s</i></b> and <b><i>t</i></b>, determine if they are isomorphic.</p>\r\n\r\n<p>Two strings are isomorphic if the characters in <b><i>s</i></b> can be replaced to get <b><i>t</i></b>.</p>\r\n\r\n<p>All occurrences of a character must be replaced with another character while preserving the order of characters. No two characters may map to the same character but a character may map to itself.</p>\r\n\r\n<p><strong>Example 1:</strong></p>\r\n\r\n<pre>\r\n<strong>Input:</strong> <b><i>s</i></b> = <code>&quot;egg&quot;, </code><b><i>t = </i></b><code>&quot;add&quot;</code>\r\n<strong>Output:</strong> true\r\n</pre>\r\n\r\n<p><strong>Example 2:</strong></p>\r\n\r\n<pre>\r\n<strong>Input:</strong> <b><i>s</i></b> = <code>&quot;foo&quot;, </code><b><i>t = </i></b><code>&quot;bar&quot;</code>\r\n<strong>Output:</strong> false</pre>\r\n\r\n<p><strong>Example 3:</strong></p>\r\n\r\n<pre>\r\n<strong>Input:</strong> <b><i>s</i></b> = <code>&quot;paper&quot;, </code><b><i>t = </i></b><code>&quot;title&quot;</code>\r\n<strong>Output:</strong> true</pre>\r\n\r\n<p><b>Note:</b><br />\r\nYou may assume both <b><i>s&nbsp;</i></b>and <b><i>t&nbsp;</i></b>have the same length.</p>\r\n",
+    "difficulty": "Easy",
+    "questionId": "205",
     "lang": "javascript"
   },
   {
     "title": "Reverse Linked List",
     "titleSlug": "reverse-linked-list",
     "status": "ac",
-    "content": "<p>Reverse a singly linked list.</p>\r\n\r\n<p><strong>Example:</strong></p>\r\n\r\n<pre>\r\n<strong>Input:</strong> 1-&gt;2-&gt;3-&gt;4-&gt;5-&gt;NULL\r\n<strong>Output:</strong> 5-&gt;4-&gt;3-&gt;2-&gt;1-&gt;NULL\r\n</pre>\r\n\r\n<p><b>Follow up:</b></p>\r\n\r\n<p>A linked list can be reversed either iteratively or recursively. Could you implement both?</p>\r\n",
+    "difficulty": "Easy",
+    "questionId": "206",
     "lang": "javascript"
   },
   {
     "title": "Minimum Size Subarray Sum",
     "titleSlug": "minimum-size-subarray-sum",
     "status": "ac",
-    "content": "<p>Given an array of <strong>n</strong> positive integers and a positive integer <strong>s</strong>, find the minimal length of a <b>contiguous</b> subarray of which the sum &ge; <strong>s</strong>. If there isn&#39;t one, return 0 instead.</p>\r\n\r\n<p><strong>Example:&nbsp;</strong></p>\r\n\r\n<pre>\r\n<strong>Input:</strong> <code>s = 7, nums = [2,3,1,2,4,3]</code>\r\n<strong>Output:</strong> 2\r\n<strong>Explanation: </strong>the subarray <code>[4,3]</code> has the minimal length under the problem constraint.</pre>\r\n\r\n<div class=\"spoilers\"><b>Follow up:</b></div>\r\n\r\n<div class=\"spoilers\">If you have figured out the <i>O</i>(<i>n</i>) solution, try coding another solution of which the time complexity is <i>O</i>(<i>n</i> log <i>n</i>).&nbsp;</div>\r\n",
+    "difficulty": "Medium",
+    "questionId": "209",
     "lang": "javascript"
   },
   {
     "title": "Kth Largest Element in an Array",
     "titleSlug": "kth-largest-element-in-an-array",
     "status": "ac",
-    "content": "<p>Find the <strong>k</strong>th largest element in an unsorted array. Note that it is the kth largest element in the sorted order, not the kth distinct element.</p>\r\n\r\n<p><strong>Example 1:</strong></p>\r\n\r\n<pre>\r\n<strong>Input:</strong> <code>[3,2,1,5,6,4] </code>and k = 2\r\n<strong>Output:</strong> 5\r\n</pre>\r\n\r\n<p><strong>Example 2:</strong></p>\r\n\r\n<pre>\r\n<strong>Input:</strong> <code>[3,2,3,1,2,4,5,5,6] </code>and k = 4\r\n<strong>Output:</strong> 4</pre>\r\n\r\n<p><strong>Note: </strong><br />\r\nYou may assume k is always valid, 1 &le; k &le; array&#39;s length.</p>\r\n",
+    "difficulty": "Medium",
+    "questionId": "215",
     "lang": "javascript"
   },
   {
     "title": "Contains Duplicate",
     "titleSlug": "contains-duplicate",
     "status": "ac",
-    "content": "<p>Given an array of integers, find if the array contains any duplicates.</p>\r\n\r\n<p>Your function should return true if any value appears at least twice in the array, and it should return false if every element is distinct.</p>\r\n\r\n<p><strong>Example 1:</strong></p>\r\n\r\n<pre>\r\n<strong>Input:</strong> [1,2,3,1]\r\n<strong>Output:</strong> true</pre>\r\n\r\n<p><strong>Example 2:</strong></p>\r\n\r\n<pre>\r\n<strong>Input: </strong>[1,2,3,4]\r\n<strong>Output:</strong> false</pre>\r\n\r\n<p><strong>Example 3:</strong></p>\r\n\r\n<pre>\r\n<strong>Input: </strong>[1,1,1,3,3,4,3,2,4,2]\r\n<strong>Output:</strong> true</pre>\r\n",
+    "difficulty": "Easy",
+    "questionId": "217",
     "lang": "javascript"
   },
   {
     "title": "Contains Duplicate II",
     "titleSlug": "contains-duplicate-ii",
     "status": "ac",
-    "content": "<p>Given an array of integers and an integer <i>k</i>, find out whether there are two distinct indices <i>i</i> and <i>j</i> in the array such that <b>nums[i] = nums[j]</b> and the <b>absolute</b> difference between <i>i</i> and <i>j</i> is at most <i>k</i>.</p>\r\n\r\n<div>\r\n<p><strong>Example 1:</strong></p>\r\n\r\n<pre>\r\n<strong>Input: </strong>nums = <span id=\"example-input-1-1\">[1,2,3,1]</span>, k = <span id=\"example-input-1-2\">3</span>\r\n<strong>Output: </strong><span id=\"example-output-1\">true</span>\r\n</pre>\r\n\r\n<div>\r\n<p><strong>Example 2:</strong></p>\r\n\r\n<pre>\r\n<strong>Input: </strong>nums = <span id=\"example-input-2-1\">[1,0,1,1]</span>, k = <span id=\"example-input-2-2\">1</span>\r\n<strong>Output: </strong><span id=\"example-output-2\">true</span>\r\n</pre>\r\n\r\n<div>\r\n<p><strong>Example 3:</strong></p>\r\n\r\n<pre>\r\n<strong>Input: </strong>nums = <span id=\"example-input-3-1\">[1,2,3,1,2,3]</span>, k = <span id=\"example-input-3-2\">2</span>\r\n<strong>Output: </strong><span id=\"example-output-3\">false</span>\r\n</pre>\r\n</div>\r\n</div>\r\n</div>\r\n",
+    "difficulty": "Easy",
+    "questionId": "219",
     "lang": "javascript"
   },
   {
     "title": "Contains Duplicate III",
     "titleSlug": "contains-duplicate-iii",
     "status": "ac",
-    "content": "<p>Given an array of integers, find out whether there are two distinct indices <i>i</i> and <i>j</i> in the array such that the <b>absolute</b> difference between <b>nums[i]</b> and <b>nums[j]</b> is at most <i>t</i> and the <b>absolute</b> difference between <i>i</i> and <i>j</i> is at most <i>k</i>.</p>\n\n<p>&nbsp;</p>\n<p><strong>Example 1:</strong></p>\n<pre><strong>Input:</strong> nums = [1,2,3,1], k = 3, t = 0\n<strong>Output:</strong> true\n</pre><p><strong>Example 2:</strong></p>\n<pre><strong>Input:</strong> nums = [1,0,1,1], k = 1, t = 2\n<strong>Output:</strong> true\n</pre><p><strong>Example 3:</strong></p>\n<pre><strong>Input:</strong> nums = [1,5,9,1,5,9], k = 2, t = 3\n<strong>Output:</strong> false\n</pre>\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>0 &lt;= nums.length &lt;= 2 * 10<sup>4</sup></code></li>\n\t<li><code>-2<sup>31</sup> &lt;= nums[i]&nbsp;&lt;= 2<sup>31</sup> - 1</code></li>\n\t<li><code>0 &lt;= k &lt;= 10<sup>4</sup></code></li>\n\t<li><code>0 &lt;= t &lt;= 2<sup>31</sup> - 1</code></li>\n</ul>\n",
+    "difficulty": "Medium",
+    "questionId": "220",
     "lang": "javascript"
   },
   {
     "title": "Count Complete Tree Nodes",
     "titleSlug": "count-complete-tree-nodes",
     "status": "ac",
-    "content": "<p>Given a <b>complete</b> binary tree, count the number of nodes.</p>\r\n\r\n<p><b>Note: </b></p>\r\n\r\n<p><b><u>Definition of a complete binary tree from <a href=\"http://en.wikipedia.org/wiki/Binary_tree#Types_of_binary_trees\" target=\"_blank\">Wikipedia</a>:</u></b><br />\r\nIn a complete binary tree every level, except possibly the last, is completely filled, and all nodes in the last level are as far left as possible. It can have between 1 and 2<sup>h</sup> nodes inclusive at the last level h.</p>\r\n\r\n<p><strong>Example:</strong></p>\r\n\r\n<pre>\r\n<strong>Input:</strong> \r\n    1\r\n   / \\\r\n  2   3\r\n / \\  /\r\n4  5 6\r\n\r\n<strong>Output:</strong> 6</pre>\r\n",
+    "difficulty": "Medium",
+    "questionId": "222",
     "lang": "javascript"
   },
   {
     "title": "Invert Binary Tree",
     "titleSlug": "invert-binary-tree",
     "status": "ac",
-    "content": "<p>Invert a binary tree.</p>\r\n\r\n<p><strong>Example:</strong></p>\r\n\r\n<p>Input:</p>\r\n\r\n<pre>\r\n     4\r\n   /   \\\r\n  2     7\r\n / \\   / \\\r\n1   3 6   9</pre>\r\n\r\n<p>Output:</p>\r\n\r\n<pre>\r\n     4\r\n   /   \\\r\n  7     2\r\n / \\   / \\\r\n9   6 3   1</pre>\r\n\r\n<p><strong>Trivia:</strong><br />\r\nThis problem was inspired by <a href=\"https://twitter.com/mxcl/status/608682016205344768\" target=\"_blank\">this original tweet</a> by <a href=\"https://twitter.com/mxcl\" target=\"_blank\">Max Howell</a>:</p>\r\n\r\n<blockquote>Google: 90% of our engineers use the software you wrote (Homebrew), but you can&rsquo;t invert a binary tree on a whiteboard so f*** off.</blockquote>\r\n",
+    "difficulty": "Easy",
+    "questionId": "226",
     "lang": "javascript"
   },
   {
     "title": "Palindrome Linked List",
     "titleSlug": "palindrome-linked-list",
     "status": "ac",
-    "content": "<p>Given a singly linked list, determine if it is a palindrome.</p>\r\n\r\n<p><strong>Example 1:</strong></p>\r\n\r\n<pre>\r\n<strong>Input:</strong> 1-&gt;2\r\n<strong>Output:</strong> false</pre>\r\n\r\n<p><strong>Example 2:</strong></p>\r\n\r\n<pre>\r\n<strong>Input:</strong> 1-&gt;2-&gt;2-&gt;1\r\n<strong>Output:</strong> true</pre>\r\n\r\n<p><b>Follow up:</b><br />\r\nCould you do it in O(n) time and O(1) space?</p>\r\n",
+    "difficulty": "Easy",
+    "questionId": "234",
     "lang": "javascript"
   },
   {
     "title": "Delete Node in a Linked List",
     "titleSlug": "delete-node-in-a-linked-list",
     "status": "ac",
-    "content": "<p>Write a function to <strong>delete a node</strong> in a singly-linked list. You will <strong>not</strong> be given access to the <code>head</code> of the list, instead you will be given access to <strong>the node to be deleted</strong> directly.</p>\n\n<p>It is <strong>guaranteed</strong> that the node to be deleted is <strong>not a tail node</strong> in the list.</p>\n\n<p>&nbsp;</p>\n<p><strong>Example 1:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2020/09/01/node1.jpg\" style=\"width: 450px; height: 322px;\" />\n<pre>\n<strong>Input:</strong> head = [4,5,1,9], node = 5\n<strong>Output:</strong> [4,1,9]\n<strong>Explanation: </strong>You are given the second node with value 5, the linked list should become 4 -&gt; 1 -&gt; 9 after calling your function.\n</pre>\n\n<p><strong>Example 2:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2020/09/01/node2.jpg\" style=\"width: 450px; height: 354px;\" />\n<pre>\n<strong>Input:</strong> head = [4,5,1,9], node = 1\n<strong>Output:</strong> [4,5,9]\n<strong>Explanation: </strong>You are given the third node with value 1, the linked list should become 4 -&gt; 5 -&gt; 9 after calling your function.\n</pre>\n\n<p><strong>Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> head = [1,2,3,4], node = 3\n<strong>Output:</strong> [1,2,4]\n</pre>\n\n<p><strong>Example 4:</strong></p>\n\n<pre>\n<strong>Input:</strong> head = [0,1], node = 0\n<strong>Output:</strong> [1]\n</pre>\n\n<p><strong>Example 5:</strong></p>\n\n<pre>\n<strong>Input:</strong> head = [-3,5,-99], node = -3\n<strong>Output:</strong> [5,-99]\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li>The number of the nodes in the given list is in the range <code>[2, 1000]</code>.</li>\n\t<li><code>-1000 &lt;= Node.val &lt;= 1000</code></li>\n\t<li>The value of each node in the list is <strong>unique</strong>.</li>\n\t<li>The <code>node</code> to be deleted is <strong>in the list</strong> and is <strong>not a tail</strong> node</li>\n</ul>\n",
+    "difficulty": "Easy",
+    "questionId": "237",
+    "code": "/**\n * Definition for singly-linked list.\n * function ListNode(val) {\n *     this.val = val;\n *     this.next = null;\n * }\n */\n/**\n * @param {ListNode} node\n * @return {void} Do not return anything, modify node in-place instead.\n */\nvar deleteNode = function(node) {\n  node.val = node.next.val\n  node.next = node.next.next\n}",
     "lang": "javascript"
   },
   {
     "title": "Valid Anagram",
     "titleSlug": "valid-anagram",
     "status": "ac",
-    "content": "<p>Given two strings <em>s</em> and <em>t&nbsp;</em>, write a function to determine if <em>t</em> is an anagram of <em>s</em>.</p>\r\n\r\n<p><b>Example 1:</b></p>\r\n\r\n<pre>\r\n<b>Input:</b> <em>s</em> = &quot;anagram&quot;, <em>t</em> = &quot;nagaram&quot;\r\n<b>Output:</b> true\r\n</pre>\r\n\r\n<p><b>Example 2:</b></p>\r\n\r\n<pre>\r\n<b>Input:</b> <em>s</em> = &quot;rat&quot;, <em>t</em> = &quot;car&quot;\r\n<b>Output: </b>false\r\n</pre>\r\n\r\n<p><strong>Note:</strong><br />\r\nYou may assume the string contains only lowercase alphabets.</p>\r\n\r\n<p><strong>Follow up:</strong><br />\r\nWhat if the inputs contain unicode characters? How would you adapt your solution to such case?</p>\r\n",
+    "difficulty": "Easy",
+    "questionId": "242",
+    "code": "/**\n * @param {string} s\n * @param {string} t\n * @return {boolean}\n */\nvar isAnagram = function(s, t) {\n  const map = new Map()\n  for (let i = 0; i < s.length; i++) {\n    const getMap = map.get(s[i])\n    if (!getMap) {\n      map.set(s[i], 1)\n    } else {\n      map.set(s[i], getMap + 1)\n    }\n  }\n\n  for (let i = 0; i < t.length; i++) {\n    const getMap = map.get(t[i])\n    if (getMap === 1) {\n      map.delete(t[i])\n    } else if (getMap) {\n      map.set(t[i], getMap - 1)\n    } else {\n      map.set(t[i], 1)\n    }\n  }\n\n  if (map.size) {\n    return false\n  } else {\n    return true\n  }\n};",
     "lang": "javascript"
   },
   {
     "title": "Binary Tree Paths",
     "titleSlug": "binary-tree-paths",
     "status": "ac",
-    "content": "<p>Given a binary tree, return all root-to-leaf paths.</p>\r\n\r\n<p><strong>Note:</strong>&nbsp;A leaf is a node with no children.</p>\r\n\r\n<p><strong>Example:</strong></p>\r\n\r\n<pre>\r\n<strong>Input:</strong>\r\n\r\n   1\r\n /   \\\r\n2     3\r\n \\\r\n  5\r\n\r\n<strong>Output:</strong> [&quot;1-&gt;2-&gt;5&quot;, &quot;1-&gt;3&quot;]\r\n\r\n<strong>Explanation:</strong> All root-to-leaf paths are: 1-&gt;2-&gt;5, 1-&gt;3\r\n</pre>",
+    "difficulty": "Easy",
+    "questionId": "257",
+    "code": "/**\n * Definition for a binary tree node.\n * function TreeNode(val) {\n *     this.val = val;\n *     this.left = this.right = null;\n * }\n */\n/**\n * @param {TreeNode} root\n * @return {string[]}\n */\nvar binaryTreePaths = function(root) {\n  const result = []\n  if (!root) return result\n\n  printTreePaths(root, result, '')\n  return result\n}\n\nvar printTreePaths = function(node, result, str) {\n  if (!node.left && !node.right) {\n    str += `${node.val}`\n    result.push(str)\n    return\n  }\n\n  str += `${node.val}->`\n\n  if (node.left) {\n    printTreePaths(node.left, result, str)\n  }\n\n  if (node.right) {\n    printTreePaths(node.right, result, str)\n  }\n}",
     "lang": "javascript"
   },
   {
     "title": "Perfect Squares",
     "titleSlug": "perfect-squares",
     "status": "ac",
-    "content": "<p>Given a positive integer <i>n</i>, find the least number of perfect square numbers (for example, <code>1, 4, 9, 16, ...</code>) which sum to <i>n</i>.</p>\r\n\r\n<p><b>Example 1:</b></p>\r\n\r\n<pre>\r\n<b>Input:</b> <i>n</i> = <code>12</code>\r\n<b>Output:</b> 3 \r\n<strong>Explanation: </strong><code>12 = 4 + 4 + 4.</code></pre>\r\n\r\n<p><b>Example 2:</b></p>\r\n\r\n<pre>\r\n<b>Input:</b> <i>n</i> = <code>13</code>\r\n<b>Output:</b> 2\r\n<strong>Explanation: </strong><code>13 = 4 + 9.</code></pre>",
+    "difficulty": "Medium",
+    "questionId": "279",
+    "code": "/**\n * @param {number} n\n * @return {number}\n */\nvar numSquares = function(n) {\n  const list = []\n  list.push({ num: n, step: 0 })\n  const visitedObj = { [n]: true }\n  while (list.length > 0) {\n    const { num, step, visited } = list.shift()\n    for (let i = 1;; i++) {\n      const extraNum = num - i * i\n      if (extraNum < 0) break\n      if (extraNum === 0) return step + 1\n      if (!visitedObj[extraNum]) {\n        visitedObj[extraNum] = true\n        list.push({ num: num - i * i, step: step + 1 })\n      }\n    }\n  }\n}",
     "lang": "javascript"
   },
   {
     "title": "Move Zeroes",
     "titleSlug": "move-zeroes",
     "status": "ac",
-    "content": "<p>Given an array <code>nums</code>, write a function to move all <code>0</code>&#39;s to the end of it while maintaining the relative order of the non-zero elements.</p>\r\n\r\n<p><b>Example:</b></p>\r\n\r\n<pre>\r\n<b>Input:</b> <code>[0,1,0,3,12]</code>\r\n<b>Output:</b> <code>[1,3,12,0,0]</code></pre>\r\n\r\n<p><b>Note</b>:</p>\r\n\r\n<ol>\r\n\t<li>You must do this <b>in-place</b> without making a copy of the array.</li>\r\n\t<li>Minimize the total number of operations.</li>\r\n</ol>",
+    "difficulty": "Easy",
+    "questionId": "283",
+    "code": "/**\n * @param {number[]} nums\n * @return {void} Do not return anything, modify nums in-place instead.\n */\nvar moveZeroes = function(nums) {\n  const length = nums.length\n  let count = 0               // 0 的个数\n  for (let i = 0; i < length; i++) {\n    if (nums[i - count] === 0) {\n      nums.splice(i - count, 1)\n      count++\n    }\n  }\n  for (let i = 0; i < count; i++) {\n    nums.push(0)\n  }\n  return nums\n}",
     "lang": "javascript"
   },
   {
     "title": "Word Pattern",
     "titleSlug": "word-pattern",
     "status": "ac",
-    "content": "<p>Given a <code>pattern</code> and a string <code>s</code>, find if <code>s</code>&nbsp;follows the same pattern.</p>\n\n<p>Here <b>follow</b> means a full match, such that there is a bijection between a letter in <code>pattern</code> and a <b>non-empty</b> word in <code>s</code>.</p>\n\n<p>&nbsp;</p>\n<p><strong>Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> pattern = &quot;abba&quot;, s = &quot;dog cat cat dog&quot;\n<strong>Output:</strong> true\n</pre>\n\n<p><strong>Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> pattern = &quot;abba&quot;, s = &quot;dog cat cat fish&quot;\n<strong>Output:</strong> false\n</pre>\n\n<p><strong>Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> pattern = &quot;aaaa&quot;, s = &quot;dog cat cat dog&quot;\n<strong>Output:</strong> false\n</pre>\n\n<p><strong>Example 4:</strong></p>\n\n<pre>\n<strong>Input:</strong> pattern = &quot;abba&quot;, s = &quot;dog dog dog dog&quot;\n<strong>Output:</strong> false\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= pattern.length &lt;= 300</code></li>\n\t<li><code>pattern</code> contains only lower-case English letters.</li>\n\t<li><code>1 &lt;= s.length &lt;= 3000</code></li>\n\t<li><code>s</code> contains only lower-case English letters and spaces <code>&#39; &#39;</code>.</li>\n\t<li><code>s</code> <strong>does not contain</strong> any leading or trailing spaces.</li>\n\t<li>All the words in <code>s</code> are separated by a <strong>single space</strong>.</li>\n</ul>\n",
+    "difficulty": "Easy",
+    "questionId": "290",
+    "code": "/**\n * @param {string} pattern\n * @param {string} str\n * @return {boolean}\n */\nvar wordPattern = function(pattern, str) {\n  const strArr = str.split(' ')\n  if (pattern.length !== strArr.length) return false\n\n  const patternMap = new Map()\n  const strArrMap = new Map()\n\n  for (let i = 0; i < pattern.length; i++) {\n    const getPatternMap = patternMap.get(pattern[i])\n    const getStrArrMap = strArrMap.get(strArr[i])\n    if (!getPatternMap) {\n      patternMap.set(pattern[i], strArr[i])\n    } else if (getPatternMap !== strArr[i]) {\n      return false\n    }\n\n    if (!getStrArrMap) {\n      strArrMap.set(strArr[i], pattern[i])\n    } else if (getStrArrMap !== pattern[i]) {\n      return false\n    }\n  }\n\n  return true\n};",
     "lang": "javascript"
   },
   {
     "title": "Odd Even Linked List",
     "titleSlug": "odd-even-linked-list",
     "status": "ac",
-    "content": "<p>Given a singly linked list, group all odd nodes together followed by the even nodes. Please note here we are talking about the node number and not the value in the nodes.</p>\n\n<p>You should try to do it in place. The program should run in O(1) space complexity and O(nodes) time complexity.</p>\n\n<p><b>Example 1:</b></p>\n\n<pre>\n<strong>Input: </strong><code>1-&gt;2-&gt;3-&gt;4-&gt;5-&gt;NULL</code>\n<strong>Output: </strong><code>1-&gt;3-&gt;5-&gt;2-&gt;4-&gt;NULL</code>\n</pre>\n\n<p><b>Example 2:</b></p>\n\n<pre>\n<strong>Input: </strong>2<code>-&gt;1-&gt;3-&gt;5-&gt;6-&gt;4-&gt;7-&gt;NULL</code>\n<strong>Output: </strong><code>2-&gt;3-&gt;6-&gt;7-&gt;1-&gt;5-&gt;4-&gt;NULL</code>\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li>The relative order inside both the even and odd groups should remain as it was in the input.</li>\n\t<li>The first node is considered odd, the second node even and so on ...</li>\n\t<li>The length of the linked list is between <code>[0, 10^4]</code>.</li>\n</ul>\n",
+    "difficulty": "Medium",
+    "questionId": "328",
+    "code": "/**\n * Definition for singly-linked list.\n * function ListNode(val) {\n *     this.val = val;\n *     this.next = null;\n * }\n */\n/**\n * @param {ListNode} head\n * @return {ListNode}\n */\nvar oddEvenList = function(head) {\n  if (!head) return head\n  const list = new ListNode(0)\n  list.next = head\n  const odd = list.next\n  const even = odd.next\n\n  let prev = null\n  let cur = list.next\n  let next = cur.next\n  let count = 1\n\n  while (next) {\n    prev && (prev.next = next)\n    prev = cur\n    cur = next\n    next = cur.next\n    count++\n  }\n\n  if (count % 2 === 1) {\n    prev && (prev.next = null)\n    cur.next = even\n  } else {\n    prev.next = even\n  }\n\n  return odd\n}",
     "lang": "javascript"
   },
   {
     "title": "Flatten Nested List Iterator",
     "titleSlug": "flatten-nested-list-iterator",
     "status": "ac",
-    "content": "<p>Given a nested list of integers, implement an iterator to flatten it.</p>\r\n\r\n<p>Each element is either an integer, or a list -- whose elements may also be integers or other lists.</p>\r\n\r\n<p><strong>Example 1:</strong></p>\r\n\r\n<div>\r\n<pre>\r\n<strong>Input: </strong><span id=\"example-input-1-1\">[[1,1],2,[1,1]]</span>\r\n<strong>Output: </strong><span id=\"example-output-1\">[1,1,2,1,1]\r\n</span><strong>Explanation: </strong>By calling <i>next</i> repeatedly until <i>hasNext</i> returns false, \r\n&nbsp;            the order of elements returned by <i>next</i> should be: <code>[1,1,2,1,1]</code>.</pre>\r\n\r\n<div>\r\n<p><strong>Example 2:</strong></p>\r\n\r\n<pre>\r\n<strong>Input: </strong><span id=\"example-input-2-1\">[1,[4,[6]]]</span>\r\n<strong>Output: </strong><span id=\"example-output-2\">[1,4,6]\r\n</span><strong>Explanation: </strong>By calling <i>next</i> repeatedly until <i>hasNext</i> returns false, \r\n&nbsp;            the order of elements returned by <i>next</i> should be: <code>[1,4,6]</code>.\r\n</pre>\r\n</div>\r\n</div>\r\n",
+    "difficulty": "Medium",
+    "questionId": "341",
+    "code": "/**\n * // This is the interface that allows for creating nested lists.\n * // You should not implement it, or speculate about its implementation\n * function NestedInteger() {\n *\n *     Return true if this NestedInteger holds a single integer, rather than a nested list.\n *     @return {boolean}\n *     this.isInteger = function() {\n *         ...\n *     };\n *\n *     Return the single integer that this NestedInteger holds, if it holds a single integer\n *     Return null if this NestedInteger holds a nested list\n *     @return {integer}\n *     this.getInteger = function() {\n *         ...\n *     };\n *\n *     Return the nested list that this NestedInteger holds, if it holds a nested list\n *     Return null if this NestedInteger holds a single integer\n *     @return {NestedInteger[]}\n *     this.getList = function() {\n *         ...\n *     };\n * };\n */\n/**\n * @constructor\n * @param {NestedInteger[]} nestedList\n */\nvar NestedIterator = function(nestedList) {\n  this.printArr = []\n  if (!nestedList) return\n  this.stackList = []\n  this.stackList.push({ color: 'gray', list: nestedList })\n  while (this.stackList.length > 0) {\n    const { color, list } = this.stackList.pop()\n    if (color === 'white') {\n      this.printArr.unshift(list)\n    } else {\n      for (let i = 0; i < list.length; i++) {\n        if (list[i].isInteger()) {\n          this.stackList.push({ color: 'white', list: list[i].getInteger() })\n        } else {\n          this.stackList.push({ color: 'gray', list: list[i].getList() })\n        }\n      }\n    }\n  }\n}\n\n/**\n * @this NestedIterator\n * @returns {boolean}\n */\nNestedIterator.prototype.hasNext = function() {\n  return this.printArr.length > 0\n}\n\n/**\n * @this NestedIterator\n * @returns {integer}\n */\nNestedIterator.prototype.next = function() {\n  return this.printArr.shift()\n}",
     "lang": "javascript"
   },
   {
     "title": "Reverse String",
     "titleSlug": "reverse-string",
     "status": "ac",
-    "content": "<p>Write a function that reverses a string. The input string is given as an array of characters <code>char[]</code>.</p>\r\n\r\n<p>Do not allocate extra space for another array, you must do this by <strong>modifying the input array&nbsp;<a href=\"https://en.wikipedia.org/wiki/In-place_algorithm\" target=\"_blank\">in-place</a></strong> with O(1) extra memory.</p>\r\n\r\n<p>You may assume all the characters consist of <a href=\"https://en.wikipedia.org/wiki/ASCII#Printable_characters\" target=\"_blank\">printable ascii characters</a>.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<div>\r\n<p><strong>Example 1:</strong></p>\r\n\r\n<pre>\r\n<strong>Input: </strong><span id=\"example-input-1-1\">[&quot;h&quot;,&quot;e&quot;,&quot;l&quot;,&quot;l&quot;,&quot;o&quot;]</span>\r\n<strong>Output: </strong><span id=\"example-output-1\">[&quot;o&quot;,&quot;l&quot;,&quot;l&quot;,&quot;e&quot;,&quot;h&quot;]</span>\r\n</pre>\r\n\r\n<div>\r\n<p><strong>Example 2:</strong></p>\r\n\r\n<pre>\r\n<strong>Input: </strong><span id=\"example-input-2-1\">[&quot;H&quot;,&quot;a&quot;,&quot;n&quot;,&quot;n&quot;,&quot;a&quot;,&quot;h&quot;]</span>\r\n<strong>Output: </strong><span id=\"example-output-2\">[&quot;h&quot;,&quot;a&quot;,&quot;n&quot;,&quot;n&quot;,&quot;a&quot;,&quot;H&quot;]</span>\r\n</pre>\r\n</div>\r\n</div>\r\n",
+    "difficulty": "Easy",
+    "questionId": "344",
+    "code": "/**\n * @param {character[]} s\n * @return {void} Do not return anything, modify s in-place instead.\n */\nvar reverseString = function(s) {\n  let left = 0, right = s.length - 1\n\n  while (left <= right) {\n    swap(s, left, right)\n    left++\n    right--\n  }\n}\n\n/* 交换位置\n  nums 数组, a, b 为下标\n*/\nvar swap = function(nums, a, b) {\n  const tmp = nums[a]\n  nums[a] = nums[b]\n  nums[b] = tmp\n}",
     "lang": "javascript"
   },
   {
     "title": "Top K Frequent Elements",
     "titleSlug": "top-k-frequent-elements",
     "status": "ac",
-    "content": "<p>Given a non-empty array of integers, return the <b><i>k</i></b> most frequent elements.</p>\n\n<p><strong>Example 1:</strong></p>\n\n<pre>\n<strong>Input: </strong>nums = <span id=\"example-input-1-1\">[1,1,1,2,2,3]</span>, k = <span id=\"example-input-1-2\">2</span>\n<strong>Output: </strong><span id=\"example-output-1\">[1,2]</span>\n</pre>\n\n<div>\n<p><strong>Example 2:</strong></p>\n\n<pre>\n<strong>Input: </strong>nums = <span id=\"example-input-2-1\">[1]</span>, k = <span id=\"example-input-2-2\">1</span>\n<strong>Output: </strong><span id=\"example-output-2\">[1]</span></pre>\n</div>\n\n<p><b>Note: </b></p>\n\n<ul>\n\t<li>You may assume <i>k</i> is always valid, 1 &le; <i>k</i> &le; number of unique elements.</li>\n\t<li>Your algorithm&#39;s time complexity <b>must be</b> better than O(<i>n</i> log <i>n</i>), where <i>n</i> is the array&#39;s size.</li>\n\t<li>It&#39;s guaranteed that the answer is unique, in other words the set of the top k frequent elements is unique.</li>\n\t<li>You can return the answer in any order.</li>\n</ul>\n",
+    "difficulty": "Medium",
+    "questionId": "347",
+    "code": "/**\n * @param {number[]} nums\n * @param {number} k\n * @return {number[]}\n */\nvar topKFrequent = function(nums, k) {\n  const obj = {}\n  for (let i = 0; i < nums.length; i++) {\n    if (!obj[nums[i]]) {\n      obj[nums[i]] = 1\n    } else {\n      obj[nums[i]] = obj[nums[i]] + 1\n    }\n  }\n\n  const list = []\n\n  const keysArr = Object.keys(obj)\n  for (let i = 0; i < keysArr.length; i++) {\n    const key = keysArr[i]\n    const value = obj[key]\n    if (!list[value - 1]) {\n      list[value - 1] = [parseInt(key, 10)]\n    } else {\n      list[value - 1].push(parseInt(key, 10))\n    }\n  }\n\n  const result = []\n  let count = 0\n  for (let i = list.length - 1; i >= 0; i--) {\n    const curList = list[i]\n    if (curList) {\n      for (let x = 0; x < curList.length; x++) {\n        if (count === k) return result\n        result.push(curList[x])\n        count++\n      }\n    }\n  }\n  return result\n}",
     "lang": "javascript"
   },
   {
     "title": "Intersection of Two Arrays",
     "titleSlug": "intersection-of-two-arrays",
     "status": "ac",
-    "content": "<p>Given two arrays, write a function to compute their intersection.</p>\r\n\r\n<p><strong>Example 1:</strong></p>\r\n\r\n<pre>\r\n<strong>Input: </strong>nums1 = <span id=\"example-input-1-1\">[1,2,2,1]</span>, nums2 = <span id=\"example-input-1-2\">[2,2]</span>\r\n<strong>Output: </strong><span id=\"example-output-1\">[2]</span>\r\n</pre>\r\n\r\n<div>\r\n<p><strong>Example 2:</strong></p>\r\n\r\n<pre>\r\n<strong>Input: </strong>nums1 = <span id=\"example-input-2-1\">[4,9,5]</span>, nums2 = <span id=\"example-input-2-2\">[9,4,9,8,4]</span>\r\n<strong>Output: </strong><span id=\"example-output-2\">[9,4]</span></pre>\r\n</div>\r\n\r\n<p><b>Note:</b></p>\r\n\r\n<ul>\r\n\t<li>Each element in the result must be unique.</li>\r\n\t<li>The result can be in any order.</li>\r\n</ul>\r\n\r\n<p>&nbsp;</p>\r\n",
+    "difficulty": "Easy",
+    "questionId": "349",
+    "code": "/**\n * @param {number[]} nums1\n * @param {number[]} nums2\n * @return {number[]}\n */\nvar intersection = function(nums1, nums2) {\n  const resultSet = new Set()\n  const num1Set = new Set(nums1)\n  for (let i = 0; i < nums2.length; i++) {\n    if (num1Set.has(nums2[i])) {\n      resultSet.add(nums2[i])\n    }\n  }\n\n  return [...resultSet]\n};",
     "lang": "javascript"
   },
   {
     "title": "Intersection of Two Arrays II",
     "titleSlug": "intersection-of-two-arrays-ii",
     "status": "ac",
-    "content": "<p>Given two arrays, write a function to compute their intersection.</p>\r\n\r\n<p><strong>Example 1:</strong></p>\r\n\r\n<pre>\r\n<strong>Input: </strong>nums1 = <span id=\"example-input-1-1\">[1,2,2,1]</span>, nums2 = <span id=\"example-input-1-2\">[2,2]</span>\r\n<strong>Output: </strong><span id=\"example-output-1\">[2,2]</span>\r\n</pre>\r\n\r\n<div>\r\n<p><strong>Example 2:</strong></p>\r\n\r\n<pre>\r\n<strong>Input: </strong>nums1 = <span id=\"example-input-2-1\">[4,9,5]</span>, nums2 = <span id=\"example-input-2-2\">[9,4,9,8,4]</span>\r\n<strong>Output: </strong><span id=\"example-output-2\">[4,9]</span></pre>\r\n</div>\r\n\r\n<p><b>Note:</b></p>\r\n\r\n<ul>\r\n\t<li>Each element in the result should appear as many times as it shows in both arrays.</li>\r\n\t<li>The result can be in any order.</li>\r\n</ul>\r\n\r\n<p><b>Follow up:</b></p>\r\n\r\n<ul>\r\n\t<li>What if the given array is already sorted? How would you optimize your algorithm?</li>\r\n\t<li>What if <i>nums1</i>&#39;s size is small compared to <i>nums2</i>&#39;s size? Which algorithm is better?</li>\r\n\t<li>What if elements of <i>nums2</i> are stored on disk, and the memory is limited such that you cannot load all elements into the memory at once?</li>\r\n</ul>\r\n",
+    "difficulty": "Easy",
+    "questionId": "350",
+    "code": "/**\n * @param {number[]} nums1\n * @param {number[]} nums2\n * @return {number[]}\n */\nvar intersect = function(nums1, nums2) {\n  const nums1Map = getMap(nums1)\n  const nums2Map = getMap(nums2)\n  \n  const result = []\n\n  nums1Map.forEach((nums1Value, key) => {\n    const nums2MapHasKey = nums2Map.get(key)\n    if (nums2MapHasKey) {\n      for (let i = 0; i < Math.min(nums1Value, nums2MapHasKey); i++) {\n        result.push(key)\n      }\n    }\n  })\n  \n  return result\n};\n\nvar getMap = function(arr) {\n  const map = new Map()\n  for (let i = 0; i < arr.length; i++) {\n    const getValue = map.get(arr[i])\n    if (!getValue) {\n      map.set(arr[i], 1)\n    } else {\n      map.set(arr[i], getValue + 1)\n    }\n  }\n  return map\n}",
     "lang": "javascript"
   },
   {
     "title": "Sum of Left Leaves",
     "titleSlug": "sum-of-left-leaves",
     "status": "ac",
-    "content": "<p>Find the sum of all left leaves in a given binary tree.</p>\r\n\r\n<p><b>Example:</b>\r\n<pre>\r\n    3\r\n   / \\\r\n  9  20\r\n    /  \\\r\n   15   7\r\n\r\nThere are two left leaves in the binary tree, with values <b>9</b> and <b>15</b> respectively. Return <b>24</b>.\r\n</pre>\r\n</p>",
+    "difficulty": "Easy",
+    "questionId": "404",
+    "code": "/**\n * Definition for a binary tree node.\n * function TreeNode(val) {\n *     this.val = val;\n *     this.left = this.right = null;\n * }\n */\n/**\n * @param {TreeNode} root\n * @return {number}\n */\nvar sumOfLeftLeaves = function(root) {\n  if (!root) return 0\n  if (root.left) {\n    if (!root.left.left && !root.left.right) {\n      return root.left.val + sumOfLeftLeaves(root.right)\n    } else {\n      return sumOfLeftLeaves(root.left) + sumOfLeftLeaves(root.right)\n    }\n  } else {\n    return sumOfLeftLeaves(root.right)\n  }\n};",
     "lang": "javascript"
   },
   {
     "title": "Find All Anagrams in a String",
     "titleSlug": "find-all-anagrams-in-a-string",
     "status": "ac",
-    "content": "<p>Given a string <b>s</b> and a <b>non-empty</b> string <b>p</b>, find all the start indices of <b>p</b>'s anagrams in <b>s</b>.</p>\r\n\r\n<p>Strings consists of lowercase English letters only and the length of both strings <b>s</b> and <b>p</b> will not be larger than 20,100.</p>\r\n\r\n<p>The order of output does not matter.</p>\r\n\r\n<p><b>Example 1:</b>\r\n<pre>\r\n<b>Input:</b>\r\ns: \"cbaebabacd\" p: \"abc\"\r\n\r\n<b>Output:</b>\r\n[0, 6]\r\n\r\n<b>Explanation:</b>\r\nThe substring with start index = 0 is \"cba\", which is an anagram of \"abc\".\r\nThe substring with start index = 6 is \"bac\", which is an anagram of \"abc\".\r\n</pre>\r\n</p>\r\n\r\n<p><b>Example 2:</b>\r\n<pre>\r\n<b>Input:</b>\r\ns: \"abab\" p: \"ab\"\r\n\r\n<b>Output:</b>\r\n[0, 1, 2]\r\n\r\n<b>Explanation:</b>\r\nThe substring with start index = 0 is \"ab\", which is an anagram of \"ab\".\r\nThe substring with start index = 1 is \"ba\", which is an anagram of \"ab\".\r\nThe substring with start index = 2 is \"ab\", which is an anagram of \"ab\".\r\n</pre>\r\n</p>",
+    "difficulty": "Medium",
+    "questionId": "438",
+    "code": "var findAnagrams = function(s, p) {\n  const pLength = p.length\n  const initHashObj = {} // 初始化 hash 对象\n  let hashObj = {}\n  const targetObj = {}\n  for (let i = 0; i < p.length; i++) {\n    targetObj[p[i]] = typeof(targetObj[p[i]]) === 'number' ? targetObj[p[i]] + 1 : 0\n    initHashObj[p[i]] = 0\n    hashObj[p[i]] = 0\n  }\n\n  const result = [] // 存储结果\n\n  let left = 0, right = 0\n\n  while (left < s.length && right < s.length) {\n    if (typeof(hashObj[s[right]]) === 'number' && hashObj[s[right]] <= targetObj[s[right]]) {\n      hashObj[s[right]] = hashObj[s[right]] + 1\n      if (right - left + 1 === pLength) result.push(left)\n      right++\n    } else if (typeof(hashObj[s[right]]) !== 'number') {\n      right++\n      left = right\n      hashObj = JSON.parse(JSON.stringify(initHashObj))\n    } else {\n      hashObj[s[left]] !== initHashObj[s[left]] && (hashObj[s[left]] = hashObj[s[left]] - 1)\n      left++\n    }\n  }\n\n  return result\n};",
     "lang": "javascript"
   },
   {
     "title": "Add Two Numbers II",
     "titleSlug": "add-two-numbers-ii",
     "status": "ac",
-    "content": "<p>You are given two <b>non-empty</b> linked lists representing two non-negative integers. The most significant digit comes first and each of their nodes contain a single digit. Add the two numbers and return it as a linked list.</p>\r\n\r\n<p>You may assume the two numbers do not contain any leading zero, except the number 0 itself.</p>\r\n\r\n<p><b>Follow up:</b><br />\r\nWhat if you cannot modify the input lists? In other words, reversing the lists is not allowed.\r\n</p>\r\n\r\n<p>\r\n<b>Example:</b>\r\n<pre>\r\n<b>Input:</b> (7 -> 2 -> 4 -> 3) + (5 -> 6 -> 4)\r\n<b>Output:</b> 7 -> 8 -> 0 -> 7\r\n</pre>\r\n</p>",
+    "difficulty": "Medium",
+    "questionId": "445",
+    "code": "/**\n * Definition for singly-linked list.\n * function ListNode(val) {\n *     this.val = val;\n *     this.next = null;\n * }\n */\n/**\n * @param {ListNode} l1\n * @param {ListNode} l2\n * @return {ListNode}\n */\nvar addTwoNumbers = function(l1, l2) {\n  let countl1 = 0, countl2 = 0\n  let l1List = l1\n  let l2List = l2\n  while(l1List) {\n    countl1++\n    l1List = l1List.next\n  }\n\n  while(l2List) {\n    countl2++\n    l2List = l2List.next\n  }\n\n  // creat the frontest List\n  let tmpList = new ListNode(0)\n  let cur = tmpList\n  let diff = Math.abs(countl2 - countl1)\n  while (diff--) {\n    cur.next = new ListNode(0)\n    cur = cur.next\n  }\n\n  if (countl1 < countl2) {\n    cur.next = l1\n    l1 = tmpList.next\n  } else if (countl2 < countl1) {\n    cur.next = l2\n    l2 = tmpList.next\n  }\n\n\n  // flag: 1 shows digit carry, 0 not;\n  var digitCarry = 0\n\n  /**\n   * calculate the sum of l1 and l2\n   */\n  function listNodeAdd(l1, l2) {\n    if (l1 === null) return\n\n    listNodeAdd(l1.next, l2.next)\n\n    let sum = l1.val + l2.val + digitCarry\n    if (sum >= 10) {\n      l1.val = sum % 10\n      digitCarry = 1\n    } else {\n      l1.val = sum\n      digitCarry = 0\n    }\n  }\n\n  listNodeAdd(l1, l2)\n\n  let result = l1\n  if (digitCarry === 1) {\n    result = new ListNode(1)\n    result.next = l1\n  }\n\n  return result\n}",
     "lang": "javascript"
   },
   {
     "title": "Number of Boomerangs",
     "titleSlug": "number-of-boomerangs",
     "status": "ac",
-    "content": "<p>Given <i>n</i> points in the plane that are all pairwise distinct, a &quot;boomerang&quot; is a tuple of points <code>(i, j, k)</code> such that the distance between <code>i</code> and <code>j</code> equals the distance between <code>i</code> and <code>k</code> (<b>the order of the tuple matters</b>).</p>\r\n\r\n<p>Find the number of boomerangs. You may assume that <i>n</i> will be at most <b>500</b> and coordinates of points are all in the range <b>[-10000, 10000]</b> (inclusive).</p>\r\n\r\n<p><b>Example:</b></p>\r\n\r\n<pre>\r\n<b>Input:</b>\r\n[[0,0],[1,0],[2,0]]\r\n\r\n<b>Output:</b>\r\n2\r\n\r\n<b>Explanation:</b>\r\nThe two boomerangs are <b>[[1,0],[0,0],[2,0]]</b> and <b>[[1,0],[2,0],[0,0]]</b>\r\n</pre>\r\n\r\n<p>&nbsp;</p>\r\n",
+    "difficulty": "Easy",
+    "questionId": "447",
+    "code": "var numberOfBoomerangs = function (points) {\n  const getDistancePow = (x, y) => {\n    return Math.pow((y[0] - x[0]), 2) + Math.pow((y[1] - x[1]), 2)\n  }\n\n  let result = 0\n\n  for (let p = 0; p < points.length; p++) {\n    const tmpMap = new Map()\n    for (let n = 0; n < points.length; n++) {\n      if (p === n) continue\n      const distancePow = getDistancePow(points[p], points[n])\n      const hasDistancePow = tmpMap.has(`${distancePow}`)\n      if (hasDistancePow) {\n        tmpMap.set(`${distancePow}`, tmpMap.get(`${distancePow}`) + 1)\n      } else {\n        tmpMap.set(`${distancePow}`, 1)\n      }\n    }\n    tmpMap.forEach((value, key) => {\n      if (value > 1) {\n        const sum = value * (value - 1)\n        result += sum\n      }\n    })\n    tmpMap.clear()\n  }\n\n  return result\n}",
     "lang": "javascript"
   },
   {
     "title": "Sort Characters By Frequency",
     "titleSlug": "sort-characters-by-frequency",
     "status": "ac",
-    "content": "<p>Given a string, sort it in decreasing order based on the frequency of characters.</p>\r\n\r\n<p><b>Example 1:</b>\r\n<pre>\r\n<b>Input:</b>\r\n\"tree\"\r\n\r\n<b>Output:</b>\r\n\"eert\"\r\n\r\n<b>Explanation:</b>\r\n'e' appears twice while 'r' and 't' both appear once.\r\nSo 'e' must appear before both 'r' and 't'. Therefore \"eetr\" is also a valid answer.\r\n</pre>\r\n</p>\r\n\r\n<p><b>Example 2:</b>\r\n<pre>\r\n<b>Input:</b>\r\n\"cccaaa\"\r\n\r\n<b>Output:</b>\r\n\"cccaaa\"\r\n\r\n<b>Explanation:</b>\r\nBoth 'c' and 'a' appear three times, so \"aaaccc\" is also a valid answer.\r\nNote that \"cacaca\" is incorrect, as the same characters must be together.\r\n</pre>\r\n</p>\r\n\r\n<p><b>Example 3:</b>\r\n<pre>\r\n<b>Input:</b>\r\n\"Aabb\"\r\n\r\n<b>Output:</b>\r\n\"bbAa\"\r\n\r\n<b>Explanation:</b>\r\n\"bbaA\" is also a valid answer, but \"Aabb\" is incorrect.\r\nNote that 'A' and 'a' are treated as two different characters.\r\n</pre>\r\n</p>",
+    "difficulty": "Medium",
+    "questionId": "451",
+    "code": "/**\n * @param {string} s\n * @return {string}\n */\nvar frequencySort = function(s) {\n  const map = new Map()\n  for (let i = 0; i < s.length; i++) {\n    const getMap = map.get(s[i])\n    if (!getMap) {\n      map.set(s[i], 1)\n    } else {\n      map.set(s[i], getMap + 1)\n    }\n  }\n\n  const arr = []\n  // for (let i = 0; i < map.keys.length; i++) {\n  //   const key = map.keys[i]\n  for (let key of map.keys()) {\n    arr.push({\n      key,\n      value: map.get(key)\n    })\n  }\n\n  // todo 后续实现下以下排序\n  arr.sort((a, b) => b.value - a.value)\n\n  const result = arr.map(r => {\n    let str = ''\n    for (let i = 0; i < r.value; i++) {\n      str = str + r.key\n    }\n    return str\n  }).join('')\n\n  return result\n};",
     "lang": "javascript"
   },
   {
     "title": "4Sum II",
     "titleSlug": "4sum-ii",
     "status": "ac",
-    "content": "<p>Given four lists A, B, C, D of integer values, compute how many tuples <code>(i, j, k, l)</code> there are such that <code>A[i] + B[j] + C[k] + D[l]</code> is zero.</p>\r\n\r\n<p>To make problem a bit easier, all A, B, C, D have same length of N where 0 &le; N &le; 500. All integers are in the range of -2<sup>28</sup> to 2<sup>28</sup> - 1 and the result is guaranteed to be at most 2<sup>31</sup> - 1.</p>\r\n\r\n<p><b>Example:</b></p>\r\n\r\n<pre>\r\n<b>Input:</b>\r\nA = [ 1, 2]\r\nB = [-2,-1]\r\nC = [-1, 2]\r\nD = [ 0, 2]\r\n\r\n<b>Output:</b>\r\n2\r\n\r\n<b>Explanation:</b>\r\nThe two tuples are:\r\n1. (0, 0, 0, 1) -&gt; A[0] + B[0] + C[0] + D[1] = 1 + (-2) + (-1) + 2 = 0\r\n2. (1, 1, 0, 0) -&gt; A[1] + B[1] + C[0] + D[0] = 2 + (-1) + (-1) + 0 = 0\r\n</pre>\r\n\r\n<p>&nbsp;</p>\r\n",
+    "difficulty": "Medium",
+    "questionId": "454",
+    "code": "/**\n * @param {number[]} A\n * @param {number[]} B\n * @param {number[]} C\n * @param {number[]} D\n * @return {number}\n */\nvar fourSumCount = function(A, B, C, D) {\n  const tmpMap = new Map()\n  for (let ic = 0; ic < C.length; ic++) {\n    for (let id = 0; id < D.length; id++) {\n      const sumC_D = C[ic] + D[id]\n      const hasSumC_D = tmpMap.has(sumC_D)\n      if (hasSumC_D) {\n        tmpMap.set(sumC_D, tmpMap.get(sumC_D) + 1)\n      } else {\n        tmpMap.set(sumC_D, 1)\n      }\n    }\n  }\n\n  let count = 0\n\n  for (let ia = 0; ia < A.length; ia++) {\n    for (let ib = 0; ib < B.length; ib++) {\n      const sumA_B = A[ia] + B[ib]\n      tmpMap.has(-sumA_B) && (count = count + tmpMap.get(-sumA_B))\n    }\n  }\n\n  return count\n}",
     "lang": "javascript"
   },
   {
     "title": "Permutation in String",
     "titleSlug": "permutation-in-string",
     "status": "ac",
-    "content": "<p>Given two strings <b>s1</b> and <b>s2</b>, write a function to return true if <b>s2</b> contains the permutation of <b>s1</b>. In other words, one of the first string&#39;s permutations is the <b>substring</b> of the second string.</p>\n\n<p>&nbsp;</p>\n\n<p><b>Example 1:</b></p>\n\n<pre>\n<b>Input: </b>s1 = &quot;ab&quot; s2 = &quot;eidbaooo&quot;\n<b>Output: </b>True\n<b>Explanation:</b> s2 contains one permutation of s1 (&quot;ba&quot;).\n</pre>\n\n<p><b>Example 2:</b></p>\n\n<pre>\n<b>Input:</b>s1= &quot;ab&quot; s2 = &quot;eidboaoo&quot;\n<b>Output:</b> False\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li>The input strings only contain lower case letters.</li>\n\t<li>The length of both given strings is in range [1, 10,000].</li>\n</ul>\n",
+    "difficulty": "Medium",
+    "questionId": "567",
+    "code": "/** 18.12.08 */\n/**\n * @param {string} s1\n * @param {string} s2\n * @return {boolean}\n */\nvar checkInclusion = function (s1, s2) {\n  const s1Obj = {}\n  const s1Length = s1.length\n  for (let i = 0; i < s1Length; i++) {\n    if (s1Obj[s1[i]]) {\n      s1Obj[s1[i]] = ++s1Obj[s1[i]]\n    } else {\n      s1Obj[s1[i]] = 1\n    }\n  }\n\n  const s2Length = s2.length\n\n  if (s1Length > s2Length) {\n    return false\n  }\n\n  const count = s2Length - s1Length\n  let str = ''\n\n  for (let i = 0; i <= count; i++) {\n    str = s2.slice(i, s1Length + i)\n    const s2Obj = {}\n    for (let z = 0; z < str.length; z++) {\n      if (!s1Obj[str[z]]) {\n        i = i + z\n        break\n      }\n      if (s2Obj[str[z]]) {\n        s2Obj[str[z]] = s2Obj[str[z]] + 1\n      } else {\n        s2Obj[str[z]] = 1\n      }\n    }\n\n    let bool = true\n    for (let y = 0; y < Object.keys(s1Obj).length; y++) {\n      if (s2Obj[Object.keys(s1Obj)[y]] !== s1Obj[Object.keys(s1Obj)[y]]) {\n        bool = false\n        break\n      }\n    }\n\n    if (bool === true) {\n      return true\n    }\n  }\n\n  return false\n};",
     "lang": "javascript"
   }
 ]
