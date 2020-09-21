@@ -110,7 +110,8 @@ const getAllACQuestions = async () => {
       title
       titleSlug
       status
-      content
+      difficulty
+      questionId,
     }
   }`);
   spinner.stop();
@@ -118,20 +119,6 @@ const getAllACQuestions = async () => {
     questions.filter(({ status }) => status === 'ac');
   const questions = json.allQuestions || [];
   return filterAcQuestions(questions);
-};
-const acCodeQuery = (questionSlug) => {
-  const query = `{
-    submissionList(offset:0,limit:10, questionSlug: "${questionSlug}"){
-      submissions{
-        lang
-        title
-        url
-        statusDisplay
-        id
-      }
-    }
-  }`;
-  return query;
 };
 const getSubmissionCode = async ({ url, id } = {}, isUS = true) => {
   if (isUS) {
@@ -158,9 +145,20 @@ const getSubmissionCode = async ({ url, id } = {}, isUS = true) => {
   return detail.code;
 };
 
+// get details of ac code.
 const getAcCode = async (questionSlug) => {
   const qglRequest = await createGqlRequest();
-  const json = await qglRequest(acCodeQuery(questionSlug));
+  const json = await qglRequest(`{
+    submissionList(offset:0,limit:10, questionSlug: "${questionSlug}"){
+      submissions{
+        lang
+        title
+        url
+        statusDisplay
+        id
+      }
+    }
+  }`);
   const submissions =
     (json.submissionList && json.submissionList.submissions) || [];
   const acSubmissions = submissions.filter(
