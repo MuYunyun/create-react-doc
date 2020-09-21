@@ -1,3 +1,4 @@
+// todo: use https://github.com/tsuz/json-to-markdown-table to convert json to markdown table
 const fs = require('fs');
 const ora = require('ora');
 const { stringify } = require('./utils');
@@ -12,9 +13,9 @@ const difference = (problemsA = [], problemsB = []) => {
 };
 const download = async (command) => {
   const problemsPath = 'problems.json';
+  // get incremental problems through comapre json
   let problems = [];
   let questions = await getAllACQuestions();
-  console.log('questions', questions);
   if (!command.all) {
     if (fs.existsSync(problemsPath)) {
       problems = JSON.parse(fs.readFileSync(problemsPath));
@@ -30,8 +31,8 @@ const download = async (command) => {
     const current = xs.shift();
     try {
       const { code, lang } = await getAcCode(current.titleSlug);
-      current.code = code;
-      current.lang = lang;
+      // current.code = code;
+      // current.lang = lang;
     } catch (error) {
       console.error(error.message);
     }
@@ -46,5 +47,6 @@ const download = async (command) => {
   spinner.stop();
 };
 
-download({ all: true });
+// download({ all: true });
+download({});
 // module.exports = download;
