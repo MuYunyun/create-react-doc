@@ -1,8 +1,12 @@
 // todo: use https://github.com/tsuz/json-to-markdown-table to convert json to markdown table
 const fs = require('fs');
 const ora = require('ora');
-const { stringify } = require('./utils');
-const { getAllACQuestions, getAcCode } = require('./leetcode');
+const { transformToMarkdownTable } = require('./utils');
+// const { getAllACQuestions, getQuestionData } = require('./leetcode');
+const { getAllACQuestions } = require('./leetcode');
+const {
+  paths,
+} = require('crd-scripts');
 
 const difference = (problemsA = [], problemsB = []) => {
   const map = problemsB.reduce((acc, problem) => {
@@ -29,8 +33,10 @@ const download = async (command) => {
       return;
     }
     const current = xs.shift();
+    // todo: https://github.com/beizhedenglong/leetcode-site-generator/issues/10
     try {
-      const { code, lang } = await getAcCode(current.titleSlug);
+      // const { topicTags } = await getQuestionData(current.titleSlug);
+      // console.log('topicTags', topicTags);
       // current.code = code;
       // current.lang = lang;
     } catch (error) {
@@ -40,13 +46,13 @@ const download = async (command) => {
       current.title
     }] has downloaded.`;
     problems.push(current);
-    fs.writeFileSync(problemsPath, stringify(problems));
+    if (paths.leetcodeReadme) {
+      fs.writeFileSync('leetcode-table.md', transformToMarkdownTable(problems));
+    }
     await aux(xs);
   };
   await aux([...questions]);
   spinner.stop();
 };
 
-// download({ all: true });
-download({});
-// module.exports = download;
+module.exports = download;
