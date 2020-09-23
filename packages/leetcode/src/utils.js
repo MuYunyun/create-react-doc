@@ -1,3 +1,4 @@
+/* eslint-disable no-plusplus */
 const { promisify } = require('util');
 const homedir = require('os').homedir();
 const fs = require('fs');
@@ -20,7 +21,7 @@ request.post = promisify(request.post);
 const getHeaders = session => ({
   'Content-Type': 'application/json',
   'x-csrftoken': session.csrftoken,
-  Cookie: `LEETCODE_SESSION=${session.LEETCODE_SESSION};csrftoken=${session.csrftoken};`,
+  cookie: `LEETCODE_SESSION=${session.LEETCODE_SESSION};csrftoken=${session.csrftoken};`,
 });
 
 const unicodeToChar = text =>
@@ -56,6 +57,18 @@ const removeConfig = (key) => {
   fs.writeFileSync(configPath, stringify(config));
 };
 
+const transformToMarkdownTable = (dataArr) => {
+  let result =
+    '| # | Title | Explanation | Difficulty |' +
+    '\n' +
+    '|:---:|:---:|:---:|:---:|';
+
+  for (let i = 0; i < dataArr.length; i++) {
+    result += `\n| ${dataArr[i].questionId} | [${dataArr[i].title}](https://leetcode.com/problems/${dataArr[i].titleSlug}/) | [Analyze](https://github.com/MuYunyun/blog/blob/master/LeetCode/${dataArr[i].questionId}.${dataArr[i].title.split(' ').join('_')}.md) | ${dataArr[i].difficulty}`;
+  }
+  return result;
+};
+
 module.exports = {
   parseCookie,
   request,
@@ -65,4 +78,5 @@ module.exports = {
   setConfig,
   removeConfig,
   stringify,
+  transformToMarkdownTable,
 };

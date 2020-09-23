@@ -4,153 +4,119 @@
     "titleSlug": "two-sum",
     "status": "ac",
     "difficulty": "Easy",
-    "questionId": "1",
-    "code": "/**\n * @param {number[]} nums\n * @param {number} target\n * @return {number[]}\n */\nvar twoSum = function(nums, target) {\n  var map = new Map()\n\n  for (let i = 0; i < nums.length; i++) {\n    const targetValue = target - nums[i]\n    const getTargetValue = map.get(targetValue)\n    if (typeof(getTargetValue) === 'number') {\n      return [i, getTargetValue]\n    }\n    map.set(nums[i], i)\n  }\n}",
-    "lang": "javascript"
+    "questionId": "1"
   },
   {
     "title": "Add Two Numbers",
     "titleSlug": "add-two-numbers",
     "status": "ac",
     "difficulty": "Medium",
-    "questionId": "2",
-    "code": "/**\n * Definition for singly-linked list.\n * function ListNode(val) {\n *     this.val = val;\n *     this.next = null;\n * }\n */\n/**\n * @param {ListNode} l1\n * @param {ListNode} l2\n * @return {ListNode}\n */\nvar addTwoNumbers = function(l1, l2) {\n  let flag = 0\n  let head = null,\n      temp = null\n  while (l1 || l2) {\n    let sum = flag\n    if (l1) {\n      sum += l1.val\n      l1 = l1.next\n    }\n\n    if (l2) {\n      sum += l2.val\n      l2 = l2.next\n    }\n\n    const obj = new ListNode(sum % 10)\n    if (head === null) {\n      head = obj\n      temp = obj\n    } else {\n      temp.next = obj\n      temp = obj\n    }\n\n    // 处理进位\n    flag = 0\n    if (sum >= 10) {\n      flag = 1\n    }\n  }\n\n  if (flag === 1) {\n    const result = new ListNode(1)\n    temp.next = result\n    temp = result\n  }\n  return head\n}",
-    "lang": "javascript"
+    "questionId": "2"
   },
   {
     "title": "Longest Substring Without Repeating Characters",
     "titleSlug": "longest-substring-without-repeating-characters",
     "status": "ac",
     "difficulty": "Medium",
-    "questionId": "3",
-    "code": "/**\n * @param {string} s\n * @return {number}\n */\nvar lengthOfLongestSubstring = function(s) {\n  let left = 0, right = 0 // [left, right] 区域\n  let result = 0 // 假定结果的初始值为 0\n  const cacheObj = {}\n\n  while (left < s.length) {\n    if (right < s.length && !cacheObj[s[right]]) {\n      cacheObj[s[right]] = 1\n      result = Math.max(result, right - left + 1)\n      right++\n    } else {\n      cacheObj[s[left]] = null\n      left++\n    }\n  }\n  if (result === 0) {\n    return 0\n  }\n  return result\n}",
-    "lang": "javascript"
+    "questionId": "3"
   },
   {
     "title": "Median of Two Sorted Arrays",
     "titleSlug": "median-of-two-sorted-arrays",
     "status": "ac",
     "difficulty": "Hard",
-    "questionId": "4",
-    "code": "/**\n * @param {number[]} nums1\n * @param {number[]} nums2\n * @return {number}\n */\nvar findMedianSortedArrays = function(nums1, nums2) {\n    let arr = nums1.concat(nums2).sort((r1, r2) => r1 - r2)\n    const length = arr.length\n    if (length % 2 === 0) {\n        return (arr[length / 2 - 1] + arr[length / 2]) / 2\n    } else {\n        return arr[(length + 1) / 2 - 1]\n    }\n};",
-    "lang": "javascript"
+    "questionId": "4"
   },
   {
     "title": "Reverse Integer",
     "titleSlug": "reverse-integer",
     "status": "ac",
     "difficulty": "Easy",
-    "questionId": "7",
-    "code": "/**\n * @param {number} x\n * @return {number}\n */\nvar reverse = function(x) {\n    if (x >= 0) {\n        var result = Number((x).toString().split('').reverse().join(''))\n        if (result > 2147483647 || result < -2147483647) {\n            return 0\n        } else {\n            return result\n        }\n    } else {\n        var result = Number('-'+(-x).toString().split('').reverse().join(''))\n        if (result > 2147483647 || result < -2147483647) {\n            return 0\n        } else {\n            return result\n        }\n    }\n};",
-    "lang": "javascript"
+    "questionId": "7"
   },
   {
     "title": "Palindrome Number",
     "titleSlug": "palindrome-number",
     "status": "ac",
     "difficulty": "Easy",
-    "questionId": "9",
-    "code": "/**\n * @param {number} x\n * @return {boolean}\n */\nvar isPalindrome = function (x) {\n  const convert = x.toString().split('').reverse().join('')\n  if (x === Number(convert)) {\n    return true\n  } else {\n    return false\n  }\n};",
-    "lang": "javascript"
+    "questionId": "9"
   },
   {
     "title": "Container With Most Water",
     "titleSlug": "container-with-most-water",
     "status": "ac",
     "difficulty": "Medium",
-    "questionId": "11",
-    "code": "/**\n * @param {number[]} height\n * @return {number}\n */\nvar maxArea = function (height) {\n  let head = 0, tail = height.length - 1, maxArea = 0\n  while (head < tail) {\n    result = Math.min(height[head], height[tail]) * (tail - head)\n    if (result > maxArea) {\n      maxArea = result\n    }\n    if (height[head] <= height[tail]) {\n      head++\n    } else {\n      tail--\n    }\n  }\n  return maxArea\n};",
-    "lang": "javascript"
+    "questionId": "11"
   },
   {
     "title": "Roman to Integer",
     "titleSlug": "roman-to-integer",
     "status": "ac",
     "difficulty": "Easy",
-    "questionId": "13",
-    "code": "/**\n * @param {string} s\n * @return {number}\n */\nvar romanToInt = function (s) {\n  const RomanArr = ['M', 'CM', 'D', 'CD', 'C', 'XC', 'L', 'XL', 'X', 'IX', 'V', 'IV', 'I']\n  const intArr = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1]\n  const length = s.length\n  let pick, result = 0\n  for (let i = 0; i < length; i++) {\n    pick = s.slice(i, i + 1)\n    if (pick === 'C' || pick === 'X' || pick === 'I') {\n      pick = s.slice(i, i + 2)\n      if (pick === 'CM' || pick === 'CD' || pick === 'XC' || pick === 'XL' || pick === 'IX' || pick === 'IV') {\n        i++\n      } else {\n        pick = s.slice(i, i + 1)\n      }\n    }\n    result += intArr[RomanArr.indexOf(pick)]\n  }\n  return result\n};",
-    "lang": "javascript"
+    "questionId": "13"
   },
   {
     "title": "Longest Common Prefix",
     "titleSlug": "longest-common-prefix",
     "status": "ac",
     "difficulty": "Easy",
-    "questionId": "14",
-    "code": "/**\n * @param {string[]} strs\n * @return {string}\n */\nvar longestCommonPrefix = function (strs) {\n  if (strs.length === 0) return ''\n\n  let str = strs[0]\n\n  for (let i = 0; i < strs.length; i++) {\n    while (strs[i].indexOf(str) !== 0) {\n      str = str.slice(0, str.length - 1)\n      if (str.length === 0) { return '' }\n    }\n  }\n\n  return str\n};",
-    "lang": "javascript"
+    "questionId": "14"
   },
   {
     "title": "3Sum",
     "titleSlug": "3sum",
     "status": "ac",
     "difficulty": "Medium",
-    "questionId": "15",
-    "code": "/**\n * @param {number[]} nums\n * @return {number[][]}\n */\nvar threeSum = function (nums) {\n  const sortNums = nums.sort((r1, r2) => r1 - r2)\n  let targetValue\n  const result = []\n\n  for (let i = 0; i < sortNums.length - 2; i++) {\n    // 针对下标 i 对应的值进行去重\n    if (i === 0 || nums[i] > nums[i - 1]) {\n      targetValue = -sortNums[i]\n      let l = i + 1\n      let r = sortNums.length - 1\n\n      while (l < r) {\n        let tmpArr = []\n        if (sortNums[l] + sortNums[r] === targetValue) {\n          tmpArr.push(-targetValue)\n          tmpArr.push(sortNums[l])\n          tmpArr.push(sortNums[r])\n          result.push(tmpArr)\n          l++\n          r--\n          // 针对下标 l 对应的值进行去重, r 同理\n          while (l < r && sortNums[l] === sortNums[l - 1]) {\n            l++\n          }\n          while (l < r && sortNums[r] === sortNums[r + 1]) {\n            r--\n          }\n        } else if (sortNums[l] + sortNums[r] > targetValue) {\n          r--\n        } else if (sortNums[l] + sortNums[r] < targetValue) {\n          l++\n        }\n      }\n    }\n  }\n\n  return result\n}",
-    "lang": "javascript"
+    "questionId": "15"
   },
   {
     "title": "3Sum Closest",
     "titleSlug": "3sum-closest",
     "status": "ac",
     "difficulty": "Medium",
-    "questionId": "16",
-    "code": "/**\n * @param {number[]} nums\n * @param {number} target\n * @return {number}\n */\nvar threeSumClosest = function (nums, target) {\n  let sum = 0\n  let close = nums[0] + nums[1] + nums[2]\n  let sortedNums = nums.sort((a, b) => a - b)\n\n  for (let i = 0; i < sortedNums.length; i++) {\n    let l = i + 1, r = sortedNums.length - 1\n    while (l < r) {\n      sum = nums[i] + nums[l] + nums[r] // 分别对应左、中、右\n      if (Math.abs(sum - target) < Math.abs(close - target)) {\n        close = sum\n      }\n\n      if (sum < target) {\n        l++\n      } else if (sum > target) {\n        r--\n      } else {\n        return sum\n      }\n\n    }\n\n  }\n\n  return close\n}",
-    "lang": "javascript"
+    "questionId": "16"
   },
   {
     "title": "Letter Combinations of a Phone Number",
     "titleSlug": "letter-combinations-of-a-phone-number",
     "status": "ac",
     "difficulty": "Medium",
-    "questionId": "17",
-    "code": "/**\n * @param {string} digits\n * @return {string[]}\n */\nvar letterCombinations = function (digits) { // '23'\n  const keyString = [\n    '',\n    '',\n    'abc',\n    'def',\n    'ghi',\n    'jkl',\n    'mno',\n    'pqrs',\n    'tuv',\n    'wxyz',\n  ]\n\n  if (digits === '' || digits.length === 0) {\n    return []\n  }\n\n  const result = ['']\n\n  for (let x of digits) {\n    const size = result.length\n    for (let i = 0; i < size; i++) {\n      const old = result.shift()\n\n      for (let y of keyString[x]) {\n        result.push(old + y)\n      }\n    }\n  }\n  return result\n};",
-    "lang": "javascript"
+    "questionId": "17"
   },
   {
     "title": "4Sum",
     "titleSlug": "4sum",
     "status": "ac",
     "difficulty": "Medium",
-    "questionId": "18",
-    "code": "var fourSum = function(nums, target) {\n  const result = []\n  if (nums.length < 4) return result\n  const sortSum = nums.sort((n1, n2) => n1 - n2)\n  const length = sortSum.length\n  debugger\n  for (let i = 0; i < length - 3; i++) {\n    if (i === 0 || nums[i] > nums[i - 1]) {\n      let l = i + 1\n      let m = l + 1\n\n      while (l < length - 2) {\n        let r = length - 1\n        if (l === i + 1 || nums[l] > nums[l - 1]) {\n          while (m < length - 1 && m < r) {\n            let tmpArr = []\n            const sum = nums[i] + nums[l] + nums[m] + nums[r]\n            if (sum === target) {\n              tmpArr.push(nums[i])\n              tmpArr.push(nums[l])\n              tmpArr.push(nums[m])\n              tmpArr.push(nums[r])\n              result.push(tmpArr)\n              m++\n              r--\n              while (nums[m] === nums[m - 1]) {\n                m++\n              }\n              while (nums[r] === nums[r + 1]) {\n                r--\n              }\n            } else if (sum < target) {\n              m++\n            } else if (sum > target) {\n              r--\n            }\n          }\n        }\n        l++\n        m = l + 1\n      }\n    }\n  }\n  return result\n}",
-    "lang": "javascript"
+    "questionId": "18"
   },
   {
     "title": "Remove Nth Node From End of List",
     "titleSlug": "remove-nth-node-from-end-of-list",
     "status": "ac",
     "difficulty": "Medium",
-    "questionId": "19",
-    "code": "/**\n * Definition for singly-linked list.\n * function ListNode(val) {\n *     this.val = val;\n *     this.next = null;\n * }\n */\n/**\n * @param {ListNode} head\n * @param {number} n\n * @return {ListNode}\n */\nvar removeNthFromEnd = function(head, n) {\n  const dummy = new ListNode(0)\n  dummy.next = head\n  let l = dummy\n  let r = dummy\n  let offset = n + 1\n\n  while (offset--) {\n    r = r.next\n    if (offset > 1 && r === null) {\n      return dummy.next\n    }\n  }\n\n  while (r) {\n    r = r.next\n    l = l.next\n  }\n\n  l.next = l.next.next\n\n  return dummy.next\n}",
-    "lang": "javascript"
+    "questionId": "19"
   },
   {
     "title": "Valid Parentheses",
     "titleSlug": "valid-parentheses",
     "status": "ac",
     "difficulty": "Easy",
-    "questionId": "20",
-    "code": "/**\n * @param {string} s\n * @return {boolean}\n */\nvar isValid = function (s) {\n  const obj = {\n    '(': ')',\n    '{': '}',\n    '[': ']',\n  }\n  const cacheArr = []\n  for (let i = 0; i < s.length; i++) {\n    if (Object.keys(obj).includes(s[i])) {\n      cacheArr.push(s[i])\n    } else {\n      const pick = cacheArr.pop()\n      if (obj[pick] !== s[i]) {\n        return false\n      }\n    }\n  }\n\n  return cacheArr.length === 0\n};",
-    "lang": "javascript"
+    "questionId": "20"
   },
   {
     "title": "Merge Two Sorted Lists",
     "titleSlug": "merge-two-sorted-lists",
     "status": "ac",
     "difficulty": "Easy",
-    "questionId": "21",
-    "code": "/**\n * Definition for singly-linked list.\n * function ListNode(val) {\n *     this.val = val;\n *     this.next = null;\n * }\n */\n/**\n * @param {ListNode} l1\n * @param {ListNode} l2\n * @return {ListNode}\n */\nvar mergeTwoLists = function (l1, l2) {\n  const dummyLink = new ListNode(0)\n  let cur = dummyLink\n  let l1Point = l1\n  let l2Point = l2\n\n  while (l1Point && l2Point) {\n    if (l1Point.val < l2Point.val) {\n      cur.next = l1Point\n      l1Point = l1Point.next\n    } else {\n      cur.next = l2Point\n      l2Point = l2Point.next\n    }\n    cur = cur.next\n  }\n\n  while (l1Point) {\n    cur.next = l1Point\n    cur = cur.next\n    l1Point = l1Point.next\n  }\n\n  while (l2Point) {\n    cur.next = l2Point\n    cur = cur.next\n    l2Point = l2Point.next\n  }\n\n  return dummyLink.next\n}",
-    "lang": "javascript"
+    "questionId": "21"
   },
   {
     "title": "Generate Parentheses",
     "titleSlug": "generate-parentheses",
     "status": "ac",
     "difficulty": "Medium",
-    "questionId": "22",
-    "code": "/**\n * @param {number} n\n * @return {string[]}\n */\nvar generateParenthesis = function (n) {\n  const result = []\n  let str = ''\n  function judege(left, right, str) {\n    if (left === 0 && right === 0) {\n      result.push(str)\n      str = ''\n      return\n    }\n\n    if (left === right) {\n      judege(left - 1, right, str + '(')\n    } else if (left === 0) {\n      judege(left, right - 1, str + ')')\n    } else {\n      judege(left - 1, right, str + '(')\n      judege(left, right - 1, str + ')')\n    }\n  }\n\n  judege(n, n, str)\n  return result\n};",
-    "lang": "javascript"
+    "questionId": "22"
   },
   {
     "title": "Merge k Sorted Lists",
@@ -164,769 +130,629 @@
     "titleSlug": "swap-nodes-in-pairs",
     "status": "ac",
     "difficulty": "Medium",
-    "questionId": "24",
-    "code": "/**\n * Definition for singly-linked list.\n * function ListNode(val) {\n *     this.val = val;\n *     this.next = null;\n * }\n */\n/**\n * @param {ListNode} head\n * @return {ListNode}\n */\nvar swapPairs = function(head) {\n  const dummyHead = new ListNode(0)\n  dummyHead.next = head\n\n  let prev = dummyHead\n  let first = prev.next\n\n  while(first && first.next) {\n    let second = first.next\n    let next = second.next\n\n    second.next = first\n    first.next = next\n    prev.next = second\n\n    prev = first\n    first = first.next\n  }\n\n  return dummyHead.next\n}",
-    "lang": "javascript"
+    "questionId": "24"
   },
   {
     "title": "Reverse Nodes in k-Group",
     "titleSlug": "reverse-nodes-in-k-group",
     "status": "ac",
     "difficulty": "Hard",
-    "questionId": "25",
-    "code": "/**\n * Definition for singly-linked list.\n * function ListNode(val) {\n *     this.val = val;\n *     this.next = null;\n * }\n */\n/**\n * @param {ListNode} head\n * @param {number} k\n * @return {ListNode}\n */\nvar reverseKGroup = function(head, k) {\n  const dummyHead = new ListNode(0)\n  dummyHead.next = head\n  let prev = dummyHead\n  let tail = dummyHead\n\n  while (true) {\n    let count = 0\n    while (tail.next && count !== k) {\n      tail = tail.next\n      count++\n    }\n    if (count !== k) break\n\n    let head1 = prev.next\n\n    while (prev.next !== tail) {\n      let cur = prev.next\n      prev.next = cur.next\n      cur.next = tail.next\n      tail.next = cur\n    }\n\n    prev = head1\n    tail = head1\n  }\n\n  return dummyHead.next\n}",
-    "lang": "javascript"
+    "questionId": "25"
   },
   {
     "title": "Remove Duplicates from Sorted Array",
     "titleSlug": "remove-duplicates-from-sorted-array",
     "status": "ac",
     "difficulty": "Easy",
-    "questionId": "26",
-    "code": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar removeDuplicates = function (nums) {\n  if (nums.length <= 1) return nums.length\n  let cur = 0 // 新数组的下标\n  for (let i = 1; i < nums.length; i++) {\n    if (nums[i] !== nums[cur]) {\n      nums[cur + 1] = nums[i]\n      cur++\n    }\n  }\n  return cur + 1\n}",
-    "lang": "javascript"
+    "questionId": "26"
   },
   {
     "title": "Remove Element",
     "titleSlug": "remove-element",
     "status": "ac",
     "difficulty": "Easy",
-    "questionId": "27",
-    "code": "/**\n * @param {number[]} nums\n * @param {number} val\n * @return {number}\n */\nvar removeElement = function (nums, val) {\n  let cur = 0\n\n  for (let i = 0; i < nums.length; i++) {\n    if (nums[i] !== val) {\n      nums[cur] = nums[i]\n      cur++\n    }\n  }\n  return cur\n}",
-    "lang": "javascript"
+    "questionId": "27"
   },
   {
     "title": "Implement strStr()",
     "titleSlug": "implement-strstr",
     "status": "ac",
     "difficulty": "Easy",
-    "questionId": "28",
-    "code": "/**\n * @param {string} haystack\n * @param {string} needle\n * @return {number}\n */\nvar strStr = function (haystack, needle) {\n  return haystack.indexOf(needle)\n};",
-    "lang": "javascript"
+    "questionId": "28"
   },
   {
     "title": "Search in Rotated Sorted Array",
     "titleSlug": "search-in-rotated-sorted-array",
     "status": "ac",
     "difficulty": "Medium",
-    "questionId": "33",
-    "code": "/**\n * @param {number[]} nums\n * @param {number} target\n * @return {number}\n */\nvar search = function (nums, target) {\n  return nums.indexOf(target)\n};",
-    "lang": "javascript"
+    "questionId": "33"
   },
   {
     "title": "Search Insert Position",
     "titleSlug": "search-insert-position",
     "status": "ac",
     "difficulty": "Easy",
-    "questionId": "35",
-    "code": "/**\n * @param {number[]} nums\n * @param {number} target\n * @return {number}\n */\nvar searchInsert = function (nums, target) {\n  let i = 0\n  while (i < nums.length) {\n    if (target <= nums[i]) {\n      return i\n    } \n    \n    if (target > nums[nums.length - 1]) {\n      return nums.length\n    }\n    i++\n  }\n};",
-    "lang": "javascript"
+    "questionId": "35"
   },
   {
     "title": "Valid Sudoku",
     "titleSlug": "valid-sudoku",
     "status": "ac",
     "difficulty": "Medium",
-    "questionId": "36",
-    "code": "/**\n * @param {character[][]} board\n * @return {boolean}\n */\nvar isValidSudoku = function (board) {\n  const set = new Set()\n  for (let x = 0; x < 9; x++) {\n    for (let y = 0; y < 9; y++) {\n      const num = board[x][y]\n      if (num !== '.') {\n        if (set.has(`row ${x} ${num}`)\n          || set.has(`col ${y} ${num}`)\n          || set.has(`block ${Math.floor(x / 3)} ${Math.floor(y / 3)} ${num}`)\n        ) {\n          return false\n        } else {\n          set.add(`row ${x} ${num}`)\n          set.add(`col ${y} ${num}`)\n          set.add(`block ${Math.floor(x / 3)} ${Math.floor(y / 3)} ${num}`)\n        }\n      }\n    }\n  }\n  return true\n};",
-    "lang": "javascript"
+    "questionId": "36"
   },
   {
     "title": "Count and Say",
     "titleSlug": "count-and-say",
     "status": "ac",
     "difficulty": "Easy",
-    "questionId": "38",
-    "code": "const cacheObj = {1: '1'}\n/**\n * @param {number} n\n * @return {string}\n */\nvar countAndSay = function (n) {\n  if (cacheObj[n]) {\n    return cacheObj[n]\n  } else {\n    const findValue = countAndSay(n - 1)\n    let str = ''\n    let tmp = 0\n    for (let i = 0; i < findValue.length; i++) {\n      if (findValue[i] !== findValue[i + 1]) {\n        str += i - tmp + 1\n        str += findValue[i]\n        tmp = i + 1\n      }\n    }\n    cacheObj[n] = str\n    return str\n  }\n};",
-    "lang": "javascript"
+    "questionId": "38"
   },
   {
     "title": "Combination Sum",
     "titleSlug": "combination-sum",
     "status": "ac",
     "difficulty": "Medium",
-    "questionId": "39",
-    "code": "/**\n * @param {number[]} candidates\n * @param {number} target\n * @return {number[][]}\n */\nvar combinationSum = function (candidates, target) {\n  const result = []\n\n  const DFS = function (sum, arr, start) {\n    if (sum === target) {\n      result.push(arr.slice())\n      return\n    }\n    if (sum > target) {\n      return\n    }\n\n    for (let i = start; i < candidates.length; i++) {\n      sum += candidates[i]\n      arr.push(candidates[i])\n      DFS(sum, arr, i)\n      arr.pop(candidates[i])\n      sum -= candidates[i]\n    }\n  }\n\n  DFS(0, [], 0, candidates)\n\n  return result\n};",
-    "lang": "javascript"
+    "questionId": "39"
   },
   {
     "title": "Combination Sum II",
     "titleSlug": "combination-sum-ii",
     "status": "ac",
     "difficulty": "Medium",
-    "questionId": "40",
-    "code": "/**\n * @param {number[]} candidates\n * @param {number} target\n * @return {number[][]}\n */\nvar combinationSum2 = function (candidates, target) {\n  const result = []\n\n  const sortCandidates = candidates.sort((r1, r2) => r1 - r2)\n  const DFS = function (sum, arr, start) {\n    if (sum === target) {\n      result.push(arr.slice())\n      return\n    }\n    if (sum > target) {\n      return\n    }\n\n    for (let i = start; i < sortCandidates.length; i++) {\n      if (i !== start && sortCandidates[i] === sortCandidates[i - 1]) { // [1,1,2], 3 避免产生两个 [1, 2]\n        continue\n      }\n\n      sum += sortCandidates[i]\n      arr.push(sortCandidates[i])\n      DFS(sum, arr, i + 1)\n      arr.pop(sortCandidates[i])\n      sum -= sortCandidates[i]\n    }\n  }\n\n  DFS(0, [], 0)\n\n  return result\n};",
-    "lang": "javascript"
+    "questionId": "40"
   },
   {
     "title": "Permutations",
     "titleSlug": "permutations",
     "status": "ac",
     "difficulty": "Medium",
-    "questionId": "46",
-    "code": "/**\n * @param {number[]} nums\n * @return {number[][]}\n */\nvar permute = function (nums) {\n  const result = []\n  const DFS = function(arr) {\n    if (arr.length === nums.length) {\n      result.push(arr.slice())\n      return\n    }\n\n    for (let i = 0; i < nums.length; i++) {\n      if (!arr.includes(nums[i])) {\n        arr.push(nums[i])\n        DFS(arr)\n        arr.pop(nums[i])\n      }\n    }\n  }\n\n  DFS([])\n\n  return result\n};",
-    "lang": "javascript"
+    "questionId": "46"
   },
   {
     "title": "Permutations II",
     "titleSlug": "permutations-ii",
     "status": "ac",
     "difficulty": "Medium",
-    "questionId": "47",
-    "code": "/**\n * @param {number[]} nums\n * @return {number[][]}\n */\nvar permuteUnique = function (nums) {\n  const result = []\n  const sortNum = nums.sort()\n  const used = new Array(nums.length).fill(false)\n  const DFS = function (arr) {\n    if (arr.length === sortNum.length) {\n      result.push(arr.slice())\n      return\n    }\n\n    for (let i = 0; i < sortNum.length; i++) {\n      if (i > 0 && sortNum[i] === sortNum[i - 1] && !used[i - 1]) {\n        continue\n      }\n\n      if (!used[i]) {\n        arr.push(sortNum[i])\n        used[i] = true\n        DFS(arr)\n        arr.pop(sortNum[i])\n        used[i] = false\n      }\n    }\n  }\n\n  DFS([])\n\n  return result\n};",
-    "lang": "javascript"
+    "questionId": "47"
   },
   {
     "title": "Rotate Image",
     "titleSlug": "rotate-image",
     "status": "ac",
     "difficulty": "Medium",
-    "questionId": "48",
-    "code": "/**\n * @param {number[][]} matrix\n * @return {void} Do not return anything, modify matrix in-place instead.\n */\nvar rotate = function (matrix) {\n  matrix.reverse()\n\n  let tmp\n  for (let x = 0; x < matrix.length; x++) {\n    for (let y = 0; y < x; y++) {\n      tmp = matrix[x][y]\n      matrix[x][y] = matrix[y][x]\n      matrix[y][x] = tmp\n    }\n  }\n\n  console.log(matrix)\n};",
-    "lang": "javascript"
+    "questionId": "48"
   },
   {
     "title": "Group Anagrams",
     "titleSlug": "group-anagrams",
     "status": "ac",
     "difficulty": "Medium",
-    "questionId": "49",
-    "code": "/**\n * @param {string[]} strs\n * @return {string[][]}\n */\nvar groupAnagrams = function (strs) {\n  const tmpObj = {}\n\n  for (let i = 0; i < strs.length; i++) {\n    const sortStr = strs[i].split('').sort().join('')\n    if (tmpObj[sortStr]) {\n      tmpObj[sortStr].push(strs[i])\n    } else {\n      tmpObj[sortStr] = [strs[i]]\n    }\n  }\n\n  const result = []\n\n  const keyArr = Object.keys(tmpObj)\n  for (let i = 0; i < keyArr.length; i++) {\n    result.push(tmpObj[keyArr[i]])\n  }\n\n  return result\n}",
-    "lang": "javascript"
+    "questionId": "49"
   },
   {
     "title": "Pow(x, n)",
     "titleSlug": "powx-n",
     "status": "ac",
     "difficulty": "Medium",
-    "questionId": "50",
-    "code": "/**\n * @param {number} x\n * @param {number} n\n * @return {number}\n */\nvar myPow = function (x, n) {\n  return Math.pow(x, n)\n};",
-    "lang": "javascript"
+    "questionId": "50"
   },
   {
     "title": "Rotate List",
     "titleSlug": "rotate-list",
     "status": "ac",
     "difficulty": "Medium",
-    "questionId": "61",
-    "code": "/**\n * Definition for singly-linked list.\n * function ListNode(val) {\n *     this.val = val;\n *     this.next = null;\n * }\n */\n/**\n * @param {ListNode} head\n * @param {number} k\n * @return {ListNode}\n */\nvar rotateRight = function(head, k) {\n  const dummy = new ListNode(0)\n  dummy.next = head\n  let count = 0\n  let last = dummy\n  while (last.next) {\n    last = last.next\n    count++\n  }\n\n  if (count === 0 || count === k) return dummy.next\n  const modK = k % count\n  let diff = modK + 1\n\n  let l = dummy\n  let r = dummy\n  while (diff--) {\n    r = r.next\n  }\n\n  while (r) {\n    r = r.next\n    l = l.next\n  }\n\n  last.next = dummy.next\n  dummy.next = l.next\n  l.next = null\n\n  return dummy.next\n}",
-    "lang": "javascript"
+    "questionId": "61"
   },
   {
     "title": "Unique Paths",
     "titleSlug": "unique-paths",
     "status": "ac",
     "difficulty": "Medium",
-    "questionId": "62",
-    "code": "const cache = {}\n/**\n * @param {number} m\n * @param {number} n\n * @return {number}\n */\nvar uniquePaths = function (m, n) {\n  if (m === 1 || n === 1) {\n    return 1\n  }\n\n  if (cache[`${m}~${n}`]) {\n    return cache[`${m}~${n}`]\n  } else {\n    const nums = uniquePaths(m - 1, n) + uniquePaths(m, n - 1)\n    cache[`${m}~${n}`] = nums\n\n    return nums\n  }\n};",
-    "lang": "javascript"
+    "questionId": "62"
   },
   {
     "title": "Minimum Path Sum",
     "titleSlug": "minimum-path-sum",
     "status": "ac",
     "difficulty": "Medium",
-    "questionId": "64",
-    "code": "/**\n * @param {number[][]} grid\n * @return {number}\n */\nvar minPathSum = function (grid) {\n  const m = grid.length\n  const n = grid[0].length\n  const cache = {}\n  return findMinCount(m - 1, n - 1, grid, cache)\n}\n\nfunction findMinCount(x, y, grid, cache) {\n  if (cache[`${x}~${y}`]) {\n    if (x === 17) {\n      var test = null\n    }\n    return cache[`${x}~${y}`]\n  }\n\n  let count = 0\n\n  if (x === 0 && y === 0) {\n    count = grid[0][0]\n  } else if (x === 0) {\n    count = findMinCount(0, y - 1, grid, cache) + grid[0][y]\n  } else if (y === 0) {\n    count = findMinCount(x - 1, y, grid, cache) + grid[x][0]\n  }\n\n  if (x > 0 && y > 0) {\n    count = Math.min(findMinCount(x - 1, y, grid, cache), findMinCount(x, y - 1, grid, cache)) + grid[x][y]\n  }\n\n  cache[`${x}~${y}`] = count\n\n  return count\n}",
-    "lang": "javascript"
+    "questionId": "64"
   },
   {
     "title": "Plus One",
     "titleSlug": "plus-one",
     "status": "ac",
     "difficulty": "Easy",
-    "questionId": "66",
-    "code": "/**\n * @param {number[]} digits\n * @return {number[]}\n */\nvar plusOne = function (digits) {\n  let length = digits.length\n  let tag = 0\n  while (length) {\n    if (length === digits.length) {\n      if (digits[length - 1] + 1 + tag >= 10) {\n        digits[length - 1] = 0\n        tag = 1\n      } else {\n        digits[length - 1] = digits[length - 1] + 1\n        tag = 0\n        break\n      }\n    } else {\n      if (digits[length - 1] + tag >= 10) {\n        digits[length - 1] = 0\n        tag = 1\n      } else {\n        digits[length - 1] = digits[length - 1] + 1\n        tag = 0\n        break\n      }\n    }\n    length--\n  }\n  if (tag === 1) {\n    digits.unshift(1)\n  }\n  return digits\n};",
-    "lang": "javascript"
+    "questionId": "66"
   },
   {
     "title": "Add Binary",
     "titleSlug": "add-binary",
     "status": "ac",
     "difficulty": "Easy",
-    "questionId": "67",
-    "code": "/**\n * @param {string} a\n * @param {string} b\n * @return {string}\n */\nvar addBinary = function (a, b) {\n  const al = a.length, bl = b.length\n  const length = Math.max(al, bl)\n  let tag = 0\n  let str = ''\n\n  for (let i = 0; i < length; i++) {\n    const x = i < al ? +a[al - i - 1] : 0\n    const y = i < bl ? +b[bl - i - 1] : 0\n\n    const addValue = ((x + y + tag === 1) || (x + y + tag === 3)) ? '1' : '0'\n    str += addValue\n\n    if (x + y + tag > 1) {\n      tag = 1\n    } else {\n      tag = 0\n    }\n  }\n\n  if (tag === 1) {\n    str += '1'\n  }\n\n  return str.split('').reverse().join('')\n};",
-    "lang": "javascript"
+    "questionId": "67"
   },
   {
     "title": "Sqrt(x)",
     "titleSlug": "sqrtx",
     "status": "ac",
     "difficulty": "Easy",
-    "questionId": "69",
-    "code": "/**\n * @param {number} x\n * @return {number}\n */\nvar mySqrt = function (x) {\n  return +Math.sqrt(x).toString().split('.')[0]\n};",
-    "lang": "javascript"
+    "questionId": "69"
   },
   {
     "title": "Climbing Stairs",
     "titleSlug": "climbing-stairs",
     "status": "ac",
     "difficulty": "Easy",
-    "questionId": "70",
-    "code": "const obj = {}\n\n/**\n * @param {number} n\n * @return {number}\n */\nvar climbStairs = function (n) {\n  if (n === 1) { return 1 }\n  if (n === 2) { return 2 }\n\n  if (obj[n]) {\n    return obj[n]\n  } else {\n    obj[n] = climbStairs(n - 1) + climbStairs(n - 2)\n    return obj[n]\n  }\n};",
-    "lang": "javascript"
+    "questionId": "70"
   },
   {
     "title": "Simplify Path",
     "titleSlug": "simplify-path",
     "status": "ac",
     "difficulty": "Medium",
-    "questionId": "71",
-    "code": "/**\n * @param {string} path\n * @return {string}\n */\nvar simplifyPath = function(path) {\n  const pathArr = path.split('/')\n  const stack = []\n  for (let i = 0; i < pathArr.length; i++) {\n    if (pathArr[i] === '..') {\n      stack.pop()\n    } else if (pathArr[i] === '.' || pathArr[i] === '') {\n      continue\n    } else {\n      stack.push(pathArr[i])\n    }\n  }\n\n  return `/${stack.join('/')}`\n}",
-    "lang": "javascript"
+    "questionId": "71"
   },
   {
     "title": "Sort Colors",
     "titleSlug": "sort-colors",
     "status": "ac",
     "difficulty": "Medium",
-    "questionId": "75",
-    "code": "/**\n * @param {number[]} nums\n * @return {void} Do not return anything, modify nums in-place instead.\n */\nvar sortColors = function (nums) {\n  let countObj = {}\n  for (let i = 0; i < nums.length; i++) {\n    const key = nums[i]\n    if (typeof(countObj[`${key}`]) === 'number') {\n      countObj[`${key}`] = countObj[`${key}`] + 1\n    } else {\n      countObj[`${key}`] = 1\n    }\n  }\n\n  const count0 = countObj[0] || 0\n  const count1 = countObj[1] || 0\n  const count2 = countObj[2] || 0\n  for (let i = 0; i < count0 + count1 + count2; i++) {\n    if (i < count0) {\n      nums[i] = 0\n    } else if (i >=count0 && i < count0 + count1) {\n      nums[i] = 1\n    } else if (i >= count1 && i < count0 + count1 + count2) {\n      nums[i] = 2\n    }\n  }\n}",
-    "lang": "javascript"
+    "questionId": "75"
   },
   {
     "title": "Subsets",
     "titleSlug": "subsets",
     "status": "ac",
     "difficulty": "Medium",
-    "questionId": "78",
-    "code": "/**\n * @param {number[]} nums\n * @return {number[][]}\n */\nvar subsets = function (nums) {\n  const list = []\n  const tmpList = []\n\n  backTrack(list, tmpList, nums, 0)\n\n  return list\n};\n\nfunction backTrack(list, tmpList, nums, start) {\n  list.push(tmpList.slice())\n\n  for (let i = start; i < nums.length; i++) {\n    tmpList.push(nums[i])\n    backTrack(list, tmpList, nums, i + 1)\n    tmpList.splice(tmpList.length - 1, 1)\n  }\n}",
-    "lang": "javascript"
+    "questionId": "78"
   },
   {
     "title": "Remove Duplicates from Sorted Array II",
     "titleSlug": "remove-duplicates-from-sorted-array-ii",
     "status": "ac",
     "difficulty": "Medium",
-    "questionId": "80",
-    "code": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar removeDuplicates = function(nums) {\n  if (nums.length <= 2) return nums.length\n  let cur = 1 // 新数组的下标位数\n  for (let i = 2; i < nums.length; i++) {\n    // 对题目中每个元素最多出现两次的条件作限制\n    if (nums[i] !== nums[cur - 1]) {\n      nums[cur + 1] = nums[i]\n      cur++\n    }\n  }\n  return cur + 1\n}",
-    "lang": "javascript"
+    "questionId": "80"
   },
   {
     "title": "Remove Duplicates from Sorted List II",
     "titleSlug": "remove-duplicates-from-sorted-list-ii",
     "status": "ac",
     "difficulty": "Medium",
-    "questionId": "82",
-    "code": "/**\n * Definition for singly-linked list.\n * function ListNode(val) {\n *     this.val = val;\n *     this.next = null;\n * }\n */\n/**\n * @param {ListNode} head\n * @return {ListNode}\n */\nvar deleteDuplicates = function(head) {\n  const dummyHead = new ListNode(0)\n  dummyHead.next = head\n\n  let slowPoint = dummyHead\n\n  while(slowPoint.next) {\n    let cur = slowPoint.next\n    let quickPoint = cur\n    while(quickPoint.next && quickPoint.next.val === cur.val) {\n      quickPoint = quickPoint.next\n    }\n\n    if (cur === quickPoint) {\n      slowPoint = slowPoint.next\n    } else {\n      slowPoint.next = quickPoint.next\n    }\n  }\n\n  return dummyHead.next\n}",
-    "lang": "javascript"
+    "questionId": "82"
   },
   {
     "title": "Remove Duplicates from Sorted List",
     "titleSlug": "remove-duplicates-from-sorted-list",
     "status": "ac",
     "difficulty": "Easy",
-    "questionId": "83",
-    "code": "/**\n * Definition for singly-linked list.\n * function ListNode(val) {\n *     this.val = val;\n *     this.next = null;\n * }\n */\n/**\n * @param {ListNode} head\n * @return {ListNode}\n */\nvar deleteDuplicates = function(head) {\n  const listNode = new ListNode(0)\n  listNode.next = head\n  let cur = listNode.next\n  while (cur) {\n    let next = cur.next\n    while (next && next.val === cur.val) {\n      next = next.next\n    }\n    cur.next = next\n    cur = cur.next\n  }\n  return listNode.next\n}",
-    "lang": "javascript"
+    "questionId": "83"
   },
   {
     "title": "Partition List",
     "titleSlug": "partition-list",
     "status": "ac",
     "difficulty": "Medium",
-    "questionId": "86",
-    "code": "/**\n * Definition for singly-linked list.\n * function ListNode(val) {\n *     this.val = val;\n *     this.next = null;\n * }\n */\n/**\n * @param {ListNode} head\n * @param {number} x\n * @return {ListNode}\n */\nvar partition = function(head, x) {\n  const listNode = new ListNode(0)\n  listNode.next = head\n\n  const smallerThanX = new ListNode(0)\n  const biggerThanX = new ListNode(0)\n\n  let cur = listNode.next\n  let smallPoint = smallerThanX\n  let bigPoint = biggerThanX\n  while (cur) {\n    if (cur.val < x) {\n      smallPoint.next = cur\n      smallPoint = smallPoint.next\n    } else {\n      bigPoint.next = cur\n      bigPoint = bigPoint.next\n    }\n\n    cur = cur.next\n  }\n\n  bigPoint.next = null\n  smallPoint.next = biggerThanX.next\n\n  return smallerThanX.next\n}",
-    "lang": "javascript"
+    "questionId": "86"
   },
   {
     "title": "Merge Sorted Array",
     "titleSlug": "merge-sorted-array",
     "status": "ac",
     "difficulty": "Easy",
-    "questionId": "88",
-    "code": "/**\n * @param {number[]} nums1\n * @param {number} m\n * @param {number[]} nums2\n * @param {number} n\n * @return {void} Do not return anything, modify nums1 in-place instead.\n */\nvar merge = function(nums1, m, nums2, n) {\n  let l = 0 // 第一个数组下标\n  let r = 0 // 第二个数组下标\n  const arr = []\n\n  while (l < m && r < n) {\n    if (nums1[l] <= nums2[r]) {\n      arr.push(nums1[l])\n      l++\n    } else if (nums1[l] > nums2[r]) {\n      arr.push(nums2[r])\n      r++\n    }\n  }\n\n  while (l < m) {\n    arr.push(nums1[l])\n    l++\n  }\n\n  while (r < n) {\n    arr.push(nums2[r])\n    r++\n  }\n\n  for (let i = 0; i < m + n; i++) {\n    nums1[i] = arr[i]\n  }\n}",
-    "lang": "javascript"
+    "questionId": "88"
   },
   {
     "title": "Gray Code",
     "titleSlug": "gray-code",
     "status": "ac",
     "difficulty": "Medium",
-    "questionId": "89",
-    "code": "/**\n * @param {number} n\n * @return {number[]}\n */\nvar grayCode = function (n) {\n  const arr = new Array()\n  arr[0] = [0]\n  for (let i = 1; i <= n; i++) {\n    const newArr = arr[i - 1].slice().reverse().map(r => r + Math.pow(2, i - 1))\n    arr[i] = [...arr[i - 1], ...newArr]\n  }\n  return arr[n]\n}",
-    "lang": "javascript"
+    "questionId": "89"
   },
   {
     "title": "Reverse Linked List II",
     "titleSlug": "reverse-linked-list-ii",
     "status": "ac",
     "difficulty": "Medium",
-    "questionId": "92",
-    "code": "/**\n * Definition for singly-linked list.\n * function ListNode(val) {\n *     this.val = val;\n *     this.next = null;\n * }\n */\n/**\n * @param {ListNode} head\n * @param {number} m\n * @param {number} n\n * @return {ListNode}\n */\nvar reverseBetween = function(head, m, n) {\n  const originList = new ListNode(0)\n  originList.next = head\n\n  let listNode = originList\n\n  for (let i = 0; i < m - 1; i++) {\n    listNode = listNode.next\n  }\n\n  let prev = null\n  let cur = listNode.next\n\n  for (let i = 0; i < n - m + 1; i++) {\n    let next = cur.next\n\n    cur.next = prev\n    prev = cur\n    cur = next\n  }\n\n  listNode.next.next = cur\n  listNode.next = prev\n  return originList.next\n}",
-    "lang": "javascript"
+    "questionId": "92"
   },
   {
     "title": "Restore IP Addresses",
     "titleSlug": "restore-ip-addresses",
     "status": "ac",
     "difficulty": "Medium",
-    "questionId": "93",
-    "code": "/**\n * @param {string} s\n * @return {string[]}\n */\nvar restoreIpAddresses = function (s) {\n  const arr = []\n  for (let i = 1; i < 4; i++) {\n    for (let j = i + 1; j < i + 5; j++) {\n      for (let z = j + 1; z < j + 5; z++) {\n        const a = s.slice(0, i)\n        const b = s.slice(i, j)\n        const c = s.slice(j, z)\n        const d = s.slice(z, s.length)\n        if (validate(a) && validate(b) && validate(c) && validate(d)) {\n          arr.push(`${a}.${b}.${c}.${d}`)\n        }\n      }\n    }\n  }\n  return arr\n};\n\nvar validate = function (value) {\n  if (value.length > 3 || value.length === 0 || +value > 255 || (value[0] === '0' && value.length > 1)) {\n    return false\n  }\n  return true\n}",
-    "lang": "javascript"
+    "questionId": "93"
   },
   {
     "title": "Binary Tree Inorder Traversal",
     "titleSlug": "binary-tree-inorder-traversal",
     "status": "ac",
     "difficulty": "Medium",
-    "questionId": "94",
-    "code": "/**\n * Definition for a binary tree node.\n * function TreeNode(val) {\n *     this.val = val;\n *     this.left = this.right = null;\n * }\n */\n/**\n * @param {TreeNode} root\n * @return {number[]}\n */\nvar inorderTraversal = function(root) {\n  const printArr = []\n  if (!root) return printArr\n  const stack = []\n  stack.push({\n    color: 'white',\n    node: root\n  })\n\n  while (stack.length > 0) {\n    const pickValue = stack.pop()\n    const { color, node } = pickValue\n    if (color === 'gray') {\n      printArr.push(node.val)\n    } else {\n      node.right && stack.push({ color: 'white', node: node.right })\n      stack.push({ color: 'gray', node })\n      node.left && stack.push({ color: 'white', node: node.left })\n    }\n  }\n\n  return printArr\n}",
-    "lang": "javascript"
+    "questionId": "94"
   },
   {
     "title": "Same Tree",
     "titleSlug": "same-tree",
     "status": "ac",
     "difficulty": "Easy",
-    "questionId": "100",
-    "code": "/**\n * Definition for a binary tree node.\n * function TreeNode(val) {\n *     this.val = val;\n *     this.left = this.right = null;\n * }\n */\n/**\n * @param {TreeNode} p\n * @param {TreeNode} q\n * @return {boolean}\n */\nvar isSameTree = function (p, q) {\n  if (p === null && q === null) {\n    return true\n  } else if (p === null || q === null) {\n    return false\n  } \n  \n  if (p.val === q.val) {\n    return isSameTree(p.left, q.left) && isSameTree(p.right, q.right)\n  } else {\n    return false\n  }\n};\n",
-    "lang": "javascript"
+    "questionId": "100"
   },
   {
     "title": "Symmetric Tree",
     "titleSlug": "symmetric-tree",
     "status": "ac",
     "difficulty": "Easy",
-    "questionId": "101",
-    "code": "/**\n * Definition for a binary tree node.\n * function TreeNode(val) {\n *     this.val = val;\n *     this.left = this.right = null;\n * }\n */\n/**\n * @param {TreeNode} root\n * @return {boolean}\n */\nvar isSymmetric = function (root) {\n  if (!root) return true\n  if (!root.left && !root.right) return true\n  if (root.left && root.right && root.left.val !== root.right.val) return false\n\n  const stack = []\n\n  stack.push(root.right)\n  stack.push(root.left)\n\n  while (stack.length > 0) {\n    const popItemLeft = stack.pop()\n    const popItemRight = stack.pop()\n\n    if (!popItemLeft && !popItemRight) continue\n    if (!popItemLeft || !popItemRight || popItemLeft.val !== popItemRight.val) return false\n\n    stack.push(popItemRight.right, popItemLeft.left, popItemRight.left, popItemLeft.right)\n  }\n\n  return true\n};",
-    "lang": "javascript"
+    "questionId": "101"
   },
   {
     "title": "Binary Tree Level Order Traversal",
     "titleSlug": "binary-tree-level-order-traversal",
     "status": "ac",
     "difficulty": "Medium",
-    "questionId": "102",
-    "code": "/**\n * Definition for a binary tree node.\n * function TreeNode(val) {\n *     this.val = val;\n *     this.left = this.right = null;\n * }\n */\n/**\n * @param {TreeNode} root\n * @return {number[][]}\n */\nvar levelOrder = function(root) {\n  const printArr = []\n  if (!root) return printArr\n  const list = []\n  list.push({ node: root, level: 0 })\n  while (list.length > 0) {\n    const { node, level } = list.shift()\n    if (!printArr[level]) {\n      printArr[level] = []\n    }\n    printArr[level].push(node.val)\n    node.left && list.push({ node: node.left, level: level + 1 })\n    node.right && list.push({ node: node.right, level: level + 1 })\n  }\n  return printArr\n}",
-    "lang": "javascript"
+    "questionId": "102"
   },
   {
     "title": "Binary Tree Zigzag Level Order Traversal",
     "titleSlug": "binary-tree-zigzag-level-order-traversal",
     "status": "ac",
     "difficulty": "Medium",
-    "questionId": "103",
-    "code": "/**\n * Definition for a binary tree node.\n * function TreeNode(val) {\n *     this.val = val;\n *     this.left = this.right = null;\n * }\n */\n/**\n * @param {TreeNode} root\n * @return {number[][]}\n */\nvar zigzagLevelOrder = function(root) {\n  const printArr = []\n  if (!root) return printArr\n  const list = []\n  list.push({ level: 0, node: root })\n  while(list.length > 0) {\n    const { level, node } = list.shift()\n    if (!printArr[level]) {\n      printArr[level] = []\n    }\n\n    if (level % 2 === 0) {\n      printArr[level].push(node.val)\n    } else {\n      printArr[level].unshift(node.val)\n    }\n\n    node.left && list.push({ level: level + 1, node: node.left })\n    node.right && list.push({ level: level + 1, node: node.right })\n  }\n\n  return printArr\n}",
-    "lang": "javascript"
+    "questionId": "103"
   },
   {
     "title": "Maximum Depth of Binary Tree",
     "titleSlug": "maximum-depth-of-binary-tree",
     "status": "ac",
     "difficulty": "Easy",
-    "questionId": "104",
-    "code": "/**\n * Definition for a binary tree node.\n * function TreeNode(val) {\n *     this.val = val;\n *     this.left = this.right = null;\n * }\n */\n/**\n * @param {TreeNode} root\n * @return {number}\n */\nvar maxDepth = function (root) {\n  return root === null ? 0 : Math.max(maxDepth(root.left), maxDepth(root.right)) + 1\n};\n\n",
-    "lang": "javascript"
+    "questionId": "104"
   },
   {
     "title": "Binary Tree Level Order Traversal II",
     "titleSlug": "binary-tree-level-order-traversal-ii",
     "status": "ac",
     "difficulty": "Easy",
-    "questionId": "107",
-    "code": "/**\n * Definition for a binary tree node.\n * function TreeNode(val) {\n *     this.val = val;\n *     this.left = this.right = null;\n * }\n */\n/**\n * @param {TreeNode} root\n * @return {number[][]}\n */\nvar levelOrderBottom = function(root) {\n  const printArr = []\n  if (!root) return printArr\n  const list = []\n  list.push({ node: root, level: 0 })\n  while (list.length > 0) {\n    const { node, level } = list.shift()\n    if (!printArr[level]) {\n      printArr.unshift([])\n    }\n    printArr[0].push(node.val)\n    node.left && (list.push({ node: node.left, level: level + 1 }))\n    node.right && (list.push({ node: node.right, level: level + 1 }))\n  }\n  return printArr\n}",
-    "lang": "javascript"
+    "questionId": "107"
   },
   {
     "title": "Balanced Binary Tree",
     "titleSlug": "balanced-binary-tree",
     "status": "ac",
     "difficulty": "Easy",
-    "questionId": "110",
-    "code": "/**\n * Definition for a binary tree node.\n * function TreeNode(val) {\n *     this.val = val;\n *     this.left = this.right = null;\n * }\n */\n/**\n * @param {TreeNode} root\n * @return {boolean}\n */\nvar isBalanced = function(root) {\n  return deep(root) === -1 ? false : true\n};\n\nvar deep = (node) => {\n  if (!node) return 0\n  const leftNode = deep(node.left)\n  if (leftNode === -1) return -1\n  const rightNode = deep(node.right)\n  if (rightNode === -1) return -1\n  return Math.abs(leftNode - rightNode) <= 1 ? Math.max(leftNode, rightNode) + 1 : -1\n}",
-    "lang": "javascript"
+    "questionId": "110"
   },
   {
     "title": "Minimum Depth of Binary Tree",
     "titleSlug": "minimum-depth-of-binary-tree",
     "status": "ac",
     "difficulty": "Easy",
-    "questionId": "111",
-    "code": "/**\n * Definition for a binary tree node.\n * function TreeNode(val) {\n *   this.val = val;\n *   this.left = this.right = null;\n * }\n */\n/**\n * @param {TreeNode} root\n * @return {number}\n */\nvar minDepth = function(root) {\n  if (!root) return 0\n  const leftRootMinDepth = minDepth(root.left)\n  const rightRootMinDepth = minDepth(root.right)\n  if (leftRootMinDepth === 0 || rightRootMinDepth === 0) {\n    return Math.max(leftRootMinDepth, rightRootMinDepth) + 1\n  }\n  return Math.min(leftRootMinDepth, rightRootMinDepth) + 1\n};",
-    "lang": "javascript"
+    "questionId": "111"
   },
   {
     "title": "Path Sum",
     "titleSlug": "path-sum",
     "status": "ac",
     "difficulty": "Easy",
-    "questionId": "112",
-    "code": "/**\n * Definition for a binary tree node.\n * function TreeNode(val) {\n *     this.val = val;\n *     this.left = this.right = null;\n * }\n */\n/**\n * @param {TreeNode} root\n * @param {number} sum\n * @return {boolean}\n */\nvar hasPathSum = function(root, sum) {\n  if (!root) return false\n  if (!root.left && !root.right) return root.val === sum\n  const remainingVal = sum - root.val\n  return hasPathSum(root.left, remainingVal) || hasPathSum(root.right, remainingVal)\n}",
-    "lang": "javascript"
+    "questionId": "112"
   },
   {
     "title": "Path Sum II",
     "titleSlug": "path-sum-ii",
     "status": "ac",
     "difficulty": "Medium",
-    "questionId": "113",
-    "code": "/**\n * Definition for a binary tree node.\n * function TreeNode(val) {\n *     this.val = val;\n *     this.left = this.right = null;\n * }\n */\n/**\n * @param {TreeNode} root\n * @param {number} sum\n * @return {number[][]}\n */\nvar pathSum = function(root, sum) {\n  const result = []\n  if (!root) return []\n  analyzeSum(root, '', result, sum)\n  return result.map(val => {\n    return val.split('->')\n  })\n};\n\nvar analyzeSum = function(node, str, result, extra) {\n  if (!node) return\n  if (!node.left && !node.right && extra === node.val) {\n    str += node.val\n    result.push(str)\n    return\n  }\n\n  str += `${node.val}->`\n\n  analyzeSum(node.left, str, result, extra - node.val)\n  analyzeSum(node.right, str, result, extra - node.val)\n}",
-    "lang": "javascript"
+    "questionId": "113"
   },
   {
     "title": "Best Time to Buy and Sell Stock",
     "titleSlug": "best-time-to-buy-and-sell-stock",
     "status": "ac",
     "difficulty": "Easy",
-    "questionId": "121",
-    "code": "/**\n * @param {number[]} prices\n * @return {number}\n */\nvar maxProfit = function(prices) {\n    let max = 0\n    const length = prices.length\n    for (let i = 0; i < length; i++) {\n      for (let x = i + 1; x < length; x++) {\n        max = Math.max(max, prices[x] - prices[i])\n      }\n    }\n    return max\n};",
-    "lang": "javascript"
+    "questionId": "121"
   },
   {
     "title": "Valid Palindrome",
     "titleSlug": "valid-palindrome",
     "status": "ac",
     "difficulty": "Easy",
-    "questionId": "125",
-    "code": "/**\n * @param {string} s\n * @return {boolean}\n */\nvar isPalindrome = function(s) {\n  const sToLowerCase = s.toLowerCase()\n\n  let left = 0, right = s.length - 1\n  while (left <= right) {\n    if (isValidate(sToLowerCase[left]) && isValidate(sToLowerCase[right])) {\n      if (sToLowerCase[left] !== sToLowerCase[right]) {\n        return false\n      }\n      left++\n      right--\n    }\n    if (!isValidate(sToLowerCase[left])) {\n      left++\n    }\n    if (!isValidate(sToLowerCase[right])) {\n      right--\n    }\n  }\n\n  return true\n}\n\n/* 校验函数 */\nvar isValidate = (value) => {\n  return /[a-z]|[0-9]/.test(value)\n}",
-    "lang": "javascript"
+    "questionId": "125"
   },
   {
     "title": "Word Ladder",
     "titleSlug": "word-ladder",
     "status": "ac",
     "difficulty": "Medium",
-    "questionId": "127",
-    "code": "/**\n * @param {string} beginWord\n * @param {string} endWord\n * @param {string[]} wordList\n * @return {number}\n */\nvar ladderLength = function(beginWord, endWord, wordList) {\n  if (wordList.indexOf(endWord) === -1) return 0\n  const beginQueue = []\n  const endQueue = []\n\n  const visitedBeginObj = {\n    [beginWord]: {visited: true, level: 1}\n  }\n  const visitedEndObj = {\n    [endWord]: {visited: true, level: 1}\n  }\n  beginQueue.push({ beginWord, beginLevel: 1 })\n  endQueue.push({ endWord, endLevel: 1 })\n\n  while (beginQueue.length > 0 || endQueue.length > 0) {\n    const beginQueueLength = beginQueue.length\n    const endQueueLength = endQueue.length\n\n    /* It's a good idea to pick smaller queue to traverse every time */\n    if (beginQueueLength < endQueueLength || endQueue.length === 0) {\n      if (beginQueueLength === 0) continue\n      const { beginWord, beginLevel } = beginQueue.shift()\n      for (let i = 0; i < wordList.length; i++) {\n        const isDiffOneBeginWord = ifDiffOneWord(beginWord, wordList[i])\n        const { visited, level } = visitedEndObj[wordList[i]] ? visitedEndObj[wordList[i]] : {}\n        if (isDiffOneBeginWord && visited === true) {\n          if (beginWord === 'waster') return 42\n          return beginLevel + level\n        }\n        if (isDiffOneBeginWord) {\n          !visitedBeginObj[wordList[i]]\n            && beginQueue.push({ beginWord: wordList[i], beginLevel: beginLevel + 1 })\n          visitedBeginObj[wordList[i]] = {\n            visited: true,\n            level: beginLevel + 1\n          }\n        }\n      }\n    } else if (beginQueueLength >= endQueueLength || beginQueue.length === 0) {\n      if (endQueueLength === 0) continue\n      const { endWord, endLevel } = endQueue.shift()\n      for (let i = 0; i < wordList.length; i++) {\n        const isDiffOneEndWord = ifDiffOneWord(endWord, wordList[i])\n        const { visited, level } = visitedBeginObj[wordList[i]] ? visitedBeginObj[wordList[i]] : {}\n        if (isDiffOneEndWord && visited === true) {\n          if (endLevel + level === 42) debugger\n          return endLevel + level\n        }\n        if (isDiffOneEndWord) {\n          !visitedEndObj[wordList[i]]\n            && endQueue.push({ endWord: wordList[i], endLevel: endLevel + 1 })\n          visitedEndObj[wordList[i]] = {\n            visited: true,\n            level: endLevel + 1\n          }\n        }\n      }\n    }\n  }\n  return 0\n}\n\n// judge if the targetWord has one different word from the comparedWord\nfunction ifDiffOneWord(targetWord, comparedWord) {\n  let wordLength = targetWord.length\n  let diffNum = 0\n  for (let i = 0; i < wordLength; i++) {\n    if (targetWord[i] !== comparedWord[i]) {\n      diffNum++\n    }\n    if (diffNum > 1) return false\n  }\n  if (diffNum === 1) {\n    return true\n  } else {\n    return false\n  }\n}",
-    "lang": "javascript"
+    "questionId": "127"
   },
   {
     "title": "Sum Root to Leaf Numbers",
     "titleSlug": "sum-root-to-leaf-numbers",
     "status": "ac",
     "difficulty": "Medium",
-    "questionId": "129",
-    "code": "/**\n * Definition for a binary tree node.\n * function TreeNode(val) {\n *     this.val = val;\n *     this.left = this.right = null;\n * }\n */\n/**\n * @param {TreeNode} root\n * @return {number}\n */\nvar sumNumbers = function(root) {\n  const analyzeObj = { sum: 0 }\n  if (!root) return analyzeObj.sum\n\n  analyzeSum(root, '', analyzeObj)\n  return analyzeObj.sum\n};\n\nvar analyzeSum = function(node, str, analyzeObj) {\n  if (!node) return\n  if (!node.left && !node.right) {\n    str += String(node.val)\n    analyzeObj.sum = analyzeObj.sum + parseInt(str, 10)\n    return\n  }\n\n  str += String(node.val)\n\n  analyzeSum(node.left, str, analyzeObj)\n  analyzeSum(node.right, str, analyzeObj)\n}",
-    "lang": "javascript"
+    "questionId": "129"
   },
   {
     "title": "Reorder List",
     "titleSlug": "reorder-list",
     "status": "ac",
     "difficulty": "Medium",
-    "questionId": "143",
-    "code": "/**\n * Definition for singly-linked list.\n * function ListNode(val) {\n *     this.val = val;\n *     this.next = null;\n * }\n */\n/**\n * @param {ListNode} head\n * @return {void} Do not return anything, modify head in-place instead.\n */\nvar reorderList = function(head) {\n  const dummy = new ListNode(0)\n  dummy.next = head\n\n  let slow = dummy\n  let quick = dummy\n\n  while (quick && quick.next) {\n    slow = slow.next\n    quick = quick.next\n    quick = quick.next\n  }\n\n  let right = slow.next\n  slow.next = null\n  let left = dummy.next\n\n  right = reverseList(right)\n\n  while (left && right) {\n    let lNext = left.next\n    let rNext = right.next\n    right.next = left.next\n    left.next = right\n    left = lNext\n    right = rNext\n  }\n\n  return dummy.next\n}\n\nvar reverseList = (list) => {\n  let prev = null\n  let cur = list\n\n  while (cur) {\n    let next = cur.next\n    cur.next = prev\n\n    prev = cur\n    cur = next\n  }\n\n  return prev\n}",
-    "lang": "javascript"
+    "questionId": "143"
   },
   {
     "title": "Binary Tree Preorder Traversal",
     "titleSlug": "binary-tree-preorder-traversal",
     "status": "ac",
     "difficulty": "Medium",
-    "questionId": "144",
-    "lang": "javascript"
+    "questionId": "144"
   },
   {
     "title": "Binary Tree Postorder Traversal",
     "titleSlug": "binary-tree-postorder-traversal",
     "status": "ac",
     "difficulty": "Medium",
-    "questionId": "145",
-    "lang": "javascript"
+    "questionId": "145"
   },
   {
     "title": "Insertion Sort List",
     "titleSlug": "insertion-sort-list",
     "status": "ac",
     "difficulty": "Medium",
-    "questionId": "147",
-    "lang": "javascript"
+    "questionId": "147"
   },
   {
     "title": "Sort List",
     "titleSlug": "sort-list",
     "status": "ac",
     "difficulty": "Medium",
-    "questionId": "148",
-    "lang": "javascript"
+    "questionId": "148"
   },
   {
     "title": "Max Points on a Line",
     "titleSlug": "max-points-on-a-line",
     "status": "ac",
     "difficulty": "Hard",
-    "questionId": "149",
-    "lang": "javascript"
+    "questionId": "149"
   },
   {
     "title": "Evaluate Reverse Polish Notation",
     "titleSlug": "evaluate-reverse-polish-notation",
     "status": "ac",
     "difficulty": "Medium",
-    "questionId": "150",
-    "lang": "javascript"
+    "questionId": "150"
   },
   {
     "title": "Reverse Words in a String",
     "titleSlug": "reverse-words-in-a-string",
     "status": "ac",
     "difficulty": "Medium",
-    "questionId": "151",
-    "lang": "javascript"
+    "questionId": "151"
   },
   {
     "title": "Two Sum II - Input array is sorted",
     "titleSlug": "two-sum-ii-input-array-is-sorted",
     "status": "ac",
     "difficulty": "Easy",
-    "questionId": "167",
-    "lang": "javascript"
+    "questionId": "167"
   },
   {
     "title": "Binary Tree Right Side View",
     "titleSlug": "binary-tree-right-side-view",
     "status": "ac",
     "difficulty": "Medium",
-    "questionId": "199",
-    "lang": "javascript"
+    "questionId": "199"
   },
   {
     "title": "Happy Number",
     "titleSlug": "happy-number",
     "status": "ac",
     "difficulty": "Easy",
-    "questionId": "202",
-    "lang": "javascript"
+    "questionId": "202"
   },
   {
     "title": "Remove Linked List Elements",
     "titleSlug": "remove-linked-list-elements",
     "status": "ac",
     "difficulty": "Easy",
-    "questionId": "203",
-    "lang": "javascript"
+    "questionId": "203"
   },
   {
     "title": "Isomorphic Strings",
     "titleSlug": "isomorphic-strings",
     "status": "ac",
     "difficulty": "Easy",
-    "questionId": "205",
-    "lang": "javascript"
+    "questionId": "205"
   },
   {
     "title": "Reverse Linked List",
     "titleSlug": "reverse-linked-list",
     "status": "ac",
     "difficulty": "Easy",
-    "questionId": "206",
-    "lang": "javascript"
+    "questionId": "206"
   },
   {
     "title": "Minimum Size Subarray Sum",
     "titleSlug": "minimum-size-subarray-sum",
     "status": "ac",
     "difficulty": "Medium",
-    "questionId": "209",
-    "lang": "javascript"
+    "questionId": "209"
   },
   {
     "title": "Kth Largest Element in an Array",
     "titleSlug": "kth-largest-element-in-an-array",
     "status": "ac",
     "difficulty": "Medium",
-    "questionId": "215",
-    "lang": "javascript"
+    "questionId": "215"
   },
   {
     "title": "Contains Duplicate",
     "titleSlug": "contains-duplicate",
     "status": "ac",
     "difficulty": "Easy",
-    "questionId": "217",
-    "lang": "javascript"
+    "questionId": "217"
   },
   {
     "title": "Contains Duplicate II",
     "titleSlug": "contains-duplicate-ii",
     "status": "ac",
     "difficulty": "Easy",
-    "questionId": "219",
-    "lang": "javascript"
+    "questionId": "219"
   },
   {
     "title": "Contains Duplicate III",
     "titleSlug": "contains-duplicate-iii",
     "status": "ac",
     "difficulty": "Medium",
-    "questionId": "220",
-    "lang": "javascript"
+    "questionId": "220"
   },
   {
     "title": "Count Complete Tree Nodes",
     "titleSlug": "count-complete-tree-nodes",
     "status": "ac",
     "difficulty": "Medium",
-    "questionId": "222",
-    "lang": "javascript"
+    "questionId": "222"
   },
   {
     "title": "Invert Binary Tree",
     "titleSlug": "invert-binary-tree",
     "status": "ac",
     "difficulty": "Easy",
-    "questionId": "226",
-    "lang": "javascript"
+    "questionId": "226"
   },
   {
     "title": "Palindrome Linked List",
     "titleSlug": "palindrome-linked-list",
     "status": "ac",
     "difficulty": "Easy",
-    "questionId": "234",
-    "lang": "javascript"
+    "questionId": "234"
   },
   {
     "title": "Delete Node in a Linked List",
     "titleSlug": "delete-node-in-a-linked-list",
     "status": "ac",
     "difficulty": "Easy",
-    "questionId": "237",
-    "lang": "javascript"
+    "questionId": "237"
   },
   {
     "title": "Valid Anagram",
     "titleSlug": "valid-anagram",
     "status": "ac",
     "difficulty": "Easy",
-    "questionId": "242",
-    "lang": "javascript"
+    "questionId": "242"
   },
   {
     "title": "Binary Tree Paths",
     "titleSlug": "binary-tree-paths",
     "status": "ac",
     "difficulty": "Easy",
-    "questionId": "257",
-    "lang": "javascript"
+    "questionId": "257"
   },
   {
     "title": "Perfect Squares",
     "titleSlug": "perfect-squares",
     "status": "ac",
     "difficulty": "Medium",
-    "questionId": "279",
-    "lang": "javascript"
+    "questionId": "279"
   },
   {
     "title": "Move Zeroes",
     "titleSlug": "move-zeroes",
     "status": "ac",
     "difficulty": "Easy",
-    "questionId": "283",
-    "lang": "javascript"
+    "questionId": "283"
   },
   {
     "title": "Word Pattern",
     "titleSlug": "word-pattern",
     "status": "ac",
     "difficulty": "Easy",
-    "questionId": "290",
-    "lang": "javascript"
+    "questionId": "290"
   },
   {
     "title": "Odd Even Linked List",
     "titleSlug": "odd-even-linked-list",
     "status": "ac",
     "difficulty": "Medium",
-    "questionId": "328",
-    "lang": "javascript"
+    "questionId": "328"
   },
   {
     "title": "Flatten Nested List Iterator",
     "titleSlug": "flatten-nested-list-iterator",
     "status": "ac",
     "difficulty": "Medium",
-    "questionId": "341",
-    "lang": "javascript"
+    "questionId": "341"
   },
   {
     "title": "Reverse String",
     "titleSlug": "reverse-string",
     "status": "ac",
     "difficulty": "Easy",
-    "questionId": "344",
-    "lang": "javascript"
+    "questionId": "344"
   },
   {
     "title": "Top K Frequent Elements",
     "titleSlug": "top-k-frequent-elements",
     "status": "ac",
     "difficulty": "Medium",
-    "questionId": "347",
-    "lang": "javascript"
+    "questionId": "347"
   },
   {
     "title": "Intersection of Two Arrays",
     "titleSlug": "intersection-of-two-arrays",
     "status": "ac",
     "difficulty": "Easy",
-    "questionId": "349",
-    "lang": "javascript"
+    "questionId": "349"
   },
   {
     "title": "Intersection of Two Arrays II",
     "titleSlug": "intersection-of-two-arrays-ii",
     "status": "ac",
     "difficulty": "Easy",
-    "questionId": "350",
-    "lang": "javascript"
+    "questionId": "350"
   },
   {
     "title": "Sum of Left Leaves",
     "titleSlug": "sum-of-left-leaves",
     "status": "ac",
     "difficulty": "Easy",
-    "questionId": "404",
-    "lang": "javascript"
+    "questionId": "404"
   },
   {
     "title": "Find All Anagrams in a String",
     "titleSlug": "find-all-anagrams-in-a-string",
     "status": "ac",
     "difficulty": "Medium",
-    "questionId": "438",
-    "lang": "javascript"
+    "questionId": "438"
   },
   {
     "title": "Add Two Numbers II",
     "titleSlug": "add-two-numbers-ii",
     "status": "ac",
     "difficulty": "Medium",
-    "questionId": "445",
-    "lang": "javascript"
+    "questionId": "445"
   },
   {
     "title": "Number of Boomerangs",
     "titleSlug": "number-of-boomerangs",
     "status": "ac",
     "difficulty": "Easy",
-    "questionId": "447",
-    "lang": "javascript"
+    "questionId": "447"
   },
   {
     "title": "Sort Characters By Frequency",
     "titleSlug": "sort-characters-by-frequency",
     "status": "ac",
     "difficulty": "Medium",
-    "questionId": "451",
-    "lang": "javascript"
+    "questionId": "451"
   },
   {
     "title": "4Sum II",
     "titleSlug": "4sum-ii",
     "status": "ac",
     "difficulty": "Medium",
-    "questionId": "454",
-    "lang": "javascript"
+    "questionId": "454"
   },
   {
     "title": "Permutation in String",
     "titleSlug": "permutation-in-string",
     "status": "ac",
     "difficulty": "Medium",
-    "questionId": "567",
-    "lang": "javascript"
+    "questionId": "567"
   }
 ]

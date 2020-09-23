@@ -1,14 +1,14 @@
 const { GraphQLClient } = require('graphql-request');
-const nodeUrl = require('url');
+// const nodeUrl = require('url');
 const ora = require('ora');
 const inquirer = require('inquirer');
 const puppeteer = require('puppeteer-extra');
 const StealthPlugin = require('puppeteer-extra-plugin-stealth');
 
 const {
-  request,
+  // request,
   getHeaders,
-  unicodeToChar,
+  // unicodeToChar,
   removeConfig,
   getConfig,
   setConfig,
@@ -94,17 +94,21 @@ const createGqlRequest = async () => {
   return client.request.bind(client);
 };
 
-const createRequest = async () => {
-  const cookies = await getCookie();
-  return url =>
-    request(url, {
-      headers: getHeaders(cookies),
-    });
-};
+// restful request
+// const createRequest = async () => {
+//   const cookies = await getCookie();
+//   return url =>
+//     request(url, {
+//       headers: getHeaders(cookies),
+//     });
+// };
+const filterAcQuestions = (questions = []) =>
+  questions.filter(({ status }) => status === 'ac');
 
 const getAllACQuestions = async () => {
   const gqlRequest = await createGqlRequest();
   const spinner = ora('Fetching all questions...').start();
+  // interface see https://leetcode-cn.com/problems/add-two-numbers/
   const json = await gqlRequest(`{
     allQuestions{
       title
@@ -115,68 +119,28 @@ const getAllACQuestions = async () => {
     }
   }`);
   spinner.stop();
-  const filterAcQuestions = (questions = []) =>
-    questions.filter(({ status }) => status === 'ac');
   const questions = json.allQuestions || [];
   return filterAcQuestions(questions);
 };
-const getSubmissionCode = async ({ url, id } = {}, isUS = true) => {
-  if (isUS) {
-    const submissionUrl = nodeUrl.resolve(baseUrl, url);
-    const requestWithSession = await createRequest(submissionUrl);
-    const response = await requestWithSession(submissionUrl);
-    // NOTE unreliable
-    const matches = response.body.match(
-      /submissionCode\s*:\s*'([\s\S]*)'\s*,\s*editCodeUrl/
-    );
-    if (matches[1]) {
-      return unicodeToChar(matches[1]);
-    }
-  }
-  const gqlRequest = await createGqlRequest();
-  const json = await gqlRequest(`{
-    submissionDetail(submissionId: ${id}) {
-      id
-      code
-      statusDisplay
-    }
-  }`);
-  const detail = json.submissionDetail || {};
-  return detail.code;
-};
 
 // get details of ac code.
-const getAcCode = async (questionSlug) => {
+const getQuestionData = async (titleSlug) => {
   const qglRequest = await createGqlRequest();
+  // interface from 'https://leetcode-cn.com/problems/add-two-numbers/'
   const json = await qglRequest(`{
-    submissionList(offset:0,limit:10, questionSlug: "${questionSlug}"){
-      submissions{
-        lang
-        title
-        url
-        statusDisplay
-        id
+    questionData($titleSlug: "${titleSlug}"){
+      question{
+        topicTags
       }
     }
   }`);
-  const submissions =
-    (json.submissionList && json.submissionList.submissions) || [];
-  const acSubmissions = submissions.filter(
-    ({ statusDisplay }) => statusDisplay === 'Accepted'
-  );
-  if (acSubmissions.length > 0) {
-    const code = await getSubmissionCode(acSubmissions[0], country === 'us');
-    return {
-      code,
-      ...acSubmissions[0],
-    };
-  }
-  return null;
+  const question = (json.questionData && json.questionData.question) || {};
+  return question;
 };
 
 module.exports = {
   login,
   getAllACQuestions,
-  getAcCode,
+  getQuestionData,
   getCookie,
 };

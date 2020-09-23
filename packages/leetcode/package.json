@@ -1,5 +1,5 @@
 {
-  "name": "crd-leetcode",
+  "name": "@crd/leetcode-cli",
   "version": "0.0.1",
   "description": "Generate leetcode table autoly",
   "bin": {
