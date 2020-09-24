@@ -128,13 +128,14 @@ const getQuestionData = async (titleSlug) => {
   const qglRequest = await createGqlRequest();
   // interface from 'https://leetcode-cn.com/problems/add-two-numbers/'
   const json = await qglRequest(`{
-    questionData($titleSlug: "${titleSlug}"){
-      question{
-        topicTags
+    question(titleSlug: "${titleSlug}") {
+      topicTags {
+        name
+        slug
       }
     }
   }`);
-  const question = (json.questionData && json.questionData.question) || {};
+  const question = json.question || {};
   return question;
 };
 

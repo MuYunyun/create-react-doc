@@ -59,12 +59,22 @@ const removeConfig = (key) => {
 
 const transformToMarkdownTable = (dataArr) => {
   let result =
-    '| # | Title | Explanation | Difficulty |' +
+    '| # | Title | Explanation | Difficulty | Type |' +
     '\n' +
-    '|:---:|:---:|:---:|:---:|';
+    '|:---:|:---:|:---:|:---:|:---:|';
 
   for (let i = 0; i < dataArr.length; i++) {
-    result += `\n| ${dataArr[i].questionId} | [${dataArr[i].title}](https://leetcode.com/problems/${dataArr[i].titleSlug}/) | [Analyze](https://github.com/MuYunyun/blog/blob/master/LeetCode/${dataArr[i].questionId}.${dataArr[i].title.split(' ').join('_')}.md) | ${dataArr[i].difficulty}`;
+    // eslint-disable-next-line no-template-curly-in-string
+    console.log('${dataArr[i].topicTags}', dataArr[i].topicTags);
+    result += `\n| ${dataArr[i].questionId} | [${
+      dataArr[i].title
+    }](https://leetcode.com/problems/${
+      dataArr[i].titleSlug
+    }/) | [Analyze](https://github.com/MuYunyun/blog/blob/master/LeetCode/${
+      dataArr[i].questionId
+    }.${dataArr[i].title.split(' ').join('_')}.md) | ${
+      dataArr[i].difficulty
+    } | ${dataArr[i].topicTags} |`;
   }
   return result;
 };
