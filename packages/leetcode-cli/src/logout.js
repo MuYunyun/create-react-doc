@@ -3,5 +3,5 @@ const { removeConfig } = require('./utils');
 const logOut = () => {
   removeConfig('cookies');
 };
-
-module.exports = logOut;
+logOut();
+// module.exports = logOut;

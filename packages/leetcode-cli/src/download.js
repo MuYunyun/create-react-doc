@@ -2,9 +2,8 @@
 const fs = require('fs');
 const ora = require('ora');
 const { transformToMarkdownTable } = require('./utils');
-// const { getAllACQuestions, getQuestionData } = require('./leetcode');
-const { getAllACQuestions } = require('./leetcode');
-const { resolveApp } = require('@crd/utils');
+const { getAllACQuestions, getQuestionData } = require('./leetcode');
+// const { resolveApp } = require('@crd/utils');
 
 const difference = (problemsA = [], problemsB = []) => {
   const map = problemsB.reduce((acc, problem) => {
@@ -33,10 +32,12 @@ const download = async (command) => {
     const current = xs.shift();
     // todo: https://github.com/beizhedenglong/leetcode-site-generator/issues/10
     try {
-      // const { topicTags } = await getQuestionData(current.titleSlug);
-      // console.log('topicTags', topicTags);
-      // current.code = code;
-      // current.lang = lang;
+      const { topicTags } = await getQuestionData(current.titleSlug);
+      const result = topicTags.reduce((prev, cur) => {
+        if (prev === '') return cur.name;
+        return `${prev}, ${cur.name}`;
+      }, '');
+      current.topicTags = result;
     } catch (error) {
       console.error(error.message);
     }
@@ -45,9 +46,9 @@ const download = async (command) => {
     }] has downloaded.`;
     problems.push(current);
     // it can be extracted in to config if there is need.
-    let leetcodeReadme = 'leetcode-table.md';
+    const leetcodeReadme = 'leetcode-table.md';
     try {
-      leetcodeReadme = resolveApp('LeetCode/README.md');
+      // leetcodeReadme = resolveApp('LeetCode/README.md');
     // todo here there is some error here
     // eslint-disable-next-line no-empty
     } catch (e) {}
