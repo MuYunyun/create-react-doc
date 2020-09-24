@@ -1,13 +1,10 @@
 const path = require('path');
 const fs = require('fs');
+const { resolveApp, resolveTool } = require('@crd/utils');
 
 // handle the problem of symbol in any platform
 const appDirectory = fs.realpathSync(process.cwd());
-const toolDirectory = fs.realpathSync(__dirname);
-// Markdown dir
-const resolveApp = relativePath => path.resolve(appDirectory, relativePath);
-// crd tool dir
-const resolveTool = relativePath => path.resolve(toolDirectory, relativePath);
+
 const modPath = resolveApp('node_modules');
 // get config crd from package.json
 function getCrdConf() {
@@ -92,7 +89,6 @@ module.exports = {
   docsNodeModules: resolveApp(''),
   docsConfig: resolveApp('config.yml'),
   docsReadme: resolveApp('README.md'),
-  leetcodeReadme: resolveApp('LeetCode/README.md'),
   docsBuildDist: resolveApp('.crd-dist'),
   cacheDirPath: resolveApp('.cache'),
   searchFilePath: resolveApp('.cache/search.js'),

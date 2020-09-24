@@ -4,9 +4,7 @@ const ora = require('ora');
 const { transformToMarkdownTable } = require('./utils');
 // const { getAllACQuestions, getQuestionData } = require('./leetcode');
 const { getAllACQuestions } = require('./leetcode');
-const {
-  paths,
-} = require('crd-scripts');
+const { resolveApp } = require('@crd/utils');
 
 const difference = (problemsA = [], problemsB = []) => {
   const map = problemsB.reduce((acc, problem) => {
@@ -46,8 +44,15 @@ const download = async (command) => {
       current.title
     }] has downloaded.`;
     problems.push(current);
-    if (paths.leetcodeReadme) {
-      fs.writeFileSync('leetcode-table.md', transformToMarkdownTable(problems));
+    // it can be extracted in to config if there is need.
+    let leetcodeReadme = 'leetcode-table.md';
+    try {
+      leetcodeReadme = resolveApp('LeetCode/README.md');
+    // todo here there is some error here
+    // eslint-disable-next-line no-empty
+    } catch (e) {}
+    if (leetcodeReadme) {
+      fs.writeFileSync(leetcodeReadme, transformToMarkdownTable(problems));
     }
     await aux(xs);
   };
@@ -55,4 +60,6 @@ const download = async (command) => {
   spinner.stop();
 };
 
-module.exports = download;
+download({ all: true });
+
+// module.exports = download;
