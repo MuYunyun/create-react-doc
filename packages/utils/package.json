@@ -1,11 +1,8 @@
 {
   "name": "@crd/utils",
-  "version": "0.1.0",
+  "version": "0.2.1",
   "description": "Utils with create react doc",
   "main": "index.js",
-  "dependencies": {
-
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/MuYunyun/create-react-doc",
@@ -17,8 +14,5 @@
   },
   "author": "muyunyun",
   "license": "MIT",
-  "gitHead": "ffc5e4cbc94a7356da558c2dbf46e2f39bb8b199",
-  "devDependencies": {
-
-  }
+  "gitHead": "ffc5e4cbc94a7356da558c2dbf46e2f39bb8b199"
 }
