@@ -1,9 +1,9 @@
 // todo: use https://github.com/tsuz/json-to-markdown-table to convert json to markdown table
 const fs = require('fs');
 const ora = require('ora');
-const { transformToMarkdownTable } = require('./utils');
+const { transformToMarkdownTable, stringify } = require('./utils');
 const { getAllACQuestions, getQuestionData } = require('./leetcode');
-// const { resolveApp } = require('@crd/utils');
+const { resolveApp } = require('@crd/utils');
 
 const difference = (problemsA = [], problemsB = []) => {
   const map = problemsB.reduce((acc, problem) => {
@@ -46,21 +46,17 @@ const download = async (command) => {
     }] has downloaded.`;
     problems.push(current);
     // it can be extracted in to config if there is need.
-    const leetcodeReadme = 'leetcode-table.md';
-    try {
-      // leetcodeReadme = resolveApp('LeetCode/README.md');
-    // todo here there is some error here
-    // eslint-disable-next-line no-empty
-    } catch (e) {}
-    if (leetcodeReadme) {
-      fs.writeFileSync(leetcodeReadme, transformToMarkdownTable(problems));
+    let leetcodeReadme = 'leetcode-table.md';
+    if (fs.existsSync(resolveApp('LeetCode/README.md'))) {
+      leetcodeReadme = resolveApp('LeetCode/README.md');
     }
+    fs.writeFileSync(leetcodeReadme, transformToMarkdownTable(problems));
+    // the problemsPath is to get incremental data.
+    fs.writeFileSync(problemsPath, stringify(problems));
     await aux(xs);
   };
   await aux([...questions]);
   spinner.stop();
 };
 
-download({ all: true });
-
-// module.exports = download;
+module.exports = download;

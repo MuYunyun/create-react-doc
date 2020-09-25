@@ -64,8 +64,6 @@ const transformToMarkdownTable = (dataArr) => {
     '|:---:|:---:|:---:|:---:|:---:|';
 
   for (let i = 0; i < dataArr.length; i++) {
-    // eslint-disable-next-line no-template-curly-in-string
-    console.log('${dataArr[i].topicTags}', dataArr[i].topicTags);
     result += `\n| ${dataArr[i].questionId} | [${
       dataArr[i].title
     }](https://leetcode.com/problems/${
