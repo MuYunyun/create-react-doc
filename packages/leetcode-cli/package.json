@@ -1,6 +1,6 @@
 {
-  "name": "@crd/leetcode-cli",
-  "version": "0.2.1",
+  "name": "crd-leetcode-cli",
+  "version": "0.2.2",
   "description": "Generate leetcode table autoly",
   "bin": {
     "leetcode": "./src/cli.js"
@@ -29,5 +29,6 @@
     "access": "public"
   },
   "author": "muyunyun",
-  "license": "MIT"
+  "license": "MIT",
+  "gitHead": "d8a8dff5697da28623361231bd9b3d848d050e8b"
 }

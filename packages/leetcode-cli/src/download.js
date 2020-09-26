@@ -3,7 +3,7 @@ const fs = require('fs');
 const ora = require('ora');
 const { transformToMarkdownTable, stringify } = require('./utils');
 const { getAllACQuestions, getQuestionData } = require('./leetcode');
-const { resolveApp } = require('@crd/utils');
+const { resolveApp } = require('crd-utils');
 
 const difference = (problemsA = [], problemsB = []) => {
   const map = problemsB.reduce((acc, problem) => {

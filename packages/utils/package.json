@@ -1,5 +1,5 @@
 {
-  "name": "@crd/utils",
+  "name": "crd-utils",
   "version": "0.2.1",
   "description": "Utils with create react doc",
   "main": "index.js",

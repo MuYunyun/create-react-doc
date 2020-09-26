@@ -1,6 +1,6 @@
 const path = require('path');
 const fs = require('fs');
-const { resolveApp, resolveTool } = require('@crd/utils');
+const { resolveApp, resolveTool } = require('crd-utils');
 
 // handle the problem of symbol in any platform
 const appDirectory = fs.realpathSync(process.cwd());
