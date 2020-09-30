@@ -1,5 +1,4 @@
 const { GraphQLClient } = require('graphql-request');
-// const nodeUrl = require('url');
 const ora = require('ora');
 const inquirer = require('inquirer');
 const puppeteer = require('puppeteer-extra');
