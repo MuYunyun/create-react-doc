@@ -1,4 +1,5 @@
-// todo: use https://github.com/tsuz/json-to-markdown-table to convert json to markdown table
+/* eslint-disable import/no-dynamic-require */
+/* eslint-disable global-require */
 const fs = require('fs');
 const ora = require('ora');
 const { transformToMarkdownTable, stringify } = require('./utils');
@@ -30,7 +31,6 @@ const download = async (command) => {
       return;
     }
     const current = xs.shift();
-    // todo: https://github.com/beizhedenglong/leetcode-site-generator/issues/10
     try {
       const { topicTags } = await getQuestionData(current.titleSlug);
       const result = topicTags.reduce((prev, cur) => {
@@ -50,7 +50,12 @@ const download = async (command) => {
     if (fs.existsSync(resolveApp('LeetCode/README.md'))) {
       leetcodeReadme = resolveApp('LeetCode/README.md');
     }
-    fs.writeFileSync(leetcodeReadme, transformToMarkdownTable(problems));
+    let transformMarkdownTable = transformToMarkdownTable;
+    let transformMarkdownTable = () => {};
+    if (fs.existsSync(resolveApp('config.js'))) {
+      transformMarkdownTable = require(resolveApp('config.js')).transform_markdown_table;
+    }
+    fs.writeFileSync(leetcodeReadme, transformMarkdownTable(problems));
     // the problemsPath is to get incremental data.
     fs.writeFileSync(problemsPath, stringify(problems));
     await aux(xs);
