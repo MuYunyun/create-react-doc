@@ -130,3 +130,7 @@ language: en
 
 * 与 git 文件结构类似, 如果在展示的文件夹中有私有文件不方便展示在文档站点, 可以在 `.gitignore` 文件中设置过滤文件, 这样它们就不会展示在文档站点中了。eg: [.gitignore](https://github.com/MuYunyun/blog/blob/master/.gitignore)
 * 更多用法: 欢迎在 [issue](https://github.com/MuYunyun/create-react-doc/issues/new) 留言。
+
+## 工具箱
+
+* [crd-leetcode-cli](https://github.com/MuYunyun/create-react-doc/tree/master/packages/leetcode-cli): 提供将 [leetcode](https://leetcode-cn.com/) 中已 AC 的题目转化为 markdown 表格的能力。

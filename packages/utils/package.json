@@ -1,6 +1,6 @@
 {
   "name": "crd-utils",
-  "version": "0.2.4",
+  "version": "0.2.6",
   "description": "Utils with create react doc",
   "main": "index.js",
   "repository": {
