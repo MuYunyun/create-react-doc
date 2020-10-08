@@ -1,6 +1,6 @@
 const path = require('path');
 const fs = require('fs');
-const { resolveApp, resolveTool } = require('crd-utils');
+const { resolveApp } = require('crd-utils');
 
 // handle the problem of symbol in any platform
 const appDirectory = fs.realpathSync(process.cwd());
@@ -81,6 +81,10 @@ function getExcludeFoldersRegExp() {
   });
   return regxExc;
 }
+
+// crd tool dir
+const toolDirectory = fs.realpathSync(__dirname);
+const resolveTool = relativePath => path.resolve(toolDirectory, relativePath);
 
 module.exports = {
   // markdown dir
