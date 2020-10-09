@@ -1,7 +1,7 @@
 import React from 'react';
-import { Switch, Route } from 'react-router-dom';
-import BasicLayout from './layout';
-import NoMatch from './component/NoMatch';
+// import { Switch, Route } from 'react-router-dom';
+// import BasicLayout from './layout';
+// import NoMatch from './component/NoMatch';
 import Loading from './component/Loading';
 import './index.less';
 
@@ -20,21 +20,11 @@ export default function (Lazyload, props) {
     });
   }
 
+  // eslint-disable-next-line global-require
+  const CustomTheme = require('./theme_seed').default;
+
   return (
-    <Switch>
-      <Route
-        path="/404"
-        render={routeProps => (
-          <NoMatch {...routeProps} {...props} />
-        )}
-      />
-      <Route path="/"
-        render={(routeProps) => {
-          return (
-            <BasicLayout {...routeProps} {...props} />
-          );
-        }}
-      />
-    </Switch>
+    // todo: to use custom theme here.
+    <CustomTheme {...props} />
   );
 }
