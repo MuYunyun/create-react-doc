@@ -9,6 +9,9 @@ menu: packages/templates/default/Introduction
 ## set init open menu keys
 # menuOpenKeys:
 
+# site theme
+theme: seed
+
 # Github
 ## if you want to editing pages on github, you should config these arguments.
 user: MuYunyun

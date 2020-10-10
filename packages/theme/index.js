@@ -1,11 +1,8 @@
+/* eslint-disable global-require */
 import React from 'react';
-// import { Switch, Route } from 'react-router-dom';
-// import BasicLayout from './layout';
-// import NoMatch from './component/NoMatch';
 import Loading from './component/Loading';
 import './index.less';
 
-// run in the Web/Router.js
 export default function (Lazyload, props) {
   const LoadableComponent = Lazyload({
     component: () => import('./routes/Pages'),
@@ -20,11 +17,16 @@ export default function (Lazyload, props) {
     });
   }
 
-  // eslint-disable-next-line global-require
-  const CustomTheme = require('./theme_seed').default;
+  // eslint-disable-next-line no-undef
+  const { theme } = DOCSCONFIG || {};
+
+
+  // eslint-disable-next-line import/no-dynamic-require
+  const CustomTheme = require(`./${theme}`).default;
+  // todo: to require theme from node_modules
 
   return (
-    // todo: to use custom theme here.
+    // use custom theme here.
     <CustomTheme {...props} />
   );
 }

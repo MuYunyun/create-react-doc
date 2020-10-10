@@ -7,7 +7,6 @@ import './index.less';
 // run in the Web/Router.js
 const ThemeSeed = (props) => {
   return (
-    // todo: to use custom theme here.
     <Switch>
       <Route
         path="/404"
