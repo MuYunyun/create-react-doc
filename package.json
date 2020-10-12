@@ -12,7 +12,7 @@
     "bootstrap --hoist": "lerna bootstrap --hoist",
     "bootstrap:ci": "lerna bootstrap --no-ci",
     "clean": "lerna clean",
-    "start": "node packages/create-react-doc/index.js start",
+    "start": "yarn bootstrap && node packages/create-react-doc/index.js start",
     "build": "node packages/create-react-doc/index.js build",
     "deploy": "node packages/create-react-doc/index.js deploy",
     "release": "lerna publish"
