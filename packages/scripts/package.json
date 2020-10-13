@@ -1,6 +1,6 @@
 {
   "name": "crd-scripts",
-  "version": "0.2.10",
+  "version": "0.2.11",
   "description": "Scripts using with Create React Doc",
   "main": "index.js",
   "dependencies": {
@@ -25,6 +25,8 @@
     "crd-utils": "^0.2.8",
     "css-loader": "^0.28.7",
     "detect-port": "^1.2.2",
+    "eslint": "^7.11.0",
+    "eslint-loader": "^4.0.2",
     "file-loader": "^1.1.11",
     "fs-extra": "^5.0.0",
     "gh-pages": "^1.2.0",
@@ -52,9 +54,7 @@
     "webpack-hot-dev-clients": "^1.0.4",
     "webpackbar": "^4.0.0",
     "write": "^1.0.3",
-    "yamljs": "^0.3.0",
-    "eslint": "^7.11.0",
-    "eslint-loader": "^4.0.2"
+    "yamljs": "^0.3.0"
   },
   "repository": {
     "type": "git",
