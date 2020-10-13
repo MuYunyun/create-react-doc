@@ -9,6 +9,9 @@ menu: Introduction
 ## set init open menu keys
 # menuOpenKeys:
 
+# todo
+theme: crd-seed
+
 # Github
 ## if you want to editing pages on github, you should config these arguments.
 # user:

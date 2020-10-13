@@ -1,11 +1,8 @@
+/* eslint-disable global-require */
 import React from 'react';
-import { Switch, Route } from 'react-router-dom';
-import BasicLayout from './layout';
-import NoMatch from './component/NoMatch';
 import Loading from './component/Loading';
 import './index.less';
 
-// run in the Web/Router.js
 export default function (Lazyload, props) {
   const LoadableComponent = Lazyload({
     component: () => import('./routes/Pages'),
@@ -20,21 +17,16 @@ export default function (Lazyload, props) {
     });
   }
 
+  // eslint-disable-next-line no-undef
+  const { theme } = DOCSCONFIG || {};
+
+  // todo: if there is requirement for custom theme. create-react-doc will provide the ability to use theme as node_modules.
+  // and provide the theme template.
+  // eslint-disable-next-line import/no-dynamic-require
+  const CustomTheme = require(`./internal-theme/${theme}`).default;
+
   return (
-    <Switch>
-      <Route
-        path="/404"
-        render={routeProps => (
-          <NoMatch {...routeProps} {...props} />
-        )}
-      />
-      <Route path="/"
-        render={(routeProps) => {
-          return (
-            <BasicLayout {...routeProps} {...props} />
-          );
-        }}
-      />
-    </Switch>
+    // use custom theme here.
+    <CustomTheme {...props} />
   );
 }

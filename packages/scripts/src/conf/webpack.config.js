@@ -17,7 +17,9 @@ if (paths.crdConf && paths.crdConf.footer && typeof paths.crdConf.footer === 'st
 /* custom define docs config */
 if (paths.docsConfig) {
   const searchContent = getSearchContent();
-  define.DOCSCONFIG = JSON.stringify(getDocsConfig());
+  const docsConfig = getDocsConfig();
+
+  define.DOCSCONFIG = JSON.stringify(docsConfig);
   define.SEARCHCONTENT = searchContent && searchContent.toString();
 }
 
