@@ -1,10 +1,5 @@
 {
-  "packages": [
-    "packages/create-react-doc",
-    "packages/scripts",
-    "packages/theme"
-  ],
-  "version": "0.2.8",
+  "version": "0.2.9",
   "command": {
     "bootstrap": {
       "npmClientArgs": [
