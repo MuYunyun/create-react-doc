@@ -52,7 +52,9 @@
     "webpack-hot-dev-clients": "^1.0.4",
     "webpackbar": "^4.0.0",
     "write": "^1.0.3",
-    "yamljs": "^0.3.0"
+    "yamljs": "^0.3.0",
+    "eslint": "^7.11.0",
+    "eslint-loader": "^4.0.2"
   },
   "repository": {
     "type": "git",
