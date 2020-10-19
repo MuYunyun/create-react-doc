@@ -3,7 +3,8 @@
 const path = require('path');
 const webpack = require('webpack');
 const webpackbar = require('webpackbar');
-const { getDocsConfig, getSearchContent } = require('../utils');
+const { getDocsConfig } = require('../utils');
+// const { getDocsConfig, getSearchContent } = require('../utils');
 const paths = require('./path');
 const pkg = require('../../package.json');
 
@@ -16,11 +17,12 @@ if (paths.crdConf && paths.crdConf.footer && typeof paths.crdConf.footer === 'st
 }
 /* custom define docs config */
 if (paths.docsConfig) {
-  const searchContent = getSearchContent();
+  // const searchContent = getSearchContent();
   const docsConfig = getDocsConfig();
 
   define.DOCSCONFIG = JSON.stringify(docsConfig);
-  define.SEARCHCONTENT = searchContent && searchContent.toString();
+  // todo: searchContent affects the performance, so take annotation here templately.
+  // define.SEARCHCONTENT = searchContent && searchContent.toString();
 }
 
 module.exports = {
@@ -33,25 +35,25 @@ module.exports = {
   },
   module: {
     rules: [
-      {
-        test: /\.(js|jsx|mjs)$/,
-        exclude: [/node_modules/, /\.(cache)/, /crd-theme-(.*)/],
-        enforce: 'pre',
-        use: [
-          // TODO:禁用require.ensure也不是一种标准的语言特征。
-          // 我们等待 https://github.com/facebookincubator/create-react-app/issues/2176。
-          // { parser: { requireEnsure: false } },
-          {
-            // 首先运行 linter。
-            // 在 Babel 处理 js 之前做这一点很重要。
-            options: {
-              eslintPath: require.resolve('eslint'),
-              configFile: require.resolve('../../.eslintrc.js'),
-            },
-            loader: require.resolve('eslint-loader'),
-          },
-        ],
-      },
+      // {
+      //   test: /\.(js|jsx|mjs)$/,
+      //   exclude: [/node_modules/, /\.(cache)/, /crd-theme-(.*)/],
+      //   enforce: 'pre',
+      //   use: [
+      //     // TODO:禁用require.ensure也不是一种标准的语言特征。
+      //     // 我们等待 https://github.com/facebookincubator/create-react-app/issues/2176。
+      //     // { parser: { requireEnsure: false } },
+      //     {
+      //       // 首先运行 linter。
+      //       // 在 Babel 处理 js 之前做这一点很重要。
+      //       options: {
+      //         eslintPath: require.resolve('eslint'),
+      //         configFile: require.resolve('../../.eslintrc.js'),
+      //       },
+      //       loader: require.resolve('eslint-loader'),
+      //     },
+      //   ],
+      // },
       {
         // “oneOf”将遍历所有以下加载程序，直到一个符合要求。
         // 当没有加载器匹配时，它将返回到加载程序列表末尾的“file”加载器。
