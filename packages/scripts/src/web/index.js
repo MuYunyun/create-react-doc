@@ -5,6 +5,6 @@ import RouterRoot from './Router';
 
 ReactDOM.render(
   <RouterRoot />,
-  document.getElementById('root')
+  document.getElementById('root'),
 );
 

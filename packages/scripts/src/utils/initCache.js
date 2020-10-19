@@ -34,7 +34,7 @@ module.exports = function (program, cb) {
     const mdfile = flatTreeData[i];
     const mdfilePath = mdfile.replace(
       process.cwd() + path.sep,
-      ''
+      '',
     );
     // generate file cache only it isn't in .gitignore
     if (!ifInGitIgnore(mdfilePath)) {
@@ -43,7 +43,7 @@ module.exports = function (program, cb) {
         process.cwd(),
         paths.cacheDirPath,
         'md',
-        underlineFileName
+        underlineFileName,
       );
       if (fs.existsSync(mdfile)) {
         const content = fs.readFileSync(mdfile);
@@ -66,7 +66,7 @@ module.exports = function (program, cb) {
             if (searchMapIndex !== -1 && typeof searchMapIndex === 'number') {
               const effectedPath = data[i].relative.replace(
                 searchMapKeys[x],
-                docsConfig.search_map[searchMapKeys[x]]
+                docsConfig.search_map[searchMapKeys[x]],
               );
               searchData.push({
                 title: data[i].name,
@@ -92,13 +92,13 @@ module.exports = function (program, cb) {
     const writeSearchPath = path.resolve(
       process.cwd(),
       paths.cacheDirPath,
-      'search.js'
+      'search.js',
     );
     write.sync(
       writeSearchPath,
       `${JSON.stringify(
-        searchData
-      )}`
+        searchData,
+      )}`,
     );
   }
   cb();

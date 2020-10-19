@@ -52,7 +52,7 @@ const Menu = ({
           styles['menu-inline'],
           {
             [styles['menu-inline-collapsed']]: inlineCollapsed,
-          }
+          },
         )}
         style={menuStyle}
       >
