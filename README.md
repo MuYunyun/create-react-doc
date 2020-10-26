@@ -10,7 +10,7 @@
                                                   \(   _.-"
                                                     `--"
 
-[![npm version](https://img.shields.io/npm/v/create-react-doc)](https://badge.fury.io/js/create-react-doc) [![week download](https://img.shields.io/npm/dw/create-react-doc.svg)](https://www.npmjs.com/package/create-react-doc) ![LICENSE MIT](https://img.shields.io/npm/l/create-react-doc.svg)
+[![npm version](https://img.shields.io/npm/v/create-react-doc)](https://badge.fury.io/js/create-react-doc) [![week download](https://img.shields.io/npm/dw/create-react-doc.svg)](https://www.npmjs.com/package/create-react-doc) ![GitHub views](https://raw.githubusercontent.com/MuYunyun/create-react-doc/traffic/traffic-create-react-doc/views.svg) ![LICENSE MIT](https://img.shields.io/npm/l/create-react-doc.svg)
 
 [English](./README-en.md) | 简体中文
 
