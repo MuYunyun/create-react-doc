@@ -2,8 +2,8 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 75,
-    "uniques": 50
+    "count": 85,
+    "uniques": 51
   },
   {
     "path": "/MuYunyun/create-react-doc/issues",
@@ -48,15 +48,15 @@
     "uniques": 1
   },
   {
-    "path": "/MuYunyun/create-react-doc/issues/15",
-    "title": "RFC: v1 pro · Issue #15 · MuYunyun/create-react-doc",
-    "count": 2,
-    "uniques": 2
+    "path": "/MuYunyun/create-react-doc/actions",
+    "title": "Actions · MuYunyun/create-react-doc",
+    "count": 3,
+    "uniques": 1
   },
   {
-    "path": "/MuYunyun/create-react-doc/issues/26",
-    "title": "optimize start up speed · Issue #26 · MuYunyun/create-react-doc",
-    "count": 2,
-    "uniques": 2
+    "path": "/MuYunyun/create-react-doc/tree/traffic",
+    "title": "MuYunyun/create-react-doc at traffic",
+    "count": 3,
+    "uniques": 1
   }
 ]
