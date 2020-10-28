@@ -2,26 +2,26 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 85,
-    "uniques": 51
+    "count": 78,
+    "uniques": 50
   },
   {
     "path": "/MuYunyun/create-react-doc/issues",
     "title": "Issues · MuYunyun/create-react-doc",
-    "count": 19,
-    "uniques": 9
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/tree/master/packages",
-    "title": "create-react-doc/packages at master · MuYunyun/create-react-doc · GitHub",
-    "count": 7,
-    "uniques": 3
+    "count": 17,
+    "uniques": 8
   },
   {
     "path": "/MuYunyun/create-react-doc/tree/master/packages/leetcode-cli",
     "title": "create-react-doc/packages/leetcode-cli at master · MuYunyun/create-react-doc",
     "count": 6,
     "uniques": 4
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/tree/master/packages",
+    "title": "create-react-doc/packages at master · MuYunyun/create-react-doc · GitHub",
+    "count": 6,
+    "uniques": 3
   },
   {
     "path": "/MuYunyun/create-react-doc/issues/31",
@@ -36,16 +36,16 @@
     "uniques": 3
   },
   {
-    "path": "/MuYunyun/create-react-doc/tree/master/packages/scripts",
-    "title": "create-react-doc/packages/scripts at master · MuYunyun/create-react-doc",
-    "count": 4,
-    "uniques": 2
-  },
-  {
     "path": "/MuYunyun/create-react-doc/pull/32/files",
     "title": "fix: remove_search_templately by MuYunyun · Pull Request #32 · MuYunyun/creat...",
     "count": 4,
     "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/tree/master/packages/scripts",
+    "title": "create-react-doc/packages/scripts at master · MuYunyun/create-react-doc",
+    "count": 3,
+    "uniques": 2
   },
   {
     "path": "/MuYunyun/create-react-doc/actions",
