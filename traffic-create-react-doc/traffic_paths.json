@@ -2,38 +2,26 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 78,
-    "uniques": 50
+    "count": 71,
+    "uniques": 40
   },
   {
     "path": "/MuYunyun/create-react-doc/issues",
     "title": "Issues · MuYunyun/create-react-doc",
-    "count": 17,
-    "uniques": 8
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/tree/master/packages/leetcode-cli",
-    "title": "create-react-doc/packages/leetcode-cli at master · MuYunyun/create-react-doc",
-    "count": 6,
-    "uniques": 4
+    "count": 15,
+    "uniques": 9
   },
   {
     "path": "/MuYunyun/create-react-doc/tree/master/packages",
     "title": "create-react-doc/packages at master · MuYunyun/create-react-doc · GitHub",
-    "count": 6,
-    "uniques": 3
+    "count": 5,
+    "uniques": 2
   },
   {
-    "path": "/MuYunyun/create-react-doc/issues/31",
-    "title": "support site pv、uv · Issue #31 · MuYunyun/create-react-doc",
+    "path": "/MuYunyun/create-react-doc/tree/master/packages/leetcode-cli",
+    "title": "create-react-doc/packages/leetcode-cli at master · MuYunyun/create-react-doc",
     "count": 4,
-    "uniques": 4
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/tree/master/packages/create-react-doc",
-    "title": "create-react-doc/packages/create-react-doc at master · MuYunyun/create-react-...",
-    "count": 4,
-    "uniques": 3
+    "uniques": 2
   },
   {
     "path": "/MuYunyun/create-react-doc/pull/32/files",
@@ -42,20 +30,32 @@
     "uniques": 1
   },
   {
-    "path": "/MuYunyun/create-react-doc/tree/master/packages/scripts",
-    "title": "create-react-doc/packages/scripts at master · MuYunyun/create-react-doc",
+    "path": "/MuYunyun/create-react-doc/tree/traffic",
+    "title": "MuYunyun/create-react-doc at traffic",
+    "count": 4,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/issues/26",
+    "title": "optimize start up speed · Issue #26 · MuYunyun/create-react-doc",
+    "count": 3,
+    "uniques": 3
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/issues/31",
+    "title": "support site pv、uv · Issue #31 · MuYunyun/create-react-doc",
+    "count": 3,
+    "uniques": 3
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/tree/master/packages/create-react-doc",
+    "title": "create-react-doc/packages/create-react-doc at master · MuYunyun/create-react-...",
     "count": 3,
     "uniques": 2
   },
   {
     "path": "/MuYunyun/create-react-doc/actions",
     "title": "Actions · MuYunyun/create-react-doc",
-    "count": 3,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/tree/traffic",
-    "title": "MuYunyun/create-react-doc at traffic",
     "count": 3,
     "uniques": 1
   }
