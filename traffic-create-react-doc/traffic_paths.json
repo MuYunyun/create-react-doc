@@ -2,8 +2,8 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 39,
-    "uniques": 15
+    "count": 43,
+    "uniques": 17
   },
   {
     "path": "/MuYunyun/create-react-doc/issues",
@@ -42,6 +42,12 @@
     "uniques": 2
   },
   {
+    "path": "/MuYunyun/create-react-doc/tree/master/packages",
+    "title": "create-react-doc/packages at master · MuYunyun/create-react-doc",
+    "count": 2,
+    "uniques": 2
+  },
+  {
     "path": "/MuYunyun/create-react-doc/issues/30",
     "title": "RFC: support custom theme · Issue #30 · MuYunyun/create-react-doc",
     "count": 2,
@@ -50,12 +56,6 @@
   {
     "path": "/MuYunyun/create-react-doc/issues/new",
     "title": "New Issue · MuYunyun/create-react-doc",
-    "count": 2,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/pull/32",
-    "title": "fix: remove_search_templately by MuYunyun · Pull Request #32 · MuYunyun/creat...",
     "count": 2,
     "uniques": 1
   }
