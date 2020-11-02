@@ -2,20 +2,14 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 43,
-    "uniques": 17
+    "count": 40,
+    "uniques": 16
   },
   {
     "path": "/MuYunyun/create-react-doc/issues",
     "title": "Issues · MuYunyun/create-react-doc",
-    "count": 13,
+    "count": 12,
     "uniques": 4
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/pull/32/files",
-    "title": "fix: remove_search_templately by MuYunyun · Pull Request #32 · MuYunyun/creat...",
-    "count": 4,
-    "uniques": 1
   },
   {
     "path": "/MuYunyun/create-react-doc/tree/traffic",
@@ -36,12 +30,6 @@
     "uniques": 2
   },
   {
-    "path": "/MuYunyun/create-react-doc/issues/26",
-    "title": "optimize start up speed · Issue #26 · MuYunyun/create-react-doc",
-    "count": 2,
-    "uniques": 2
-  },
-  {
     "path": "/MuYunyun/create-react-doc/tree/master/packages",
     "title": "create-react-doc/packages at master · MuYunyun/create-react-doc",
     "count": 2,
@@ -56,6 +44,18 @@
   {
     "path": "/MuYunyun/create-react-doc/issues/new",
     "title": "New Issue · MuYunyun/create-react-doc",
+    "count": 2,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/pull/32",
+    "title": "fix: remove_search_templately by MuYunyun · Pull Request #32 · MuYunyun/creat...",
+    "count": 2,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/pull/32/files",
+    "title": "fix: remove_search_templately by MuYunyun · Pull Request #32 · MuYunyun/creat...",
     "count": 2,
     "uniques": 1
   }
