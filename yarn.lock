@@ -8778,12 +8778,10 @@ postcss-filter-plugins@^2.0.0:
   dependencies:
     postcss "^5.0.4"
 
-postcss-flexbugs-fixes@^3.2.0:
-  version "3.3.1"
-  resolved "https://registry.npmjs.org/postcss-flexbugs-fixes/-/postcss-flexbugs-fixes-3.3.1.tgz#0783cc7212850ef707f97f8bc8b6fb624e00c75d"
-  integrity sha512-9y9kDDf2F9EjKX6x9ueNa5GARvsUbXw4ezH8vXItXHwKzljbu8awP7t5dCaabKYm18Vs1lo5bKQcnc0HkISt+w==
-  dependencies:
-    postcss "^6.0.1"
+postcss-flexbugs-fixes@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.npmjs.org/postcss-flexbugs-fixes/-/postcss-flexbugs-fixes-5.0.0.tgz#b68f71e914079501e7174f966394b63b868f6716"
+  integrity sha512-WXt2F6FnFB16rCwWVJnBsvfztnTi6O4SYRcpnGHOnDyMoKcqjC3uKHWbhFz0z1ic9UMyQm1hleTBGavZZGE1KA==
 
 postcss-load-config@^2.0.0:
   version "2.1.0"

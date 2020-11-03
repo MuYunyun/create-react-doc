@@ -40,7 +40,7 @@
     "mini-css-extract-plugin": "^0.4.0",
     "open-browsers": "^1.1.1",
     "optimize-css-assets-webpack-plugin": "^4.0.0",
-    "postcss-flexbugs-fixes": "^3.2.0",
+    "postcss-flexbugs-fixes": "^5.0.0",
     "postcss-loader": "^2.0.9",
     "raw-content-replace-loader": "^1.0.1",
     "rimraf": "^2.6.2",
