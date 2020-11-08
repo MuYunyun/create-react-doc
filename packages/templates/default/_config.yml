@@ -16,7 +16,7 @@ theme: crd-seed
 ## if you want to editing pages on github, you should config these arguments.
 # user:
 # repo:
-branch: master            # the default value of branch is master
+branch: main              # the default value of branch is main
 deploy_branch: gh-pages   # which branch to deploy.(default: gh-pages)
 # publish:                # if you want upload to gitlab or other git platform, you can set full git url in it
 

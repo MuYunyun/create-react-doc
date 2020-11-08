@@ -116,7 +116,7 @@ menuOpenKeys: /BasicSkill
 ## if you want to show editing pages on github or deploy to GitHub Pages, you should config these arguments.
 user: MuYunyun
 repo: blog
-branch: master            # the default value of branch is master
+branch: main              # the default value of branch is main
 deploy_branch: gh-pages   # which branch to deploy.(default: gh-pages)
 # publish:                # if you want upload to gitlab or other git platform, you can set full git url in it
 

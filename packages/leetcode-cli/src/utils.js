@@ -68,7 +68,7 @@ const transformToMarkdownTable = (dataArr) => {
       dataArr[i].title
     }](https://leetcode.com/problems/${
       dataArr[i].titleSlug
-    }/) | [Analyze](https://github.com/MuYunyun/blog/blob/master/LeetCode/${
+    }/) | [Analyze](https://github.com/MuYunyun/blog/blob/main/LeetCode/${
       dataArr[i].questionId
     }.${dataArr[i].title.split(' ').join('_')}.md) | ${
       dataArr[i].difficulty

@@ -10,7 +10,12 @@
                                                   \(   _.-"
                                                     `--"
 
-[![npm version](https://img.shields.io/npm/v/create-react-doc)](https://badge.fury.io/js/create-react-doc) [![week download](https://img.shields.io/npm/dw/create-react-doc.svg)](https://www.npmjs.com/package/create-react-doc) ![GitHub views](https://raw.githubusercontent.com/MuYunyun/create-react-doc/traffic/traffic-create-react-doc/views.svg) ![LICENSE MIT](https://img.shields.io/npm/l/create-react-doc.svg)
+[![npm version](https://img.shields.io/npm/v/create-react-doc)](https://badge.fury.io/js/create-react-doc)
+[![week download](https://img.shields.io/npm/dw/create-react-doc.svg)](https://www.npmjs.com/package/create-react-doc)
+![views](https://raw.githubusercontent.com/MuYunyun/create-react-doc/traffic/traffic-create-react-doc/views.svg)
+![views](https://raw.githubusercontent.com/MuYunyun/create-react-doc/traffic/traffic-create-react-doc/views_per_week.svg)
+![clones](https://raw.githubusercontent.com/MuYunyun/create-react-doc/traffic/traffic-create-react-doc/clones_per_week.svg)
+![LICENSE MIT](https://img.shields.io/npm/l/create-react-doc.svg)
 
 [English](./README-en.md) | 简体中文
 
@@ -33,6 +38,7 @@ Create React Doc 是一个使用 React 的 markdown 文档站点生成工具。�
 * [blog](http://muyunyun.cn/blog)
   * ![](http://with.muyunyun.cn/ec330b8ac2175c828be41f446f9f9619.jpg)
   * ![](http://with.muyunyun.cn/2e7440e4256debda2d73a4e6392c7146.jpg-300)
+* [diana](https://muyunyun.cn/diana/)
 
 ## 快速上手
 
@@ -44,7 +50,7 @@ npm install && cd my-doc
 npm start
 ```
 
-然后打开 [http://localhost:3000/]() 就可以看到文档站点。当准备发布到生产环境时，执行 `npm run build` 就能将文档站点打包压缩。
+此时打开 `http://localhost:3000/` 可以看到文档站点。当准备发布到生产环境时，执行 `npm run build` 就能将文档站点打包压缩。
 
 ## 使用
 
@@ -96,7 +102,7 @@ npm install && cd my-doc
 
 ## config.yml
 
-可以在站点根目录中的 [config.yml 文件夹](https://github.com/MuYunyun/blog/blob/master/config.yml) 中进行配置站点的功能。
+可以在站点根目录中的 [config.yml 文件夹](https://github.com/MuYunyun/blog/blob/main/config.yml) 中进行配置站点的功能。
 
 ```bash
 # Site title
@@ -112,7 +118,7 @@ menuOpenKeys: /BasicSkill
 ## if you want to show editing pages on github or deploy to GitHub Pages, you should config these arguments.
 user: MuYunyun
 repo: blog
-branch: master            # the default value of branch is master
+branch: main              # the default value of branch is main
 deploy_branch: gh-pages   # which branch to deploy.(default: gh-pages)
 # publish:                # if you want upload to gitlab or other git platform, you can set full git url in it
 
@@ -128,9 +134,9 @@ language: en
 
 ## 高阶用法
 
-* 与 git 文件结构类似, 如果在展示的文件夹中有私有文件不方便展示在文档站点, 可以在 `.gitignore` 文件中设置过滤文件, 这样它们就不会展示在文档站点中了。eg: [.gitignore](https://github.com/MuYunyun/blog/blob/master/.gitignore)
+* 与 git 文件结构类似, 如果在展示的文件夹中有私有文件不方便展示在文档站点, 可以在 `.gitignore` 文件中设置过滤文件, 这样它们就不会展示在文档站点中了。eg: [.gitignore](https://github.com/MuYunyun/blog/blob/main/.gitignore)
 * 更多用法: 欢迎在 [issue](https://github.com/MuYunyun/create-react-doc/issues/new) 留言。
 
-## 工具箱
+## 其它工具
 
-* [crd-leetcode-cli](https://github.com/MuYunyun/create-react-doc/tree/master/packages/leetcode-cli): 提供将 [leetcode](https://leetcode-cn.com/) 中已 AC 的题目转化为 markdown 表格的能力。
+* [crd-leetcode-cli](https://github.com/MuYunyun/create-react-doc/tree/main/packages/leetcode-cli): 提供将 [leetcode](https://leetcode-cn.com/) 中已 AC 的题目转化为 markdown 表格的能力。

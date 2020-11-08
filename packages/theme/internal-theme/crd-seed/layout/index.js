@@ -24,7 +24,7 @@ function BasicLayout({
 }) {
   const { pathname } = location;
   // eslint-disable-next-line no-undef
-  const { user, repo, branch = 'master', language = 'en', menuOpenKeys } = DOCSCONFIG || {};
+  const { user, repo, branch = 'main', language = 'en', menuOpenKeys } = DOCSCONFIG || {};
   const [inlineCollapsed, setInlineCollapsed] = useState(isMobile);
   const [selectedKey, setSelectedKey] = useState(`${pathname}.md`);
   const curOpenKeys = getOpenSubMenuKeys(pathname, menuOpenKeys);

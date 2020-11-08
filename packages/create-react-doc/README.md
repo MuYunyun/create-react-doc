@@ -93,7 +93,7 @@ npm install && cd my-doc
 
 ## config.yml
 
-可以在站点根目录中的 [config.yml 文件夹](https://github.com/MuYunyun/blog/blob/master/config.yml) 中进行配置站点的功能。
+可以在站点根目录中的 [config.yml 文件夹](https://github.com/MuYunyun/blog/blob/main/config.yml) 中进行配置站点的功能。
 
 ```bash
 # Site title
@@ -109,7 +109,7 @@ menuOpenKeys: /BasicSkill
 ## if you want to show editing pages on github or deploy to GitHub Pages, you should config these arguments.
 user: MuYunyun
 repo: blog
-branch: master            # the default value of branch is master
+branch: main            # the default value of branch is main
 deploy_branch: gh-pages   # which branch to deploy.(default: gh-pages)
 # publish:                # if you want upload to gitlab or other git platform, you can set full git url in it
 
@@ -119,5 +119,5 @@ language: en
 
 ## 高阶用法
 
-* 与 git 文件结构类似, 如果在展示的文件夹中有私有文件不方便展示在文档站点, 可以在 `.gitignore` 文件中设置过滤文件, 这样它们就不会展示在文档站点中了。eg: [.gitignore](https://github.com/MuYunyun/blog/blob/master/.gitignore)
+* 与 git 文件结构类似, 如果在展示的文件夹中有私有文件不方便展示在文档站点, 可以在 `.gitignore` 文件中设置过滤文件, 这样它们就不会展示在文档站点中了。eg: [.gitignore](https://github.com/MuYunyun/blog/blob/main/.gitignore)
 * 更多用法: 欢迎在 [issue](https://github.com/MuYunyun/create-react-doc/issues/new) 留言。
