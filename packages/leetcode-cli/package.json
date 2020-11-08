@@ -1,6 +1,6 @@
 {
   "name": "crd-leetcode-cli",
-  "version": "0.2.8",
+  "version": "0.2.14",
   "description": "Generate leetcode table autoly",
   "bin": {
     "leetcode": "./src/cli.js"
