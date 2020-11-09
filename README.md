@@ -42,11 +42,19 @@ Create React Doc 是一个使用 React 的 markdown 文档站点生成工具。�
 
 ## 快速上手
 
-执行如下命令:
+执行如下命令一键生成可运行站点项目:
 
 ```bash
 npx create-react-doc my-doc
 npm install && cd my-doc
+npm start
+```
+
+如果想在当前文件夹 xx 下生成模板文件, 可以执行如下命令
+
+```bash
+npx create-react-doc .
+npm install
 npm start
 ```
 

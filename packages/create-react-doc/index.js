@@ -33,9 +33,7 @@ program
     console.log();
   })
   .parse(process.argv);
-
-// if process.argv[2] not in the program, then initProject.
-if (!program[process.argv[2]]) return initProject(program);
+if (!(program.start || program.build || program.deploy)) return initProject(program);
 // create-react-doc tool root dir.
 // program.crdPath = path.join(__dirname, '../');
 // all markdown dir

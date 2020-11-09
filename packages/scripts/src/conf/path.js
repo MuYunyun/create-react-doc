@@ -28,7 +28,7 @@ function getConfigFilePath(fileName, type) {
       const _NodeModulesPath = path.resolve(
         appDirectory,
         'node_modules',
-        conf[type]
+        conf[type],
       );
       if (fs.existsSync(_path)) {
         return fs.realpathSync(_path);
@@ -69,7 +69,7 @@ function getExcludeFoldersRegExp() {
   if (!fs.existsSync(modPath)) return [];
   let regxExc = fs.readdirSync(modPath);
   regxExc = regxExc.filter(
-    item => !/create-react-doc(.*)|crd-scripts|crd-theme/.test(item)
+    item => !/create-react-doc(.*)|crd-scripts|crd-theme/.test(item),
   );
   regxExc = regxExc.map((item) => {
     let rgxPath = `node_modules${path.sep}${item}`;
@@ -98,7 +98,7 @@ module.exports = {
   searchFilePath: resolveApp('.cache/search.js'),
   watchFilePath: resolveApp('.cache/watch-dir.js'),
   defaultHTMLPath: resolveApp('node_modules/crd-theme/index.html'),
-  defaultTemplatePath: resolveTool('node_modules/crd-templates/default'),
+  defaultTemplatePath: resolveApp('temp/node_modules/crd-templates/default'),
   defaultNodeModules: modPath,
   projectPath: appDirectory,
   publicPath: '',

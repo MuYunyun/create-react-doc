@@ -1,11 +1,14 @@
 const path = require('path');
+const { execSync } = require('child_process');
 const fs = require('fs-extra');
 const copyTemplate = require('copy-template-dir');
 const paths = require('../conf/path');
 
 const log = console.log; // eslint-disable-line
 
+// eslint-disable-next-line no-unused-vars
 module.exports = function (params) {
+  // process.argv[2] means the first argument after react-doc, eg react doc abc, process.argv[2] is abc
   const outDir = path.join(paths.projectPath, process.argv[2]);
   const projectName = path.basename(outDir);
 
@@ -18,31 +21,22 @@ module.exports = function (params) {
     fs.ensureDirSync(outDir);
   }
 
-  // if target dir is not null return false hint
-  if (fs.readdirSync(path.join(outDir)).length > 0) {
-    return log(`\n ${'initialization failed! '.red} ${outDir.yellow} ${'is not an empty directory.'.red}\n`);
+  // copy template, see https://github.com/MuYunyun/create-react-doc/issues/50
+  if (!fs.pathExistsSync(paths.defaultTemplatePath)) {
+    execSync('mkdir temp && cd temp && yarn add crd-templates -D');
   }
-
-  // copy template
-  // todo: maybe change path with crd-template
-  if (fs.pathExistsSync(paths.defaultTemplatePath)) {
-    copyTemplate(paths.defaultTemplatePath, outDir, {
-      name: projectName,
-      crdVersion: CRD_VERSION,
-    }, (err, createdFiles) => {
-      if (err) return log(`Copy Tamplate Error: ${err} !!!`.red);
-      createdFiles.sort().forEach((createdFile) => {
-        log(`  ${'create'.green} ${createdFile.replace(paths.projectPath, '')}`);
-      });
-
-      log('\n  initialization finished!\n'.green);
-      let cmdstr = `cd ${projectName} && npm install && npm start`.cyan;
-      if (typeof params.init !== 'string') {
-        cmdstr = 'npm start'.cyan;
-      }
-      log(`  Run the ${cmdstr} to start the website.\n\n`);
+  copyTemplate(paths.defaultTemplatePath, outDir, {
+    name: projectName,
+    crdVersion: CRD_VERSION,
+  }, (err, createdFiles) => {
+    if (err) return log(`Copy Tamplate Error: ${err} !!!`.red);
+    createdFiles.sort().forEach((createdFile) => {
+      log(`  ${'create'.green} ${createdFile.replace(paths.projectPath, '')}`);
     });
-  } else {
-    return log(`Error: Directory ${paths.defaultTemplatePath} does not exist`.red);
-  }
+
+    execSync('rm -rf temp');
+    log('\n  initialization finished!\n'.green);
+    const cmdstr = `cd ${projectName} && yarn && yarn start`.cyan;
+    log(`  Run the ${cmdstr} to start the website.\n\n`);
+  });
 };
