@@ -1,7 +1,7 @@
 # create-react-doc configuration, see https://github.com/MuYunyun/create-react-doc##config.yml
 
 # Site
-title: Create React Doc
+# title:
 
 # Menu dir
 ## you can also set detailed dir, such as BasicSkill/css
@@ -9,22 +9,16 @@ menu: Introduction
 ## set init open menu keys
 # menuOpenKeys:
 
-# todo
+# site theme
 theme: crd-seed
 
 # Github
 ## if you want to editing pages on github, you should config these arguments.
 # user:
 # repo:
-branch: main              # the default value of branch is main
-deploy_branch: gh-pages   # which branch to deploy.(default: gh-pages)
+# branch: main              # the default value of branch is main
+# deploy_branch: gh-pages   # which branch to deploy.(default: gh-pages)
 # publish:                # if you want upload to gitlab or other git platform, you can set full git url in it
-
-# use search plugin: provide ability for searching site globally in the site.
-# default value: true
-search: true
-# host: ''                # the url host to search
-# search_map: {}          # search_map is connected to menu props
 
 # Available values: en | zh-cn
 language: en

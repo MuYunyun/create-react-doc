@@ -48,7 +48,6 @@ exports.timeFormat = (date) => {
  */
 exports.getDocsConfig = () => {
   if (!fs.existsSync(paths.docsConfig)) {
-    console.log('please check config.yml in root dir!\n');
     return null;
   }
   return yaml.safeLoad(fs.readFileSync(paths.docsConfig));
