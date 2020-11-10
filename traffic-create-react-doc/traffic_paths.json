@@ -2,13 +2,13 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 50,
-    "uniques": 21
+    "count": 53,
+    "uniques": 23
   },
   {
     "path": "/MuYunyun/create-react-doc/issues",
     "title": "Issues · MuYunyun/create-react-doc",
-    "count": 16,
+    "count": 17,
     "uniques": 2
   },
   {
@@ -26,7 +26,7 @@
   {
     "path": "/MuYunyun/create-react-doc/issues/new",
     "title": "New Issue · MuYunyun/create-react-doc",
-    "count": 4,
+    "count": 5,
     "uniques": 2
   },
   {
@@ -54,8 +54,8 @@
     "uniques": 2
   },
   {
-    "path": "/MuYunyun/create-react-doc/issues/30",
-    "title": "RFC: support custom theme · Issue #30 · MuYunyun/create-react-doc",
+    "path": "/MuYunyun/create-react-doc/blob/main/package.json",
+    "title": "create-react-doc/package.json at main · MuYunyun/create-react-doc",
     "count": 2,
     "uniques": 1
   }
