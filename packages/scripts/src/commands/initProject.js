@@ -33,7 +33,8 @@ module.exports = function (params) {
     createdFiles.sort().forEach((createdFile) => {
       log(`  ${'create'.green} ${createdFile.replace(paths.projectPath, '')}`);
     });
-
+    // this is to hack https://github.com/yoshuawuyts/copy-template-dir/issues/16
+    execSync(`cp -r ${paths.defaultTemplatePath}/.github ${outDir}`);
     execSync('rm -rf temp');
     log('\n  initialization finished!\n'.green);
     const cmdstr = `cd ${projectName} && yarn && yarn start`.cyan;

@@ -5,11 +5,11 @@ const program = require('commander');
 const {
   initProject,
   initCache,
-  Servers,
-  Build,
   Deploy,
   paths,
   getDocsConfig,
+  Servers,
+  Build,
 } = require('crd-scripts');
 const pkg = require('./package.json');
 
@@ -32,8 +32,9 @@ program
     console.log('    $ react-doc deploy');
     console.log();
   })
+  // the third value in process.argv is the value we want.
   .parse(process.argv);
-if (!(program.start || program.build || program.deploy)) return initProject(program);
+if (!program.start || !program.build || !program.deploy) return initProject(program);
 // create-react-doc tool root dir.
 // program.crdPath = path.join(__dirname, '../');
 // all markdown dir

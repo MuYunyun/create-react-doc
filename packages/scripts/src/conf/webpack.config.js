@@ -19,7 +19,6 @@ if (paths.crdConf && paths.crdConf.footer && typeof paths.crdConf.footer === 'st
 if (paths.docsConfig) {
   // const searchContent = getSearchContent();
   const docsConfig = getDocsConfig();
-
   define.DOCSCONFIG = JSON.stringify(docsConfig);
   // todo: searchContent affects the performance, so take annotation here templately.
   // define.SEARCHCONTENT = searchContent && searchContent.toString();

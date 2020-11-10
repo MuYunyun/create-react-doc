@@ -50,7 +50,7 @@ npm install && cd my-doc
 npm start
 ```
 
-如果想在当前文件夹 xx 下生成模板文件, 可以执行如下命令
+如果想在当前文件夹下生成模板文件, 可以执行如下命令
 
 ```bash
 npx create-react-doc .
