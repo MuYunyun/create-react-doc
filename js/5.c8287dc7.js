@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[5],{697:function(n,c){n.exports="### 快速上手\n\n当前文件执行 `npx create-react-doc doc`\n\n![](http://with.muyunyun.cn/0f0cf6e8cb68b18399eac2927f74b063.jpg)\n\n接着执行 `cd doc && yarn && yarn start`, 可以看到站点在 `localhost: 3000` 上运行。\n\n### 发布"}}]);
