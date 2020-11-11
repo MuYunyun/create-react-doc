@@ -10,13 +10,6 @@
                                                   \(   _.-"
                                                     `--"
 
-# react-doc
+# crd-scripts
 
-react-doc 是配合 Create React Doc 使用的脚手架。
-
-```bash
-$ react-doc doc      // 在当前文件夹下创建名为 doc 的文档站点
-$ react-doc start    // 启动项目
-$ react-doc build    // 项目打包
-$ react-doc deploy   // 手动发布项目
-```
+crd-scripts 封装提供了一系列打包构建脚本。

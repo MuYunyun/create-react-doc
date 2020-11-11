@@ -5,7 +5,7 @@ title: Create React Doc
 
 # Menu dir
 ## you can also set detailed dir, such as BasicSkill/css
-menu: packages/templates/default/Introduction
+menu: docs/快速上手.md
 ## set init open menu keys
 # menuOpenKeys:
 
