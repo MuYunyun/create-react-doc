@@ -23,14 +23,16 @@
 
 Create React Doc 是一个使用 React 的 markdown 文档站点生成工具。就像 [create-react-app](https://github.com/facebook/create-react-app) 一样，开发者可以使用 Create React Doc 来开发、部署 markdown 站点或者博客而不用关心站点环境配置信息。
 
+* [快速上手](http://muyunyun.cn/create-react-doc/#/%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B)
+
 ## 特性
 
+* 文件文档即站点。
 * 零配置书写 markdown 文档站点。
   * 支持暗黑主题。
   * 支持全局搜索菜单名字与文件内容。
   * 适配移动端。
 * markdown 文档支持懒加载以及热加载。
-* 基于文件目录自动生成多层级菜单。
 * 支持一键发布到 [GitHub Pages](https://pages.github.com/).
 
 ## 使用 create-react-doc 搭建的文档站点
