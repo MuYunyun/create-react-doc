@@ -2,8 +2,8 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 53,
-    "uniques": 23
+    "count": 57,
+    "uniques": 24
   },
   {
     "path": "/MuYunyun/create-react-doc/issues",
@@ -12,34 +12,34 @@
     "uniques": 2
   },
   {
+    "path": "/MuYunyun/create-react-doc/actions",
+    "title": "Actions · MuYunyun/create-react-doc",
+    "count": 8,
+    "uniques": 1
+  },
+  {
     "path": "/MuYunyun/create-react-doc/tree/master/packages/leetcode-cli",
     "title": "create-react-doc/packages/leetcode-cli at master · MuYunyun/create-react-doc",
     "count": 7,
     "uniques": 2
   },
   {
-    "path": "/MuYunyun/create-react-doc/actions",
-    "title": "Actions · MuYunyun/create-react-doc",
-    "count": 6,
-    "uniques": 1
-  },
-  {
     "path": "/MuYunyun/create-react-doc/issues/new",
     "title": "New Issue · MuYunyun/create-react-doc",
+    "count": 4,
+    "uniques": 3
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/tree/main/packages",
+    "title": "create-react-doc/packages at main · MuYunyun/create-react-doc",
     "count": 3,
-    "uniques": 2
+    "uniques": 3
   },
   {
     "path": "/MuYunyun/create-react-doc/actions/runs/351886735",
     "title": "chore: publish · MuYunyun/create-react-doc@219a2e3",
     "count": 3,
     "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/tree/main/packages",
-    "title": "create-react-doc/packages at main · MuYunyun/create-react-doc",
-    "count": 2,
-    "uniques": 2
   },
   {
     "path": "/MuYunyun/create-react-doc/tree/master/.github",
