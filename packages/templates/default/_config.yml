@@ -1,4 +1,4 @@
-# create-react-doc configuration, see https://github.com/MuYunyun/create-react-doc##config.yml
+# details see http://muyunyun.cn/create-react-doc/#/config.yml
 
 # Site
 # title:
@@ -16,9 +16,6 @@ theme: crd-seed
 ## if you want to editing pages on github, you should config these arguments.
 # user:
 # repo:
-# branch: main              # the default value of branch is main
-# deploy_branch: gh-pages   # which branch to deploy.(default: gh-pages)
-# publish:                # if you want upload to gitlab or other git platform, you can set full git url in it
 
 # Available values: en | zh-cn
 language: en

@@ -5,7 +5,7 @@ title: Create React Doc
 
 # Menu dir
 ## you can also set detailed dir, such as BasicSkill/css
-menu: docs/快速上手.md
+menu: docs/快速上手.md,docs/站点发布.md,docs/config.yml.md,docs/高阶用法.md,docs/其它工具.md
 ## set init open menu keys
 # menuOpenKeys:
 
@@ -16,17 +16,6 @@ theme: crd-seed
 ## if you want to editing pages on github, you should config these arguments.
 user: MuYunyun
 repo: create-react-doc
-branch: main              # the default value of branch is main
-deploy_branch: gh-pages   # which branch to deploy.(default: gh-pages)
-# publish:                # if you want upload to gitlab or other git platform, you can set full git url in it
-
-# use search plugin: provide ability for searching site globally in the site.
-# default value: true
-# search: true
-# host: 'muyunyun.cn'            # the url host to search
-# search_map: {                  # search_map is connected to menu props
-#   '/packages/templates/default/Introduction': 'Introduction'
-# }
 
 # Available values: en | zh-cn
 language: en

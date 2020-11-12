@@ -21,131 +21,63 @@
 
 # Create React Doc
 
-Create React Doc 是一个使用 React 的 markdown 文档站点生成工具。就像 [create-react-app](https://github.com/facebook/create-react-app) 一样，开发者可以使用 Create React Doc 来开发、部署 markdown 站点或者博客而不用关心站点环境配置信息。
-
-* [快速上手](http://muyunyun.cn/create-react-doc/#/%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B)
+Create React Doc 是一个使用 React 的 markdown 文档站点生成工具。就像 [create-react-app](https://github.com/facebook/create-react-app) 一样，开发者可以使用 Create React Doc 来开发、部署 markdown 站点或者博客而无需关心站点环境配置信息。
 
 ## 特性
 
-* 文件文档即站点。
-* 零配置书写 markdown 文档站点。
-  * 支持暗黑主题。
-  * 支持全局搜索菜单名字与文件内容。
-  * 适配移动端。
-* markdown 文档支持懒加载以及热加载。
-* 支持一键发布到 [GitHub Pages](https://pages.github.com/).
+* 建站理念: 文件即站点 (Files as a site)。
+* 开箱即用: 一键生成可运行文档站点, 无需关心站点环境配置信息。
+* 性能: 文档支持懒加载提升站点加载速度。
+* 工作流: 集成 Github action, 自动化打包、发布站点。
 
-## 使用 create-react-doc 搭建的文档站点
+> [快速上手](http://muyunyun.cn/create-react-doc/#/%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B)
+
+## 主题
+
+当前默认使用的主题是 [crd-seed](https://github.com/MuYunyun/create-react-doc/tree/main/packages/theme/internal-theme/crd-seed)。
+
+使用该主题搭建的站点
 
 * [blog](http://muyunyun.cn/blog)
   * ![](http://with.muyunyun.cn/ec330b8ac2175c828be41f446f9f9619.jpg)
   * ![](http://with.muyunyun.cn/2e7440e4256debda2d73a4e6392c7146.jpg-300)
 * [diana](https://muyunyun.cn/diana/)
 
+> 如果你的产品从中受益，欢迎<a href="https://github.com/MuYunyun/create-react-doc/issues/new" target="_blank">留言补充</a>
+
 ## 快速上手
-
-执行如下命令一键生成可运行站点项目:
-
-```bash
-npx create-react-doc my-doc
-npm install && cd my-doc
-npm start
-```
-
-如果想在当前文件夹下生成模板文件, 可以执行如下命令
-
-```bash
-npx create-react-doc .
-npm install
-npm start
-```
-
-此时打开 `http://localhost:3000/` 可以看到文档站点。当准备发布到生产环境时，执行 `npm run build` 就能将文档站点打包压缩。
-
-## 使用
 
 **create-react-doc** 非常容易上手。开发者不需要额外安装或配置 webpack 或者 Babel 等工具，它们被内置隐藏在脚手架中，因此开发者可以专心于文档的书写。
 
-下面提供三种方式来快速创建文档站点:
+如果你想在当前文件下建立站点文件 `doc`, 这里提供如下三种方式快速建站:
 
 ### npx
 
 ```bash
-npx create-react-doc my-doc
+npx create-react-doc doc
 ```
 
 ### npm
 
 ```bash
-npm init create-react-doc my-doc
+npm init create-react-doc doc
 ```
 
 ### yarn
 
 ```bash
-yarn create create-react-doc my-doc
+yarn create create-react-doc doc
 ```
 
-一旦安装执行完毕，执行 npm install 然后进入项目文件夹:
+![](http://with.muyunyun.cn/0f0cf6e8cb68b18399eac2927f74b063.jpg)
 
-```
-npm install && cd my-doc
-```
+> 如果想把模板内容内容拉取到当前文件夹, 则可以将如上命令的 `doc` 替换为 `.`, 比如执行 `npx create-react-doc .`。
 
-在新创建的项目中, 可以执行内置的一些命令:
+接着执行 `cd doc && yarn && yarn start`, 可以在 `localhost: 3000` 预览站点, 如果站点文档发生改变, 站点将自动重新加载。
 
-### `npm start` or `yarn start`
+<img src="http://with.muyunyun.cn/2bbd4d8da3165e1a09a88f5e6a114009.jpg" width="900" />
 
-在开发者模式下启动文档项目:
-
-在浏览器中打开 [http://localhost:3000]() 预览站点。
-
-如果站点文档发生改变, 站点将自动重新加载。
-
-### `npm run build` or `yarn build`
-
-将要发布的文档站点进行打包构建, 此时的文档网站已准备好进行部署。
-
-### `npm run deploy` or `yarn deploy`
-
-根据 [config.yml](https://github.com/MuYunyun/create-react-doc#configyml) 里的 user 和 repo 参数, 文档站点默认将会发布到 GitHub Pages
-
-## config.yml
-
-可以在站点根目录中的 [config.yml 文件夹](https://github.com/MuYunyun/blog/blob/main/config.yml) 中进行配置站点的功能。
-
-```bash
-# Site title
-title: Time Flying
-
-# Point witch files to show as Menu
-## you can also set detailed dir, such as BasicSkill/css
-menu: React,BasicSkill,Algorithm
-## set init open menu keys
-menuOpenKeys: /BasicSkill
-
-# Github
-## if you want to show editing pages on github or deploy to GitHub Pages, you should config these arguments.
-user: MuYunyun
-repo: blog
-branch: main              # the default value of branch is main
-deploy_branch: gh-pages   # which branch to deploy.(default: gh-pages)
-# publish:                # if you want upload to gitlab or other git platform, you can set full git url in it
-
-# use search plugin: provide ability for searching site globally in the site.
-# default value: true
-search: true
-# host: ''                # the url host to search
-# search_map: {}          # search_map is connected to menu props
-
-# Available values: en| zh-cn
-language: en
-```
-
-## 高阶用法
-
-* 与 git 文件结构类似, 如果在展示的文件夹中有私有文件不方便展示在文档站点, 可以在 `.gitignore` 文件中设置过滤文件, 这样它们就不会展示在文档站点中了。eg: [.gitignore](https://github.com/MuYunyun/blog/blob/main/.gitignore)
-* 更多用法: 欢迎在 [issue](https://github.com/MuYunyun/create-react-doc/issues/new) 留言。
+> 更多内容可以访问 [站点发布、高阶用法](http://muyunyun.cn/create-react-doc/#/%E7%AB%99%E7%82%B9%E5%8F%91%E5%B8%83)。
 
 ## 其它工具
 
