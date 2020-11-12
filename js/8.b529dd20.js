@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[8],{700:function(n,i){n.exports="## 高阶用法\n\n与 git 文件结构类似, 如果在展示的文件夹中有私有文件不方便展示在文档站点, 可以在 `.gitignore` 文件中设置过滤文件, 这样它们就不会展示在文档站点中了。eg: [.gitignore](https://github.com/MuYunyun/blog/blob/main/.gitignore)"}}]);
