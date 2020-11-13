@@ -21,7 +21,7 @@
 
 # Create React Doc
 
-Create React Doc 是一个使用 React 的 markdown 文档站点生成工具。就像 [create-react-app](https://github.com/facebook/create-react-app) 一样，开发者可以使用 Create React Doc 来开发、部署 markdown 站点或者博客而无需关心站点环境配置信息。
+[Create React Doc](https://github.com/MuYunyun/create-react-doc) 是一个使用 React 的 markdown 文档站点生成工具。就像 [create-react-app](https://github.com/facebook/create-react-app) 一样，开发者可以使用 Create React Doc 来开发、部署 markdown 站点或者博客而无需关心站点环境配置信息。
 
 ## 特性
 
@@ -77,8 +77,25 @@ yarn create create-react-doc doc
 
 <img src="http://with.muyunyun.cn/2bbd4d8da3165e1a09a88f5e6a114009.jpg" width="900" />
 
-> 更多内容可以访问 [站点发布、高阶用法](http://muyunyun.cn/create-react-doc/#/%E7%AB%99%E7%82%B9%E5%8F%91%E5%B8%83)。
+## 站点发布
 
-## 其它工具
+在 [快速上手](http://muyunyun.cn/create-react-doc/#/%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B) 一节中介绍了如何快速搭建站点, 本节将介绍如何将搭建好的站点打包、发布到 gh-pages。
 
-* [crd-leetcode-cli](https://github.com/MuYunyun/create-react-doc/tree/main/packages/leetcode-cli): 提供将 [leetcode](https://leetcode-cn.com/) 中已 AC 的题目转化为 markdown 表格的能力。
+### 自动打包发布到 gh-pages (推荐)
+
+初始化的模板项目集成了 `Github action` 的 [ci 配置](https://github.com/MuYunyun/create-react-doc/blob/main/packages/templates/default/.github/workflows/gh-pages.yml), 使用方只需在 main 分支执行 `git push` 即可以完成站点的自动部署。
+
+![](http://with.muyunyun.cn/ea24d511f76efe5ba5d13bb6b1609aac.jpg)
+
+如果是第一次部署, 在执行以下操作后, 需要在项目的 setting 选项卡中将 Github Pages 选择为 gh-pages。(详情见 [First Deployment with GITHUB_TOKEN](https://github.com/peaceiris/actions-gh-pages#%EF%B8%8F-first-deployment-with-github_token))
+
+```bash
+git init
+git add .
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/用户或组织名/项目名.git
+git push -u origin main
+```
+
+> 更多内容可以访问 [站点发布](http://muyunyun.cn/create-react-doc/#/%E7%AB%99%E7%82%B9%E5%8F%91%E5%B8%83)、[高阶用法](http://muyunyun.cn/create-react-doc/#/%E9%AB%98%E9%98%B6%E7%94%A8%E6%B3%95)、[其它工具](http://muyunyun.cn/create-react-doc/#/%E5%85%B6%E5%AE%83%E5%B7%A5%E5%85%B7)。
