@@ -16,6 +16,8 @@ theme: crd-seed
 ## if you want to editing pages on github, you should config these arguments.
 user: MuYunyun
 repo: create-react-doc
+github-ribbons: true
+
 
 # Available values: en | zh-cn
 language: en

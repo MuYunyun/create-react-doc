@@ -4,14 +4,15 @@
 
 它支持的属性如下
 
-|    属性名    |             作用              |
-| :----------: | :---------------------------: |
-|    title     |            站点名             |
-|     menu     | 作为站点菜单的文件/文件夹路径 |
-| menuOpenKeys |   默认展开菜单的文件夹路径    |
-|    theme     |           使用主题            |
-|     user     |         Github 用户名         |
-|     repo     |         Github 项目名         |
-|   language   |           站点语言            |
+|     属性名     |             作用              |    类型     |   默认   |
+| :------------: | :---------------------------: | :---------: | :------: |
+|     title      |            站点名             |   string    |          |
+|      menu      | 作为站点菜单的文件/文件夹路径 |   string    |          |
+|  menuOpenKeys  |   默认展开菜单的文件夹路径    |   string    |          |
+|     theme      |           使用主题            |   string    | crd-seed |
+|      user      |         Github 用户名         |   string    |          |
+|      repo      |         Github 项目名         |   string    |          |
+|    language    |           站点语言            | en \| zh-cn |    en    |
+| github-ribbons | 是否在右上角显示 github 丝带  |   boolean   |  false   |
 
 详细用法可以参考 [config.yml]](https://github.com/MuYunyun/blog/blob/main/config.yml)。

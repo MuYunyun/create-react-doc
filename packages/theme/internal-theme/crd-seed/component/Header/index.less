@@ -52,7 +52,6 @@
   .rightArea {
     display: flex;
     align-items: center;
-    margin-right: 16px;
 
     .sun {
       position: absolute;
@@ -65,6 +64,32 @@
       right: 5px;
       top: 4px;
     }
+
+    .github-corner {
+      display: block;
+
+      &:hover {
+        .octo-arm {
+          animation: octocat-wave 560ms ease-in-out;
+        }
+      }
+    }
+
+    svg {
+      vertical-align: bottom;
+    }
+  }
+}
+
+@keyframes octocat-wave {
+  0%, 100% {
+    transform: rotate(0);
+  }
+  20%, 60% {
+    transform: rotate(-25deg);
+  }
+  40%, 80% {
+    transform: rotate(100deg);
   }
 }
 
