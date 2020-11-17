@@ -1,7 +1,7 @@
 [
   {
     "referrer": "github.com",
-    "count": 30,
+    "count": 31,
     "uniques": 12
   },
   {
@@ -15,12 +15,12 @@
     "uniques": 4
   },
   {
-    "referrer": "dev.to",
-    "count": 2,
-    "uniques": 2
+    "referrer": "Google",
+    "count": 3,
+    "uniques": 3
   },
   {
-    "referrer": "Google",
+    "referrer": "dev.to",
     "count": 2,
     "uniques": 2
   },
