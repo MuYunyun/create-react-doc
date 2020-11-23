@@ -2,26 +2,14 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 74,
+    "count": 76,
     "uniques": 39
   },
   {
     "path": "/MuYunyun/create-react-doc/tree/main/packages",
     "title": "create-react-doc/packages at main · MuYunyun/create-react-doc · GitHub",
-    "count": 9,
-    "uniques": 5
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/tree/main/packages/leetcode-cli",
-    "title": "create-react-doc/packages/leetcode-cli at main · MuYunyun/create-react-doc",
-    "count": 6,
-    "uniques": 5
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/issues",
-    "title": "Issues · MuYunyun/create-react-doc",
-    "count": 6,
-    "uniques": 2
+    "count": 8,
+    "uniques": 4
   },
   {
     "path": "/MuYunyun/create-react-doc/actions",
@@ -30,9 +18,15 @@
     "uniques": 1
   },
   {
-    "path": "/MuYunyun/create-react-doc/issues/new",
-    "title": "New Issue · MuYunyun/create-react-doc",
-    "count": 4,
+    "path": "/MuYunyun/create-react-doc/tree/main/packages/leetcode-cli",
+    "title": "create-react-doc/packages/leetcode-cli at main · MuYunyun/create-react-doc",
+    "count": 5,
+    "uniques": 4
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/issues",
+    "title": "Issues · MuYunyun/create-react-doc",
+    "count": 5,
     "uniques": 2
   },
   {
@@ -50,6 +44,12 @@
   {
     "path": "/MuYunyun/create-react-doc/issues/52",
     "title": "升级主题包以后业务方如何能一键升级? · Issue #52 · MuYunyun/create-react-doc",
+    "count": 3,
+    "uniques": 2
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/issues/new",
+    "title": "New Issue · MuYunyun/create-react-doc",
     "count": 3,
     "uniques": 2
   },
