@@ -2,8 +2,8 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 45,
-    "uniques": 28
+    "count": 43,
+    "uniques": 27
   },
   {
     "path": "/MuYunyun/create-react-doc/tree/main/packages",
@@ -12,15 +12,15 @@
     "uniques": 2
   },
   {
-    "path": "/MuYunyun/create-react-doc/issues",
-    "title": "Issues · MuYunyun/create-react-doc",
-    "count": 4,
-    "uniques": 3
-  },
-  {
     "path": "/MuYunyun/create-react-doc/tree/main/packages/create-react-doc",
     "title": "create-react-doc/packages/create-react-doc at main · MuYunyun/create-react-doc",
     "count": 4,
+    "uniques": 2
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/issues",
+    "title": "Issues · MuYunyun/create-react-doc",
+    "count": 3,
     "uniques": 2
   },
   {
@@ -36,20 +36,14 @@
     "uniques": 2
   },
   {
-    "path": "/MuYunyun/create-react-doc/blob/main/packages/templates/default/.github/workflows/gh-pages.yml",
-    "title": "create-react-doc/gh-pages.yml at main · MuYunyun/create-react-doc",
-    "count": 2,
-    "uniques": 2
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/issues/52",
-    "title": "升级主题包以后业务方如何能一键升级? · Issue #52 · MuYunyun/create-react-doc",
-    "count": 2,
-    "uniques": 2
-  },
-  {
     "path": "/MuYunyun/create-react-doc/tree/main/packages/leetcode-cli",
     "title": "create-react-doc/packages/leetcode-cli at main · MuYunyun/create-react-doc · ...",
+    "count": 2,
+    "uniques": 2
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/tree/main/packages/theme/internal-theme/crd-seed",
+    "title": "create-react-doc/packages/theme/internal-theme/crd-seed at main · MuYunyun/cr...",
     "count": 2,
     "uniques": 2
   },
@@ -57,6 +51,12 @@
     "path": "/MuYunyun/create-react-doc/tree/main/packages/theme/markdown",
     "title": "create-react-doc/packages/theme/markdown at main · MuYunyun/create-react-doc",
     "count": 2,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/blob/e550f5eaf4f57138159326c0fb05df33d0f32e7a/.github/dependabot.yml",
+    "title": "create-react-doc/dependabot.yml at e550f5eaf4f57138159326c0fb05df33d0f32e7a ·...",
+    "count": 1,
     "uniques": 1
   }
 ]
