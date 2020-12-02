@@ -2,8 +2,8 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 37,
-    "uniques": 23
+    "count": 35,
+    "uniques": 21
   },
   {
     "path": "/MuYunyun/create-react-doc/tree/main/packages",
@@ -54,8 +54,8 @@
     "uniques": 1
   },
   {
-    "path": "/MuYunyun/create-react-doc/blob/e550f5eaf4f57138159326c0fb05df33d0f32e7a/.github/dependabot.yml",
-    "title": "create-react-doc/dependabot.yml at e550f5eaf4f57138159326c0fb05df33d0f32e7a ·...",
+    "path": "/MuYunyun/create-react-doc/blob/main/docs/config.yml.md",
+    "title": "create-react-doc/config.yml.md at main · MuYunyun/create-react-doc",
     "count": 1,
     "uniques": 1
   }
