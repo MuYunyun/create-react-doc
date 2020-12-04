@@ -1,8 +1,8 @@
 [
   {
     "referrer": "github.com",
-    "count": 6,
-    "uniques": 6
+    "count": 8,
+    "uniques": 7
   },
   {
     "referrer": "muyunyun.cn",
@@ -11,21 +11,16 @@
   },
   {
     "referrer": "dev.to",
-    "count": 2,
-    "uniques": 2
-  },
-  {
-    "referrer": "Google",
-    "count": 1,
-    "uniques": 1
-  },
-  {
-    "referrer": "cn.bing.com",
-    "count": 1,
-    "uniques": 1
+    "count": 3,
+    "uniques": 3
   },
   {
     "referrer": "v2ex.com",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "referrer": "Google",
     "count": 1,
     "uniques": 1
   },
