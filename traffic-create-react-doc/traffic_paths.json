@@ -2,8 +2,8 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 29,
-    "uniques": 22
+    "count": 26,
+    "uniques": 19
   },
   {
     "path": "/MuYunyun/create-react-doc/issues",
@@ -42,12 +42,6 @@
     "uniques": 2
   },
   {
-    "path": "/MuYunyun/create-react-doc/tree/main/packages/theme/internal-theme/crd-seed",
-    "title": "create-react-doc/packages/theme/internal-theme/crd-seed at main · MuYunyun/cr...",
-    "count": 2,
-    "uniques": 2
-  },
-  {
     "path": "/MuYunyun/create-react-doc/tree/main/packages/theme",
     "title": "create-react-doc/packages/theme at main · MuYunyun/create-react-doc",
     "count": 2,
@@ -57,6 +51,12 @@
     "path": "/MuYunyun/create-react-doc/tree/main/packages/theme/markdown",
     "title": "create-react-doc/packages/theme/markdown at main · MuYunyun/create-react-doc",
     "count": 2,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc//blob/d222373d0757ead7db4e0707e0f21e00cfd1a6e2/packages/theme/internal-theme/crd-seed/component/Icon/loadSprite.js",
+    "title": "create-react-doc/loadSprite.js at d222373d0757ead7db4e0707e0f21e00cfd1a6e2 · ...",
+    "count": 1,
     "uniques": 1
   }
 ]
