@@ -36,6 +36,12 @@
     "uniques": 1
   },
   {
+    "path": "/MuYunyun/create-react-doc/blob/main/packages/templates/default/.github/workflows/gh-pages.yml",
+    "title": "create-react-doc/gh-pages.yml at main · MuYunyun/create-react-doc",
+    "count": 1,
+    "uniques": 1
+  },
+  {
     "path": "/MuYunyun/create-react-doc/issues/1",
     "title": "GitHub · Where software is built",
     "count": 1,
@@ -50,12 +56,6 @@
   {
     "path": "/MuYunyun/create-react-doc/tree/main/packages",
     "title": "create-react-doc/packages at main · MuYunyun/create-react-doc",
-    "count": 1,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/tree/main/packages/create-react-doc",
-    "title": "create-react-doc/packages/create-react-doc at main · MuYunyun/create-react-doc",
     "count": 1,
     "uniques": 1
   }
