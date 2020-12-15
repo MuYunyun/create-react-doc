@@ -2,8 +2,8 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 22,
-    "uniques": 17
+    "count": 24,
+    "uniques": 18
   },
   {
     "path": "/MuYunyun/create-react-doc/branches",
@@ -30,12 +30,6 @@
     "uniques": 2
   },
   {
-    "path": "/MuYunyun/create-react-doc//blob/d222373d0757ead7db4e0707e0f21e00cfd1a6e2/packages/theme/internal-theme/crd-seed/component/Icon/loadSprite.js",
-    "title": "create-react-doc/loadSprite.js at d222373d0757ead7db4e0707e0f21e00cfd1a6e2 · ...",
-    "count": 1,
-    "uniques": 1
-  },
-  {
     "path": "/MuYunyun/create-react-doc/blob/main/packages/create-react-doc/index.js",
     "title": "create-react-doc/index.js at main · MuYunyun/create-react-doc",
     "count": 1,
@@ -56,6 +50,12 @@
   {
     "path": "/MuYunyun/create-react-doc/issues/1",
     "title": "GitHub · Where software is built",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/tree/main/.github",
+    "title": "create-react-doc/.github at main · MuYunyun/create-react-doc · GitHub",
     "count": 1,
     "uniques": 1
   }
