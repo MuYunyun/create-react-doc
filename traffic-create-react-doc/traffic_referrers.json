@@ -1,13 +1,8 @@
 [
   {
     "referrer": "github.com",
-    "count": 13,
-    "uniques": 11
-  },
-  {
-    "referrer": "muyunyun.cn",
-    "count": 3,
-    "uniques": 3
+    "count": 14,
+    "uniques": 12
   },
   {
     "referrer": "dev.to",
@@ -20,12 +15,17 @@
     "uniques": 2
   },
   {
-    "referrer": "bbs.huaweicloud.com",
+    "referrer": "muyunyun.cn",
+    "count": 2,
+    "uniques": 2
+  },
+  {
+    "referrer": "Google",
     "count": 1,
     "uniques": 1
   },
   {
-    "referrer": "Google",
+    "referrer": "bbs.huaweicloud.com",
     "count": 1,
     "uniques": 1
   },
