@@ -2,61 +2,61 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 40,
-    "uniques": 25
+    "count": 57,
+    "uniques": 26
   },
   {
     "path": "/MuYunyun/create-react-doc/issues",
     "title": "Issues · MuYunyun/create-react-doc",
-    "count": 4,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/tree/main/.github",
-    "title": "create-react-doc/.github at main · MuYunyun/create-react-doc",
-    "count": 3,
-    "uniques": 3
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/tree/main/packages/theme/internal-theme/crd-seed",
-    "title": "create-react-doc/packages/theme/internal-theme/crd-seed at main · MuYunyun/cr...",
-    "count": 3,
-    "uniques": 3
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/blob/gh-pages/index.html",
-    "title": "create-react-doc/index.html at gh-pages · MuYunyun/create-react-doc",
-    "count": 3,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/tree/gh-pages",
-    "title": "MuYunyun/create-react-doc at gh-pages",
-    "count": 3,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/tree/main/packages/leetcode-cli",
-    "title": "create-react-doc/packages/leetcode-cli at main · MuYunyun/create-react-doc",
-    "count": 2,
+    "count": 29,
     "uniques": 2
   },
   {
-    "path": "/MuYunyun/create-react-doc/blob/main/package.json",
-    "title": "create-react-doc/package.json at main · MuYunyun/create-react-doc",
-    "count": 2,
-    "uniques": 1
+    "path": "/MuYunyun/create-react-doc/issues/61",
+    "title": "无法初始化 · Issue #61 · MuYunyun/create-react-doc",
+    "count": 11,
+    "uniques": 2
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/search",
+    "title": "Search · windows",
+    "count": 8,
+    "uniques": 2
   },
   {
     "path": "/MuYunyun/create-react-doc/tree/main/packages",
     "title": "create-react-doc/packages at main · MuYunyun/create-react-doc",
-    "count": 2,
-    "uniques": 1
+    "count": 7,
+    "uniques": 2
   },
   {
-    "path": "/MuYunyun/create-react-doc/actions",
-    "title": "Actions · MuYunyun/create-react-doc",
-    "count": 1,
-    "uniques": 1
+    "path": "/MuYunyun/create-react-doc/tree/main/docs",
+    "title": "create-react-doc/docs at main · MuYunyun/create-react-doc",
+    "count": 5,
+    "uniques": 2
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/tree/main/.github",
+    "title": "create-react-doc/.github at main · MuYunyun/create-react-doc",
+    "count": 4,
+    "uniques": 4
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/issues/49",
+    "title": "add page for how to use · Issue #49 · MuYunyun/create-react-doc",
+    "count": 3,
+    "uniques": 2
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/pulls",
+    "title": "Pull requests · MuYunyun/create-react-doc",
+    "count": 3,
+    "uniques": 2
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/tree/main/packages/create-react-doc",
+    "title": "create-react-doc/packages/create-react-doc at main · MuYunyun/create-react-do...",
+    "count": 3,
+    "uniques": 2
   }
 ]

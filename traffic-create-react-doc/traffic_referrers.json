@@ -1,7 +1,7 @@
 [
   {
     "referrer": "github.com",
-    "count": 14,
+    "count": 25,
     "uniques": 12
   },
   {
@@ -10,12 +10,17 @@
     "uniques": 4
   },
   {
+    "referrer": "muyunyun.cn",
+    "count": 4,
+    "uniques": 3
+  },
+  {
     "referrer": "Baidu",
     "count": 3,
     "uniques": 2
   },
   {
-    "referrer": "muyunyun.cn",
+    "referrer": "link.zhihu.com",
     "count": 2,
     "uniques": 2
   },
@@ -25,12 +30,12 @@
     "uniques": 1
   },
   {
-    "referrer": "bbs.huaweicloud.com",
+    "referrer": "v2ex.com",
     "count": 1,
     "uniques": 1
   },
   {
-    "referrer": "link.zhihu.com",
+    "referrer": "bbs.huaweicloud.com",
     "count": 1,
     "uniques": 1
   }
