@@ -18,6 +18,8 @@ user: MuYunyun
 repo: create-react-doc
 github-ribbons: true
 
-
 # Available values: en | zh-cn
 language: en
+
+# Inject Custom Logic
+inject: Inject/inject.js
