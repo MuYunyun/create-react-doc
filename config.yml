@@ -22,4 +22,4 @@ github-ribbons: true
 language: en
 
 # Inject Custom Logic
-inject: Inject/inject.js
+inject: inject/index.js

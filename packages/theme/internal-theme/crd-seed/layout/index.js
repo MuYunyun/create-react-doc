@@ -24,7 +24,7 @@ function BasicLayout({
 }) {
   const { pathname } = location;
   // eslint-disable-next-line no-undef
-  const { user, repo, branch = 'main', language = 'en', menuOpenKeys, inject } = DOCSCONFIG || {};
+  const { user, repo, branch = 'main', language = 'en', menuOpenKeys } = DOCSCONFIG || {};
   // todo: handle inject function
   const [inlineCollapsed, setInlineCollapsed] = useState(isMobile);
   const [selectedKey, setSelectedKey] = useState(`${pathname}.md`);
@@ -33,6 +33,12 @@ function BasicLayout({
   useEffect(() => {
     // eslint-disable-next-line no-use-before-define
     scrollToTop();
+  }, []);
+
+  useEffect(() => {
+    // eslint-disable-next-line no-undef
+    INJECT?.inject();
+    // todo with another name
   }, []);
 
   const scrollToTop = () => {
