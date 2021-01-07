@@ -25,7 +25,6 @@ function BasicLayout({
   const { pathname } = location;
   // eslint-disable-next-line no-undef
   const { user, repo, branch = 'main', language = 'en', menuOpenKeys } = DOCSCONFIG || {};
-  // todo: handle inject function
   const [inlineCollapsed, setInlineCollapsed] = useState(isMobile);
   const [selectedKey, setSelectedKey] = useState(`${pathname}.md`);
   const curOpenKeys = getOpenSubMenuKeys(pathname, menuOpenKeys);
@@ -37,9 +36,13 @@ function BasicLayout({
 
   useEffect(() => {
     // eslint-disable-next-line no-undef
-    INJECT?.inject();
-    // todo with another name
+    INJECT?.inject?.();
   }, []);
+
+  useEffect(() => {
+    // eslint-disable-next-line no-undef
+    INJECT?.injectWithPathname?.(pathname);
+  }, [pathname]);
 
   const scrollToTop = () => {
     document.body.scrollTop = 0;
