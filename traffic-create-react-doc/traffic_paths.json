@@ -2,13 +2,13 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 64,
-    "uniques": 22
+    "count": 68,
+    "uniques": 23
   },
   {
     "path": "/MuYunyun/create-react-doc/issues",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 64,
+    "count": 65,
     "uniques": 5
   },
   {
@@ -26,7 +26,7 @@
   {
     "path": "/MuYunyun/create-react-doc/issues/63",
     "title": "Feature Request: support mathjax · Issue #63 · MuYunyun/create-react-doc",
-    "count": 17,
+    "count": 19,
     "uniques": 3
   },
   {
@@ -38,8 +38,8 @@
   {
     "path": "/MuYunyun/create-react-doc/pulls",
     "title": "Pull requests · MuYunyun/create-react-doc",
-    "count": 10,
-    "uniques": 2
+    "count": 11,
+    "uniques": 3
   },
   {
     "path": "/MuYunyun/create-react-doc/tree/main/packages/create-react-doc",
