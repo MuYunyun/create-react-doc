@@ -5,7 +5,7 @@ const inject = () => {};
 // perf injectWithPathname logic every pathname changes
 const injectWithPathname = (pathname) => {
   // demo for using mathjax. see https://github.com/MuYunyun/create-react-doc/issues/63
-  if (pathname !== '高阶用法') return;
+  if (pathname !== '/高阶用法') return;
   window.MathJax = {
     tex: {
       inlineMath: [['$', '$'], ['\\(', '\\)']],
