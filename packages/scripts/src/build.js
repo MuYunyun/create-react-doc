@@ -16,15 +16,15 @@ module.exports = function serve(program) {
     // https://webpack.js.org/configuration/stats/
     // https://github.com/webpack/webpack/issues/538#issuecomment-59586196
     /* eslint-disable */
-    console.log(stats.toString({
-      colors: true,
-      children: false,
-      chunks: false,
-      modules: false,
-      moduleTrace: false,
-      warningsFilter: (warning) => {
-        return true
-      }
-    }));
+    // console.log(stats.toString({
+    //   colors: true,
+    //   children: false,
+    //   chunks: false,
+    //   modules: false,
+    //   moduleTrace: false,
+    //   warningsFilter: (warning) => {
+    //     return true
+    //   }
+    // }));
   });
 };

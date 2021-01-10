@@ -101,6 +101,12 @@ module.exports = function (cmd) {
     return item;
   });
 
+  config.optimization = {
+    // 将模块名称添加到工厂功能，以便它们显示在浏览器分析器中。
+    // 当接收到热更新信号时，在浏览器 console 控制台打印更多可读性高的模块名称等信息
+    moduleIds: 'named',
+  };
+
   config.plugins = config.plugins.concat([
     new webpack.HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({
@@ -109,9 +115,6 @@ module.exports = function (cmd) {
       template: paths.defaultHTMLPath,
       title: docsConfig && docsConfig.title ? docsConfig.title : 'Create React Doc',
     }),
-    // 将模块名称添加到工厂功能，以便它们显示在浏览器分析器中。
-    // 当接收到热更新信号时，在浏览器 console 控制台打印更多可读性高的模块名称等信息
-    new webpack.NamedModulesPlugin(),
     // hot reload md file
     new CreateSpareWebpackPlugin({
       // 备用文件目录，比对是否存在，不存在生成，根据 sep 目录规则生成

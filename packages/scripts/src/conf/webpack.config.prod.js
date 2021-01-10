@@ -3,9 +3,9 @@ const path = require('path');
 const upath = require('upath');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyMarkdownImageWebpackPlugin = require('copy-markdown-image-webpack-plugin');
-const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+// const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
+// const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const { getDocsConfig } = require('../utils');
 const CreateSpareWebpackPlugin = require('./createSpareWebpackPlugin');
 const config = require('./webpack.config');
@@ -102,34 +102,12 @@ module.exports = function (cmd) {
     return item;
   });
   config.optimization = {
-    runtimeChunk: true,
-    minimizer: [
-      new UglifyJsPlugin({
-        cache: true,
-        parallel: true,
-        sourceMap: true, // set to true if you want JS source maps
-      }),
-      new OptimizeCSSAssetsPlugin({}),
-    ],
-    splitChunks: {
-      minSize: 0,
-      chunks: 'initial',
-      cacheGroups: {
-        commons: {
-          chunks: 'initial',
-          minChunks: 2,
-          maxInitialRequests: 5, // The default limit is too small to showcase the effect
-          minSize: 2000, // This is example is too small to create commons chunks
-        },
-        vendor: {
-          test: /node_modules/,
-          chunks: 'initial',
-          name: 'vendor',
-          priority: 10,
-          enforce: true,
-        },
-      },
-    },
+    // minimize: true,
+    // minimizer: [
+    //   // For webpack@5 you can use the `...` syntax to extend existing minimizers (i.e. `terser-webpack-plugin`), uncomment the next line
+    //   // `...`,
+    //   new CssMinimizerPlugin(),
+    // ],
   };
 
   config.plugins = config.plugins.concat([

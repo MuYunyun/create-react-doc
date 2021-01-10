@@ -117,12 +117,21 @@ module.exports = {
       VERSION: JSON.stringify(pkg.version),
       ...define,
     }),
+    // fix "process is not defined" error:
+    new webpack.ProvidePlugin({
+      process: 'process/browser',
+    }),
   ],
-  node: {
-    dgram: 'empty',
-    fs: 'empty',
-    net: 'empty',
-    tls: 'empty',
-    child_process: 'empty',
+  resolve: {
+    fallback: {
+      path: require.resolve('path-browserify'),
+    },
   },
+  // node: {
+  //   dgram: 'empty',
+  //   fs: 'empty',
+  //   net: 'empty',
+  //   tls: 'empty',
+  //   child_process: 'empty',
+  // },
 };
