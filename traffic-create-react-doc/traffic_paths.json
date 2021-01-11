@@ -2,14 +2,14 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun / create-react-doc：📝简约的React驱动静态站点生成器。",
-    "count": 46,
-    "uniques": 22
+    "count": 42,
+    "uniques": 20
   },
   {
     "path": "/MuYunyun/create-react-doc/issues",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 36,
-    "uniques": 5
+    "count": 28,
+    "uniques": 4
   },
   {
     "path": "/MuYunyun/create-react-doc/issues/63",
@@ -20,26 +20,20 @@
   {
     "path": "/MuYunyun/create-react-doc/tree/main/packages",
     "title": "create-react-doc/packages at main · MuYunyun/create-react-doc · GitHub",
-    "count": 13,
-    "uniques": 8
+    "count": 12,
+    "uniques": 7
   },
   {
     "path": "/MuYunyun/create-react-doc/issues/62",
     "title": "界面只显示README.md的主页 · Issue #62 · MuYunyun/create-react-doc",
-    "count": 13,
-    "uniques": 3
+    "count": 10,
+    "uniques": 2
   },
   {
     "path": "/MuYunyun/create-react-doc/actions",
     "title": "Actions · MuYunyun/create-react-doc",
-    "count": 11,
-    "uniques": 2
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/issues/61",
-    "title": "无法初始化 · Issue #61 · MuYunyun/create-react-doc",
-    "count": 10,
-    "uniques": 3
+    "count": 9,
+    "uniques": 1
   },
   {
     "path": "/MuYunyun/create-react-doc/pulls",
@@ -54,9 +48,15 @@
     "uniques": 4
   },
   {
-    "path": "/MuYunyun/create-react-doc/tree/main/docs",
-    "title": "create-react-doc/docs at main · MuYunyun/create-react-doc",
+    "path": "/MuYunyun/create-react-doc/tree/main/packages/leetcode-cli",
+    "title": "create-react-doc/packages/leetcode-cli at main · MuYunyun/create-react-doc · ...",
     "count": 6,
     "uniques": 6
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/tree/main/docs",
+    "title": "create-react-doc/docs at main · MuYunyun/create-react-doc",
+    "count": 5,
+    "uniques": 5
   }
 ]
