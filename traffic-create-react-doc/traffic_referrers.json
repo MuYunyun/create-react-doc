@@ -1,27 +1,27 @@
 [
   {
     "referrer": "github.com",
-    "count": 34,
-    "uniques": 7
-  },
-  {
-    "referrer": "Google",
-    "count": 3,
-    "uniques": 3
+    "count": 35,
+    "uniques": 8
   },
   {
     "referrer": "muyunyun.cn",
-    "count": 3,
-    "uniques": 3
+    "count": 4,
+    "uniques": 4
   },
   {
-    "referrer": "dev.to",
+    "referrer": "Google",
     "count": 2,
     "uniques": 2
   },
   {
     "referrer": "link.zhihu.com",
-    "count": 1,
-    "uniques": 1
+    "count": 2,
+    "uniques": 2
+  },
+  {
+    "referrer": "dev.to",
+    "count": 2,
+    "uniques": 2
   }
 ]
