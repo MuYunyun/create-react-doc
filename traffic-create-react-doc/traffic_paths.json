@@ -2,8 +2,8 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun / create-react-doc：📝简约的React驱动静态站点生成器。",
-    "count": 47,
-    "uniques": 17
+    "count": 51,
+    "uniques": 20
   },
   {
     "path": "/MuYunyun/create-react-doc/issues/63",
@@ -30,12 +30,6 @@
     "uniques": 2
   },
   {
-    "path": "/MuYunyun/create-react-doc/tree/main/packages",
-    "title": "create-react-doc/packages at main · MuYunyun/create-react-doc · GitHub",
-    "count": 6,
-    "uniques": 3
-  },
-  {
     "path": "/MuYunyun/create-react-doc/tree/main/packages/leetcode-cli",
     "title": "create-react-doc/packages/leetcode-cli at main · MuYunyun/create-react-doc · ...",
     "count": 5,
@@ -54,9 +48,15 @@
     "uniques": 1
   },
   {
-    "path": "/MuYunyun/create-react-doc/tree/main/docs",
-    "title": "create-react-doc/docs at main · MuYunyun/create-react-doc",
+    "path": "/MuYunyun/create-react-doc/tree/gh-pages",
+    "title": "MuYunyun/create-react-doc at gh-pages",
     "count": 3,
-    "uniques": 3
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/blob/main/injectLogic/index.js",
+    "title": "create-react-doc/index.js at main · MuYunyun/create-react-doc · GitHub",
+    "count": 2,
+    "uniques": 2
   }
 ]
