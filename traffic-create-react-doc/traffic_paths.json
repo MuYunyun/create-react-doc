@@ -2,19 +2,19 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun / create-react-doc：📝简约的React驱动静态站点生成器。",
-    "count": 51,
-    "uniques": 20
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/issues/63",
-    "title": "Feature Request: support mathjax · Issue #63 · MuYunyun/create-react-doc",
-    "count": 25,
-    "uniques": 3
+    "count": 64,
+    "uniques": 21
   },
   {
     "path": "/MuYunyun/create-react-doc/issues",
     "title": "Issues · MuYunyun/create-react-doc",
-    "count": 24,
+    "count": 45,
+    "uniques": 6
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/issues/63",
+    "title": "Feature Request: support mathjax · Issue #63 · MuYunyun/create-react-doc",
+    "count": 27,
     "uniques": 4
   },
   {
@@ -26,14 +26,20 @@
   {
     "path": "/MuYunyun/create-react-doc/pulls",
     "title": "Pull requests · MuYunyun/create-react-doc",
-    "count": 7,
-    "uniques": 2
+    "count": 8,
+    "uniques": 3
   },
   {
     "path": "/MuYunyun/create-react-doc/tree/main/packages/leetcode-cli",
     "title": "create-react-doc/packages/leetcode-cli at main · MuYunyun/create-react-doc · ...",
     "count": 5,
     "uniques": 5
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/issues/67",
+    "title": "An unexpected error occurred: \"https://registry.yarnpkg.com/create-create-rea...",
+    "count": 5,
+    "uniques": 1
   },
   {
     "path": "/MuYunyun/create-react-doc/pull/65",
@@ -48,15 +54,9 @@
     "uniques": 1
   },
   {
-    "path": "/MuYunyun/create-react-doc/tree/gh-pages",
-    "title": "MuYunyun/create-react-doc at gh-pages",
+    "path": "/MuYunyun/create-react-doc/blob/main/.github/workflows/gh-pages.yml",
+    "title": "create-react-doc/gh-pages.yml at main · MuYunyun/create-react-doc",
     "count": 3,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/blob/main/injectLogic/index.js",
-    "title": "create-react-doc/index.js at main · MuYunyun/create-react-doc · GitHub",
-    "count": 2,
     "uniques": 2
   }
 ]
