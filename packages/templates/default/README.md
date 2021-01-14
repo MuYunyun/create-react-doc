@@ -64,7 +64,7 @@ npm init create-react-doc doc
 ### yarn
 
 ```bash
-yarn create create-react-doc doc
+yarn create react-doc doc
 ```
 
 ![](http://with.muyunyun.cn/0f0cf6e8cb68b18399eac2927f74b063.jpg)
