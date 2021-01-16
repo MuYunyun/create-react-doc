@@ -67,7 +67,7 @@ npm init create-react-doc my-doc
 ### yarn
 
 ```bash
-yarn create react-doc my-doc
+yarn create create-react-doc my-doc
 ```
 
 Once the installation is done, you can open your project folder:
