@@ -2,25 +2,25 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun / create-react-doc：📝简约的React驱动静态站点生成器。",
-    "count": 66,
+    "count": 72,
     "uniques": 19
   },
   {
     "path": "/MuYunyun/create-react-doc/issues",
     "title": "Issues · MuYunyun/create-react-doc",
-    "count": 45,
-    "uniques": 7
+    "count": 51,
+    "uniques": 6
   },
   {
     "path": "/MuYunyun/create-react-doc/issues/63",
     "title": "Feature Request: support mathjax · Issue #63 · MuYunyun/create-react-doc",
-    "count": 20,
+    "count": 18,
     "uniques": 4
   },
   {
     "path": "/MuYunyun/create-react-doc/issues/67",
     "title": "An unexpected error occurred: \"https://registry.yarnpkg.com/create-create-rea...",
-    "count": 13,
+    "count": 14,
     "uniques": 2
   },
   {
@@ -30,10 +30,22 @@
     "uniques": 1
   },
   {
-    "path": "/MuYunyun/create-react-doc/tree/main/packages/leetcode-cli",
-    "title": "create-react-doc/packages/leetcode-cli at main · MuYunyun/create-react-doc · ...",
+    "path": "/MuYunyun/create-react-doc/issues/69",
+    "title": "build error · Issue #69 · MuYunyun/create-react-doc",
+    "count": 6,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/issues/52",
+    "title": "升级主题包以后业务方如何能一键升级? · Issue #52 · MuYunyun/create-react-doc",
+    "count": 5,
+    "uniques": 2
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/pulls",
+    "title": "Pull requests · MuYunyun/create-react-doc",
     "count": 4,
-    "uniques": 4
+    "uniques": 3
   },
   {
     "path": "/MuYunyun/create-react-doc/tree/gh-pages",
@@ -42,19 +54,7 @@
     "uniques": 2
   },
   {
-    "path": "/MuYunyun/create-react-doc/issues/69",
-    "title": "build error · Issue #69 · MuYunyun/create-react-doc",
-    "count": 4,
-    "uniques": 1
-  },
-  {
     "path": "/MuYunyun/create-react-doc/pull/65",
-    "title": "支持 inject 与 injectWithPathname 注入自定义逻辑 by MuYunyun · Pull Request #65 · MuYun...",
-    "count": 4,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/pull/65/files",
     "title": "支持 inject 与 injectWithPathname 注入自定义逻辑 by MuYunyun · Pull Request #65 · MuYun...",
     "count": 4,
     "uniques": 1
