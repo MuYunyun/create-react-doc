@@ -2,7 +2,7 @@
   {
     "referrer": "github.com",
     "count": 44,
-    "uniques": 10
+    "uniques": 12
   },
   {
     "referrer": "dev.to",
@@ -15,12 +15,12 @@
     "uniques": 3
   },
   {
-    "referrer": "link.zhihu.com",
+    "referrer": "v2ex.com",
     "count": 2,
     "uniques": 2
   },
   {
-    "referrer": "v2ex.com",
+    "referrer": "link.zhihu.com",
     "count": 1,
     "uniques": 1
   }
