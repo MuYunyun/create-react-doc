@@ -1,15 +1,13 @@
-import React from 'react';
-import cx from 'classnames';
-import Icon from '../Icon';
-import styles from './index.less';
-
-const { useState, useEffect } = React;
+import { useState, useEffect } from 'react'
+import cx from 'classnames'
+import Icon from '../Icon'
+import styles from './index.less'
 
 const Search = ({
   placeholder = 'Search',
   className,
 }) => {
-  const [value, setValue] = useState('');
+  const [value, setValue] = useState('')
   // const [searchContent, setSearchContent] = useState([]);
   // const showSearchContent = value.length > 0 && searchContent.length > 0;
   useEffect(() => {
@@ -21,7 +19,7 @@ const Search = ({
     //   });
     //   setSearchContent(filterSearch);
     // }
-  }, [value]);
+  }, [value])
   return (
     <div className={cx(styles.search, className)}>
       <Icon type="search" size="14" />
@@ -29,7 +27,7 @@ const Search = ({
         placeholder={placeholder}
         value={value}
         onChange={(e) => {
-          setValue(e.target.value);
+          setValue(e.target.value)
         }}
       />
       {/* {showSearchContent ? (
@@ -51,7 +49,7 @@ const Search = ({
         </ul>
       ) : null} */}
     </div>
-  );
-};
+  )
+}
 
-export default Search;
+export default Search

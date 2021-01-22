@@ -1,13 +1,13 @@
-const webpack = require('webpack');
-const WebpackDevServer = require('webpack-dev-server');
-const openBrowsers = require('open-browsers');
-const detect = require('detect-port');
-const fs = require('fs');
-const prepareUrls = require('local-ip-url/prepareUrls');
-const conf = require('./conf/webpack.config.dev');
-const createDevServerConfig = require('./conf/webpack.config.server');
-const paths = require('./conf/path');
-require('colors-cli/toxic');
+const webpack = require('webpack')
+const WebpackDevServer = require('webpack-dev-server')
+const openBrowsers = require('open-browsers')
+const detect = require('detect-port')
+const fs = require('fs')
+const prepareUrls = require('local-ip-url/prepareUrls')
+const conf = require('./conf/webpack.config.dev')
+const createDevServerConfig = require('./conf/webpack.config.server')
+const paths = require('./conf/path')
+require('colors-cli/toxic')
 
 function clearConsole() {
   // process.stdout.write(process.platform === 'win32' ? '\x1B[2J\x1B[0f' : '\x1B[2J\x1B[3J\x1B[H');
@@ -15,19 +15,19 @@ function clearConsole() {
 
 module.exports = function server(cmd) {
   if (!fs.existsSync(paths.docsConfig)) {
-    console.log('please check config.yml in root dir!\n');
-    return;
+    console.log('please check config.yml in root dir!\n')
+    return
   }
-  const HOST = cmd.host;
-  let DEFAULT_PORT = cmd.port;
-  const webpackConf = conf(cmd);
-  const compiler = webpack(webpackConf);
+  const HOST = cmd.host
+  let DEFAULT_PORT = cmd.port
+  const webpackConf = conf(cmd)
+  const compiler = webpack(webpackConf)
 
   detect(DEFAULT_PORT).then((_port) => {
-    if (DEFAULT_PORT !== _port) DEFAULT_PORT = _port;
+    if (DEFAULT_PORT !== _port) DEFAULT_PORT = _port
 
-    const protocol = process.env.HTTPS === 'true' ? 'https' : 'http';
-    const urls = prepareUrls({ protocol, host: HOST, port: DEFAULT_PORT });
+    const protocol = process.env.HTTPS === 'true' ? 'https' : 'http'
+    const urls = prepareUrls({ protocol, host: HOST, port: DEFAULT_PORT })
     // https://webpack.js.org/api/compiler-hooks/#aftercompile
     // print log after being compiled
     compiler.hooks.done.tap('done', () => {
@@ -36,17 +36,17 @@ module.exports = function server(cmd) {
       console.log(`              On Your Network: ${urls.lanUrl.green}`);
       console.log(`\nTo create a production build, use ${'npm run build'.blue_bt}.`);
       /* eslint-enable */
-    });
+    })
 
     new WebpackDevServer(compiler, createDevServerConfig(cmd, webpackConf)).listen(DEFAULT_PORT, HOST, (err) => {
       if (err) {
         return console.log(err); // eslint-disable-line
       }
-      clearConsole();
+      clearConsole()
       // open browser
-      openBrowsers(urls.localUrl);
-    });
+      openBrowsers(urls.localUrl)
+    })
   }).catch((err) => {
     console.log(err); // eslint-disable-line
-  });
-};
+  })
+}

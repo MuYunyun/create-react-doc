@@ -1,6 +1,6 @@
-const { resolveApp, resolveTool } = require('./path');
+const { resolveApp, resolveTool } = require('./path')
 
 module.exports = {
   resolveApp,
   resolveTool,
-};
+}

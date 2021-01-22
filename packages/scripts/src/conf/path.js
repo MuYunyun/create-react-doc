@@ -1,90 +1,90 @@
-const path = require('path');
-const fs = require('fs');
-const { resolveApp } = require('crd-utils');
+const path = require('path')
+const fs = require('fs')
+const { resolveApp } = require('crd-utils')
 
 // handle the problem of symbol in any platform
-const appDirectory = fs.realpathSync(process.cwd());
+const appDirectory = fs.realpathSync(process.cwd())
 
-const modPath = resolveApp('node_modules');
+const modPath = resolveApp('node_modules')
 // get config crd from package.json
 function getCrdConf() {
-  const packagePath = resolveApp('./package.json');
-  let conf = {};
+  const packagePath = resolveApp('./package.json')
+  let conf = {}
   if (fs.existsSync(packagePath)) {
     const confPkg = require(packagePath); // eslint-disable-line
-    conf = confPkg.crd;
+    conf = confPkg.crd
   }
-  return conf;
+  return conf
 }
 
 function getConfigFilePath(fileName, type) {
-  const conf = getCrdConf();
+  const conf = getCrdConf()
   // read config
   if (conf && conf[type]) {
     // load theme dir
     if (type === 'theme') {
-      if (!conf[type]) conf[type] = fileName;
-      const _path = path.resolve(appDirectory, 'theme', conf[type]);
+      if (!conf[type]) conf[type] = fileName
+      const _path = path.resolve(appDirectory, 'theme', conf[type])
       const _NodeModulesPath = path.resolve(
         appDirectory,
         'node_modules',
         conf[type],
-      );
+      )
       if (fs.existsSync(_path)) {
-        return fs.realpathSync(_path);
+        return fs.realpathSync(_path)
       } else if (fs.existsSync(_NodeModulesPath)) {
-        return fs.realpathSync(_NodeModulesPath);
+        return fs.realpathSync(_NodeModulesPath)
       }
-      return false;
+      return false
     }
     if (/^(favicon|logo)$/.test(type)) {
-      return path.resolve(appDirectory, conf[type]);
+      return path.resolve(appDirectory, conf[type])
     }
   }
-  const _filepath = path.resolve(appDirectory, fileName);
+  const _filepath = path.resolve(appDirectory, fileName)
   if (fs.existsSync(_filepath)) {
     // favicon|logo in default root dir.
-    return _filepath;
+    return _filepath
   }
-  return false;
+  return false
 }
 
 // Get favicon path
 const faviconPath = () => {
-  const _path = getConfigFilePath('./favicon.ico', 'favicon');
-  if (_path) return _path;
+  const _path = getConfigFilePath('./favicon.ico', 'favicon')
+  if (_path) return _path
   // the path'll be writen dynamiclly in the future
-  return resolveApp('node_modules/crd-theme/favicon.ico');
-};
+  return resolveApp('node_modules/crd-theme/favicon.ico')
+}
 
 // Get logo path
 const logoPath = () => {
-  const _path = getConfigFilePath('./logo.svg', 'logo');
-  if (_path) return _path;
-  return false;
-};
+  const _path = getConfigFilePath('./logo.svg', 'logo')
+  if (_path) return _path
+  return false
+}
 
 // get exclude folders
 function getExcludeFoldersRegExp() {
-  if (!fs.existsSync(modPath)) return [];
-  let regxExc = fs.readdirSync(modPath);
+  if (!fs.existsSync(modPath)) return []
+  let regxExc = fs.readdirSync(modPath)
   regxExc = regxExc.filter(
     item => !/create-react-doc(.*)|crd-scripts|crd-theme/.test(item),
-  );
+  )
   regxExc = regxExc.map((item) => {
-    let rgxPath = `node_modules${path.sep}${item}`;
+    let rgxPath = `node_modules${path.sep}${item}`
     if (path.sep === '\\') {
       // to watch: is '\\' needful?
-      rgxPath = `node_modules\\${path.sep}${item}`;
+      rgxPath = `node_modules\\${path.sep}${item}`
     }
-    return new RegExp(rgxPath);
-  });
-  return regxExc;
+    return new RegExp(rgxPath)
+  })
+  return regxExc
 }
 
 // crd tool dir
-const toolDirectory = fs.realpathSync(__dirname);
-const resolveTool = relativePath => path.resolve(toolDirectory, relativePath);
+const toolDirectory = fs.realpathSync(__dirname)
+const resolveTool = relativePath => path.resolve(toolDirectory, relativePath)
 
 module.exports = {
   // markdown dir
@@ -109,4 +109,4 @@ module.exports = {
   defaultFaviconPath: faviconPath(),
   appIndexJs: resolveTool('../web/index.js'),
   appDir: resolveTool('../web'),
-};
+}

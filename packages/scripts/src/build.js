@@ -1,16 +1,16 @@
-const webpack = require('webpack');
-const fs = require('fs');
-const conf = require('./conf/webpack.config.prod');
-const paths = require('./conf/path');
-require('colors-cli/toxic');
+const webpack = require('webpack')
+const fs = require('fs')
+const conf = require('./conf/webpack.config.prod')
+const paths = require('./conf/path')
+require('colors-cli/toxic')
 
 module.exports = function serve(program) {
   if (!fs.existsSync(paths.docsConfig)) {
-    console.log('please check config.yml in root dir!\n');
-    return;
+    console.log('please check config.yml in root dir!\n')
+    return
   }
-  const webpackConf = conf(program);
-  const compiler = webpack(webpackConf);
+  const webpackConf = conf(program)
+  const compiler = webpack(webpackConf)
   compiler.run((err, stats) => {
     // 官方输出参数
     // https://webpack.js.org/configuration/stats/

@@ -1,34 +1,34 @@
 /* eslint-disable global-require */
 /* eslint-disable import/no-dynamic-require */
-const path = require('path');
-const webpack = require('webpack');
-const webpackbar = require('webpackbar');
-const fs = require('fs');
-const { resolveApp } = require('crd-utils');
-const { getDocsConfig } = require('../utils');
+const path = require('path')
+const webpack = require('webpack')
+const webpackbar = require('webpackbar')
+const fs = require('fs')
+const { resolveApp } = require('crd-utils')
+const { getDocsConfig } = require('../utils')
 // const { getDocsConfig, getSearchContent } = require('../utils');
-const paths = require('./path');
-const pkg = require('../../package.json');
+const paths = require('./path')
+const pkg = require('../../package.json')
 
 const define = {
   FOOTER: null,
   DOCSCONFIG: null,
   INJECT: null,
-};
+}
 if (paths.crdConf && paths.crdConf.footer && typeof paths.crdConf.footer === 'string') {
-  define.FOOTER = JSON.stringify(paths.crdConf.footer);
+  define.FOOTER = JSON.stringify(paths.crdConf.footer)
 }
 /* custom define docs config */
 if (paths.docsConfig) {
   // const searchContent = getSearchContent();
-  const docsConfig = getDocsConfig();
-  define.DOCSCONFIG = JSON.stringify(docsConfig);
+  const docsConfig = getDocsConfig()
+  define.DOCSCONFIG = JSON.stringify(docsConfig)
   // todo: searchContent affects the performance, so take annotation here templately.
   // define.SEARCHCONTENT = searchContent && searchContent.toString();
 
   // if there is inject logic in docsConfig
   if (docsConfig.inject && fs.existsSync(resolveApp(docsConfig.inject))) {
-    define.INJECT = require(resolveApp(docsConfig.inject));
+    define.INJECT = require(resolveApp(docsConfig.inject))
   }
 }
 
@@ -134,4 +134,4 @@ module.exports = {
   //   tls: 'empty',
   //   child_process: 'empty',
   // },
-};
+}

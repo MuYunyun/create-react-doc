@@ -1,28 +1,26 @@
 /* eslint-disable react/jsx-no-target-blank */
 /* eslint-disable no-undef */
-import React from 'react';
-import classNames from 'classnames';
-import { Link } from 'react-router-dom';
-import Switch from 'react-switch';
-import { isMobile } from '../../utils';
-import Search from '../Search';
-import styles from './index.less';
-
-const { useState } = React;
+import { useState } from 'react'
+import classNames from 'classnames'
+import { Link } from 'react-router-dom'
+import Switch from 'react-switch'
+import { isMobile } from '../../utils'
+import Search from '../Search'
+import styles from './index.less'
 
 const Header = ({
   className,
   logo,
 }) => {
   // eslint-disable-next-line no-undef
-  const { user, repo } = DOCSCONFIG || {};
-  const [checked, setChecked] = useState(false);
+  const { user, repo } = DOCSCONFIG || {}
+  const [checked, setChecked] = useState(false)
   const handleChange = (value) => {
     value
       ? document.body.classList.add(styles.darkMode)
-      : document.body.classList.remove(styles.darkMode);
-    setChecked(value);
-  };
+      : document.body.classList.remove(styles.darkMode)
+    setChecked(value)
+  }
   return (
     <div className={classNames(styles.header, className)}>
       <div className={styles.wrapper}>
@@ -77,7 +75,7 @@ const Header = ({
         </a>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header

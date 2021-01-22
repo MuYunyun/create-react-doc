@@ -1,6 +1,5 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import styles from './index.less';
+import { Link } from 'react-router-dom'
+import styles from './index.less'
 
 const Footer = () => {
   return (
@@ -15,7 +14,7 @@ const Footer = () => {
         </tr>
       </tbody>
     </table>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer
