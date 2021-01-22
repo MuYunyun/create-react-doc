@@ -1,9 +1,9 @@
-import * as React from 'react';
-import cx from 'classnames';
-import MenuItem from './MenuItem';
-import { SubMenu } from './SubMenu';
-import { MenuProvider } from './context';
-import styles from './style/index.less';
+import * as React from 'react'
+import cx from 'classnames'
+import MenuItem from './MenuItem'
+import { SubMenu } from './SubMenu'
+import { MenuProvider } from './context'
+import styles from './style/index.less'
 
 const Menu = ({
   theme = 'light',
@@ -16,7 +16,7 @@ const Menu = ({
   toggle,
 }) => {
   /* 存储 hover 状态的 key 值, 在垂直模式中需要根据 hover 的 key 值高亮父节点 */
-  const [hoverKey, setHoverKey] = React.useState('');
+  const [hoverKey, setHoverKey] = React.useState('')
   const MenuContext = {
     theme,
     mode: 'inline',
@@ -26,7 +26,7 @@ const Menu = ({
     onSelect,
     hoverKey,
     onHoverKey: setHoverKey,
-  };
+  }
   const renderToggle = () => {
     return (
       <div
@@ -41,8 +41,8 @@ const Menu = ({
           })}
         />
       </div>
-    );
-  };
+    )
+  }
   const renderMenu = () => {
     return (
       <ul
@@ -58,18 +58,18 @@ const Menu = ({
       >
         {children}
       </ul>
-    );
-  };
+    )
+  }
 
   return (
     <MenuProvider value={MenuContext}>
       {renderToggle()}
       {renderMenu()}
     </MenuProvider>
-  );
-};
+  )
+}
 
-Menu.Item = MenuItem;
-Menu.SubMenu = SubMenu;
+Menu.Item = MenuItem
+Menu.SubMenu = SubMenu
 
-export default Menu;
+export default Menu

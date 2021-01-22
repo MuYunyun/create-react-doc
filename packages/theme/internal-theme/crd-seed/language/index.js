@@ -7,6 +7,6 @@ const languageMap = {
     create_tm: '创建',
     modify_tm: '修改',
   },
-};
+}
 
-export default languageMap;
+export default languageMap

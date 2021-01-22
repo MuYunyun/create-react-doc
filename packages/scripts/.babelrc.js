@@ -8,7 +8,9 @@ const babelrc = {
         },
       },
     ],
-    "@babel/preset-react",
+    ["@babel/preset-react", {
+      "runtime": "automatic"
+    }]
   ],
   plugins: [
     "@babel/plugin-syntax-object-rest-spread",

@@ -1,20 +1,19 @@
-import React from 'react';
-import { Switch, Link, Route, Redirect } from 'react-router-dom';
-import cx from 'classnames';
-import Menu from '../component/Menu';
-import Icon from '../component/Icon';
-import Affix from '../component/Affix';
-import Header from '../component/Header';
-import Footer from '../component/Footer';
-import languageMap from '../language';
-import { isMobile } from '../utils';
-import { getOpenSubMenuKeys } from './utils';
-import logo from '../crd.logo.svg';
-import styles from './index.less';
-import '../style/mobile.less';
+import { useState, useEffect } from 'react'
+import { Switch, Link, Route, Redirect } from 'react-router-dom'
+import cx from 'classnames'
+import Menu from '../component/Menu'
+import Icon from '../component/Icon'
+import Affix from '../component/Affix'
+import Header from '../component/Header'
+import Footer from '../component/Footer'
+import languageMap from '../language'
+import { isMobile } from '../utils'
+import { getOpenSubMenuKeys } from './utils'
+import logo from '../crd.logo.svg'
+import styles from './index.less'
+import '../style/mobile.less'
 
-const { useState, useEffect } = React;
-const SubMenu = Menu.SubMenu;
+const SubMenu = Menu.SubMenu
 
 function BasicLayout({
   location,
@@ -22,33 +21,33 @@ function BasicLayout({
   menuSource,
   indexProps,
 }) {
-  const { pathname } = location;
+  const { pathname } = location
   // eslint-disable-next-line no-undef
-  const { user, repo, branch = 'main', language = 'en', menuOpenKeys } = DOCSCONFIG || {};
-  const [inlineCollapsed, setInlineCollapsed] = useState(isMobile);
-  const [selectedKey, setSelectedKey] = useState(`${pathname}.md`);
-  const curOpenKeys = getOpenSubMenuKeys(pathname, menuOpenKeys);
+  const { user, repo, branch = 'main', language = 'en', menuOpenKeys } = DOCSCONFIG || {}
+  const [inlineCollapsed, setInlineCollapsed] = useState(isMobile)
+  const [selectedKey, setSelectedKey] = useState(`${pathname}.md`)
+  const curOpenKeys = getOpenSubMenuKeys(pathname, menuOpenKeys)
 
   useEffect(() => {
     // eslint-disable-next-line no-use-before-define
-    scrollToTop();
-  }, []);
+    scrollToTop()
+  }, [])
 
   useEffect(() => {
     // eslint-disable-next-line no-undef
-    INJECT?.inject?.();
-  }, []);
+    INJECT?.inject?.()
+  }, [])
 
   useEffect(() => {
     // eslint-disable-next-line no-undef
-    INJECT?.injectWithPathname?.(pathname);
-  }, [pathname]);
+    INJECT?.injectWithPathname?.(pathname)
+  }, [pathname])
 
   const scrollToTop = () => {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
-    window.scrollTo(0, 0);
-  };
+    document.body.scrollTop = 0
+    document.documentElement.scrollTop = 0
+    window.scrollTo(0, 0)
+  }
   const renderSubMenuItem = (menus) => {
     /* eslint-disable */
     return (

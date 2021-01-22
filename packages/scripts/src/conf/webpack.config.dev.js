@@ -1,25 +1,25 @@
-const autoprefixer = require('autoprefixer');
-const webpack = require('webpack');
-const path = require('path');
-const upath = require('upath');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const FriendlyErrorsWebpackPlugin = require('@nuxtjs/friendly-errors-webpack-plugin');
-const { getDocsConfig } = require('../utils');
-const CreateSpareWebpackPlugin = require('./createSpareWebpackPlugin');
-const config = require('./webpack.config');
-const paths = require('./path');
+const autoprefixer = require('autoprefixer')
+const webpack = require('webpack')
+const path = require('path')
+const upath = require('upath')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const FriendlyErrorsWebpackPlugin = require('@nuxtjs/friendly-errors-webpack-plugin')
+const { getDocsConfig } = require('../utils')
+const CreateSpareWebpackPlugin = require('./createSpareWebpackPlugin')
+const config = require('./webpack.config')
+const paths = require('./path')
 
 module.exports = function (cmd) {
-  const docsConfig = getDocsConfig();
-  config.mode = 'development';
+  const docsConfig = getDocsConfig()
+  config.mode = 'development'
   config.entry = [
     require.resolve('react-hot-loader/patch'),
     require.resolve('webpack-hot-dev-clients/webpackHotDevClient'),
     paths.appIndexJs,
-  ];
+  ]
   config.module.rules = config.module.rules.map((item) => {
     if (item.oneOf) {
-      const loaders = [];
+      const loaders = []
       loaders.push({
         // Process JS with Babel.
         test: /\.(js|jsx|mjs)$/,
@@ -38,7 +38,7 @@ module.exports = function (cmd) {
             options: require('../../.babelrc'), // eslint-disable-line
           },
         ],
-      });
+      })
       // https://ilikekillnerds.com/2018/03/disable-webpack-4-native-json-loader/
       loaders.push({
         test: /crd\.json$/,
@@ -58,7 +58,7 @@ module.exports = function (cmd) {
             },
           },
         ],
-      });
+      })
 
       loaders.push({
         test: /\.(css|less)$/,
@@ -94,18 +94,18 @@ module.exports = function (cmd) {
           },
           require.resolve('less-loader'),
         ],
-      });
+      })
 
-      item.oneOf = loaders.concat(item.oneOf);
+      item.oneOf = loaders.concat(item.oneOf)
     }
-    return item;
-  });
+    return item
+  })
 
   config.optimization = {
     // 将模块名称添加到工厂功能，以便它们显示在浏览器分析器中。
     // 当接收到热更新信号时，在浏览器 console 控制台打印更多可读性高的模块名称等信息
     moduleIds: 'named',
-  };
+  }
 
   config.plugins = config.plugins.concat([
     new webpack.HotModuleReplacementPlugin(),
@@ -129,6 +129,6 @@ module.exports = function (cmd) {
     new FriendlyErrorsWebpackPlugin({
       clearConsole: true,
     }),
-  ]);
-  return config;
-};
+  ])
+  return config
+}

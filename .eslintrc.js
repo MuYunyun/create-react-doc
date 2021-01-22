@@ -66,6 +66,8 @@ const eslintrc = {
     "react/default-props-match-prop-types": 0,
     "react/jsx-curly-spacing": 0,
     "react/no-render-return-value": 0,
+    'react/jsx-uses-react': 0,
+    'react/react-in-jsx-scope': 0,
     "object-curly-newline": 0,
     "no-param-reassign": 0,
     "no-return-assign": 0,
@@ -73,7 +75,9 @@ const eslintrc = {
     "no-restricted-globals": 0,
     "no-restricted-syntax": 0,
     "no-underscore-dangle": 0,
-    "no-unused-expressions": 0
+    "no-unused-expressions": 0,
+    "no-use-before-define": 0,
+    "semi": ["error", "never"]
   }
 }
 

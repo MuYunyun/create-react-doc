@@ -21,13 +21,12 @@
 
 # Create React Doc
 
-[Create React Doc](https://github.com/MuYunyun/create-react-doc) 是一个使用 React 的 markdown 文档站点生成工具。就像 [create-react-app](https://github.com/facebook/create-react-app) 一样，开发者可以使用 Create React Doc 来开发、部署 markdown 站点或者博客而无需关心站点环境配置信息。
+[Create React Doc](https://github.com/MuYunyun/create-react-doc) 是一个使用 React 的 markdown 文档站点生成工具。就像 [create-react-app](https://github.com/facebook/create-react-app) 一样，开发者可以使用 Create React Doc 来开发、部署文档或者博客站点而无需关心额外的环境配置信息。
 
 ## 特性
 
-* 建站理念: 文件即站点 (Files as a Site)。
+* 建站理念: 文件即站点 (Files as a Site)。通过自定义指定文件, 快速搭建项目文档、博客站点。
 * 开箱即用: 一键生成可运行文档站点, 无需关心站点环境配置信息。
-* 自定义展示目录: 天然适合搭建 monorepo 文档、博客等站点。
 * 性能: 文档支持懒加载提升站点加载速度。
 * 工作流: 集成 Github action, 自动化打包、发布站点。
 
@@ -44,7 +43,15 @@
   * ![](http://with.muyunyun.cn/2e7440e4256debda2d73a4e6392c7146.jpg-300)
 * [diana](https://muyunyun.cn/diana/)
 
-> 如果你的产品从中受益，欢迎<a href="https://github.com/MuYunyun/create-react-doc/issues/new" target="_blank">留言补充</a>
+crd-seed 主题特性:
+
+* 适配移动、PC 多端展示。
+* 支持暗黑模式。
+* 文档支持内嵌 codepen、codesansbox。
+* GitHub 联动。
+* 基于 `React 17+`、`webpack 5` 等前沿技术栈搭建。
+
+> 如果您的产品从中受益，欢迎<a href="https://github.com/MuYunyun/create-react-doc/issues/new" target="_blank">留言补充</a>
 
 ## 快速上手
 

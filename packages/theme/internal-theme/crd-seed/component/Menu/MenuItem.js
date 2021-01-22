@@ -1,8 +1,7 @@
-import * as React from 'react';
-import cx from 'classnames';
-import { getMenuStyle } from './util';
-import { useMenuContext } from './context';
-import styles from './style/index.less';
+import cx from 'classnames'
+import { getMenuStyle } from './util'
+import { useMenuContext } from './context'
+import styles from './style/index.less'
 
 function MenuItem({
   title = '',
@@ -10,11 +9,11 @@ function MenuItem({
   keyValue = '',
   level = 0,
 }) {
-  const { theme, selectedKey, onSelect, onHoverKey } = useMenuContext();
+  const { theme, selectedKey, onSelect, onHoverKey } = useMenuContext()
 
   const handleOnClick = () => {
-    onSelect(keyValue);
-  };
+    onSelect(keyValue)
+  }
 
   const renderMenuItem = () => {
     return (
@@ -23,7 +22,7 @@ function MenuItem({
           [styles['menu-item-selected']]: selectedKey === keyValue,
         })}
         onMouseEnter={() => {
-          onHoverKey(keyValue);
+          onHoverKey(keyValue)
         }}
         onMouseLeave={() => onHoverKey('')}
         onClick={handleOnClick}
@@ -32,10 +31,10 @@ function MenuItem({
         {icon ? <span className={cx(styles['menu-icon'])}>{icon}</span> : null}
         <span className={cx(styles['menu-item-title'])}>{title}</span>
       </li>
-    );
-  };
+    )
+  }
 
-  return renderMenuItem();
+  return renderMenuItem()
 }
 
-export default MenuItem;
+export default MenuItem

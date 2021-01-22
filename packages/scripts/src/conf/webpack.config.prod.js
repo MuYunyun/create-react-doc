@@ -1,25 +1,25 @@
-const autoprefixer = require('autoprefixer');
-const path = require('path');
-const upath = require('upath');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CopyMarkdownImageWebpackPlugin = require('copy-markdown-image-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const autoprefixer = require('autoprefixer')
+const path = require('path')
+const upath = require('upath')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const CopyMarkdownImageWebpackPlugin = require('copy-markdown-image-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 // const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 // const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
-const { getDocsConfig } = require('../utils');
-const CreateSpareWebpackPlugin = require('./createSpareWebpackPlugin');
-const config = require('./webpack.config');
-const paths = require('./path');
+const { getDocsConfig } = require('../utils')
+const CreateSpareWebpackPlugin = require('./createSpareWebpackPlugin')
+const config = require('./webpack.config')
+const paths = require('./path')
 
 module.exports = function (cmd) {
-  const docsConfig = getDocsConfig();
-  config.mode = 'production';
-  config.entry = [paths.appIndexJs];
-  config.output.filename = 'js/[hash:8].js';
-  config.output.chunkFilename = 'js/[name].[hash:8].js';
+  const docsConfig = getDocsConfig()
+  config.mode = 'production'
+  config.entry = [paths.appIndexJs]
+  config.output.filename = 'js/[hash:8].js'
+  config.output.chunkFilename = 'js/[name].[hash:8].js'
   config.module.rules = config.module.rules.map((item) => {
     if (item.oneOf) {
-      const loaders = [];
+      const loaders = []
       loaders.push({
         // Process JS with Babel.
         test: /\.(js|jsx|mjs)$/,
@@ -38,7 +38,7 @@ module.exports = function (cmd) {
             options: require('../../.babelrc'), // eslint-disable-line
           },
         ],
-      });
+      })
       // https://ilikekillnerds.com/2018/03/disable-webpack-4-native-json-loader/
       loaders.push({
         test: /crd\.json$/,
@@ -59,7 +59,7 @@ module.exports = function (cmd) {
             },
           },
         ],
-      });
+      })
 
       loaders.push({
         test: /\.(css|less)$/,
@@ -95,12 +95,12 @@ module.exports = function (cmd) {
           },
           require.resolve('less-loader'),
         ],
-      });
+      })
 
-      item.oneOf = loaders.concat(item.oneOf);
+      item.oneOf = loaders.concat(item.oneOf)
     }
-    return item;
-  });
+    return item
+  })
   config.optimization = {
     // minimize: true,
     // minimizer: [
@@ -108,7 +108,7 @@ module.exports = function (cmd) {
     //   // `...`,
     //   new CssMinimizerPlugin(),
     // ],
-  };
+  }
 
   config.plugins = config.plugins.concat([
     new HtmlWebpackPlugin({
@@ -148,6 +148,6 @@ module.exports = function (cmd) {
       filename: 'css/[contenthash].css',
       chunkFilename: 'css/[id].css',
     }),
-  ]);
-  return config;
-};
+  ])
+  return config
+}

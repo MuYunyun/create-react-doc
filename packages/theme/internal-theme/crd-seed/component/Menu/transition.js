@@ -1,96 +1,94 @@
-import * as React from 'react';
-import styles from './style/index.less';
+import { useLayoutEffect, useRef, useCallback } from 'react'
+import styles from './style/index.less'
 
-const { useLayoutEffect, useRef, useCallback } = React;
-
-const ANIMATION_DURATION = 200;
+const ANIMATION_DURATION = 200
 
 export default function Transition({
   isShow,
   children,
 }) {
-  const mounted = useRef(false);
-  const collapseRef = useRef(null);
-  const timer = useRef({});
+  const mounted = useRef(false)
+  const collapseRef = useRef(null)
+  const timer = useRef({})
 
   // prepare
   const beforeEnter = () => {
-    const el = collapseRef.current;
-    el.style.height = '0px';
-  };
+    const el = collapseRef.current
+    el.style.height = '0px'
+  }
 
   const afterEnter = useCallback(() => {
-    const el = collapseRef.current;
-    el.style.display = 'block';
-    el.style.height = '';
-  }, []);
+    const el = collapseRef.current
+    el.style.display = 'block'
+    el.style.height = ''
+  }, [])
 
   // start
   const enter = useCallback(() => {
-    const el = collapseRef.current;
-    el.style.display = 'block';
+    const el = collapseRef.current
+    el.style.display = 'block'
     if (el.scrollHeight !== 0) {
-      el.style.height = `${el.scrollHeight}px`;
+      el.style.height = `${el.scrollHeight}px`
     }
 
-    timer.current.enterTimer = setTimeout(() => afterEnter(), ANIMATION_DURATION);
-  }, [afterEnter]);
+    timer.current.enterTimer = setTimeout(() => afterEnter(), ANIMATION_DURATION)
+  }, [afterEnter])
 
   const beforeLeave = useCallback(() => {
-    const el = collapseRef.current;
+    const el = collapseRef.current
 
-    el.style.display = 'block';
+    el.style.display = 'block'
     if (el.scrollHeight !== 0) {
-      el.style.height = `${el.scrollHeight}px`;
+      el.style.height = `${el.scrollHeight}px`
     }
-  }, []);
+  }, [])
 
   const afterLeave = useCallback(() => {
-    const el = collapseRef.current;
+    const el = collapseRef.current
 
-    el.style.display = 'none';
-    el.style.height = '';
-  }, []);
+    el.style.display = 'none'
+    el.style.height = ''
+  }, [])
 
   const leave = useCallback(() => {
-    const el = collapseRef.current;
+    const el = collapseRef.current
     if (el.scrollHeight !== 0) {
-      el.style.height = '0px';
+      el.style.height = '0px'
     }
-    timer.current.leaveTimer = setTimeout(() => afterLeave(), ANIMATION_DURATION);
-  }, [afterLeave]);
+    timer.current.leaveTimer = setTimeout(() => afterLeave(), ANIMATION_DURATION)
+  }, [afterLeave])
 
   const triggerChange = useCallback(
     // eslint-disable-next-line no-shadow
     (isShow) => {
-      clearTimeout(timer.current.enterTimer);
-      clearTimeout(timer.current.leaveTimer);
+      clearTimeout(timer.current.enterTimer)
+      clearTimeout(timer.current.leaveTimer)
       if (isShow) {
-        beforeEnter();
-        enter();
+        beforeEnter()
+        enter()
       } else {
-        beforeLeave();
-        leave();
+        beforeLeave()
+        leave()
       }
     },
     [beforeLeave, enter, leave]
-  );
+  )
 
   useLayoutEffect(() => {
     if (!mounted.current) {
-      mounted.current = true;
-      beforeEnter();
+      mounted.current = true
+      beforeEnter()
       if (isShow) {
-        enter();
+        enter()
       }
     } else {
-      triggerChange(isShow);
+      triggerChange(isShow)
     }
-  }, [enter, isShow, triggerChange]);
+  }, [enter, isShow, triggerChange])
 
   return (
     <div className={styles['collapse-transition']} ref={collapseRef}>
       {children}
     </div>
-  );
+  )
 }

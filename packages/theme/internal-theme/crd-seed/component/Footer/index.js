@@ -1,6 +1,5 @@
-import React from 'react';
-import cx from 'classnames';
-import styles from './index.less';
+import cx from 'classnames'
+import styles from './index.less'
 
 const version = VERSION; // eslint-disable-line
 const footer = FOOTER; // eslint-disable-line
@@ -28,7 +27,7 @@ const FooterView = ({ inlineCollapsed }) => {
         </div>
       )}
     </div>
-  );
-};
+  )
+}
 
-export default FooterView;
+export default FooterView

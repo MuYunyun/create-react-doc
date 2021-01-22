@@ -1,8 +1,8 @@
-const { GraphQLClient } = require('graphql-request');
-const ora = require('ora');
-const inquirer = require('inquirer');
-const puppeteer = require('puppeteer-extra');
-const StealthPlugin = require('puppeteer-extra-plugin-stealth');
+const { GraphQLClient } = require('graphql-request')
+const ora = require('ora')
+const inquirer = require('inquirer')
+const puppeteer = require('puppeteer-extra')
+const StealthPlugin = require('puppeteer-extra-plugin-stealth')
 
 const {
   // request,
@@ -11,20 +11,20 @@ const {
   removeConfig,
   getConfig,
   setConfig,
-} = require('./utils');
+} = require('./utils')
 
 // use this plugin to close to the real login.
-puppeteer.use(StealthPlugin());
+puppeteer.use(StealthPlugin())
 
-const { country } = getConfig();
+const { country } = getConfig()
 
-const usUrl = 'https://leetcode.com';
-const cnUrl = 'https://leetcode-cn.com';
-const baseUrl = country === 'us' ? usUrl : cnUrl;
-const graphqlUrl = `${baseUrl}/graphql`;
+const usUrl = 'https://leetcode.com'
+const cnUrl = 'https://leetcode-cn.com'
+const baseUrl = country === 'us' ? usUrl : cnUrl
+const graphqlUrl = `${baseUrl}/graphql`
 
 const login = async () => {
-  let loginUrl = baseUrl;
+  let loginUrl = baseUrl
   if (country === undefined) {
     loginUrl = (
       await inquirer.prompt({
@@ -33,65 +33,65 @@ const login = async () => {
         message: 'Log in to:',
         choices: [usUrl, cnUrl],
       })
-    ).baseUrl;
-    setConfig({ country: loginUrl === cnUrl ? 'cn' : 'us' });
+    ).baseUrl
+    setConfig({ country: loginUrl === cnUrl ? 'cn' : 'us' })
   }
-  loginUrl += '/accounts/login/';
+  loginUrl += '/accounts/login/'
 
-  const spinner = ora('Login...').start();
+  const spinner = ora('Login...').start()
   try {
-    const browser = await puppeteer.launch({ headless: false });
-    const page = await browser.newPage();
-    await page.goto(loginUrl);
-    await page.waitForFunction('window.location.href.indexOf("login") === -1');
-    let cookies = await page.cookies();
-    await browser.close();
-    spinner.stop();
+    const browser = await puppeteer.launch({ headless: false })
+    const page = await browser.newPage()
+    await page.goto(loginUrl)
+    await page.waitForFunction('window.location.href.indexOf("login") === -1')
+    let cookies = await page.cookies()
+    await browser.close()
+    spinner.stop()
     cookies = cookies.reduce((acc, cookie) => {
-      const { name } = cookie;
-      acc[name] = cookie;
-      return acc;
-    }, {});
-    setConfig({ cookies });
-    return cookies;
+      const { name } = cookie
+      acc[name] = cookie
+      return acc
+    }, {})
+    setConfig({ cookies })
+    return cookies
   } catch (error) {
-    console.error('Login failure, retry...', error.message);
-    throw error;
+    console.error('Login failure, retry...', error.message)
+    throw error
   } finally {
-    spinner.stop();
+    spinner.stop()
   }
-};
+}
 
 const getCookie = async () => {
   // eslint-disable-line
   try {
-    const { cookies } = getConfig();
-    const { LEETCODE_SESSION } = cookies;
+    const { cookies } = getConfig()
+    const { LEETCODE_SESSION } = cookies
     if (
       !LEETCODE_SESSION ||
       new Date(LEETCODE_SESSION.expires) <= new Date().getTime() / 1000
     ) {
-      console.error('Cookie expires, retry...');
-      removeConfig('cookies');
-      return getCookie();
+      console.error('Cookie expires, retry...')
+      removeConfig('cookies')
+      return getCookie()
     }
     return Object.keys(cookies).reduce((acc, name) => {
-      acc[name] = cookies[name].value;
-      return acc;
-    }, {});
+      acc[name] = cookies[name].value
+      return acc
+    }, {})
   } catch (error) {
-    const cookies = await login();
-    return cookies;
+    const cookies = await login()
+    return cookies
   }
-};
+}
 
 const createGqlRequest = async () => {
-  const cookies = await getCookie();
+  const cookies = await getCookie()
   const client = new GraphQLClient(graphqlUrl, {
     headers: getHeaders(cookies),
-  });
-  return client.request.bind(client);
-};
+  })
+  return client.request.bind(client)
+}
 
 // restful request
 // const createRequest = async () => {
@@ -102,11 +102,11 @@ const createGqlRequest = async () => {
 //     });
 // };
 const filterAcQuestions = (questions = []) =>
-  questions.filter(({ status }) => status === 'ac');
+  questions.filter(({ status }) => status === 'ac')
 
 const getAllACQuestions = async () => {
-  const gqlRequest = await createGqlRequest();
-  const spinner = ora('Fetching all questions...').start();
+  const gqlRequest = await createGqlRequest()
+  const spinner = ora('Fetching all questions...').start()
   // interface see https://leetcode-cn.com/problems/add-two-numbers/
   const json = await gqlRequest(`{
     allQuestions{
@@ -116,15 +116,15 @@ const getAllACQuestions = async () => {
       difficulty
       questionId,
     }
-  }`);
-  spinner.stop();
-  const questions = json.allQuestions || [];
-  return filterAcQuestions(questions);
-};
+  }`)
+  spinner.stop()
+  const questions = json.allQuestions || []
+  return filterAcQuestions(questions)
+}
 
 // get details of ac code.
 const getQuestionData = async (titleSlug) => {
-  const qglRequest = await createGqlRequest();
+  const qglRequest = await createGqlRequest()
   // interface from 'https://leetcode-cn.com/problems/add-two-numbers/'
   const json = await qglRequest(`{
     question(titleSlug: "${titleSlug}") {
@@ -133,14 +133,14 @@ const getQuestionData = async (titleSlug) => {
         slug
       }
     }
-  }`);
-  const question = json.question || {};
-  return question;
-};
+  }`)
+  const question = json.question || {}
+  return question
+}
 
 module.exports = {
   login,
   getAllACQuestions,
   getQuestionData,
   getCookie,
-};
+}

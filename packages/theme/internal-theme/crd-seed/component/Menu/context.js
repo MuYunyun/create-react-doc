@@ -1,11 +1,11 @@
-import * as React from 'react';
+import * as React from 'react'
 
-const { createContext, useContext } = React;
+const { createContext, useContext } = React
 
-const MenuContext = createContext(undefined);
+const MenuContext = createContext(undefined)
 
 export const MenuProvider = ({ children, value }) => (
   <MenuContext.Provider value={value}>{children}</MenuContext.Provider>
-);
+)
 
-export const useMenuContext = () => useContext(MenuContext);
+export const useMenuContext = () => useContext(MenuContext)

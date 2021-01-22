@@ -1,4 +1,4 @@
-const protocol = process.env.HTTPS === 'true' ? 'https' : 'http';
+const protocol = process.env.HTTPS === 'true' ? 'https' : 'http'
 
 module.exports = (cmd, webpackConf) => {
   return {
@@ -30,5 +30,5 @@ module.exports = (cmd, webpackConf) => {
     watchOptions: {
       ignored: /node_modules/,
     },
-  };
-};
+  }
+}

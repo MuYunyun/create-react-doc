@@ -1,7 +1,7 @@
-const { removeConfig } = require('./utils');
+const { removeConfig } = require('./utils')
 
 const logOut = () => {
-  removeConfig('cookies');
-};
+  removeConfig('cookies')
+}
 
-module.exports = logOut;
+module.exports = logOut
