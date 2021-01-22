@@ -2,8 +2,8 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun / create-react-doc：📝简约的React驱动静态站点生成器。",
-    "count": 72,
-    "uniques": 21
+    "count": 69,
+    "uniques": 23
   },
   {
     "path": "/MuYunyun/create-react-doc/issues",
@@ -24,12 +24,6 @@
     "uniques": 4
   },
   {
-    "path": "/MuYunyun/create-react-doc/actions",
-    "title": "Actions · MuYunyun/create-react-doc",
-    "count": 8,
-    "uniques": 1
-  },
-  {
     "path": "/MuYunyun/create-react-doc/issues/69",
     "title": "build error · Issue #69 · MuYunyun/create-react-doc",
     "count": 6,
@@ -42,21 +36,27 @@
     "uniques": 2
   },
   {
-    "path": "/MuYunyun/create-react-doc/tree/gh-pages",
-    "title": "MuYunyun/create-react-doc at gh-pages",
-    "count": 4,
+    "path": "/MuYunyun/create-react-doc/blob/main/.github/workflows/gh-pages.yml",
+    "title": "create-react-doc/gh-pages.yml at main · MuYunyun/create-react-doc",
+    "count": 3,
     "uniques": 2
   },
   {
-    "path": "/MuYunyun/create-react-doc/blob/main/injectLogic/index.js",
-    "title": "create-react-doc/index.js at main · MuYunyun/create-react-doc · GitHub",
+    "path": "/MuYunyun/create-react-doc/issues/new",
+    "title": "New Issue · MuYunyun/create-react-doc",
     "count": 3,
-    "uniques": 3
+    "uniques": 2
   },
   {
-    "path": "/MuYunyun/create-react-doc/tree/main/docs",
-    "title": "create-react-doc/docs at main · MuYunyun/create-react-doc",
+    "path": "/MuYunyun/create-react-doc/tree/main/.github",
+    "title": "create-react-doc/.github at main · MuYunyun/create-react-doc",
     "count": 3,
-    "uniques": 3
+    "uniques": 2
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/tree/main/.github/workflows",
+    "title": "create-react-doc/.github/workflows at main · MuYunyun/create-react-doc",
+    "count": 3,
+    "uniques": 2
   }
 ]
