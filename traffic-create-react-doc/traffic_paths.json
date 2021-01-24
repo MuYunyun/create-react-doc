@@ -2,14 +2,14 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 68,
-    "uniques": 22
+    "count": 58,
+    "uniques": 21
   },
   {
     "path": "/MuYunyun/create-react-doc/issues",
     "title": "Issues · MuYunyun/create-react-doc",
-    "count": 43,
-    "uniques": 5
+    "count": 39,
+    "uniques": 4
   },
   {
     "path": "/MuYunyun/create-react-doc/issues/67",
@@ -20,7 +20,7 @@
   {
     "path": "/MuYunyun/create-react-doc/issues/63",
     "title": "Feature Request: support mathjax · Issue #63 · MuYunyun/create-react-doc",
-    "count": 12,
+    "count": 6,
     "uniques": 4
   },
   {
@@ -36,27 +36,27 @@
     "uniques": 2
   },
   {
-    "path": "/MuYunyun/create-react-doc/blob/main/.github/workflows/gh-pages.yml",
-    "title": "create-react-doc/gh-pages.yml at main · MuYunyun/create-react-doc",
-    "count": 3,
-    "uniques": 2
-  },
-  {
     "path": "/MuYunyun/create-react-doc/issues/new",
     "title": "New Issue · MuYunyun/create-react-doc",
     "count": 3,
     "uniques": 2
   },
   {
-    "path": "/MuYunyun/create-react-doc/tree/main/.github",
-    "title": "create-react-doc/.github at main · MuYunyun/create-react-doc",
-    "count": 3,
+    "path": "/MuYunyun/create-react-doc/blob/main/README-en.md",
+    "title": "create-react-doc/README-en.md at main · MuYunyun/create-react-doc",
+    "count": 2,
     "uniques": 2
   },
   {
-    "path": "/MuYunyun/create-react-doc/tree/main/.github/workflows",
-    "title": "create-react-doc/.github/workflows at main · MuYunyun/create-react-doc",
-    "count": 3,
+    "path": "/MuYunyun/create-react-doc/issues/50",
+    "title": "Talk about how to clone template into target dir. · Issue #50 · MuYunyun/crea...",
+    "count": 2,
+    "uniques": 2
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/pulls",
+    "title": "Pull requests · MuYunyun/create-react-doc",
+    "count": 2,
     "uniques": 2
   }
 ]
