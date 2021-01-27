@@ -30,6 +30,7 @@ module.exports = function (cmd) {
             options: {
               multiple: [
                 { search: '__project_root__', replace: upath.normalizeSafe(paths.projectPath), flags: 'ig' },
+                { search: '__project_theme__', replace: upath.normalizeSafe(paths.defaultTheme), flags: 'ig' },
               ],
             },
           },
