@@ -2,26 +2,26 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 53,
-    "uniques": 17
+    "count": 46,
+    "uniques": 20
   },
   {
     "path": "/MuYunyun/create-react-doc/issues",
     "title": "Issues · MuYunyun/create-react-doc",
-    "count": 41,
-    "uniques": 4
+    "count": 20,
+    "uniques": 3
   },
   {
     "path": "/MuYunyun/create-react-doc/issues/67",
     "title": "An unexpected error occurred: \"https://registry.yarnpkg.com/create-create-rea...",
-    "count": 14,
+    "count": 9,
     "uniques": 2
   },
   {
-    "path": "/MuYunyun/create-react-doc/issues/63",
-    "title": "Feature Request: support mathjax · Issue #63 · MuYunyun/create-react-doc",
+    "path": "/MuYunyun/create-react-doc/blob/main/README-en.md",
+    "title": "create-react-doc/README-en.md at main · MuYunyun/create-react-doc",
     "count": 6,
-    "uniques": 4
+    "uniques": 3
   },
   {
     "path": "/MuYunyun/create-react-doc/issues/69",
@@ -30,26 +30,20 @@
     "uniques": 1
   },
   {
-    "path": "/MuYunyun/create-react-doc/issues/52",
-    "title": "升级主题包以后业务方如何能一键升级? · Issue #52 · MuYunyun/create-react-doc",
+    "path": "/MuYunyun/create-react-doc/issues/63",
+    "title": "Feature Request: support mathjax · Issue #63 · MuYunyun/create-react-doc",
     "count": 4,
-    "uniques": 2
+    "uniques": 3
   },
   {
     "path": "/MuYunyun/create-react-doc/issues/new",
     "title": "New Issue · MuYunyun/create-react-doc",
-    "count": 4,
-    "uniques": 2
+    "count": 3,
+    "uniques": 1
   },
   {
     "path": "/MuYunyun/create-react-doc/issues/50",
     "title": "Talk about how to clone template into target dir. · Issue #50 · MuYunyun/crea...",
-    "count": 3,
-    "uniques": 3
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/pulls",
-    "title": "Pull requests · MuYunyun/create-react-doc",
     "count": 2,
     "uniques": 2
   },
@@ -58,5 +52,11 @@
     "title": "create-react-doc/docs at main · MuYunyun/create-react-doc",
     "count": 2,
     "uniques": 2
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/issues/52",
+    "title": "升级主题包以后业务方如何能一键升级? · Issue #52 · MuYunyun/create-react-doc",
+    "count": 2,
+    "uniques": 1
   }
 ]
