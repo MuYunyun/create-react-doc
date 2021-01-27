@@ -4,13 +4,6 @@
   "description": "Default Theme with Create React Doc",
   "main": "index.js",
   "dependencies": {
-    "classnames": "^2.2.6",
-    "diana": "^1.0.2",
-    "less": "^3.0.2",
-    "react": "^16.8.4",
-    "react-dom": "^16.8.4",
-    "react-dynamic-loadable": "^1.1.2",
-    "react-hot-loader": "^4.1.1",
     "react-markdown": "^3.3.0",
     "react-router-dom": "^4.2.2",
     "react-switch": "^5.0.1"

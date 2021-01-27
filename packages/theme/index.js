@@ -16,13 +16,8 @@ export default function (Lazyload, props) {
     })
   }
 
-  // eslint-disable-next-line no-undef
-  const { theme } = DOCSCONFIG || {}
-
-  // todo: if there is requirement for custom theme. create-react-doc will provide the ability to use theme as node_modules.
-  // and provide the theme template.
-  // eslint-disable-next-line import/no-dynamic-require
-  const CustomTheme = require(`./internal-theme/${theme}`).default
+  // support for custom theme.
+  const CustomTheme = require('__project_theme__').default
 
   return (
     // use custom theme here.

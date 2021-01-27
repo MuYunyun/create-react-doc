@@ -1,6 +1,9 @@
 const path = require('path')
 const fs = require('fs')
+const { execSync } = require('child_process')
 const { resolveApp } = require('crd-utils')
+const chalk = require('chalk')
+const { getDocsConfig } = require('../utils')
 
 // handle the problem of symbol in any platform
 const appDirectory = fs.realpathSync(process.cwd())
@@ -86,19 +89,37 @@ function getExcludeFoldersRegExp() {
 const toolDirectory = fs.realpathSync(__dirname)
 const resolveTool = relativePath => path.resolve(toolDirectory, relativePath)
 
+let theme = ''
+
+const docsConfigPath = resolveApp('config.yml')
+
+if (docsConfigPath) {
+  const docsConfig = getDocsConfig()
+  theme = docsConfig.theme
+
+  // install custom theme
+  if (!fs.existsSync(resolveApp(`node_modules/${theme}`))) {
+    chalk.blue(`Install theme ${theme}`)
+    // -W means ignore-workspace-root-check
+    execSync(`yarn add ${theme} -D -W`)
+    chalk.blue(`Install theme ${theme} done`)
+  }
+}
+
 module.exports = {
   // markdown dir
   crdConf: getCrdConf(),
   docsGitIgnore: resolveApp('.gitignore'),
   docsNodeModules: resolveApp(''),
-  docsConfig: resolveApp('config.yml'),
+  docsConfig: docsConfigPath,
   docsReadme: resolveApp('README.md'),
   docsBuildDist: resolveApp('.crd-dist'),
   cacheDirPath: resolveApp('.cache'),
   searchFilePath: resolveApp('.cache/search.js'),
   watchFilePath: resolveApp('.cache/watch-dir.js'),
   defaultHTMLPath: resolveApp('node_modules/crd-theme/index.html'),
-  defaultTemplatePath: resolveApp('temp/node_modules/crd-templates/default'),
+  defaultTemplatePath: resolveApp('node_modules/crd-templates/default'),
+  defaultTheme: resolveApp(`node_modules/${theme}`),
   defaultNodeModules: modPath,
   projectPath: appDirectory,
   publicPath: '',
