@@ -99,10 +99,16 @@ if (docsConfigPath) {
 
   // install custom theme
   if (!fs.existsSync(resolveApp(`node_modules/${theme}`))) {
+    // todo: chalkblue(xxx) not show in the terminal
     chalk.blue(`Install theme ${theme}`)
     // -W means ignore-workspace-root-check
     execSync(`yarn add ${theme} -D -W`)
     chalk.blue(`Install theme ${theme} done`)
+  } else {
+    chalk.blue(`Upgrade theme ${theme}`)
+    // -W means ignore-workspace-root-check
+    execSync(`yarn upgrade ${theme}`)
+    chalk.blue(`Upgrade theme ${theme} done`)
   }
 }
 

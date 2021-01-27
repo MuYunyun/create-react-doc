@@ -4,7 +4,6 @@
   "description": "Default Theme with Create React Doc",
   "main": "index.js",
   "dependencies": {
-    "react-markdown": "^3.3.0",
     "react-router-dom": "^4.2.2",
     "react-switch": "^5.0.1"
   },
