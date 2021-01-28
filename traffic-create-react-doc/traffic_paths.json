@@ -2,13 +2,13 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 37,
-    "uniques": 19
+    "count": 41,
+    "uniques": 21
   },
   {
     "path": "/MuYunyun/create-react-doc/issues",
     "title": "Issues · MuYunyun/create-react-doc",
-    "count": 12,
+    "count": 15,
     "uniques": 2
   },
   {
@@ -36,6 +36,12 @@
     "uniques": 2
   },
   {
+    "path": "/MuYunyun/create-react-doc/issues/74",
+    "title": "inject variable in webpack · Issue #74 · MuYunyun/create-react-doc",
+    "count": 3,
+    "uniques": 1
+  },
+  {
     "path": "/MuYunyun/create-react-doc/issues/50",
     "title": "Talk about how to clone template into target dir. · Issue #50 · MuYunyun/crea...",
     "count": 2,
@@ -50,12 +56,6 @@
   {
     "path": "/MuYunyun/create-react-doc/issues/52",
     "title": "升级主题包以后业务方如何能一键升级? · Issue #52 · MuYunyun/create-react-doc",
-    "count": 2,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/network/dependents",
-    "title": "Network Dependents · MuYunyun/create-react-doc",
     "count": 2,
     "uniques": 1
   }
