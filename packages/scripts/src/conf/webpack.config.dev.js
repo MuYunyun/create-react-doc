@@ -22,7 +22,7 @@ module.exports = function (cmd) {
       const loaders = []
       loaders.push({
         // Process JS with Babel.
-        test: /\.(js|jsx|mjs)$/,
+        test: /\.(js|jsx)$/,
         exclude: paths.getExcludeFoldersRegExp.concat(/\.(cache)/),
         use: [
           {

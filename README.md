@@ -28,28 +28,26 @@
 * 建站理念: 文件即站点 (Files as a Site)。通过自定义指定文件, 快速搭建项目文档、博客站点。
 * 开箱即用: 一键生成可运行文档站点, 无需关心站点环境配置信息。
 * 性能: 文档支持懒加载提升站点加载速度。
-* 工作流: 集成 Github action, 自动化打包、发布站点。
+* 工作流: 集成 Github action。支持自动化打包、发布站点。
+* 个性化: 支持自定义主题。
 
 > [快速上手](http://muyunyun.cn/create-react-doc/#/%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B)
 
 ## 主题
 
-当前默认使用的主题是 [crd-seed](https://github.com/MuYunyun/create-react-doc/tree/main/packages/theme/internal-theme/crd-seed)。
-
-使用该主题搭建的站点
-
-* [blog](http://muyunyun.cn/blog)
-  * ![](http://with.muyunyun.cn/ec330b8ac2175c828be41f446f9f9619.jpg)
-  * ![](http://with.muyunyun.cn/2e7440e4256debda2d73a4e6392c7146.jpg-300)
-* [diana](https://muyunyun.cn/diana/)
-
-crd-seed 主题特性:
+官方提供了默认主题 [crd-seed](https://github.com/MuYunyun/create-react-doc/tree/main/packages/crd-seed)。该主题有以下特性:
 
 * 适配移动、PC 多端展示。
 * 支持暗黑模式。
 * 文档支持内嵌 codepen、codesansbox。
 * GitHub 联动。
-* 基于 `React 17+`、`webpack 5` 等前沿技术栈搭建。
+
+使用该主题搭建的站点有:
+
+* [blog](http://muyunyun.cn/blog)
+  * ![](http://with.muyunyun.cn/ec330b8ac2175c828be41f446f9f9619.jpg)
+  * ![](http://with.muyunyun.cn/2e7440e4256debda2d73a4e6392c7146.jpg-300)
+* [diana](https://muyunyun.cn/diana/)
 
 > 如果您的产品从中受益，欢迎<a href="https://github.com/MuYunyun/create-react-doc/issues/new" target="_blank">留言补充</a>
 

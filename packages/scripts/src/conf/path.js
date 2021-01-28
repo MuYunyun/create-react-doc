@@ -67,28 +67,6 @@ const logoPath = () => {
   return false
 }
 
-// get exclude folders
-function getExcludeFoldersRegExp() {
-  if (!fs.existsSync(modPath)) return []
-  let regxExc = fs.readdirSync(modPath)
-  regxExc = regxExc.filter(
-    item => !/create-react-doc(.*)|crd-scripts|crd-theme/.test(item),
-  )
-  regxExc = regxExc.map((item) => {
-    let rgxPath = `node_modules${path.sep}${item}`
-    if (path.sep === '\\') {
-      // to watch: is '\\' needful?
-      rgxPath = `node_modules\\${path.sep}${item}`
-    }
-    return new RegExp(rgxPath)
-  })
-  return regxExc
-}
-
-// crd tool dir
-const toolDirectory = fs.realpathSync(__dirname)
-const resolveTool = relativePath => path.resolve(toolDirectory, relativePath)
-
 let theme = ''
 
 const docsConfigPath = resolveApp('config.yml')
@@ -111,6 +89,31 @@ if (docsConfigPath) {
     chalk.blue(`Upgrade theme ${theme} done`)
   }
 }
+
+// get exclude folders
+function getExcludeFoldersRegExp() {
+  if (!fs.existsSync(modPath)) return []
+  let regexp = fs.readdirSync(modPath)
+  /** whitelist to include */
+  const whiteListRegExp = new RegExp(`create-react-doc(.*)|crd-scripts|crd-theme|${theme}`)
+  regexp = regexp.filter(
+    item => !whiteListRegExp.test(item),
+    // item => !/create-react-doc(.*)|crd-scripts|crd-theme/.test(item),
+  )
+  regexp = regexp.map((item) => {
+    let rgxPath = `node_modules${path.sep}${item}`
+    if (path.sep === '\\') {
+      // to watch: is '\\' needful?
+      rgxPath = `node_modules\\${path.sep}${item}`
+    }
+    return new RegExp(rgxPath)
+  })
+  return regexp
+}
+
+// crd tool dir
+const toolDirectory = fs.realpathSync(__dirname)
+const resolveTool = relativePath => path.resolve(toolDirectory, relativePath)
 
 module.exports = {
   // markdown dir

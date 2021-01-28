@@ -6,4 +6,3 @@ ReactDOM.render(
   <RouterRoot />,
   document.getElementById('root'),
 )
-

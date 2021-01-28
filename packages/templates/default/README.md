@@ -33,7 +33,7 @@ Create React Doc 是一个使用 React 的 markdown 文档站点生成工具。�
 
 ## 主题
 
-当前默认使用的主题是 [crd-seed](https://github.com/MuYunyun/create-react-doc/tree/main/packages/theme/internal-theme/crd-seed)。
+当前默认使用的主题是 [crd-seed](https://github.com/MuYunyun/create-react-doc/tree/main/packages/crd-seed)。
 
 使用该主题搭建的站点
 
