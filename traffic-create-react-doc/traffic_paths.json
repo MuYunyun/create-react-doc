@@ -2,13 +2,13 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 36,
-    "uniques": 20
+    "count": 40,
+    "uniques": 22
   },
   {
     "path": "/MuYunyun/create-react-doc/issues",
     "title": "Issues · MuYunyun/create-react-doc",
-    "count": 12,
+    "count": 13,
     "uniques": 1
   },
   {
@@ -20,12 +20,18 @@
   {
     "path": "/MuYunyun/create-react-doc/issues/74",
     "title": "inject variable in webpack · Issue #74 · MuYunyun/create-react-doc",
-    "count": 3,
+    "count": 4,
     "uniques": 1
   },
   {
     "path": "/MuYunyun/create-react-doc/issues/50",
     "title": "Talk about how to clone template into target dir. · Issue #50 · MuYunyun/crea...",
+    "count": 2,
+    "uniques": 2
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/tree/main/packages",
+    "title": "create-react-doc/packages at main · MuYunyun/create-react-doc",
     "count": 2,
     "uniques": 2
   },
@@ -50,12 +56,6 @@
   {
     "path": "/MuYunyun/create-react-doc/issues/new",
     "title": "New Issue · MuYunyun/create-react-doc",
-    "count": 2,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/network/dependents",
-    "title": "Network Dependents · MuYunyun/create-react-doc",
     "count": 2,
     "uniques": 1
   }
