@@ -1,6 +1,4 @@
-import * as React from 'react'
-
-const { createContext, useContext } = React
+import { createContext, useContext } from 'react'
 
 const MenuContext = createContext(undefined)
 

@@ -1,7 +1,5 @@
-import * as React from 'react'
+import { useState, useLayoutEffect, useRef } from 'react'
 import { throttle } from './utils'
-
-const { useState, useLayoutEffect, useRef } = React
 
 const Affix = ({
   offsetTop,

@@ -1,9 +1,7 @@
-import * as React from 'react'
+import { useEffect } from 'react'
 import cx from 'classnames'
 import loadSprite from './loadSprite'
 import styles from './style/index.less'
-
-const { useEffect } = React
 
 /* omit some props depends on arr */
 const omit = (props, arr) =>
