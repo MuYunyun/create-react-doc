@@ -1,4 +1,4 @@
-import * as React from 'react'
+import { useState } from 'react'
 import cx from 'classnames'
 import MenuItem from './MenuItem'
 import { SubMenu } from './SubMenu'
@@ -16,7 +16,7 @@ const Menu = ({
   toggle,
 }) => {
   /* 存储 hover 状态的 key 值, 在垂直模式中需要根据 hover 的 key 值高亮父节点 */
-  const [hoverKey, setHoverKey] = React.useState('')
+  const [hoverKey, setHoverKey] = useState('')
   const MenuContext = {
     theme,
     mode: 'inline',

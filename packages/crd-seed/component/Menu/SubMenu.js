@@ -1,4 +1,4 @@
-import { useState, useRef, useLayoutEffect } from 'react'
+import { useState, useRef, useLayoutEffect, Fragment, Children, cloneElement } from 'react'
 import cx from 'classnames'
 import Transition from './transition'
 import { getMenuStyle } from './util'
@@ -55,9 +55,9 @@ function SubMenu({
    */
   function isReactFragment(variableToInspect) {
     if (variableToInspect.type) {
-      return variableToInspect.type === React.Fragment
+      return variableToInspect.type === Fragment
     }
-    return variableToInspect === React.Fragment
+    return variableToInspect === Fragment
   }
 
   /* 行内模式下, 渲染子节点 */
@@ -65,7 +65,7 @@ function SubMenu({
     return (
       // eslint-disable-next-line quotes
       <>
-        {React.Children.map(child || children, (reactNode) => {
+        {Children.map(child || children, (reactNode) => {
           if (!reactNode || typeof reactNode !== 'object') {
             return null
           }
@@ -76,7 +76,7 @@ function SubMenu({
           ) {
             return renderChild(childElement.props.children)
           }
-          return React.cloneElement(childElement, {
+          return cloneElement(childElement, {
             level: level + 1,
             ...childElement.props,
           })
@@ -106,7 +106,7 @@ function SubMenu({
   /* 判断 subMenu 是否被选中, 当子节点被选中时, 父节点也会被高亮;
     同时在 vertical 模式时, 当子节点被 hover 时, 父节点也会被高亮; */
   const judgeSubmenuSelect = (reactChildren) => {
-    const result = React.Children.toArray(reactChildren).some((reactNode) => {
+    const result = Children.toArray(reactChildren).some((reactNode) => {
       if (!reactNode || typeof reactNode !== 'object') {
         return false
       }
