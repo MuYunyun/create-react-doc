@@ -68,25 +68,32 @@ const logoPath = () => {
 }
 
 let theme = ''
+// theme in develop mode.
+let devTheme = false
 
 const docsConfigPath = resolveApp('config.yml')
 
 if (docsConfigPath) {
   const docsConfig = getDocsConfig()
-  theme = docsConfig.theme
-
-  // install custom theme
-  if (!fs.existsSync(resolveApp(`node_modules/${theme}`))) {
-    // todo: chalkblue(xxx) not show in the terminal
-    chalk.blue(`Install theme ${theme}`)
-    // -W means ignore-workspace-root-check
-    execSync(`yarn add ${theme} -D -W`)
-    chalk.blue(`Install theme ${theme} done`)
+  if (docsConfig.devTheme) {
+    devTheme = docsConfig.devTheme
+    theme = docsConfig.devTheme
   } else {
-    chalk.blue(`Upgrade theme ${theme}`)
-    // -W means ignore-workspace-root-check
-    execSync(`yarn upgrade ${theme}`)
-    chalk.blue(`Upgrade theme ${theme} done`)
+    theme = docsConfig.theme
+
+    // install custom theme
+    if (!fs.existsSync(resolveApp(`node_modules/${theme}`))) {
+      // todo: chalkblue(xxx) not show in the terminal
+      chalk.blue(`Install theme ${theme}`)
+      // -W means ignore-workspace-root-check
+      execSync(`yarn add ${theme} -D -W`)
+      chalk.blue(`Install theme ${theme} done`)
+    } else {
+      chalk.blue(`Upgrade theme ${theme}`)
+      // -W means ignore-workspace-root-check
+      execSync(`yarn upgrade ${theme}`)
+      chalk.blue(`Upgrade theme ${theme} done`)
+    }
   }
 }
 
@@ -126,9 +133,12 @@ module.exports = {
   cacheDirPath: resolveApp('.cache'),
   searchFilePath: resolveApp('.cache/search.js'),
   watchFilePath: resolveApp('.cache/watch-dir.js'),
+  templatePath: resolveApp('node_modules/crd-templates'),
   defaultHTMLPath: resolveApp('node_modules/crd-theme/index.html'),
-  defaultTemplatePath: resolveApp('node_modules/crd-templates/default'),
-  defaultTheme: resolveApp(`node_modules/${theme}`),
+  defaultTemplateThemePath: resolveApp('node_modules/crd-templates/theme/default'),
+  defaultTheme: devTheme
+    ? resolveApp(`${devTheme}`)
+    : resolveApp(`node_modules/${theme}`),
   defaultNodeModules: modPath,
   projectPath: appDirectory,
   publicPath: '',

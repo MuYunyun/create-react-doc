@@ -1,0 +1,21 @@
+# details see http://muyunyun.cn/create-react-doc/#/config.yml
+
+# Site
+# title:
+
+# Menu dir
+## you can also set detailed dir, such as BasicSkill/css
+menu: Introduction
+## set init open menu keys
+# menuOpenKeys:
+
+# site theme
+devTheme: ./index
+
+# Github
+## if you want to editing pages on github, you should config these arguments.
+# user:
+# repo:
+
+# Available values: en | zh-cn
+language: en
