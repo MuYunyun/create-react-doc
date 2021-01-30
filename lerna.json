@@ -7,7 +7,7 @@
       ]
     },
     "publish": {
-      "allowBranch": "main",
+      "allowBranch": ["main", "qa/latest"],
       "message": "chore: publish"
     }
   },

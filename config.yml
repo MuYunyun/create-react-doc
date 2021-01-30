@@ -5,12 +5,13 @@ title: Create React Doc
 
 # Menu dir
 ## you can also set detailed dir, such as BasicSkill/css
-menu: docs/快速上手.md,docs/站点发布.md,docs/config.yml.md,docs/高阶用法.md,docs/其它工具.md
+menu: docs/快速上手.md,docs/站点发布.md,docs/config.yml.md,docs/高阶用法.md,docs/自定义主题.md,docs/其它工具.md
 ## set init open menu keys
 # menuOpenKeys:
 
 # site theme
-theme: crd-seed
+devTheme: packages/crd-seed/index
+# theme: crd-seed
 
 # Github
 ## if you want to editing pages on github, you should config these arguments.

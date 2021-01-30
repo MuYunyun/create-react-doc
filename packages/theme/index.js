@@ -18,7 +18,6 @@ export default function (Lazyload, props) {
 
   // support for custom theme.
   const CustomTheme = require('__project_theme__').default
-
   return (
     // use custom theme here.
     <CustomTheme {...props} />

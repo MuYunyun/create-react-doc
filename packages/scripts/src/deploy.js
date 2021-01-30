@@ -1,4 +1,3 @@
-const fs = require('fs')
 const ghpages = require('gh-pages')
 const loading = require('loading-cli')
 

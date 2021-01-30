@@ -4,6 +4,7 @@ const path = require('path')
 const program = require('commander')
 const {
   initProject,
+  initTheme,
   initCache,
   Deploy,
   paths,
@@ -11,6 +12,7 @@ const {
   Servers,
   Build,
 } = require('crd-scripts')
+const input = require('@inquirer/input')
 const pkg = require('./package.json')
 
 program
@@ -19,6 +21,7 @@ program
   .option('start', 'Documents generated.')
   .option('build', 'Build the documents generated.')
   .option('deploy', 'Deploy site to gh-pages.')
+  .option('theme', 'Create a new theme')
   .option('-o, --output <path>', 'Writes the compiled file to the disk directory.', '.crd-dist')
   .option('-p, --port [number]', 'The port.', 3000)
   .option('--host [host]', 'The host.', '0.0.0.0')
@@ -34,7 +37,23 @@ program
   })
   // the third value in process.argv is the value we want.
   .parse(process.argv)
-if (!program.start && !program.build && !program.deploy) return initProject(program)
+
+const { start, build, deploy, theme } = program
+
+if (!start && !build && !deploy && !theme) return initProject(program)
+
+if (theme) {
+  return input({
+    message: "What's the theme name?",
+    validate: (inputThemeName) => {
+      if (inputThemeName.length === 0) return 'Please input correct theme name'
+      return true
+    },
+  }).then((themeName) => {
+    initTheme(themeName)
+  })
+}
+
 // create-react-doc tool root dir.
 // program.crdPath = path.join(__dirname, '../');
 // all markdown dir
@@ -44,7 +63,7 @@ program.output = path.join(process.cwd(), program.output)
 const docsConfig = getDocsConfig()
 
 // assign all the markdown dir
-if (program.start || program.build) {
+if (start || build) {
   fs.existsSync(paths.docsReadme) &&
     program.markdownPaths.push(paths.docsReadme)
 
@@ -56,13 +75,13 @@ if (program.start || program.build) {
       )
 }
 
-if (program.build && fs.pathExistsSync(paths.docsBuildDist)) {
+if (build && fs.pathExistsSync(paths.docsBuildDist)) {
   // clean dir
   fs.emptyDirSync(paths.docsBuildDist)
 }
 
 // deploy code to special git repo and branch.
-if (program.deploy) {
+if (deploy) {
   return Deploy(program, docsConfig)
 }
 
@@ -81,7 +100,7 @@ program.markdownPaths.forEach((item) => {
 if (isExists) {
   fs.ensureDirSync(paths.cacheDirPath)
   initCache(program, () => {
-    if (program.build) {
+    if (build) {
       Build(program)
     } else {
       Servers(program)
