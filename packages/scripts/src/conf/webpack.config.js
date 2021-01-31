@@ -27,7 +27,7 @@ if (paths.docsConfig) {
   // define.SEARCHCONTENT = searchContent && searchContent.toString();
 
   // if there is inject logic in docsConfig
-  if (docsConfig.inject && fs.existsSync(resolveApp(docsConfig.inject))) {
+  if (docsConfig && docsConfig.inject && fs.existsSync(resolveApp(docsConfig.inject))) {
     define.INJECT = require(resolveApp(docsConfig.inject))
   }
 }
