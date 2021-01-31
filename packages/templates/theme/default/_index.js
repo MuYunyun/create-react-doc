@@ -7,9 +7,7 @@ const {{name}} = (props) => {
     <Switch>
       <Route
         path="/"
-        render={(routeProps) => {
-          return <div>Your Custom Theme</div>
-        }}
+        render={(routeProps) => <div>Your Custom Theme</div>}
       />
     </Switch>
   )
