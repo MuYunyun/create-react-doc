@@ -7,7 +7,7 @@ const {{name}} = (props) => {
     <Switch>
       <Route
         path="/"
-        render={(routeProps) => <div className={styles.center}>Your Custom Theme</div>}
+        render={(routeProps) => <div className={styles.center}>Welcome to your own theme</div>}
       />
     </Switch>
   )
