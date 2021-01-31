@@ -1,6 +1,6 @@
 {
   "name": "crd-templates",
-  "version": "0.2.28-alpha.0",
+  "version": "0.2.28-alpha.3",
   "description": "Default Templates with Create React Doc",
   "repository": {
     "type": "git",
