@@ -5,6 +5,7 @@ import './index.less'
 
 // run in the Web/Router.js
 const ThemeSeed = (props) => {
+  console.log('props', props)
   return (
     <Switch>
       <Route
