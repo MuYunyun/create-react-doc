@@ -2,7 +2,7 @@
 import { Switch, Route, Redirect } from 'react-router-dom'
 import styles from './index.less'
 
-const {{name}} = (props) => {
+const {{name}} = ({routeData, menuSource}) => {
   return (
     <div className={styles.center}>
       <Switch>
