@@ -1,6 +1,6 @@
 {
   "name": "create-react-doc",
-  "version": "0.2.30",
+  "version": "0.2.31",
   "description": "Fast static generated site. Just write markdown file.",
   "homepage": "",
   "bin": {
@@ -27,7 +27,7 @@
     "@inquirer/input": "^0.0.13-alpha.0",
     "commander": "^2.12.2",
     "crd-scripts": "^0.2.28",
-    "crd-templates": "^0.2.30",
+    "crd-templates": "^0.2.31",
     "crd-theme": "^0.2.28",
     "fs-extra": "^5.0.0"
   },
