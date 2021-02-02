@@ -2,13 +2,13 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 40,
-    "uniques": 24
+    "count": 43,
+    "uniques": 25
   },
   {
     "path": "/MuYunyun/create-react-doc/issues",
     "title": "Issues · MuYunyun/create-react-doc",
-    "count": 15,
+    "count": 16,
     "uniques": 1
   },
   {
@@ -20,12 +20,18 @@
   {
     "path": "/MuYunyun/create-react-doc/issues/new",
     "title": "New Issue · MuYunyun/create-react-doc",
-    "count": 5,
-    "uniques": 1
+    "count": 6,
+    "uniques": 2
   },
   {
     "path": "/MuYunyun/create-react-doc/pull/77",
     "title": "feat: support custom theme by MuYunyun · Pull Request #77 · MuYunyun/create-r...",
+    "count": 4,
+    "uniques": 2
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/tree/main/packages",
+    "title": "create-react-doc/packages at main · MuYunyun/create-react-doc",
     "count": 4,
     "uniques": 2
   },
@@ -36,27 +42,21 @@
     "uniques": 1
   },
   {
-    "path": "/MuYunyun/create-react-doc/tree/main/packages",
-    "title": "create-react-doc/packages at main · MuYunyun/create-react-doc",
+    "path": "/MuYunyun/create-react-doc/tree/main/packages/crd-seed",
+    "title": "create-react-doc/packages/crd-seed at main · MuYunyun/create-react-doc",
     "count": 3,
     "uniques": 2
   },
   {
-    "path": "/MuYunyun/create-react-doc/issues/78",
-    "title": "首次进入菜单未高亮 · Issue #78 · MuYunyun/create-react-doc",
-    "count": 2,
-    "uniques": 2
+    "path": "/MuYunyun/create-react-doc/issues/72",
+    "title": "support custom theme · Issue #72 · MuYunyun/create-react-doc",
+    "count": 3,
+    "uniques": 1
   },
   {
-    "path": "/MuYunyun/create-react-doc/tree/main/packages/crd-seed",
-    "title": "create-react-doc/packages/crd-seed at main · MuYunyun/create-react-doc",
-    "count": 2,
-    "uniques": 2
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/tree/main/packages/scripts",
-    "title": "create-react-doc/packages/scripts at main · MuYunyun/create-react-doc",
-    "count": 2,
-    "uniques": 2
+    "path": "/MuYunyun/create-react-doc/pulls",
+    "title": "Pull requests · MuYunyun/create-react-doc",
+    "count": 3,
+    "uniques": 1
   }
 ]
