@@ -25,17 +25,17 @@
 
 ## 特性
 
-* 建站理念: 文件即站点 (Files as a Site)。通过自定义指定文件, 快速搭建项目文档、博客站点。
-* 开箱即用: 一键生成可运行文档站点, 无需关心站点环境配置信息。
+* 建站理念: 文件即站点 (Files as a Site)。
+* 开箱即用: 通过指定目录或文档, 一键生成文档、博客站点, 无需关心站点环境配置信息。
 * 性能: 文档支持懒加载提升站点加载速度。
-* 工作流: 集成 Github action。支持自动化打包、发布站点。
-* 个性化: 支持自定义主题。
+* 个性化: 支持[自定义主题](http://muyunyun.cn/create-react-doc/#/%E8%87%AA%E5%AE%9A%E4%B9%89%E4%B8%BB%E9%A2%98)。
+* 工作流: 集成 Github action, 支持自动化打包、发布站点。
 
 > [快速上手](http://muyunyun.cn/create-react-doc/#/%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B)
 
 ## 主题
 
-官方提供了默认主题 [crd-seed](https://github.com/MuYunyun/create-react-doc/tree/main/packages/crd-seed)。该主题有以下特性:
+create-react-doc 提供了官方默认主题 [crd-seed](https://github.com/MuYunyun/create-react-doc/tree/main/packages/crd-seed)。该主题支持以下特性:
 
 * 适配移动、PC 多端展示。
 * 支持暗黑模式。
@@ -49,7 +49,7 @@
   * ![](http://with.muyunyun.cn/2e7440e4256debda2d73a4e6392c7146.jpg-300)
 * [diana](https://muyunyun.cn/diana/)
 
-> 如果您的产品从中受益，欢迎<a href="https://github.com/MuYunyun/create-react-doc/issues/new" target="_blank">留言补充</a>
+如果您想定制化或者分享个人主题, 可以参考[自定义主题](http://muyunyun.cn/create-react-doc/#/%E8%87%AA%E5%AE%9A%E4%B9%89%E4%B8%BB%E9%A2%98)章节。
 
 ## 快速上手
 
@@ -104,4 +104,4 @@ git remote add origin https://github.com/用户或组织名/项目名.git
 git push -u origin main
 ```
 
-> 更多内容可以访问 [站点发布](http://muyunyun.cn/create-react-doc/#/%E7%AB%99%E7%82%B9%E5%8F%91%E5%B8%83)、[高阶用法](http://muyunyun.cn/create-react-doc/#/%E9%AB%98%E9%98%B6%E7%94%A8%E6%B3%95)、[其它工具](http://muyunyun.cn/create-react-doc/#/%E5%85%B6%E5%AE%83%E5%B7%A5%E5%85%B7)。
+> 更多内容可以访问 [站点发布](http://muyunyun.cn/create-react-doc/#/%E7%AB%99%E7%82%B9%E5%8F%91%E5%B8%83)、[高阶用法](http://muyunyun.cn/create-react-doc/#/%E9%AB%98%E9%98%B6%E7%94%A8%E6%B3%95)、[其它工具](http://muyunyun.cn/create-react-doc/#/%E5%85%B6%E5%AE%83%E5%B7%A5%E5%85%B7) 等章节。
