@@ -8,15 +8,13 @@ const {{name}} = (props) => {
       <Switch>
         <Redirect exact from="/" to="/Introduction/hello_world" />
         {routeData.map((item) => {
+          const Comp = item.component
           return (
             <Route
               key={item.path}
               exact
               path={item.path}
-              render={() => {
-                const Comp = item.component
-                return <Comp {...item} />
-              }}
+              render={() => <Comp {...item} />}
             />
           )
         })}
