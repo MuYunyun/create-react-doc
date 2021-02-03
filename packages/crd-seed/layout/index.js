@@ -25,7 +25,7 @@ function BasicLayout({
   // eslint-disable-next-line no-undef
   const { user, repo, branch = 'main', language = 'en', menuOpenKeys } = DOCSCONFIG || {}
   const [inlineCollapsed, setInlineCollapsed] = useState(isMobile)
-  const [selectedKey, setSelectedKey] = useState(`${pathname}.md`)
+  const [selectedKey, setSelectedKey] = useState('')
   const curOpenKeys = getOpenSubMenuKeys(pathname, menuOpenKeys)
 
   useEffect(() => {
@@ -42,6 +42,11 @@ function BasicLayout({
     // eslint-disable-next-line no-undef
     INJECT?.injectWithPathname?.(pathname)
   }, [pathname])
+
+  useEffect(() => {
+    const newPathName = location.pathname
+    setSelectedKey(`${newPathName}.md`)
+  }, location)
 
   const scrollToTop = () => {
     document.body.scrollTop = 0
