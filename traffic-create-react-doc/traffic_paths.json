@@ -2,13 +2,19 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 40,
-    "uniques": 21
+    "count": 53,
+    "uniques": 24
   },
   {
     "path": "/MuYunyun/create-react-doc/issues",
     "title": "Issues · MuYunyun/create-react-doc",
-    "count": 16,
+    "count": 25,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/pulls",
+    "title": "Pull requests · MuYunyun/create-react-doc",
+    "count": 19,
     "uniques": 1
   },
   {
@@ -26,37 +32,31 @@
   {
     "path": "/MuYunyun/create-react-doc/pull/77",
     "title": "feat: support custom theme by MuYunyun · Pull Request #77 · MuYunyun/create-r...",
-    "count": 4,
+    "count": 5,
     "uniques": 2
   },
   {
     "path": "/MuYunyun/create-react-doc/tree/main/packages",
     "title": "create-react-doc/packages at main · MuYunyun/create-react-doc",
-    "count": 4,
+    "count": 5,
     "uniques": 2
   },
   {
     "path": "/MuYunyun/create-react-doc/issues/74",
     "title": "inject variable in webpack · Issue #74 · MuYunyun/create-react-doc",
-    "count": 4,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/pulls",
-    "title": "Pull requests · MuYunyun/create-react-doc",
-    "count": 4,
+    "count": 5,
     "uniques": 1
   },
   {
     "path": "/MuYunyun/create-react-doc/tree/main/packages/crd-seed",
     "title": "create-react-doc/packages/crd-seed at main · MuYunyun/create-react-doc",
-    "count": 3,
+    "count": 4,
     "uniques": 2
   },
   {
     "path": "/MuYunyun/create-react-doc/issues/72",
     "title": "support custom theme · Issue #72 · MuYunyun/create-react-doc",
-    "count": 3,
+    "count": 4,
     "uniques": 1
   }
 ]
