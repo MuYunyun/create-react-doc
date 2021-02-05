@@ -2,20 +2,20 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 53,
-    "uniques": 24
+    "count": 91,
+    "uniques": 58
   },
   {
     "path": "/MuYunyun/create-react-doc/issues",
     "title": "Issues · MuYunyun/create-react-doc",
-    "count": 25,
-    "uniques": 1
+    "count": 36,
+    "uniques": 6
   },
   {
     "path": "/MuYunyun/create-react-doc/pulls",
     "title": "Pull requests · MuYunyun/create-react-doc",
-    "count": 19,
-    "uniques": 1
+    "count": 21,
+    "uniques": 2
   },
   {
     "path": "/MuYunyun/create-react-doc/issues/new",
@@ -24,8 +24,20 @@
     "uniques": 2
   },
   {
+    "path": "/MuYunyun/create-react-doc/tree/main/packages/crd-seed",
+    "title": "create-react-doc/packages/crd-seed at main · MuYunyun/create-react-doc",
+    "count": 5,
+    "uniques": 3
+  },
+  {
     "path": "/MuYunyun/create-react-doc/blob/main/README-en.md",
     "title": "create-react-doc/README-en.md at main · MuYunyun/create-react-doc",
+    "count": 5,
+    "uniques": 2
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/issues/78",
+    "title": "首次进入菜单未高亮 · Issue #78 · MuYunyun/create-react-doc",
     "count": 5,
     "uniques": 2
   },
@@ -45,18 +57,6 @@
     "path": "/MuYunyun/create-react-doc/issues/74",
     "title": "inject variable in webpack · Issue #74 · MuYunyun/create-react-doc",
     "count": 5,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/tree/main/packages/crd-seed",
-    "title": "create-react-doc/packages/crd-seed at main · MuYunyun/create-react-doc",
-    "count": 4,
-    "uniques": 2
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/issues/72",
-    "title": "support custom theme · Issue #72 · MuYunyun/create-react-doc",
-    "count": 4,
     "uniques": 1
   }
 ]

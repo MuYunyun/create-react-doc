@@ -1,22 +1,27 @@
 [
   {
+    "referrer": "v2ex.com",
+    "count": 25,
+    "uniques": 24
+  },
+  {
     "referrer": "github.com",
-    "count": 20,
+    "count": 22,
     "uniques": 6
   },
   {
     "referrer": "dev.to",
-    "count": 12,
-    "uniques": 10
-  },
-  {
-    "referrer": "v2ex.com",
-    "count": 3,
-    "uniques": 3
+    "count": 11,
+    "uniques": 9
   },
   {
     "referrer": "muyunyun.cn",
-    "count": 3,
-    "uniques": 2
+    "count": 4,
+    "uniques": 3
+  },
+  {
+    "referrer": "global.v2ex.com",
+    "count": 1,
+    "uniques": 1
   }
 ]
