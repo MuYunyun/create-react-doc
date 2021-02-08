@@ -448,8 +448,18 @@ a:hover {
 .footer-3UIyM a:hover {
   color: #0800ff;
 }
+.footer-3UIyM .powered_by-Lcl7h {
+  margin-bottom: 8px;
+}
 .footer-inlineCollapsed-1ZN94 {
   margin: 50px 0 0 0;
+}
+.footer-3UIyM .uv_count-irJcB,
+.footer-3UIyM .pv_count-3q5v5 {
+  margin-left: 5px;
+}
+.footer-3UIyM .split-1Ybst {
+  margin: 0 5px;
 }
 
 .wrapper-3JU2P::after {
