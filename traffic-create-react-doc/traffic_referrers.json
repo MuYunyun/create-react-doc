@@ -1,8 +1,8 @@
 [
   {
     "referrer": "v2ex.com",
-    "count": 40,
-    "uniques": 35
+    "count": 44,
+    "uniques": 38
   },
   {
     "referrer": "github.com",
@@ -18,6 +18,11 @@
     "referrer": "dev.to",
     "count": 4,
     "uniques": 4
+  },
+  {
+    "referrer": "link.zhihu.com",
+    "count": 1,
+    "uniques": 1
   },
   {
     "referrer": "global.v2ex.com",

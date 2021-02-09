@@ -2,13 +2,13 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 105,
-    "uniques": 65
+    "count": 110,
+    "uniques": 69
   },
   {
     "path": "/MuYunyun/create-react-doc/issues",
     "title": "Issues · MuYunyun/create-react-doc",
-    "count": 38,
+    "count": 39,
     "uniques": 8
   },
   {
@@ -24,6 +24,12 @@
     "uniques": 4
   },
   {
+    "path": "/MuYunyun/create-react-doc/issues/new",
+    "title": "New Issue · MuYunyun/create-react-doc",
+    "count": 6,
+    "uniques": 2
+  },
+  {
     "path": "/MuYunyun/create-react-doc/tree/main/packages/crd-seed",
     "title": "create-react-doc/packages/crd-seed at main · MuYunyun/create-react-doc",
     "count": 5,
@@ -32,12 +38,6 @@
   {
     "path": "/MuYunyun/create-react-doc/issues/78",
     "title": "首次进入菜单未高亮 · Issue #78 · MuYunyun/create-react-doc",
-    "count": 5,
-    "uniques": 2
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/issues/new",
-    "title": "New Issue · MuYunyun/create-react-doc",
     "count": 5,
     "uniques": 2
   },
