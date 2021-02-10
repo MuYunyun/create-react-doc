@@ -2,32 +2,32 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 126,
-    "uniques": 74
+    "count": 122,
+    "uniques": 72
   },
   {
     "path": "/MuYunyun/create-react-doc/issues",
     "title": "Issues · MuYunyun/create-react-doc",
-    "count": 47,
+    "count": 44,
     "uniques": 9
   },
   {
     "path": "/MuYunyun/create-react-doc/pulls",
     "title": "Pull requests · MuYunyun/create-react-doc",
-    "count": 34,
+    "count": 33,
     "uniques": 4
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/issues/new",
-    "title": "New Issue · MuYunyun/create-react-doc",
-    "count": 8,
-    "uniques": 2
   },
   {
     "path": "/MuYunyun/create-react-doc/issues/39",
     "title": "support typescript · Issue #39 · MuYunyun/create-react-doc",
     "count": 7,
     "uniques": 4
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/issues/new",
+    "title": "New Issue · MuYunyun/create-react-doc",
+    "count": 7,
+    "uniques": 2
   },
   {
     "path": "/MuYunyun/create-react-doc/actions",
@@ -54,9 +54,9 @@
     "uniques": 2
   },
   {
-    "path": "/MuYunyun/create-react-doc/issues/74",
-    "title": "inject variable in webpack · Issue #74 · MuYunyun/create-react-doc",
-    "count": 5,
-    "uniques": 1
+    "path": "/MuYunyun/create-react-doc/pull/85",
+    "title": "feat: support pv、uv by MuYunyun · Pull Request #85 · MuYunyun/create-react-doc",
+    "count": 4,
+    "uniques": 2
   }
 ]
