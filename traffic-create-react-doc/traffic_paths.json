@@ -2,13 +2,13 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 122,
-    "uniques": 72
+    "count": 121,
+    "uniques": 73
   },
   {
     "path": "/MuYunyun/create-react-doc/issues",
     "title": "Issues · MuYunyun/create-react-doc",
-    "count": 44,
+    "count": 43,
     "uniques": 9
   },
   {
@@ -18,10 +18,22 @@
     "uniques": 4
   },
   {
+    "path": "/MuYunyun/create-react-doc/actions",
+    "title": "Actions · MuYunyun/create-react-doc",
+    "count": 8,
+    "uniques": 1
+  },
+  {
     "path": "/MuYunyun/create-react-doc/issues/39",
     "title": "support typescript · Issue #39 · MuYunyun/create-react-doc",
     "count": 7,
     "uniques": 4
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/issues/78",
+    "title": "首次进入菜单未高亮 · Issue #78 · MuYunyun/create-react-doc",
+    "count": 7,
+    "uniques": 2
   },
   {
     "path": "/MuYunyun/create-react-doc/issues/new",
@@ -30,28 +42,16 @@
     "uniques": 2
   },
   {
-    "path": "/MuYunyun/create-react-doc/actions",
-    "title": "Actions · MuYunyun/create-react-doc",
-    "count": 7,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/issues/78",
-    "title": "首次进入菜单未高亮 · Issue #78 · MuYunyun/create-react-doc",
-    "count": 6,
+    "path": "/MuYunyun/create-react-doc/pull/77",
+    "title": "feat: support custom theme by MuYunyun · Pull Request #77 · MuYunyun/create-r...",
+    "count": 5,
     "uniques": 2
   },
   {
     "path": "/MuYunyun/create-react-doc/tree/main/packages/crd-seed",
     "title": "create-react-doc/packages/crd-seed at main · MuYunyun/create-react-doc",
-    "count": 5,
+    "count": 4,
     "uniques": 3
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/pull/77",
-    "title": "feat: support custom theme by MuYunyun · Pull Request #77 · MuYunyun/create-r...",
-    "count": 5,
-    "uniques": 2
   },
   {
     "path": "/MuYunyun/create-react-doc/pull/85",
