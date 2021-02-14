@@ -14,7 +14,7 @@
   {
     "path": "/MuYunyun/create-react-doc/pulls",
     "title": "Pull requests · MuYunyun/create-react-doc",
-    "count": 33,
+    "count": 31,
     "uniques": 4
   },
   {
@@ -36,26 +36,26 @@
     "uniques": 1
   },
   {
-    "path": "/MuYunyun/create-react-doc/issues/new",
-    "title": "New Issue · MuYunyun/create-react-doc",
-    "count": 4,
-    "uniques": 2
-  },
-  {
     "path": "/MuYunyun/create-react-doc/pull/85",
     "title": "feat: support pv、uv by MuYunyun · Pull Request #85 · MuYunyun/create-react-doc",
     "count": 4,
     "uniques": 2
   },
   {
-    "path": "/MuYunyun/create-react-doc/tree/main/packages/crd-seed",
-    "title": "create-react-doc/packages/crd-seed at main · MuYunyun/create-react-doc",
+    "path": "/MuYunyun/create-react-doc/issues/new",
+    "title": "New Issue · MuYunyun/create-react-doc",
     "count": 3,
-    "uniques": 2
+    "uniques": 1
   },
   {
-    "path": "/MuYunyun/create-react-doc/pull/80",
-    "title": "feat: support custom theme ci by MuYunyun · Pull Request #80 · MuYunyun/creat...",
+    "path": "/MuYunyun/create-react-doc/pull/82",
+    "title": "support custom theme ci by MuYunyun · Pull Request #82 · MuYunyun/create-reac...",
+    "count": 3,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/tree/gh-pages",
+    "title": "MuYunyun/create-react-doc at gh-pages",
     "count": 3,
     "uniques": 1
   }
