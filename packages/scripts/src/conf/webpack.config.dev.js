@@ -10,7 +10,6 @@ const config = require('./webpack.config')
 const paths = require('./path')
 
 module.exports = function (cmd) {
-  console.log('upath.normalizeSafe(paths.defaultTheme)', upath.normalizeSafe(paths.defaultTheme))
   const docsConfig = getDocsConfig()
   config.mode = 'development'
   config.entry = [

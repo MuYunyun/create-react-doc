@@ -108,11 +108,4 @@ module.exports = {
       path: require.resolve('path-browserify'),
     },
   },
-  // node: {
-  //   dgram: 'empty',
-  //   fs: 'empty',
-  //   net: 'empty',
-  //   tls: 'empty',
-  //   child_process: 'empty',
-  // },
 }
