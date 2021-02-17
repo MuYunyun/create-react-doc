@@ -2,26 +2,20 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 104,
-    "uniques": 68
+    "count": 65,
+    "uniques": 37
   },
   {
     "path": "/MuYunyun/create-react-doc/issues",
     "title": "Issues · MuYunyun/create-react-doc · GitHub",
-    "count": 31,
-    "uniques": 11
+    "count": 20,
+    "uniques": 7
   },
   {
     "path": "/MuYunyun/create-react-doc/pulls",
     "title": "Pull requests · MuYunyun/create-react-doc",
-    "count": 15,
-    "uniques": 4
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/issues/39",
-    "title": "support typescript · Issue #39 · MuYunyun/create-react-doc",
-    "count": 8,
-    "uniques": 5
+    "count": 13,
+    "uniques": 3
   },
   {
     "path": "/MuYunyun/create-react-doc/actions",
@@ -30,16 +24,16 @@
     "uniques": 1
   },
   {
+    "path": "/MuYunyun/create-react-doc/issues/39",
+    "title": "support typescript · Issue #39 · MuYunyun/create-react-doc",
+    "count": 6,
+    "uniques": 5
+  },
+  {
     "path": "/MuYunyun/create-react-doc/pull/85",
     "title": "feat: support pv、uv by MuYunyun · Pull Request #85 · MuYunyun/create-react-doc",
     "count": 4,
     "uniques": 2
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/issues/78",
-    "title": "首次进入菜单未高亮 · Issue #78 · MuYunyun/create-react-doc",
-    "count": 4,
-    "uniques": 1
   },
   {
     "path": "/MuYunyun/create-react-doc/issues/new",
@@ -58,5 +52,11 @@
     "title": "feat: support pv、uv by MuYunyun · Pull Request #85 · MuYunyun/create-react-doc",
     "count": 2,
     "uniques": 2
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/edit/main/README.md",
+    "title": "Editing create-react-doc/README.md at main · MuYunyun/create-react-doc",
+    "count": 2,
+    "uniques": 1
   }
 ]
