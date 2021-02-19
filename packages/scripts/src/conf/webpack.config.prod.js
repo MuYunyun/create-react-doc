@@ -18,15 +18,10 @@ module.exports = function (cmd) {
   const docsConfig = getDocsConfig()
   config.mode = 'production'
   config.entry = [paths.appIndexJs]
-  // config.entry = {
-  //   test1: [paths.appIndexJs],
-  //   test2: [paths.appIndexJs],
-  // }
   // config.output.filename = 'js/[hash:8].js'
   // config.output.filename = 'static/js/[name].bundle.js'
-  // config.output.chunkFilename = 'js/[name].[hash:8].js'
   config.output.chunkFilename = 'js/[name].[hash:8].js'
-  config.output.publicPath = '/'
+  config.output.publicPath = docsConfig.repo ? `/${docsConfig.repo}` : '/'
 
   config.module.rules = config.module.rules.map((item) => {
     if (item.oneOf) {
@@ -168,7 +163,6 @@ module.exports = function (cmd) {
       // outputDir: path.join(__dirname, 'prerendered'),
       // outputDir: `${paths.docsBuildDist}/prerendered`,
       // Required - Routes to render.
-      // routes: ['/', '/#/README', '/#/快速上手'],
       routes: ['/', '/README', '/快速上手', '/404'],
       // Server configuration options.
       // server: {
