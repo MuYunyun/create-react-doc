@@ -109,6 +109,9 @@ module.exports = function (cmd) {
   }
 
   config.plugins = config.plugins.concat([
+    new webpack.DefinePlugin({
+      env: JSON.stringify('dev'),
+    }),
     new webpack.HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({
       inject: true,

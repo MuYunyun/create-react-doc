@@ -28,6 +28,8 @@ function BasicLayout({
   const [inlineCollapsed, setInlineCollapsed] = useState(isMobile)
   const [selectedKey, setSelectedKey] = useState('')
   const curOpenKeys = getOpenSubMenuKeys(pathname, menuOpenKeys)
+  // eslint-disable-next-line no-undef
+  const ifProd = env === 'prod'
 
   useEffect(() => {
     // eslint-disable-next-line no-use-before-define
@@ -85,7 +87,7 @@ function BasicLayout({
                         : item.title}
                     </a>
                     : <Link
-                      to={item.routePath}
+                      to={ifProd ? `/${repo}${item.routePath}` : item.routePath}
                       // replace={pathname === item.routePath}
                       replace={pathname.indexOf(item.routePath)}
                     >
@@ -205,8 +207,8 @@ function BasicLayout({
             [`${styles.menuMask}`]: isMobile && !inlineCollapsed,
           })}
           onClick={(e) => {
-            e.stopPropagation();
-            setInlineCollapsed(true);
+            e.stopPropagation()
+            setInlineCollapsed(true)
           }}
         />
       </>
@@ -221,14 +223,14 @@ function BasicLayout({
       >
         <Switch>
           {/* see https://reacttraining.com/react-router/web/api/Redirect/exact-bool */}
-          <Redirect exact from="/" to="/README" />
+          <Redirect exact from={ifProd ? `/${repo}` : `/`} to={ifProd ? `/${repo}/README` : `/README`} />
           {routeData.map((item) => {
             return (
               <Route
                 key={item.path}
                 exact
                 // path={window.__PRERENDER_INJECTED && window.__PRERENDER_INJECTED.prerender ? pathname : item.path}
-                path={item.path}
+                path={ifProd ? `/${repo}/${item.path}` : item.path}
                 render={() => {
                   const Comp = item.component;
                   return <Comp {...item} />;
@@ -236,7 +238,7 @@ function BasicLayout({
               />
             );
           })}
-          <Redirect to="/404" />
+          <Redirect to={ifProd ? `/${repo}/404` : `/404`} />
         </Switch>
         {renderPageFooter()}
       </div>
@@ -246,7 +248,7 @@ function BasicLayout({
     <div className={styles.wrapper}>
       <Header
         logo={logo}
-        href="/"
+        href={ifProd ? `/${repo}` : `/`}
         location={location}
         indexProps={indexProps}
         menuSource={menuSource}
