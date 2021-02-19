@@ -1,4 +1,5 @@
-import { HashRouter, withRouter, Route, Switch } from 'react-router-dom'
+// import { HashRouter, withRouter, Route, Switch } from 'react-router-dom'
+import { BrowserRouter, withRouter, Route, Switch } from 'react-router-dom'
 import theme from 'crd-theme'
 // todo https://github.com/jaywcjlove/react-dynamic-loadable/blob/master/packages/core/src/index.jsx
 import lazyload from './lazyload'
@@ -69,8 +70,10 @@ const RoutersContainer = withRouter(({ ...props }) => {
 
 export default function RouterRoot() {
   return (
-    <HashRouter>
+    // <HashRouter>
+    <BrowserRouter>
       <RoutersContainer />
-    </HashRouter>
+    </BrowserRouter>
+    // </HashRouter>
   )
 }

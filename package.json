@@ -17,7 +17,8 @@
     "build": "node packages/create-react-doc/index.js build",
     "deploy": "node packages/create-react-doc/index.js deploy",
     "release": "lerna publish",
-    "release-qa": "lerna publish --npm-tag=beta"
+    "release-qa": "lerna publish --npm-tag=beta",
+    "dev": "http-server .crd-dist -p 8080"
   },
   "repository": {
     "type": "git",
@@ -37,6 +38,7 @@
     "eslint-plugin-import": "^2.11.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-react": "^7.7.0",
+    "http-server": "^0.12.3",
     "lerna": "^3.22.1"
   },
   "dependencies": {
