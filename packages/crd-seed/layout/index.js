@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+// import { Switch, Link, Route } from 'react-router-dom'
 import { Switch, Link, Route, Redirect } from 'react-router-dom'
 import cx from 'classnames'
 import Menu from '../component/Menu'
@@ -77,14 +78,21 @@ function BasicLayout({
                     {(item.mdconf && item.mdconf.title) || item.name}
                   </span>
                 ) : (
-                  <Link
-                    to={item.routePath}
-                    replace={pathname === item.routePath}
-                  >
-                    {item && item.mdconf && item.mdconf.title
-                      ? item.mdconf.title
-                      : item.title}
-                  </Link>
+                  window.location.href.indexOf('.crd-dist') > -1
+                    ? <a href={`${window.location.href.split('.crd-dist')[0]}.crd-dist${item.routePath}/index.html`}>
+                      {item && item.mdconf && item.mdconf.title
+                        ? item.mdconf.title
+                        : item.title}
+                    </a>
+                    : <Link
+                      to={item.routePath}
+                      // replace={pathname === item.routePath}
+                      replace={pathname.indexOf(item.routePath)}
+                    >
+                      {item && item.mdconf && item.mdconf.title
+                        ? item.mdconf.title
+                        : item.title}
+                    </Link>
                 )
               }
             />
@@ -148,7 +156,8 @@ function BasicLayout({
    * such as edit in created time、edited time and so on.
    */
   const renderPageFooter = () => {
-    const matchData = routeData.find((data) => data.path === pathname)
+    // in local env, data.path is to be /READEME, however pathname may be /Users/mac/.../.crd-dist/READEME/index.html
+    const matchData = routeData.find((data) => pathname.indexOf(data.path) > -1)
     const matchProps = matchData && matchData.props
     return (
       <div className={cx(styles.pageFooter)}>
@@ -164,7 +173,7 @@ function BasicLayout({
             <Icon className={cx(styles.icon)} type="update-time" size={13} />
             {languageMap[language].modify_tm}:
             <span>
-              {routeData.find((data) => data.path === pathname).props.mtime}
+              {routeData.find((data) => pathname.indexOf(data.path)).props.mtime}
             </span>
           </span>
         ): null}
@@ -172,7 +181,7 @@ function BasicLayout({
     );
   }
   const isCurentChildren = () => {
-    const getRoute = routeData.filter((data) => pathname === data.path);
+    const getRoute = routeData.filter((data) => pathname.indexOf(data.path));
     const article = getRoute.length > 0 ? getRoute[0].article : null;
     const childs = menuSource.filter(
       (data) =>
@@ -218,6 +227,7 @@ function BasicLayout({
               <Route
                 key={item.path}
                 exact
+                // path={window.__PRERENDER_INJECTED && window.__PRERENDER_INJECTED.prerender ? pathname : item.path}
                 path={item.path}
                 render={() => {
                   const Comp = item.component;

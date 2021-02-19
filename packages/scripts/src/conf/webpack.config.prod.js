@@ -4,6 +4,7 @@ const upath = require('upath')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CopyMarkdownImageWebpackPlugin = require('copy-markdown-image-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const PrerenderSPAPlugin = require('@dreysolano/prerender-spa-plugin')
 // const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 // const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const { getDocsConfig } = require('../utils')
@@ -11,12 +12,22 @@ const CreateSpareWebpackPlugin = require('./createSpareWebpackPlugin')
 const config = require('./webpack.config')
 const paths = require('./path')
 
+const Renderer = PrerenderSPAPlugin.PuppeteerRenderer
+
 module.exports = function (cmd) {
   const docsConfig = getDocsConfig()
   config.mode = 'production'
   config.entry = [paths.appIndexJs]
-  config.output.filename = 'js/[hash:8].js'
+  // config.entry = {
+  //   test1: [paths.appIndexJs],
+  //   test2: [paths.appIndexJs],
+  // }
+  // config.output.filename = 'js/[hash:8].js'
+  // config.output.filename = 'static/js/[name].bundle.js'
+  // config.output.chunkFilename = 'js/[name].[hash:8].js'
   config.output.chunkFilename = 'js/[name].[hash:8].js'
+  config.output.publicPath = '/'
+
   config.module.rules = config.module.rules.map((item) => {
     if (item.oneOf) {
       const loaders = []
@@ -126,6 +137,7 @@ module.exports = function (cmd) {
         removeComments: true,
         removeEmptyAttributes: true,
       },
+      // filename: 'README/index.html',
     }),
     new CopyMarkdownImageWebpackPlugin({
       dir: cmd.markdownPaths,
@@ -148,6 +160,52 @@ module.exports = function (cmd) {
       // both options are optional
       filename: 'css/[contenthash].css',
       chunkFilename: 'css/[id].css',
+    }),
+    new PrerenderSPAPlugin({
+      // Required - The path to the webpack-outputted app to prerender.
+      staticDir: paths.docsBuildDist,
+      // staticDir: '../../../theme/index.html',
+      // outputDir: path.join(__dirname, 'prerendered'),
+      // outputDir: `${paths.docsBuildDist}/prerendered`,
+      // Required - Routes to render.
+      // routes: ['/', '/#/README', '/#/快速上手'],
+      routes: ['/', '/README', '/快速上手', '/404'],
+      // Server configuration options.
+      // server: {
+      //   // Normally a free port is autodetected, but feel free to set this if needed.
+      //   port: 8001,
+      // },
+      // The actual renderer to use. (Feel free to write your own)
+      // Available renderers: https://github.com/Tribex/prerenderer/tree/master/renderers
+      renderer: new Renderer({
+        // // Optional - The name of the property to add to the window object with the contents of `inject`.
+        injectProperty: '__PRERENDER_INJECTED',
+        // // Optional - Any values you'd like your app to have access to via `window.injectProperty`.
+        inject: {
+          prerender: true,
+        },
+
+        // // Optional - defaults to 0, no limit.
+        // // Routes are rendered asynchronously.
+        // // Use this to limit the number of routes rendered in parallel.
+        maxConcurrentRoutes: 4,
+
+        // // Optional - Wait to render until the specified event is dispatched on the document.
+        // // eg, with `document.dispatchEvent(new Event('custom-render-trigger'))`
+        // renderAfterDocumentEvent: 'custom-render-trigger',
+
+        // // Optional - Wait to render until the specified element is detected using `document.querySelector`
+        // renderAfterElementExists: 'my-app-element',
+
+        // // Optional - Wait to render until a certain amount of time has passed.
+        // // NOT RECOMMENDED
+        // renderAfterTime: 5000, // Wait 5 seconds.
+
+        // Other puppeteer options.
+        // (See here: https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#puppeteerlaunchoptions)
+        // headless: false // Display the browser window when rendering. Useful for debugging.
+        // headless: false,
+      }),
     }),
   ])
   return config
