@@ -2,13 +2,13 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 49,
+    "count": 46,
     "uniques": 27
   },
   {
     "path": "/MuYunyun/create-react-doc/issues",
     "title": "Issues · MuYunyun/create-react-doc · GitHub",
-    "count": 17,
+    "count": 16,
     "uniques": 4
   },
   {
@@ -27,12 +27,6 @@
     "path": "/MuYunyun/create-react-doc/pull/85",
     "title": "feat: support pv、uv by MuYunyun · Pull Request #85 · MuYunyun/create-react-doc",
     "count": 4,
-    "uniques": 2
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/issues/39",
-    "title": "support typescript · Issue #39 · MuYunyun/create-react-doc",
-    "count": 3,
     "uniques": 2
   },
   {
@@ -56,6 +50,12 @@
   {
     "path": "/MuYunyun/create-react-doc/edit/main/README.md",
     "title": "Editing create-react-doc/README.md at main · MuYunyun/create-react-doc",
+    "count": 2,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/issues/78",
+    "title": "首次进入菜单未高亮 · Issue #78 · MuYunyun/create-react-doc",
     "count": 2,
     "uniques": 1
   }
