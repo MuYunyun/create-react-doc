@@ -1,6 +1,7 @@
 const autoprefixer = require('autoprefixer')
 const path = require('path')
 const upath = require('upath')
+const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CopyMarkdownImageWebpackPlugin = require('copy-markdown-image-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
@@ -118,6 +119,9 @@ module.exports = function (cmd) {
   }
 
   config.plugins = config.plugins.concat([
+    new webpack.DefinePlugin({
+      env: JSON.stringify('prod'),
+    }),
     new HtmlWebpackPlugin({
       inject: true,
       favicon: paths.defaultFaviconPath,
