@@ -21,8 +21,10 @@ module.exports = function (cmd) {
   config.entry = [paths.appIndexJs]
   // config.output.filename = 'js/[hash:8].js'
   // config.output.filename = 'static/js/[name].bundle.js'
+  // config.output.chunkFilename = docsConfig.repo ? `${docsConfig.repo}/js/[name].[hash:8].js` : 'js/[name].[hash:8].js'
   config.output.chunkFilename = 'js/[name].[hash:8].js'
   config.output.publicPath = docsConfig.repo ? `/${docsConfig.repo}` : '/'
+  config.output.path = docsConfig.repo ? `${paths.docsBuildDist}/${docsConfig.repo}` : paths.docsBuildDist,
 
   config.module.rules = config.module.rules.map((item) => {
     if (item.oneOf) {
@@ -159,15 +161,18 @@ module.exports = function (cmd) {
       // both options are optional
       filename: 'css/[contenthash].css',
       chunkFilename: 'css/[id].css',
+      // filename: docsConfig.repo ? `${docsConfig.repo}/css/[contenthash].css` : 'css/[contenthash].css',
+      // chunkFilename: docsConfig.repo ? `${docsConfig.repo}/css/[id].css` : 'css/[id].css',
     }),
     new PrerenderSPAPlugin({
       // Required - The path to the webpack-outputted app to prerender.
       staticDir: paths.docsBuildDist,
-      // staticDir: '../../../theme/index.html',
-      // outputDir: path.join(__dirname, 'prerendered'),
-      // outputDir: `${paths.docsBuildDist}/prerendered`,
+      outputDir: docsConfig.repo ? `${paths.docsBuildDist}/${docsConfig.repo}` : paths.docsBuildDist,
+      indexPath: docsConfig.repo ? `${paths.docsBuildDist}/${docsConfig.repo}/index.html` : `${paths.docsBuildDist}/index.html`,
+      // indexPath: `${paths.docsBuildDist}/index.html`,
       // Required - Routes to render.
-      routes: ['/create-react-doc', '/create-react-doc/README', '/create-react-doc/快速上手', '/create-react-doc/404'],
+      // routes: ['/create-react-doc', '/create-react-doc/README', '/create-react-doc/快速上手', '/create-react-doc/404'],
+      routes: ['/', '/README', '/快速上手', '/404'],
       // Server configuration options.
       // server: {
       //   // Normally a free port is autodetected, but feel free to set this if needed.
