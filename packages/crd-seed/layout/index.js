@@ -225,12 +225,13 @@ function BasicLayout({
           {/* see https://reacttraining.com/react-router/web/api/Redirect/exact-bool */}
           <Redirect exact from={ifProd ? `/${repo}` : `/`} to={ifProd ? `/${repo}/README` : `/README`} />
           {routeData.map((item) => {
+            console.log('item.path', item.path)
             return (
               <Route
                 key={item.path}
                 exact
                 // path={window.__PRERENDER_INJECTED && window.__PRERENDER_INJECTED.prerender ? pathname : item.path}
-                path={ifProd ? `/${repo}/${item.path}` : item.path}
+                path={ifProd ? `/${repo}${item.path}` : item.path}
                 render={() => {
                   const Comp = item.component;
                   return <Comp {...item} />;
@@ -242,7 +243,7 @@ function BasicLayout({
         </Switch>
         {renderPageFooter()}
       </div>
-    );
+    )
   }
   return (
     <div className={styles.wrapper}>

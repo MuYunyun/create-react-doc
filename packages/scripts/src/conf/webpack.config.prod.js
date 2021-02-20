@@ -167,7 +167,7 @@ module.exports = function (cmd) {
       // outputDir: path.join(__dirname, 'prerendered'),
       // outputDir: `${paths.docsBuildDist}/prerendered`,
       // Required - Routes to render.
-      routes: ['/', '/README', '/快速上手', '/404'],
+      routes: ['/create-react-doc', '/create-react-doc/README', '/create-react-doc/快速上手', '/create-react-doc/404'],
       // Server configuration options.
       // server: {
       //   // Normally a free port is autodetected, but feel free to set this if needed.
