@@ -9,4 +9,4 @@ const ifPrerender = window.__PRERENDER_INJECTED && window.__PRERENDER_INJECTED.p
 // decide to if add prefix for path, eg: '/' or '/${repo}'
 const ifAddPrefix = ifProd && !ifPrerender
 
-export { isMobile, ifAddPrefix }
+export { isMobile, ifAddPrefix, ifProd }

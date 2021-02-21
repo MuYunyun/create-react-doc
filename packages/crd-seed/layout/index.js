@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react'
-// import { Switch, Link, Route } from 'react-router-dom'
 import { Switch, Link, Route, Redirect } from 'react-router-dom'
 import cx from 'classnames'
 import Menu from '../component/Menu'
@@ -8,7 +7,7 @@ import Affix from '../component/Affix'
 import Header from '../component/Header'
 import Footer from '../component/Footer'
 import languageMap from '../language'
-import { isMobile, ifAddPrefix } from '../utils'
+import { isMobile, ifAddPrefix, ifProd } from '../utils'
 import { getOpenSubMenuKeys } from './utils'
 import logo from '../crd.logo.svg'
 import styles from './index.less'
@@ -149,7 +148,7 @@ function BasicLayout({
           </a>
         ) : null}
       </div>
-    );
+    )
   }
   /**
    * this section is to show article's relevant information
@@ -178,18 +177,18 @@ function BasicLayout({
           </span>
         ): null}
       </div>
-    );
+    )
   }
   const isCurentChildren = () => {
-    const getRoute = routeData.filter((data) => pathname.indexOf(data.path));
-    const article = getRoute.length > 0 ? getRoute[0].article : null;
+    const getRoute = routeData.filter((data) => pathname.indexOf(data.path))
+    const article = getRoute.length > 0 ? getRoute[0].article : null
     const childs = menuSource.filter(
       (data) =>
         article === data.article && data.children && data.children.length > 1
-    );
-    return childs.length > 0;
-  };
-  const isChild = isCurentChildren();
+    )
+    return childs.length > 0
+  }
+  const isChild = isCurentChildren()
   const renderMenuContainer = () => {
     return (
       <>
@@ -210,9 +209,12 @@ function BasicLayout({
           }}
         />
       </>
-    );
+    )
   }
+
+  const carryRepoInProd = ifProd && repo
   const renderContent = () => {
+    console.log('render content')
     return (
       <div
         className={cx(`${styles.content}`, {
@@ -223,19 +225,18 @@ function BasicLayout({
           {/* see https://reacttraining.com/react-router/web/api/Redirect/exact-bool */}
           <Redirect exact from={ifAddPrefix ? `/${repo}` : `/`} to={ifAddPrefix ? `/${repo}/README` : `/README`} />
           {routeData.map((item) => {
-            console.log('item.path', item.path)
             return (
               <Route
                 key={item.path}
                 exact
-                // path={window.__PRERENDER_INJECTED && window.__PRERENDER_INJECTED.prerender ? pathname : item.path}
                 path={ifAddPrefix ? `/${repo}${item.path}` : item.path}
                 render={() => {
-                  const Comp = item.component;
-                  return <Comp {...item} />;
+                  console.log('Render Route')
+                  const Comp = item.component
+                  return <Comp {...item} />
                 }}
               />
-            );
+            )
           })}
           <Redirect to={ifAddPrefix ? `/${repo}/404` : `/404`} />
         </Switch>

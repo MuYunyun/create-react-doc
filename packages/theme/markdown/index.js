@@ -31,6 +31,7 @@ function Markdown({ props }) {
     if (type === 'directory') {
       filename = formatPath(relativeMd)
     }
+    console.log('render markdown', `__project_root__/.cache/md/${filename}.md`)
     import(`__project_root__/.cache/md/${filename}.md`).then((data) => {
       setMarkdownStr(data.default || data)
     })

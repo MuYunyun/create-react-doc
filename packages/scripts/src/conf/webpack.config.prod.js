@@ -23,9 +23,11 @@ module.exports = function (cmd) {
   // config.output.filename = 'static/js/[name].bundle.js'
   // config.output.chunkFilename = docsConfig.repo ? `${docsConfig.repo}/js/[name].[hash:8].js` : 'js/[name].[hash:8].js'
   config.output.chunkFilename = 'js/[name].[hash:8].js'
-  config.output.publicPath = docsConfig.repo ? `/${docsConfig.repo}` : '/'
-  config.output.path = docsConfig.repo ? `${paths.docsBuildDist}/${docsConfig.repo}` : paths.docsBuildDist,
+  config.output.publicPath = docsConfig.repo ? `/${docsConfig.repo}/` : '/'
+  // config.output.publicPath = '/'
+  config.output.path = docsConfig.repo ? `${paths.docsBuildDist}/${docsConfig.repo}` : paths.docsBuildDist
 
+  // console.log('upath.normalizeSafe(paths.projectPath)', upath.normalizeSafe(paths.projectPath))
   config.module.rules = config.module.rules.map((item) => {
     if (item.oneOf) {
       const loaders = []
