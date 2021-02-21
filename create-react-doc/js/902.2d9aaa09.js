@@ -1,1 +1,0 @@
-(self.webpackChunkcreate_react_doc=self.webpackChunkcreate_react_doc||[]).push([[902],{84902:e=>{e.exports="Write docs happily now.\n\nIf there is any problem, welcome give issue [there](https://github.com/MuYunyun/create-react-doc/issues).\n"}}]);
