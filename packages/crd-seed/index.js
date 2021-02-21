@@ -9,14 +9,17 @@ const ThemeSeed = (props) => {
   // eslint-disable-next-line no-undef
   const { repo } = DOCSCONFIG || {}
 
+  console.log('themeSeed')
   return (
     <Switch>
       <Route
-        path={ifAddPrefix ? `/${repo}/404` : `/404`}
+        // path={ifAddPrefix ? `/${repo}/404` : `/404`}
+        path="/404"
         render={routeProps => <NoMatch {...routeProps} {...props} />}
       />
       <Route
-        path={ifAddPrefix ? `/${repo}` : '/'}
+        // path={ifAddPrefix ? `/${repo}` : '/'}
+        path="/"
         render={(routeProps) => {
           return <BasicLayout {...routeProps} {...props} />
         }}
