@@ -77,21 +77,15 @@ function BasicLayout({
                     {(item.mdconf && item.mdconf.title) || item.name}
                   </span>
                 ) : (
-                  window.location.href.indexOf('.crd-dist') > -1
-                    ? <a href={`${window.location.href.split('.crd-dist')[0]}.crd-dist${item.routePath}/index.html`}>
-                      {item && item.mdconf && item.mdconf.title
-                        ? item.mdconf.title
-                        : item.title}
-                    </a>
-                    : <Link
-                      to={ifAddPrefix ? `/${repo}${item.routePath}` : item.routePath}
-                      // replace={pathname === item.routePath}
-                      replace={pathname.indexOf(item.routePath)}
-                    >
-                      {item && item.mdconf && item.mdconf.title
-                        ? item.mdconf.title
-                        : item.title}
-                    </Link>
+                  <Link
+                    to={ifProd ? `/${repo}${item.routePath}` : item.routePath}
+                    // replace={pathname === item.routePath}
+                    replace={pathname.indexOf(item.routePath) > -1}
+                  >
+                    {item && item.mdconf && item.mdconf.title
+                      ? item.mdconf.title
+                      : item.title}
+                  </Link>
                 )
               }
             />
@@ -172,7 +166,7 @@ function BasicLayout({
             <Icon className={cx(styles.icon)} type="update-time" size={13} />
             {languageMap[language].modify_tm}:
             <span>
-              {routeData.find((data) => pathname.indexOf(data.path)).props.mtime}
+              {routeData.find((data) => pathname.indexOf(data.path) > -1).props.mtime}
             </span>
           </span>
         ): null}
@@ -180,7 +174,7 @@ function BasicLayout({
     )
   }
   const isCurentChildren = () => {
-    const getRoute = routeData.filter((data) => pathname.indexOf(data.path))
+    const getRoute = routeData.filter((data) => pathname.indexOf(data.path) > -1)
     const article = getRoute.length > 0 ? getRoute[0].article : null
     const childs = menuSource.filter(
       (data) =>
@@ -214,7 +208,6 @@ function BasicLayout({
 
   const carryRepoInProd = ifProd && repo
   const renderContent = () => {
-    console.log('render content')
     return (
       <div
         className={cx(`${styles.content}`, {
@@ -231,7 +224,6 @@ function BasicLayout({
                 exact
                 path={ifAddPrefix ? `/${repo}${item.path}` : item.path}
                 render={() => {
-                  console.log('Render Route')
                   const Comp = item.component
                   return <Comp {...item} />
                 }}

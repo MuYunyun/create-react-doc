@@ -15,7 +15,7 @@
     "@babel/preset-env": "^7.3.4",
     "@babel/preset-react": "^7.0.0",
     "@babel/runtime": "^7.3.4",
-    "@dreysolano/prerender-spa-plugin": "^1.0.3",
+    "crd-prerender-spa-plugin": "^0.1.0",
     "@nuxtjs/friendly-errors-webpack-plugin": "^2.0.2",
     "babel-eslint": "^8.0.1",
     "babel-loader": "^8.0.5",

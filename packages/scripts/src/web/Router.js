@@ -1,7 +1,6 @@
 // import { HashRouter, withRouter, Route, Switch } from 'react-router-dom'
 import { BrowserRouter, withRouter, Route, Switch } from 'react-router-dom'
 import theme from 'crd-theme'
-// todo https://github.com/jaywcjlove/react-dynamic-loadable/blob/master/packages/core/src/index.jsx
 import lazyload from './lazyload'
 import menuSource from './crd.json'
 

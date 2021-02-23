@@ -9,7 +9,6 @@ const ThemeSeed = (props) => {
   // eslint-disable-next-line no-undef
   const { repo } = DOCSCONFIG || {}
 
-  console.log('themeSeed')
   return (
     <Switch>
       <Route

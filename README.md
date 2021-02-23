@@ -27,7 +27,8 @@
 
 * 建站理念: 文件即站点 (Files as a Site)。
 * 开箱即用: 通过指定目录或文档, 一键生成文档、博客站点, 无需关心站点环境配置信息。
-* 性能: 文档支持懒加载提升站点加载速度。
+* 性能: 通过预渲染、懒加载大幅提升站点加载速度。
+* SEO: 支持 SEO, 让文档更易被搜索。
 * 个性化: 支持[自定义主题](http://muyunyun.cn/create-react-doc/#/%E8%87%AA%E5%AE%9A%E4%B9%89%E4%B8%BB%E9%A2%98)。
 * 工作流: 集成 Github action, 支持自动化打包、发布站点。
 
@@ -39,7 +40,7 @@ create-react-doc 提供了官方默认主题 [crd-seed](https://github.com/MuYun
 
 * 适配移动、PC 多端展示。
 * 支持暗黑模式。
-* 文档支持内嵌 codepen、codesansbox。
+* 文档支持内嵌 codepen、codesandbox。
 * GitHub 联动。
 
 使用该主题搭建的站点有:

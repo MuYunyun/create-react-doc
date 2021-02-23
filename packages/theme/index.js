@@ -1,7 +1,7 @@
 /* eslint-disable global-require */
 // import Loading from './component/Loading'
 import Markdown from './routes/Pages'
-import { ifProd, ifPrerender } from './utils'
+// import { ifProd, ifPrerender } from './utils'
 import './index.less'
 
 export default function (Lazyload, props) {

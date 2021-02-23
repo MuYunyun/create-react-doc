@@ -19,7 +19,7 @@ function MenuItem({
     return (
       <li
         className={cx(styles['menu-item'], styles[`menu-${theme}`], {
-          [styles['menu-item-selected']]: selectedKey === keyValue,
+          [styles['menu-item-selected']]: keyValue.indexOf(selectedKey) > -1,
         })}
         onMouseEnter={() => {
           onHoverKey(keyValue)
