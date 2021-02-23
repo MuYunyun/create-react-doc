@@ -173,7 +173,7 @@ module.exports = function (cmd) {
       outputDir: docsConfig.repo ? `${paths.docsBuildDist}/${docsConfig.repo}` : paths.docsBuildDist,
       indexPath: docsConfig.repo ? `${paths.docsBuildDist}/${docsConfig.repo}/index.html` : `${paths.docsBuildDist}/index.html`,
       // Required - Routes to render.
-      routes: ['/', '/README', '/快速上手', '/404'],
+      routes: ['/', '/README', '/快速上手', '/404', '/aaa/b'],
       successCb: async () => {
         if (docsConfig.repo) {
           await fs.move(`${paths.docsBuildDist}/${docsConfig.repo}`, paths.docsBuildDist)
