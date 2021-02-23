@@ -1,0 +1,1 @@
+(self.webpackChunkcreate_react_doc=self.webpackChunkcreate_react_doc||[]).push([[530],{90530:e=>{e.exports="hello"}}]);
