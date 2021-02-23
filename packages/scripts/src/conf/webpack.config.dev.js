@@ -17,6 +17,7 @@ module.exports = function (cmd) {
     require.resolve('webpack-hot-dev-clients/webpackHotDevClient'),
     paths.appIndexJs,
   ]
+  config.output.publicPath = '/'
   config.module.rules = config.module.rules.map((item) => {
     if (item.oneOf) {
       const loaders = []
