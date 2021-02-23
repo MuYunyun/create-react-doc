@@ -5,9 +5,10 @@ const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CopyMarkdownImageWebpackPlugin = require('copy-markdown-image-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const PrerenderSPAPlugin = require('@dreysolano/prerender-spa-plugin')
+const PrerenderSPAPlugin = require('crd-prerender-spa-plugin')
 // const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 // const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const fs = require('fs-extra')
 const { getDocsConfig } = require('../utils')
 const CreateSpareWebpackPlugin = require('./createSpareWebpackPlugin')
 const config = require('./webpack.config')
@@ -171,15 +172,14 @@ module.exports = function (cmd) {
       staticDir: paths.docsBuildDist,
       outputDir: docsConfig.repo ? `${paths.docsBuildDist}/${docsConfig.repo}` : paths.docsBuildDist,
       indexPath: docsConfig.repo ? `${paths.docsBuildDist}/${docsConfig.repo}/index.html` : `${paths.docsBuildDist}/index.html`,
-      // indexPath: `${paths.docsBuildDist}/index.html`,
       // Required - Routes to render.
-      // routes: ['/create-react-doc', '/create-react-doc/README', '/create-react-doc/快速上手', '/create-react-doc/404'],
       routes: ['/', '/README', '/快速上手', '/404'],
-      // Server configuration options.
-      // server: {
-      //   // Normally a free port is autodetected, but feel free to set this if needed.
-      //   port: 8001,
-      // },
+      successCb: async () => {
+        if (docsConfig.repo) {
+          await fs.move(`${paths.docsBuildDist}/${docsConfig.repo}`, paths.docsBuildDist)
+          console.log('generate prerender file success!')
+        }
+      },
       // The actual renderer to use. (Feel free to write your own)
       // Available renderers: https://github.com/Tribex/prerenderer/tree/master/renderers
       renderer: new Renderer({
