@@ -25,17 +25,12 @@
     "uniques": 1
   },
   {
-    "referrer": "oschina.net",
-    "count": 1,
-    "uniques": 1
-  },
-  {
-    "referrer": "segmentfault.com",
-    "count": 1,
-    "uniques": 1
-  },
-  {
     "referrer": "Google",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "referrer": "oschina.net",
     "count": 1,
     "uniques": 1
   }
