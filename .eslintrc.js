@@ -79,6 +79,7 @@ const eslintrc = {
     "no-use-before-define": 0,
     "semi": ["error", "never"],
     "quotes": 0,
+    "no-plusplus": 0
   }
 }
 

@@ -120,7 +120,6 @@ module.exports = function (cmd) {
       template: paths.defaultHTMLPath,
       title: docsConfig && docsConfig.title ? docsConfig.title : 'Create React Doc',
     }),
-    // hot reload md file
     new CreateSpareWebpackPlugin({
       // 备用文件目录，比对是否存在，不存在生成，根据 sep 目录规则生成
       path: path.join(paths.cacheDirPath, './md'),

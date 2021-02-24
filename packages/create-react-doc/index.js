@@ -69,7 +69,6 @@ if (start || build) {
 
   docsConfig &&
     docsConfig.menu
-      .split(',')
       .forEach(itemPath =>
         program.markdownPaths.push(path.join(process.cwd(), itemPath))
       )
