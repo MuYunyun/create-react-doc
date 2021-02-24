@@ -13,6 +13,7 @@ const { getDocsConfig } = require('../utils')
 const CreateSpareWebpackPlugin = require('./createSpareWebpackPlugin')
 const config = require('./webpack.config')
 const paths = require('./path')
+const getPrerenderRoutes = require('./getPrerenderRoutes')
 
 const Renderer = PrerenderSPAPlugin.PuppeteerRenderer
 
@@ -25,10 +26,8 @@ module.exports = function (cmd) {
   // config.output.chunkFilename = docsConfig.repo ? `${docsConfig.repo}/js/[name].[hash:8].js` : 'js/[name].[hash:8].js'
   config.output.chunkFilename = 'js/[name].[hash:8].js'
   config.output.publicPath = docsConfig.repo ? `/${docsConfig.repo}/` : '/'
-  // config.output.publicPath = '/'
   config.output.path = docsConfig.repo ? `${paths.docsBuildDist}/${docsConfig.repo}` : paths.docsBuildDist
 
-  // console.log('upath.normalizeSafe(paths.projectPath)', upath.normalizeSafe(paths.projectPath))
   config.module.rules = config.module.rules.map((item) => {
     if (item.oneOf) {
       const loaders = []
@@ -148,7 +147,7 @@ module.exports = function (cmd) {
       toDir: config.output.path,
     }),
     new CreateSpareWebpackPlugin({
-      // 备用文件目录，比对是否存在，不存在生成，根据sep 目录规则生成
+      // 备用文件目录，比对是否存在，不存在生成，根据 sep 目录规则生成
       path: path.join(paths.cacheDirPath, './md'),
       sep: '___', // 检查目标目录文件，文件名存储，文件夹+下划线间隔+文件名
       directoryTrees: {
@@ -173,7 +172,8 @@ module.exports = function (cmd) {
       outputDir: docsConfig.repo ? `${paths.docsBuildDist}/${docsConfig.repo}` : paths.docsBuildDist,
       indexPath: docsConfig.repo ? `${paths.docsBuildDist}/${docsConfig.repo}/index.html` : `${paths.docsBuildDist}/index.html`,
       // Required - Routes to render.
-      routes: ['/', '/README', '/快速上手', '/404', '/aaa/b'],
+      // routes: ['/', '/README', '/快速上手', '/404', '/aaa/b'],
+      routes: getPrerenderRoutes(),
       successCb: async () => {
         if (docsConfig.repo) {
           await fs.move(`${paths.docsBuildDist}/${docsConfig.repo}`, paths.docsBuildDist)

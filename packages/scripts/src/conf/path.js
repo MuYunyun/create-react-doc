@@ -131,7 +131,7 @@ module.exports = {
   // markdown dir
   crdConf: getCrdConf(),
   docsGitIgnore: resolveApp('.gitignore'),
-  docsNodeModules: resolveApp(''),
+  docsBase: resolveApp(''),
   docsConfig: docsConfigPath,
   docsReadme: resolveApp('README.md'),
   docsBuildDist: resolveApp('.crd-dist'),
