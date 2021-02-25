@@ -176,7 +176,13 @@ module.exports = function (cmd) {
       routes: getPrerenderRoutes(),
       successCb: async () => {
         if (docsConfig.repo) {
-          await fs.move(`${paths.docsBuildDist}/${docsConfig.repo}`, paths.docsBuildDist)
+          console.log('from', `${paths.docsBuildDist}/${docsConfig.repo}`)
+          console.log('to', paths.docsBuildDist)
+          try {
+            await fs.move(`${paths.docsBuildDist}/${docsConfig.repo}`, paths.docsBuildDist, { overwrite: true })
+          } catch (e) {
+            console.log('e123', e)
+          }
           console.log('generate prerender file success!')
         }
       },
