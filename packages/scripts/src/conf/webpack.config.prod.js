@@ -176,6 +176,11 @@ module.exports = function (cmd) {
       routes: getPrerenderRoutes(),
       successCb: async () => {
         if (docsConfig.repo) {
+          const stats = fs.statSync(`${paths.docsBuildDist}/${docsConfig.repo}`)
+          const isFile = stats.isFile()
+          const isDirectory = stats.isDirectory()
+          console.log('isFile', isFile)
+          console.log('isDirectory', isDirectory)
           console.log('from', `${paths.docsBuildDist}/${docsConfig.repo}`)
           console.log('to', paths.docsBuildDist)
           try {
