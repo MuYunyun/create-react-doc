@@ -184,7 +184,7 @@ module.exports = function (cmd) {
           console.log('from', `${paths.docsBuildDist}/${docsConfig.repo}`)
           console.log('to', paths.docsBuildDist)
           try {
-            await fs.move(`${paths.docsBuildDist}/${docsConfig.repo}`, paths.docsBuildDist, { overwrite: true })
+            await fs.copy(`${paths.docsBuildDist}/${docsConfig.repo}`, paths.docsBuildDist)
           } catch (e) {
             console.log('e123', e)
           }
