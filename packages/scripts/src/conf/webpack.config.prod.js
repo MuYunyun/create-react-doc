@@ -176,18 +176,9 @@ module.exports = function (cmd) {
       routes: getPrerenderRoutes(),
       successCb: async () => {
         if (docsConfig.repo) {
-          const stats = fs.statSync(`${paths.docsBuildDist}/${docsConfig.repo}`)
-          const isFile = stats.isFile()
-          const isDirectory = stats.isDirectory()
-          console.log('isFile', isFile)
-          console.log('isDirectory', isDirectory)
-          console.log('from', `${paths.docsBuildDist}/${docsConfig.repo}`)
-          console.log('to', paths.docsBuildDist)
-          try {
-            await fs.copy(`${paths.docsBuildDist}/${docsConfig.repo}`, paths.docsBuildDist)
-          } catch (e) {
-            console.log('e123', e)
-          }
+          // not use fs.move here or it'll throw error in github action
+          await fs.copy(`${paths.docsBuildDist}/${docsConfig.repo}`, paths.docsBuildDist)
+          await fs.remove(`${paths.docsBuildDist}/${docsConfig.repo}`)
           console.log('generate prerender file success!')
         }
       },
