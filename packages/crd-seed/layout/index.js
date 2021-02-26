@@ -7,7 +7,7 @@ import Affix from '../component/Affix'
 import Header from '../component/Header'
 import Footer from '../component/Footer'
 import languageMap from '../language'
-import { isMobile, ifAddPrefix, ifProd } from '../utils'
+import { isMobile, ifAddPrefix, ifProd, ifPrerender } from '../utils'
 import { getOpenSubMenuKeys } from './utils'
 import logo from '../crd.logo.svg'
 import styles from './index.less'
@@ -29,13 +29,11 @@ function BasicLayout({
   const curOpenKeys = getOpenSubMenuKeys(pathname, menuOpenKeys)
 
   useEffect(() => {
-    // eslint-disable-next-line no-use-before-define
-    scrollToTop()
-  }, [])
-
-  useEffect(() => {
-    // eslint-disable-next-line no-undef
-    INJECT?.inject?.()
+    if (ifPrerender) {
+      scrollToTop()
+      // eslint-disable-next-line no-undef
+      INJECT?.inject?.()
+    }
   }, [])
 
   useEffect(() => {
