@@ -6,9 +6,9 @@ const { getDocsConfig } = require('../utils')
 const getPrerenderRoutes = () => {
   const docsConfig = getDocsConfig()
   const menu = docsConfig && Array.isArray(docsConfig.menu)
-    ? docsConfig.menu.concat('README.md')
+    ? docsConfig.menu
     : []
-  const result = []
+  const result = ['/README', '/404']
   dfs(menu, result, '', true)
   console.log('result', result)
   return result

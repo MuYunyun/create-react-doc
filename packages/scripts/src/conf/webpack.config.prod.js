@@ -179,6 +179,8 @@ module.exports = function (cmd) {
           // not use fs.move here or it'll throw error in github action
           await fs.copy(`${paths.docsBuildDist}/${docsConfig.repo}`, paths.docsBuildDist)
           await fs.remove(`${paths.docsBuildDist}/${docsConfig.repo}`)
+          // move README as root index.html
+          await fs.copy(`${paths.docsBuildDist}/README/index.html`, `${paths.docsBuildDist}/index.html`)
           console.log('generate prerender file success!')
         }
       },
