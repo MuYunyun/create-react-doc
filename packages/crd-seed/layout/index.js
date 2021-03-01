@@ -77,7 +77,6 @@ function BasicLayout({
                 ) : (
                   <Link
                     to={ifProd ? `/${repo}${item.routePath}` : item.routePath}
-                    // replace={pathname === item.routePath}
                     replace={pathname.indexOf(item.routePath) > -1}
                   >
                     {item && item.mdconf && item.mdconf.title

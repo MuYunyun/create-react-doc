@@ -1,4 +1,3 @@
-// import { Link } from 'react-router-dom'
 import styles from './index.less'
 
 const Footer = () => {

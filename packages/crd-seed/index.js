@@ -8,12 +8,10 @@ const ThemeSeed = (props) => {
   return (
     <Switch>
       <Route
-        // path={ifAddPrefix ? `/${repo}/404` : `/404`}
         path="/404"
         render={routeProps => <NoMatch {...routeProps} {...props} />}
       />
       <Route
-        // path={ifAddPrefix ? `/${repo}` : '/'}
         path="/"
         render={(routeProps) => {
           return <BasicLayout {...routeProps} {...props} />
