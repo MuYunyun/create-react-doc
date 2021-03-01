@@ -1,4 +1,3 @@
-// import { HashRouter, withRouter, Route, Switch } from 'react-router-dom'
 import { BrowserRouter, withRouter, Route, Switch } from 'react-router-dom'
 import theme from 'crd-theme'
 import lazyload from './lazyload'
@@ -69,10 +68,8 @@ const RoutersContainer = withRouter(({ ...props }) => {
 
 export default function RouterRoot() {
   return (
-    // <HashRouter>
     <BrowserRouter>
       <RoutersContainer />
     </BrowserRouter>
-    // </HashRouter>
   )
 }

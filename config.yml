@@ -14,7 +14,6 @@ menu: [
   docs/自定义主题.md,
   docs/其它工具.md,
   docs/更新日志.md,
-  aaa
 ]
 ## set init open menu keys
 # menuOpenKeys:

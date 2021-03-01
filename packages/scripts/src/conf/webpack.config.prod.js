@@ -22,8 +22,6 @@ module.exports = function (cmd) {
   config.mode = 'production'
   config.entry = [paths.appIndexJs]
   // config.output.filename = 'js/[hash:8].js'
-  // config.output.filename = 'static/js/[name].bundle.js'
-  // config.output.chunkFilename = docsConfig.repo ? `${docsConfig.repo}/js/[name].[hash:8].js` : 'js/[name].[hash:8].js'
   config.output.chunkFilename = 'js/[name].[hash:8].js'
   config.output.publicPath = docsConfig.repo ? `/${docsConfig.repo}/` : '/'
   config.output.path = docsConfig.repo ? `${paths.docsBuildDist}/${docsConfig.repo}` : paths.docsBuildDist
@@ -140,7 +138,6 @@ module.exports = function (cmd) {
         removeComments: true,
         removeEmptyAttributes: true,
       },
-      // filename: 'README/index.html',
     }),
     new CopyMarkdownImageWebpackPlugin({
       dir: cmd.markdownPaths,
@@ -163,8 +160,6 @@ module.exports = function (cmd) {
       // both options are optional
       filename: 'css/[contenthash].css',
       chunkFilename: 'css/[id].css',
-      // filename: docsConfig.repo ? `${docsConfig.repo}/css/[contenthash].css` : 'css/[contenthash].css',
-      // chunkFilename: docsConfig.repo ? `${docsConfig.repo}/css/[id].css` : 'css/[id].css',
     }),
     new PrerenderSPAPlugin({
       // Required - The path to the webpack-outputted app to prerender.
@@ -172,7 +167,6 @@ module.exports = function (cmd) {
       outputDir: docsConfig.repo ? `${paths.docsBuildDist}/${docsConfig.repo}` : paths.docsBuildDist,
       indexPath: docsConfig.repo ? `${paths.docsBuildDist}/${docsConfig.repo}/index.html` : `${paths.docsBuildDist}/index.html`,
       // Required - Routes to render.
-      // routes: ['/', '/README', '/快速上手', '/404', '/aaa/b'],
       routes: getPrerenderRoutes(),
       successCb: async () => {
         if (docsConfig.repo) {
@@ -181,39 +175,26 @@ module.exports = function (cmd) {
           await fs.remove(`${paths.docsBuildDist}/${docsConfig.repo}`)
           // move README as root index.html
           await fs.copy(`${paths.docsBuildDist}/README/index.html`, `${paths.docsBuildDist}/index.html`)
+          // todo: seo
+          if (fs.existsSync(`${paths.docsBase}/sitemap.xml`)) {
+            await fs.copy(`${paths.docsBase}/sitemap.xml`, `${paths.docsBuildDist}/sitemap.xml`)
+          }
           console.log('generate prerender file success!')
         }
       },
       // The actual renderer to use. (Feel free to write your own)
       // Available renderers: https://github.com/Tribex/prerenderer/tree/master/renderers
       renderer: new Renderer({
-        // // Optional - The name of the property to add to the window object with the contents of `inject`.
+        // Optional - The name of the property to add to the window object with the contents of `inject`.
         injectProperty: '__PRERENDER_INJECTED',
-        // // Optional - Any values you'd like your app to have access to via `window.injectProperty`.
+        // Optional - Any values you'd like your app to have access to via `window.injectProperty`.
         inject: {
           prerender: true,
         },
-
-        // // Optional - defaults to 0, no limit.
-        // // Routes are rendered asynchronously.
-        // // Use this to limit the number of routes rendered in parallel.
+        // Optional - defaults to 0, no limit.
+        // Routes are rendered asynchronously.
+        // Use this to limit the number of routes rendered in parallel.
         maxConcurrentRoutes: 4,
-
-        // // Optional - Wait to render until the specified event is dispatched on the document.
-        // // eg, with `document.dispatchEvent(new Event('custom-render-trigger'))`
-        // renderAfterDocumentEvent: 'custom-render-trigger',
-
-        // // Optional - Wait to render until the specified element is detected using `document.querySelector`
-        // renderAfterElementExists: 'my-app-element',
-
-        // // Optional - Wait to render until a certain amount of time has passed.
-        // // NOT RECOMMENDED
-        // renderAfterTime: 5000, // Wait 5 seconds.
-
-        // Other puppeteer options.
-        // (See here: https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#puppeteerlaunchoptions)
-        // headless: false // Display the browser window when rendering. Useful for debugging.
-        // headless: false,
       }),
     }),
   ])

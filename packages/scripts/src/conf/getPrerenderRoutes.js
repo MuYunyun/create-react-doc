@@ -10,7 +10,6 @@ const getPrerenderRoutes = () => {
     : []
   const result = ['/README', '/404']
   dfs(menu, result, '', true)
-  console.log('result', result)
   return result
 }
 
