@@ -29,7 +29,7 @@ Create React Doc 是一个使用 React 的 markdown 文档站点生成工具。�
 * 性能: 文档支持懒加载提升站点加载速度。
 * 工作流: 集成 Github action, 自动化打包、发布站点。
 
-> [快速上手](http://muyunyun.cn/create-react-doc/#/%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B)
+> [快速上手](http://muyunyun.cn/create-react-doc/%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B)
 
 ## 主题
 
