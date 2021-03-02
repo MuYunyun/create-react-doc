@@ -1,6 +1,6 @@
 {
   "name": "crd-theme",
-  "version": "0.2.34-alpha.0",
+  "version": "1.0.0",
   "description": "Default Theme with Create React Doc",
   "main": "index.js",
   "dependencies": {
