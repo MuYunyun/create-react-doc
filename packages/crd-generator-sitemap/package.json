@@ -1,0 +1,18 @@
+{
+  "name": "crd-generator-sitemap",
+  "version": "1.0.0",
+  "description": "generator sitemap for create-react-doc",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MuYunyun/create-react-doc",
+    "directory": "packages/crd-generator-sitemap"
+  },
+  "keywords": [],
+  "publishConfig": {
+    "access": "public"
+  },
+  "author": "muyunyun",
+  "license": "MIT",
+  "gitHead": "ffc5e4cbc94a7356da558c2dbf46e2f39bb8b199"
+}

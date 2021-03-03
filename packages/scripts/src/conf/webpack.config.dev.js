@@ -3,6 +3,7 @@ const webpack = require('webpack')
 const path = require('path')
 const upath = require('upath')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const { defaultHTMLPath, cacheDirPath } = require('crd-utils')
 const FriendlyErrorsWebpackPlugin = require('@nuxtjs/friendly-errors-webpack-plugin')
 const { getDocsConfig } = require('../utils')
 const CreateSpareWebpackPlugin = require('./createSpareWebpackPlugin')
@@ -117,12 +118,12 @@ module.exports = function (cmd) {
     new HtmlWebpackPlugin({
       inject: true,
       favicon: paths.defaultFaviconPath,
-      template: paths.defaultHTMLPath,
+      template: defaultHTMLPath,
       title: docsConfig && docsConfig.title ? docsConfig.title : 'Create React Doc',
     }),
     new CreateSpareWebpackPlugin({
       // 备用文件目录，比对是否存在，不存在生成，根据 sep 目录规则生成
-      path: path.join(paths.cacheDirPath, './md'),
+      path: path.join(cacheDirPath, './md'),
       sep: '___', // 检查目标目录文件，文件名存储，文件夹+下划线间隔+文件名
       directoryTrees: { // 索引目录
         dir: cmd.markdownPaths,

@@ -12,6 +12,7 @@ const {
   Servers,
   Build,
 } = require('crd-scripts')
+const { docsReadme, cacheDirPath } = require('crd-utils')
 const input = require('@inquirer/input')
 const pkg = require('./package.json')
 
@@ -64,8 +65,8 @@ const docsConfig = getDocsConfig()
 
 // assign all the markdown dir
 if (start || build) {
-  fs.existsSync(paths.docsReadme) &&
-    program.markdownPaths.push(paths.docsReadme)
+  fs.existsSync(docsReadme) &&
+    program.markdownPaths.push(docsReadme)
 
   docsConfig &&
     docsConfig.menu
@@ -97,7 +98,7 @@ program.markdownPaths.forEach((item) => {
 })
 
 if (isExists) {
-  fs.ensureDirSync(paths.cacheDirPath)
+  fs.ensureDirSync(cacheDirPath)
   initCache(program, () => {
     if (build) {
       Build(program)

@@ -9,6 +9,7 @@ const PrerenderSPAPlugin = require('crd-prerender-spa-plugin')
 // const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 // const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const fs = require('fs-extra')
+const { docsBase, defaultHTMLPath, cacheDirPath } = require('crd-utils')
 const { getDocsConfig } = require('../utils')
 const CreateSpareWebpackPlugin = require('./createSpareWebpackPlugin')
 const config = require('./webpack.config')
@@ -120,6 +121,8 @@ module.exports = function (cmd) {
     // ],
   }
 
+  const routes = getPrerenderRoutes()
+
   config.plugins = config.plugins.concat([
     new webpack.DefinePlugin({
       env: JSON.stringify('prod'),
@@ -127,7 +130,7 @@ module.exports = function (cmd) {
     new HtmlWebpackPlugin({
       inject: true,
       favicon: paths.defaultFaviconPath,
-      template: paths.defaultHTMLPath,
+      template: defaultHTMLPath,
       title:
         docsConfig && docsConfig.title ? docsConfig.title : 'Create React Doc',
       minify: {
@@ -145,7 +148,7 @@ module.exports = function (cmd) {
     }),
     new CreateSpareWebpackPlugin({
       // 备用文件目录，比对是否存在，不存在生成，根据 sep 目录规则生成
-      path: path.join(paths.cacheDirPath, './md'),
+      path: path.join(cacheDirPath, './md'),
       sep: '___', // 检查目标目录文件，文件名存储，文件夹+下划线间隔+文件名
       directoryTrees: {
         // 索引目录
@@ -167,7 +170,7 @@ module.exports = function (cmd) {
       outputDir: docsConfig.repo ? `${paths.docsBuildDist}/${docsConfig.repo}` : paths.docsBuildDist,
       indexPath: docsConfig.repo ? `${paths.docsBuildDist}/${docsConfig.repo}/index.html` : `${paths.docsBuildDist}/index.html`,
       // Required - Routes to render.
-      routes: getPrerenderRoutes(),
+      routes,
       successCb: async () => {
         if (docsConfig.repo) {
           // not use fs.move here or it'll throw error in github action
@@ -175,11 +178,14 @@ module.exports = function (cmd) {
           await fs.remove(`${paths.docsBuildDist}/${docsConfig.repo}`)
           // move README as root index.html
           await fs.copy(`${paths.docsBuildDist}/README/index.html`, `${paths.docsBuildDist}/index.html`)
-          // todo: seo
-          if (fs.existsSync(`${paths.docsBase}/sitemap.xml`)) {
-            await fs.copy(`${paths.docsBase}/sitemap.xml`, `${paths.docsBuildDist}/sitemap.xml`)
-          }
           console.log('generate prerender file success!')
+          // todo: seo
+          if (true) {
+            if (fs.existsSync(`${docsBase}/sitemap.xml`)) {
+              await fs.copy(`${docsBase}/sitemap.xml`, `${paths.docsBuildDist}/sitemap.xml`)
+            }
+          }
+          console.log('generate sitemap file success!')
         }
       },
       // The actual renderer to use. (Feel free to write your own)

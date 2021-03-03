@@ -3,10 +3,10 @@ const WebpackDevServer = require('webpack-dev-server')
 const openBrowsers = require('open-browsers')
 const detect = require('detect-port')
 const fs = require('fs')
+const { docsConfig } = require('crd-utils')
 const prepareUrls = require('local-ip-url/prepareUrls')
 const conf = require('./conf/webpack.config.dev')
 const createDevServerConfig = require('./conf/webpack.config.server')
-const paths = require('./conf/path')
 require('colors-cli/toxic')
 
 function clearConsole() {
@@ -14,7 +14,7 @@ function clearConsole() {
 }
 
 module.exports = function server(cmd) {
-  if (!fs.existsSync(paths.docsConfig)) {
+  if (!fs.existsSync(docsConfig)) {
     console.log('please check config.yml in root dir!\n')
     return
   }

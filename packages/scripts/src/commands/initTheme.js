@@ -4,6 +4,7 @@
 const path = require('path')
 const { execSync } = require('child_process')
 const fs = require('fs-extra')
+const { templatePath } = require('crd-utils')
 const copyTemplate = require('copy-template-dir')
 const paths = require('../conf/path')
 
@@ -22,7 +23,7 @@ module.exports = function (themeName) {
     fs.ensureDirSync(outDir)
   }
 
-  const defaultTemplatePath = `${paths.templatePath}/theme/default`
+  const defaultTemplatePath = `${templatePath}/theme/default`
 
   if (!fs.pathExistsSync(defaultTemplatePath)) {
     execSync('mkdir temp && cd temp && yarn add crd-templates -D')

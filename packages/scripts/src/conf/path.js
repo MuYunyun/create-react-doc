@@ -130,17 +130,9 @@ const resolveTool = relativePath => path.resolve(toolDirectory, relativePath)
 module.exports = {
   // markdown dir
   crdConf: getCrdConf(),
-  docsGitIgnore: resolveApp('.gitignore'),
-  docsBase: resolveApp(''),
-  docsConfig: docsConfigPath,
-  docsReadme: resolveApp('README.md'),
-  docsBuildDist: resolveApp('.crd-dist'),
-  cacheDirPath: resolveApp('.cache'),
-  searchFilePath: resolveApp('.cache/search.js'),
-  watchFilePath: resolveApp('.cache/watch-dir.js'),
-  templatePath: resolveApp('node_modules/crd-templates'),
-  defaultHTMLPath: resolveApp('node_modules/crd-theme/index.html'),
-  defaultTemplateThemePath: resolveApp('node_modules/crd-templates/theme/default'),
+  // todo delete
+  // docsConfig: resolveApp('config.yml'),
+  // docsBuildDist: resolveApp('.crd-dist'),
   defaultTheme: devTheme
     ? resolveApp(`${devTheme}`)
     : resolveApp(`node_modules/${theme}`),

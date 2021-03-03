@@ -1,8 +1,8 @@
 const write = require('write')
 const path = require('path')
 const fs = require('fs')
+const { cacheDirPath } = require('crd-utils')
 const DirectoryTree = require('../conf/node-directory-tree')
-const paths = require('../conf/path')
 const { ifInGitIgnore, getDocsConfig } = require('./index')
 
 function restRuctureMarkdown(items, arr = []) {
@@ -41,7 +41,7 @@ module.exports = function (program, cb) {
       const underlineFileName = mdfilePath.split(path.sep).join('___')
       const writeMarkdownPath = path.resolve(
         process.cwd(),
-        paths.cacheDirPath,
+        cacheDirPath,
         'md',
         underlineFileName,
       )
@@ -91,7 +91,7 @@ module.exports = function (program, cb) {
     dfsMap(treeData)
     const writeSearchPath = path.resolve(
       process.cwd(),
-      paths.cacheDirPath,
+      cacheDirPath,
       'search.js',
     )
     write.sync(
