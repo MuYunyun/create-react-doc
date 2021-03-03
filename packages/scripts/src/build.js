@@ -1,11 +1,11 @@
 const webpack = require('webpack')
 const fs = require('fs')
+const { docsConfig } = require('crd-utils')
 const conf = require('./conf/webpack.config.prod')
-const paths = require('./conf/path')
 require('colors-cli/toxic')
 
 module.exports = function serve(program) {
-  if (!fs.existsSync(paths.docsConfig)) {
+  if (!fs.existsSync(docsConfig)) {
     console.log('please check config.yml in root dir!\n')
     return
   }

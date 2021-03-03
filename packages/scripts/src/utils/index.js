@@ -1,6 +1,6 @@
 const fs = require('fs')
 const yaml = require('js-yaml')
-const { resolveApp } = require('crd-utils')
+const { docsGitIgnore, docsConfig, searchFilePath } = require('crd-utils')
 const paths = require('../conf/path')
 
 /**
@@ -8,8 +8,8 @@ const paths = require('../conf/path')
  */
 exports.ifInGitIgnore = (mdfilePathInProject) => {
   let gitIgnoreContentArr = []
-  if (fs.existsSync(paths.docsGitIgnore)) {
-    const gitIgnoreContent = fs.readFileSync(paths.docsGitIgnore)
+  if (fs.existsSync(docsGitIgnore)) {
+    const gitIgnoreContent = fs.readFileSync(docsGitIgnore)
     gitIgnoreContentArr = gitIgnoreContent.toString().split('\n')
   }
   return gitIgnoreContentArr.indexOf(mdfilePathInProject) > -1
@@ -49,7 +49,7 @@ exports.timeFormat = (date) => {
  */
 exports.getDocsConfig = () => {
   /* avoid reference loop, so use resolveApp('config.yml') instead of refrence from paths. */
-  const docsConfig = resolveApp('config.yml')
+  // const docsConfig = resolveApp('config.yml')
   if (!fs.existsSync(docsConfig)) {
     return null
   }
@@ -57,10 +57,10 @@ exports.getDocsConfig = () => {
 }
 
 exports.getSearchContent = () => {
-  if (!fs.existsSync(paths.searchFilePath)) {
+  if (!fs.existsSync(searchFilePath)) {
     console.log('there is no find .cache/search.js in root dir!\n')
     return null
   }
-  return fs.readFileSync(paths.searchFilePath)
+  return fs.readFileSync(searchFilePath)
 }
 

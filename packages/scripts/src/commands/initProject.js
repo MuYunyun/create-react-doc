@@ -1,6 +1,7 @@
 const path = require('path')
 const { execSync } = require('child_process')
 const fs = require('fs-extra')
+const { templatePath } = require('crd-utils')
 const copyTemplate = require('copy-template-dir')
 const paths = require('../conf/path')
 
@@ -21,7 +22,7 @@ module.exports = function (params) {
     fs.ensureDirSync(outDir)
   }
 
-  const defaultTemplatePath = `${paths.templatePath}/default`
+  const defaultTemplatePath = `${templatePath}/default`
 
   // copy template, see https://github.com/MuYunyun/create-react-doc/issues/50
   if (!fs.pathExistsSync(defaultTemplatePath)) {

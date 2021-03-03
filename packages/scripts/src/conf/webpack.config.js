@@ -4,7 +4,7 @@ const path = require('path')
 const webpack = require('webpack')
 const webpackbar = require('webpackbar')
 const fs = require('fs')
-const { resolveApp } = require('crd-utils')
+const { resolveApp, docsConfig, cacheDirPath } = require('crd-utils')
 const { getDocsConfig } = require('../utils')
 // const { getDocsConfig, getSearchContent } = require('../utils');
 const paths = require('./path')
@@ -19,15 +19,15 @@ if (paths.crdConf && paths.crdConf.footer && typeof paths.crdConf.footer === 'st
   define.FOOTER = JSON.stringify(paths.crdConf.footer)
 }
 /* custom define docs config */
-if (paths.docsConfig) {
+if (docsConfig) {
   // const searchContent = getSearchContent();
-  const docsConfig = getDocsConfig()
-  define.DOCSCONFIG = JSON.stringify(docsConfig)
+  const docsConfigObj = getDocsConfig()
+  define.DOCSCONFIG = JSON.stringify(docsConfigObj)
   // todo: searchContent affects the performance, so take annotation here templately.
   // define.SEARCHCONTENT = searchContent && searchContent.toString();
 
-  // if there is inject logic in docsConfig
-  if (docsConfig && docsConfig.inject && fs.existsSync(resolveApp(docsConfig.inject))) {
+  // if there is inject logic in docsConfigObj
+  if (docsConfigObj && docsConfigObj.inject && fs.existsSync(resolveApp(docsConfigObj.inject))) {
     define.INJECT = require(resolveApp(docsConfig.inject))
   }
 }
@@ -67,7 +67,7 @@ module.exports = {
                 // https://github.com/react-doc/raw-content-replace-loader/blob/master/index.js
                 loader: require.resolve('raw-content-replace-loader'),
                 options: {
-                  path: path.join(paths.cacheDirPath, './md'), // dir need to replace
+                  path: path.join(cacheDirPath, './md'), // dir need to replace
                   replace: paths.projectPath, // the dir to replace
                   sep: /___/g, // name saved, folder + __ + file
                 },
