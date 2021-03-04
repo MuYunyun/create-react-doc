@@ -27,6 +27,10 @@ devTheme: packages/crd-seed/index
 user: MuYunyun
 repo: create-react-doc
 github-ribbons: true
+domain: https://muyunyun.cn
+seo:
+  google: true
+
 
 # Available values: en | zh-cn
 language: en

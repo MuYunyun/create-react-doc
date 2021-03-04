@@ -7,12 +7,11 @@ const {
   initTheme,
   initCache,
   Deploy,
-  paths,
   getDocsConfig,
   Servers,
   Build,
 } = require('crd-scripts')
-const { docsReadme, cacheDirPath } = require('crd-utils')
+const { docsReadme, cacheDirPath, docsBuildDist } = require('crd-utils')
 const input = require('@inquirer/input')
 const pkg = require('./package.json')
 
@@ -75,9 +74,9 @@ if (start || build) {
       )
 }
 
-if (build && fs.pathExistsSync(paths.docsBuildDist)) {
+if (build && fs.pathExistsSync(docsBuildDist)) {
   // clean dir
-  fs.emptyDirSync(paths.docsBuildDist)
+  fs.emptyDirSync(docsBuildDist)
 }
 
 // deploy code to special git repo and branch.

@@ -6,10 +6,11 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CopyMarkdownImageWebpackPlugin = require('copy-markdown-image-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const PrerenderSPAPlugin = require('crd-prerender-spa-plugin')
+const { generateSiteMap } = require('crd-generator-sitemap')
 // const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 // const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const fs = require('fs-extra')
-const { docsBase, defaultHTMLPath, cacheDirPath } = require('crd-utils')
+const { docsBase, defaultHTMLPath, cacheDirPath, docsBuildDist } = require('crd-utils')
 const { getDocsConfig } = require('../utils')
 const CreateSpareWebpackPlugin = require('./createSpareWebpackPlugin')
 const config = require('./webpack.config')
@@ -25,7 +26,7 @@ module.exports = function (cmd) {
   // config.output.filename = 'js/[hash:8].js'
   config.output.chunkFilename = 'js/[name].[hash:8].js'
   config.output.publicPath = docsConfig.repo ? `/${docsConfig.repo}/` : '/'
-  config.output.path = docsConfig.repo ? `${paths.docsBuildDist}/${docsConfig.repo}` : paths.docsBuildDist
+  config.output.path = docsConfig.repo ? `${docsBuildDist}/${docsConfig.repo}` : docsBuildDist
 
   config.module.rules = config.module.rules.map((item) => {
     if (item.oneOf) {
@@ -166,23 +167,23 @@ module.exports = function (cmd) {
     }),
     new PrerenderSPAPlugin({
       // Required - The path to the webpack-outputted app to prerender.
-      staticDir: paths.docsBuildDist,
-      outputDir: docsConfig.repo ? `${paths.docsBuildDist}/${docsConfig.repo}` : paths.docsBuildDist,
-      indexPath: docsConfig.repo ? `${paths.docsBuildDist}/${docsConfig.repo}/index.html` : `${paths.docsBuildDist}/index.html`,
+      staticDir: docsBuildDist,
+      outputDir: docsConfig.repo ? `${docsBuildDist}/${docsConfig.repo}` : docsBuildDist,
+      indexPath: docsConfig.repo ? `${docsBuildDist}/${docsConfig.repo}/index.html` : `${docsBuildDist}/index.html`,
       // Required - Routes to render.
       routes,
       successCb: async () => {
         if (docsConfig.repo) {
           // not use fs.move here or it'll throw error in github action
-          await fs.copy(`${paths.docsBuildDist}/${docsConfig.repo}`, paths.docsBuildDist)
-          await fs.remove(`${paths.docsBuildDist}/${docsConfig.repo}`)
+          await fs.copy(`${docsBuildDist}/${docsConfig.repo}`, docsBuildDist)
+          await fs.remove(`${docsBuildDist}/${docsConfig.repo}`)
           // move README as root index.html
-          await fs.copy(`${paths.docsBuildDist}/README/index.html`, `${paths.docsBuildDist}/index.html`)
+          await fs.copy(`${docsBuildDist}/README/index.html`, `${docsBuildDist}/index.html`)
           console.log('generate prerender file success!')
           // todo: seo
-          if (true) {
-            if (fs.existsSync(`${docsBase}/sitemap.xml`)) {
-              await fs.copy(`${docsBase}/sitemap.xml`, `${paths.docsBuildDist}/sitemap.xml`)
+          if (docsConfig.seo) {
+            if (docsConfig.seo.google) {
+              fs.writeFileSync(`${docsBuildDist}/sitemap.xml`, generateSiteMap())
             }
           }
           console.log('generate sitemap file success!')

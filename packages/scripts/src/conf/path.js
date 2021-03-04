@@ -1,7 +1,7 @@
 const path = require('path')
 const fs = require('fs')
 const { execSync } = require('child_process')
-const { resolveApp } = require('crd-utils')
+const { resolveApp, docsConfig } = require('crd-utils')
 const chalk = require('chalk')
 const { getDocsConfig } = require('../utils')
 
@@ -71,17 +71,15 @@ let theme = ''
 // theme in develop mode.
 let devTheme = false
 
-const docsConfigPath = resolveApp('config.yml')
-
 const getTheme = () => {
-  if (docsConfigPath) {
-    const docsConfig = getDocsConfig()
-    if (!docsConfig) return
-    if (docsConfig.devTheme) {
-      devTheme = docsConfig.devTheme
-      theme = docsConfig.devTheme
+  if (docsConfig) {
+    const docsConfigObj = getDocsConfig()
+    if (!docsConfigObj) return
+    if (docsConfigObj.devTheme) {
+      devTheme = docsConfigObj.devTheme
+      theme = docsConfigObj.devTheme
     } else {
-      theme = docsConfig.theme
+      theme = docsConfigObj.theme
 
       // install custom theme
       if (!fs.existsSync(resolveApp(`node_modules/${theme}`))) {
@@ -130,9 +128,6 @@ const resolveTool = relativePath => path.resolve(toolDirectory, relativePath)
 module.exports = {
   // markdown dir
   crdConf: getCrdConf(),
-  // todo delete
-  // docsConfig: resolveApp('config.yml'),
-  // docsBuildDist: resolveApp('.crd-dist'),
   defaultTheme: devTheme
     ? resolveApp(`${devTheme}`)
     : resolveApp(`node_modules/${theme}`),

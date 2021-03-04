@@ -4,7 +4,7 @@ const path = require('path')
 const webpack = require('webpack')
 const webpackbar = require('webpackbar')
 const fs = require('fs')
-const { resolveApp, docsConfig, cacheDirPath } = require('crd-utils')
+const { resolveApp, docsConfig, cacheDirPath, docsBuildDist } = require('crd-utils')
 const { getDocsConfig } = require('../utils')
 // const { getDocsConfig, getSearchContent } = require('../utils');
 const paths = require('./path')
@@ -28,14 +28,14 @@ if (docsConfig) {
 
   // if there is inject logic in docsConfigObj
   if (docsConfigObj && docsConfigObj.inject && fs.existsSync(resolveApp(docsConfigObj.inject))) {
-    define.INJECT = require(resolveApp(docsConfig.inject))
+    define.INJECT = require(resolveApp(docsConfigObj.inject))
   }
 }
 
 module.exports = {
   entry: {},
   output: {
-    path: paths.docsBuildDist,
+    path: docsBuildDist,
     publicPath: paths.publicPath,
     filename: 'js/[name].[hash:8].js',
     chunkFilename: 'js/[name].[hash:8].js',

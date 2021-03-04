@@ -1,8 +1,8 @@
 const fs = require('fs')
 const { getDocsConfig } = require('../utils')
 
-// eg: [docs/quick_start.md, a]
-// output: [/quick_start, /a/b, /a/b/c]
+// eg: ['docs/quick_start.md', 'a']
+// output: ['/quick_start', '/a/b', '/a/b/c']
 const getPrerenderRoutes = () => {
   const docsConfig = getDocsConfig()
   const menu = docsConfig && Array.isArray(docsConfig.menu)
