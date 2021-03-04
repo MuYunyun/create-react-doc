@@ -1,6 +1,5 @@
-const { resolveApp, resolveTool } = require('./path')
+const { generateSiteMap } = require('./generate')
 
 module.exports = {
-  resolveApp,
-  resolveTool,
+  generateSiteMap,
 }

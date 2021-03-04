@@ -1,7 +1,6 @@
 const fs = require('fs')
 const yaml = require('js-yaml')
 const { docsGitIgnore, docsConfig, searchFilePath } = require('crd-utils')
-const paths = require('../conf/path')
 
 /**
  * judege cur file if in git ignore.
