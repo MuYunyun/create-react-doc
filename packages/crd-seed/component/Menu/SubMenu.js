@@ -88,8 +88,6 @@ function SubMenu({
 
   const handleParentMouseEnter = () => {
     setParentMenuHover(true)
-    // console.log(`parentEnter${level} ChildMenuHover${level}`, getChildMenuHover())
-
     onHoverKey(keyValue)
   }
 

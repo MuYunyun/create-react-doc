@@ -1,6 +1,5 @@
 const fs = require('fs')
-const yaml = require('js-yaml')
-const { docsGitIgnore, docsConfig, searchFilePath } = require('crd-utils')
+const { docsGitIgnore, searchFilePath } = require('crd-utils')
 
 /**
  * judege cur file if in git ignore.
@@ -41,18 +40,6 @@ exports.timeFormat = (date) => {
   return `${date.getFullYear()}-${paddingTwoDigits(
     date.getMonth() + 1,
   )}-${paddingTwoDigits(date.getDate())}`
-}
-
-/**
- * get docs config, see https://github.com/nodeca/js-yaml/blob/2d1fbed8f3a76ff93cccb9a8a418b4c4a482d3d9/lib/js-yaml/loader.js#L1590-L1592
- */
-exports.getDocsConfig = () => {
-  /* avoid reference loop, so use resolveApp('config.yml') instead of refrence from paths. */
-  // const docsConfig = resolveApp('config.yml')
-  if (!fs.existsSync(docsConfig)) {
-    return null
-  }
-  return yaml.safeLoad(fs.readFileSync(docsConfig))
 }
 
 exports.getSearchContent = () => {

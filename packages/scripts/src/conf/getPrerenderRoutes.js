@@ -1,5 +1,5 @@
 const fs = require('fs')
-const { getDocsConfig } = require('../utils')
+const { getDocsConfig } = require('crd-utils')
 
 // eg: ['docs/quick_start.md', 'a']
 // output: ['/quick_start', '/a/b', '/a/b/c']

@@ -5,7 +5,6 @@ const Servers = require('./src/server')
 const Build = require('./src/build')
 const Deploy = require('./src/deploy')
 const paths = require('./src/conf/path')
-const { getDocsConfig } = require('./src/utils')
 
 module.exports = {
   initProject,
@@ -15,5 +14,4 @@ module.exports = {
   Build,
   Deploy,
   paths,
-  getDocsConfig,
 }

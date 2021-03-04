@@ -1,9 +1,8 @@
 const path = require('path')
 const fs = require('fs')
 const { execSync } = require('child_process')
-const { resolveApp, docsConfig } = require('crd-utils')
+const { resolveApp, docsConfig, getDocsConfig } = require('crd-utils')
 const chalk = require('chalk')
-const { getDocsConfig } = require('../utils')
 
 // handle the problem of symbol in any platform
 const appDirectory = fs.realpathSync(process.cwd())

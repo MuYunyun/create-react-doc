@@ -1,4 +1,4 @@
-const { getDocsConfig } = require('crd-scripts')
+const { getDocsConfig } = require('crd-utils')
 
 // template for google SEO
 // <url>
@@ -26,9 +26,17 @@ const template = content =>
 const generateSiteMap = (routes) => {
   let content = ''
   for (let i = 0; i < routes.length; i++) {
-    content += `<url>
-  <loc>${domain}/${repo}${routes[i]}</loc>
-</url>`
+    if (i === routes.length - 1) {
+      content +=
+`  <url>
+    <loc>${domain}/${repo}${routes[i]}</loc>
+  </url>`
+    } else {
+      content +=
+`  <url>
+    <loc>${domain}/${repo}${routes[i]}</loc>
+  </url>\n`
+    }
   }
   return template(content)
 }

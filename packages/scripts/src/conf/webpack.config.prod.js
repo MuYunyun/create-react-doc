@@ -10,8 +10,8 @@ const { generateSiteMap } = require('crd-generator-sitemap')
 // const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 // const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const fs = require('fs-extra')
-const { docsBase, defaultHTMLPath, cacheDirPath, docsBuildDist } = require('crd-utils')
-const { getDocsConfig } = require('../utils')
+const { defaultHTMLPath, cacheDirPath, docsBuildDist } = require('crd-utils')
+const { getDocsConfig } = require('crd-utils')
 const CreateSpareWebpackPlugin = require('./createSpareWebpackPlugin')
 const config = require('./webpack.config')
 const paths = require('./path')
@@ -180,10 +180,9 @@ module.exports = function (cmd) {
           // move README as root index.html
           await fs.copy(`${docsBuildDist}/README/index.html`, `${docsBuildDist}/index.html`)
           console.log('generate prerender file success!')
-          // todo: seo
           if (docsConfig.seo) {
             if (docsConfig.seo.google) {
-              fs.writeFileSync(`${docsBuildDist}/sitemap.xml`, generateSiteMap())
+              fs.writeFileSync(`${docsBuildDist}/sitemap.xml`, generateSiteMap(routes))
             }
           }
           console.log('generate sitemap file success!')
