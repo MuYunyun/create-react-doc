@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Utils with create react doc",
   "main": "index.js",
+  "dependencies": {
+    "js-yaml": "^3.14.0"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/MuYunyun/create-react-doc",

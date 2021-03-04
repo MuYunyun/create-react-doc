@@ -7,11 +7,10 @@ const {
   initTheme,
   initCache,
   Deploy,
-  getDocsConfig,
   Servers,
   Build,
 } = require('crd-scripts')
-const { docsReadme, cacheDirPath, docsBuildDist } = require('crd-utils')
+const { docsReadme, cacheDirPath, docsBuildDist, getDocsConfig } = require('crd-utils')
 const input = require('@inquirer/input')
 const pkg = require('./package.json')
 

@@ -1,9 +1,9 @@
 const write = require('write')
 const path = require('path')
 const fs = require('fs')
-const { cacheDirPath } = require('crd-utils')
+const { cacheDirPath, getDocsConfig } = require('crd-utils')
 const DirectoryTree = require('../conf/node-directory-tree')
-const { ifInGitIgnore, getDocsConfig } = require('./index')
+const { ifInGitIgnore } = require('./index')
 
 function restRuctureMarkdown(items, arr = []) {
   items.forEach((item) => {

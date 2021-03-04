@@ -5,8 +5,8 @@ const webpack = require('webpack')
 const webpackbar = require('webpackbar')
 const fs = require('fs')
 const { resolveApp, docsConfig, cacheDirPath, docsBuildDist } = require('crd-utils')
-const { getDocsConfig } = require('../utils')
-// const { getDocsConfig, getSearchContent } = require('../utils');
+const { getDocsConfig } = require('crd-utils')
+// const { getSearchContent } = require('../utils');
 const paths = require('./path')
 const pkg = require('../../package.json')
 
