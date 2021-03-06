@@ -28,7 +28,7 @@
 * 建站理念: 文件即站点 (Files as a Site)。
 * 开箱即用: 通过指定目录或文档, 一键生成文档、博客站点, 无需关心站点环境配置信息。
 * 性能: 通过预渲染、懒加载大幅提升站点加载速度。
-* SEO: 支持 SEO, 让文档更易被搜索。
+* 搜索引擎优化: 支持 SEO, 让文档更易被搜索。
 * 个性化: 支持[自定义主题](http://muyunyun.cn/create-react-doc/%E8%87%AA%E5%AE%9A%E4%B9%89%E4%B8%BB%E9%A2%98)。
 * 工作流: 集成 Github action, 支持自动化打包、发布站点。
 
@@ -86,7 +86,7 @@ yarn create react-doc doc
 
 ## 站点发布
 
-在 [快速上手](http://muyunyun.cn/create-react-doc/%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B) 一节中介绍了如何快速搭建站点, 本节将介绍如何将搭建好的站点打包、发布到 gh-pages。
+在 [快速上手](http://muyunyun.cn/create-react-doc/快速上手) 一节中介绍了如何快速搭建站点, 本节将介绍如何将搭建好的站点打包、发布到 gh-pages。
 
 ### 自动打包发布到 gh-pages (推荐)
 
@@ -105,4 +105,4 @@ git remote add origin https://github.com/用户或组织名/项目名.git
 git push -u origin main
 ```
 
-> 更多内容可以访问 [站点发布](http://muyunyun.cn/create-react-doc/%E7%AB%99%E7%82%B9%E5%8F%91%E5%B8%83)、[高阶用法](http://muyunyun.cn/create-react-doc/%E9%AB%98%E9%98%B6%E7%94%A8%E6%B3%95)、[其它工具](http://muyunyun.cn/create-react-doc/%E5%85%B6%E5%AE%83%E5%B7%A5%E5%85%B7) 等章节。
+> 更多内容可以访问 [站点发布](http://muyunyun.cn/create-react-doc/站点发布)、[高阶用法](http://muyunyun.cn/create-react-doc/高阶用法)、[其它工具](http://muyunyun.cn/create-react-doc/其它工具) 等章节。
