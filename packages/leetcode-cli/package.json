@@ -1,6 +1,6 @@
 {
   "name": "crd-leetcode-cli",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Generate leetcode table autoly",
   "bin": {
     "leetcode": "./src/cli.js"
@@ -8,7 +8,7 @@
   "dependencies": {
     "axios": "^0.21.1",
     "commander": "^2.20.0",
-    "crd-utils": "^1.0.0",
+    "crd-utils": "^1.1.0",
     "enquirer": "^2.3.0",
     "graphql-request": "^1.8.2",
     "inquirer": "^7.3.3",
