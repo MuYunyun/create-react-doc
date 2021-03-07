@@ -12,4 +12,4 @@
 
 # crd-scripts
 
-crd-scripts 封装提供了一系列打包构建脚本。
+crd-scripts 封装提供了一系列构建、发布脚本。
