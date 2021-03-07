@@ -12,7 +12,7 @@
 
 # react-doc
 
-react-doc 是配合 Create React Doc 使用的脚手架。
+react-doc 是配合 [Create React Doc](https://github.com/MuYunyun/create-react-doc) 使用的脚手架。
 
 ```bash
 $ react-doc doc      // 在当前文件夹下创建名为 doc 的文档站点
