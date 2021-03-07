@@ -29,7 +29,7 @@
     "crd-scripts": "^1.1.3",
     "crd-templates": "^1.0.0",
     "crd-theme": "^1.1.3",
-    "fs-extra": "^5.0.0"
+    "fs-extra": "^9.1.0"
   },
   "gitHead": "ffc5e4cbc94a7356da558c2dbf46e2f39bb8b199"
 }
