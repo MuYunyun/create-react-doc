@@ -92,7 +92,7 @@ function BasicLayout({
     );
   };
   const renderMenu = (menus) => {
-    if (menus.length < 1) return null;
+    if (menus.length < 1) return null
     return (
       <Affix
         offsetTop={0}
@@ -103,7 +103,7 @@ function BasicLayout({
         <Menu
           inlineCollapsed={inlineCollapsed}
           toggle={() => {
-            setInlineCollapsed(!inlineCollapsed);
+            setInlineCollapsed(!inlineCollapsed)
           }}
           menuStyle={{
             height: "100vh",
@@ -111,27 +111,29 @@ function BasicLayout({
           }}
           selectedKey={selectedKey}
           onSelect={(keyValue) => {
-            setSelectedKey(keyValue);
+            setSelectedKey(keyValue)
           }}
           defaultOpenKeys={curOpenKeys}
         >
           {renderSubMenuItem(menus || [])}
         </Menu>
       </Affix>
-    );
-  };
+    )
+  }
   /**
    * this section is to show article's relevant information
    * such as edit in github and so on.
    */
   const renderPageHeader = () => {
+    const curMenuSource = menuSource.filter(r => pathname.indexOf(r.title) > -1)
+    const editPathName = curMenuSource[0] && curMenuSource[0].path
     return (
       <div className={cx(styles.pageHeader)}>
         {user && repo ? (
           <a
             href={`https://github.com/${user}/${
               repo
-            }/edit/${branch}${pathname}.md`}
+            }/edit/${branch}${editPathName}`}
             target="_blank"
           >
             <Icon className={cx(styles.icon)} type="edit" size={13} />
