@@ -2,13 +2,13 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 67,
-    "uniques": 45
+    "count": 66,
+    "uniques": 44
   },
   {
     "path": "/MuYunyun/create-react-doc/issues",
     "title": "Issues · MuYunyun/create-react-doc",
-    "count": 10,
+    "count": 8,
     "uniques": 3
   },
   {
@@ -20,24 +20,12 @@
   {
     "path": "/MuYunyun/create-react-doc/issues/new",
     "title": "New Issue · MuYunyun/create-react-doc",
-    "count": 4,
-    "uniques": 2
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/issues/103",
-    "title": "解耦 menu 逻辑与内容区域逻辑, 加快页面渲染速度。 · Issue #103 · MuYunyun/create-react-doc",
-    "count": 2,
+    "count": 3,
     "uniques": 2
   },
   {
     "path": "/MuYunyun/create-react-doc/issues/105",
     "title": "can't perform leetcode download · Issue #105 · MuYunyun/create-react-doc",
-    "count": 2,
-    "uniques": 2
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/search",
-    "title": "Search · 小程序 · GitHub",
     "count": 2,
     "uniques": 2
   },
@@ -56,6 +44,18 @@
   {
     "path": "/MuYunyun/create-react-doc/blob/main/packages/create-react-doc/package.json",
     "title": "create-react-doc/package.json at main · MuYunyun/create-react-doc",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/commit/25cb7d53de1bdd8bbcf53ba59817f69c12a2c06e",
+    "title": "feat: prepare for seo · MuYunyun/create-react-doc@25cb7d5",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/commit/c47f202859720fdf10e93d72e72381d08386de06",
+    "title": "feat: seo · MuYunyun/create-react-doc@c47f202",
     "count": 1,
     "uniques": 1
   }
