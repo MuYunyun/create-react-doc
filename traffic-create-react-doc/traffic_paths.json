@@ -2,13 +2,13 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 57,
-    "uniques": 29
+    "count": 60,
+    "uniques": 30
   },
   {
     "path": "/MuYunyun/create-react-doc/issues",
     "title": "Issues · MuYunyun/create-react-doc",
-    "count": 18,
+    "count": 15,
     "uniques": 6
   },
   {
@@ -30,8 +30,8 @@
     "uniques": 2
   },
   {
-    "path": "/MuYunyun/create-react-doc/issues/new",
-    "title": "New Issue · MuYunyun/create-react-doc",
+    "path": "/MuYunyun/create-react-doc/issues/103",
+    "title": "解耦 menu 逻辑与内容区域逻辑, 加快页面渲染速度。 · Issue #103 · MuYunyun/create-react-doc",
     "count": 2,
     "uniques": 2
   },
