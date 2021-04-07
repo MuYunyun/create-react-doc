@@ -6,18 +6,13 @@
   },
   {
     "referrer": "dev.to",
-    "count": 12,
-    "uniques": 9
+    "count": 13,
+    "uniques": 10
   },
   {
     "referrer": "link.zhihu.com",
     "count": 5,
     "uniques": 4
-  },
-  {
-    "referrer": "bbs.huaweicloud.com",
-    "count": 3,
-    "uniques": 1
   },
   {
     "referrer": "v2ex.com",
@@ -28,10 +23,5 @@
     "referrer": "muyunyun.cn",
     "count": 2,
     "uniques": 2
-  },
-  {
-    "referrer": "Google",
-    "count": 1,
-    "uniques": 1
   }
 ]

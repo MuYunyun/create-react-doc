@@ -1,12 +1,7 @@
 {
-  "count": 75,
-  "uniques": 25,
+  "count": 72,
+  "uniques": 24,
   "views": [
-    {
-      "timestamp": "2021-03-30T00:00:00Z",
-      "count": 15,
-      "uniques": 5
-    },
     {
       "timestamp": "2021-03-31T00:00:00Z",
       "count": 14,
@@ -36,6 +31,11 @@
       "timestamp": "2021-04-05T00:00:00Z",
       "count": 3,
       "uniques": 2
+    },
+    {
+      "timestamp": "2021-04-06T00:00:00Z",
+      "count": 12,
+      "uniques": 4
     }
   ]
 }

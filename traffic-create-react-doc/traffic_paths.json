@@ -2,20 +2,14 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 59,
-    "uniques": 28
+    "count": 48,
+    "uniques": 25
   },
   {
     "path": "/MuYunyun/create-react-doc/issues",
     "title": "Issues · MuYunyun/create-react-doc",
-    "count": 17,
-    "uniques": 7
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/tree/main/docs",
-    "title": "create-react-doc/docs at main · MuYunyun/create-react-doc · GitHub",
-    "count": 4,
-    "uniques": 3
+    "count": 15,
+    "uniques": 6
   },
   {
     "path": "/MuYunyun/create-react-doc/tree/main/packages/leetcode-cli",
@@ -42,8 +36,8 @@
     "uniques": 2
   },
   {
-    "path": "/MuYunyun/create-react-doc/issues/103",
-    "title": "解耦 menu 逻辑与内容区域逻辑, 加快页面渲染速度。 · Issue #103 · MuYunyun/create-react-doc",
+    "path": "/MuYunyun/create-react-doc/tree/main/docs",
+    "title": "create-react-doc/docs at main · MuYunyun/create-react-doc · GitHub",
     "count": 2,
     "uniques": 2
   },
@@ -54,9 +48,15 @@
     "uniques": 2
   },
   {
-    "path": "/MuYunyun/create-react-doc/tree/main/packages",
-    "title": "create-react-doc/packages at main · MuYunyun/create-react-doc",
+    "path": "/MuYunyun/create-react-doc/blob/main/packages/leetcode-cli/src/leetcode.js",
+    "title": "create-react-doc/leetcode.js at main · MuYunyun/create-react-doc",
     "count": 2,
-    "uniques": 2
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/blob/main/README-en.md",
+    "title": "create-react-doc/README-en.md at main · MuYunyun/create-react-doc · GitHub",
+    "count": 2,
+    "uniques": 1
   }
 ]
