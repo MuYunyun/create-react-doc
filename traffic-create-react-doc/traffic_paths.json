@@ -2,8 +2,8 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 60,
-    "uniques": 31
+    "count": 67,
+    "uniques": 34
   },
   {
     "path": "/MuYunyun/create-react-doc/issues",
@@ -18,6 +18,12 @@
     "uniques": 4
   },
   {
+    "path": "/MuYunyun/create-react-doc/tree/main/docs",
+    "title": "create-react-doc/docs at main · MuYunyun/create-react-doc · GitHub",
+    "count": 4,
+    "uniques": 4
+  },
+  {
     "path": "/MuYunyun/create-react-doc/issues/105",
     "title": "can't perform leetcode download · Issue #105 · MuYunyun/create-react-doc",
     "count": 4,
@@ -26,12 +32,6 @@
   {
     "path": "/MuYunyun/create-react-doc/blob/main/package.json",
     "title": "create-react-doc/package.json at main · MuYunyun/create-react-doc · GitHub",
-    "count": 3,
-    "uniques": 3
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/tree/main/docs",
-    "title": "create-react-doc/docs at main · MuYunyun/create-react-doc · GitHub",
     "count": 3,
     "uniques": 3
   },
