@@ -2,8 +2,8 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 67,
-    "uniques": 34
+    "count": 80,
+    "uniques": 38
   },
   {
     "path": "/MuYunyun/create-react-doc/issues",
@@ -12,14 +12,26 @@
     "uniques": 6
   },
   {
+    "path": "/MuYunyun/create-react-doc/tree/main/docs",
+    "title": "create-react-doc/docs at main · MuYunyun/create-react-doc · GitHub",
+    "count": 5,
+    "uniques": 5
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/tree/main/packages",
+    "title": "create-react-doc/packages at main · MuYunyun/create-react-doc",
+    "count": 5,
+    "uniques": 4
+  },
+  {
     "path": "/MuYunyun/create-react-doc/tree/main/packages/leetcode-cli",
     "title": "在主要位置·muYunyun / create-react-doc中的create-react-doc / packages / leetcode-cli",
     "count": 5,
     "uniques": 4
   },
   {
-    "path": "/MuYunyun/create-react-doc/tree/main/docs",
-    "title": "create-react-doc/docs at main · MuYunyun/create-react-doc · GitHub",
+    "path": "/MuYunyun/create-react-doc/blob/main/package.json",
+    "title": "create-react-doc/package.json at main · MuYunyun/create-react-doc · GitHub",
     "count": 4,
     "uniques": 4
   },
@@ -30,33 +42,21 @@
     "uniques": 2
   },
   {
-    "path": "/MuYunyun/create-react-doc/blob/main/package.json",
-    "title": "create-react-doc/package.json at main · MuYunyun/create-react-doc · GitHub",
-    "count": 3,
-    "uniques": 3
-  },
-  {
     "path": "/MuYunyun/create-react-doc/pulls",
     "title": "Pull requests · MuYunyun/create-react-doc",
     "count": 3,
     "uniques": 2
   },
   {
-    "path": "/MuYunyun/create-react-doc/tree/main/injectLogic",
-    "title": "create-react-doc/injectLogic at main · MuYunyun/create-react-doc · GitHub",
+    "path": "/MuYunyun/create-react-doc/blob/main/lerna.json",
+    "title": "create-react-doc/lerna.json at main · MuYunyun/create-react-doc",
     "count": 2,
     "uniques": 2
   },
   {
-    "path": "/MuYunyun/create-react-doc/blob/main/packages/leetcode-cli/src/leetcode.js",
-    "title": "create-react-doc/leetcode.js at main · MuYunyun/create-react-doc",
+    "path": "/MuYunyun/create-react-doc/blob/main/packages/scripts/index.js",
+    "title": "create-react-doc/index.js at main · MuYunyun/create-react-doc",
     "count": 2,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/commit/2cd1ac0ed9585b56cd5fd7407d1c827bdbc9d522",
-    "title": "fix: leetcode-cli usage in mac · MuYunyun/create-react-doc@2cd1ac0",
-    "count": 2,
-    "uniques": 1
+    "uniques": 2
   }
 ]
