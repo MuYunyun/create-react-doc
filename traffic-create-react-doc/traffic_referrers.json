@@ -11,22 +11,12 @@
   },
   {
     "referrer": "dev.to",
-    "count": 10,
-    "uniques": 8
+    "count": 11,
+    "uniques": 9
   },
   {
     "referrer": "muyunyun.cn",
     "count": 2,
     "uniques": 2
-  },
-  {
-    "referrer": "bbs.huaweicloud.com",
-    "count": 2,
-    "uniques": 1
-  },
-  {
-    "referrer": "Google",
-    "count": 1,
-    "uniques": 1
   }
 ]
