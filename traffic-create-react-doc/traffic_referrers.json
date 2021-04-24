@@ -5,14 +5,14 @@
     "uniques": 13
   },
   {
-    "referrer": "link.zhihu.com",
+    "referrer": "dev.to",
     "count": 8,
     "uniques": 8
   },
   {
-    "referrer": "dev.to",
-    "count": 8,
-    "uniques": 8
+    "referrer": "link.zhihu.com",
+    "count": 7,
+    "uniques": 7
   },
   {
     "referrer": "snyk.io",
