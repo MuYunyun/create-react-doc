@@ -2,14 +2,8 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 37,
-    "uniques": 32
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/issues",
-    "title": "Issues · MuYunyun/create-react-doc",
-    "count": 3,
-    "uniques": 2
+    "count": 30,
+    "uniques": 27
   },
   {
     "path": "/MuYunyun/create-react-doc/blob/main/README-en.md",
@@ -24,14 +18,20 @@
     "uniques": 2
   },
   {
+    "path": "/MuYunyun/create-react-doc/issues",
+    "title": "Issues · MuYunyun/create-react-doc",
+    "count": 2,
+    "uniques": 1
+  },
+  {
     "path": "/MuYunyun/create-react-doc/issues/103",
     "title": "解耦 menu 逻辑与内容区域逻辑, 加快页面渲染速度。 · Issue #103 · MuYunyun/create-react-doc",
     "count": 1,
     "uniques": 1
   },
   {
-    "path": "/MuYunyun/create-react-doc/issues/78",
-    "title": "首次进入菜单未高亮 · Issue #78 · MuYunyun/create-react-doc",
+    "path": "/MuYunyun/create-react-doc/issues/67",
+    "title": "An unexpected error occurred: \"https://registry.yarnpkg.com/create-create-rea...",
     "count": 1,
     "uniques": 1
   },
