@@ -1,8 +1,8 @@
 [
   {
     "referrer": "github.com",
-    "count": 16,
-    "uniques": 11
+    "count": 13,
+    "uniques": 10
   },
   {
     "referrer": "dev.to",
@@ -10,17 +10,17 @@
     "uniques": 11
   },
   {
+    "referrer": "link.zhihu.com",
+    "count": 11,
+    "uniques": 6
+  },
+  {
     "referrer": "muyunyun.cn",
     "count": 6,
     "uniques": 2
   },
   {
-    "referrer": "link.zhihu.com",
-    "count": 5,
-    "uniques": 3
-  },
-  {
-    "referrer": "npmjs.com",
+    "referrer": "Baidu",
     "count": 1,
     "uniques": 1
   }
