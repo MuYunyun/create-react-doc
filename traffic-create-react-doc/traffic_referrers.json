@@ -1,16 +1,16 @@
 [
   {
-    "referrer": "dev.to",
-    "count": 12,
-    "uniques": 10
-  },
-  {
     "referrer": "link.zhihu.com",
-    "count": 12,
-    "uniques": 7
+    "count": 13,
+    "uniques": 8
   },
   {
     "referrer": "github.com",
+    "count": 9,
+    "uniques": 8
+  },
+  {
+    "referrer": "dev.to",
     "count": 9,
     "uniques": 8
   },
