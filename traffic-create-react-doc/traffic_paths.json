@@ -2,8 +2,8 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 38,
-    "uniques": 27
+    "count": 36,
+    "uniques": 25
   },
   {
     "path": "/MuYunyun/create-react-doc/issues",
@@ -36,20 +36,26 @@
     "uniques": 1
   },
   {
+    "path": "/MuYunyun/create-react-doc/pull/65",
+    "title": "支持 inject 与 injectWithPathname 注入自定义逻辑 by MuYunyun · Pull Request #65 · MuYun...",
+    "count": 1,
+    "uniques": 1
+  },
+  {
     "path": "/MuYunyun/create-react-doc/search",
     "title": "Search · rcpress · GitHub",
     "count": 1,
     "uniques": 1
   },
   {
-    "path": "/MuYunyun/create-react-doc/tree/main/docs",
-    "title": "create-react-doc/docs at main · MuYunyun/create-react-doc",
+    "path": "/MuYunyun/create-react-doc/stargazers",
+    "title": "Stargazers · MuYunyun/create-react-doc · GitHub",
     "count": 1,
     "uniques": 1
   },
   {
-    "path": "/MuYunyun/create-react-doc/tree/main/packages",
-    "title": "create-react-doc/packages at main · MuYunyun/create-react-doc · GitHub",
+    "path": "/MuYunyun/create-react-doc/tree/main/docs",
+    "title": "create-react-doc/docs at main · MuYunyun/create-react-doc",
     "count": 1,
     "uniques": 1
   }
