@@ -2,8 +2,8 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 46,
-    "uniques": 33
+    "count": 45,
+    "uniques": 32
   },
   {
     "path": "/MuYunyun/create-react-doc/issues",
@@ -15,6 +15,12 @@
     "path": "/MuYunyun/create-react-doc/issues/86",
     "title": "跳转到 github 项目地址出现错误。 · Issue #86 · MuYunyun/create-react-doc",
     "count": 2,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/blob/5c2b6a7fef981521e018b2fdc3d48dc4f0f9f821/packages/crd-seed/component/Menu/transition.js",
+    "title": "create-react-doc/transition.js at 5c2b6a7fef981521e018b2fdc3d48dc4f0f9f821 · ...",
+    "count": 1,
     "uniques": 1
   },
   {
@@ -50,12 +56,6 @@
   {
     "path": "/MuYunyun/create-react-doc/stargazers",
     "title": "Stargazers · MuYunyun/create-react-doc · GitHub",
-    "count": 1,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/tree/main/docs",
-    "title": "create-react-doc/docs at main · MuYunyun/create-react-doc",
     "count": 1,
     "uniques": 1
   }
