@@ -2,20 +2,26 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 45,
-    "uniques": 32
+    "count": 49,
+    "uniques": 35
   },
   {
     "path": "/MuYunyun/create-react-doc/issues",
     "title": "Issues · MuYunyun/create-react-doc",
-    "count": 2,
-    "uniques": 1
+    "count": 5,
+    "uniques": 3
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/issues/132",
+    "title": "多版本文档切换 · Issue #132 · MuYunyun/create-react-doc",
+    "count": 3,
+    "uniques": 2
   },
   {
     "path": "/MuYunyun/create-react-doc/issues/86",
     "title": "跳转到 github 项目地址出现错误。 · Issue #86 · MuYunyun/create-react-doc",
-    "count": 2,
-    "uniques": 1
+    "count": 3,
+    "uniques": 2
   },
   {
     "path": "/MuYunyun/create-react-doc/blob/5c2b6a7fef981521e018b2fdc3d48dc4f0f9f821/packages/crd-seed/component/Menu/transition.js",
@@ -42,20 +48,14 @@
     "uniques": 1
   },
   {
-    "path": "/MuYunyun/create-react-doc/pull/65",
-    "title": "支持 inject 与 injectWithPathname 注入自定义逻辑 by MuYunyun · Pull Request #65 · MuYun...",
+    "path": "/MuYunyun/create-react-doc/issues/87",
+    "title": "文章、博客链接持久化 · Issue #87 · MuYunyun/create-react-doc",
     "count": 1,
     "uniques": 1
   },
   {
-    "path": "/MuYunyun/create-react-doc/search",
-    "title": "Search · rcpress · GitHub",
-    "count": 1,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/stargazers",
-    "title": "Stargazers · MuYunyun/create-react-doc · GitHub",
+    "path": "/MuYunyun/create-react-doc/issues/new",
+    "title": "New Issue · MuYunyun/create-react-doc",
     "count": 1,
     "uniques": 1
   }
