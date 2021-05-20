@@ -2,8 +2,8 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 49,
-    "uniques": 35
+    "count": 44,
+    "uniques": 32
   },
   {
     "path": "/MuYunyun/create-react-doc/issues",
@@ -36,12 +36,6 @@
     "uniques": 1
   },
   {
-    "path": "/MuYunyun/create-react-doc/blob/main/README-en.md",
-    "title": "create-react-doc/README-en.md at main · MuYunyun/create-react-doc",
-    "count": 1,
-    "uniques": 1
-  },
-  {
     "path": "/MuYunyun/create-react-doc/issues/61",
     "title": "无法初始化 · Issue #61 · MuYunyun/create-react-doc",
     "count": 1,
@@ -56,6 +50,12 @@
   {
     "path": "/MuYunyun/create-react-doc/issues/new",
     "title": "New Issue · MuYunyun/create-react-doc",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/pull/65",
+    "title": "支持 inject 与 injectWithPathname 注入自定义逻辑 by MuYunyun · Pull Request #65 · MuYun...",
     "count": 1,
     "uniques": 1
   }
