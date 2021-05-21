@@ -5,19 +5,24 @@
     "uniques": 13
   },
   {
-    "referrer": "dev.to",
-    "count": 7,
-    "uniques": 6
-  },
-  {
-    "referrer": "muyunyun.cn",
-    "count": 7,
-    "uniques": 4
-  },
-  {
     "referrer": "github.com",
     "count": 6,
     "uniques": 6
+  },
+  {
+    "referrer": "dev.to",
+    "count": 6,
+    "uniques": 5
+  },
+  {
+    "referrer": "muyunyun.cn",
+    "count": 3,
+    "uniques": 3
+  },
+  {
+    "referrer": "Baidu",
+    "count": 2,
+    "uniques": 2
   },
   {
     "referrer": "bbs.huaweicloud.com",
@@ -25,8 +30,8 @@
     "uniques": 1
   },
   {
-    "referrer": "Baidu",
-    "count": 1,
+    "referrer": "segmentfault.com",
+    "count": 2,
     "uniques": 1
   },
   {

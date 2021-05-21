@@ -2,24 +2,18 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 44,
+    "count": 43,
     "uniques": 32
   },
   {
     "path": "/MuYunyun/create-react-doc/issues",
     "title": "Issues · MuYunyun/create-react-doc",
-    "count": 5,
-    "uniques": 3
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/issues/132",
-    "title": "多版本文档切换 · Issue #132 · MuYunyun/create-react-doc",
     "count": 3,
     "uniques": 2
   },
   {
-    "path": "/MuYunyun/create-react-doc/issues/86",
-    "title": "跳转到 github 项目地址出现错误。 · Issue #86 · MuYunyun/create-react-doc",
+    "path": "/MuYunyun/create-react-doc/issues/132",
+    "title": "多版本文档切换 · Issue #132 · MuYunyun/create-react-doc",
     "count": 3,
     "uniques": 2
   },
@@ -36,8 +30,8 @@
     "uniques": 1
   },
   {
-    "path": "/MuYunyun/create-react-doc/issues/61",
-    "title": "无法初始化 · Issue #61 · MuYunyun/create-react-doc",
+    "path": "/MuYunyun/create-react-doc/issues/86",
+    "title": "跳转到 github 项目地址出现错误。 · Issue #86 · MuYunyun/create-react-doc",
     "count": 1,
     "uniques": 1
   },
@@ -56,6 +50,12 @@
   {
     "path": "/MuYunyun/create-react-doc/pull/65",
     "title": "支持 inject 与 injectWithPathname 注入自定义逻辑 by MuYunyun · Pull Request #65 · MuYun...",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/search",
+    "title": "Search · rcpress · GitHub",
     "count": 1,
     "uniques": 1
   }
