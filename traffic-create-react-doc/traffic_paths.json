@@ -2,8 +2,8 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 43,
-    "uniques": 32
+    "count": 38,
+    "uniques": 29
   },
   {
     "path": "/MuYunyun/create-react-doc/issues",
@@ -20,12 +20,6 @@
   {
     "path": "/MuYunyun/create-react-doc/blob/5c2b6a7fef981521e018b2fdc3d48dc4f0f9f821/packages/crd-seed/component/Menu/transition.js",
     "title": "create-react-doc/transition.js at 5c2b6a7fef981521e018b2fdc3d48dc4f0f9f821 · ...",
-    "count": 1,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/blob/main/.npmrc",
-    "title": "create-react-doc/.npmrc at main · MuYunyun/create-react-doc · GitHub",
     "count": 1,
     "uniques": 1
   },
@@ -54,8 +48,14 @@
     "uniques": 1
   },
   {
-    "path": "/MuYunyun/create-react-doc/search",
-    "title": "Search · rcpress · GitHub",
+    "path": "/MuYunyun/create-react-doc/stargazers",
+    "title": "Stargazers · MuYunyun/create-react-doc · GitHub",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/tree/gh-pages",
+    "title": "MuYunyun/create-react-doc at gh-pages",
     "count": 1,
     "uniques": 1
   }

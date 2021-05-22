@@ -1,8 +1,13 @@
 [
   {
     "referrer": "link.zhihu.com",
-    "count": 16,
-    "uniques": 13
+    "count": 10,
+    "uniques": 10
+  },
+  {
+    "referrer": "dev.to",
+    "count": 7,
+    "uniques": 6
   },
   {
     "referrer": "github.com",
@@ -10,19 +15,14 @@
     "uniques": 6
   },
   {
-    "referrer": "dev.to",
-    "count": 6,
-    "uniques": 5
-  },
-  {
     "referrer": "muyunyun.cn",
     "count": 3,
     "uniques": 3
   },
   {
-    "referrer": "Baidu",
+    "referrer": "segmentfault.com",
     "count": 2,
-    "uniques": 2
+    "uniques": 1
   },
   {
     "referrer": "bbs.huaweicloud.com",
@@ -30,8 +30,8 @@
     "uniques": 1
   },
   {
-    "referrer": "segmentfault.com",
-    "count": 2,
+    "referrer": "Baidu",
+    "count": 1,
     "uniques": 1
   },
   {
