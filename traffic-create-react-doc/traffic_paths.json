@@ -2,8 +2,20 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 36,
+    "count": 40,
     "uniques": 26
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/tags",
+    "title": "Tags · MuYunyun/create-react-doc",
+    "count": 7,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/issues",
+    "title": "Issues · MuYunyun/create-react-doc",
+    "count": 5,
+    "uniques": 3
   },
   {
     "path": "/MuYunyun/create-react-doc/issues/132",
@@ -18,10 +30,22 @@
     "uniques": 1
   },
   {
-    "path": "/MuYunyun/create-react-doc/issues",
-    "title": "Issues · MuYunyun/create-react-doc",
-    "count": 3,
+    "path": "/MuYunyun/create-react-doc/tree/main/packages/crd-seed",
+    "title": "create-react-doc/packages/crd-seed at main · MuYunyun/create-react-doc",
+    "count": 2,
     "uniques": 2
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/pulls",
+    "title": "Pull requests · MuYunyun/create-react-doc",
+    "count": 2,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/releases",
+    "title": "Releases · MuYunyun/create-react-doc",
+    "count": 2,
+    "uniques": 1
   },
   {
     "path": "/MuYunyun/create-react-doc/blob/5c2b6a7fef981521e018b2fdc3d48dc4f0f9f821/packages/crd-seed/component/Menu/transition.js",
@@ -32,30 +56,6 @@
   {
     "path": "/MuYunyun/create-react-doc/blob/gh-pages/index.html",
     "title": "create-react-doc/index.html at gh-pages · MuYunyun/create-react-doc",
-    "count": 1,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/blob/main/.npmrc",
-    "title": "create-react-doc/.npmrc at main · MuYunyun/create-react-doc",
-    "count": 1,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/issues/86",
-    "title": "跳转到 github 项目地址出现错误。 · Issue #86 · MuYunyun/create-react-doc",
-    "count": 1,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/issues/87",
-    "title": "文章、博客链接持久化 · Issue #87 · MuYunyun/create-react-doc",
-    "count": 1,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/issues/new",
-    "title": "New Issue · MuYunyun/create-react-doc",
     "count": 1,
     "uniques": 1
   }
