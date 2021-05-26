@@ -2,8 +2,20 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 40,
-    "uniques": 26
+    "count": 49,
+    "uniques": 25
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/issues",
+    "title": "Issues · MuYunyun/create-react-doc",
+    "count": 22,
+    "uniques": 5
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/issues/103",
+    "title": "解耦 menu 逻辑与内容区域逻辑, 加快页面渲染速度。 · Issue #103 · MuYunyun/create-react-doc · GitHub",
+    "count": 10,
+    "uniques": 1
   },
   {
     "path": "/MuYunyun/create-react-doc/tags",
@@ -12,14 +24,14 @@
     "uniques": 1
   },
   {
-    "path": "/MuYunyun/create-react-doc/issues",
-    "title": "Issues · MuYunyun/create-react-doc",
-    "count": 5,
-    "uniques": 3
-  },
-  {
     "path": "/MuYunyun/create-react-doc/issues/132",
     "title": "多版本文档切换 · Issue #132 · MuYunyun/create-react-doc",
+    "count": 4,
+    "uniques": 2
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/tree/main/packages/crd-seed",
+    "title": "create-react-doc/packages/crd-seed at main · MuYunyun/create-react-doc",
     "count": 4,
     "uniques": 2
   },
@@ -30,33 +42,21 @@
     "uniques": 1
   },
   {
-    "path": "/MuYunyun/create-react-doc/tree/main/packages/crd-seed",
-    "title": "create-react-doc/packages/crd-seed at main · MuYunyun/create-react-doc",
-    "count": 2,
+    "path": "/MuYunyun/create-react-doc/pulls",
+    "title": "Pull requests · MuYunyun/create-react-doc · GitHub",
+    "count": 3,
     "uniques": 2
   },
   {
-    "path": "/MuYunyun/create-react-doc/pulls",
-    "title": "Pull requests · MuYunyun/create-react-doc",
-    "count": 2,
+    "path": "/MuYunyun/create-react-doc/blob/main/packages/templates/default/_config.yml",
+    "title": "create-react-doc/_config.yml at main · MuYunyun/create-react-doc · GitHub",
+    "count": 3,
     "uniques": 1
   },
   {
-    "path": "/MuYunyun/create-react-doc/releases",
-    "title": "Releases · MuYunyun/create-react-doc",
-    "count": 2,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/blob/5c2b6a7fef981521e018b2fdc3d48dc4f0f9f821/packages/crd-seed/component/Menu/transition.js",
-    "title": "create-react-doc/transition.js at 5c2b6a7fef981521e018b2fdc3d48dc4f0f9f821 · ...",
-    "count": 1,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/blob/gh-pages/index.html",
-    "title": "create-react-doc/index.html at gh-pages · MuYunyun/create-react-doc",
-    "count": 1,
+    "path": "/MuYunyun/create-react-doc/issues/21",
+    "title": "support search global · Issue #21 · MuYunyun/create-react-doc · GitHub",
+    "count": 3,
     "uniques": 1
   }
 ]
