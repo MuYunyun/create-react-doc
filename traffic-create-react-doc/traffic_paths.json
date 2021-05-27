@@ -2,8 +2,8 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 49,
-    "uniques": 25
+    "count": 58,
+    "uniques": 28
   },
   {
     "path": "/MuYunyun/create-react-doc/issues",
@@ -42,6 +42,12 @@
     "uniques": 1
   },
   {
+    "path": "/MuYunyun/create-react-doc/blob/main/README-en.md",
+    "title": "create-react-doc/README-en.md at main · MuYunyun/create-react-doc",
+    "count": 3,
+    "uniques": 2
+  },
+  {
     "path": "/MuYunyun/create-react-doc/pulls",
     "title": "Pull requests · MuYunyun/create-react-doc · GitHub",
     "count": 3,
@@ -50,12 +56,6 @@
   {
     "path": "/MuYunyun/create-react-doc/blob/main/packages/templates/default/_config.yml",
     "title": "create-react-doc/_config.yml at main · MuYunyun/create-react-doc · GitHub",
-    "count": 3,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/issues/21",
-    "title": "support search global · Issue #21 · MuYunyun/create-react-doc · GitHub",
     "count": 3,
     "uniques": 1
   }
