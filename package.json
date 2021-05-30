@@ -19,7 +19,9 @@
     "release": "lerna publish",
     "release-qa": "lerna publish --npm-tag=beta",
     "cleanup": "rm -rf node_modules/gh-pages/.cache",
-    "deploy:site": "npm run cleanup && node gh-pages"
+    "deploy:site": "npm run cleanup && node gh-pages",
+    "up:dev": "sh utils/uppackage-dev.sh",
+    "up": "sh utils/uppackage.sh"
   },
   "repository": {
     "type": "git",
