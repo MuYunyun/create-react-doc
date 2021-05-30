@@ -3864,10 +3864,10 @@ cosmiconfig@^5.0.0, cosmiconfig@^5.1.0:
     js-yaml "^3.13.1"
     parse-json "^4.0.0"
 
-crd-prerender-spa-plugin@^0.1.0:
-  version "0.1.0"
-  resolved "https://registry.npmjs.org/crd-prerender-spa-plugin/-/crd-prerender-spa-plugin-0.1.0.tgz#897a5a44843f94e6aebb062b84f71d5dec622443"
-  integrity sha512-wu2Je38HMN7dOPA2RfrrxfAkDmmKzFA+8TOiY+vd5W4+lgiremfIa7HAp1pbAm0+DKKlS/vau66uI42GCLaO9Q==
+crd-prerender-spa-plugin@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.npmjs.org/crd-prerender-spa-plugin/-/crd-prerender-spa-plugin-0.2.0.tgz#969a39b70dcafb3490fdbd2737657a336b1321c1"
+  integrity sha512-pd0MGvm2LtypZkNVCcFyb8PooTqlki/EvQvwOJF2TxrMb5jltFljqTlAt/wfpUScrbYAy58t0GsBJfInLM1ErQ==
   dependencies:
     "@prerenderer/prerenderer" "^0.7.2"
     "@prerenderer/renderer-puppeteer" "^0.2.0"
