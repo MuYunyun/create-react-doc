@@ -2,14 +2,14 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 55,
-    "uniques": 26
+    "count": 53,
+    "uniques": 27
   },
   {
     "path": "/MuYunyun/create-react-doc/issues",
     "title": "Issues · MuYunyun/create-react-doc",
-    "count": 23,
-    "uniques": 6
+    "count": 26,
+    "uniques": 5
   },
   {
     "path": "/MuYunyun/create-react-doc/issues/103",
@@ -30,22 +30,10 @@
     "uniques": 3
   },
   {
-    "path": "/MuYunyun/create-react-doc/issues/132",
-    "title": "多版本文档切换 · Issue #132 · MuYunyun/create-react-doc",
-    "count": 5,
-    "uniques": 3
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/tree/gh-pages",
-    "title": "MuYunyun/create-react-doc at gh-pages",
-    "count": 4,
-    "uniques": 1
-  },
-  {
     "path": "/MuYunyun/create-react-doc/pulls",
     "title": "Pull requests · MuYunyun/create-react-doc · GitHub",
-    "count": 3,
-    "uniques": 2
+    "count": 4,
+    "uniques": 3
   },
   {
     "path": "/MuYunyun/create-react-doc/blob/main/packages/templates/default/_config.yml",
@@ -56,6 +44,18 @@
   {
     "path": "/MuYunyun/create-react-doc/issues/21",
     "title": "support search global · Issue #21 · MuYunyun/create-react-doc · GitHub",
+    "count": 3,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/tree/gh-pages",
+    "title": "MuYunyun/create-react-doc at gh-pages",
+    "count": 3,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/tree/main/packages/crd-seed",
+    "title": "create-react-doc/packages/crd-seed at main · MuYunyun/create-react-doc",
     "count": 3,
     "uniques": 1
   }
