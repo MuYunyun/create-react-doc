@@ -49,43 +49,44 @@ function Markdown({ props }) {
     }
   }, [markdownStr])
 
+  console.log('markdownStr', markdownStr)
   return (
     <div className={styles.markdownwrapper} ref={markdownWrapperRef}>
       {markdownStr ? (
         <ReactMarkdown
           className={cx('markdown', styles.markdown)}
           source={markdownStr}
-          escapeHtml={false}
+          // escapeHtml={false}
           renderers={{
             code: InlineCode,
             link: Link,
             linkReference: Link,
           }}
-          allowNode={(node, index, parent) => {
-            if (node.type === 'html') {
-              // if (/<!--([^]+?)-->/.test(node.value)) return false;
-              // const scriptValue = node.value.match(/<script.*?>(.*?)<\/script>/ig);
-              // node.value.replace(/<script.*?>(.*?)<\/script>/, (te) => {
-              //   console.log('te:', te);
-              // });
-            }
-            // 判断 上一个节点是否为 <!--DemoStart -->
-            if (
-              node.type === 'code' &&
-              parent.children &&
-              parent.children.length > 0 &&
-              parent.children[index - 1]
-            ) {
-              const parentNode = parent.children[index - 1]
-              if (
-                parentNode.type === 'html' &&
-                /<!--\s?DemoStart\s?-->/.test(parentNode.value)
-              ) {
-                node.value = `__dome__${node.value}`
-              }
-            }
-            return node
-          }}
+          // allowNode={(node, index, parent) => {
+          //   if (node.type === 'html') {
+          //     // if (/<!--([^]+?)-->/.test(node.value)) return false;
+          //     // const scriptValue = node.value.match(/<script.*?>(.*?)<\/script>/ig);
+          //     // node.value.replace(/<script.*?>(.*?)<\/script>/, (te) => {
+          //     //   console.log('te:', te);
+          //     // });
+          //   }
+          //   // 判断 上一个节点是否为 <!--DemoStart -->
+          //   if (
+          //     node.type === 'code' &&
+          //     parent.children &&
+          //     parent.children.length > 0 &&
+          //     parent.children[index - 1]
+          //   ) {
+          //     const parentNode = parent.children[index - 1]
+          //     if (
+          //       parentNode.type === 'html' &&
+          //       /<!--\s?DemoStart\s?-->/.test(parentNode.value)
+          //     ) {
+          //       node.value = `__dome__${node.value}`
+          //     }
+          //   }
+          //   return node
+          // }}
         />
       ) : (
         <Loading />
