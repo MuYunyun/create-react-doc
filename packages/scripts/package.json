@@ -53,7 +53,7 @@
     "upath": "^1.0.2",
     "url-replace-loader": "^1.0.0",
     "webpack": "^5.12.2",
-    "webpack-dev-middleware": "^3.7.1",
+    "webpack-dev-middleware": "^5.0.0",
     "webpack-dev-server": "^3.8.1",
     "webpack-hot-dev-clients": "^1.0.4",
     "webpackbar": "^4.0.0",
