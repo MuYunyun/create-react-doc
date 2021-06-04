@@ -32,6 +32,8 @@ if (docsConfig) {
   }
 }
 
+console.log(`require.resolve('crd-markdown-loader')`, require.resolve('crd-markdown-loader'))
+
 module.exports = {
   entry: {},
   output: {
@@ -75,9 +77,25 @@ module.exports = {
             ],
           },
           {
-            test: /\.mdx?$/,
-            use: ['babel-loader', '@mdx-js/loader'],
+            test: /\.md$/,
+            use: [
+              // {
+              //   loader: `babel-loader!${path.join(__dirname, './mdloader.js')}`,
+              // },
+              {
+                loader: require.resolve('crd-markdown-loader'),
+              },
+              {
+                loader: require.resolve('babel-loader'),
+                // options: require('../../.babelrc'), // eslint-disable-line
+              },
+            ],
           },
+          // {
+          //   test: /\.mdx?$/,
+          //   use: ['babel-loader', '@mdx-js/loader'],
+          //   include: [/\.cache\/md/],
+          // },
           // “file-loader”确保这些资源由WebpackDevServer服务。
           // 当您导入资源时，您将获得（虚拟）文件名。
           // 在生产中，它们将被复制到`build`文件夹。
@@ -110,6 +128,8 @@ module.exports = {
   resolve: {
     fallback: {
       path: require.resolve('path-browserify'),
+      assert: false,
+      fs: false,
     },
   },
 }
