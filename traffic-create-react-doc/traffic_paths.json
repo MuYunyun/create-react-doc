@@ -2,13 +2,13 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 51,
-    "uniques": 26
+    "count": 54,
+    "uniques": 28
   },
   {
     "path": "/MuYunyun/create-react-doc/issues",
     "title": "Issues · MuYunyun/create-react-doc",
-    "count": 27,
+    "count": 29,
     "uniques": 5
   },
   {
@@ -30,6 +30,12 @@
     "uniques": 3
   },
   {
+    "path": "/MuYunyun/create-react-doc/issues/138",
+    "title": "markdown 文件中支持书写 React 组件 · Issue #138 · MuYunyun/create-react-doc",
+    "count": 5,
+    "uniques": 3
+  },
+  {
     "path": "/MuYunyun/create-react-doc/pulls",
     "title": "Pull requests · MuYunyun/create-react-doc · GitHub",
     "count": 4,
@@ -44,12 +50,6 @@
   {
     "path": "/MuYunyun/create-react-doc/issues/21",
     "title": "support search global · Issue #21 · MuYunyun/create-react-doc · GitHub",
-    "count": 3,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/tree/gh-pages",
-    "title": "MuYunyun/create-react-doc at gh-pages",
     "count": 3,
     "uniques": 1
   },
