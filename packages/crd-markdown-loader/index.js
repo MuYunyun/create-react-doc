@@ -81,7 +81,8 @@ const formatOpening = () =>
 const formatClosing = () =>
   `</div></div><div className="at-component-docs__container">`
 
-function markdownLoader(source: any) {
+module.exports = function (source: any) {
+  console.log('✅✅✅✅✅source')
   const {
     body,
     attributes: { imports: importMap },
@@ -124,7 +125,5 @@ function markdownLoader(source: any) {
     .replace(/<a\s/g, `<a className='at-markdown-a' `)
     .replace(/>\(_blank\)/g, ` target="_blank">`)
 
-  return formatModule(imports, content)
+  return `module.exports = ${formatModule(imports, content)}`
 }
-
-module.exports = markdownLoader

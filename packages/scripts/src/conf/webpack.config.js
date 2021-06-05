@@ -32,8 +32,6 @@ if (docsConfig) {
   }
 }
 
-console.log(`require.resolve('crd-markdown-loader')`, require.resolve('crd-markdown-loader'))
-
 module.exports = {
   entry: {},
   output: {
@@ -65,9 +63,19 @@ module.exports = {
           {
             test: /\.md$/,
             use: [
+              // {
+              //   loader: require.resolve('crd-markdown-loader'),
+              // },
+              // 'crd-markdown-loader',
+              // 'babel-loader'
               {
-                // https://github.com/react-doc/raw-content-replace-loader/blob/master/index.js
-                loader: require.resolve('raw-content-replace-loader'),
+                loader: require.resolve('babel-loader'),
+                options: require('../../.babelrc'), // eslint-disable-line
+              },
+              '@mdx-js/loader',
+              // 'crd-markdown-loader',
+              {
+                loader: `${path.join(__dirname, './modifyMarkdownLoader.js')}`,
                 options: {
                   path: path.join(cacheDirPath, './md'), // dir need to replace
                   replace: paths.projectPath, // the dir to replace
@@ -76,25 +84,20 @@ module.exports = {
               },
             ],
           },
-          {
-            test: /\.md$/,
-            use: [
-              // {
-              //   loader: `babel-loader!${path.join(__dirname, './mdloader.js')}`,
-              // },
-              {
-                loader: require.resolve('crd-markdown-loader'),
-              },
-              {
-                loader: require.resolve('babel-loader'),
-                // options: require('../../.babelrc'), // eslint-disable-line
-              },
-            ],
-          },
           // {
-          //   test: /\.mdx?$/,
-          //   use: ['babel-loader', '@mdx-js/loader'],
-          //   include: [/\.cache\/md/],
+          //   test: /\.md$/,
+          //   use: [
+          //     // {
+          //     //   loader: `babel-loader!${path.join(__dirname, './mdloader.js')}`,
+          //     // },
+          //     {
+          //       loader: require.resolve('crd-markdown-loader'),
+          //     },
+          //     {
+          //       loader: require.resolve('babel-loader'),
+          //       options: require('../../.babelrc'), // eslint-disable-line
+          //     },
+          //   ],
           // },
           // “file-loader”确保这些资源由WebpackDevServer服务。
           // 当您导入资源时，您将获得（虚拟）文件名。
@@ -128,8 +131,6 @@ module.exports = {
   resolve: {
     fallback: {
       path: require.resolve('path-browserify'),
-      assert: false,
-      fs: false,
     },
   },
 }

@@ -3,10 +3,14 @@ import cx from 'classnames'
 import ReactMarkdown from 'react-markdown'
 import hljs from 'highlight.js'
 import { renderToString } from 'react-dom/server'
+import { MDXProvider } from '@mdx-js/react'
 import InlineCode from './InlineCode'
 import Link from './Link'
 import Loading from '../component/Loading'
 import styles from './style/index.less'
+// import A from '../../../.cache/md/docs___快速上手.md'
+
+// console.log('abcde', a)
 
 hljs.configure({
   tabReplace: '  ', // 2 spaces
@@ -22,7 +26,7 @@ const formatPath = path =>
 
 function Markdown({ props }) {
   const { type, relative } = props
-  const [markdownStr, setMarkdownStr] = useState(null)
+  const [MarkdownCP, setMarkdownCP] = useState(null)
   const markdownWrapperRef = useRef(null)
 
   const renderMarkdown = () => {
@@ -33,8 +37,8 @@ function Markdown({ props }) {
       filename = formatPath(relativeMd)
     }
     import(`__project_root__/.cache/md/${filename}.md`).then((data) => {
-      console.log('data', data)
-      setMarkdownStr(data.default || data)
+      // data.default is a function, so we should write () => data.default in setState here.
+      setMarkdownCP(() => (data.default || data))
     })
   }
 
@@ -51,24 +55,32 @@ function Markdown({ props }) {
   //   }
   // }, [markdownStr])
 
-  console.log('markdownStr', markdownStr)
+  // console.log('markdownStr', markdownStr)
+  // { /* {markdownStr ? (
+  //   // <ReactMarkdown
+  //   //   className={cx('markdown', styles.markdown)}
+  //   //   source={markdownStr}
+  //   //   // escapeHtml={false}
+  //   //   renderers={{
+  //   //     code: InlineCode,
+  //   //     link: Link,
+  //   //     linkReference: Link,
+  //   //   }}
+  //   // />
+  //   <div>123</div>
+  // ) : (
+  //   <Loading />
+  // )} */ }
   return (
     <div className={styles.markdownwrapper} ref={markdownWrapperRef}>
-      {markdownStr ? (
-        // <ReactMarkdown
-        //   className={cx('markdown', styles.markdown)}
-        //   source={markdownStr}
-        //   // escapeHtml={false}
-        //   renderers={{
-        //     code: InlineCode,
-        //     link: Link,
-        //     linkReference: Link,
-        //   }}
-        // />
-        <div>123</div>
-      ) : (
-        <Loading />
-      )}
+      {
+        MarkdownCP
+          ?
+            <MDXProvider>
+              <MarkdownCP />
+            </MDXProvider>
+          : <Loading />
+      }
     </div>
   )
 }
