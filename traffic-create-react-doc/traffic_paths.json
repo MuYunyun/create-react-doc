@@ -2,20 +2,26 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 54,
-    "uniques": 28
+    "count": 62,
+    "uniques": 32
   },
   {
     "path": "/MuYunyun/create-react-doc/issues",
     "title": "Issues · MuYunyun/create-react-doc",
-    "count": 29,
-    "uniques": 5
+    "count": 32,
+    "uniques": 6
   },
   {
     "path": "/MuYunyun/create-react-doc/issues/103",
     "title": "解耦 menu 逻辑与内容区域逻辑, 加快页面渲染速度。 · Issue #103 · MuYunyun/create-react-doc · GitHub",
     "count": 10,
     "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/issues/138",
+    "title": "markdown 文件中支持书写 React 组件 · Issue #138 · MuYunyun/create-react-doc",
+    "count": 9,
+    "uniques": 3
   },
   {
     "path": "/MuYunyun/create-react-doc/tags",
@@ -26,14 +32,8 @@
   {
     "path": "/MuYunyun/create-react-doc/blob/main/README-en.md",
     "title": "create-react-doc/README-en.md at main · MuYunyun/create-react-doc",
-    "count": 5,
-    "uniques": 3
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/issues/138",
-    "title": "markdown 文件中支持书写 React 组件 · Issue #138 · MuYunyun/create-react-doc",
-    "count": 5,
-    "uniques": 3
+    "count": 6,
+    "uniques": 4
   },
   {
     "path": "/MuYunyun/create-react-doc/pulls",
