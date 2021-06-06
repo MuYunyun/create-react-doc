@@ -11,21 +11,21 @@
   },
   {
     "referrer": "muyunyun.cn",
-    "count": 7,
-    "uniques": 3
+    "count": 6,
+    "uniques": 2
   },
   {
     "referrer": "dev.to",
-    "count": 4,
-    "uniques": 4
-  },
-  {
-    "referrer": "Google",
-    "count": 1,
-    "uniques": 1
+    "count": 5,
+    "uniques": 5
   },
   {
     "referrer": "segmentfault.com",
+    "count": 2,
+    "uniques": 2
+  },
+  {
+    "referrer": "Google",
     "count": 1,
     "uniques": 1
   }
