@@ -8,6 +8,7 @@
     "classnames": "^2.2.6",
     "diana": "^1.0.2",
     "less": "^3.0.2",
+    "prism-react-renderer": "^1.2.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-hot-loader": "^4.1.1",

@@ -19,6 +19,5 @@ module.exports = function (source) {
   if (FS.existsSync(fpath)) {
     content = FS.readFileSync(fpath)
   }
-  // content = JSON.stringify(content).replace(/\u2028/g, '\\u2028').replace(/\u2029/g, '\\u2029');
   return content
 }

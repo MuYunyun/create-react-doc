@@ -28,6 +28,7 @@ English | [简体中文](./README.md)
 * The idea of ​​building a site: Just write markdown files as a blog site [like me](https://github.com/MuYunyun/blog).
 * Out of box: One-click generation of documents and blog sites by specifying directories or documents, no need to care about site environment configuration information.
 * Performance: greatly improve site loading speed through pre-rendering and lazy loading.
+* Based on mdx: Support writing React components, mathematical formulas, etc. in markdown.
 * Search engine optimization: Support SEO, making documents easier to search. Related documents: [SEO Practice in SPA Site](https://github.com/MuYunyun/blog/issues/84)
 * Personalization: Support [custom theme](http://muyunyun.cn/create-react-doc/%E8%87%AA%E5%AE%9A%E4%B9%89%E4%B8%BB% E9%A2%98).
 * Workflow: Integrate Github actions, support automated packaging and publishing sites.

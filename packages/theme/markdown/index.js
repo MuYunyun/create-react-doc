@@ -2,15 +2,12 @@ import { useState, useEffect, useRef } from 'react'
 import cx from 'classnames'
 import ReactMarkdown from 'react-markdown'
 import hljs from 'highlight.js'
-import { renderToString } from 'react-dom/server'
 import { MDXProvider } from '@mdx-js/react'
+import CodeBlock from './codeBlock'
 import InlineCode from './InlineCode'
 import Link from './Link'
 import Loading from '../component/Loading'
 import styles from './style/index.less'
-// import A from '../../../.cache/md/docs___快速上手.md'
-
-// console.log('abcde', a)
 
 hljs.configure({
   tabReplace: '  ', // 2 spaces
@@ -23,6 +20,11 @@ const formatPath = path =>
     .replace(/\\/g, '/')
     .split('/')
     .join('___')
+
+const components = {
+  code: CodeBlock,
+  link: Link,
+}
 
 function Markdown({ props }) {
   const { type, relative } = props
@@ -55,28 +57,14 @@ function Markdown({ props }) {
   //   }
   // }, [markdownStr])
 
-  // console.log('markdownStr', markdownStr)
-  // { /* {markdownStr ? (
-  //   // <ReactMarkdown
-  //   //   className={cx('markdown', styles.markdown)}
-  //   //   source={markdownStr}
-  //   //   // escapeHtml={false}
-  //   //   renderers={{
-  //   //     code: InlineCode,
-  //   //     link: Link,
-  //   //     linkReference: Link,
-  //   //   }}
-  //   // />
-  //   <div>123</div>
-  // ) : (
-  //   <Loading />
-  // )} */ }
   return (
-    <div className={styles.markdownwrapper} ref={markdownWrapperRef}>
+    <div className={cx('markdown', styles.markdown, styles.markdownwrapper)} ref={markdownWrapperRef}>
       {
         MarkdownCP
           ?
-            <MDXProvider>
+            <MDXProvider
+              components={components}
+            >
               <MarkdownCP />
             </MDXProvider>
           : <Loading />
