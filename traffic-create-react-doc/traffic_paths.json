@@ -2,20 +2,14 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 59,
-    "uniques": 35
+    "count": 52,
+    "uniques": 32
   },
   {
     "path": "/MuYunyun/create-react-doc/issues",
     "title": "Issues · MuYunyun/create-react-doc",
-    "count": 30,
-    "uniques": 5
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/issues/103",
-    "title": "解耦 menu 逻辑与内容区域逻辑, 加快页面渲染速度。 · Issue #103 · MuYunyun/create-react-doc · GitHub",
-    "count": 10,
-    "uniques": 1
+    "count": 14,
+    "uniques": 3
   },
   {
     "path": "/MuYunyun/create-react-doc/issues/138",
@@ -26,36 +20,42 @@
   {
     "path": "/MuYunyun/create-react-doc/blob/main/README-en.md",
     "title": "create-react-doc/README-en.md at main · MuYunyun/create-react-doc",
-    "count": 5,
-    "uniques": 3
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/blob/main/packages/templates/default/_config.yml",
-    "title": "create-react-doc/_config.yml at main · MuYunyun/create-react-doc · GitHub",
-    "count": 3,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/issues/21",
-    "title": "support search global · Issue #21 · MuYunyun/create-react-doc · GitHub",
-    "count": 3,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/pulls",
-    "title": "Pull requests · MuYunyun/create-react-doc · GitHub",
-    "count": 2,
-    "uniques": 2
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/tree/main/packages/crd-seed",
-    "title": "create-react-doc/packages/crd-seed at main · MuYunyun/create-react-doc",
-    "count": 2,
-    "uniques": 1
+    "count": 6,
+    "uniques": 4
   },
   {
     "path": "/MuYunyun/create-react-doc/blob/main/injectLogic/index.js",
     "title": "create-react-doc/index.js at main · MuYunyun/create-react-doc",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/blob/main/lerna.json",
+    "title": "create-react-doc/lerna.json at main · MuYunyun/create-react-doc",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/issues/105",
+    "title": "can't perform leetcode download · Issue #105 · MuYunyun/create-react-doc",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/issues/132",
+    "title": "多版本文档切换 · Issue #132 · MuYunyun/create-react-doc",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/issues/new",
+    "title": "New Issue · MuYunyun/create-react-doc",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/pulls",
+    "title": "Pull requests · MuYunyun/create-react-doc",
     "count": 1,
     "uniques": 1
   }
