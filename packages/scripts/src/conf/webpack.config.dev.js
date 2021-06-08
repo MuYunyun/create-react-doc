@@ -121,16 +121,16 @@ module.exports = function (cmd) {
       template: defaultHTMLPath,
       title: docsConfig && docsConfig.title ? docsConfig.title : 'Create React Doc',
     }),
-    new CreateSpareWebpackPlugin({
-      // 备用文件目录，比对是否存在，不存在生成，根据 sep 目录规则生成
-      path: path.join(cacheDirPath, './md'),
-      sep: '___', // 检查目标目录文件，文件名存储，文件夹+下划线间隔+文件名
-      directoryTrees: { // 索引目录
-        dir: cmd.markdownPaths,
-        mdconf: true,
-        extensions: /\.md$/,
-      },
-    }),
+    // new CreateSpareWebpackPlugin({
+    //   // 备用文件目录，比对是否存在，不存在生成，根据 sep 目录规则生成
+    //   path: path.join(cacheDirPath, './md'),
+    //   sep: '___', // 检查目标目录文件，文件名存储，文件夹+下划线间隔+文件名
+    //   directoryTrees: { // 索引目录
+    //     dir: cmd.markdownPaths,
+    //     mdconf: true,
+    //     extensions: /\.md$/,
+    //   },
+    // }),
     new FriendlyErrorsWebpackPlugin({
       clearConsole: true,
     }),

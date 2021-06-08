@@ -74,15 +74,16 @@ module.exports = {
               },
               '@mdx-js/loader',
               // 'crd-markdown-loader',
-              {
-                loader: `${path.join(__dirname, './modifyMarkdownLoader.js')}`,
-                options: {
-                  path: path.join(cacheDirPath, './md'), // dir need to replace
-                  replace: paths.projectPath, // the dir to replace
-                  sep: /___/g, // name saved, folder + __ + file
-                },
-              },
+              // {
+              //   loader: `${path.join(__dirname, './modifyMarkdownLoader.js')}`,
+              //   options: {
+              //     path: path.join(cacheDirPath, './md'), // dir need to replace
+              //     replace: paths.projectPath, // the dir to replace
+              //     sep: /___/g, // name saved, folder + __ + file
+              //   },
+              // },
             ],
+            exclude: /(node_modules)/,
           },
           // {
           //   test: /\.md$/,

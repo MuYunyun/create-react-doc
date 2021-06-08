@@ -38,6 +38,7 @@ module.exports = function (program, cb) {
     )
     // generate file cache only it isn't in .gitignore
     if (!ifInGitIgnore(mdfilePath)) {
+      // todo: remove ___
       const underlineFileName = mdfilePath.split(path.sep).join('___')
       const writeMarkdownPath = path.resolve(
         process.cwd(),
