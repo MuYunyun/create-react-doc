@@ -32,25 +32,25 @@ module.exports = function (program, cb) {
   // eslint-disable-next-line no-plusplus
   for (let i = 0; i < flatTreeData.length; i++) {
     const mdfile = flatTreeData[i]
-    const mdfilePath = mdfile.replace(
-      process.cwd() + path.sep,
-      '',
-    )
+    // const mdfilePath = mdfile.replace(
+    //   process.cwd() + path.sep,
+    //   '',
+    // )
     // generate file cache only it isn't in .gitignore
-    if (!ifInGitIgnore(mdfilePath)) {
-      // todo: remove ___
-      const underlineFileName = mdfilePath.split(path.sep).join('___')
-      const writeMarkdownPath = path.resolve(
-        process.cwd(),
-        cacheDirPath,
-        'md',
-        underlineFileName,
-      )
-      if (fs.existsSync(mdfile)) {
-        const content = fs.readFileSync(mdfile)
-        write.sync(writeMarkdownPath, content)
-      }
-    }
+    // if (!ifInGitIgnore(mdfilePath)) {
+    //   // todo: remove ___
+    //   const underlineFileName = mdfilePath.split(path.sep).join('___')
+    //   const writeMarkdownPath = path.resolve(
+    //     process.cwd(),
+    //     cacheDirPath,
+    //     'md',
+    //     underlineFileName,
+    //   )
+    //   if (fs.existsSync(mdfile)) {
+    //     const content = fs.readFileSync(mdfile)
+    //     write.sync(writeMarkdownPath, content)
+    //   }
+    // }
   }
 
   function dfsMap(data) {

@@ -12,3 +12,5 @@ package-lock.json
 #.swp
 *.*~
 ~*.*
+
+docs/忽略文件.md

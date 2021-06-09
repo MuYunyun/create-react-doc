@@ -1,6 +1,5 @@
 /* eslint-disable global-require */
 /* eslint-disable import/no-dynamic-require */
-const path = require('path')
 const webpack = require('webpack')
 const webpackbar = require('webpackbar')
 const fs = require('fs')
@@ -69,7 +68,6 @@ module.exports = {
                 loader: require.resolve('babel-loader'),
                 options: require('../../.babelrc'), // eslint-disable-line
               },
-              // '@mdx-js/loader',
               {
                 loader: require.resolve('@mdx-js/loader'),
                 options: {
