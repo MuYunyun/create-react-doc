@@ -8,13 +8,14 @@ title: Create React Doc
 ## todo: auto menu
 menu: [
   docs/快速上手.md,
+  docs/更新日志.md,
   docs/默认主题.md,
   docs/站点发布.md,
-  docs/高阶用法.md,
   docs/自定义主题.md,
   docs/其它工具.md,
-  docs/更新日志.md,
-  docs/书写组件.md
+  docs/书写组件.md,
+  docs/数学公式.md,
+  docs/高阶用法.md,
 ]
 ## set init open menu keys
 # menuOpenKeys:
