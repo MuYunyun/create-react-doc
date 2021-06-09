@@ -10,9 +10,8 @@ const { generateSiteMap } = require('crd-generator-sitemap')
 // const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 // const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const fs = require('fs-extra')
-const { defaultHTMLPath, cacheDirPath, docsBuildDist } = require('crd-utils')
+const { defaultHTMLPath, docsBuildDist } = require('crd-utils')
 const { getDocsConfig } = require('crd-utils')
-const CreateSpareWebpackPlugin = require('./createSpareWebpackPlugin')
 const config = require('./webpack.config')
 const paths = require('./path')
 const getPrerenderRoutes = require('./getPrerenderRoutes')
@@ -147,17 +146,6 @@ module.exports = function (cmd) {
       dir: cmd.markdownPaths,
       toDir: config.output.path,
     }),
-    // new CreateSpareWebpackPlugin({
-    //   // 备用文件目录，比对是否存在，不存在生成，根据 sep 目录规则生成
-    //   path: path.join(cacheDirPath, './md'),
-    //   sep: '___', // 检查目标目录文件，文件名存储，文件夹+下划线间隔+文件名
-    //   directoryTrees: {
-    //     // 索引目录
-    //     dir: cmd.markdownPaths,
-    //     mdconf: true,
-    //     extensions: /\.md$/,
-    //   },
-    // }),
     // new webpack.optimize.DedupePlugin(),
     new MiniCssExtractPlugin({
       // Options similar to the same options in webpackOptions.output

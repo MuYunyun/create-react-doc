@@ -1,57 +1,19 @@
 const write = require('write')
 const path = require('path')
-const fs = require('fs')
 const { cacheDirPath, getDocsConfig } = require('crd-utils')
 const DirectoryTree = require('../conf/node-directory-tree')
-const { ifInGitIgnore } = require('./index')
-
-function restRuctureMarkdown(items, arr = []) {
-  items.forEach((item) => {
-    if (item.type === 'directory') {
-      restRuctureMarkdown(item.children, arr)
-    } else if (/\.md$/.test(item.path)) {
-      arr.push(item.path)
-    }
-  })
-  return arr
-}
 
 module.exports = function (program, cb) {
   const treeData = program.markdownPaths.map((markdownPath) => {
     return DirectoryTree(markdownPath, {
-      mdconf: true, // 存在 Markdown 设置
+      mdconf: true, // Markdown config for exsiting file.
       extensions: /\.md/,
     })
   })
-  // cache Markdown, Markdown file name rule: `folder__folder__Markdown name.md`
-  const flatTreeData = restRuctureMarkdown(treeData)
   // to collect search data
   const searchData = []
   const docsConfig = getDocsConfig()
   const useSearchPlugin = docsConfig.search && docsConfig.host
-  // eslint-disable-next-line no-plusplus
-  for (let i = 0; i < flatTreeData.length; i++) {
-    const mdfile = flatTreeData[i]
-    // const mdfilePath = mdfile.replace(
-    //   process.cwd() + path.sep,
-    //   '',
-    // )
-    // generate file cache only it isn't in .gitignore
-    // if (!ifInGitIgnore(mdfilePath)) {
-    //   // todo: remove ___
-    //   const underlineFileName = mdfilePath.split(path.sep).join('___')
-    //   const writeMarkdownPath = path.resolve(
-    //     process.cwd(),
-    //     cacheDirPath,
-    //     'md',
-    //     underlineFileName,
-    //   )
-    //   if (fs.existsSync(mdfile)) {
-    //     const content = fs.readFileSync(mdfile)
-    //     write.sync(writeMarkdownPath, content)
-    //   }
-    // }
-  }
 
   function dfsMap(data) {
     // eslint-disable-next-line no-plusplus

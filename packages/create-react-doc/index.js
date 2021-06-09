@@ -39,7 +39,6 @@ program
 
 const { start, build, deploy, theme } = program
 
-console.log('start', start)
 if (!start && !build && !deploy && !theme) return initProject(program)
 
 if (theme) {
