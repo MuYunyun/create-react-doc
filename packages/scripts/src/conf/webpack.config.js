@@ -7,6 +7,8 @@ const fs = require('fs')
 const { resolveApp, docsConfig, cacheDirPath, docsBuildDist } = require('crd-utils')
 const { getDocsConfig } = require('crd-utils')
 // const { getSearchContent } = require('../utils');
+const remarkMath = require('remark-math')
+const rehypeKatex = require('rehype-katex')
 const paths = require('./path')
 const pkg = require('../../package.json')
 
@@ -63,43 +65,35 @@ module.exports = {
           {
             test: /\.md$/,
             use: [
-              // {
-              //   loader: require.resolve('crd-markdown-loader'),
-              // },
-              // 'crd-markdown-loader',
-              // 'babel-loader'
               {
                 loader: require.resolve('babel-loader'),
                 options: require('../../.babelrc'), // eslint-disable-line
               },
-              '@mdx-js/loader',
-              // 'crd-markdown-loader',
-              // {
-              //   loader: `${path.join(__dirname, './modifyMarkdownLoader.js')}`,
-              //   options: {
-              //     path: path.join(cacheDirPath, './md'), // dir need to replace
-              //     replace: paths.projectPath, // the dir to replace
-              //     sep: /___/g, // name saved, folder + __ + file
-              //   },
-              // },
+              // '@mdx-js/loader',
+              {
+                loader: require.resolve('@mdx-js/loader'),
+                options: {
+                  remarkPlugins: [
+                    [
+                      remarkMath,
+                      {
+                        /* options */
+                      },
+                    ],
+                  ],
+                  rehypePlugins: [
+                    [
+                      rehypeKatex,
+                      {
+                        /* options */
+                      },
+                    ],
+                  ],
+                },
+              },
             ],
             exclude: /(node_modules)/,
           },
-          // {
-          //   test: /\.md$/,
-          //   use: [
-          //     // {
-          //     //   loader: `babel-loader!${path.join(__dirname, './mdloader.js')}`,
-          //     // },
-          //     {
-          //       loader: require.resolve('crd-markdown-loader'),
-          //     },
-          //     {
-          //       loader: require.resolve('babel-loader'),
-          //       options: require('../../.babelrc'), // eslint-disable-line
-          //     },
-          //   ],
-          // },
           // “file-loader”确保这些资源由WebpackDevServer服务。
           // 当您导入资源时，您将获得（虚拟）文件名。
           // 在生产中，它们将被复制到`build`文件夹。
