@@ -1,7 +1,7 @@
 [
   {
     "referrer": "github.com",
-    "count": 23,
+    "count": 25,
     "uniques": 14
   },
   {
@@ -15,12 +15,12 @@
     "uniques": 4
   },
   {
-    "referrer": "muyunyun.cn",
+    "referrer": "segmentfault.com",
     "count": 2,
     "uniques": 2
   },
   {
-    "referrer": "segmentfault.com",
+    "referrer": "muyunyun.cn",
     "count": 2,
     "uniques": 2
   },
