@@ -1,0 +1,1 @@
+(self.webpackChunkcreate_react_doc=self.webpackChunkcreate_react_doc||[]).push([[6592],{16592:(e,c,a)=>{e.exports=a.p+"static/CHANGELOG.b5b40973.md"}}]);

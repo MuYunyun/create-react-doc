@@ -1,0 +1,1 @@
+(self.webpackChunkcreate_react_doc=self.webpackChunkcreate_react_doc||[]).push([[9651],{59651:(e,a,c)=>{e.exports=c.p+"static/fs-read-write.1ba80706.md"}}]);
