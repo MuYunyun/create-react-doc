@@ -10,7 +10,7 @@ const {
   Servers,
   Build,
 } = require('crd-scripts')
-const { docsReadme, cacheDirPath, docsBuildDist, getDocsConfig } = require('crd-utils')
+const { docsReadme, docsBuildDist, getDocsConfig } = require('crd-utils')
 const input = require('@inquirer/input')
 const pkg = require('./package.json')
 
@@ -96,7 +96,6 @@ program.markdownPaths.forEach((item) => {
 })
 
 if (isExists) {
-  // fs.ensureDirSync(cacheDirPath)
   initCache(program, () => {
     if (build) {
       Build(program)
