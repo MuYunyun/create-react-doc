@@ -2,14 +2,14 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 45,
-    "uniques": 33
+    "count": 43,
+    "uniques": 31
   },
   {
     "path": "/MuYunyun/create-react-doc/issues",
     "title": "Issues · MuYunyun/create-react-doc",
-    "count": 14,
-    "uniques": 3
+    "count": 13,
+    "uniques": 2
   },
   {
     "path": "/MuYunyun/create-react-doc/issues/138",
@@ -42,12 +42,6 @@
     "uniques": 1
   },
   {
-    "path": "/MuYunyun/create-react-doc/issues/132",
-    "title": "多版本文档切换 · Issue #132 · MuYunyun/create-react-doc",
-    "count": 1,
-    "uniques": 1
-  },
-  {
     "path": "/MuYunyun/create-react-doc/issues/new",
     "title": "New Issue · MuYunyun/create-react-doc",
     "count": 1,
@@ -56,6 +50,12 @@
   {
     "path": "/MuYunyun/create-react-doc/pulls",
     "title": "Pull requests · MuYunyun/create-react-doc",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/search",
+    "title": "Search · react",
     "count": 1,
     "uniques": 1
   }
