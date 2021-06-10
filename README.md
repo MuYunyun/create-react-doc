@@ -25,12 +25,12 @@
 
 ## 特性
 
-* 建站理念: 文件即站点 (Files as a Site)。
+* 建站理念: `文件即站点` (Files as a Site)。
 * 开箱即用: 通过指定目录或文档, 一键生成文档、博客站点, 无需关心站点环境配置信息。
-* 性能: 通过预渲染、懒加载大幅提升站点加载速度。
-* 基于 mdx: 支持在 markdown 中书写 React 组件、数学公式等。
-* 搜索引擎优化: 支持 SEO, 让文档更易被搜索。相关文档: [SEO 在 SPA 站点中的实践](https://github.com/MuYunyun/blog/issues/84)
-* 个性化: 支持[自定义主题](http://muyunyun.cn/create-react-doc/%E8%87%AA%E5%AE%9A%E4%B9%89%E4%B8%BB%E9%A2%98)。
+* 性能: 通过`预渲染`、`懒加载`大幅提升站点加载速度。
+* 基于 mdx: 支持在 markdown 中`书写 React 组件`、数学公式等。
+* 搜索引擎优化: `支持 SEO`, 让文档更易被搜索。相关文档: [SEO 在 SPA 站点中的实践](https://github.com/MuYunyun/blog/issues/84)
+* 个性化: 支持[自定义主题](http://muyunyun.cn/create-react-doc/%E4%B8%BB%E9%A2%98/%E8%87%AA%E5%AE%9A%E4%B9%89%E4%B8%BB%E9%A2%98)。
 * 工作流: 集成 Github action, 支持自动化打包、发布站点。
 
 > [快速上手](http://muyunyun.cn/create-react-doc/%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B)
