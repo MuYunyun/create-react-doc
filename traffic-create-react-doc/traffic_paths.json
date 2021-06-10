@@ -2,20 +2,32 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 43,
+    "count": 46,
     "uniques": 31
   },
   {
     "path": "/MuYunyun/create-react-doc/issues",
     "title": "Issues · MuYunyun/create-react-doc",
-    "count": 13,
+    "count": 19,
     "uniques": 2
   },
   {
     "path": "/MuYunyun/create-react-doc/issues/138",
     "title": "markdown 文件中支持书写 React 组件 · Issue #138 · MuYunyun/create-react-doc",
-    "count": 9,
+    "count": 11,
     "uniques": 3
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/pull/143",
+    "title": "Feature/support react cp mujue by MuYunyun · Pull Request #143 · MuYunyun/cre...",
+    "count": 5,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/pulls",
+    "title": "Pull requests · MuYunyun/create-react-doc",
+    "count": 5,
+    "uniques": 1
   },
   {
     "path": "/MuYunyun/create-react-doc/blob/main/README-en.md",
@@ -24,38 +36,26 @@
     "uniques": 3
   },
   {
+    "path": "/MuYunyun/create-react-doc/issues/63",
+    "title": "Feature Request: support mathjax · Issue #63 · MuYunyun/create-react-doc",
+    "count": 4,
+    "uniques": 2
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/pull/143/files",
+    "title": "Feature/support react cp mujue by MuYunyun · Pull Request #143 · MuYunyun/cre...",
+    "count": 3,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/actions",
+    "title": "Actions · MuYunyun/create-react-doc",
+    "count": 1,
+    "uniques": 1
+  },
+  {
     "path": "/MuYunyun/create-react-doc/blob/main/package.json",
     "title": "create-react-doc/package.json at main · MuYunyun/create-react-doc · GitHub",
-    "count": 1,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/blob/main/packages/create-react-doc/package.json",
-    "title": "create-react-doc/package.json at main · MuYunyun/create-react-doc · GitHub",
-    "count": 1,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/issues/105",
-    "title": "can't perform leetcode download · Issue #105 · MuYunyun/create-react-doc",
-    "count": 1,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/issues/new",
-    "title": "New Issue · MuYunyun/create-react-doc",
-    "count": 1,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/pulls",
-    "title": "Pull requests · MuYunyun/create-react-doc",
-    "count": 1,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/search",
-    "title": "Search · react",
     "count": 1,
     "uniques": 1
   }
