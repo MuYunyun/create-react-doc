@@ -96,7 +96,7 @@ program.markdownPaths.forEach((item) => {
 })
 
 if (isExists) {
-  fs.ensureDirSync(cacheDirPath)
+  // fs.ensureDirSync(cacheDirPath)
   initCache(program, () => {
     if (build) {
       Build(program)
