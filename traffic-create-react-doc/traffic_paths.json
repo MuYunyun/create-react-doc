@@ -2,8 +2,8 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 46,
-    "uniques": 31
+    "count": 42,
+    "uniques": 27
   },
   {
     "path": "/MuYunyun/create-react-doc/issues",
@@ -30,12 +30,6 @@
     "uniques": 1
   },
   {
-    "path": "/MuYunyun/create-react-doc/blob/main/README-en.md",
-    "title": "create-react-doc/README-en.md at main · MuYunyun/create-react-doc",
-    "count": 4,
-    "uniques": 3
-  },
-  {
     "path": "/MuYunyun/create-react-doc/issues/63",
     "title": "Feature Request: support mathjax · Issue #63 · MuYunyun/create-react-doc",
     "count": 4,
@@ -46,6 +40,12 @@
     "title": "Feature/support react cp mujue by MuYunyun · Pull Request #143 · MuYunyun/cre...",
     "count": 3,
     "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/blob/main/README-en.md",
+    "title": "create-react-doc/README-en.md at main · MuYunyun/create-react-doc",
+    "count": 2,
+    "uniques": 2
   },
   {
     "path": "/MuYunyun/create-react-doc/actions",
