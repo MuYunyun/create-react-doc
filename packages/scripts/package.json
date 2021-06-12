@@ -33,7 +33,7 @@
     "eslint": "^7.11.0",
     "eslint-loader": "^4.0.2",
     "file-loader": "^1.1.11",
-    "fs-extra": "^5.0.0",
+    "fs-extra": "^10.0.0",
     "gh-pages": "^1.2.0",
     "html-webpack-plugin": "^4.5.1",
     "less-loader": "^7.2.1",
