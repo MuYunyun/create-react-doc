@@ -12,19 +12,22 @@ module.exports = function serve(program) {
   const webpackConf = conf(program)
   const compiler = webpack(webpackConf)
   compiler.run((err, stats) => {
+    if (err) { throw err }
     // 官方输出参数
     // https://webpack.js.org/configuration/stats/
     // https://github.com/webpack/webpack/issues/538#issuecomment-59586196
     /* eslint-disable */
-    // console.log(stats.toString({
-    //   colors: true,
-    //   children: false,
-    //   chunks: false,
-    //   modules: false,
-    //   moduleTrace: false,
-    //   warningsFilter: (warning) => {
-    //     return true
-    //   }
-    // }));
-  });
-};
+    console.log(stats.toString({
+      colors: true,
+      children: false,
+      chunks: false,
+      modules: false,
+      errors: true,
+      errorDetails: true,
+      errorStack: true,
+      warningsFilter: (warning) => {
+        return true
+      }
+    }))
+  })
+}
