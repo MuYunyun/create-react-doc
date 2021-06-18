@@ -10,12 +10,14 @@ const getPrerenderRoutes = () => {
     : []
   const result = ['/README', '/404']
   dfs(menu, result, '', true)
+  console.log('✅ result', result)
   return result
 }
 
 const dfs = (arr, result, prefix, isRoot) => {
   for (let i = 0; i < arr.length; i++) {
     const source = `${prefix}${arr[i]}`
+    console.log('source', source)
     const stats = fs.statSync(source)
     const isFile = stats.isFile()
     const isDirectory = stats.isDirectory()
