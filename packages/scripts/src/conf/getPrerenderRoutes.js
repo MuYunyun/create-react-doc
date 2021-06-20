@@ -22,6 +22,11 @@ const dfs = (arr, result, prefix, isRoot) => {
     const isFile = stats.isFile()
     const isDirectory = stats.isDirectory()
 
+    if (isDirectory) {
+      const dirArr = fs.readdirSync(source)
+      dfs(dirArr, result, `${source}/`, false)
+    }
+
     if (isFile && arr[i].indexOf('.md') > -1) {
       if (isRoot) {
         // eg: 'a/b.md'
@@ -31,11 +36,6 @@ const dfs = (arr, result, prefix, isRoot) => {
       } else {
         result.push(`/${prefix}${arr[i].split('.md')[0]}`)
       }
-    }
-
-    if (isDirectory) {
-      const dirArr = fs.readdirSync(source)
-      dfs(dirArr, result, `${source}/`, false)
     }
   }
 }
