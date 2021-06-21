@@ -50,12 +50,14 @@ function getRelativePath(arr, relativePath, dirs) {
 }
 
 module.exports = function (source) {
+  // get option config from webpack loader, here is https://github.com/MuYunyun/create-react-doc/blob/main/packages/scripts/src/conf/webpack.config.prod.js#L61-L70
   const options = loaderUtils.getOptions(this) || {}
   const { include, directoryTrees } = options
   const { dir, relativePath, ...otherProps } = directoryTrees
   let content = typeof source === 'string' ? JSON.parse(source) : source
-
-  if (this.cacheable) this.cacheable()
+  // It's said loader resuls are flagged as cacheable. See https://webpack.js.org/api/loaders/#thiscacheable.
+  // if (this.cacheable) this.cacheable()
+  // Todo: https://webpack.js.org/api/loaders/#pitching-loader
   if (directoryTrees && (!include || include.test(this.resourcePath))) {
     const dirs = Array.isArray(dir) ? dir : [dir]
     const dirTree = dirs.map(path => DirectoryTree(path, otherProps))
