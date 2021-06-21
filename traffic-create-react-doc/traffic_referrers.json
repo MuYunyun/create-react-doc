@@ -1,13 +1,13 @@
 [
   {
     "referrer": "v2ex.com",
-    "count": 107,
-    "uniques": 93
+    "count": 125,
+    "uniques": 103
   },
   {
     "referrer": "github.com",
-    "count": 57,
-    "uniques": 30
+    "count": 70,
+    "uniques": 33
   },
   {
     "referrer": "muyunyun.cn",
@@ -16,13 +16,8 @@
   },
   {
     "referrer": "link.zhihu.com",
-    "count": 8,
-    "uniques": 6
-  },
-  {
-    "referrer": "npmjs.com",
-    "count": 1,
-    "uniques": 1
+    "count": 6,
+    "uniques": 4
   },
   {
     "referrer": "segmentfault.com",
@@ -30,12 +25,7 @@
     "uniques": 1
   },
   {
-    "referrer": "bbs.huaweicloud.com",
-    "count": 1,
-    "uniques": 1
-  },
-  {
-    "referrer": "dev.to",
+    "referrer": "npmjs.com",
     "count": 1,
     "uniques": 1
   }
