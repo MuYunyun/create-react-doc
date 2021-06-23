@@ -121,7 +121,7 @@ module.exports = function (cmd) {
     // ],
   }
 
-  const routes = getPrerenderRoutes()
+  const routes = getPrerenderRoutes(cmd)
 
   config.plugins = config.plugins.concat([
     new webpack.DefinePlugin({

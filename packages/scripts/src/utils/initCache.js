@@ -5,9 +5,12 @@ const DirectoryTree = require('../conf/node-directory-tree')
 
 module.exports = function (program, cb) {
   const treeData = program.markdownPaths.map((markdownPath) => {
-    return DirectoryTree(markdownPath, {
-      mdconf: true, // Markdown config for exsiting file.
-      extensions: /\.md/,
+    return DirectoryTree({
+      path: markdownPath,
+      options: {
+        mdconf: true, // Markdown config for exsiting file.
+        extensions: /\.md/,
+      },
     })
   })
   // to collect search data

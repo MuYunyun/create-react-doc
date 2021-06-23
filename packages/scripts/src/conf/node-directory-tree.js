@@ -37,7 +37,20 @@ function safeReadDirSync(path) {
   return dirData
 }
 
-function directoryTree(path, options, onEachFile) {
+/**
+ * build directory Tree, fork from https://github.com/mihneadb/node-directory-tree
+ * path: path for file
+ * options: {
+ *   exclude: RegExp|RegExp[] - A RegExp or an array of RegExp to test for exclusion of directories.
+ *   extensions : RegExp - A RegExp to test for exclusion of files with the matching extension.
+ *   mdconf: boolean
+ *   prerender: boolean use for prerender
+ * }
+ */
+function directoryTree({
+  path,
+  options,
+}) {
   const name = PATH.basename(path)
   const item = { path, name }
   let stats
@@ -56,7 +69,7 @@ function directoryTree(path, options, onEachFile) {
     // Skip if it does not match the extension regex
     if (options && options.extensions && !options.extensions.test(ext)) { return null }
 
-    if (options && options.mdconf) {
+    if (options && options.mdconf && !options.prerender) {
       const contentStr = fs.readFileSync(path).toString()
       if (contentStr) {
         const contentMatch = contentStr.match(/^<!--(\s?[^>]*)-->/)
@@ -85,13 +98,10 @@ function directoryTree(path, options, onEachFile) {
           console.log(`error: ${error.message}`)
         }
       }
-    }
 
-    item.size = stats.size // File size in bytes
-    item.extension = ext
-    item.type = constants.FILE
-    if (onEachFile) {
-      onEachFile(item, PATH)
+      item.size = stats.size // File size in bytes
+      item.extension = ext
+      item.type = constants.FILE
     }
   } else if (stats.isDirectory()) {
     const dirData = safeReadDirSync(path)
@@ -99,11 +109,16 @@ function directoryTree(path, options, onEachFile) {
 
     item.children = dirData
       .map(child =>
-        directoryTree(PATH.join(path, child), options, onEachFile),
+        directoryTree({
+          path: PATH.join(path, child),
+          options,
+        }),
       )
       .filter(e => !!e)
-    item.size = item.children.reduce((prev, cur) => prev + cur.size, 0)
-    item.type = constants.DIRECTORY
+    if (!options.prerender) {
+      item.size = item.children.reduce((prev, cur) => prev + cur.size, 0)
+      item.type = constants.DIRECTORY
+    }
   } else {
     return null // Or set item.size = 0 for devices, FIFO and sockets ?
   }

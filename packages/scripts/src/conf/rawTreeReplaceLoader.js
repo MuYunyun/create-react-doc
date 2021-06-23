@@ -60,7 +60,10 @@ module.exports = function (source) {
   if (directoryTrees && (!include || include.test(this.resourcePath))) {
     const dirs = Array.isArray(dir) ? dir : [dir]
     // todo: white some logic about route relative in getRelativePath
-    const dirTree = dirs.map(path => DirectoryTree(path, otherProps))
+    const dirTree = dirs.map(path => DirectoryTree({
+      path,
+      options: otherProps,
+    }))
     // if (Array.isArray(dirTree)) {
     //   console.log('dirTree', dirTree[3] && dirTree[3].children)
     // }
