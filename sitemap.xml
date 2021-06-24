@@ -4,19 +4,16 @@
     <loc>https://muyunyun.cn/create-react-doc/README</loc>
   </url>
   <url>
-    <loc>https://muyunyun.cn/create-react-doc/404</loc>
-  </url>
-  <url>
     <loc>https://muyunyun.cn/create-react-doc/快速上手</loc>
   </url>
   <url>
     <loc>https://muyunyun.cn/create-react-doc/更新日志</loc>
   </url>
   <url>
-    <loc>https://muyunyun.cn/create-react-doc/docs/主题/自定义主题</loc>
+    <loc>https://muyunyun.cn/create-react-doc/主题/自定义主题</loc>
   </url>
   <url>
-    <loc>https://muyunyun.cn/create-react-doc/docs/主题/默认主题</loc>
+    <loc>https://muyunyun.cn/create-react-doc/主题/默认主题</loc>
   </url>
   <url>
     <loc>https://muyunyun.cn/create-react-doc/站点发布</loc>
@@ -32,5 +29,8 @@
   </url>
   <url>
     <loc>https://muyunyun.cn/create-react-doc/高阶用法</loc>
+  </url>
+  <url>
+    <loc>https://muyunyun.cn/create-react-doc/404</loc>
   </url>
 </urlset>
