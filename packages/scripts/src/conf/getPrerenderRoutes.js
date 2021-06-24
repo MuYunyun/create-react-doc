@@ -1,12 +1,9 @@
-const fs = require('fs')
-const { getDocsConfig } = require('crd-utils')
 const DirectoryTree = require('./node-directory-tree')
 
 // eg: ['docs/quick_start.md', 'a']
 // output: ['/quick_start', '/a/b', '/a/b/c']
 const getPrerenderRoutes = (cmd) => {
   const dir = cmd.markdownPaths
-  console.log('dir123', dir)
   const dirs = Array.isArray(dir) ? dir : [dir]
   const otherProps = {
     mdconf: true,
@@ -17,41 +14,32 @@ const getPrerenderRoutes = (cmd) => {
     path,
     options: otherProps,
   }))
-  console.log('dirTree123', dirTree)
-  const docsConfig = getDocsConfig()
-  const menu = docsConfig && Array.isArray(docsConfig.menu)
-    ? docsConfig.menu
-    : []
-  const result = ['/README', '/404']
-  dfs(menu, result, '', true)
-  // console.log('✅ result', result)
+  const result = getPrerenderRoute(dirTree)
+  result.push('/404')
+  // console.log('✅ prerender', result)
   return result
 }
 
-const dfs = (arr, result, prefix, isRoot) => {
-  for (let i = 0; i < arr.length; i++) {
-    const source = `${prefix}${arr[i]}`
-    // console.log('source', source)
-    const stats = fs.statSync(source)
-    const isFile = stats.isFile()
-    const isDirectory = stats.isDirectory()
+function getPrerenderRoute(data) {
+  const arr = []
+  return recursive(data, '', arr)
+}
 
-    if (isDirectory) {
-      const dirArr = fs.readdirSync(source)
-      dfs(dirArr, result, `${source}/`, false)
-    }
-
-    if (isFile && arr[i].indexOf('.md') > -1) {
-      if (isRoot) {
-        // eg: 'a/b.md'
-        const splitArr = arr[i].split('/')
-        const lastSplitValue = splitArr[splitArr.length - 1]
-        result.push(`/${lastSplitValue.split('.md')[0]}`)
+function recursive(data, routePath, arr) {
+  data.forEach((item) => {
+    const routePropsCurrent = `${routePath}/${item.name}`.replace(/.md$/, '')
+    if (item.type === 'directory') {
+      if (item.children && item.children.length > 0) {
+        // eslint-disable-next-line no-unused-vars
+        item.children = recursive(item.children, routePropsCurrent, arr)
       } else {
-        result.push(`/${prefix}${arr[i].split('.md')[0]}`)
+        item.children = []
       }
+    } else if (item.type === 'file') {
+      arr.push(routePropsCurrent)
     }
-  }
+  })
+  return arr
 }
 
 module.exports = getPrerenderRoutes

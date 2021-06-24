@@ -52,7 +52,10 @@ function directoryTree({
   options,
 }) {
   const name = PATH.basename(path)
-  const item = { path, name }
+  const item = { name }
+  if (!options.prerender) {
+    item.path = path
+  }
   let stats
   try {
     stats = fs.statSync(path)
@@ -69,9 +72,10 @@ function directoryTree({
     // Skip if it does not match the extension regex
     if (options && options.extensions && !options.extensions.test(ext)) { return null }
 
-    if (options && options.mdconf && !options.prerender) {
+    if (options && options.mdconf) {
+      item.type = constants.FILE
       const contentStr = fs.readFileSync(path).toString()
-      if (contentStr) {
+      if (contentStr && !options.prerender) {
         const contentMatch = contentStr.match(/^<!--(\s?[^>]*)-->/)
         item.relative = item.path.replace(process.cwd(), '')
         item.mdconf = contentMatch ? YAML.parse(contentMatch[1]) : {}
@@ -97,11 +101,9 @@ function directoryTree({
           // eslint-disable-next-line no-console
           console.log(`error: ${error.message}`)
         }
+        item.size = stats.size // File size in bytes
+        item.extension = ext
       }
-
-      item.size = stats.size // File size in bytes
-      item.extension = ext
-      item.type = constants.FILE
     }
   } else if (stats.isDirectory()) {
     const dirData = safeReadDirSync(path)
@@ -115,9 +117,9 @@ function directoryTree({
         }),
       )
       .filter(e => !!e)
+    item.type = constants.DIRECTORY
     if (!options.prerender) {
       item.size = item.children.reduce((prev, cur) => prev + cur.size, 0)
-      item.type = constants.DIRECTORY
     }
   } else {
     return null // Or set item.size = 0 for devices, FIFO and sockets ?

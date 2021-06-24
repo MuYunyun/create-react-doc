@@ -56,29 +56,23 @@ module.exports = function (source) {
   let content = typeof source === 'string' ? JSON.parse(source) : source
   // It's said loader resuls are flagged as cacheable. See https://webpack.js.org/api/loaders/#thiscacheable.
   // if (this.cacheable) this.cacheable()
-  // Todo: https://webpack.js.org/api/loaders/#pitching-loader
   if (directoryTrees && (!include || include.test(this.resourcePath))) {
     const dirs = Array.isArray(dir) ? dir : [dir]
-    // todo: white some logic about route relative in getRelativePath
     const dirTree = dirs.map(path => DirectoryTree({
       path,
       options: otherProps,
     }))
-    // if (Array.isArray(dirTree)) {
-    //   console.log('dirTree', dirTree[3] && dirTree[3].children)
-    // }
-    // content = dirTree
 
     const filemd = getAllWatchPath(dirTree)
     filemd.forEach((fileItem) => {
       this.addDependency(fileItem)
     })
+    // replace full file path with relative path
     content = getRelativePath(
       dirTree,
       relativePath,
       dirs,
     )
-    // console.log('content', content)
   }
   content = JSON.stringify(content)
     .replace(/\u2028/g, '\\u2028')
