@@ -10,9 +10,6 @@ const { getDocsConfig } = require('crd-utils')
 
 const docsConfig = getDocsConfig()
 
-const domain = docsConfig.domain
-const repo = docsConfig.repo
-
 const template = content =>
   `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
@@ -24,6 +21,8 @@ const template = content =>
  * generate sitemap for google.
  */
 const generateSiteMap = (routes) => {
+  const domain = docsConfig && docsConfig.domain
+  const repo = docsConfig && docsConfig.repo
   let content = ''
   for (let i = 0; i < routes.length; i++) {
     if (i === routes.length - 1) {

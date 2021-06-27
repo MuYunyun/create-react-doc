@@ -20,3 +20,7 @@ $ react-doc start    // 启动项目
 $ react-doc build    // 项目打包
 $ react-doc deploy   // 手动发布项目
 ```
+
+# 调试
+
+进入该目录, 执行 yarn link, 即可在全局使用 react-doc xxx 命令。
