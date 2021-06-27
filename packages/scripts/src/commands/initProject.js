@@ -1,7 +1,7 @@
 const path = require('path')
 const { execSync } = require('child_process')
 const fs = require('fs-extra')
-const { templatePath } = require('crd-utils')
+const { templatePath, resolveApp } = require('crd-utils')
 const copyTemplate = require('copy-template-dir')
 const paths = require('../conf/path')
 
@@ -28,19 +28,24 @@ module.exports = function (params) {
   if (!fs.pathExistsSync(defaultTemplatePath)) {
     execSync('mkdir temp && cd temp && yarn add crd-templates -D')
   }
-  copyTemplate(defaultTemplatePath, outDir, {
-    name: projectName,
-    crdVersion: CRD_VERSION,
-  }, (err, createdFiles) => {
-    if (err) return log(`Copy Tamplate Error: ${err} !!!`.red)
-    createdFiles.sort().forEach((createdFile) => {
-      log(`  ${'create'.green} ${createdFile.replace(paths.projectPath, '')}`)
+  const templatePathInTemp = resolveApp('temp/node_modules/crd-templates/default')
+  if (fs.pathExistsSync(templatePathInTemp)) {
+    copyTemplate(templatePathInTemp, outDir, {
+      name: projectName,
+      crdVersion: CRD_VERSION,
+    }, (err, createdFiles) => {
+      if (err) return log(`Copy Tamplate Error: ${err} !!!`.red)
+      createdFiles.sort().forEach((createdFile) => {
+        log(`  ${'create'.green} ${createdFile.replace(paths.projectPath, '')}`)
+      })
+      // to hack https://github.com/yoshuawuyts/copy-template-dir/issues/16
+      execSync(`cp -r ${templatePathInTemp}/.github ${outDir}`)
+      execSync('rm -rf temp')
+      log('\n  initialization finished!\n'.green)
+      const cmdstr = `cd ${projectName} && yarn && yarn start`.cyan
+      log(`  Run the ${cmdstr} to start the website.\n\n`)
     })
-    // this is to hack https://github.com/yoshuawuyts/copy-template-dir/issues/16
-    execSync(`cp -r ${defaultTemplatePath}/.github ${outDir}`)
-    execSync('rm -rf temp')
-    log('\n  initialization finished!\n'.green)
-    const cmdstr = `cd ${projectName} && yarn && yarn start`.cyan
-    log(`  Run the ${cmdstr} to start the website.\n\n`)
-  })
+  } else {
+    log(` ❎ crd-templates install fail.\n\n`)
+  }
 }
