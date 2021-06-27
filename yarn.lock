@@ -10173,6 +10173,13 @@ react-switch@^5.0.1:
   dependencies:
     prop-types "^15.6.2"
 
+react-switch@^6.0.0:
+  version "6.0.0"
+  resolved "https://registry.npmjs.org/react-switch/-/react-switch-6.0.0.tgz#bd4a2dea08f211b8a32e55e8314fd44bc1ec947e"
+  integrity sha512-QV3/6eRK5/5epdQzIqvDAHRoGLbCv/wDpHUi6yBMXY1Xco5XGuIZxvB49PHoV1v/SpEgOCJLD/Zo43iic+aEIw==
+  dependencies:
+    prop-types "^15.7.2"
+
 react@^17.0.1:
   version "17.0.1"
   resolved "https://registry.npmjs.org/react/-/react-17.0.1.tgz#6e0600416bd57574e3f86d92edba3d9008726127"
