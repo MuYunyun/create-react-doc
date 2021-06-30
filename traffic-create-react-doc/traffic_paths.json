@@ -2,14 +2,14 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 303,
-    "uniques": 186
+    "count": 275,
+    "uniques": 170
   },
   {
     "path": "/MuYunyun/create-react-doc/issues",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 77,
-    "uniques": 19
+    "count": 73,
+    "uniques": 18
   },
   {
     "path": "/MuYunyun/create-react-doc/issues/147",
@@ -20,14 +20,20 @@
   {
     "path": "/MuYunyun/create-react-doc/pulls",
     "title": "Pull requests · MuYunyun/create-react-doc · GitHub",
-    "count": 17,
-    "uniques": 8
+    "count": 16,
+    "uniques": 7
   },
   {
     "path": "/MuYunyun/create-react-doc/tree/main/packages",
     "title": "create-react-doc/packages at main · MuYunyun/create-react-doc",
-    "count": 16,
-    "uniques": 10
+    "count": 14,
+    "uniques": 8
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/issues/157",
+    "title": "unable to create a react doc · Issue #157 · MuYunyun/create-react-doc",
+    "count": 9,
+    "uniques": 2
   },
   {
     "path": "/MuYunyun/create-react-doc/issues/103",
@@ -36,27 +42,21 @@
     "uniques": 7
   },
   {
-    "path": "/MuYunyun/create-react-doc/issues/157",
-    "title": "unable to create a react doc · Issue #157 · MuYunyun/create-react-doc",
-    "count": 8,
-    "uniques": 2
-  },
-  {
     "path": "/MuYunyun/create-react-doc/tree/main/packages/scripts",
     "title": "create-react-doc/packages/scripts at main · MuYunyun/create-react-doc",
     "count": 7,
     "uniques": 5
   },
   {
-    "path": "/MuYunyun/create-react-doc/issues/146",
-    "title": "support full error info in build · Issue #146 · MuYunyun/create-react-doc",
-    "count": 7,
-    "uniques": 3
+    "path": "/MuYunyun/create-react-doc/tree/main/packages/scripts/src",
+    "title": "create-react-doc/packages/scripts/src at main · MuYunyun/create-react-doc",
+    "count": 6,
+    "uniques": 4
   },
   {
-    "path": "/MuYunyun/create-react-doc/tree/main/packages/crd-seed",
-    "title": "create-react-doc/packages/crd-seed at main · MuYunyun/create-react-doc",
+    "path": "/MuYunyun/create-react-doc/issues/146",
+    "title": "support full error info in build · Issue #146 · MuYunyun/create-react-doc",
     "count": 6,
-    "uniques": 5
+    "uniques": 3
   }
 ]
