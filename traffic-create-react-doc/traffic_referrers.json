@@ -1,23 +1,23 @@
 [
   {
     "referrer": "v2ex.com",
-    "count": 79,
-    "uniques": 59
+    "count": 46,
+    "uniques": 30
   },
   {
     "referrer": "github.com",
-    "count": 48,
-    "uniques": 18
+    "count": 39,
+    "uniques": 12
   },
   {
     "referrer": "muyunyun.cn",
-    "count": 7,
-    "uniques": 5
+    "count": 5,
+    "uniques": 4
   },
   {
     "referrer": "link.zhihu.com",
-    "count": 5,
-    "uniques": 5
+    "count": 4,
+    "uniques": 4
   },
   {
     "referrer": "dev.to",
@@ -36,11 +36,6 @@
   },
   {
     "referrer": "npm.souche-inc.com",
-    "count": 1,
-    "uniques": 1
-  },
-  {
-    "referrer": "segmentfault.com",
     "count": 1,
     "uniques": 1
   }
