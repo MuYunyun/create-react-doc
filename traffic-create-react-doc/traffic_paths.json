@@ -2,14 +2,14 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 125,
-    "uniques": 63
+    "count": 90,
+    "uniques": 51
   },
   {
     "path": "/MuYunyun/create-react-doc/issues",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 63,
-    "uniques": 9
+    "count": 56,
+    "uniques": 7
   },
   {
     "path": "/MuYunyun/create-react-doc/issues/157",
@@ -20,43 +20,43 @@
   {
     "path": "/MuYunyun/create-react-doc/pulls",
     "title": "Pull requests · MuYunyun/create-react-doc · GitHub",
-    "count": 13,
-    "uniques": 7
+    "count": 11,
+    "uniques": 6
   },
   {
     "path": "/MuYunyun/create-react-doc/issues/147",
     "title": "编译缺少多层级目录文件生成 · Issue #147 · MuYunyun/create-react-doc",
-    "count": 13,
-    "uniques": 4
+    "count": 11,
+    "uniques": 3
   },
   {
     "path": "/MuYunyun/create-react-doc/tree/main/packages",
     "title": "create-react-doc/packages at main · MuYunyun/create-react-doc",
-    "count": 10,
-    "uniques": 5
+    "count": 5,
+    "uniques": 3
   },
   {
     "path": "/MuYunyun/create-react-doc/tree/main/packages/scripts",
     "title": "create-react-doc/packages/scripts at main · MuYunyun/create-react-doc",
-    "count": 6,
-    "uniques": 4
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/tree/main/packages/scripts/src",
-    "title": "create-react-doc/packages/scripts/src at main · MuYunyun/create-react-doc",
-    "count": 6,
-    "uniques": 4
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/tree/main/docs",
-    "title": "create-react-doc/docs at main · MuYunyun/create-react-doc",
     "count": 4,
-    "uniques": 3
+    "uniques": 2
   },
   {
     "path": "/MuYunyun/create-react-doc/issues/149",
     "title": "测试用例书写环境搭建 · Issue #149 · MuYunyun/create-react-doc",
     "count": 3,
     "uniques": 3
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/issues/new",
+    "title": "New Issue · MuYunyun/create-react-doc",
+    "count": 3,
+    "uniques": 2
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/tree/main/docs",
+    "title": "create-react-doc/docs at main · MuYunyun/create-react-doc",
+    "count": 3,
+    "uniques": 2
   }
 ]
