@@ -1,8 +1,8 @@
 [
   {
     "referrer": "github.com",
-    "count": 28,
-    "uniques": 12
+    "count": 24,
+    "uniques": 11
   },
   {
     "referrer": "v2ex.com",
@@ -10,19 +10,14 @@
     "uniques": 6
   },
   {
-    "referrer": "muyunyun.cn",
-    "count": 5,
-    "uniques": 4
-  },
-  {
     "referrer": "dev.to",
     "count": 4,
     "uniques": 4
   },
   {
-    "referrer": "npmjs.com",
-    "count": 1,
-    "uniques": 1
+    "referrer": "muyunyun.cn",
+    "count": 2,
+    "uniques": 2
   },
   {
     "referrer": "segmentfault.com",
@@ -30,12 +25,7 @@
     "uniques": 1
   },
   {
-    "referrer": "Google",
-    "count": 1,
-    "uniques": 1
-  },
-  {
-    "referrer": "npm.souche-inc.com",
+    "referrer": "npmjs.com",
     "count": 1,
     "uniques": 1
   }
