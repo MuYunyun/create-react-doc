@@ -6,17 +6,22 @@
   },
   {
     "referrer": "v2ex.com",
-    "count": 7,
-    "uniques": 5
-  },
-  {
-    "referrer": "dev.to",
-    "count": 4,
+    "count": 6,
     "uniques": 4
   },
   {
+    "referrer": "dev.to",
+    "count": 5,
+    "uniques": 5
+  },
+  {
     "referrer": "muyunyun.cn",
-    "count": 2,
+    "count": 4,
+    "uniques": 3
+  },
+  {
+    "referrer": "link.zhihu.com",
+    "count": 3,
     "uniques": 2
   },
   {
