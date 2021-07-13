@@ -5,32 +5,27 @@
     "uniques": 10
   },
   {
-    "referrer": "v2ex.com",
-    "count": 5,
-    "uniques": 3
-  },
-  {
-    "referrer": "dev.to",
-    "count": 3,
-    "uniques": 3
-  },
-  {
     "referrer": "link.zhihu.com",
     "count": 3,
     "uniques": 2
   },
   {
     "referrer": "muyunyun.cn",
-    "count": 3,
-    "uniques": 2
-  },
-  {
-    "referrer": "npmjs.com",
-    "count": 1,
+    "count": 2,
     "uniques": 1
   },
   {
     "referrer": "segmentfault.com",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "referrer": "v2ex.com",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "referrer": "dev.to",
     "count": 1,
     "uniques": 1
   }
