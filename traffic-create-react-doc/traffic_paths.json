@@ -3,31 +3,13 @@
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
     "count": 27,
-    "uniques": 18
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/issues",
-    "title": "Issues · MuYunyun/create-react-doc",
-    "count": 10,
-    "uniques": 2
+    "uniques": 19
   },
   {
     "path": "/MuYunyun/create-react-doc/issues/157",
     "title": "unable to create a react doc · Issue #157 · MuYunyun/create-react-doc",
-    "count": 5,
+    "count": 2,
     "uniques": 2
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/issues/138",
-    "title": "markdown 文件中支持书写 React 组件 · Issue #138 · MuYunyun/create-react-doc",
-    "count": 2,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/issues/156",
-    "title": "support live code · Issue #156 · MuYunyun/create-react-doc",
-    "count": 2,
-    "uniques": 1
   },
   {
     "path": "/MuYunyun/create-react-doc/tree/main/utils",
@@ -56,6 +38,24 @@
   {
     "path": "/MuYunyun/create-react-doc/blob/main/README-en.md",
     "title": "create-react-doc/README-en.md at main · MuYunyun/create-react-doc",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/blob/main/utils/uppackage-dev.sh",
+    "title": "create-react-doc/uppackage-dev.sh at main · MuYunyun/create-react-doc",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/blob/main/utils/uppackage.sh",
+    "title": "create-react-doc/uppackage.sh at main · MuYunyun/create-react-doc",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/issues",
+    "title": "Issues · MuYunyun/create-react-doc",
     "count": 1,
     "uniques": 1
   }
