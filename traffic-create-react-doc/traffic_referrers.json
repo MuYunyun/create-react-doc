@@ -6,8 +6,8 @@
   },
   {
     "referrer": "Baidu",
-    "count": 8,
-    "uniques": 3
+    "count": 9,
+    "uniques": 4
   },
   {
     "referrer": "dev.to",
@@ -26,12 +26,17 @@
   },
   {
     "referrer": "v2ex.com",
-    "count": 3,
-    "uniques": 3
+    "count": 4,
+    "uniques": 4
   },
   {
     "referrer": "cn.bing.com",
     "count": 2,
+    "uniques": 1
+  },
+  {
+    "referrer": "Google",
+    "count": 1,
     "uniques": 1
   },
   {
