@@ -1,8 +1,8 @@
 [
   {
     "referrer": "github.com",
-    "count": 14,
-    "uniques": 8
+    "count": 13,
+    "uniques": 7
   },
   {
     "referrer": "Baidu",
@@ -16,8 +16,8 @@
   },
   {
     "referrer": "link.zhihu.com",
-    "count": 7,
-    "uniques": 6
+    "count": 6,
+    "uniques": 5
   },
   {
     "referrer": "muyunyun.cn",
@@ -40,12 +40,12 @@
     "uniques": 1
   },
   {
-    "referrer": "bbs.huaweicloud.com",
+    "referrer": "npmjs.com",
     "count": 1,
     "uniques": 1
   },
   {
-    "referrer": "npmjs.com",
+    "referrer": "bbs.huaweicloud.com",
     "count": 1,
     "uniques": 1
   }
