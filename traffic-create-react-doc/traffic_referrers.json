@@ -1,13 +1,13 @@
 [
   {
     "referrer": "github.com",
-    "count": 13,
-    "uniques": 7
+    "count": 11,
+    "uniques": 5
   },
   {
     "referrer": "Baidu",
-    "count": 9,
-    "uniques": 4
+    "count": 8,
+    "uniques": 3
   },
   {
     "referrer": "dev.to",
@@ -16,13 +16,8 @@
   },
   {
     "referrer": "link.zhihu.com",
-    "count": 6,
-    "uniques": 5
-  },
-  {
-    "referrer": "muyunyun.cn",
-    "count": 5,
-    "uniques": 2
+    "count": 4,
+    "uniques": 4
   },
   {
     "referrer": "v2ex.com",
@@ -30,22 +25,27 @@
     "uniques": 4
   },
   {
+    "referrer": "Google",
+    "count": 2,
+    "uniques": 2
+  },
+  {
     "referrer": "cn.bing.com",
     "count": 2,
     "uniques": 1
   },
   {
-    "referrer": "Google",
+    "referrer": "muyunyun.cn",
+    "count": 2,
+    "uniques": 1
+  },
+  {
+    "referrer": "bbs.huaweicloud.com",
     "count": 1,
     "uniques": 1
   },
   {
     "referrer": "npmjs.com",
-    "count": 1,
-    "uniques": 1
-  },
-  {
-    "referrer": "bbs.huaweicloud.com",
     "count": 1,
     "uniques": 1
   }
