@@ -2,18 +2,12 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 51,
-    "uniques": 32
+    "count": 42,
+    "uniques": 31
   },
   {
-    "path": "/MuYunyun/create-react-doc/issues",
-    "title": "Issues · MuYunyun/create-react-doc",
-    "count": 3,
-    "uniques": 3
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/tree/main/docs",
-    "title": "create-react-doc/docs at main · MuYunyun/create-react-doc · GitHub",
+    "path": "/MuYunyun/create-react-doc/tree/main/packages/crd-seed",
+    "title": "create-react-doc/packages/crd-seed at main · MuYunyun/create-react-doc · GitHub",
     "count": 3,
     "uniques": 2
   },
@@ -24,15 +18,15 @@
     "uniques": 2
   },
   {
-    "path": "/MuYunyun/create-react-doc/tree/main/packages/crd-seed",
-    "title": "create-react-doc/packages/crd-seed at main · MuYunyun/create-react-doc · GitHub",
+    "path": "/MuYunyun/create-react-doc/issues",
+    "title": "Issues · MuYunyun/create-react-doc",
     "count": 2,
-    "uniques": 1
+    "uniques": 2
   },
   {
-    "path": "/MuYunyun/create-react-doc/blob/main/config.yml",
-    "title": "create-react-doc/config.yml at main · MuYunyun/create-react-doc · GitHub",
-    "count": 1,
+    "path": "/MuYunyun/create-react-doc/tree/main/packages/leetcode-cli/src",
+    "title": "create-react-doc/packages/leetcode-cli/src at main · MuYunyun/create-react-doc",
+    "count": 2,
     "uniques": 1
   },
   {
@@ -48,14 +42,20 @@
     "uniques": 1
   },
   {
-    "path": "/MuYunyun/create-react-doc/blob/main/packages/templates/package.json",
+    "path": "/MuYunyun/create-react-doc/blob/main/packages/leetcode-cli/package.json",
     "title": "create-react-doc/package.json at main · MuYunyun/create-react-doc",
     "count": 1,
     "uniques": 1
   },
   {
-    "path": "/MuYunyun/create-react-doc/blob/main/packages/theme/package.json",
-    "title": "create-react-doc/package.json at main · MuYunyun/create-react-doc",
+    "path": "/MuYunyun/create-react-doc/blob/main/packages/leetcode-cli/src/cli.js",
+    "title": "create-react-doc/cli.js at main · MuYunyun/create-react-doc",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/blob/main/packages/leetcode-cli/src/utils.js",
+    "title": "create-react-doc/utils.js at main · MuYunyun/create-react-doc",
     "count": 1,
     "uniques": 1
   }
