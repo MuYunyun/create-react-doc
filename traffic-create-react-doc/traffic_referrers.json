@@ -1,7 +1,7 @@
 [
   {
     "referrer": "github.com",
-    "count": 12,
+    "count": 8,
     "uniques": 6
   },
   {
@@ -10,19 +10,19 @@
     "uniques": 6
   },
   {
-    "referrer": "dev.to",
-    "count": 5,
-    "uniques": 5
-  },
-  {
     "referrer": "v2ex.com",
     "count": 4,
     "uniques": 4
   },
   {
+    "referrer": "dev.to",
+    "count": 3,
+    "uniques": 3
+  },
+  {
     "referrer": "Google",
-    "count": 2,
-    "uniques": 2
+    "count": 3,
+    "uniques": 3
   },
   {
     "referrer": "cn.bing.com",
@@ -30,22 +30,12 @@
     "uniques": 1
   },
   {
-    "referrer": "muyunyun.cn",
-    "count": 2,
+    "referrer": "Baidu",
+    "count": 1,
     "uniques": 1
   },
   {
     "referrer": "npmjs.com",
-    "count": 1,
-    "uniques": 1
-  },
-  {
-    "referrer": "bbs.huaweicloud.com",
-    "count": 1,
-    "uniques": 1
-  },
-  {
-    "referrer": "Baidu",
     "count": 1,
     "uniques": 1
   }
