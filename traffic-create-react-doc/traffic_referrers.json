@@ -6,12 +6,17 @@
   },
   {
     "referrer": "link.zhihu.com",
-    "count": 9,
-    "uniques": 9
+    "count": 6,
+    "uniques": 6
   },
   {
     "referrer": "muyunyun.cn",
-    "count": 5,
+    "count": 6,
+    "uniques": 5
+  },
+  {
+    "referrer": "dev.to",
+    "count": 4,
     "uniques": 4
   },
   {
@@ -20,19 +25,9 @@
     "uniques": 3
   },
   {
-    "referrer": "dev.to",
-    "count": 3,
-    "uniques": 3
-  },
-  {
     "referrer": "v2ex.com",
-    "count": 3,
-    "uniques": 3
-  },
-  {
-    "referrer": "cn.bing.com",
     "count": 2,
-    "uniques": 1
+    "uniques": 2
   },
   {
     "referrer": "Baidu",
