@@ -2,8 +2,8 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 44,
-    "uniques": 34
+    "count": 46,
+    "uniques": 35
   },
   {
     "path": "/MuYunyun/create-react-doc/tree/main/packages",
@@ -36,6 +36,12 @@
     "uniques": 1
   },
   {
+    "path": "/MuYunyun/create-react-doc/issues",
+    "title": "Issues · MuYunyun/create-react-doc",
+    "count": 2,
+    "uniques": 2
+  },
+  {
     "path": "/MuYunyun/create-react-doc/blob/main/packages/utils/path.js",
     "title": "create-react-doc/path.js at main · MuYunyun/create-react-doc",
     "count": 2,
@@ -50,12 +56,6 @@
   {
     "path": "/MuYunyun/create-react-doc/blob/main/config.yml",
     "title": "create-react-doc/config.yml at main · MuYunyun/create-react-doc",
-    "count": 1,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/blob/main/docs/%E4%B9%A6%E5%86%99%E7%BB%84%E4%BB%B6.md",
-    "title": "create-react-doc/书写组件.md at main · MuYunyun/create-react-doc",
     "count": 1,
     "uniques": 1
   }
