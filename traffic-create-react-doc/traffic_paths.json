@@ -2,14 +2,8 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 31,
-    "uniques": 24
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/tree/main/packages",
-    "title": "create-react-doc/packages at main · MuYunyun/create-react-doc",
-    "count": 5,
-    "uniques": 2
+    "count": 25,
+    "uniques": 21
   },
   {
     "path": "/MuYunyun/create-react-doc/commits/main",
@@ -18,20 +12,8 @@
     "uniques": 1
   },
   {
-    "path": "/MuYunyun/create-react-doc/blob/main/packages/crd-seed/index.js",
-    "title": "create-react-doc/index.js at main · MuYunyun/create-react-doc",
-    "count": 3,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/blob/main/packages/utils/path.js",
-    "title": "create-react-doc/path.js at main · MuYunyun/create-react-doc",
-    "count": 2,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/tree/main/packages/utils",
-    "title": "create-react-doc/packages/utils at main · MuYunyun/create-react-doc",
+    "path": "/MuYunyun/create-react-doc/tree/main/packages/crd-seed",
+    "title": "create-react-doc/packages/crd-seed at main · MuYunyun/create-react-doc",
     "count": 2,
     "uniques": 1
   },
@@ -54,8 +36,26 @@
     "uniques": 1
   },
   {
-    "path": "/MuYunyun/create-react-doc/blob/main/package.json",
-    "title": "create-react-doc/package.json at main · MuYunyun/create-react-doc",
+    "path": "/MuYunyun/create-react-doc/blob/main/README-en.md",
+    "title": "create-react-doc/README-en.md at main · MuYunyun/create-react-doc",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/blob/main/README.md",
+    "title": "create-react-doc/README.md at main · MuYunyun/create-react-doc · GitHub",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/commit/6ed2b39ed24ebef4c5f4a06549a3633d587abe49",
+    "title": "feat: init create-react-doc · MuYunyun/create-react-doc@6ed2b39",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/commit/bec361dc2de20071f96caef7ac2e0fe84abd9533",
+    "title": "Initial commit · MuYunyun/create-react-doc@bec361d",
     "count": 1,
     "uniques": 1
   }
