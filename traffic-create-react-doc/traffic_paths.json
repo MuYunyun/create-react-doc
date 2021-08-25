@@ -2,26 +2,20 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 37,
-    "uniques": 24
+    "count": 35,
+    "uniques": 23
   },
   {
     "path": "/MuYunyun/create-react-doc/issues",
     "title": "Issues · MuYunyun/create-react-doc · GitHub",
-    "count": 13,
-    "uniques": 3
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/commits/main",
-    "title": "Commits · MuYunyun/create-react-doc",
-    "count": 4,
-    "uniques": 1
+    "count": 14,
+    "uniques": 4
   },
   {
     "path": "/MuYunyun/create-react-doc/issues/87",
     "title": "文章、博客链接持久化 · Issue #87 · MuYunyun/create-react-doc · GitHub",
-    "count": 3,
-    "uniques": 2
+    "count": 4,
+    "uniques": 3
   },
   {
     "path": "/MuYunyun/create-react-doc/blob/main/packages/templates/default/.github/workflows/gh-pages.yml",
@@ -33,12 +27,6 @@
     "path": "/MuYunyun/create-react-doc/tree/main/packages/crd-seed",
     "title": "create-react-doc/packages/crd-seed at main · MuYunyun/create-react-doc",
     "count": 2,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/blob/6ed2b39ed24ebef4c5f4a06549a3633d587abe49/package.json",
-    "title": "create-react-doc/package.json at 6ed2b39ed24ebef4c5f4a06549a3633d587abe49 · M...",
-    "count": 1,
     "uniques": 1
   },
   {
@@ -54,8 +42,20 @@
     "uniques": 1
   },
   {
-    "path": "/MuYunyun/create-react-doc/commit/6ed2b39ed24ebef4c5f4a06549a3633d587abe49",
-    "title": "feat: init create-react-doc · MuYunyun/create-react-doc@6ed2b39",
+    "path": "/MuYunyun/create-react-doc/issues/103",
+    "title": "解耦 menu 逻辑与内容区域逻辑, 加快页面渲染速度。 · Issue #103 · MuYunyun/create-react-doc",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/issues/18",
+    "title": "Menu search · Issue #18 · MuYunyun/create-react-doc",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/issues/2",
+    "title": "RFC v1 · Issue #2 · MuYunyun/create-react-doc",
     "count": 1,
     "uniques": 1
   }
