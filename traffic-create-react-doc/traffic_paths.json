@@ -2,14 +2,14 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 34,
-    "uniques": 22
+    "count": 42,
+    "uniques": 25
   },
   {
     "path": "/MuYunyun/create-react-doc/issues",
     "title": "Issues · MuYunyun/create-react-doc · GitHub",
-    "count": 14,
-    "uniques": 4
+    "count": 16,
+    "uniques": 5
   },
   {
     "path": "/MuYunyun/create-react-doc/issues/87",
@@ -26,6 +26,12 @@
   {
     "path": "/MuYunyun/create-react-doc/blob/main/packages/templates/default/.github/workflows/gh-pages.yml",
     "title": "create-react-doc/gh-pages.yml at main · MuYunyun/create-react-doc · GitHub",
+    "count": 2,
+    "uniques": 2
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/pulls",
+    "title": "Pull requests · MuYunyun/create-react-doc",
     "count": 2,
     "uniques": 2
   },
@@ -50,12 +56,6 @@
   {
     "path": "/MuYunyun/create-react-doc/issues/18",
     "title": "Menu search · Issue #18 · MuYunyun/create-react-doc",
-    "count": 1,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/issues/2",
-    "title": "RFC v1 · Issue #2 · MuYunyun/create-react-doc",
     "count": 1,
     "uniques": 1
   }
