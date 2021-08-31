@@ -2,8 +2,8 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 43,
-    "uniques": 25
+    "count": 42,
+    "uniques": 24
   },
   {
     "path": "/MuYunyun/create-react-doc/issues",
@@ -13,9 +13,9 @@
   },
   {
     "path": "/MuYunyun/create-react-doc/issues/87",
-    "title": "文章、博客链接持久化 · Issue #87 · MuYunyun/create-react-doc · GitHub",
-    "count": 4,
-    "uniques": 3
+    "title": "文章、博客链接持久化 · Issue #87 · MuYunyun/create-react-doc",
+    "count": 3,
+    "uniques": 2
   },
   {
     "path": "/MuYunyun/create-react-doc/blob/main/package.json",
@@ -36,12 +36,6 @@
     "uniques": 2
   },
   {
-    "path": "/MuYunyun/create-react-doc/tree/main/packages/leetcode-cli",
-    "title": "create-react-doc/packages/leetcode-cli at main · MuYunyun/create-react-doc · ...",
-    "count": 2,
-    "uniques": 2
-  },
-  {
     "path": "/MuYunyun/create-react-doc/tree/main/packages",
     "title": "create-react-doc/packages at main · MuYunyun/create-react-doc · GitHub",
     "count": 2,
@@ -56,6 +50,12 @@
   {
     "path": "/MuYunyun/create-react-doc/issues/18",
     "title": "Menu search · Issue #18 · MuYunyun/create-react-doc",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/issues/2",
+    "title": "RFC v1 · Issue #2 · MuYunyun/create-react-doc",
     "count": 1,
     "uniques": 1
   }
