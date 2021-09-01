@@ -6,23 +6,23 @@
   },
   {
     "referrer": "link.zhihu.com",
-    "count": 9,
-    "uniques": 7
-  },
-  {
-    "referrer": "Google",
-    "count": 3,
-    "uniques": 2
+    "count": 7,
+    "uniques": 5
   },
   {
     "referrer": "link.juejin.cn",
-    "count": 2,
-    "uniques": 2
+    "count": 3,
+    "uniques": 3
   },
   {
     "referrer": "dev.to",
     "count": 2,
     "uniques": 2
+  },
+  {
+    "referrer": "npmjs.com",
+    "count": 1,
+    "uniques": 1
   },
   {
     "referrer": "muyunyun.cn",
@@ -35,12 +35,12 @@
     "uniques": 1
   },
   {
-    "referrer": "bbs.huaweicloud.com",
+    "referrer": "Google",
     "count": 1,
     "uniques": 1
   },
   {
-    "referrer": "npmjs.com",
+    "referrer": "bbs.huaweicloud.com",
     "count": 1,
     "uniques": 1
   }

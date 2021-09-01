@@ -2,13 +2,13 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 42,
-    "uniques": 24
+    "count": 33,
+    "uniques": 21
   },
   {
     "path": "/MuYunyun/create-react-doc/issues",
     "title": "Issues · MuYunyun/create-react-doc · GitHub",
-    "count": 16,
+    "count": 8,
     "uniques": 5
   },
   {
@@ -20,12 +20,6 @@
   {
     "path": "/MuYunyun/create-react-doc/blob/main/package.json",
     "title": "create-react-doc/package.json at main · MuYunyun/create-react-doc · GitHub",
-    "count": 2,
-    "uniques": 2
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/blob/main/packages/templates/default/.github/workflows/gh-pages.yml",
-    "title": "create-react-doc/gh-pages.yml at main · MuYunyun/create-react-doc · GitHub",
     "count": 2,
     "uniques": 2
   },
@@ -42,20 +36,26 @@
     "uniques": 1
   },
   {
+    "path": "/MuYunyun/create-react-doc/blob/main/packages/templates/default/.github/workflows/gh-pages.yml",
+    "title": "create-react-doc/gh-pages.yml at main · MuYunyun/create-react-doc · GitHub",
+    "count": 1,
+    "uniques": 1
+  },
+  {
     "path": "/MuYunyun/create-react-doc/issues/103",
     "title": "解耦 menu 逻辑与内容区域逻辑, 加快页面渲染速度。 · Issue #103 · MuYunyun/create-react-doc",
     "count": 1,
     "uniques": 1
   },
   {
-    "path": "/MuYunyun/create-react-doc/issues/18",
-    "title": "Menu search · Issue #18 · MuYunyun/create-react-doc",
+    "path": "/MuYunyun/create-react-doc/issues/86",
+    "title": "跳转到 github 项目地址出现错误。 · Issue #86 · MuYunyun/create-react-doc · GitHub",
     "count": 1,
     "uniques": 1
   },
   {
-    "path": "/MuYunyun/create-react-doc/issues/2",
-    "title": "RFC v1 · Issue #2 · MuYunyun/create-react-doc",
+    "path": "/MuYunyun/create-react-doc/tree/main/packages/crd-seed",
+    "title": "create-react-doc/packages/crd-seed at main · MuYunyun/create-react-doc",
     "count": 1,
     "uniques": 1
   }
