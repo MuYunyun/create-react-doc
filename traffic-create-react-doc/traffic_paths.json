@@ -2,20 +2,14 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 36,
-    "uniques": 20
+    "count": 32,
+    "uniques": 17
   },
   {
     "path": "/MuYunyun/create-react-doc/issues",
     "title": "Issues · MuYunyun/create-react-doc · GitHub",
-    "count": 6,
-    "uniques": 4
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/pulls",
-    "title": "Pull requests · MuYunyun/create-react-doc",
-    "count": 2,
-    "uniques": 2
+    "count": 5,
+    "uniques": 3
   },
   {
     "path": "/MuYunyun/create-react-doc/issues/39",
@@ -36,12 +30,6 @@
     "uniques": 1
   },
   {
-    "path": "/MuYunyun/create-react-doc/issues/103",
-    "title": "解耦 menu 逻辑与内容区域逻辑, 加快页面渲染速度。 · Issue #103 · MuYunyun/create-react-doc",
-    "count": 1,
-    "uniques": 1
-  },
-  {
     "path": "/MuYunyun/create-react-doc/issues/149",
     "title": "测试用例书写环境搭建 · Issue #149 · MuYunyun/create-react-doc",
     "count": 1,
@@ -56,6 +44,18 @@
   {
     "path": "/MuYunyun/create-react-doc/issues/72",
     "title": "support custom theme · Issue #72 · MuYunyun/create-react-doc",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/issues/86",
+    "title": "跳转到 github 项目地址出现错误。 · Issue #86 · MuYunyun/create-react-doc · GitHub",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/pulls",
+    "title": "Pull requests · MuYunyun/create-react-doc",
     "count": 1,
     "uniques": 1
   }
