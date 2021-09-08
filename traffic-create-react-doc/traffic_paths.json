@@ -8,8 +8,8 @@
   {
     "path": "/MuYunyun/create-react-doc/issues",
     "title": "Issues · MuYunyun/create-react-doc · GitHub",
-    "count": 5,
-    "uniques": 3
+    "count": 6,
+    "uniques": 4
   },
   {
     "path": "/MuYunyun/create-react-doc/tree/main/packages/leetcode-cli",
@@ -27,12 +27,6 @@
     "path": "/MuYunyun/create-react-doc/tree/main/packages",
     "title": "create-react-doc/packages at main · MuYunyun/create-react-doc · GitHub",
     "count": 2,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/blob/main/package.json",
-    "title": "create-react-doc/package.json at main · MuYunyun/create-react-doc · GitHub",
-    "count": 1,
     "uniques": 1
   },
   {
@@ -56,6 +50,12 @@
   {
     "path": "/MuYunyun/create-react-doc/issues/86",
     "title": "跳转到 github 项目地址出现错误。 · Issue #86 · MuYunyun/create-react-doc · GitHub",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/pulls",
+    "title": "Pull requests · MuYunyun/create-react-doc",
     "count": 1,
     "uniques": 1
   }
