@@ -2,14 +2,20 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 27,
-    "uniques": 18
+    "count": 25,
+    "uniques": 16
   },
   {
     "path": "/MuYunyun/create-react-doc/issues",
     "title": "Issues · MuYunyun/create-react-doc · GitHub",
     "count": 4,
     "uniques": 3
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/tree/main/docs",
+    "title": "create-react-doc/docs at main · MuYunyun/create-react-doc",
+    "count": 2,
+    "uniques": 2
   },
   {
     "path": "/MuYunyun/create-react-doc/tree/main/packages/leetcode-cli",
@@ -24,9 +30,9 @@
     "uniques": 1
   },
   {
-    "path": "/MuYunyun/create-react-doc/tree/main/packages",
-    "title": "create-react-doc/packages at main · MuYunyun/create-react-doc · GitHub",
-    "count": 2,
+    "path": "/MuYunyun/create-react-doc/blob/main/gh-pages.js",
+    "title": "create-react-doc/gh-pages.js at main · MuYunyun/create-react-doc",
+    "count": 1,
     "uniques": 1
   },
   {
@@ -48,14 +54,8 @@
     "uniques": 1
   },
   {
-    "path": "/MuYunyun/create-react-doc/issues/86",
-    "title": "跳转到 github 项目地址出现错误。 · Issue #86 · MuYunyun/create-react-doc · GitHub",
-    "count": 1,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/tree/main/docs",
-    "title": "create-react-doc/docs at main · MuYunyun/create-react-doc",
+    "path": "/MuYunyun/create-react-doc/tree/main/packages",
+    "title": "create-react-doc/packages at main · MuYunyun/create-react-doc",
     "count": 1,
     "uniques": 1
   }

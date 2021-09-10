@@ -5,32 +5,17 @@
     "uniques": 7
   },
   {
-    "referrer": "link.juejin.cn",
+    "referrer": "link.zhihu.com",
     "count": 5,
-    "uniques": 4
+    "uniques": 5
   },
   {
-    "referrer": "link.zhihu.com",
+    "referrer": "link.juejin.cn",
     "count": 4,
-    "uniques": 4
+    "uniques": 3
   },
   {
     "referrer": "muyunyun.cn",
-    "count": 1,
-    "uniques": 1
-  },
-  {
-    "referrer": "Google",
-    "count": 1,
-    "uniques": 1
-  },
-  {
-    "referrer": "npmjs.com",
-    "count": 1,
-    "uniques": 1
-  },
-  {
-    "referrer": "dev.to",
     "count": 1,
     "uniques": 1
   }
