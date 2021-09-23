@@ -2,14 +2,8 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 20,
-    "uniques": 15
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/blob/main/README-en.md",
-    "title": "create-react-doc/README-en.md at main · MuYunyun/create-react-doc",
-    "count": 2,
-    "uniques": 1
+    "count": 6,
+    "uniques": 4
   },
   {
     "path": "/MuYunyun/create-react-doc/issues",
@@ -30,32 +24,8 @@
     "uniques": 1
   },
   {
-    "path": "/MuYunyun/create-react-doc/issues/84",
-    "title": "添加不蒜子计数 · Issue #84 · MuYunyun/create-react-doc · GitHub",
-    "count": 1,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/tree/main/docs",
-    "title": "create-react-doc/docs at main · MuYunyun/create-react-doc",
-    "count": 1,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/tree/main/packages",
-    "title": "create-react-doc/packages at main · MuYunyun/create-react-doc",
-    "count": 1,
-    "uniques": 1
-  },
-  {
     "path": "/MuYunyun/create-react-doc/tree/main/packages/crd-seed",
     "title": "create-react-doc/packages/crd-seed at main · MuYunyun/create-react-doc · GitHub",
-    "count": 1,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/tree/main/packages/leetcode-cli",
-    "title": "create-react-doc/packages/leetcode-cli at main · MuYunyun/create-react-doc · ...",
     "count": 1,
     "uniques": 1
   }
