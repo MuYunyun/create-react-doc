@@ -189,6 +189,10 @@ module.exports = function (cmd) {
         // Routes are rendered asynchronously.
         // Use this to limit the number of routes rendered in parallel.
         maxConcurrentRoutes: 4,
+        // https://pptr.dev/#?product=Puppeteer&version=v5.5.0&show=api-pagegotourl-options
+        navigationOptions: {
+          timeout: 0
+        }
       }),
     }),
   ])
