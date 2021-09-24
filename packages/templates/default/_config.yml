@@ -5,7 +5,7 @@
 
 # Menu dir
 ## you can also set detailed dir, such as BasicSkill/css
-menu: Introduction
+menu: ['Introduction']
 ## set init open menu keys
 # menuOpenKeys:
 
