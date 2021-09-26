@@ -2,14 +2,14 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 48,
-    "uniques": 20
+    "count": 55,
+    "uniques": 21
   },
   {
     "path": "/MuYunyun/create-react-doc/issues",
     "title": "Issues · MuYunyun/create-react-doc",
-    "count": 13,
-    "uniques": 1
+    "count": 17,
+    "uniques": 2
   },
   {
     "path": "/MuYunyun/create-react-doc/blob/main/README-en.md",
@@ -20,43 +20,43 @@
   {
     "path": "/MuYunyun/create-react-doc/tree/main/packages",
     "title": "create-react-doc/packages at main · MuYunyun/create-react-doc",
-    "count": 4,
+    "count": 5,
+    "uniques": 3
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/pulls",
+    "title": "Pull requests · MuYunyun/create-react-doc · GitHub",
+    "count": 5,
     "uniques": 2
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/actions",
+    "title": "Actions · MuYunyun/create-react-doc",
+    "count": 5,
+    "uniques": 1
   },
   {
     "path": "/MuYunyun/create-react-doc/issues/new",
     "title": "New Issue · MuYunyun/create-react-doc",
-    "count": 3,
+    "count": 4,
+    "uniques": 2
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/actions/workflows/gh-pages.yml",
+    "title": "Actions · MuYunyun/create-react-doc",
+    "count": 4,
     "uniques": 1
   },
   {
-    "path": "/MuYunyun/create-react-doc/releases",
-    "title": "Releases · MuYunyun/create-react-doc",
-    "count": 3,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/blob/main/package.json",
-    "title": "create-react-doc/package.json at main · MuYunyun/create-react-doc",
-    "count": 2,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/blob/main/yarn.lock",
-    "title": "create-react-doc/yarn.lock at main · MuYunyun/create-react-doc",
-    "count": 2,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/issues/157",
-    "title": "unable to create a react doc · Issue #157 · MuYunyun/create-react-doc",
-    "count": 2,
+    "path": "/MuYunyun/create-react-doc/pull/181",
+    "title": "fix: template by MuYunyun · Pull Request #181 · MuYunyun/create-react-doc",
+    "count": 4,
     "uniques": 1
   },
   {
     "path": "/MuYunyun/create-react-doc/issues/180",
     "title": "Error's with create-react-doc · Issue #180 · MuYunyun/create-react-doc",
-    "count": 2,
-    "uniques": 1
+    "count": 3,
+    "uniques": 2
   }
 ]
