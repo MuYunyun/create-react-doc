@@ -1,7 +1,7 @@
 [
   {
     "referrer": "github.com",
-    "count": 30,
+    "count": 31,
     "uniques": 10
   },
   {
@@ -11,18 +11,18 @@
   },
   {
     "referrer": "dev.to",
-    "count": 4,
-    "uniques": 3
-  },
-  {
-    "referrer": "link.juejin.cn",
-    "count": 3,
-    "uniques": 3
+    "count": 5,
+    "uniques": 4
   },
   {
     "referrer": "link.zhihu.com",
     "count": 3,
     "uniques": 3
+  },
+  {
+    "referrer": "link.juejin.cn",
+    "count": 2,
+    "uniques": 2
   },
   {
     "referrer": "v2ex.com",
