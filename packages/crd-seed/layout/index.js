@@ -43,7 +43,8 @@ function BasicLayout({
 
   useEffect(() => {
     const newPathName = location.pathname
-    setSelectedKey(`${newPathName}.md`)
+    // setSelectedKey(`${newPathName}.md`)
+    setSelectedKey(newPathName)
   }, location)
 
   const scrollToTop = () => {
@@ -59,7 +60,6 @@ function BasicLayout({
           const { mdconf, routePath } = item || {}
           const { abbrlink } = mdconf || {}
           const path = abbrlink ? `/${abbrlink}` : routePath
-          console.log('item123', item)
           // item.path carrys .md here.
           return item.children && item.children.length > 0 ? (
             <SubMenu key={index} keyValue={item.path} title={item.name} icon={<Icon type="folder" size={16} />}>
