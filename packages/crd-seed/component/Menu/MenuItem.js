@@ -16,6 +16,9 @@ function MenuItem({
   }
 
   const renderMenuItem = () => {
+    if (selectedKey === '/290a4219') {
+      debugger
+    }
     return (
       <li
         className={cx(styles['menu-item'], styles[`menu-${theme}`], {
