@@ -76,9 +76,10 @@ function directoryTree({
       item.type = constants.FILE
       const contentStr = fs.readFileSync(path).toString()
       if (contentStr && !options.prerender) {
-        const contentMatch = contentStr.match(/^<!--(\s?[^>]*)-->/)
+        const contentMatch = contentStr.match(/^<!--([^>]*)-->/)
         item.relative = item.path.replace(process.cwd(), '')
         item.mdconf = contentMatch ? YAML.parse(contentMatch[1]) : {}
+        console.log('item.mdconf', item.mdconf)
         item.isEmpty = contentMatch
           ? !String.prototype.trim.call(contentStr.replace(contentMatch[0], ''))
           : true

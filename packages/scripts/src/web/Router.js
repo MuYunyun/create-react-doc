@@ -23,7 +23,6 @@ function routeData(data, arrayRoute = [], routePath = '/', article) {
   return arrayRoute
 }
 
-
 function menuSourceFormat(data, routePath, article) {
   const arr = []
   data.forEach((item) => {

@@ -123,6 +123,11 @@ module.exports = function (cmd) {
 
   const routes = getPrerenderRoutes(cmd)
 
+  console.log('docsConfig.repo', docsConfig.repo,)
+  console.log('outputDir', docsConfig.repo ? `${docsBuildDist}/${docsConfig.repo}` : docsBuildDist,)
+  console.log('indexPath', docsConfig.repo ? `${docsBuildDist}/${docsConfig.repo}/index.html` : `${docsBuildDist}/index.html`,)
+  console.log('routes', routes)
+
   config.plugins = config.plugins.concat([
     new webpack.DefinePlugin({
       env: JSON.stringify('prod'),
@@ -156,10 +161,19 @@ module.exports = function (cmd) {
     new PrerenderSPAPlugin({
       // Required - The path to the webpack-outputted app to prerender.
       staticDir: docsBuildDist,
-      outputDir: docsConfig.repo ? `${docsBuildDist}/${docsConfig.repo}` : docsBuildDist,
-      indexPath: docsConfig.repo ? `${docsBuildDist}/${docsConfig.repo}/index.html` : `${docsBuildDist}/index.html`,
+      outputDir: docsConfig.repo
+        ? `${docsBuildDist}/${docsConfig.repo}`
+        : docsBuildDist,
+      indexPath: docsConfig.repo
+        ? `${docsBuildDist}/${docsConfig.repo}/index.html`
+        : `${docsBuildDist}/index.html`,
       // Required - Routes to render.
-      routes,
+      // routes,
+      routes: [
+        '/README', '/快速上手',
+        '/hijkl', '/mnopq',
+        '/404'
+      ],
       successCb: async () => {
         if (docsConfig.repo) {
           // not use fs.move here or it'll throw error in github action

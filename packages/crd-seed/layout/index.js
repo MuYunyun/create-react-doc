@@ -56,6 +56,10 @@ function BasicLayout({
     return (
       <>
         {menus.map((item, index) => {
+          const { mdconf, routePath } = item || {}
+          const { abbrlink } = mdconf || {}
+          const path = abbrlink ? `/${abbrlink}` : routePath
+          console.log('item123', item)
           // item.path carrys .md here.
           return item.children && item.children.length > 0 ? (
             <SubMenu key={index} keyValue={item.path} title={item.name} icon={<Icon type="folder" size={16} />}>
@@ -65,7 +69,7 @@ function BasicLayout({
             <Menu.Item
               key={index}
               icon={<Icon type="file" size={16} />}
-              keyValue={item.path}
+              keyValue={abbrlink ? `/${abbrlink}` : item.path}
               title={
                 item &&
                 item.type === "directory" &&
@@ -76,8 +80,8 @@ function BasicLayout({
                   </span>
                 ) : (
                   <Link
-                    to={ifProd ? `/${repo}${item.routePath}` : item.routePath}
-                    replace={pathname.indexOf(item.routePath) > -1}
+                    to={ifProd ? `/${repo}${path}` : path}
+                    replace={pathname.indexOf(path) > -1}
                   >
                     {item && item.mdconf && item.mdconf.title
                       ? item.mdconf.title
@@ -111,6 +115,7 @@ function BasicLayout({
           }}
           selectedKey={selectedKey}
           onSelect={(keyValue) => {
+            console.log('keyValue', keyValue)
             setSelectedKey(keyValue)
           }}
           defaultOpenKeys={curOpenKeys}
@@ -217,13 +222,16 @@ function BasicLayout({
           {/* see https://reacttraining.com/react-router/web/api/Redirect/exact-bool */}
           <Redirect exact from={ifAddPrefix ? `/${repo}` : `/`} to={ifAddPrefix ? `/${repo}/README` : `/README`} />
           {routeData.map((item) => {
+            const { path, mdconf, component } = item
+            const { abbrlink } = mdconf
+            const enhancePath = abbrlink ? `/${abbrlink}` : path
             return (
               <Route
-                key={item.path}
+                key={enhancePath}
                 exact
-                path={ifAddPrefix ? `/${repo}${item.path}` : item.path}
+                path={ifAddPrefix ? `/${repo}${enhancePath}` : enhancePath}
                 render={() => {
-                  const Comp = item.component
+                  const Comp = component
                   return <Comp {...item} />
                 }}
               />
@@ -255,7 +263,7 @@ function BasicLayout({
         <Footer inlineCollapsed={inlineCollapsed} />
       </div>
     </div>
-  );
+  )
 }
 
 export default BasicLayout
