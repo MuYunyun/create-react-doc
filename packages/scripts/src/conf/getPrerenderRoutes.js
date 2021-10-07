@@ -14,6 +14,7 @@ const getPrerenderRoutes = (cmd) => {
     path,
     options: otherProps,
   }))
+  console.log('dirTree12345', dirTree)
   const result = getPrerenderRoute(dirTree)
   result.push('/404')
   // console.log('✅ prerender', result)

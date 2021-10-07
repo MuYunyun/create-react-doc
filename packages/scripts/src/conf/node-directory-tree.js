@@ -76,6 +76,8 @@ function directoryTree({
       item.type = constants.FILE
       const contentStr = fs.readFileSync(path).toString()
       if (contentStr && !options.prerender) {
+        // todo: when yarn build not run here.
+        item.test = 'test'
         const contentMatch = contentStr.match(/^<!--([^>]*)-->/)
         item.relative = item.path.replace(process.cwd(), '')
         item.mdconf = contentMatch ? YAML.parse(contentMatch[1]) : {}
