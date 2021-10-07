@@ -75,18 +75,9 @@ function directoryTree({
     if (options && options.mdconf) {
       item.type = constants.FILE
       const contentStr = fs.readFileSync(path).toString()
-      if (contentStr && !options.prerender) {
-        // todo: when yarn build not run here.
-        item.test = 'test'
+      if (contentStr) {
         const contentMatch = contentStr.match(/^<!--([^>]*)-->/)
-        item.relative = item.path.replace(process.cwd(), '')
         item.mdconf = contentMatch ? YAML.parse(contentMatch[1]) : {}
-        console.log('item.mdconf', item.mdconf)
-        item.isEmpty = contentMatch
-          ? !String.prototype.trim.call(contentStr.replace(contentMatch[0], ''))
-          : true
-        const uglifyContent = contentStr.replace(/\s/g, '')
-        item.content = uglifyContent
         try {
           // see https://stackoverflow.com/questions/2390199/finding-the-date-time-a-file-was-first-added-to-a-git-repository/2390382#2390382
           const result = execSync(`git log --format=%aD ${path} | tail -1`)
@@ -106,6 +97,14 @@ function directoryTree({
         }
         item.size = stats.size // File size in bytes
         item.extension = ext
+        if (!options.prerender) {
+          item.relative = item.path.replace(process.cwd(), '')
+          item.isEmpty = contentMatch
+            ? !String.prototype.trim.call(contentStr.replace(contentMatch[0], ''))
+            : true
+          const uglifyContent = contentStr.replace(/\s/g, '')
+          item.content = uglifyContent
+        }
       }
     }
   } else if (stats.isDirectory()) {
