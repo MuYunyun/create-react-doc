@@ -171,8 +171,8 @@ module.exports = function (cmd) {
       // routes,
       routes: [
         '/README', '/快速上手',
-        '/hijkl', '/mnopq',
-        '/404'
+        '/290a4219', '/9f41fc98',
+        '/f55182c5'
       ],
       successCb: async () => {
         if (docsConfig.repo) {
