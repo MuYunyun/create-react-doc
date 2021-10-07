@@ -14,10 +14,8 @@ const getPrerenderRoutes = (cmd) => {
     path,
     options: otherProps,
   }))
-  console.log('dirTree12345', dirTree)
   const result = getPrerenderRoute(dirTree)
   result.push('/404')
-  // console.log('✅ prerender', result)
   return result
 }
 
@@ -28,7 +26,11 @@ function getPrerenderRoute(data) {
 
 function recursive(data, routePath, arr) {
   data.forEach((item) => {
-    const routePropsCurrent = `${routePath}/${item.name}`.replace(/.md$/, '')
+    const { mdconf } = item || {}
+    const { abbrlink } = mdconf || {}
+    const routePropsCurrent = abbrlink
+      ? `/${abbrlink}`
+      : `${routePath}/${item.name}`.replace(/.md$/, '')
     if (item.type === 'directory') {
       if (item.children && item.children.length > 0) {
         // eslint-disable-next-line no-unused-vars
