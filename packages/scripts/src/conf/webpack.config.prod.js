@@ -123,11 +123,6 @@ module.exports = function (cmd) {
 
   const routes = getPrerenderRoutes(cmd)
 
-  console.log('docsConfig.repo', docsConfig.repo,)
-  console.log('outputDir', docsConfig.repo ? `${docsBuildDist}/${docsConfig.repo}` : docsBuildDist,)
-  console.log('indexPath', docsConfig.repo ? `${docsBuildDist}/${docsConfig.repo}/index.html` : `${docsBuildDist}/index.html`,)
-  console.log('✅ routes', routes)
-
   config.plugins = config.plugins.concat([
     new webpack.DefinePlugin({
       env: JSON.stringify('prod'),
@@ -169,11 +164,6 @@ module.exports = function (cmd) {
         : `${docsBuildDist}/index.html`,
       // Required - Routes to render.
       routes,
-      // routes: [
-      //   '/README', '/快速上手',
-      //   '/290a4219', '/9f41fc98',
-      //   '/f55182c5'
-      // ],
       successCb: async () => {
         if (docsConfig.repo) {
           // not use fs.move here or it'll throw error in github action
