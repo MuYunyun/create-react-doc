@@ -43,7 +43,6 @@ function BasicLayout({
 
   useEffect(() => {
     const newPathName = location.pathname
-    // setSelectedKey(`${newPathName}.md`)
     setSelectedKey(newPathName)
   }, location)
 
@@ -115,7 +114,6 @@ function BasicLayout({
           }}
           selectedKey={selectedKey}
           onSelect={(keyValue) => {
-            console.log('keyValue', keyValue)
             setSelectedKey(keyValue)
           }}
           defaultOpenKeys={curOpenKeys}

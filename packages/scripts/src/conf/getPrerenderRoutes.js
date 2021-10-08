@@ -28,18 +28,20 @@ function recursive(data, routePath, arr) {
   data.forEach((item) => {
     const { mdconf } = item || {}
     const { abbrlink } = mdconf || {}
-    const routePropsCurrent = abbrlink
-      ? `/${abbrlink}`
-      : `${routePath}/${item.name}`.replace(/.md$/, '')
+    const composeRouteName = `${routePath}/${item.name}`.replace(/.md$/, '')
+
     if (item.type === 'directory') {
       if (item.children && item.children.length > 0) {
         // eslint-disable-next-line no-unused-vars
-        item.children = recursive(item.children, routePropsCurrent, arr)
+        item.children = recursive(item.children, composeRouteName, arr)
       } else {
         item.children = []
       }
     } else if (item.type === 'file') {
-      arr.push(routePropsCurrent)
+      const prerenderRouteName = abbrlink
+        ? `/${abbrlink}`
+        : composeRouteName
+      arr.push(prerenderRouteName)
     }
   })
   return arr
