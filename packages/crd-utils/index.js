@@ -16,10 +16,29 @@ const getDocsConfig = () => {
   return yaml.safeLoad(fs.readFileSync(docsConfig))
 }
 
+const replaceFileContent = (path, source, target) => {
+  fs.readFile(path, (err, data) => {
+    if (err) {
+      console.log(`❎ readFileContent error in ${path}`)
+      return
+    }
+    console.log(`✅ readFileContent success in ${path}`)
+    const replaceResult = data.toString().replace(source, target)
+    fs.writeFile(path, replaceResult, (err) => {
+      if (err) {
+        console.log(`❎ writeFileContent error in ${path}`)
+        return
+      }
+    })
+    console.log(`✅ writeFileContent success in ${path}`)
+  })
+}
+
 module.exports = {
   resolveApp,
   resolveTool,
   getDocsConfig,
+  replaceFileContent,
   // common paths
   docsGitIgnore: resolveApp('.gitignore'),
   docsBase: resolveApp(''),
