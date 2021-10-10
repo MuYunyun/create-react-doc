@@ -7,8 +7,8 @@ const CopyMarkdownImageWebpackPlugin = require('copy-markdown-image-webpack-plug
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const PrerenderSPAPlugin = require('crd-prerender-spa-plugin')
 const { generateSiteMap } = require('crd-generator-sitemap')
-// const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
-// const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+// const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
+// const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 const fs = require('fs-extra')
 const { defaultHTMLPath, docsBuildDist } = require('crd-utils')
 const { getDocsConfig } = require('crd-utils')
@@ -171,13 +171,13 @@ module.exports = function (cmd) {
           await fs.remove(`${docsBuildDist}/${docsConfig.repo}`)
           // move README as root index.html
           await fs.copy(`${docsBuildDist}/README/index.html`, `${docsBuildDist}/index.html`)
-          console.log('generate prerender file success!')
+          console.log('✅ generate prerender file success!')
           if (docsConfig.seo) {
             if (docsConfig.seo.google) {
               fs.writeFileSync(`${docsBuildDist}/sitemap.xml`, generateSiteMap(routes))
             }
           }
-          console.log('generate sitemap file success!')
+          console.log('✅ generate sitemap file success!')
         }
       },
       // The actual renderer to use. (Feel free to write your own)
