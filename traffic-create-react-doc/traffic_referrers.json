@@ -5,28 +5,23 @@
     "uniques": 5
   },
   {
-    "referrer": "link.juejin.cn",
+    "referrer": "dev.to",
     "count": 4,
     "uniques": 4
   },
   {
-    "referrer": "link.zhihu.com",
+    "referrer": "link.juejin.cn",
     "count": 3,
     "uniques": 3
   },
   {
-    "referrer": "dev.to",
+    "referrer": "link.zhihu.com",
     "count": 2,
     "uniques": 2
   },
   {
-    "referrer": "jianshu.com",
+    "referrer": "v2ex.com",
     "count": 2,
-    "uniques": 1
-  },
-  {
-    "referrer": "npmjs.com",
-    "count": 1,
     "uniques": 1
   }
 ]
