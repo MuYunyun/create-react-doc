@@ -1,4 +1,4 @@
-# create-react-doc configuration, see https://github.com/MuYunyun/create-react-doc##config.yml
+# create-react-doc configuration.
 
 # Site
 title: Create React Doc
@@ -33,9 +33,11 @@ domain: https://muyunyun.cn
 seo:
   google: true
 
-
 # Available values: en | zh-cn
 language: en
 
 # Inject Custom Logic
 inject: injectLogic/index.js
+
+# Use abbrlink
+abbrlink: true
