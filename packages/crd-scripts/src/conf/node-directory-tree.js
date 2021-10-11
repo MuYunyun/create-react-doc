@@ -3,7 +3,7 @@ const fs = require('fs')
 const PATH = require('path')
 const YAML = require('yamljs')
 const { execSync } = require('child_process')
-const { replaceFileContent } = require('crd-utils')
+const { replaceFileContent, generateRandomId } = require('crd-utils')
 const { getDigitFromDir, timeFormat } = require('../utils')
 
 const constants = {
@@ -79,8 +79,12 @@ function directoryTree({
       if (!contentStr) return
       const contentMatch = contentStr.match(/^<!--([^>]*)-->/)
       if (options.generate) {
+        if (!contentMatch) {
+
+        }
         if (contentMatch && contentMatch[1].indexOf('abbrlink') === -1) {
-          replaceFileContent(path, contentMatch[1], `\nabbrlink: 290a4219${contentMatch[1]}`)
+          const randomId = generateRandomId(8)
+          replaceFileContent(path, contentMatch[1], `\nabbrlink: ${randomId}${contentMatch[1]}`)
           console.log('✅ replaceFileContent success')
         }
       }
