@@ -16,14 +16,26 @@ const getDocsConfig = () => {
   return yaml.safeLoad(fs.readFileSync(docsConfig))
 }
 
-const replaceFileContent = (path, source, target) => {
+/**
+ * replace file content for Front-matter
+ * path: file path
+ * source?: source content
+ * target: target content
+ */
+const replaceForFrontMatter = ({
+  path,
+  source,
+  target
+}) => {
   fs.readFile(path, (err, data) => {
     if (err) {
       console.log(`❎ readFileContent error in ${path}`)
       return
     }
     console.log(`✅ readFileContent success in ${path}`)
-    const replaceResult = data.toString().replace(source, target)
+    const replaceResult = source
+      ? data.toString().replace(source, target)
+      : `${target}\n${data.toString()}`
     fs.writeFile(path, replaceResult, (err) => {
       if (err) {
         console.log(`❎ writeFileContent error in ${path}`)
@@ -32,10 +44,6 @@ const replaceFileContent = (path, source, target) => {
     })
     console.log(`✅ writeFileContent success in ${path}`)
   })
-}
-
-const insertFrontMatter = () => {
-  // todo...
 }
 
 // generate a random string, length of it is n.
@@ -53,7 +61,7 @@ module.exports = {
   resolveApp,
   resolveTool,
   getDocsConfig,
-  replaceFileContent,
+  replaceForFrontMatter,
   generateRandomId,
   // common paths
   docsGitIgnore: resolveApp('.gitignore'),
