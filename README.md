@@ -32,11 +32,13 @@ abbrlink: s31w9gd1
 * 开箱即用: 通过指定目录或文档, 一键生成文档、博客站点, 无需关心站点环境配置信息。
 * 性能: 通过`预渲染`、`懒加载`大幅提升站点加载速度。
 * 基于 mdx: 支持在 markdown 中`书写 React 组件`、数学公式等。
-* 搜索引擎优化: `支持 SEO`, 让文档更易被搜索。相关文档: [SEO 在 SPA 站点中的实践](https://github.com/MuYunyun/blog/issues/84)
-* 个性化: 支持[自定义主题](http://muyunyun.cn/create-react-doc/%E4%B8%BB%E9%A2%98/%E8%87%AA%E5%AE%9A%E4%B9%89%E4%B8%BB%E9%A2%98)。
+* 搜索引擎优化:
+  * 支持 SEO, 让文档更易被搜索。
+  * 支持短链，以让链接持久化。
+* 个性化: 支持[自定义主题](https://muyunyun.cn/create-react-doc/9f41fc98)。
 * 工作流: 集成 Github action, 支持自动化打包、发布站点。
 
-> [快速上手](http://muyunyun.cn/create-react-doc/%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B)
+> [快速上手](https://muyunyun.cn/create-react-doc/290a4219)
 
 ## 主题
 
@@ -52,9 +54,9 @@ create-react-doc 提供了官方默认主题 [crd-seed](https://github.com/MuYun
 * [blog](https://github.com/MuYunyun/blog), [站点](http://muyunyun.cn/blog)
   * ![](http://with.muyunyun.cn/ec330b8ac2175c828be41f446f9f9619.jpg)
   * ![](http://with.muyunyun.cn/2e7440e4256debda2d73a4e6392c7146.jpg-300)
-* [diana](https://github.com/MuYunyun/diana), [站点](https://muyunyun.cn/diana/)
+* [diana](https://github.com/MuYunyun/diana)
 
-如果您想定制化或者分享个人主题, 可以参考[自定义主题](http://muyunyun.cn/create-react-doc/自定义主题)章节。
+如果您想定制化或者分享个人主题, 可以参考[自定义主题](https://muyunyun.cn/create-react-doc/9f41fc98)。
 
 ## 快速上手
 
@@ -90,7 +92,7 @@ yarn create react-doc doc
 
 ## 站点发布
 
-在 [快速上手](http://muyunyun.cn/create-react-doc/快速上手) 一节中介绍了如何快速搭建站点, 本节将介绍如何将搭建好的站点打包、发布到 gh-pages。
+在 [快速上手](https://muyunyun.cn/create-react-doc/290a4219) 一节中介绍了如何快速搭建站点, 本节将介绍如何将搭建好的站点打包、发布到 gh-pages。
 
 ### 自动打包发布到 gh-pages (推荐)
 
@@ -109,4 +111,13 @@ git remote add origin https://github.com/用户或组织名/项目名.git
 git push -u origin main
 ```
 
-> 更多内容可以访问 [站点发布](http://muyunyun.cn/create-react-doc/站点发布)、[高阶用法](http://muyunyun.cn/create-react-doc/高阶用法)、[其它工具](http://muyunyun.cn/create-react-doc/其它工具) 等章节。
+## 更多内容
+
+* [站点发布](http://muyunyun.cn/create-react-doc/ude9296y)
+* [高阶用法](http://muyunyun.cn/create-react-doc/9v9ug9h8)
+* [其它工具](http://muyunyun.cn/create-react-doc/292h2c5k)
+* [Front-matter](http://muyunyun.cn/create-react-doc/49g6b239)
+
+## 扩展阅读
+
+* [SEO 在 SPA 站点中的实践](https://github.com/MuYunyun/blog/issues/84)
