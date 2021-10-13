@@ -210,6 +210,10 @@ function BasicLayout({
 
   const carryRepoInProd = ifProd && repo
   const renderContent = () => {
+    console.log('routeData', routeData)
+    const defaultPath = (routeData.find(data => data.path === '/README')
+      && routeData.find(data => data.path === '/README').mdconf
+      && routeData.find(data => data.path === '/README').mdconf.abbrlink) || 'README'
     return (
       <div
         className={cx(`${styles.content}`, {
@@ -218,7 +222,7 @@ function BasicLayout({
       >
         <Switch>
           {/* see https://reacttraining.com/react-router/web/api/Redirect/exact-bool */}
-          <Redirect exact from={ifAddPrefix ? `/${repo}` : `/`} to={ifAddPrefix ? `/${repo}/README` : `/README`} />
+          <Redirect exact from={ifAddPrefix ? `/${repo}` : `/`} to={ifAddPrefix ? `/${repo}/${defaultPath}` : `/${defaultPath}`} />
           {routeData.map((item) => {
             const { path, mdconf, component } = item
             const { abbrlink } = mdconf
