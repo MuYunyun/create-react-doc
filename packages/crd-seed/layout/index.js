@@ -210,7 +210,6 @@ function BasicLayout({
 
   const carryRepoInProd = ifProd && repo
   const renderContent = () => {
-    console.log('routeData', routeData)
     const defaultPath = (routeData.find(data => data.path === '/README')
       && routeData.find(data => data.path === '/README').mdconf
       && routeData.find(data => data.path === '/README').mdconf.abbrlink) || 'README'

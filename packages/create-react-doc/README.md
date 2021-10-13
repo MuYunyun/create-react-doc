@@ -25,4 +25,4 @@ $ react-doc generate    // 用于自动生成 Front-matter 中相关字段信息
 
 # 调试
 
-进入此包目录, 执行 yarn link, 即可在全局使用 react-doc xxx 命令。
+进入该目录, 执行 `yarn link`, 即可在全局使用 react-doc xxx 命令。
