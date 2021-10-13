@@ -1,1 +1,0 @@
-(self.webpackChunkcreate_react_doc=self.webpackChunkcreate_react_doc||[]).push([[6041],{36041:(e,c,t)=>{e.exports=t.p+"static/outputFile.99cb449b.md"}}]);
