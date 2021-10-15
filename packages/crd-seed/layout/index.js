@@ -1,4 +1,4 @@
-import * as React from 'react'
+import { useState, useEffect } from 'react'
 import { Switch, Link, Route, Redirect } from 'react-router-dom'
 import cx from 'classnames'
 import Menu from '../component/Menu'
@@ -13,7 +13,6 @@ import logo from '../crd.logo.svg'
 import styles from './index.less'
 import '../style/mobile.less'
 
-const { useState, useEffect } = React
 const SubMenu = Menu.SubMenu
 
 function BasicLayout({
@@ -32,19 +31,18 @@ function BasicLayout({
   useEffect(() => {
     if (ifPrerender) {
       scrollToTop()
+      // eslint-disable-next-line no-undef
       INJECT?.inject?.()
     }
   }, [])
 
   useEffect(() => {
+    // eslint-disable-next-line no-undef
     INJECT?.injectWithPathname?.(pathname)
   }, [pathname])
 
   useEffect(() => {
-    const { pathname } = location
-    const newPathName = pathname.endsWith('/')
-      ? pathname.slice(0, pathname.length - 1)
-      : pathname
+    const newPathName = location.pathname
     setSelectedKey(newPathName)
   }, location)
 
