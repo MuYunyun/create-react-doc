@@ -28,7 +28,7 @@
     "crd-theme": "^1.5.0",
     "crd-utils": "^1.5.0",
     "css-loader": "^0.28.7",
-    "css-minimizer-webpack-plugin": "^1.2.0",
+    "css-minimizer-webpack-plugin": "^3.1.1",
     "detect-port": "^1.2.2",
     "eslint": "^7.11.0",
     "eslint-loader": "^4.0.2",
