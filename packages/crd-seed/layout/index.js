@@ -98,6 +98,7 @@ function BasicLayout({
   }
   const renderMenu = (menus) => {
     if (menus.length < 1) return null
+    console.log('selectedKey', selectedKey)
     return (
       <Affix
         offsetTop={0}
