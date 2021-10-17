@@ -16,6 +16,7 @@ menu: [
   docs/书写组件.md,
   docs/高阶用法.md,
   docs/其它工具.md,
+  docs/测试
 ]
 ## set init open menu keys
 # menuOpenKeys:

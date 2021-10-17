@@ -42,9 +42,13 @@ function BasicLayout({
 
   useEffect(() => {
     const { pathname } = location
-    const newPathName = pathname.endsWith('/')
-      ? pathname.slice(0, pathname.length - 1)
-      : pathname
+    let newPathName = pathname
+    if (newPathName.endsWith('/')) {
+      newPathName.slice(0, newPathName.length - 1)
+    }
+    if (newPathName.startsWith(`/${repo}`)) {
+      newPathName.slice(`/${repo}`.length, newPathName.length)
+    }
     setSelectedKey(newPathName)
   }, location)
 
@@ -54,7 +58,6 @@ function BasicLayout({
     window.scrollTo(0, 0)
   }
   const renderSubMenuItem = (menus) => {
-    /* eslint-disable */
     return (
       <>
         {menus.map((item, index) => {
@@ -98,6 +101,7 @@ function BasicLayout({
   }
   const renderMenu = (menus) => {
     if (menus.length < 1) return null
+    console.log('selectedKey', selectedKey)
     return (
       <Affix
         offsetTop={0}
