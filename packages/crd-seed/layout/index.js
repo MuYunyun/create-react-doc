@@ -43,11 +43,12 @@ function BasicLayout({
   useEffect(() => {
     const { pathname } = location
     let newPathName = pathname
+    // fix https://github.com/MuYunyun/create-react-doc/issues/195
     if (newPathName.endsWith('/')) {
-      newPathName.slice(0, newPathName.length - 1)
+      newPathName = newPathName.slice(0, newPathName.length - 1)
     }
     if (newPathName.startsWith(`/${repo}`)) {
-      newPathName.slice(`/${repo}`.length, newPathName.length)
+      newPathName = newPathName.slice(`/${repo}`.length, newPathName.length)
     }
     setSelectedKey(newPathName)
   }, location)
@@ -101,7 +102,6 @@ function BasicLayout({
   }
   const renderMenu = (menus) => {
     if (menus.length < 1) return null
-    console.log('selectedKey', selectedKey)
     return (
       <Affix
         offsetTop={0}
