@@ -23,11 +23,13 @@ function BasicLayout({
   indexProps,
 }) {
   const { pathname } = location
-  // eslint-disable-next-line no-undef
   const { user, repo, branch = 'main', language = 'en', menuOpenKeys } = DOCSCONFIG || {}
   const [inlineCollapsed, setInlineCollapsed] = useState(isMobile)
   const [selectedKey, setSelectedKey] = useState('')
   const curOpenKeys = getOpenSubMenuKeys(pathname, menuOpenKeys)
+  const defaultPath = (routeData.find(data => data.path === '/README')
+    && routeData.find(data => data.path === '/README').mdconf
+    && routeData.find(data => data.path === '/README').mdconf.abbrlink) || 'README'
 
   useEffect(() => {
     if (ifPrerender) {
@@ -50,8 +52,8 @@ function BasicLayout({
     if (newPathName.startsWith(`/${repo}`)) {
       newPathName = newPathName.slice(`/${repo}`.length, newPathName.length)
     }
-    setSelectedKey(newPathName)
-  }, location)
+    setSelectedKey(newPathName || defaultPath)
+  }, location.pathname)
 
   const scrollToTop = () => {
     document.body.scrollTop = 0
@@ -214,11 +216,7 @@ function BasicLayout({
     )
   }
 
-  const carryRepoInProd = ifProd && repo
   const renderContent = () => {
-    const defaultPath = (routeData.find(data => data.path === '/README')
-      && routeData.find(data => data.path === '/README').mdconf
-      && routeData.find(data => data.path === '/README').mdconf.abbrlink) || 'README'
     return (
       <div
         className={cx(`${styles.content}`, {
