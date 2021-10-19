@@ -136,15 +136,23 @@ function BasicLayout({
    * such as edit in github and so on.
    */
   const renderPageHeader = () => {
-    const curMenuSource = menuSource.filter(r => pathname.indexOf(r.title) > -1)
+    console.log('routeData', routeData)
+    console.log('menuSource', menuSource)
+    const curMenuSource = routeData.filter(r => {
+      if (r.props.type === 'directory') return false
+      return pathname.indexOf(r.mdconf.abbrlink) > -1 || decodeURIComponent(pathname).indexOf(r.path) > -1
+    })
     const editPathName = curMenuSource[0] && curMenuSource[0].path
+    console.log('curMenuSource', curMenuSource)
+    console.log('a link', `https://github.com/${user}/${repo
+      }/edit/${branch}${editPathName}.md`)
     return (
       <div className={cx(styles.pageHeader)}>
         {user && repo ? (
           <a
             href={`https://github.com/${user}/${
               repo
-            }/edit/${branch}${editPathName}`}
+            }/edit/${branch}${editPathName}.md`}
             target="_blank"
           >
             <Icon className={cx(styles.icon)} type="edit" size={13} />
