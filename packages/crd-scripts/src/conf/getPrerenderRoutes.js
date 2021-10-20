@@ -1,8 +1,6 @@
 const DirectoryTree = require('./node-directory-tree')
 
-// eg: ['docs/quick_start.md', 'a']
-// output: ['/quick_start', '/a/b', '/a/b/c']
-const getPrerenderRoutes = (cmd) => {
+const getDirTree = (cmd) => {
   const dir = cmd.markdownPaths
   const dirs = Array.isArray(dir) ? dir : [dir]
   const otherProps = {
@@ -14,6 +12,12 @@ const getPrerenderRoutes = (cmd) => {
     path,
     options: otherProps,
   }))
+  return dirTree
+}
+
+// eg: ['docs/quick_start.md', 'a']
+// output: ['/quick_start', '/a/b', '/a/b/c']
+const getPrerenderRoutes = (dirTree) => {
   const result = getPrerenderRoute(dirTree)
   result.push('/404')
   return result
@@ -47,4 +51,7 @@ function recursive(data, routePath, arr) {
   return arr
 }
 
-module.exports = getPrerenderRoutes
+module.exports = {
+  getDirTree,
+  getPrerenderRoutes
+}

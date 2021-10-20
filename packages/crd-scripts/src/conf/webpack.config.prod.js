@@ -7,19 +7,21 @@ const CopyMarkdownImageWebpackPlugin = require('copy-markdown-image-webpack-plug
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const PrerenderSPAPlugin = require('crd-prerender-spa-plugin')
 const { generateSiteMap } = require('crd-generator-sitemap')
-// const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
-// const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 const fs = require('fs-extra')
 const { defaultHTMLPath, docsBuildDist } = require('crd-utils')
 const { getDocsConfig } = require('crd-utils')
 const config = require('./webpack.config')
 const paths = require('./path')
-const getPrerenderRoutes = require('./getPrerenderRoutes')
+const { getPrerenderRoutes, getDirTree } = require('./getPrerenderRoutes')
 
 const Renderer = PrerenderSPAPlugin.PuppeteerRenderer
 
 module.exports = function (cmd) {
   const docsConfig = getDocsConfig()
+  const dirTree = getDirTree(cmd)
+  const routes = getPrerenderRoutes(dirTree)
+  console.log('dirTree', dirTree)
+
   config.mode = 'production'
   config.entry = [paths.appIndexJs]
   // config.output.filename = 'js/[hash:8].js'
@@ -121,8 +123,6 @@ module.exports = function (cmd) {
     // ],
   }
 
-  const routes = getPrerenderRoutes(cmd)
-
   config.plugins = config.plugins.concat([
     new webpack.DefinePlugin({
       env: JSON.stringify('prod'),
@@ -170,6 +170,11 @@ module.exports = function (cmd) {
           await fs.copy(`${docsBuildDist}/${docsConfig.repo}`, docsBuildDist)
           await fs.remove(`${docsBuildDist}/${docsConfig.repo}`)
           // move README as root index.html
+          // todo: replace README with correct path
+
+
+
+
           await fs.copy(`${docsBuildDist}/README/index.html`, `${docsBuildDist}/index.html`)
           console.log('✅ generate prerender file success!')
           if (docsConfig.seo) {
