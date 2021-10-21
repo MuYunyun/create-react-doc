@@ -126,7 +126,6 @@ function directoryTree({
   } else if (stats.isDirectory()) {
     const dirData = safeReadDirSync(path)
     if (dirData === null) return null
-
     item.children = dirData
       .map(child =>
         directoryTree({
@@ -135,6 +134,7 @@ function directoryTree({
         }),
       )
       .filter(e => !!e)
+    console.log('item.children', item.children)
     item.type = constants.DIRECTORY
     if (!options.prerender) {
       item.size = item.children.reduce((prev, cur) => prev + cur.size, 0)
