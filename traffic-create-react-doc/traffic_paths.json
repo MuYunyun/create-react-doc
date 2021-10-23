@@ -2,13 +2,13 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 243,
-    "uniques": 123
+    "count": 238,
+    "uniques": 120
   },
   {
     "path": "/MuYunyun/create-react-doc/issues",
     "title": "Issues · MuYunyun/create-react-doc",
-    "count": 89,
+    "count": 87,
     "uniques": 13
   },
   {
@@ -20,8 +20,8 @@
   {
     "path": "/MuYunyun/create-react-doc/tree/main/packages",
     "title": "create-react-doc/packages at main · MuYunyun/create-react-doc",
-    "count": 20,
-    "uniques": 7
+    "count": 19,
+    "uniques": 6
   },
   {
     "path": "/MuYunyun/create-react-doc/issues/195",
@@ -30,15 +30,15 @@
     "uniques": 3
   },
   {
-    "path": "/MuYunyun/create-react-doc/issues/87",
-    "title": "文章、博客链接持久化 · Issue #87 · MuYunyun/create-react-doc · GitHub",
-    "count": 14,
-    "uniques": 4
-  },
-  {
     "path": "/MuYunyun/create-react-doc/releases/tag/v1.5.0",
     "title": "Release 支持文章链接持久化 · MuYunyun/create-react-doc",
     "count": 13,
+    "uniques": 4
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/issues/87",
+    "title": "文章、博客链接持久化 · Issue #87 · MuYunyun/create-react-doc · GitHub",
+    "count": 12,
     "uniques": 4
   },
   {
