@@ -12,13 +12,15 @@ const getDirTree = (cmd) => {
     path,
     options: otherProps,
   }))
+  // console.log('dirTree', dirTree)
   return dirTree
 }
 
 // eg: ['docs/quick_start.md', 'a']
 // output: ['/quick_start', '/a/b', '/a/b/c']
 const getPrerenderRoutes = (dirTree) => {
-  const result = getPrerenderRoute(dirTree)
+  const dpCloneDirTree = JSON.parse(JSON.stringify(dirTree))
+  const result = getPrerenderRoute(dpCloneDirTree)
   result.push('/404')
   return result
 }
@@ -36,8 +38,8 @@ function recursive(data, routePath, arr) {
 
     if (item.type === 'directory') {
       if (item.children && item.children.length > 0) {
-        // eslint-disable-next-line no-unused-vars
-        item.children = recursive(item.children, composeRouteName, arr)
+        // todo: judge if use deep clone to isolate them.
+        // item.children = recursive(item.children, composeRouteName, arr)
       } else {
         item.children = []
       }
