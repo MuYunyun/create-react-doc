@@ -27,9 +27,6 @@ module.exports = function (cmd) {
   config.output.chunkFilename = 'js/[name].[hash:8].js'
   config.output.publicPath = docsConfig.repo ? `/${docsConfig.repo}/` : '/'
   config.output.path = docsConfig.repo ? `${docsBuildDist}/${docsConfig.repo}` : docsBuildDist
-
-  console.log('dirTree12345', dirTree)
-
   config.module.rules = config.module.rules.map((item) => {
     if (item.oneOf) {
       const loaders = []
@@ -170,15 +167,11 @@ module.exports = function (cmd) {
           // not use fs.move here or it'll throw error in github action
           await fs.copy(`${docsBuildDist}/${docsConfig.repo}`, docsBuildDist)
           await fs.remove(`${docsBuildDist}/${docsConfig.repo}`)
-          // move README as root index.html
-          // todo: replace README with correct path
-
           const defaultPath = (dirTree.find(data => data.name === 'README.md')
             && dirTree.find(data => data.name === 'README.md').mdconf
             && dirTree.find(data => data.name === 'README.md').mdconf.abbrlink) || 'README'
-
-
-          await fs.copy(`${docsBuildDist}/README/index.html`, `${docsBuildDist}/index.html`)
+          // move README as root index.html
+          await fs.copy(`${docsBuildDist}/${defaultPath}/index.html`, `${docsBuildDist}/index.html`)
           console.log('✅ generate prerender file success!')
           if (docsConfig.seo) {
             if (docsConfig.seo.google) {

@@ -12,7 +12,6 @@ const getDirTree = (cmd) => {
     path,
     options: otherProps,
   }))
-  // console.log('dirTree', dirTree)
   return dirTree
 }
 
@@ -38,8 +37,7 @@ function recursive(data, routePath, arr) {
 
     if (item.type === 'directory') {
       if (item.children && item.children.length > 0) {
-        // todo: judge if use deep clone to isolate them.
-        // item.children = recursive(item.children, composeRouteName, arr)
+        item.children = recursive(item.children, composeRouteName, arr)
       } else {
         item.children = []
       }
