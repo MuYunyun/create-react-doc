@@ -126,7 +126,6 @@ function directoryTree({
   } else if (stats.isDirectory()) {
     const dirData = safeReadDirSync(path)
     if (dirData === null) return null
-
     item.children = dirData
       .map(child =>
         directoryTree({
