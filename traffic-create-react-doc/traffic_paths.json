@@ -2,19 +2,19 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 236,
-    "uniques": 119
+    "count": 227,
+    "uniques": 115
   },
   {
     "path": "/MuYunyun/create-react-doc/issues",
     "title": "Issues · MuYunyun/create-react-doc",
-    "count": 86,
+    "count": 84,
     "uniques": 13
   },
   {
     "path": "/MuYunyun/create-react-doc/pulls",
     "title": "Pull requests · MuYunyun/create-react-doc",
-    "count": 27,
+    "count": 25,
     "uniques": 7
   },
   {
@@ -25,20 +25,14 @@
   },
   {
     "path": "/MuYunyun/create-react-doc/issues/195",
-    "title": "页面首屏菜单栏未高亮选中 · Issue #195 · MuYunyun/create-react-doc",
-    "count": 18,
-    "uniques": 3
+    "title": "页面首屏菜单栏未高亮选中 · Issue #195 · MuYunyun/create-react-doc · GitHub",
+    "count": 19,
+    "uniques": 4
   },
   {
     "path": "/MuYunyun/create-react-doc/releases/tag/v1.5.0",
     "title": "Release 支持文章链接持久化 · MuYunyun/create-react-doc",
     "count": 13,
-    "uniques": 4
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/issues/87",
-    "title": "文章、博客链接持久化 · Issue #87 · MuYunyun/create-react-doc · GitHub",
-    "count": 10,
     "uniques": 4
   },
   {
@@ -48,15 +42,21 @@
     "uniques": 3
   },
   {
+    "path": "/MuYunyun/create-react-doc/issues/205",
+    "title": "点击右上角 Edit in GitHub 跳转链接错误 · Issue #205 · MuYunyun/create-react-doc · GitHub",
+    "count": 10,
+    "uniques": 2
+  },
+  {
     "path": "/MuYunyun/create-react-doc/network/dependents",
     "title": "Network Dependents · MuYunyun/create-react-doc",
     "count": 10,
     "uniques": 1
   },
   {
-    "path": "/MuYunyun/create-react-doc/issues/205",
-    "title": "点击右上角 Edit in GitHub 跳转链接错误 · Issue #205 · MuYunyun/create-react-doc",
-    "count": 9,
-    "uniques": 1
+    "path": "/MuYunyun/create-react-doc/issues/87",
+    "title": "文章、博客链接持久化 · Issue #87 · MuYunyun/create-react-doc · GitHub",
+    "count": 8,
+    "uniques": 3
   }
 ]
