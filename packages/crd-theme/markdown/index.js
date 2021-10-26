@@ -13,6 +13,8 @@ const components = {
 
 function Markdown(markdownProps) {
   const { props } = markdownProps
+  console.log('props', props)
+  // todo props.title
   const { relative } = props
   const [MarkdownCP, setMarkdownCP] = useState(null)
   const markdownWrapperRef = useRef(null)
