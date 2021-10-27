@@ -2,61 +2,61 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 225,
-    "uniques": 115
+    "count": 269,
+    "uniques": 121
   },
   {
     "path": "/MuYunyun/create-react-doc/issues",
     "title": "Issues · MuYunyun/create-react-doc",
-    "count": 81,
-    "uniques": 13
+    "count": 100,
+    "uniques": 15
   },
   {
     "path": "/MuYunyun/create-react-doc/pulls",
     "title": "Pull requests · MuYunyun/create-react-doc",
-    "count": 25,
+    "count": 32,
     "uniques": 7
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/issues/195",
-    "title": "页面首屏菜单栏未高亮选中 · Issue #195 · MuYunyun/create-react-doc · GitHub",
-    "count": 19,
-    "uniques": 4
   },
   {
     "path": "/MuYunyun/create-react-doc/tree/main/packages",
     "title": "create-react-doc/packages at main · MuYunyun/create-react-doc",
-    "count": 18,
-    "uniques": 6
+    "count": 22,
+    "uniques": 8
   },
   {
-    "path": "/MuYunyun/create-react-doc/releases/tag/v1.5.0",
-    "title": "Release 支持文章链接持久化 · MuYunyun/create-react-doc",
-    "count": 13,
+    "path": "/MuYunyun/create-react-doc/issues/195",
+    "title": "页面首屏菜单栏未高亮选中 · Issue #195 · MuYunyun/create-react-doc · GitHub",
+    "count": 20,
     "uniques": 4
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/actions",
-    "title": "Actions · MuYunyun/create-react-doc",
-    "count": 10,
-    "uniques": 3
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/issues/205",
-    "title": "点击右上角 Edit in GitHub 跳转链接错误 · Issue #205 · MuYunyun/create-react-doc · GitHub",
-    "count": 10,
-    "uniques": 2
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/network/dependents",
-    "title": "Network Dependents · MuYunyun/create-react-doc",
-    "count": 10,
-    "uniques": 1
   },
   {
     "path": "/MuYunyun/create-react-doc/tree/main/docs",
     "title": "create-react-doc/docs at main · MuYunyun/create-react-doc",
-    "count": 7,
+    "count": 17,
+    "uniques": 6
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/blob/main/packages/crd-scripts/package.json",
+    "title": "create-react-doc/package.json at main · MuYunyun/create-react-doc",
+    "count": 17,
+    "uniques": 3
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/blob/main/packages/crd-scripts/src/conf/webpack.config.js",
+    "title": "create-react-doc/webpack.config.js at main · MuYunyun/create-react-doc",
+    "count": 16,
+    "uniques": 3
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/releases/tag/v1.5.0",
+    "title": "Release 支持文章链接持久化 · MuYunyun/create-react-doc",
+    "count": 15,
     "uniques": 5
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/issues/206",
+    "title": "站点文件 sitemap.xml 生成丢失 · Issue #206 · MuYunyun/create-react-doc",
+    "count": 15,
+    "uniques": 2
   }
 ]
