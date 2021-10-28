@@ -14,9 +14,8 @@ const components = {
 
 function Markdown(markdownProps) {
   const { props } = markdownProps
-  console.log('props', props)
-  // todo props.title
   const { relative } = props
+  console.log('props', props)
   const [MarkdownCP, setMarkdownCP] = useState(null)
   const markdownWrapperRef = useRef(null)
 
@@ -36,7 +35,10 @@ function Markdown(markdownProps) {
     renderMarkdown()
   }, [])
 
-  console.log('props', props)
+  useEffect(() => {
+    // to test
+  }, [props.title])
+
   return (
     <>
       <Helmet>
