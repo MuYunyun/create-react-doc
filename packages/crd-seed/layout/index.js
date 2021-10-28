@@ -230,6 +230,7 @@ function BasicLayout({
           {/* see https://reacttraining.com/react-router/web/api/Redirect/exact-bool */}
           <Redirect exact from={ifAddPrefix ? `/${repo}` : `/`} to={ifAddPrefix ? `/${repo}/${defaultPath}` : `/${defaultPath}`} />
           {routeData.map((item) => {
+            console.log('item', item)
             const { path, mdconf, component } = item
             const { abbrlink } = mdconf
             const enhancePath = abbrlink ? `/${abbrlink}` : path

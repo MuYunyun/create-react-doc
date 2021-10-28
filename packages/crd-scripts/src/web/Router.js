@@ -29,18 +29,21 @@ function menuSourceFormat(data, routePath, article) {
     const routePropsCurrent = `${routePath || ''}/${item.name}`.replace(/.md$/, '')
     if (item.type === 'directory') {
       if (item.children && item.children.length > 0) {
-        item.title = item.name.replace(item.extension, '')
+        item.title = 'test aaa'
+        // item.title = item.name.replace(item.extension, '')
         item.mdconf = {}
         item.props = { isEmpty: true }
         item.children = menuSourceFormat(item.children, routePropsCurrent, article || item.name)
       } else {
-        item.title = item.name.replace(item.extension, '')
+        item.title = 'test bbb'
+        // item.title = item.name.replace(item.extension, '')
         item.mdconf = { title: item.name }
         item.props = { isEmpty: true }
         item.children = []
       }
     } else {
-      item.title = item.mdconf && item.mdconf.title ? item.mdconf.title : item.name.replace(item.extension, '')
+      item.title = 'test ccc'
+      // item.title = item.mdconf && item.mdconf.title ? item.mdconf.title : item.name.replace(item.extension, '')
       if (!item.mdconf) {
         item.props = { isEmpty: true }
       }
