@@ -2,38 +2,32 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 170,
-    "uniques": 55
+    "count": 125,
+    "uniques": 33
   },
   {
     "path": "/MuYunyun/create-react-doc/issues",
     "title": "Issues · MuYunyun/create-react-doc",
-    "count": 84,
-    "uniques": 10
+    "count": 69,
+    "uniques": 6
   },
   {
     "path": "/MuYunyun/create-react-doc/pulls",
     "title": "Pull requests · MuYunyun/create-react-doc",
-    "count": 32,
-    "uniques": 7
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/blob/main/packages/crd-scripts/package.json",
-    "title": "create-react-doc/package.json at main · MuYunyun/create-react-doc",
-    "count": 19,
+    "count": 17,
     "uniques": 2
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/issues/195",
-    "title": "页面首屏菜单栏未高亮选中 · Issue #195 · MuYunyun/create-react-doc · GitHub",
-    "count": 18,
-    "uniques": 4
   },
   {
     "path": "/MuYunyun/create-react-doc/blob/main/packages/crd-scripts/src/conf/webpack.config.js",
     "title": "create-react-doc/webpack.config.js at main · MuYunyun/create-react-doc",
-    "count": 18,
+    "count": 16,
     "uniques": 3
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/blob/main/packages/crd-scripts/package.json",
+    "title": "create-react-doc/package.json at main · MuYunyun/create-react-doc",
+    "count": 16,
+    "uniques": 2
   },
   {
     "path": "/MuYunyun/create-react-doc/issues/206",
@@ -42,21 +36,27 @@
     "uniques": 2
   },
   {
-    "path": "/MuYunyun/create-react-doc/tree/main/packages/crd-scripts",
-    "title": "create-react-doc/packages/crd-scripts at main · MuYunyun/create-react-doc",
-    "count": 15,
-    "uniques": 2
-  },
-  {
     "path": "/MuYunyun/create-react-doc/tree/main/docs",
     "title": "create-react-doc/docs at main · MuYunyun/create-react-doc",
-    "count": 14,
-    "uniques": 4
+    "count": 13,
+    "uniques": 3
   },
   {
     "path": "/MuYunyun/create-react-doc/issues/205",
     "title": "点击右上角 Edit in GitHub 跳转链接错误 · Issue #205 · MuYunyun/create-react-doc · GitHub",
     "count": 13,
+    "uniques": 2
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/pull/208",
+    "title": "fix https://github.com/MuYunyun/create-react-doc/issues/206 by MuYunyun · Pul...",
+    "count": 13,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/tree/main/packages/crd-scripts",
+    "title": "create-react-doc/packages/crd-scripts at main · MuYunyun/create-react-doc",
+    "count": 12,
     "uniques": 2
   }
 ]
