@@ -1,5 +1,3 @@
-/* eslint-disable react/jsx-no-target-blank */
-/* eslint-disable no-undef */
 import { useState } from 'react'
 import classNames from 'classnames'
 import { Link } from 'react-router-dom'

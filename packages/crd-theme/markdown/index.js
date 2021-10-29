@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react'
+import * as React from 'react'
 import cx from 'classnames'
 import { MDXProvider } from '@mdx-js/react'
 import { Helmet } from 'react-helmet'
@@ -7,6 +7,8 @@ import Link from './Link'
 import Loading from '../component/Loading'
 import styles from './style/index.less'
 
+const { useState, useEffect, useRef } = React
+
 const components = {
   code: CodeBlock,
   link: Link,
@@ -14,8 +16,7 @@ const components = {
 
 function Markdown(markdownProps) {
   const { props } = markdownProps
-  const { relative } = props
-  console.log('props', props)
+  const { relative, name } = props
   const [MarkdownCP, setMarkdownCP] = useState(null)
   const markdownWrapperRef = useRef(null)
 
@@ -35,15 +36,15 @@ function Markdown(markdownProps) {
     renderMarkdown()
   }, [])
 
-  useEffect(() => {
-    // to test
-  }, [props.title])
+  const getName = () => {
+    return name ? name.replace('.md', '') : ''
+  }
 
   return (
     <>
       <Helmet>
-        <title>{props.title}</title>
-        <meta name={props.title} content={props.title} />
+        <title>{getName()}</title>
+        <meta name={getName()} content={getName()} />
       </Helmet>
       <div className={cx('markdown', styles.markdown, styles.markdownwrapper)} ref={markdownWrapperRef}>
         {
