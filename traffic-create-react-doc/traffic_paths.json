@@ -2,13 +2,13 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 81,
-    "uniques": 21
+    "count": 88,
+    "uniques": 27
   },
   {
     "path": "/MuYunyun/create-react-doc/issues",
     "title": "Issues · MuYunyun/create-react-doc",
-    "count": 53,
+    "count": 34,
     "uniques": 5
   },
   {
@@ -30,18 +30,6 @@
     "uniques": 2
   },
   {
-    "path": "/MuYunyun/create-react-doc/pulls",
-    "title": "Pull requests · MuYunyun/create-react-doc",
-    "count": 14,
-    "uniques": 2
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/issues/205",
-    "title": "点击右上角 Edit in GitHub 跳转链接错误 · Issue #205 · MuYunyun/create-react-doc · GitHub",
-    "count": 13,
-    "uniques": 2
-  },
-  {
     "path": "/MuYunyun/create-react-doc/pull/208",
     "title": "fix https://github.com/MuYunyun/create-react-doc/issues/206 by MuYunyun · Pul...",
     "count": 13,
@@ -56,7 +44,19 @@
   {
     "path": "/MuYunyun/create-react-doc/tree/main/docs",
     "title": "create-react-doc/docs at main · MuYunyun/create-react-doc",
-    "count": 11,
+    "count": 10,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/tree/main/packages/crd-scripts/src",
+    "title": "create-react-doc/packages/crd-scripts/src at main · MuYunyun/create-react-doc",
+    "count": 9,
     "uniques": 2
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/pulls",
+    "title": "Pull requests · MuYunyun/create-react-doc",
+    "count": 9,
+    "uniques": 1
   }
 ]
