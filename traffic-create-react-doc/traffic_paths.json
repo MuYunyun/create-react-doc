@@ -2,14 +2,14 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 109,
-    "uniques": 42
+    "count": 112,
+    "uniques": 46
   },
   {
     "path": "/MuYunyun/create-react-doc/issues",
     "title": "Issues · MuYunyun/create-react-doc",
-    "count": 37,
-    "uniques": 7
+    "count": 38,
+    "uniques": 8
   },
   {
     "path": "/MuYunyun/create-react-doc/blob/main/packages/crd-scripts/src/conf/webpack.config.js",
@@ -48,15 +48,15 @@
     "uniques": 2
   },
   {
+    "path": "/MuYunyun/create-react-doc/tree/main/packages",
+    "title": "create-react-doc/uppackage.sh at main · MuYunyun/create-react-doc",
+    "count": 10,
+    "uniques": 4
+  },
+  {
     "path": "/MuYunyun/create-react-doc/pulls",
     "title": "Pull requests · MuYunyun/create-react-doc",
     "count": 10,
-    "uniques": 2
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/tree/main/packages/crd-scripts/src",
-    "title": "create-react-doc/packages/crd-scripts/src at main · MuYunyun/create-react-doc",
-    "count": 9,
     "uniques": 2
   }
 ]
