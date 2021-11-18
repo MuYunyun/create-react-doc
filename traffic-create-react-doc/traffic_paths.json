@@ -3,18 +3,12 @@
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
     "count": 54,
-    "uniques": 38
+    "uniques": 35
   },
   {
     "path": "/MuYunyun/create-react-doc/tree/main/packages",
     "title": "create-react-doc/packages at main · MuYunyun/create-react-doc",
-    "count": 8,
-    "uniques": 3
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/issues",
-    "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 4,
+    "count": 6,
     "uniques": 3
   },
   {
@@ -40,6 +34,12 @@
     "title": "create-react-doc/docs at main · MuYunyun/create-react-doc",
     "count": 3,
     "uniques": 3
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/issues",
+    "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
+    "count": 3,
+    "uniques": 2
   },
   {
     "path": "/MuYunyun/create-react-doc/tree/main/packages/crd-theme",
