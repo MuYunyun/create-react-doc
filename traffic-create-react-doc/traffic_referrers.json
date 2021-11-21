@@ -30,13 +30,18 @@
     "uniques": 2
   },
   {
+    "referrer": "wiki.bigfan.163.com",
+    "count": 2,
+    "uniques": 1
+  },
+  {
     "referrer": "Google",
     "count": 2,
     "uniques": 1
   },
   {
-    "referrer": "wiki.bigfan.163.com",
-    "count": 2,
+    "referrer": "npmjs.com",
+    "count": 1,
     "uniques": 1
   },
   {
