@@ -1,13 +1,13 @@
 [
   {
+    "referrer": "github.com",
+    "count": 17,
+    "uniques": 9
+  },
+  {
     "referrer": "link.zhihu.com",
     "count": 16,
     "uniques": 4
-  },
-  {
-    "referrer": "github.com",
-    "count": 15,
-    "uniques": 8
   },
   {
     "referrer": "jira.bigfan.163.com",
