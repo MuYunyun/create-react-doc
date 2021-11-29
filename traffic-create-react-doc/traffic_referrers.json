@@ -1,7 +1,7 @@
 [
   {
     "referrer": "github.com",
-    "count": 17,
+    "count": 18,
     "uniques": 9
   },
   {
@@ -16,22 +16,17 @@
   },
   {
     "referrer": "Google",
-    "count": 5,
+    "count": 4,
     "uniques": 4
   },
   {
     "referrer": "dev.to",
-    "count": 3,
-    "uniques": 3
+    "count": 2,
+    "uniques": 2
   },
   {
     "referrer": "wiki.bigfan.163.com",
     "count": 2,
-    "uniques": 1
-  },
-  {
-    "referrer": "copyfuture.com",
-    "count": 1,
     "uniques": 1
   },
   {
@@ -40,7 +35,17 @@
     "uniques": 1
   },
   {
+    "referrer": "muyunyun.cn",
+    "count": 1,
+    "uniques": 1
+  },
+  {
     "referrer": "npmjs.com",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "referrer": "copyfuture.com",
     "count": 1,
     "uniques": 1
   }
