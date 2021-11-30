@@ -10,29 +10,14 @@
     "uniques": 4
   },
   {
-    "referrer": "jira.bigfan.163.com",
-    "count": 7,
-    "uniques": 1
-  },
-  {
     "referrer": "Google",
-    "count": 4,
-    "uniques": 4
+    "count": 3,
+    "uniques": 3
   },
   {
     "referrer": "dev.to",
-    "count": 2,
-    "uniques": 2
-  },
-  {
-    "referrer": "wiki.bigfan.163.com",
-    "count": 2,
-    "uniques": 1
-  },
-  {
-    "referrer": "link.juejin.cn",
-    "count": 1,
-    "uniques": 1
+    "count": 3,
+    "uniques": 3
   },
   {
     "referrer": "muyunyun.cn",
@@ -45,7 +30,12 @@
     "uniques": 1
   },
   {
-    "referrer": "copyfuture.com",
+    "referrer": "wiki.bigfan.163.com",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "referrer": "jira.bigfan.163.com",
     "count": 1,
     "uniques": 1
   }
