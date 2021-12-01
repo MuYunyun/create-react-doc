@@ -10,12 +10,12 @@
     "uniques": 4
   },
   {
-    "referrer": "Google",
-    "count": 3,
-    "uniques": 3
+    "referrer": "dev.to",
+    "count": 4,
+    "uniques": 4
   },
   {
-    "referrer": "dev.to",
+    "referrer": "Google",
     "count": 3,
     "uniques": 3
   },
