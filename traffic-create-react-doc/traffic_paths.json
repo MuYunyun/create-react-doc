@@ -8,8 +8,8 @@
   {
     "path": "/MuYunyun/create-react-doc/issues",
     "title": "Issues · MuYunyun/create-react-doc · GitHub",
-    "count": 6,
-    "uniques": 4
+    "count": 7,
+    "uniques": 5
   },
   {
     "path": "/MuYunyun/create-react-doc/tree/main/docs",
@@ -48,14 +48,14 @@
     "uniques": 2
   },
   {
-    "path": "/MuYunyun/create-react-doc/tree/main/packages",
-    "title": "create-react-doc/packages at main · MuYunyun/create-react-doc · GitHub",
+    "path": "/MuYunyun/create-react-doc/issues/new",
+    "title": "New Issue · MuYunyun/create-react-doc",
     "count": 2,
     "uniques": 2
   },
   {
-    "path": "/MuYunyun/create-react-doc/tree/main/packages/crd-seed",
-    "title": "create-react-doc/packages/crd-seed at main · MuYunyun/create-react-doc · GitHub",
+    "path": "/MuYunyun/create-react-doc/tree/main/packages",
+    "title": "create-react-doc/packages at main · MuYunyun/create-react-doc · GitHub",
     "count": 2,
     "uniques": 2
   }
