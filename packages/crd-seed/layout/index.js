@@ -26,7 +26,9 @@ function BasicLayout({
   const { user, repo, branch = 'main', language = 'en', menuOpenKeys } = DOCSCONFIG || {}
   const [inlineCollapsed, setInlineCollapsed] = useState(isMobile)
   const [selectedKey, setSelectedKey] = useState('')
+  // console.log()
   const curOpenKeys = getOpenSubMenuKeys(pathname, menuOpenKeys)
+  console.log('curOpenKeys', curOpenKeys)
   const defaultPath = (routeData.find(data => data.path === '/README')
     && routeData.find(data => data.path === '/README').mdconf
     && routeData.find(data => data.path === '/README').mdconf.abbrlink) || 'README'

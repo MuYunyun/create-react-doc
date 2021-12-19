@@ -34,6 +34,8 @@ function SubMenu({
     onHoverKey,
     defaultOpenKeys = [],
   } = useMenuContext()
+  console.log('defaultOpenKeys', defaultOpenKeys)
+  console.log('keyValue', keyValue)
   const [menuOpen, setMenuOpen] = useState(defaultOpenKeys.indexOf(keyValue) !== -1)
   const curSubmenu = useRef(null)
   const popupSubMenu = useRef(null)
