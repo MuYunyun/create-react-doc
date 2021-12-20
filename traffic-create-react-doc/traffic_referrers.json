@@ -1,13 +1,13 @@
 [
   {
     "referrer": "link.zhihu.com",
-    "count": 25,
-    "uniques": 8
+    "count": 24,
+    "uniques": 7
   },
   {
     "referrer": "github.com",
-    "count": 21,
-    "uniques": 9
+    "count": 22,
+    "uniques": 10
   },
   {
     "referrer": "cn.v2ex.com",
@@ -25,22 +25,12 @@
     "uniques": 2
   },
   {
-    "referrer": "Google",
-    "count": 6,
-    "uniques": 1
-  },
-  {
     "referrer": "v2ex.com",
     "count": 2,
     "uniques": 1
   },
   {
     "referrer": "muyunyun.cn",
-    "count": 1,
-    "uniques": 1
-  },
-  {
-    "referrer": "npm.souche-inc.com",
     "count": 1,
     "uniques": 1
   }
