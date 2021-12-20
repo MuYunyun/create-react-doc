@@ -68,10 +68,17 @@ function BasicLayout({
         {menus.map((item, index) => {
           const { mdconf, routePath } = item || {}
           const { abbrlink } = mdconf || {}
+          console.log('item', item)
+          // console.log('item', item)
           const path = abbrlink ? `/${abbrlink}` : routePath
           // item.path carrys .md here.
           return item.children && item.children.length > 0 ? (
-            <SubMenu key={index} keyValue={item.path} title={item.name} icon={<Icon type="folder" size={16} />}>
+            <SubMenu
+              key={index}
+              keyValue={item.path}
+              title={item.name}
+              icon={<Icon type="folder" size={16} />}
+            >
               {renderSubMenuItem(item.children)}
             </SubMenu>
           ) : (
@@ -126,7 +133,9 @@ function BasicLayout({
           onSelect={(keyValue) => {
             setSelectedKey(keyValue)
           }}
-          defaultOpenKeys={curOpenKeys}
+          // defaultOpenKeys={curOpenKeys}
+          // todo: smart to fill defaultOpenKeys
+          defaultOpenKeys={['/docs/主题']}
         >
           {renderSubMenuItem(menus || [])}
         </Menu>
