@@ -22,12 +22,20 @@ function BasicLayout({
   menuSource,
   indexProps,
 }) {
+  console.log('menuSource', menuSource)
+  console.log('routeData', routeData)
+
   const { pathname } = location
+  console.log('location', location)
   const { user, repo, branch = 'main', language = 'en', menuOpenKeys } = DOCSCONFIG || {}
   const [inlineCollapsed, setInlineCollapsed] = useState(isMobile)
   const [selectedKey, setSelectedKey] = useState('')
   // console.log()
-  const curOpenKeys = getOpenSubMenuKeys(pathname, menuOpenKeys)
+  const curOpenKeys = getOpenSubMenuKeys({
+    pathname,
+    menuSource,
+    menuOpenKeys
+  })
   console.log('curOpenKeys', curOpenKeys)
   const defaultPath = (routeData.find(data => data.path === '/README')
     && routeData.find(data => data.path === '/README').mdconf
@@ -113,6 +121,7 @@ function BasicLayout({
   }
   const renderMenu = (menus) => {
     if (menus.length < 1) return null
+
     return (
       <Affix
         offsetTop={0}
