@@ -40,7 +40,9 @@ const login = async () => {
 
   const spinner = ora('Login...').start()
   try {
-    const browser = await puppeteer.launch({ headless: false })
+    // it have to set executablePath or it'll be broken.https://github.com/puppeteer/puppeteer/issues/6425
+    // temporary way: https://stackoverflow.com/questions/47122579/run-puppeteer-on-already-installed-chrome-on-macos
+    const browser = await puppeteer.launch({ headless: false, executablePath: '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' })
     const page = await browser.newPage()
     await page.goto(loginUrl)
     await page.waitForFunction('window.location.href.indexOf("login") === -1')

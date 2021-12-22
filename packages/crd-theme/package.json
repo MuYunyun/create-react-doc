@@ -1,0 +1,30 @@
+{
+  "name": "crd-theme",
+  "version": "1.6.0",
+  "description": "Default Theme with Create React Doc",
+  "main": "index.js",
+  "dependencies": {
+    "@mdx-js/react": "^1.6.22",
+    "classnames": "^2.2.6",
+    "diana": "^1.0.2",
+    "less": "^3.0.2",
+    "prism-react-renderer": "^1.2.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-helmet": "^6.1.0",
+    "react-hot-loader": "^4.1.1",
+    "react-markdown": "^3.3.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MuYunyun/create-react-doc",
+    "directory": "packages/theme"
+  },
+  "keywords": [],
+  "publishConfig": {
+    "access": "public"
+  },
+  "author": "muyunyun",
+  "license": "MIT",
+  "gitHead": "ffc5e4cbc94a7356da558c2dbf46e2f39bb8b199"
+}

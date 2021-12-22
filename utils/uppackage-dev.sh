@@ -1,0 +1,1 @@
+lerna add $1 --scope=$2 --dev

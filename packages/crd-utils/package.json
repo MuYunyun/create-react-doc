@@ -1,0 +1,21 @@
+{
+  "name": "crd-utils",
+  "version": "1.5.0",
+  "description": "Utils with create react doc",
+  "main": "index.js",
+  "dependencies": {
+    "js-yaml": "^3.14.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MuYunyun/create-react-doc",
+    "directory": "packages/utils"
+  },
+  "keywords": [],
+  "publishConfig": {
+    "access": "public"
+  },
+  "author": "muyunyun",
+  "license": "MIT",
+  "gitHead": "ffc5e4cbc94a7356da558c2dbf46e2f39bb8b199"
+}

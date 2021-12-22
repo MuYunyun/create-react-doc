@@ -5,8 +5,7 @@
     "status": "ac",
     "difficulty": "Easy",
     "questionId": "1",
-    "code": "/**\n * @param {number[]} nums\n * @param {number} target\n * @return {number[]}\n */\nvar twoSum = function(nums, target) {\n  var map = new Map()\n\n  for (let i = 0; i < nums.length; i++) {\n    const targetValue = target - nums[i]\n    const getTargetValue = map.get(targetValue)\n    if (typeof(getTargetValue) === 'number') {\n      return [i, getTargetValue]\n    }\n    map.set(nums[i], i)\n  }\n}",
-    "lang": "javascript"
+    "topicTags": "Array, Hash Table"
   },
   {
     "title": "Add Two Numbers",
@@ -14,8 +13,7 @@
     "status": "ac",
     "difficulty": "Medium",
     "questionId": "2",
-    "code": "/**\n * Definition for singly-linked list.\n * function ListNode(val) {\n *     this.val = val;\n *     this.next = null;\n * }\n */\n/**\n * @param {ListNode} l1\n * @param {ListNode} l2\n * @return {ListNode}\n */\nvar addTwoNumbers = function(l1, l2) {\n  let flag = 0\n  let head = null,\n      temp = null\n  while (l1 || l2) {\n    let sum = flag\n    if (l1) {\n      sum += l1.val\n      l1 = l1.next\n    }\n\n    if (l2) {\n      sum += l2.val\n      l2 = l2.next\n    }\n\n    const obj = new ListNode(sum % 10)\n    if (head === null) {\n      head = obj\n      temp = obj\n    } else {\n      temp.next = obj\n      temp = obj\n    }\n\n    // 处理进位\n    flag = 0\n    if (sum >= 10) {\n      flag = 1\n    }\n  }\n\n  if (flag === 1) {\n    const result = new ListNode(1)\n    temp.next = result\n    temp = result\n  }\n  return head\n}",
-    "lang": "javascript"
+    "topicTags": "Recursion, Linked List, Math"
   },
   {
     "title": "Longest Substring Without Repeating Characters",
@@ -23,8 +21,7 @@
     "status": "ac",
     "difficulty": "Medium",
     "questionId": "3",
-    "code": "/**\n * @param {string} s\n * @return {number}\n */\nvar lengthOfLongestSubstring = function(s) {\n  let left = 0, right = 0 // [left, right] 区域\n  let result = 0 // 假定结果的初始值为 0\n  const cacheObj = {}\n\n  while (left < s.length) {\n    if (right < s.length && !cacheObj[s[right]]) {\n      cacheObj[s[right]] = 1\n      result = Math.max(result, right - left + 1)\n      right++\n    } else {\n      cacheObj[s[left]] = null\n      left++\n    }\n  }\n  if (result === 0) {\n    return 0\n  }\n  return result\n}",
-    "lang": "javascript"
+    "topicTags": "Hash Table, Two Pointers, String, Sliding Window"
   },
   {
     "title": "Median of Two Sorted Arrays",
@@ -32,8 +29,7 @@
     "status": "ac",
     "difficulty": "Hard",
     "questionId": "4",
-    "code": "/**\n * @param {number[]} nums1\n * @param {number[]} nums2\n * @return {number}\n */\nvar findMedianSortedArrays = function(nums1, nums2) {\n    let arr = nums1.concat(nums2).sort((r1, r2) => r1 - r2)\n    const length = arr.length\n    if (length % 2 === 0) {\n        return (arr[length / 2 - 1] + arr[length / 2]) / 2\n    } else {\n        return arr[(length + 1) / 2 - 1]\n    }\n};",
-    "lang": "javascript"
+    "topicTags": "Array, Binary Search, Divide and Conquer"
   },
   {
     "title": "Reverse Integer",
@@ -41,8 +37,7 @@
     "status": "ac",
     "difficulty": "Easy",
     "questionId": "7",
-    "code": "/**\n * @param {number} x\n * @return {number}\n */\nvar reverse = function(x) {\n    if (x >= 0) {\n        var result = Number((x).toString().split('').reverse().join(''))\n        if (result > 2147483647 || result < -2147483647) {\n            return 0\n        } else {\n            return result\n        }\n    } else {\n        var result = Number('-'+(-x).toString().split('').reverse().join(''))\n        if (result > 2147483647 || result < -2147483647) {\n            return 0\n        } else {\n            return result\n        }\n    }\n};",
-    "lang": "javascript"
+    "topicTags": "Math"
   },
   {
     "title": "Palindrome Number",
@@ -50,8 +45,7 @@
     "status": "ac",
     "difficulty": "Easy",
     "questionId": "9",
-    "code": "/**\n * @param {number} x\n * @return {boolean}\n */\nvar isPalindrome = function (x) {\n  const convert = x.toString().split('').reverse().join('')\n  if (x === Number(convert)) {\n    return true\n  } else {\n    return false\n  }\n};",
-    "lang": "javascript"
+    "topicTags": "Math"
   },
   {
     "title": "Container With Most Water",
@@ -59,8 +53,7 @@
     "status": "ac",
     "difficulty": "Medium",
     "questionId": "11",
-    "code": "/**\n * @param {number[]} height\n * @return {number}\n */\nvar maxArea = function (height) {\n  let head = 0, tail = height.length - 1, maxArea = 0\n  while (head < tail) {\n    result = Math.min(height[head], height[tail]) * (tail - head)\n    if (result > maxArea) {\n      maxArea = result\n    }\n    if (height[head] <= height[tail]) {\n      head++\n    } else {\n      tail--\n    }\n  }\n  return maxArea\n};",
-    "lang": "javascript"
+    "topicTags": "Array, Two Pointers"
   },
   {
     "title": "Roman to Integer",
@@ -68,8 +61,7 @@
     "status": "ac",
     "difficulty": "Easy",
     "questionId": "13",
-    "code": "/**\n * @param {string} s\n * @return {number}\n */\nvar romanToInt = function (s) {\n  const RomanArr = ['M', 'CM', 'D', 'CD', 'C', 'XC', 'L', 'XL', 'X', 'IX', 'V', 'IV', 'I']\n  const intArr = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1]\n  const length = s.length\n  let pick, result = 0\n  for (let i = 0; i < length; i++) {\n    pick = s.slice(i, i + 1)\n    if (pick === 'C' || pick === 'X' || pick === 'I') {\n      pick = s.slice(i, i + 2)\n      if (pick === 'CM' || pick === 'CD' || pick === 'XC' || pick === 'XL' || pick === 'IX' || pick === 'IV') {\n        i++\n      } else {\n        pick = s.slice(i, i + 1)\n      }\n    }\n    result += intArr[RomanArr.indexOf(pick)]\n  }\n  return result\n};",
-    "lang": "javascript"
+    "topicTags": "Math, String"
   },
   {
     "title": "Longest Common Prefix",
@@ -77,8 +69,7 @@
     "status": "ac",
     "difficulty": "Easy",
     "questionId": "14",
-    "code": "/**\n * @param {string[]} strs\n * @return {string}\n */\nvar longestCommonPrefix = function (strs) {\n  if (strs.length === 0) return ''\n\n  let str = strs[0]\n\n  for (let i = 0; i < strs.length; i++) {\n    while (strs[i].indexOf(str) !== 0) {\n      str = str.slice(0, str.length - 1)\n      if (str.length === 0) { return '' }\n    }\n  }\n\n  return str\n};",
-    "lang": "javascript"
+    "topicTags": "String"
   },
   {
     "title": "3Sum",
@@ -86,8 +77,7 @@
     "status": "ac",
     "difficulty": "Medium",
     "questionId": "15",
-    "code": "/**\n * @param {number[]} nums\n * @return {number[][]}\n */\nvar threeSum = function (nums) {\n  const sortNums = nums.sort((r1, r2) => r1 - r2)\n  let targetValue\n  const result = []\n\n  for (let i = 0; i < sortNums.length - 2; i++) {\n    // 针对下标 i 对应的值进行去重\n    if (i === 0 || nums[i] > nums[i - 1]) {\n      targetValue = -sortNums[i]\n      let l = i + 1\n      let r = sortNums.length - 1\n\n      while (l < r) {\n        let tmpArr = []\n        if (sortNums[l] + sortNums[r] === targetValue) {\n          tmpArr.push(-targetValue)\n          tmpArr.push(sortNums[l])\n          tmpArr.push(sortNums[r])\n          result.push(tmpArr)\n          l++\n          r--\n          // 针对下标 l 对应的值进行去重, r 同理\n          while (l < r && sortNums[l] === sortNums[l - 1]) {\n            l++\n          }\n          while (l < r && sortNums[r] === sortNums[r + 1]) {\n            r--\n          }\n        } else if (sortNums[l] + sortNums[r] > targetValue) {\n          r--\n        } else if (sortNums[l] + sortNums[r] < targetValue) {\n          l++\n        }\n      }\n    }\n  }\n\n  return result\n}",
-    "lang": "javascript"
+    "topicTags": "Array, Two Pointers"
   },
   {
     "title": "3Sum Closest",
@@ -95,8 +85,7 @@
     "status": "ac",
     "difficulty": "Medium",
     "questionId": "16",
-    "code": "/**\n * @param {number[]} nums\n * @param {number} target\n * @return {number}\n */\nvar threeSumClosest = function (nums, target) {\n  let sum = 0\n  let close = nums[0] + nums[1] + nums[2]\n  let sortedNums = nums.sort((a, b) => a - b)\n\n  for (let i = 0; i < sortedNums.length; i++) {\n    let l = i + 1, r = sortedNums.length - 1\n    while (l < r) {\n      sum = nums[i] + nums[l] + nums[r] // 分别对应左、中、右\n      if (Math.abs(sum - target) < Math.abs(close - target)) {\n        close = sum\n      }\n\n      if (sum < target) {\n        l++\n      } else if (sum > target) {\n        r--\n      } else {\n        return sum\n      }\n\n    }\n\n  }\n\n  return close\n}",
-    "lang": "javascript"
+    "topicTags": "Array, Two Pointers"
   },
   {
     "title": "Letter Combinations of a Phone Number",
@@ -104,8 +93,7 @@
     "status": "ac",
     "difficulty": "Medium",
     "questionId": "17",
-    "code": "/**\n * @param {string} digits\n * @return {string[]}\n */\nvar letterCombinations = function (digits) { // '23'\n  const keyString = [\n    '',\n    '',\n    'abc',\n    'def',\n    'ghi',\n    'jkl',\n    'mno',\n    'pqrs',\n    'tuv',\n    'wxyz',\n  ]\n\n  if (digits === '' || digits.length === 0) {\n    return []\n  }\n\n  const result = ['']\n\n  for (let x of digits) {\n    const size = result.length\n    for (let i = 0; i < size; i++) {\n      const old = result.shift()\n\n      for (let y of keyString[x]) {\n        result.push(old + y)\n      }\n    }\n  }\n  return result\n};",
-    "lang": "javascript"
+    "topicTags": "Depth-first Search, Recursion, String, Backtracking"
   },
   {
     "title": "4Sum",
@@ -113,8 +101,7 @@
     "status": "ac",
     "difficulty": "Medium",
     "questionId": "18",
-    "code": "var fourSum = function(nums, target) {\n  const result = []\n  if (nums.length < 4) return result\n  const sortSum = nums.sort((n1, n2) => n1 - n2)\n  const length = sortSum.length\n  debugger\n  for (let i = 0; i < length - 3; i++) {\n    if (i === 0 || nums[i] > nums[i - 1]) {\n      let l = i + 1\n      let m = l + 1\n\n      while (l < length - 2) {\n        let r = length - 1\n        if (l === i + 1 || nums[l] > nums[l - 1]) {\n          while (m < length - 1 && m < r) {\n            let tmpArr = []\n            const sum = nums[i] + nums[l] + nums[m] + nums[r]\n            if (sum === target) {\n              tmpArr.push(nums[i])\n              tmpArr.push(nums[l])\n              tmpArr.push(nums[m])\n              tmpArr.push(nums[r])\n              result.push(tmpArr)\n              m++\n              r--\n              while (nums[m] === nums[m - 1]) {\n                m++\n              }\n              while (nums[r] === nums[r + 1]) {\n                r--\n              }\n            } else if (sum < target) {\n              m++\n            } else if (sum > target) {\n              r--\n            }\n          }\n        }\n        l++\n        m = l + 1\n      }\n    }\n  }\n  return result\n}",
-    "lang": "javascript"
+    "topicTags": "Array, Hash Table, Two Pointers"
   },
   {
     "title": "Remove Nth Node From End of List",
@@ -122,8 +109,7 @@
     "status": "ac",
     "difficulty": "Medium",
     "questionId": "19",
-    "code": "/**\n * Definition for singly-linked list.\n * function ListNode(val) {\n *     this.val = val;\n *     this.next = null;\n * }\n */\n/**\n * @param {ListNode} head\n * @param {number} n\n * @return {ListNode}\n */\nvar removeNthFromEnd = function(head, n) {\n  const dummy = new ListNode(0)\n  dummy.next = head\n  let l = dummy\n  let r = dummy\n  let offset = n + 1\n\n  while (offset--) {\n    r = r.next\n    if (offset > 1 && r === null) {\n      return dummy.next\n    }\n  }\n\n  while (r) {\n    r = r.next\n    l = l.next\n  }\n\n  l.next = l.next.next\n\n  return dummy.next\n}",
-    "lang": "javascript"
+    "topicTags": "Linked List, Two Pointers"
   },
   {
     "title": "Valid Parentheses",
@@ -131,8 +117,7 @@
     "status": "ac",
     "difficulty": "Easy",
     "questionId": "20",
-    "code": "/**\n * @param {string} s\n * @return {boolean}\n */\nvar isValid = function (s) {\n  const obj = {\n    '(': ')',\n    '{': '}',\n    '[': ']',\n  }\n  const cacheArr = []\n  for (let i = 0; i < s.length; i++) {\n    if (Object.keys(obj).includes(s[i])) {\n      cacheArr.push(s[i])\n    } else {\n      const pick = cacheArr.pop()\n      if (obj[pick] !== s[i]) {\n        return false\n      }\n    }\n  }\n\n  return cacheArr.length === 0\n};",
-    "lang": "javascript"
+    "topicTags": "Stack, String"
   },
   {
     "title": "Merge Two Sorted Lists",
@@ -140,8 +125,7 @@
     "status": "ac",
     "difficulty": "Easy",
     "questionId": "21",
-    "code": "/**\n * Definition for singly-linked list.\n * function ListNode(val) {\n *     this.val = val;\n *     this.next = null;\n * }\n */\n/**\n * @param {ListNode} l1\n * @param {ListNode} l2\n * @return {ListNode}\n */\nvar mergeTwoLists = function (l1, l2) {\n  const dummyLink = new ListNode(0)\n  let cur = dummyLink\n  let l1Point = l1\n  let l2Point = l2\n\n  while (l1Point && l2Point) {\n    if (l1Point.val < l2Point.val) {\n      cur.next = l1Point\n      l1Point = l1Point.next\n    } else {\n      cur.next = l2Point\n      l2Point = l2Point.next\n    }\n    cur = cur.next\n  }\n\n  while (l1Point) {\n    cur.next = l1Point\n    cur = cur.next\n    l1Point = l1Point.next\n  }\n\n  while (l2Point) {\n    cur.next = l2Point\n    cur = cur.next\n    l2Point = l2Point.next\n  }\n\n  return dummyLink.next\n}",
-    "lang": "javascript"
+    "topicTags": "Recursion, Linked List"
   },
   {
     "title": "Generate Parentheses",
@@ -149,8 +133,7 @@
     "status": "ac",
     "difficulty": "Medium",
     "questionId": "22",
-    "code": "/**\n * @param {number} n\n * @return {string[]}\n */\nvar generateParenthesis = function (n) {\n  const result = []\n  let str = ''\n  function judege(left, right, str) {\n    if (left === 0 && right === 0) {\n      result.push(str)\n      str = ''\n      return\n    }\n\n    if (left === right) {\n      judege(left - 1, right, str + '(')\n    } else if (left === 0) {\n      judege(left, right - 1, str + ')')\n    } else {\n      judege(left - 1, right, str + '(')\n      judege(left, right - 1, str + ')')\n    }\n  }\n\n  judege(n, n, str)\n  return result\n};",
-    "lang": "javascript"
+    "topicTags": "String, Backtracking"
   },
   {
     "title": "Merge k Sorted Lists",
@@ -158,8 +141,7 @@
     "status": "ac",
     "difficulty": "Hard",
     "questionId": "23",
-    "code": "/**\n * Definition for singly-linked list.\n * function ListNode(val) {\n *     this.val = val;\n *     this.next = null;\n * }\n */\n/**\n * @param {ListNode[]} lists\n * @return {ListNode}\n */\nvar mergeKLists = function(lists) {\n  let result = lists[0] || null\n\n  for (let i = 1; i < lists.length; i++) {\n    const compareList = lists[i]\n    result = mergeTwoLists(result, compareList)\n  }\n  return result\n}\n\nvar mergeTwoLists = function(curList, compareList) {\n  const dummyNode = new ListNode(0)\n  dummyNode.next = curList\n  let cur = dummyNode\n  let comparedCur = compareList\n\n  while (cur.next && comparedCur) {\n    if (cur.next.val > comparedCur.val) {\n      let nextComparedCur = comparedCur.next\n      comparedCur.next = cur.next\n      cur.next = comparedCur\n      comparedCur = nextComparedCur\n    }\n    cur = cur.next\n  }\n  if (comparedCur) {\n    cur.next = comparedCur\n  }\n\n  return dummyNode.next\n}",
-    "lang": "javascript"
+    "topicTags": "Heap, Linked List, Divide and Conquer"
   },
   {
     "title": "Swap Nodes in Pairs",
@@ -167,8 +149,7 @@
     "status": "ac",
     "difficulty": "Medium",
     "questionId": "24",
-    "code": "/**\n * Definition for singly-linked list.\n * function ListNode(val) {\n *     this.val = val;\n *     this.next = null;\n * }\n */\n/**\n * @param {ListNode} head\n * @return {ListNode}\n */\nvar swapPairs = function(head) {\n  const dummyHead = new ListNode(0)\n  dummyHead.next = head\n\n  let prev = dummyHead\n  let first = prev.next\n\n  while(first && first.next) {\n    let second = first.next\n    let next = second.next\n\n    second.next = first\n    first.next = next\n    prev.next = second\n\n    prev = first\n    first = first.next\n  }\n\n  return dummyHead.next\n}",
-    "lang": "javascript"
+    "topicTags": "Recursion, Linked List"
   },
   {
     "title": "Reverse Nodes in k-Group",
@@ -176,8 +157,7 @@
     "status": "ac",
     "difficulty": "Hard",
     "questionId": "25",
-    "code": "/**\n * Definition for singly-linked list.\n * function ListNode(val) {\n *     this.val = val;\n *     this.next = null;\n * }\n */\n/**\n * @param {ListNode} head\n * @param {number} k\n * @return {ListNode}\n */\nvar reverseKGroup = function(head, k) {\n  const dummyHead = new ListNode(0)\n  dummyHead.next = head\n  let prev = dummyHead\n  let tail = dummyHead\n\n  while (true) {\n    let count = 0\n    while (tail.next && count !== k) {\n      tail = tail.next\n      count++\n    }\n    if (count !== k) break\n\n    let head1 = prev.next\n\n    while (prev.next !== tail) {\n      let cur = prev.next\n      prev.next = cur.next\n      cur.next = tail.next\n      tail.next = cur\n    }\n\n    prev = head1\n    tail = head1\n  }\n\n  return dummyHead.next\n}",
-    "lang": "javascript"
+    "topicTags": "Linked List"
   },
   {
     "title": "Remove Duplicates from Sorted Array",
@@ -185,8 +165,7 @@
     "status": "ac",
     "difficulty": "Easy",
     "questionId": "26",
-    "code": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar removeDuplicates = function (nums) {\n  if (nums.length <= 1) return nums.length\n  let cur = 0 // 新数组的下标\n  for (let i = 1; i < nums.length; i++) {\n    if (nums[i] !== nums[cur]) {\n      nums[cur + 1] = nums[i]\n      cur++\n    }\n  }\n  return cur + 1\n}",
-    "lang": "javascript"
+    "topicTags": "Array, Two Pointers"
   },
   {
     "title": "Remove Element",
@@ -194,8 +173,7 @@
     "status": "ac",
     "difficulty": "Easy",
     "questionId": "27",
-    "code": "/**\n * @param {number[]} nums\n * @param {number} val\n * @return {number}\n */\nvar removeElement = function (nums, val) {\n  let cur = 0\n\n  for (let i = 0; i < nums.length; i++) {\n    if (nums[i] !== val) {\n      nums[cur] = nums[i]\n      cur++\n    }\n  }\n  return cur\n}",
-    "lang": "javascript"
+    "topicTags": "Array, Two Pointers"
   },
   {
     "title": "Implement strStr()",
@@ -203,8 +181,7 @@
     "status": "ac",
     "difficulty": "Easy",
     "questionId": "28",
-    "code": "/**\n * @param {string} haystack\n * @param {string} needle\n * @return {number}\n */\nvar strStr = function (haystack, needle) {\n  return haystack.indexOf(needle)\n};",
-    "lang": "javascript"
+    "topicTags": "Two Pointers, String"
   },
   {
     "title": "Search in Rotated Sorted Array",
@@ -212,8 +189,7 @@
     "status": "ac",
     "difficulty": "Medium",
     "questionId": "33",
-    "code": "/**\n * @param {number[]} nums\n * @param {number} target\n * @return {number}\n */\nvar search = function (nums, target) {\n  return nums.indexOf(target)\n};",
-    "lang": "javascript"
+    "topicTags": "Array, Binary Search"
   },
   {
     "title": "Search Insert Position",
@@ -221,8 +197,7 @@
     "status": "ac",
     "difficulty": "Easy",
     "questionId": "35",
-    "code": "/**\n * @param {number[]} nums\n * @param {number} target\n * @return {number}\n */\nvar searchInsert = function (nums, target) {\n  let i = 0\n  while (i < nums.length) {\n    if (target <= nums[i]) {\n      return i\n    } \n    \n    if (target > nums[nums.length - 1]) {\n      return nums.length\n    }\n    i++\n  }\n};",
-    "lang": "javascript"
+    "topicTags": "Array, Binary Search"
   },
   {
     "title": "Valid Sudoku",
@@ -230,8 +205,15 @@
     "status": "ac",
     "difficulty": "Medium",
     "questionId": "36",
-    "code": "/**\n * @param {character[][]} board\n * @return {boolean}\n */\nvar isValidSudoku = function (board) {\n  const set = new Set()\n  for (let x = 0; x < 9; x++) {\n    for (let y = 0; y < 9; y++) {\n      const num = board[x][y]\n      if (num !== '.') {\n        if (set.has(`row ${x} ${num}`)\n          || set.has(`col ${y} ${num}`)\n          || set.has(`block ${Math.floor(x / 3)} ${Math.floor(y / 3)} ${num}`)\n        ) {\n          return false\n        } else {\n          set.add(`row ${x} ${num}`)\n          set.add(`col ${y} ${num}`)\n          set.add(`block ${Math.floor(x / 3)} ${Math.floor(y / 3)} ${num}`)\n        }\n      }\n    }\n  }\n  return true\n};",
-    "lang": "javascript"
+    "topicTags": "Hash Table"
+  },
+  {
+    "title": "Sudoku Solver",
+    "titleSlug": "sudoku-solver",
+    "status": "ac",
+    "difficulty": "Hard",
+    "questionId": "37",
+    "topicTags": "Hash Table, Backtracking"
   },
   {
     "title": "Count and Say",
@@ -239,8 +221,7 @@
     "status": "ac",
     "difficulty": "Easy",
     "questionId": "38",
-    "code": "const cacheObj = {1: '1'}\n/**\n * @param {number} n\n * @return {string}\n */\nvar countAndSay = function (n) {\n  if (cacheObj[n]) {\n    return cacheObj[n]\n  } else {\n    const findValue = countAndSay(n - 1)\n    let str = ''\n    let tmp = 0\n    for (let i = 0; i < findValue.length; i++) {\n      if (findValue[i] !== findValue[i + 1]) {\n        str += i - tmp + 1\n        str += findValue[i]\n        tmp = i + 1\n      }\n    }\n    cacheObj[n] = str\n    return str\n  }\n};",
-    "lang": "javascript"
+    "topicTags": "String"
   },
   {
     "title": "Combination Sum",
@@ -248,8 +229,7 @@
     "status": "ac",
     "difficulty": "Medium",
     "questionId": "39",
-    "code": "/**\n * @param {number[]} candidates\n * @param {number} target\n * @return {number[][]}\n */\nvar combinationSum = function (candidates, target) {\n  const result = []\n\n  const DFS = function (sum, arr, start) {\n    if (sum === target) {\n      result.push(arr.slice())\n      return\n    }\n    if (sum > target) {\n      return\n    }\n\n    for (let i = start; i < candidates.length; i++) {\n      sum += candidates[i]\n      arr.push(candidates[i])\n      DFS(sum, arr, i)\n      arr.pop(candidates[i])\n      sum -= candidates[i]\n    }\n  }\n\n  DFS(0, [], 0, candidates)\n\n  return result\n};",
-    "lang": "javascript"
+    "topicTags": "Array, Backtracking"
   },
   {
     "title": "Combination Sum II",
@@ -257,8 +237,7 @@
     "status": "ac",
     "difficulty": "Medium",
     "questionId": "40",
-    "code": "/**\n * @param {number[]} candidates\n * @param {number} target\n * @return {number[][]}\n */\nvar combinationSum2 = function (candidates, target) {\n  const result = []\n\n  const sortCandidates = candidates.sort((r1, r2) => r1 - r2)\n  const DFS = function (sum, arr, start) {\n    if (sum === target) {\n      result.push(arr.slice())\n      return\n    }\n    if (sum > target) {\n      return\n    }\n\n    for (let i = start; i < sortCandidates.length; i++) {\n      if (i !== start && sortCandidates[i] === sortCandidates[i - 1]) { // [1,1,2], 3 避免产生两个 [1, 2]\n        continue\n      }\n\n      sum += sortCandidates[i]\n      arr.push(sortCandidates[i])\n      DFS(sum, arr, i + 1)\n      arr.pop(sortCandidates[i])\n      sum -= sortCandidates[i]\n    }\n  }\n\n  DFS(0, [], 0)\n\n  return result\n};",
-    "lang": "javascript"
+    "topicTags": "Array, Backtracking"
   },
   {
     "title": "Permutations",
@@ -266,8 +245,7 @@
     "status": "ac",
     "difficulty": "Medium",
     "questionId": "46",
-    "code": "/**\n * @param {number[]} nums\n * @return {number[][]}\n */\nvar permute = function (nums) {\n  const result = []\n  const DFS = function(arr) {\n    if (arr.length === nums.length) {\n      result.push(arr.slice())\n      return\n    }\n\n    for (let i = 0; i < nums.length; i++) {\n      if (!arr.includes(nums[i])) {\n        arr.push(nums[i])\n        DFS(arr)\n        arr.pop(nums[i])\n      }\n    }\n  }\n\n  DFS([])\n\n  return result\n};",
-    "lang": "javascript"
+    "topicTags": "Backtracking"
   },
   {
     "title": "Permutations II",
@@ -275,8 +253,7 @@
     "status": "ac",
     "difficulty": "Medium",
     "questionId": "47",
-    "code": "/**\n * @param {number[]} nums\n * @return {number[][]}\n */\nvar permuteUnique = function (nums) {\n  const result = []\n  const sortNum = nums.sort()\n  const used = new Array(nums.length).fill(false)\n  const DFS = function (arr) {\n    if (arr.length === sortNum.length) {\n      result.push(arr.slice())\n      return\n    }\n\n    for (let i = 0; i < sortNum.length; i++) {\n      if (i > 0 && sortNum[i] === sortNum[i - 1] && !used[i - 1]) {\n        continue\n      }\n\n      if (!used[i]) {\n        arr.push(sortNum[i])\n        used[i] = true\n        DFS(arr)\n        arr.pop(sortNum[i])\n        used[i] = false\n      }\n    }\n  }\n\n  DFS([])\n\n  return result\n};",
-    "lang": "javascript"
+    "topicTags": "Backtracking"
   },
   {
     "title": "Rotate Image",
@@ -284,8 +261,7 @@
     "status": "ac",
     "difficulty": "Medium",
     "questionId": "48",
-    "code": "/**\n * @param {number[][]} matrix\n * @return {void} Do not return anything, modify matrix in-place instead.\n */\nvar rotate = function (matrix) {\n  matrix.reverse()\n\n  let tmp\n  for (let x = 0; x < matrix.length; x++) {\n    for (let y = 0; y < x; y++) {\n      tmp = matrix[x][y]\n      matrix[x][y] = matrix[y][x]\n      matrix[y][x] = tmp\n    }\n  }\n\n  console.log(matrix)\n};",
-    "lang": "javascript"
+    "topicTags": "Array"
   },
   {
     "title": "Group Anagrams",
@@ -293,8 +269,7 @@
     "status": "ac",
     "difficulty": "Medium",
     "questionId": "49",
-    "code": "/**\n * @param {string[]} strs\n * @return {string[][]}\n */\nvar groupAnagrams = function (strs) {\n  const tmpObj = {}\n\n  for (let i = 0; i < strs.length; i++) {\n    const sortStr = strs[i].split('').sort().join('')\n    if (tmpObj[sortStr]) {\n      tmpObj[sortStr].push(strs[i])\n    } else {\n      tmpObj[sortStr] = [strs[i]]\n    }\n  }\n\n  const result = []\n\n  const keyArr = Object.keys(tmpObj)\n  for (let i = 0; i < keyArr.length; i++) {\n    result.push(tmpObj[keyArr[i]])\n  }\n\n  return result\n}",
-    "lang": "javascript"
+    "topicTags": "Hash Table, String"
   },
   {
     "title": "Pow(x, n)",
@@ -302,8 +277,23 @@
     "status": "ac",
     "difficulty": "Medium",
     "questionId": "50",
-    "code": "/**\n * @param {number} x\n * @param {number} n\n * @return {number}\n */\nvar myPow = function (x, n) {\n  return Math.pow(x, n)\n};",
-    "lang": "javascript"
+    "topicTags": "Math, Binary Search"
+  },
+  {
+    "title": "N-Queens",
+    "titleSlug": "n-queens",
+    "status": "ac",
+    "difficulty": "Hard",
+    "questionId": "51",
+    "topicTags": "Backtracking"
+  },
+  {
+    "title": "N-Queens II",
+    "titleSlug": "n-queens-ii",
+    "status": "ac",
+    "difficulty": "Hard",
+    "questionId": "52",
+    "topicTags": "Backtracking"
   },
   {
     "title": "Rotate List",
@@ -311,8 +301,7 @@
     "status": "ac",
     "difficulty": "Medium",
     "questionId": "61",
-    "code": "/**\n * Definition for singly-linked list.\n * function ListNode(val) {\n *     this.val = val;\n *     this.next = null;\n * }\n */\n/**\n * @param {ListNode} head\n * @param {number} k\n * @return {ListNode}\n */\nvar rotateRight = function(head, k) {\n  const dummy = new ListNode(0)\n  dummy.next = head\n  let count = 0\n  let last = dummy\n  while (last.next) {\n    last = last.next\n    count++\n  }\n\n  if (count === 0 || count === k) return dummy.next\n  const modK = k % count\n  let diff = modK + 1\n\n  let l = dummy\n  let r = dummy\n  while (diff--) {\n    r = r.next\n  }\n\n  while (r) {\n    r = r.next\n    l = l.next\n  }\n\n  last.next = dummy.next\n  dummy.next = l.next\n  l.next = null\n\n  return dummy.next\n}",
-    "lang": "javascript"
+    "topicTags": "Linked List, Two Pointers"
   },
   {
     "title": "Unique Paths",
@@ -320,8 +309,7 @@
     "status": "ac",
     "difficulty": "Medium",
     "questionId": "62",
-    "code": "const cache = {}\n/**\n * @param {number} m\n * @param {number} n\n * @return {number}\n */\nvar uniquePaths = function (m, n) {\n  if (m === 1 || n === 1) {\n    return 1\n  }\n\n  if (cache[`${m}~${n}`]) {\n    return cache[`${m}~${n}`]\n  } else {\n    const nums = uniquePaths(m - 1, n) + uniquePaths(m, n - 1)\n    cache[`${m}~${n}`] = nums\n\n    return nums\n  }\n};",
-    "lang": "javascript"
+    "topicTags": "Array, Dynamic Programming"
   },
   {
     "title": "Minimum Path Sum",
@@ -329,8 +317,7 @@
     "status": "ac",
     "difficulty": "Medium",
     "questionId": "64",
-    "code": "/**\n * @param {number[][]} grid\n * @return {number}\n */\nvar minPathSum = function (grid) {\n  const m = grid.length\n  const n = grid[0].length\n  const cache = {}\n  return findMinCount(m - 1, n - 1, grid, cache)\n}\n\nfunction findMinCount(x, y, grid, cache) {\n  if (cache[`${x}~${y}`]) {\n    if (x === 17) {\n      var test = null\n    }\n    return cache[`${x}~${y}`]\n  }\n\n  let count = 0\n\n  if (x === 0 && y === 0) {\n    count = grid[0][0]\n  } else if (x === 0) {\n    count = findMinCount(0, y - 1, grid, cache) + grid[0][y]\n  } else if (y === 0) {\n    count = findMinCount(x - 1, y, grid, cache) + grid[x][0]\n  }\n\n  if (x > 0 && y > 0) {\n    count = Math.min(findMinCount(x - 1, y, grid, cache), findMinCount(x, y - 1, grid, cache)) + grid[x][y]\n  }\n\n  cache[`${x}~${y}`] = count\n\n  return count\n}",
-    "lang": "javascript"
+    "topicTags": "Array, Dynamic Programming"
   },
   {
     "title": "Plus One",
@@ -338,8 +325,7 @@
     "status": "ac",
     "difficulty": "Easy",
     "questionId": "66",
-    "code": "/**\n * @param {number[]} digits\n * @return {number[]}\n */\nvar plusOne = function (digits) {\n  let length = digits.length\n  let tag = 0\n  while (length) {\n    if (length === digits.length) {\n      if (digits[length - 1] + 1 + tag >= 10) {\n        digits[length - 1] = 0\n        tag = 1\n      } else {\n        digits[length - 1] = digits[length - 1] + 1\n        tag = 0\n        break\n      }\n    } else {\n      if (digits[length - 1] + tag >= 10) {\n        digits[length - 1] = 0\n        tag = 1\n      } else {\n        digits[length - 1] = digits[length - 1] + 1\n        tag = 0\n        break\n      }\n    }\n    length--\n  }\n  if (tag === 1) {\n    digits.unshift(1)\n  }\n  return digits\n};",
-    "lang": "javascript"
+    "topicTags": "Array"
   },
   {
     "title": "Add Binary",
@@ -347,8 +333,7 @@
     "status": "ac",
     "difficulty": "Easy",
     "questionId": "67",
-    "code": "/**\n * @param {string} a\n * @param {string} b\n * @return {string}\n */\nvar addBinary = function (a, b) {\n  const al = a.length, bl = b.length\n  const length = Math.max(al, bl)\n  let tag = 0\n  let str = ''\n\n  for (let i = 0; i < length; i++) {\n    const x = i < al ? +a[al - i - 1] : 0\n    const y = i < bl ? +b[bl - i - 1] : 0\n\n    const addValue = ((x + y + tag === 1) || (x + y + tag === 3)) ? '1' : '0'\n    str += addValue\n\n    if (x + y + tag > 1) {\n      tag = 1\n    } else {\n      tag = 0\n    }\n  }\n\n  if (tag === 1) {\n    str += '1'\n  }\n\n  return str.split('').reverse().join('')\n};",
-    "lang": "javascript"
+    "topicTags": "Math, String"
   },
   {
     "title": "Sqrt(x)",
@@ -356,8 +341,7 @@
     "status": "ac",
     "difficulty": "Easy",
     "questionId": "69",
-    "code": "/**\n * @param {number} x\n * @return {number}\n */\nvar mySqrt = function (x) {\n  return +Math.sqrt(x).toString().split('.')[0]\n};",
-    "lang": "javascript"
+    "topicTags": "Math, Binary Search"
   },
   {
     "title": "Climbing Stairs",
@@ -365,8 +349,7 @@
     "status": "ac",
     "difficulty": "Easy",
     "questionId": "70",
-    "code": "const obj = {}\n\n/**\n * @param {number} n\n * @return {number}\n */\nvar climbStairs = function (n) {\n  if (n === 1) { return 1 }\n  if (n === 2) { return 2 }\n\n  if (obj[n]) {\n    return obj[n]\n  } else {\n    obj[n] = climbStairs(n - 1) + climbStairs(n - 2)\n    return obj[n]\n  }\n};",
-    "lang": "javascript"
+    "topicTags": "Dynamic Programming"
   },
   {
     "title": "Simplify Path",
@@ -374,8 +357,7 @@
     "status": "ac",
     "difficulty": "Medium",
     "questionId": "71",
-    "code": "/**\n * @param {string} path\n * @return {string}\n */\nvar simplifyPath = function(path) {\n  const pathArr = path.split('/')\n  const stack = []\n  for (let i = 0; i < pathArr.length; i++) {\n    if (pathArr[i] === '..') {\n      stack.pop()\n    } else if (pathArr[i] === '.' || pathArr[i] === '') {\n      continue\n    } else {\n      stack.push(pathArr[i])\n    }\n  }\n\n  return `/${stack.join('/')}`\n}",
-    "lang": "javascript"
+    "topicTags": "Stack, String"
   },
   {
     "title": "Sort Colors",
@@ -383,8 +365,15 @@
     "status": "ac",
     "difficulty": "Medium",
     "questionId": "75",
-    "code": "/**\n * @param {number[]} nums\n * @return {void} Do not return anything, modify nums in-place instead.\n */\nvar sortColors = function (nums) {\n  let countObj = {}\n  for (let i = 0; i < nums.length; i++) {\n    const key = nums[i]\n    if (typeof(countObj[`${key}`]) === 'number') {\n      countObj[`${key}`] = countObj[`${key}`] + 1\n    } else {\n      countObj[`${key}`] = 1\n    }\n  }\n\n  const count0 = countObj[0] || 0\n  const count1 = countObj[1] || 0\n  const count2 = countObj[2] || 0\n  for (let i = 0; i < count0 + count1 + count2; i++) {\n    if (i < count0) {\n      nums[i] = 0\n    } else if (i >=count0 && i < count0 + count1) {\n      nums[i] = 1\n    } else if (i >= count1 && i < count0 + count1 + count2) {\n      nums[i] = 2\n    }\n  }\n}",
-    "lang": "javascript"
+    "topicTags": "Sort, Array, Two Pointers"
+  },
+  {
+    "title": "Combinations",
+    "titleSlug": "combinations",
+    "status": "ac",
+    "difficulty": "Medium",
+    "questionId": "77",
+    "topicTags": "Backtracking"
   },
   {
     "title": "Subsets",
@@ -392,8 +381,15 @@
     "status": "ac",
     "difficulty": "Medium",
     "questionId": "78",
-    "code": "/**\n * @param {number[]} nums\n * @return {number[][]}\n */\nvar subsets = function (nums) {\n  const list = []\n  const tmpList = []\n\n  backTrack(list, tmpList, nums, 0)\n\n  return list\n};\n\nfunction backTrack(list, tmpList, nums, start) {\n  list.push(tmpList.slice())\n\n  for (let i = start; i < nums.length; i++) {\n    tmpList.push(nums[i])\n    backTrack(list, tmpList, nums, i + 1)\n    tmpList.splice(tmpList.length - 1, 1)\n  }\n}",
-    "lang": "javascript"
+    "topicTags": "Bit Manipulation, Array, Backtracking"
+  },
+  {
+    "title": "Word Search",
+    "titleSlug": "word-search",
+    "status": "ac",
+    "difficulty": "Medium",
+    "questionId": "79",
+    "topicTags": "Array, Backtracking"
   },
   {
     "title": "Remove Duplicates from Sorted Array II",
@@ -401,8 +397,7 @@
     "status": "ac",
     "difficulty": "Medium",
     "questionId": "80",
-    "code": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar removeDuplicates = function(nums) {\n  if (nums.length <= 2) return nums.length\n  let cur = 1 // 新数组的下标位数\n  for (let i = 2; i < nums.length; i++) {\n    // 对题目中每个元素最多出现两次的条件作限制\n    if (nums[i] !== nums[cur - 1]) {\n      nums[cur + 1] = nums[i]\n      cur++\n    }\n  }\n  return cur + 1\n}",
-    "lang": "javascript"
+    "topicTags": "Array, Two Pointers"
   },
   {
     "title": "Remove Duplicates from Sorted List II",
@@ -410,8 +405,7 @@
     "status": "ac",
     "difficulty": "Medium",
     "questionId": "82",
-    "code": "/**\n * Definition for singly-linked list.\n * function ListNode(val) {\n *     this.val = val;\n *     this.next = null;\n * }\n */\n/**\n * @param {ListNode} head\n * @return {ListNode}\n */\nvar deleteDuplicates = function(head) {\n  const dummyHead = new ListNode(0)\n  dummyHead.next = head\n\n  let slowPoint = dummyHead\n\n  while(slowPoint.next) {\n    let cur = slowPoint.next\n    let quickPoint = cur\n    while(quickPoint.next && quickPoint.next.val === cur.val) {\n      quickPoint = quickPoint.next\n    }\n\n    if (cur === quickPoint) {\n      slowPoint = slowPoint.next\n    } else {\n      slowPoint.next = quickPoint.next\n    }\n  }\n\n  return dummyHead.next\n}",
-    "lang": "javascript"
+    "topicTags": "Linked List"
   },
   {
     "title": "Remove Duplicates from Sorted List",
@@ -419,8 +413,7 @@
     "status": "ac",
     "difficulty": "Easy",
     "questionId": "83",
-    "code": "/**\n * Definition for singly-linked list.\n * function ListNode(val) {\n *     this.val = val;\n *     this.next = null;\n * }\n */\n/**\n * @param {ListNode} head\n * @return {ListNode}\n */\nvar deleteDuplicates = function(head) {\n  const listNode = new ListNode(0)\n  listNode.next = head\n  let cur = listNode.next\n  while (cur) {\n    let next = cur.next\n    while (next && next.val === cur.val) {\n      next = next.next\n    }\n    cur.next = next\n    cur = cur.next\n  }\n  return listNode.next\n}",
-    "lang": "javascript"
+    "topicTags": "Linked List"
   },
   {
     "title": "Partition List",
@@ -428,8 +421,7 @@
     "status": "ac",
     "difficulty": "Medium",
     "questionId": "86",
-    "code": "/**\n * Definition for singly-linked list.\n * function ListNode(val) {\n *     this.val = val;\n *     this.next = null;\n * }\n */\n/**\n * @param {ListNode} head\n * @param {number} x\n * @return {ListNode}\n */\nvar partition = function(head, x) {\n  const listNode = new ListNode(0)\n  listNode.next = head\n\n  const smallerThanX = new ListNode(0)\n  const biggerThanX = new ListNode(0)\n\n  let cur = listNode.next\n  let smallPoint = smallerThanX\n  let bigPoint = biggerThanX\n  while (cur) {\n    if (cur.val < x) {\n      smallPoint.next = cur\n      smallPoint = smallPoint.next\n    } else {\n      bigPoint.next = cur\n      bigPoint = bigPoint.next\n    }\n\n    cur = cur.next\n  }\n\n  bigPoint.next = null\n  smallPoint.next = biggerThanX.next\n\n  return smallerThanX.next\n}",
-    "lang": "javascript"
+    "topicTags": "Linked List, Two Pointers"
   },
   {
     "title": "Merge Sorted Array",
@@ -437,8 +429,7 @@
     "status": "ac",
     "difficulty": "Easy",
     "questionId": "88",
-    "code": "/**\n * @param {number[]} nums1\n * @param {number} m\n * @param {number[]} nums2\n * @param {number} n\n * @return {void} Do not return anything, modify nums1 in-place instead.\n */\nvar merge = function(nums1, m, nums2, n) {\n  let l = 0 // 第一个数组下标\n  let r = 0 // 第二个数组下标\n  const arr = []\n\n  while (l < m && r < n) {\n    if (nums1[l] <= nums2[r]) {\n      arr.push(nums1[l])\n      l++\n    } else if (nums1[l] > nums2[r]) {\n      arr.push(nums2[r])\n      r++\n    }\n  }\n\n  while (l < m) {\n    arr.push(nums1[l])\n    l++\n  }\n\n  while (r < n) {\n    arr.push(nums2[r])\n    r++\n  }\n\n  for (let i = 0; i < m + n; i++) {\n    nums1[i] = arr[i]\n  }\n}",
-    "lang": "javascript"
+    "topicTags": "Array, Two Pointers"
   },
   {
     "title": "Gray Code",
@@ -446,8 +437,15 @@
     "status": "ac",
     "difficulty": "Medium",
     "questionId": "89",
-    "code": "/**\n * @param {number} n\n * @return {number[]}\n */\nvar grayCode = function (n) {\n  const arr = new Array()\n  arr[0] = [0]\n  for (let i = 1; i <= n; i++) {\n    const newArr = arr[i - 1].slice().reverse().map(r => r + Math.pow(2, i - 1))\n    arr[i] = [...arr[i - 1], ...newArr]\n  }\n  return arr[n]\n}",
-    "lang": "javascript"
+    "topicTags": "Backtracking"
+  },
+  {
+    "title": "Subsets II",
+    "titleSlug": "subsets-ii",
+    "status": "ac",
+    "difficulty": "Medium",
+    "questionId": "90",
+    "topicTags": "Array, Backtracking"
   },
   {
     "title": "Reverse Linked List II",
@@ -455,8 +453,7 @@
     "status": "ac",
     "difficulty": "Medium",
     "questionId": "92",
-    "code": "/**\n * Definition for singly-linked list.\n * function ListNode(val) {\n *     this.val = val;\n *     this.next = null;\n * }\n */\n/**\n * @param {ListNode} head\n * @param {number} m\n * @param {number} n\n * @return {ListNode}\n */\nvar reverseBetween = function(head, m, n) {\n  const originList = new ListNode(0)\n  originList.next = head\n\n  let listNode = originList\n\n  for (let i = 0; i < m - 1; i++) {\n    listNode = listNode.next\n  }\n\n  let prev = null\n  let cur = listNode.next\n\n  for (let i = 0; i < n - m + 1; i++) {\n    let next = cur.next\n\n    cur.next = prev\n    prev = cur\n    cur = next\n  }\n\n  listNode.next.next = cur\n  listNode.next = prev\n  return originList.next\n}",
-    "lang": "javascript"
+    "topicTags": "Linked List"
   },
   {
     "title": "Restore IP Addresses",
@@ -464,8 +461,7 @@
     "status": "ac",
     "difficulty": "Medium",
     "questionId": "93",
-    "code": "/**\n * @param {string} s\n * @return {string[]}\n */\nvar restoreIpAddresses = function (s) {\n  const arr = []\n  for (let i = 1; i < 4; i++) {\n    for (let j = i + 1; j < i + 5; j++) {\n      for (let z = j + 1; z < j + 5; z++) {\n        const a = s.slice(0, i)\n        const b = s.slice(i, j)\n        const c = s.slice(j, z)\n        const d = s.slice(z, s.length)\n        if (validate(a) && validate(b) && validate(c) && validate(d)) {\n          arr.push(`${a}.${b}.${c}.${d}`)\n        }\n      }\n    }\n  }\n  return arr\n};\n\nvar validate = function (value) {\n  if (value.length > 3 || value.length === 0 || +value > 255 || (value[0] === '0' && value.length > 1)) {\n    return false\n  }\n  return true\n}",
-    "lang": "javascript"
+    "topicTags": "String, Backtracking"
   },
   {
     "title": "Binary Tree Inorder Traversal",
@@ -473,8 +469,15 @@
     "status": "ac",
     "difficulty": "Medium",
     "questionId": "94",
-    "code": "/**\n * Definition for a binary tree node.\n * function TreeNode(val) {\n *     this.val = val;\n *     this.left = this.right = null;\n * }\n */\n/**\n * @param {TreeNode} root\n * @return {number[]}\n */\nvar inorderTraversal = function(root) {\n  const printArr = []\n  if (!root) return printArr\n  const stack = []\n  stack.push({\n    color: 'white',\n    node: root\n  })\n\n  while (stack.length > 0) {\n    const pickValue = stack.pop()\n    const { color, node } = pickValue\n    if (color === 'gray') {\n      printArr.push(node.val)\n    } else {\n      node.right && stack.push({ color: 'white', node: node.right })\n      stack.push({ color: 'gray', node })\n      node.left && stack.push({ color: 'white', node: node.left })\n    }\n  }\n\n  return printArr\n}",
-    "lang": "javascript"
+    "topicTags": "Stack, Tree, Hash Table"
+  },
+  {
+    "title": "Validate Binary Search Tree",
+    "titleSlug": "validate-binary-search-tree",
+    "status": "ac",
+    "difficulty": "Medium",
+    "questionId": "98",
+    "topicTags": "Tree, Depth-first Search, Recursion"
   },
   {
     "title": "Same Tree",
@@ -482,8 +485,7 @@
     "status": "ac",
     "difficulty": "Easy",
     "questionId": "100",
-    "code": "/**\n * Definition for a binary tree node.\n * function TreeNode(val) {\n *     this.val = val;\n *     this.left = this.right = null;\n * }\n */\n/**\n * @param {TreeNode} p\n * @param {TreeNode} q\n * @return {boolean}\n */\nvar isSameTree = function (p, q) {\n  if (p === null && q === null) {\n    return true\n  } else if (p === null || q === null) {\n    return false\n  } \n  \n  if (p.val === q.val) {\n    return isSameTree(p.left, q.left) && isSameTree(p.right, q.right)\n  } else {\n    return false\n  }\n};\n",
-    "lang": "javascript"
+    "topicTags": "Tree, Depth-first Search"
   },
   {
     "title": "Symmetric Tree",
@@ -491,8 +493,7 @@
     "status": "ac",
     "difficulty": "Easy",
     "questionId": "101",
-    "code": "/**\n * Definition for a binary tree node.\n * function TreeNode(val) {\n *     this.val = val;\n *     this.left = this.right = null;\n * }\n */\n/**\n * @param {TreeNode} root\n * @return {boolean}\n */\nvar isSymmetric = function (root) {\n  if (!root) return true\n  if (!root.left && !root.right) return true\n  if (root.left && root.right && root.left.val !== root.right.val) return false\n\n  const stack = []\n\n  stack.push(root.right)\n  stack.push(root.left)\n\n  while (stack.length > 0) {\n    const popItemLeft = stack.pop()\n    const popItemRight = stack.pop()\n\n    if (!popItemLeft && !popItemRight) continue\n    if (!popItemLeft || !popItemRight || popItemLeft.val !== popItemRight.val) return false\n\n    stack.push(popItemRight.right, popItemLeft.left, popItemRight.left, popItemLeft.right)\n  }\n\n  return true\n};",
-    "lang": "javascript"
+    "topicTags": "Tree, Depth-first Search, Breadth-first Search"
   },
   {
     "title": "Binary Tree Level Order Traversal",
@@ -500,8 +501,7 @@
     "status": "ac",
     "difficulty": "Medium",
     "questionId": "102",
-    "code": "/**\n * Definition for a binary tree node.\n * function TreeNode(val) {\n *     this.val = val;\n *     this.left = this.right = null;\n * }\n */\n/**\n * @param {TreeNode} root\n * @return {number[][]}\n */\nvar levelOrder = function(root) {\n  const printArr = []\n  if (!root) return printArr\n  const list = []\n  list.push({ node: root, level: 0 })\n  while (list.length > 0) {\n    const { node, level } = list.shift()\n    if (!printArr[level]) {\n      printArr[level] = []\n    }\n    printArr[level].push(node.val)\n    node.left && list.push({ node: node.left, level: level + 1 })\n    node.right && list.push({ node: node.right, level: level + 1 })\n  }\n  return printArr\n}",
-    "lang": "javascript"
+    "topicTags": "Tree, Breadth-first Search"
   },
   {
     "title": "Binary Tree Zigzag Level Order Traversal",
@@ -509,8 +509,7 @@
     "status": "ac",
     "difficulty": "Medium",
     "questionId": "103",
-    "code": "/**\n * Definition for a binary tree node.\n * function TreeNode(val) {\n *     this.val = val;\n *     this.left = this.right = null;\n * }\n */\n/**\n * @param {TreeNode} root\n * @return {number[][]}\n */\nvar zigzagLevelOrder = function(root) {\n  const printArr = []\n  if (!root) return printArr\n  const list = []\n  list.push({ level: 0, node: root })\n  while(list.length > 0) {\n    const { level, node } = list.shift()\n    if (!printArr[level]) {\n      printArr[level] = []\n    }\n\n    if (level % 2 === 0) {\n      printArr[level].push(node.val)\n    } else {\n      printArr[level].unshift(node.val)\n    }\n\n    node.left && list.push({ level: level + 1, node: node.left })\n    node.right && list.push({ level: level + 1, node: node.right })\n  }\n\n  return printArr\n}",
-    "lang": "javascript"
+    "topicTags": "Stack, Tree, Breadth-first Search"
   },
   {
     "title": "Maximum Depth of Binary Tree",
@@ -518,17 +517,23 @@
     "status": "ac",
     "difficulty": "Easy",
     "questionId": "104",
-    "code": "/**\n * Definition for a binary tree node.\n * function TreeNode(val) {\n *     this.val = val;\n *     this.left = this.right = null;\n * }\n */\n/**\n * @param {TreeNode} root\n * @return {number}\n */\nvar maxDepth = function (root) {\n  return root === null ? 0 : Math.max(maxDepth(root.left), maxDepth(root.right)) + 1\n};\n\n",
-    "lang": "javascript"
+    "topicTags": "Tree, Depth-first Search, Recursion"
   },
   {
     "title": "Binary Tree Level Order Traversal II",
     "titleSlug": "binary-tree-level-order-traversal-ii",
     "status": "ac",
-    "difficulty": "Easy",
+    "difficulty": "Medium",
     "questionId": "107",
-    "code": "/**\n * Definition for a binary tree node.\n * function TreeNode(val) {\n *     this.val = val;\n *     this.left = this.right = null;\n * }\n */\n/**\n * @param {TreeNode} root\n * @return {number[][]}\n */\nvar levelOrderBottom = function(root) {\n  const printArr = []\n  if (!root) return printArr\n  const list = []\n  list.push({ node: root, level: 0 })\n  while (list.length > 0) {\n    const { node, level } = list.shift()\n    if (!printArr[level]) {\n      printArr.unshift([])\n    }\n    printArr[0].push(node.val)\n    node.left && (list.push({ node: node.left, level: level + 1 }))\n    node.right && (list.push({ node: node.right, level: level + 1 }))\n  }\n  return printArr\n}",
-    "lang": "javascript"
+    "topicTags": "Tree, Breadth-first Search"
+  },
+  {
+    "title": "Convert Sorted Array to Binary Search Tree",
+    "titleSlug": "convert-sorted-array-to-binary-search-tree",
+    "status": "ac",
+    "difficulty": "Easy",
+    "questionId": "108",
+    "topicTags": "Tree, Depth-first Search"
   },
   {
     "title": "Balanced Binary Tree",
@@ -536,8 +541,7 @@
     "status": "ac",
     "difficulty": "Easy",
     "questionId": "110",
-    "code": "/**\n * Definition for a binary tree node.\n * function TreeNode(val) {\n *     this.val = val;\n *     this.left = this.right = null;\n * }\n */\n/**\n * @param {TreeNode} root\n * @return {boolean}\n */\nvar isBalanced = function(root) {\n  return deep(root) === -1 ? false : true\n};\n\nvar deep = (node) => {\n  if (!node) return 0\n  const leftNode = deep(node.left)\n  if (leftNode === -1) return -1\n  const rightNode = deep(node.right)\n  if (rightNode === -1) return -1\n  return Math.abs(leftNode - rightNode) <= 1 ? Math.max(leftNode, rightNode) + 1 : -1\n}",
-    "lang": "javascript"
+    "topicTags": "Tree, Depth-first Search, Recursion"
   },
   {
     "title": "Minimum Depth of Binary Tree",
@@ -545,7 +549,7 @@
     "status": "ac",
     "difficulty": "Easy",
     "questionId": "111",
-    "lang": "javascript"
+    "topicTags": "Tree, Depth-first Search, Breadth-first Search"
   },
   {
     "title": "Path Sum",
@@ -553,7 +557,7 @@
     "status": "ac",
     "difficulty": "Easy",
     "questionId": "112",
-    "lang": "javascript"
+    "topicTags": "Tree, Depth-first Search"
   },
   {
     "title": "Path Sum II",
@@ -561,7 +565,15 @@
     "status": "ac",
     "difficulty": "Medium",
     "questionId": "113",
-    "lang": "javascript"
+    "topicTags": "Tree, Depth-first Search"
+  },
+  {
+    "title": "Triangle",
+    "titleSlug": "triangle",
+    "status": "ac",
+    "difficulty": "Medium",
+    "questionId": "120",
+    "topicTags": "Array, Dynamic Programming"
   },
   {
     "title": "Best Time to Buy and Sell Stock",
@@ -569,7 +581,7 @@
     "status": "ac",
     "difficulty": "Easy",
     "questionId": "121",
-    "lang": "javascript"
+    "topicTags": "Array, Dynamic Programming"
   },
   {
     "title": "Valid Palindrome",
@@ -577,15 +589,15 @@
     "status": "ac",
     "difficulty": "Easy",
     "questionId": "125",
-    "lang": "javascript"
+    "topicTags": "Two Pointers, String"
   },
   {
     "title": "Word Ladder",
     "titleSlug": "word-ladder",
     "status": "ac",
-    "difficulty": "Medium",
+    "difficulty": "Hard",
     "questionId": "127",
-    "lang": "javascript"
+    "topicTags": "Breadth-first Search"
   },
   {
     "title": "Sum Root to Leaf Numbers",
@@ -593,7 +605,23 @@
     "status": "ac",
     "difficulty": "Medium",
     "questionId": "129",
-    "lang": "javascript"
+    "topicTags": "Tree, Depth-first Search"
+  },
+  {
+    "title": "Surrounded Regions",
+    "titleSlug": "surrounded-regions",
+    "status": "ac",
+    "difficulty": "Medium",
+    "questionId": "130",
+    "topicTags": "Depth-first Search, Breadth-first Search, Union Find"
+  },
+  {
+    "title": "Palindrome Partitioning",
+    "titleSlug": "palindrome-partitioning",
+    "status": "ac",
+    "difficulty": "Medium",
+    "questionId": "131",
+    "topicTags": "Depth-first Search, Dynamic Programming, Backtracking"
   },
   {
     "title": "Reorder List",
@@ -601,7 +629,7 @@
     "status": "ac",
     "difficulty": "Medium",
     "questionId": "143",
-    "lang": "javascript"
+    "topicTags": "Linked List"
   },
   {
     "title": "Binary Tree Preorder Traversal",
@@ -609,7 +637,7 @@
     "status": "ac",
     "difficulty": "Medium",
     "questionId": "144",
-    "lang": "javascript"
+    "topicTags": "Stack, Tree"
   },
   {
     "title": "Binary Tree Postorder Traversal",
@@ -617,7 +645,7 @@
     "status": "ac",
     "difficulty": "Medium",
     "questionId": "145",
-    "lang": "javascript"
+    "topicTags": "Stack, Tree"
   },
   {
     "title": "Insertion Sort List",
@@ -625,7 +653,7 @@
     "status": "ac",
     "difficulty": "Medium",
     "questionId": "147",
-    "lang": "javascript"
+    "topicTags": "Sort, Linked List"
   },
   {
     "title": "Sort List",
@@ -633,7 +661,7 @@
     "status": "ac",
     "difficulty": "Medium",
     "questionId": "148",
-    "lang": "javascript"
+    "topicTags": "Sort, Linked List"
   },
   {
     "title": "Max Points on a Line",
@@ -641,7 +669,7 @@
     "status": "ac",
     "difficulty": "Hard",
     "questionId": "149",
-    "lang": "javascript"
+    "topicTags": "Hash Table, Math"
   },
   {
     "title": "Evaluate Reverse Polish Notation",
@@ -649,7 +677,7 @@
     "status": "ac",
     "difficulty": "Medium",
     "questionId": "150",
-    "lang": "javascript"
+    "topicTags": "Stack"
   },
   {
     "title": "Reverse Words in a String",
@@ -657,7 +685,7 @@
     "status": "ac",
     "difficulty": "Medium",
     "questionId": "151",
-    "lang": "javascript"
+    "topicTags": "String"
   },
   {
     "title": "Two Sum II - Input array is sorted",
@@ -665,7 +693,7 @@
     "status": "ac",
     "difficulty": "Easy",
     "questionId": "167",
-    "lang": "javascript"
+    "topicTags": "Array, Two Pointers, Binary Search"
   },
   {
     "title": "Binary Tree Right Side View",
@@ -673,7 +701,15 @@
     "status": "ac",
     "difficulty": "Medium",
     "questionId": "199",
-    "lang": "javascript"
+    "topicTags": "Tree, Depth-first Search, Breadth-first Search, Recursion, Queue"
+  },
+  {
+    "title": "Number of Islands",
+    "titleSlug": "number-of-islands",
+    "status": "ac",
+    "difficulty": "Medium",
+    "questionId": "200",
+    "topicTags": "Depth-first Search, Breadth-first Search, Union Find"
   },
   {
     "title": "Happy Number",
@@ -681,7 +717,7 @@
     "status": "ac",
     "difficulty": "Easy",
     "questionId": "202",
-    "lang": "javascript"
+    "topicTags": "Hash Table, Math"
   },
   {
     "title": "Remove Linked List Elements",
@@ -689,7 +725,7 @@
     "status": "ac",
     "difficulty": "Easy",
     "questionId": "203",
-    "lang": "javascript"
+    "topicTags": "Linked List"
   },
   {
     "title": "Isomorphic Strings",
@@ -697,7 +733,7 @@
     "status": "ac",
     "difficulty": "Easy",
     "questionId": "205",
-    "lang": "javascript"
+    "topicTags": "Hash Table"
   },
   {
     "title": "Reverse Linked List",
@@ -705,7 +741,7 @@
     "status": "ac",
     "difficulty": "Easy",
     "questionId": "206",
-    "lang": "javascript"
+    "topicTags": "Linked List"
   },
   {
     "title": "Minimum Size Subarray Sum",
@@ -713,7 +749,7 @@
     "status": "ac",
     "difficulty": "Medium",
     "questionId": "209",
-    "lang": "javascript"
+    "topicTags": "Array, Two Pointers, Binary Search"
   },
   {
     "title": "Kth Largest Element in an Array",
@@ -721,7 +757,15 @@
     "status": "ac",
     "difficulty": "Medium",
     "questionId": "215",
-    "lang": "javascript"
+    "topicTags": "Heap, Divide and Conquer"
+  },
+  {
+    "title": "Combination Sum III",
+    "titleSlug": "combination-sum-iii",
+    "status": "ac",
+    "difficulty": "Medium",
+    "questionId": "216",
+    "topicTags": "Array, Backtracking"
   },
   {
     "title": "Contains Duplicate",
@@ -729,7 +773,7 @@
     "status": "ac",
     "difficulty": "Easy",
     "questionId": "217",
-    "lang": "javascript"
+    "topicTags": "Array, Hash Table"
   },
   {
     "title": "Contains Duplicate II",
@@ -737,7 +781,7 @@
     "status": "ac",
     "difficulty": "Easy",
     "questionId": "219",
-    "lang": "javascript"
+    "topicTags": "Array, Hash Table"
   },
   {
     "title": "Contains Duplicate III",
@@ -745,7 +789,7 @@
     "status": "ac",
     "difficulty": "Medium",
     "questionId": "220",
-    "lang": "javascript"
+    "topicTags": "Sort, Ordered Map"
   },
   {
     "title": "Count Complete Tree Nodes",
@@ -753,7 +797,7 @@
     "status": "ac",
     "difficulty": "Medium",
     "questionId": "222",
-    "lang": "javascript"
+    "topicTags": "Tree, Binary Search"
   },
   {
     "title": "Invert Binary Tree",
@@ -761,7 +805,15 @@
     "status": "ac",
     "difficulty": "Easy",
     "questionId": "226",
-    "lang": "javascript"
+    "topicTags": "Tree"
+  },
+  {
+    "title": "Kth Smallest Element in a BST",
+    "titleSlug": "kth-smallest-element-in-a-bst",
+    "status": "ac",
+    "difficulty": "Medium",
+    "questionId": "230",
+    "topicTags": "Tree, Binary Search"
   },
   {
     "title": "Palindrome Linked List",
@@ -769,7 +821,23 @@
     "status": "ac",
     "difficulty": "Easy",
     "questionId": "234",
-    "lang": "javascript"
+    "topicTags": "Linked List, Two Pointers"
+  },
+  {
+    "title": "Lowest Common Ancestor of a Binary Search Tree",
+    "titleSlug": "lowest-common-ancestor-of-a-binary-search-tree",
+    "status": "ac",
+    "difficulty": "Easy",
+    "questionId": "235",
+    "topicTags": "Tree"
+  },
+  {
+    "title": "Lowest Common Ancestor of a Binary Tree",
+    "titleSlug": "lowest-common-ancestor-of-a-binary-tree",
+    "status": "ac",
+    "difficulty": "Medium",
+    "questionId": "236",
+    "topicTags": "Tree"
   },
   {
     "title": "Delete Node in a Linked List",
@@ -777,8 +845,7 @@
     "status": "ac",
     "difficulty": "Easy",
     "questionId": "237",
-    "code": "/**\n * Definition for singly-linked list.\n * function ListNode(val) {\n *     this.val = val;\n *     this.next = null;\n * }\n */\n/**\n * @param {ListNode} node\n * @return {void} Do not return anything, modify node in-place instead.\n */\nvar deleteNode = function(node) {\n  node.val = node.next.val\n  node.next = node.next.next\n}",
-    "lang": "javascript"
+    "topicTags": "Linked List"
   },
   {
     "title": "Valid Anagram",
@@ -786,8 +853,7 @@
     "status": "ac",
     "difficulty": "Easy",
     "questionId": "242",
-    "code": "/**\n * @param {string} s\n * @param {string} t\n * @return {boolean}\n */\nvar isAnagram = function(s, t) {\n  const map = new Map()\n  for (let i = 0; i < s.length; i++) {\n    const getMap = map.get(s[i])\n    if (!getMap) {\n      map.set(s[i], 1)\n    } else {\n      map.set(s[i], getMap + 1)\n    }\n  }\n\n  for (let i = 0; i < t.length; i++) {\n    const getMap = map.get(t[i])\n    if (getMap === 1) {\n      map.delete(t[i])\n    } else if (getMap) {\n      map.set(t[i], getMap - 1)\n    } else {\n      map.set(t[i], 1)\n    }\n  }\n\n  if (map.size) {\n    return false\n  } else {\n    return true\n  }\n};",
-    "lang": "javascript"
+    "topicTags": "Sort, Hash Table"
   },
   {
     "title": "Binary Tree Paths",
@@ -795,8 +861,7 @@
     "status": "ac",
     "difficulty": "Easy",
     "questionId": "257",
-    "code": "/**\n * Definition for a binary tree node.\n * function TreeNode(val) {\n *     this.val = val;\n *     this.left = this.right = null;\n * }\n */\n/**\n * @param {TreeNode} root\n * @return {string[]}\n */\nvar binaryTreePaths = function(root) {\n  const result = []\n  if (!root) return result\n\n  printTreePaths(root, result, '')\n  return result\n}\n\nvar printTreePaths = function(node, result, str) {\n  if (!node.left && !node.right) {\n    str += `${node.val}`\n    result.push(str)\n    return\n  }\n\n  str += `${node.val}->`\n\n  if (node.left) {\n    printTreePaths(node.left, result, str)\n  }\n\n  if (node.right) {\n    printTreePaths(node.right, result, str)\n  }\n}",
-    "lang": "javascript"
+    "topicTags": "Tree, Depth-first Search"
   },
   {
     "title": "Perfect Squares",
@@ -804,8 +869,7 @@
     "status": "ac",
     "difficulty": "Medium",
     "questionId": "279",
-    "code": "/**\n * @param {number} n\n * @return {number}\n */\nvar numSquares = function(n) {\n  const list = []\n  list.push({ num: n, step: 0 })\n  const visitedObj = { [n]: true }\n  while (list.length > 0) {\n    const { num, step, visited } = list.shift()\n    for (let i = 1;; i++) {\n      const extraNum = num - i * i\n      if (extraNum < 0) break\n      if (extraNum === 0) return step + 1\n      if (!visitedObj[extraNum]) {\n        visitedObj[extraNum] = true\n        list.push({ num: num - i * i, step: step + 1 })\n      }\n    }\n  }\n}",
-    "lang": "javascript"
+    "topicTags": "Breadth-first Search, Math, Dynamic Programming"
   },
   {
     "title": "Move Zeroes",
@@ -813,8 +877,7 @@
     "status": "ac",
     "difficulty": "Easy",
     "questionId": "283",
-    "code": "/**\n * @param {number[]} nums\n * @return {void} Do not return anything, modify nums in-place instead.\n */\nvar moveZeroes = function(nums) {\n  const length = nums.length\n  let count = 0               // 0 的个数\n  for (let i = 0; i < length; i++) {\n    if (nums[i - count] === 0) {\n      nums.splice(i - count, 1)\n      count++\n    }\n  }\n  for (let i = 0; i < count; i++) {\n    nums.push(0)\n  }\n  return nums\n}",
-    "lang": "javascript"
+    "topicTags": "Array, Two Pointers"
   },
   {
     "title": "Word Pattern",
@@ -822,8 +885,7 @@
     "status": "ac",
     "difficulty": "Easy",
     "questionId": "290",
-    "code": "/**\n * @param {string} pattern\n * @param {string} str\n * @return {boolean}\n */\nvar wordPattern = function(pattern, str) {\n  const strArr = str.split(' ')\n  if (pattern.length !== strArr.length) return false\n\n  const patternMap = new Map()\n  const strArrMap = new Map()\n\n  for (let i = 0; i < pattern.length; i++) {\n    const getPatternMap = patternMap.get(pattern[i])\n    const getStrArrMap = strArrMap.get(strArr[i])\n    if (!getPatternMap) {\n      patternMap.set(pattern[i], strArr[i])\n    } else if (getPatternMap !== strArr[i]) {\n      return false\n    }\n\n    if (!getStrArrMap) {\n      strArrMap.set(strArr[i], pattern[i])\n    } else if (getStrArrMap !== pattern[i]) {\n      return false\n    }\n  }\n\n  return true\n};",
-    "lang": "javascript"
+    "topicTags": "Hash Table"
   },
   {
     "title": "Odd Even Linked List",
@@ -831,8 +893,7 @@
     "status": "ac",
     "difficulty": "Medium",
     "questionId": "328",
-    "code": "/**\n * Definition for singly-linked list.\n * function ListNode(val) {\n *     this.val = val;\n *     this.next = null;\n * }\n */\n/**\n * @param {ListNode} head\n * @return {ListNode}\n */\nvar oddEvenList = function(head) {\n  if (!head) return head\n  const list = new ListNode(0)\n  list.next = head\n  const odd = list.next\n  const even = odd.next\n\n  let prev = null\n  let cur = list.next\n  let next = cur.next\n  let count = 1\n\n  while (next) {\n    prev && (prev.next = next)\n    prev = cur\n    cur = next\n    next = cur.next\n    count++\n  }\n\n  if (count % 2 === 1) {\n    prev && (prev.next = null)\n    cur.next = even\n  } else {\n    prev.next = even\n  }\n\n  return odd\n}",
-    "lang": "javascript"
+    "topicTags": "Linked List"
   },
   {
     "title": "Flatten Nested List Iterator",
@@ -840,8 +901,7 @@
     "status": "ac",
     "difficulty": "Medium",
     "questionId": "341",
-    "code": "/**\n * // This is the interface that allows for creating nested lists.\n * // You should not implement it, or speculate about its implementation\n * function NestedInteger() {\n *\n *     Return true if this NestedInteger holds a single integer, rather than a nested list.\n *     @return {boolean}\n *     this.isInteger = function() {\n *         ...\n *     };\n *\n *     Return the single integer that this NestedInteger holds, if it holds a single integer\n *     Return null if this NestedInteger holds a nested list\n *     @return {integer}\n *     this.getInteger = function() {\n *         ...\n *     };\n *\n *     Return the nested list that this NestedInteger holds, if it holds a nested list\n *     Return null if this NestedInteger holds a single integer\n *     @return {NestedInteger[]}\n *     this.getList = function() {\n *         ...\n *     };\n * };\n */\n/**\n * @constructor\n * @param {NestedInteger[]} nestedList\n */\nvar NestedIterator = function(nestedList) {\n  this.printArr = []\n  if (!nestedList) return\n  this.stackList = []\n  this.stackList.push({ color: 'gray', list: nestedList })\n  while (this.stackList.length > 0) {\n    const { color, list } = this.stackList.pop()\n    if (color === 'white') {\n      this.printArr.unshift(list)\n    } else {\n      for (let i = 0; i < list.length; i++) {\n        if (list[i].isInteger()) {\n          this.stackList.push({ color: 'white', list: list[i].getInteger() })\n        } else {\n          this.stackList.push({ color: 'gray', list: list[i].getList() })\n        }\n      }\n    }\n  }\n}\n\n/**\n * @this NestedIterator\n * @returns {boolean}\n */\nNestedIterator.prototype.hasNext = function() {\n  return this.printArr.length > 0\n}\n\n/**\n * @this NestedIterator\n * @returns {integer}\n */\nNestedIterator.prototype.next = function() {\n  return this.printArr.shift()\n}",
-    "lang": "javascript"
+    "topicTags": "Stack, Design"
   },
   {
     "title": "Reverse String",
@@ -849,8 +909,7 @@
     "status": "ac",
     "difficulty": "Easy",
     "questionId": "344",
-    "code": "/**\n * @param {character[]} s\n * @return {void} Do not return anything, modify s in-place instead.\n */\nvar reverseString = function(s) {\n  let left = 0, right = s.length - 1\n\n  while (left <= right) {\n    swap(s, left, right)\n    left++\n    right--\n  }\n}\n\n/* 交换位置\n  nums 数组, a, b 为下标\n*/\nvar swap = function(nums, a, b) {\n  const tmp = nums[a]\n  nums[a] = nums[b]\n  nums[b] = tmp\n}",
-    "lang": "javascript"
+    "topicTags": "Two Pointers, String"
   },
   {
     "title": "Top K Frequent Elements",
@@ -858,8 +917,7 @@
     "status": "ac",
     "difficulty": "Medium",
     "questionId": "347",
-    "code": "/**\n * @param {number[]} nums\n * @param {number} k\n * @return {number[]}\n */\nvar topKFrequent = function(nums, k) {\n  const obj = {}\n  for (let i = 0; i < nums.length; i++) {\n    if (!obj[nums[i]]) {\n      obj[nums[i]] = 1\n    } else {\n      obj[nums[i]] = obj[nums[i]] + 1\n    }\n  }\n\n  const list = []\n\n  const keysArr = Object.keys(obj)\n  for (let i = 0; i < keysArr.length; i++) {\n    const key = keysArr[i]\n    const value = obj[key]\n    if (!list[value - 1]) {\n      list[value - 1] = [parseInt(key, 10)]\n    } else {\n      list[value - 1].push(parseInt(key, 10))\n    }\n  }\n\n  const result = []\n  let count = 0\n  for (let i = list.length - 1; i >= 0; i--) {\n    const curList = list[i]\n    if (curList) {\n      for (let x = 0; x < curList.length; x++) {\n        if (count === k) return result\n        result.push(curList[x])\n        count++\n      }\n    }\n  }\n  return result\n}",
-    "lang": "javascript"
+    "topicTags": "Heap, Hash Table"
   },
   {
     "title": "Intersection of Two Arrays",
@@ -867,8 +925,7 @@
     "status": "ac",
     "difficulty": "Easy",
     "questionId": "349",
-    "code": "/**\n * @param {number[]} nums1\n * @param {number[]} nums2\n * @return {number[]}\n */\nvar intersection = function(nums1, nums2) {\n  const resultSet = new Set()\n  const num1Set = new Set(nums1)\n  for (let i = 0; i < nums2.length; i++) {\n    if (num1Set.has(nums2[i])) {\n      resultSet.add(nums2[i])\n    }\n  }\n\n  return [...resultSet]\n};",
-    "lang": "javascript"
+    "topicTags": "Sort, Hash Table, Two Pointers, Binary Search"
   },
   {
     "title": "Intersection of Two Arrays II",
@@ -876,8 +933,15 @@
     "status": "ac",
     "difficulty": "Easy",
     "questionId": "350",
-    "code": "/**\n * @param {number[]} nums1\n * @param {number[]} nums2\n * @return {number[]}\n */\nvar intersect = function(nums1, nums2) {\n  const nums1Map = getMap(nums1)\n  const nums2Map = getMap(nums2)\n  \n  const result = []\n\n  nums1Map.forEach((nums1Value, key) => {\n    const nums2MapHasKey = nums2Map.get(key)\n    if (nums2MapHasKey) {\n      for (let i = 0; i < Math.min(nums1Value, nums2MapHasKey); i++) {\n        result.push(key)\n      }\n    }\n  })\n  \n  return result\n};\n\nvar getMap = function(arr) {\n  const map = new Map()\n  for (let i = 0; i < arr.length; i++) {\n    const getValue = map.get(arr[i])\n    if (!getValue) {\n      map.set(arr[i], 1)\n    } else {\n      map.set(arr[i], getValue + 1)\n    }\n  }\n  return map\n}",
-    "lang": "javascript"
+    "topicTags": "Sort, Hash Table, Two Pointers, Binary Search"
+  },
+  {
+    "title": "Binary Watch",
+    "titleSlug": "binary-watch",
+    "status": "ac",
+    "difficulty": "Easy",
+    "questionId": "401",
+    "topicTags": "Bit Manipulation, Backtracking"
   },
   {
     "title": "Sum of Left Leaves",
@@ -885,8 +949,23 @@
     "status": "ac",
     "difficulty": "Easy",
     "questionId": "404",
-    "code": "/**\n * Definition for a binary tree node.\n * function TreeNode(val) {\n *     this.val = val;\n *     this.left = this.right = null;\n * }\n */\n/**\n * @param {TreeNode} root\n * @return {number}\n */\nvar sumOfLeftLeaves = function(root) {\n  if (!root) return 0\n  if (root.left) {\n    if (!root.left.left && !root.left.right) {\n      return root.left.val + sumOfLeftLeaves(root.right)\n    } else {\n      return sumOfLeftLeaves(root.left) + sumOfLeftLeaves(root.right)\n    }\n  } else {\n    return sumOfLeftLeaves(root.right)\n  }\n};",
-    "lang": "javascript"
+    "topicTags": "Tree"
+  },
+  {
+    "title": "Pacific Atlantic Water Flow",
+    "titleSlug": "pacific-atlantic-water-flow",
+    "status": "ac",
+    "difficulty": "Medium",
+    "questionId": "417",
+    "topicTags": "Depth-first Search, Breadth-first Search"
+  },
+  {
+    "title": "Path Sum III",
+    "titleSlug": "path-sum-iii",
+    "status": "ac",
+    "difficulty": "Medium",
+    "questionId": "437",
+    "topicTags": "Tree"
   },
   {
     "title": "Find All Anagrams in a String",
@@ -894,8 +973,7 @@
     "status": "ac",
     "difficulty": "Medium",
     "questionId": "438",
-    "code": "var findAnagrams = function(s, p) {\n  const pLength = p.length\n  const initHashObj = {} // 初始化 hash 对象\n  let hashObj = {}\n  const targetObj = {}\n  for (let i = 0; i < p.length; i++) {\n    targetObj[p[i]] = typeof(targetObj[p[i]]) === 'number' ? targetObj[p[i]] + 1 : 0\n    initHashObj[p[i]] = 0\n    hashObj[p[i]] = 0\n  }\n\n  const result = [] // 存储结果\n\n  let left = 0, right = 0\n\n  while (left < s.length && right < s.length) {\n    if (typeof(hashObj[s[right]]) === 'number' && hashObj[s[right]] <= targetObj[s[right]]) {\n      hashObj[s[right]] = hashObj[s[right]] + 1\n      if (right - left + 1 === pLength) result.push(left)\n      right++\n    } else if (typeof(hashObj[s[right]]) !== 'number') {\n      right++\n      left = right\n      hashObj = JSON.parse(JSON.stringify(initHashObj))\n    } else {\n      hashObj[s[left]] !== initHashObj[s[left]] && (hashObj[s[left]] = hashObj[s[left]] - 1)\n      left++\n    }\n  }\n\n  return result\n};",
-    "lang": "javascript"
+    "topicTags": "Hash Table"
   },
   {
     "title": "Add Two Numbers II",
@@ -903,17 +981,23 @@
     "status": "ac",
     "difficulty": "Medium",
     "questionId": "445",
-    "code": "/**\n * Definition for singly-linked list.\n * function ListNode(val) {\n *     this.val = val;\n *     this.next = null;\n * }\n */\n/**\n * @param {ListNode} l1\n * @param {ListNode} l2\n * @return {ListNode}\n */\nvar addTwoNumbers = function(l1, l2) {\n  let countl1 = 0, countl2 = 0\n  let l1List = l1\n  let l2List = l2\n  while(l1List) {\n    countl1++\n    l1List = l1List.next\n  }\n\n  while(l2List) {\n    countl2++\n    l2List = l2List.next\n  }\n\n  // creat the frontest List\n  let tmpList = new ListNode(0)\n  let cur = tmpList\n  let diff = Math.abs(countl2 - countl1)\n  while (diff--) {\n    cur.next = new ListNode(0)\n    cur = cur.next\n  }\n\n  if (countl1 < countl2) {\n    cur.next = l1\n    l1 = tmpList.next\n  } else if (countl2 < countl1) {\n    cur.next = l2\n    l2 = tmpList.next\n  }\n\n\n  // flag: 1 shows digit carry, 0 not;\n  var digitCarry = 0\n\n  /**\n   * calculate the sum of l1 and l2\n   */\n  function listNodeAdd(l1, l2) {\n    if (l1 === null) return\n\n    listNodeAdd(l1.next, l2.next)\n\n    let sum = l1.val + l2.val + digitCarry\n    if (sum >= 10) {\n      l1.val = sum % 10\n      digitCarry = 1\n    } else {\n      l1.val = sum\n      digitCarry = 0\n    }\n  }\n\n  listNodeAdd(l1, l2)\n\n  let result = l1\n  if (digitCarry === 1) {\n    result = new ListNode(1)\n    result.next = l1\n  }\n\n  return result\n}",
-    "lang": "javascript"
+    "topicTags": "Linked List"
   },
   {
     "title": "Number of Boomerangs",
     "titleSlug": "number-of-boomerangs",
     "status": "ac",
-    "difficulty": "Easy",
+    "difficulty": "Medium",
     "questionId": "447",
-    "code": "var numberOfBoomerangs = function (points) {\n  const getDistancePow = (x, y) => {\n    return Math.pow((y[0] - x[0]), 2) + Math.pow((y[1] - x[1]), 2)\n  }\n\n  let result = 0\n\n  for (let p = 0; p < points.length; p++) {\n    const tmpMap = new Map()\n    for (let n = 0; n < points.length; n++) {\n      if (p === n) continue\n      const distancePow = getDistancePow(points[p], points[n])\n      const hasDistancePow = tmpMap.has(`${distancePow}`)\n      if (hasDistancePow) {\n        tmpMap.set(`${distancePow}`, tmpMap.get(`${distancePow}`) + 1)\n      } else {\n        tmpMap.set(`${distancePow}`, 1)\n      }\n    }\n    tmpMap.forEach((value, key) => {\n      if (value > 1) {\n        const sum = value * (value - 1)\n        result += sum\n      }\n    })\n    tmpMap.clear()\n  }\n\n  return result\n}",
-    "lang": "javascript"
+    "topicTags": "Hash Table, Math"
+  },
+  {
+    "title": "Delete Node in a BST",
+    "titleSlug": "delete-node-in-a-bst",
+    "status": "ac",
+    "difficulty": "Medium",
+    "questionId": "450",
+    "topicTags": "Tree"
   },
   {
     "title": "Sort Characters By Frequency",
@@ -921,8 +1005,7 @@
     "status": "ac",
     "difficulty": "Medium",
     "questionId": "451",
-    "code": "/**\n * @param {string} s\n * @return {string}\n */\nvar frequencySort = function(s) {\n  const map = new Map()\n  for (let i = 0; i < s.length; i++) {\n    const getMap = map.get(s[i])\n    if (!getMap) {\n      map.set(s[i], 1)\n    } else {\n      map.set(s[i], getMap + 1)\n    }\n  }\n\n  const arr = []\n  // for (let i = 0; i < map.keys.length; i++) {\n  //   const key = map.keys[i]\n  for (let key of map.keys()) {\n    arr.push({\n      key,\n      value: map.get(key)\n    })\n  }\n\n  // todo 后续实现下以下排序\n  arr.sort((a, b) => b.value - a.value)\n\n  const result = arr.map(r => {\n    let str = ''\n    for (let i = 0; i < r.value; i++) {\n      str = str + r.key\n    }\n    return str\n  }).join('')\n\n  return result\n};",
-    "lang": "javascript"
+    "topicTags": "Heap, Hash Table"
   },
   {
     "title": "4Sum II",
@@ -930,8 +1013,7 @@
     "status": "ac",
     "difficulty": "Medium",
     "questionId": "454",
-    "code": "/**\n * @param {number[]} A\n * @param {number[]} B\n * @param {number[]} C\n * @param {number[]} D\n * @return {number}\n */\nvar fourSumCount = function(A, B, C, D) {\n  const tmpMap = new Map()\n  for (let ic = 0; ic < C.length; ic++) {\n    for (let id = 0; id < D.length; id++) {\n      const sumC_D = C[ic] + D[id]\n      const hasSumC_D = tmpMap.has(sumC_D)\n      if (hasSumC_D) {\n        tmpMap.set(sumC_D, tmpMap.get(sumC_D) + 1)\n      } else {\n        tmpMap.set(sumC_D, 1)\n      }\n    }\n  }\n\n  let count = 0\n\n  for (let ia = 0; ia < A.length; ia++) {\n    for (let ib = 0; ib < B.length; ib++) {\n      const sumA_B = A[ia] + B[ib]\n      tmpMap.has(-sumA_B) && (count = count + tmpMap.get(-sumA_B))\n    }\n  }\n\n  return count\n}",
-    "lang": "javascript"
+    "topicTags": "Hash Table, Binary Search"
   },
   {
     "title": "Permutation in String",
@@ -939,7 +1021,6 @@
     "status": "ac",
     "difficulty": "Medium",
     "questionId": "567",
-    "code": "/** 18.12.08 */\n/**\n * @param {string} s1\n * @param {string} s2\n * @return {boolean}\n */\nvar checkInclusion = function (s1, s2) {\n  const s1Obj = {}\n  const s1Length = s1.length\n  for (let i = 0; i < s1Length; i++) {\n    if (s1Obj[s1[i]]) {\n      s1Obj[s1[i]] = ++s1Obj[s1[i]]\n    } else {\n      s1Obj[s1[i]] = 1\n    }\n  }\n\n  const s2Length = s2.length\n\n  if (s1Length > s2Length) {\n    return false\n  }\n\n  const count = s2Length - s1Length\n  let str = ''\n\n  for (let i = 0; i <= count; i++) {\n    str = s2.slice(i, s1Length + i)\n    const s2Obj = {}\n    for (let z = 0; z < str.length; z++) {\n      if (!s1Obj[str[z]]) {\n        i = i + z\n        break\n      }\n      if (s2Obj[str[z]]) {\n        s2Obj[str[z]] = s2Obj[str[z]] + 1\n      } else {\n        s2Obj[str[z]] = 1\n      }\n    }\n\n    let bool = true\n    for (let y = 0; y < Object.keys(s1Obj).length; y++) {\n      if (s2Obj[Object.keys(s1Obj)[y]] !== s1Obj[Object.keys(s1Obj)[y]]) {\n        bool = false\n        break\n      }\n    }\n\n    if (bool === true) {\n      return true\n    }\n  }\n\n  return false\n};",
-    "lang": "javascript"
+    "topicTags": "Two Pointers, Sliding Window"
   }
 ]

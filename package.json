@@ -17,7 +17,11 @@
     "build": "node packages/create-react-doc/index.js build",
     "deploy": "node packages/create-react-doc/index.js deploy",
     "release": "lerna publish",
-    "release-qa": "lerna publish --npm-tag=beta"
+    "release-qa": "lerna publish --npm-tag=beta",
+    "cleanup": "rm -rf node_modules/gh-pages/.cache",
+    "deploy:site": "npm run cleanup && node gh-pages",
+    "up:dev": "sh utils/uppackage-dev.sh",
+    "up": "sh utils/uppackage.sh"
   },
   "repository": {
     "type": "git",
@@ -37,6 +41,7 @@
     "eslint-plugin-import": "^2.11.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-react": "^7.7.0",
+    "gh-pages": "^3.1.0",
     "lerna": "^3.22.1"
   },
   "dependencies": {

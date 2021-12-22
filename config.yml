@@ -1,11 +1,23 @@
-# create-react-doc configuration, see https://github.com/MuYunyun/create-react-doc##config.yml
+# create-react-doc configuration.
 
 # Site
 title: Create React Doc
 
 # Menu dir
 ## you can also set detailed dir, such as BasicSkill/css
-menu: docs/快速上手.md,docs/默认主题.md,docs/站点发布.md,docs/高阶用法.md,docs/自定义主题.md,docs/其它工具.md,docs/更新日志.md
+## todo: auto menu
+menu: [
+  docs/快速上手.md,
+  docs/更新日志.md,
+  docs/主题,
+  docs/站点发布.md,
+  docs/Front-matter.md,
+  docs/数学公式.md,
+  docs/书写组件.md,
+  docs/高阶用法.md,
+  docs/其它工具.md,
+  docs/测试
+]
 ## set init open menu keys
 # menuOpenKeys:
 
@@ -18,9 +30,15 @@ devTheme: packages/crd-seed/index
 user: MuYunyun
 repo: create-react-doc
 github-ribbons: true
+domain: https://muyunyun.cn
+seo:
+  google: true
 
 # Available values: en | zh-cn
 language: en
 
 # Inject Custom Logic
 inject: injectLogic/index.js
+
+# Use abbrlink
+abbrlink: true

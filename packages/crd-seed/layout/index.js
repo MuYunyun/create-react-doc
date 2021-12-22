@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import * as React from 'react'
 import { Switch, Link, Route, Redirect } from 'react-router-dom'
 import cx from 'classnames'
 import Menu from '../component/Menu'
@@ -7,12 +7,13 @@ import Affix from '../component/Affix'
 import Header from '../component/Header'
 import Footer from '../component/Footer'
 import languageMap from '../language'
-import { isMobile } from '../utils'
+import { isMobile, ifAddPrefix, ifProd, ifPrerender } from '../utils'
 import { getOpenSubMenuKeys } from './utils'
 import logo from '../crd.logo.svg'
 import styles from './index.less'
 import '../style/mobile.less'
 
+const { useState, useEffect } = React
 const SubMenu = Menu.SubMenu
 
 function BasicLayout({
@@ -22,26 +23,41 @@ function BasicLayout({
   indexProps,
 }) {
   const { pathname } = location
-  // eslint-disable-next-line no-undef
   const { user, repo, branch = 'main', language = 'en', menuOpenKeys } = DOCSCONFIG || {}
   const [inlineCollapsed, setInlineCollapsed] = useState(isMobile)
-  const [selectedKey, setSelectedKey] = useState(`${pathname}.md`)
-  const curOpenKeys = getOpenSubMenuKeys(pathname, menuOpenKeys)
+  const [selectedKey, setSelectedKey] = useState('')
+  const curOpenKeys = getOpenSubMenuKeys({
+    pathname,
+    menuSource,
+    menuOpenKeys
+  })
+  const defaultPath = (routeData.find(data => data.path === '/README')
+    && routeData.find(data => data.path === '/README').mdconf
+    && routeData.find(data => data.path === '/README').mdconf.abbrlink) || 'README'
 
   useEffect(() => {
-    // eslint-disable-next-line no-use-before-define
-    scrollToTop()
+    if (ifPrerender) {
+      scrollToTop()
+      INJECT?.inject?.()
+    }
   }, [])
 
   useEffect(() => {
-    // eslint-disable-next-line no-undef
-    INJECT?.inject?.()
-  }, [])
-
-  useEffect(() => {
-    // eslint-disable-next-line no-undef
     INJECT?.injectWithPathname?.(pathname)
   }, [pathname])
+
+  useEffect(() => {
+    const { pathname } = location
+    let newPathName = pathname
+    // fix https://github.com/MuYunyun/create-react-doc/issues/195
+    if (newPathName.endsWith('/')) {
+      newPathName = newPathName.slice(0, newPathName.length - 1)
+    }
+    if (newPathName.startsWith(`/${repo}`)) {
+      newPathName = newPathName.slice(`/${repo}`.length, newPathName.length)
+    }
+    setSelectedKey(newPathName || defaultPath)
+  }, location.pathname)
 
   const scrollToTop = () => {
     document.body.scrollTop = 0
@@ -49,20 +65,27 @@ function BasicLayout({
     window.scrollTo(0, 0)
   }
   const renderSubMenuItem = (menus) => {
-    /* eslint-disable */
     return (
       <>
         {menus.map((item, index) => {
+          const { mdconf, routePath } = item || {}
+          const { abbrlink } = mdconf || {}
+          const path = abbrlink ? `/${abbrlink}` : routePath
           // item.path carrys .md here.
           return item.children && item.children.length > 0 ? (
-            <SubMenu key={index} keyValue={item.path} title={item.name} icon={<Icon type="folder" size={16} />}>
+            <SubMenu
+              key={index}
+              keyValue={item.path}
+              title={item.name}
+              icon={<Icon type="folder" size={16} />}
+            >
               {renderSubMenuItem(item.children)}
             </SubMenu>
           ) : (
             <Menu.Item
               key={index}
               icon={<Icon type="file" size={16} />}
-              keyValue={item.path}
+              keyValue={abbrlink ? `/${abbrlink}` : item.path}
               title={
                 item &&
                 item.type === "directory" &&
@@ -73,8 +96,8 @@ function BasicLayout({
                   </span>
                 ) : (
                   <Link
-                    to={item.routePath}
-                    replace={pathname === item.routePath}
+                    to={ifProd ? `/${repo}${path}` : path}
+                    replace={pathname.indexOf(path) > -1}
                   >
                     {item && item.mdconf && item.mdconf.title
                       ? item.mdconf.title
@@ -83,13 +106,14 @@ function BasicLayout({
                 )
               }
             />
-          );
+          )
         })}
       </>
-    );
-  };
+    )
+  }
   const renderMenu = (menus) => {
-    if (menus.length < 1) return null;
+    if (menus.length < 1) return null
+
     return (
       <Affix
         offsetTop={0}
@@ -100,7 +124,7 @@ function BasicLayout({
         <Menu
           inlineCollapsed={inlineCollapsed}
           toggle={() => {
-            setInlineCollapsed(!inlineCollapsed);
+            setInlineCollapsed(!inlineCollapsed)
           }}
           menuStyle={{
             height: "100vh",
@@ -108,27 +132,32 @@ function BasicLayout({
           }}
           selectedKey={selectedKey}
           onSelect={(keyValue) => {
-            setSelectedKey(keyValue);
+            setSelectedKey(keyValue)
           }}
           defaultOpenKeys={curOpenKeys}
         >
           {renderSubMenuItem(menus || [])}
         </Menu>
       </Affix>
-    );
-  };
+    )
+  }
   /**
    * this section is to show article's relevant information
    * such as edit in github and so on.
    */
   const renderPageHeader = () => {
+    const curMenuSource = routeData.filter(r => {
+      if (r.props.type === 'directory') return false
+      return pathname.indexOf(r.mdconf.abbrlink) > -1 || decodeURIComponent(pathname).indexOf(r.path) > -1
+    })
+    const editPathName = curMenuSource[0] && curMenuSource[0].props.path
     return (
       <div className={cx(styles.pageHeader)}>
         {user && repo ? (
           <a
             href={`https://github.com/${user}/${
               repo
-            }/edit/${branch}${pathname}.md`}
+            }/edit/${branch}${editPathName}`}
             target="_blank"
           >
             <Icon className={cx(styles.icon)} type="edit" size={13} />
@@ -136,14 +165,15 @@ function BasicLayout({
           </a>
         ) : null}
       </div>
-    );
+    )
   }
   /**
    * this section is to show article's relevant information
    * such as edit in created time、edited time and so on.
    */
   const renderPageFooter = () => {
-    const matchData = routeData.find((data) => data.path === pathname)
+    // in local env, data.path is to be /READEME, however pathname may be /Users/mac/.../.crd-dist/READEME/index.html
+    const matchData = routeData.find((data) => pathname.indexOf(data.path) > -1)
     const matchProps = matchData && matchData.props
     return (
       <div className={cx(styles.pageFooter)}>
@@ -159,23 +189,23 @@ function BasicLayout({
             <Icon className={cx(styles.icon)} type="update-time" size={13} />
             {languageMap[language].modify_tm}:
             <span>
-              {routeData.find((data) => data.path === pathname).props.mtime}
+              {routeData.find((data) => pathname.indexOf(data.path) > -1).props.mtime}
             </span>
           </span>
         ): null}
       </div>
-    );
+    )
   }
   const isCurentChildren = () => {
-    const getRoute = routeData.filter((data) => pathname === data.path);
-    const article = getRoute.length > 0 ? getRoute[0].article : null;
+    const getRoute = routeData.filter((data) => pathname.indexOf(data.path) > -1)
+    const article = getRoute.length > 0 ? getRoute[0].article : null
     const childs = menuSource.filter(
       (data) =>
         article === data.article && data.children && data.children.length > 1
-    );
-    return childs.length > 0;
-  };
-  const isChild = isCurentChildren();
+    )
+    return childs.length > 0
+  }
+  const isChild = isCurentChildren()
   const renderMenuContainer = () => {
     return (
       <>
@@ -191,13 +221,14 @@ function BasicLayout({
             [`${styles.menuMask}`]: isMobile && !inlineCollapsed,
           })}
           onClick={(e) => {
-            e.stopPropagation();
-            setInlineCollapsed(true);
+            e.stopPropagation()
+            setInlineCollapsed(true)
           }}
         />
       </>
-    );
+    )
   }
+
   const renderContent = () => {
     return (
       <div
@@ -207,31 +238,34 @@ function BasicLayout({
       >
         <Switch>
           {/* see https://reacttraining.com/react-router/web/api/Redirect/exact-bool */}
-          <Redirect exact from="/" to="/README" />
+          <Redirect exact from={ifAddPrefix ? `/${repo}` : `/`} to={ifAddPrefix ? `/${repo}/${defaultPath}` : `/${defaultPath}`} />
           {routeData.map((item) => {
+            const { path, mdconf, component } = item
+            const { abbrlink } = mdconf
+            const enhancePath = abbrlink ? `/${abbrlink}` : path
             return (
               <Route
-                key={item.path}
+                key={enhancePath}
                 exact
-                path={item.path}
+                path={ifAddPrefix ? `/${repo}${enhancePath}` : enhancePath}
                 render={() => {
-                  const Comp = item.component;
-                  return <Comp {...item} />;
+                  const Comp = component
+                  return <Comp {...item} />
                 }}
               />
-            );
+            )
           })}
-          <Redirect to="/404" />
+          <Redirect to={ifAddPrefix ? `/${repo}/404` : `/404`} />
         </Switch>
         {renderPageFooter()}
       </div>
-    );
+    )
   }
   return (
     <div className={styles.wrapper}>
       <Header
         logo={logo}
-        href="/"
+        href={ifAddPrefix ? `/${repo}` : `/`}
         location={location}
         indexProps={indexProps}
         menuSource={menuSource}
@@ -247,7 +281,7 @@ function BasicLayout({
         <Footer inlineCollapsed={inlineCollapsed} />
       </div>
     </div>
-  );
+  )
 }
 
 export default BasicLayout

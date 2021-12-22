@@ -55,3 +55,11 @@ module.exports = { transform_markdown_table }
   * ![](http://with.muyunyun.cn/f9301658ff81e6d47dcaab3684cab1ce.jpg)
 * 获取 cookie 后, 使用 [graphql-request](https://github.com/prisma-labs/graphql-request) 调用 graphql 接口获取题目详情信息。
 * 自定义生成 [markdown table](https://github.com/MuYunyun/blog/tree/main/LeetCode)。
+
+### Q & A
+
+* 如何开发调试?
+
+进入[项目目录](https://github.com/MuYunyun/create-react-doc/tree/main/packages/leetcode-cli), 执行上述 Usage 中的 leetcode 命令即可。
+
+> 因为 [puppeteer](https://github.com/puppeteer/puppeteer/issues/6425) 已知问题, 暂时只支持 mac 系统使用, 后续更新。
