@@ -23,14 +23,12 @@ function BasicLayout({
   indexProps,
 }) {
   console.log('menuSource', menuSource)
-  console.log('routeData', routeData)
 
   const { pathname } = location
   console.log('location', location)
   const { user, repo, branch = 'main', language = 'en', menuOpenKeys } = DOCSCONFIG || {}
   const [inlineCollapsed, setInlineCollapsed] = useState(isMobile)
   const [selectedKey, setSelectedKey] = useState('')
-  // console.log()
   const curOpenKeys = getOpenSubMenuKeys({
     pathname,
     menuSource,
@@ -142,9 +140,9 @@ function BasicLayout({
           onSelect={(keyValue) => {
             setSelectedKey(keyValue)
           }}
-          // defaultOpenKeys={curOpenKeys}
+          defaultOpenKeys={curOpenKeys}
           // todo: smart to fill defaultOpenKeys
-          defaultOpenKeys={['/docs/主题']}
+          // defaultOpenKeys={['/docs/主题']}
         >
           {renderSubMenuItem(menus || [])}
         </Menu>
