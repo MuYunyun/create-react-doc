@@ -6,7 +6,6 @@
  *  }
  * output: ["/BasicSkill", "/BasicSkill/basis"]
  */
-// todo: optimize for depth-first traversal
 function getOpenSubMenuKeys({
   pathname,
   menuSource,
