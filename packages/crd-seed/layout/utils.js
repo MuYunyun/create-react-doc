@@ -13,19 +13,24 @@ function getOpenSubMenuKeys({
   menuOpenKeys
 }) {
   const result = []
-  getOpenSubMenuKeysForAbbrLink(menuSource, pathname, result)
+  getOpenSubMenuKeysForAbbrLink(
+    menuSource,
+    decodeURI(pathname),
+    result
+  )
+
   /**
    * logic for not abbrLink
    * there is no pick item if the length of pathnameSplit is less than or equal to 2.
    * eg: /README => ["", "README"]
    */
-  const pathnameSplit = pathname.split('/')
-  if (pathnameSplit.length <= 2) return result
-  let recordValue = ''
-  for (let i = 1; i < pathnameSplit.length - 1; i++) {
-    recordValue += `/${pathnameSplit[i]}`
-    result.push(recordValue)
-  }
+  // const pathnameSplit = pathname.split('/')
+  // if (pathnameSplit.length <= 2) return result
+  // let recordValue = ''
+  // for (let i = 1; i < pathnameSplit.length - 1; i++) {
+  //   recordValue += `/${pathnameSplit[i]}`
+  //   result.push(recordValue)
+  // }
 
   /** default open menu from config.yml */
   if (menuOpenKeys) {
@@ -44,7 +49,10 @@ function getOpenSubMenuKeysForAbbrLink(source, pathname, result) {
       if (ifFind) return true
       result.pop()
     } else {
-      if (pathname.indexOf(mdconf.abbrlink) > -1) {
+      if (
+        pathname.indexOf(mdconf.abbrlink) > -1
+        || (pathname === source[i].routePath)
+      ) {
         return true
       }
     }
