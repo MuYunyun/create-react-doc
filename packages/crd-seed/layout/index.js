@@ -22,10 +22,7 @@ function BasicLayout({
   menuSource,
   indexProps,
 }) {
-  console.log('menuSource', menuSource)
-
   const { pathname } = location
-  console.log('location', location)
   const { user, repo, branch = 'main', language = 'en', menuOpenKeys } = DOCSCONFIG || {}
   const [inlineCollapsed, setInlineCollapsed] = useState(isMobile)
   const [selectedKey, setSelectedKey] = useState('')
@@ -34,7 +31,6 @@ function BasicLayout({
     menuSource,
     menuOpenKeys
   })
-  console.log('curOpenKeys', curOpenKeys)
   const defaultPath = (routeData.find(data => data.path === '/README')
     && routeData.find(data => data.path === '/README').mdconf
     && routeData.find(data => data.path === '/README').mdconf.abbrlink) || 'README'
@@ -74,8 +70,6 @@ function BasicLayout({
         {menus.map((item, index) => {
           const { mdconf, routePath } = item || {}
           const { abbrlink } = mdconf || {}
-          console.log('item', item)
-          // console.log('item', item)
           const path = abbrlink ? `/${abbrlink}` : routePath
           // item.path carrys .md here.
           return item.children && item.children.length > 0 ? (
@@ -141,8 +135,6 @@ function BasicLayout({
             setSelectedKey(keyValue)
           }}
           defaultOpenKeys={curOpenKeys}
-          // todo: smart to fill defaultOpenKeys
-          // defaultOpenKeys={['/docs/主题']}
         >
           {renderSubMenuItem(menus || [])}
         </Menu>
