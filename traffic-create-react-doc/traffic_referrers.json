@@ -5,11 +5,6 @@
     "uniques": 12
   },
   {
-    "referrer": "link.zhihu.com",
-    "count": 24,
-    "uniques": 7
-  },
-  {
     "referrer": "cn.v2ex.com",
     "count": 16,
     "uniques": 1
@@ -30,13 +25,13 @@
     "uniques": 2
   },
   {
-    "referrer": "v2ex.com",
-    "count": 2,
-    "uniques": 1
+    "referrer": "link.zhihu.com",
+    "count": 5,
+    "uniques": 4
   },
   {
-    "referrer": "muyunyun.cn",
-    "count": 1,
+    "referrer": "v2ex.com",
+    "count": 2,
     "uniques": 1
   }
 ]

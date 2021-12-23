@@ -2,8 +2,8 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 51,
-    "uniques": 29
+    "count": 42,
+    "uniques": 26
   },
   {
     "path": "/MuYunyun/create-react-doc/issues",
@@ -12,22 +12,10 @@
     "uniques": 3
   },
   {
-    "path": "/MuYunyun/create-react-doc/tree/main/docs",
-    "title": "create-react-doc/docs at main · MuYunyun/create-react-doc · GitHub",
-    "count": 9,
-    "uniques": 5
-  },
-  {
     "path": "/MuYunyun/create-react-doc/issues/219",
     "title": "优化首页菜单区域可可交互时间过长的问题 · Issue #219 · MuYunyun/create-react-doc",
     "count": 7,
     "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/tree/main/packages",
-    "title": "create-react-doc/packages at main · MuYunyun/create-react-doc · GitHub",
-    "count": 5,
-    "uniques": 3
   },
   {
     "path": "/MuYunyun/create-react-doc/issues/222",
@@ -36,10 +24,10 @@
     "uniques": 2
   },
   {
-    "path": "/MuYunyun/create-react-doc/tree/main/components",
-    "title": "create-react-doc/components at main · MuYunyun/create-react-doc · GitHub",
+    "path": "/MuYunyun/create-react-doc/tree/main/docs",
+    "title": "create-react-doc/docs at main · MuYunyun/create-react-doc · GitHub",
     "count": 4,
-    "uniques": 4
+    "uniques": 3
   },
   {
     "path": "/MuYunyun/create-react-doc/tree/main/packages/leetcode-cli",
@@ -54,9 +42,21 @@
     "uniques": 2
   },
   {
+    "path": "/MuYunyun/create-react-doc/tree/main/packages",
+    "title": "create-react-doc/packages at main · MuYunyun/create-react-doc · GitHub",
+    "count": 4,
+    "uniques": 2
+  },
+  {
     "path": "/MuYunyun/create-react-doc/tree/main/packages/leetcode-cli/src",
     "title": "create-react-doc/packages/leetcode-cli/src at main · MuYunyun/create-react-do...",
     "count": 4,
     "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/tree/main/components",
+    "title": "create-react-doc/components at main · MuYunyun/create-react-doc · GitHub",
+    "count": 3,
+    "uniques": 3
   }
 ]
