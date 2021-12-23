@@ -1,6 +1,6 @@
 {
   "name": "crd-generator-sitemap",
-  "version": "1.3.4",
+  "version": "1.6.1-alpha.0",
   "description": "generator sitemap for create-react-doc",
   "main": "index.js",
   "repository": {
