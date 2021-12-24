@@ -1,8 +1,8 @@
 [
   {
     "referrer": "github.com",
-    "count": 30,
-    "uniques": 12
+    "count": 32,
+    "uniques": 13
   },
   {
     "referrer": "cn.v2ex.com",
@@ -20,18 +20,23 @@
     "uniques": 5
   },
   {
+    "referrer": "link.zhihu.com",
+    "count": 6,
+    "uniques": 5
+  },
+  {
     "referrer": "npmjs.com",
     "count": 6,
     "uniques": 2
   },
   {
-    "referrer": "link.zhihu.com",
-    "count": 5,
-    "uniques": 4
-  },
-  {
     "referrer": "v2ex.com",
     "count": 2,
+    "uniques": 1
+  },
+  {
+    "referrer": "zhihu.com",
+    "count": 1,
     "uniques": 1
   }
 ]
