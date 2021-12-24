@@ -1,10 +1,11 @@
 /**
  * get keys of open sub menu from pathname
  *  {
- *    pathname: /BasicSkill/basis/DOM,
+ *    pathname: pathname of location,
+ *      when pathname is /9f41fc98, the result is ['/docs/主题'].
+ *      when pathname is /测试/测试路由, the result is ['/docs/测试']
  *    menuOpenKeys: means extra show open keys in config.yml
  *  }
- * output: ["/BasicSkill", "/BasicSkill/basis"]
  */
 function getOpenSubMenuKeys({
   pathname,
@@ -17,19 +18,6 @@ function getOpenSubMenuKeys({
     decodeURI(pathname),
     result
   )
-
-  /**
-   * logic for not abbrLink
-   * there is no pick item if the length of pathnameSplit is less than or equal to 2.
-   * eg: /README => ["", "README"]
-   */
-  // const pathnameSplit = pathname.split('/')
-  // if (pathnameSplit.length <= 2) return result
-  // let recordValue = ''
-  // for (let i = 1; i < pathnameSplit.length - 1; i++) {
-  //   recordValue += `/${pathnameSplit[i]}`
-  //   result.push(recordValue)
-  // }
 
   /** default open menu from config.yml */
   if (menuOpenKeys) {
