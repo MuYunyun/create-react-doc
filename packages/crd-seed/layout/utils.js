@@ -13,7 +13,6 @@ function getOpenSubMenuKeys({
   menuOpenKeys
 }) {
   const result = []
-  console.log('menuSource', menuSource)
   getOpenSubMenuKeysForAbbrLink(
     menuSource,
     decodeURI(pathname),
