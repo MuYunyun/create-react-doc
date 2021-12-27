@@ -13,6 +13,7 @@ function getOpenSubMenuKeys({
   menuOpenKeys
 }) {
   const result = []
+  console.log('menuSource', menuSource)
   getOpenSubMenuKeysForAbbrLink(
     menuSource,
     decodeURI(pathname),
@@ -37,8 +38,8 @@ function getOpenSubMenuKeysForAbbrLink(source, pathname, result) {
       result.pop()
     } else {
       if (
-        pathname.indexOf(mdconf.abbrlink) > -1
-        || (pathname === source[i].routePath)
+        pathname.indexOf(mdconf.abbrlink) > -1           // used with abbrlink
+        || (pathname.indexOf(source[i].routePath) > -1)  // used not with abbrlink
       ) {
         return true
       }
