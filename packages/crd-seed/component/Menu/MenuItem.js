@@ -1,3 +1,4 @@
+import { useEffect, useRef } from 'react'
 import cx from 'classnames'
 import { getMenuStyle } from './util'
 import { useMenuContext } from './context'
@@ -10,6 +11,17 @@ function MenuItem({
   level = 0,
 }) {
   const { theme, selectedKey, onSelect, onHoverKey } = useMenuContext()
+  const menuItemRef = useRef(null)
+  const menuItemselected = keyValue.indexOf(selectedKey) > -1
+
+  useEffect(() => {
+    if (menuItemselected) {
+      menuItemRef.scrollIntoView({
+        block: 'center',
+        behavior: 'smooth'
+      })
+    }
+  }, [])
 
   const handleOnClick = () => {
     onSelect(keyValue)
@@ -19,7 +31,7 @@ function MenuItem({
     return (
       <li
         className={cx(styles['menu-item'], styles[`menu-${theme}`], {
-          [styles['menu-item-selected']]: keyValue.indexOf(selectedKey) > -1,
+          [styles['menu-item-selected']]: menuItemselected,
         })}
         onMouseEnter={() => {
           onHoverKey(keyValue)
@@ -27,6 +39,7 @@ function MenuItem({
         onMouseLeave={() => onHoverKey('')}
         onClick={handleOnClick}
         style={getMenuStyle(level, 'menuItem')}
+        ref={menuItemRef}
       >
         {icon ? <span className={cx(styles['menu-icon'])}>{icon}</span> : null}
         <span className={cx(styles['menu-item-title'])}>{title}</span>
