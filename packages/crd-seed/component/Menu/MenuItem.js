@@ -10,18 +10,27 @@ function MenuItem({
   keyValue = '',
   level = 0,
 }) {
-  const { theme, selectedKey, onSelect, onHoverKey } = useMenuContext()
+  const {
+    theme,
+    selectedKey,
+    onSelect,
+    onHoverKey,
+    inlineCollapsed
+  } = useMenuContext()
   const menuItemRef = useRef(null)
   const menuItemselected = keyValue.indexOf(selectedKey) > -1
+  const menuUnFoldDelayTime = 300
 
   useEffect(() => {
-    if (menuItemselected) {
-      menuItemRef.scrollIntoView({
-        block: 'center',
-        behavior: 'smooth'
-      })
+    if (menuItemselected && (inlineCollapsed === false)) {
+      setTimeout(() => {
+        menuItemRef.current.scrollIntoView({
+          block: 'center',
+          behavior: 'smooth'
+        })
+      }, menuUnFoldDelayTime)
     }
-  }, [])
+  }, [keyValue, selectedKey, inlineCollapsed])
 
   const handleOnClick = () => {
     onSelect(keyValue)
