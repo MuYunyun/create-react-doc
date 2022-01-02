@@ -24,7 +24,7 @@ function BasicLayout({
 }) {
   const { pathname } = location
   const { user, repo, branch = 'main', language = 'en', menuOpenKeys } = DOCSCONFIG || {}
-  const [inlineCollapsed, setInlineCollapsed] = useState(isMobile)
+  const [inlineCollapsed, setInlineCollapsed] = useState(true)
   const [selectedKey, setSelectedKey] = useState('')
   const curOpenKeys = getOpenSubMenuKeys({
     pathname,
