@@ -16,6 +16,7 @@ import '../style/mobile.less'
 
 const { useState, useEffect } = React
 const SubMenu = Menu.SubMenu
+const ifProdRender = ifProd && !ifPrerender
 
 function BasicLayout({
   location,
@@ -277,6 +278,7 @@ function BasicLayout({
         })}
       >
         {renderPageHeader()}
+        {/* todo: split menu & content */}
         {renderMenuContainer()}
         {renderContent()}
         <Footer inlineCollapsed={inlineCollapsed} />
