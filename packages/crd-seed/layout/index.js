@@ -117,12 +117,12 @@ function BasicLayout({
     if (menus.length < 1) return null
 
     return (
-      <Affix
-        offsetTop={0}
-        className={styles.affixPlaceholder}
-        wrapperClassName={styles.affixWrapper}
-        width={inlineCollapsed ? 0 : 240}
-      >
+      // <Affix
+      //   offsetTop={0}
+      //   className={styles.affixPlaceholder}
+      //   wrapperClassName={styles.affixWrapper}
+      //   width={inlineCollapsed ? 0 : 240}
+      // >
         <Menu
           inlineCollapsed={inlineCollapsed}
           toggle={() => {
@@ -140,7 +140,7 @@ function BasicLayout({
         >
           {renderSubMenuItem(menus || [])}
         </Menu>
-      </Affix>
+      // </Affix>
     )
   }
   /**
@@ -264,26 +264,38 @@ function BasicLayout({
     )
   }
   return (
-    <div className={styles.wrapper}>
-      <Header
-        logo={logo}
-        href={ifAddPrefix ? `/${repo}` : `/`}
-        location={location}
-        indexProps={indexProps}
-        menuSource={menuSource}
-      />
-      <div
-        className={cx(styles.wrapperContent, {
-          [styles.wrapperMobile]: isMobile,
-        })}
-      >
-        {renderPageHeader()}
-        {/* todo: split menu & content */}
-        {renderMenuContainer()}
-        {renderContent()}
-        <Footer inlineCollapsed={inlineCollapsed} />
+    <>
+      <div className={styles.wrapper}>
+        <Header
+          logo={logo}
+          href={ifAddPrefix ? `/${repo}` : `/`}
+          location={location}
+          indexProps={indexProps}
+          menuSource={menuSource}
+        />
+        <div
+          className={cx(styles.wrapperContent, {
+            [styles.wrapperMobile]: isMobile,
+          })}
+        >
+          {renderPageHeader()}
+          {/* todo: split menu & content */}
+          {/* {renderMenuContainer()} */}
+          {renderContent()}
+          <Footer inlineCollapsed={inlineCollapsed} />
+        </div>
       </div>
-    </div>
+      <div style={{
+        padding: '40px 0 0 0',
+        position: 'fixed',
+        minHeight: '100vh',
+        top: 0,
+        zIndex: 999,
+        borderRight: '1px solid #e9e9e9'
+      }}>
+        {renderMenuContainer()}
+      </div>
+    </>
   )
 }
 
