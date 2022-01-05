@@ -2,8 +2,8 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 37,
-    "uniques": 23
+    "count": 38,
+    "uniques": 24
   },
   {
     "path": "/MuYunyun/create-react-doc/issues",
@@ -14,13 +14,13 @@
   {
     "path": "/MuYunyun/create-react-doc/pulls",
     "title": "Pull requests · MuYunyun/create-react-doc",
-    "count": 9,
+    "count": 12,
     "uniques": 2
   },
   {
     "path": "/MuYunyun/create-react-doc/tree/main/packages",
     "title": "create-react-doc/packages at main · MuYunyun/create-react-doc",
-    "count": 8,
+    "count": 9,
     "uniques": 5
   },
   {
@@ -36,27 +36,27 @@
     "uniques": 4
   },
   {
-    "path": "/MuYunyun/create-react-doc/pull/223",
-    "title": "fix https://github.com/MuYunyun/create-react-doc/issues/222 by MuYunyun · Pul...",
-    "count": 6,
-    "uniques": 2
-  },
-  {
     "path": "/MuYunyun/create-react-doc/pull/223/commits",
     "title": "fix https://github.com/MuYunyun/create-react-doc/issues/222 by MuYunyun · Pul...",
     "count": 6,
     "uniques": 1
   },
   {
-    "path": "/MuYunyun/create-react-doc/pull/223/files",
-    "title": "fix https://github.com/MuYunyun/create-react-doc/issues/222 by MuYunyun · Pul...",
+    "path": "/MuYunyun/create-react-doc/pull/229",
+    "title": "feat: remove extra logic in prod by MuYunyun · Pull Request #229 · MuYunyun/c...",
     "count": 6,
     "uniques": 1
   },
   {
-    "path": "/MuYunyun/create-react-doc/pull/224",
-    "title": "fix: menu init by MuYunyun · Pull Request #224 · MuYunyun/create-react-doc",
-    "count": 4,
+    "path": "/MuYunyun/create-react-doc/pull/223",
+    "title": "fix https://github.com/MuYunyun/create-react-doc/issues/222 by MuYunyun · Pul...",
+    "count": 5,
     "uniques": 2
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/pull/223/files",
+    "title": "fix https://github.com/MuYunyun/create-react-doc/issues/222 by MuYunyun · Pul...",
+    "count": 5,
+    "uniques": 1
   }
 ]
