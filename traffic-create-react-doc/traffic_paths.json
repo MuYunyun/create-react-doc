@@ -2,20 +2,14 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 42,
+    "count": 41,
     "uniques": 27
   },
   {
     "path": "/MuYunyun/create-react-doc/issues",
     "title": "Issues · MuYunyun/create-react-doc",
-    "count": 29,
-    "uniques": 2
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/pulls",
-    "title": "Pull requests · MuYunyun/create-react-doc",
-    "count": 12,
-    "uniques": 2
+    "count": 28,
+    "uniques": 1
   },
   {
     "path": "/MuYunyun/create-react-doc/tree/main/packages",
@@ -24,20 +18,14 @@
     "uniques": 6
   },
   {
-    "path": "/MuYunyun/create-react-doc/issues/219",
-    "title": "优化首页菜单区域可可交互时间过长的问题 · Issue #219 · MuYunyun/create-react-doc",
-    "count": 8,
+    "path": "/MuYunyun/create-react-doc/pulls",
+    "title": "Pull requests · MuYunyun/create-react-doc",
+    "count": 9,
     "uniques": 1
   },
   {
-    "path": "/MuYunyun/create-react-doc/tree/main/packages/leetcode-cli",
-    "title": "create-react-doc/packages/leetcode-cli at main · MuYunyun/create-react-doc · ...",
-    "count": 6,
-    "uniques": 4
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/pull/223/commits",
-    "title": "fix https://github.com/MuYunyun/create-react-doc/issues/222 by MuYunyun · Pul...",
+    "path": "/MuYunyun/create-react-doc/issues/219",
+    "title": "优化首页菜单区域可可交互时间过长的问题 · Issue #219 · MuYunyun/create-react-doc",
     "count": 6,
     "uniques": 1
   },
@@ -54,9 +42,21 @@
     "uniques": 3
   },
   {
-    "path": "/MuYunyun/create-react-doc/pull/223",
-    "title": "fix https://github.com/MuYunyun/create-react-doc/issues/222 by MuYunyun · Pul...",
+    "path": "/MuYunyun/create-react-doc/tree/main/packages/leetcode-cli",
+    "title": "create-react-doc/packages/leetcode-cli at main · MuYunyun/create-react-doc · ...",
     "count": 5,
+    "uniques": 3
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/actions",
+    "title": "Actions · MuYunyun/create-react-doc",
+    "count": 4,
+    "uniques": 2
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/pull/224",
+    "title": "fix: menu init by MuYunyun · Pull Request #224 · MuYunyun/create-react-doc",
+    "count": 4,
     "uniques": 2
   }
 ]
