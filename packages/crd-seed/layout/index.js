@@ -265,31 +265,35 @@ function BasicLayout({
     )
   }
   return (
-    <div className={styles.wrapper}>
-      <Header
-        logo={logo}
-        href={ifAddPrefix ? `/${repo}` : `/`}
-        location={location}
-        indexProps={indexProps}
-        menuSource={menuSource}
-      />
-      <div
-        className={cx(styles.wrapperContent, {
-          [styles.wrapperMobile]: isMobile,
-        })}
-      >
-        {renderPageHeader()}
-        <div id="menuPosition">
-          {
-            ifDev || pointRender === 'menu'
-              ? renderMenuContainer()
-              : null
-          }
-        </div>
-        {renderContent()}
-        <Footer inlineCollapsed={inlineCollapsed} />
-      </div>
-    </div>
+    <>
+      {
+        pointRender === 'menu'
+          // prod render
+          ? renderMenuContainer()
+          // pre & dev render
+          : <div className={styles.wrapper}>
+            <Header
+              logo={logo}
+              href={ifAddPrefix ? `/${repo}` : `/`}
+              location={location}
+              indexProps={indexProps}
+              menuSource={menuSource}
+            />
+            <div
+              className={cx(styles.wrapperContent, {
+                [styles.wrapperMobile]: isMobile,
+              })}
+            >
+              {renderPageHeader()}
+              <div id="menuPosition">
+                {renderMenuContainer()}
+              </div>
+              {renderContent()}
+              <Footer inlineCollapsed={inlineCollapsed} />
+            </div>
+          </div>
+      }
+    </>
   )
 }
 
