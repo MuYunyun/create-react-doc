@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { Switch, Link, Route, Redirect } from 'react-router-dom'
 import cx from 'classnames'
-import { ifProd, ifPrerender } from 'crd-client-utils'
+import { ifDev, ifProd, ifPrerender } from 'crd-client-utils'
 import Menu from '../component/Menu'
 import Icon from '../component/Icon'
 import Affix from '../component/Affix'
@@ -22,6 +22,8 @@ function BasicLayout({
   routeData,
   menuSource,
   indexProps,
+  // render area
+  pointRender
 }) {
   const { pathname } = location
   const { user, repo, branch = 'main', language = 'en', menuOpenKeys } = DOCSCONFIG || {}
@@ -277,7 +279,13 @@ function BasicLayout({
         })}
       >
         {renderPageHeader()}
-        {renderMenuContainer()}
+        <div id="menuPosition">
+          {
+            ifDev || pointRender === 'menu'
+              ? renderMenuContainer()
+              : null
+          }
+        </div>
         {renderContent()}
         <Footer inlineCollapsed={inlineCollapsed} />
       </div>
