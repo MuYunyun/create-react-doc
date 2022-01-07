@@ -1,10 +1,7 @@
 import ReactDOM from 'react-dom'
-// import ReactDOMServer from 'react-dom/server';
 import '@babel/polyfill'
-import { ifDev, ifProd, ifPrerender } from 'crd-client-utils'
+import { ifDev, ifPrerender } from 'crd-client-utils'
 import RouterRoot from './Router'
-
-const ifProdRender = ifProd && !ifPrerender
 
 if (ifDev) {
   // dev render
@@ -12,7 +9,7 @@ if (ifDev) {
     <RouterRoot />,
     document.getElementById('root'),
   )
-} else if (!ifProdRender) {
+} else if (ifPrerender) {
   // prerender
   ReactDOM.render(
     <RouterRoot />,
