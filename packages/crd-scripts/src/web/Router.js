@@ -65,12 +65,10 @@ const RoutersContainer = withRouter(({ ...props }) => {
   )
 })
 
-export default function RouterRoot({
-  pointRender
-}) {
+export default function RouterRoot() {
   return (
     <BrowserRouter>
-      <RoutersContainer pointRender={pointRender} />
+      <RoutersContainer />
     </BrowserRouter>
   )
 }

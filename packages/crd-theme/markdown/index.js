@@ -4,10 +4,8 @@ import { MDXProvider } from '@mdx-js/react'
 import { Helmet } from 'react-helmet'
 import CodeBlock from './codeBlock'
 import Link from './Link'
-import Loading from '../component/Loading'
 import styles from './style/index.less'
 
-// const { useState, useLayoutEffect, useRef } = React
 const { useState, useEffect, useRef } = React
 
 const components = {
@@ -19,31 +17,31 @@ function Markdown(markdownProps) {
   const { props } = markdownProps
   const { relative, name } = props
 
-  const getInitMarkdownCP = () => {
+  const getRmFirstSlashMarkdownName = () => {
     const relativeMd = relative
     if (!relativeMd) return null
-
-    const rmFirstSlash = relative.slice(1, relative.length - 3)
-    return () => require(`__project_root__/${rmFirstSlash}.md`).default
+    return relative.slice(1, relative.length - 3)
   }
-  getInitMarkdownCP()
+
+  const getInitMarkdownCP = () => {
+    const markdownName = getRmFirstSlashMarkdownName()
+    if (!markdownName) return
+    return () => require(`__project_root__/${markdownName}.md`).default
+  }
 
   const [MarkdownCP, setMarkdownCP] = useState(getInitMarkdownCP())
   const markdownWrapperRef = useRef(null)
 
   const renderMarkdown = () => {
-    const relativeMd = relative
-    if (!relativeMd) return null
-
-    const rmFirstSlash = relative.slice(1, relative.length - 3)
+    const markdownName = getRmFirstSlashMarkdownName()
+    if (!markdownName) return
     // it must be writen with / & .md in dynamic import
-    import(`__project_root__/${rmFirstSlash}.md`).then((data) => {
+    import(`__project_root__/${markdownName}.md`).then((data) => {
       // data.default is a function, so we should write () => data.default in setState here.
       setMarkdownCP(() => (data.default || data))
     })
   }
 
-  // useLayoutEffect(() => {
   useEffect(() => {
     renderMarkdown()
   }, [])
@@ -60,17 +58,15 @@ function Markdown(markdownProps) {
       </Helmet>
       {
         MarkdownCP
-          ? <div className={cx('markdown', styles.markdown, styles.markdownwrapper)} ref={markdownWrapperRef}>
-            {
-              // MarkdownCP
-              //   ?
-                <MDXProvider
-                  components={components}
-                >
-                  <MarkdownCP />
-                </MDXProvider>
-                // : <Loading />
-            }
+          ? <div
+            className={cx('markdown', styles.markdown, styles.markdownwrapper)}
+            ref={markdownWrapperRef}
+          >
+            <MDXProvider
+              components={components}
+            >
+              <MarkdownCP />
+            </MDXProvider>
           </div>
           : null
       }

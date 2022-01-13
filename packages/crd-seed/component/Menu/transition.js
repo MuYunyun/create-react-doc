@@ -1,4 +1,3 @@
-// import { useLayoutEffect, useRef, useCallback } from 'react'
 import { useEffect, useRef, useCallback } from 'react'
 import styles from './style/index.less'
 
@@ -60,7 +59,6 @@ export default function Transition({
   }, [afterLeave])
 
   const triggerChange = useCallback(
-    // eslint-disable-next-line no-shadow
     (isShow) => {
       clearTimeout(timer.current.enterTimer)
       clearTimeout(timer.current.leaveTimer)
@@ -75,7 +73,6 @@ export default function Transition({
     [beforeLeave, enter, leave]
   )
 
-  // useLayoutEffect(() => {
   useEffect(() => {
     if (!mounted.current) {
       mounted.current = true
