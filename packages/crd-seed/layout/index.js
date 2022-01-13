@@ -1,13 +1,14 @@
 import * as React from 'react'
 import { Switch, Link, Route, Redirect } from 'react-router-dom'
 import cx from 'classnames'
+import { ifDev, ifProd, ifPrerender } from 'crd-client-utils'
 import Menu from '../component/Menu'
 import Icon from '../component/Icon'
 import Affix from '../component/Affix'
 import Header from '../component/Header'
 import Footer from '../component/Footer'
 import languageMap from '../language'
-import { isMobile, ifAddPrefix, ifProd, ifPrerender } from '../utils'
+import { isMobile, ifAddPrefix } from '../utils'
 import { getOpenSubMenuKeys } from './utils'
 import logo from '../crd.logo.svg'
 import styles from './index.less'
@@ -21,11 +22,15 @@ function BasicLayout({
   routeData,
   menuSource,
   indexProps,
+  // render area
+  pointRender
 }) {
   const { pathname } = location
   const { user, repo, branch = 'main', language = 'en', menuOpenKeys } = DOCSCONFIG || {}
   const [inlineCollapsed, setInlineCollapsed] = useState(true)
   const [selectedKey, setSelectedKey] = useState('')
+  const [monted, setMounted] = useState(false)
+  const [routeChanged, setRoutedChanged] = useState(false)
   const curOpenKeys = getOpenSubMenuKeys({
     pathname,
     menuSource,
@@ -57,6 +62,17 @@ function BasicLayout({
       newPathName = newPathName.slice(`/${repo}`.length, newPathName.length)
     }
     setSelectedKey(newPathName || defaultPath)
+  }, location.pathname)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  useEffect(() => {
+    const { pathname } = location
+    if (monted) {
+      setRoutedChanged(true)
+    }
   }, location.pathname)
 
   const scrollToTop = () => {
@@ -229,6 +245,7 @@ function BasicLayout({
     )
   }
 
+  // Target: The first screen not to do renderContent logic. The second screen do.
   const renderContent = () => {
     return (
       <div
@@ -261,26 +278,39 @@ function BasicLayout({
       </div>
     )
   }
+
+  console.log('routeChanged', routeChanged)
   return (
-    <div className={styles.wrapper}>
-      <Header
-        logo={logo}
-        href={ifAddPrefix ? `/${repo}` : `/`}
-        location={location}
-        indexProps={indexProps}
-        menuSource={menuSource}
-      />
-      <div
-        className={cx(styles.wrapperContent, {
-          [styles.wrapperMobile]: isMobile,
-        })}
-      >
-        {renderPageHeader()}
-        {renderMenuContainer()}
-        {renderContent()}
-        <Footer inlineCollapsed={inlineCollapsed} />
-      </div>
-    </div>
+    <>
+      {
+        // pointRender === 'menu' && !routeChanged
+          // prod render
+          // ? renderMenuContainer()
+          // pre & dev render
+          // : <div className={styles.wrapper}>
+        <div className={styles.wrapper}>
+          <Header
+            logo={logo}
+            href={ifAddPrefix ? `/${repo}` : `/`}
+            location={location}
+            indexProps={indexProps}
+            menuSource={menuSource}
+          />
+          <div
+            className={cx(styles.wrapperContent, {
+              [styles.wrapperMobile]: isMobile,
+            })}
+          >
+            {renderPageHeader()}
+            {/* <div id="menuPosition"> */}
+              {renderMenuContainer()}
+            {/* </div> */}
+            {renderContent()}
+            <Footer inlineCollapsed={inlineCollapsed} />
+          </div>
+        </div>
+      }
+    </>
   )
 }
 

@@ -1,4 +1,5 @@
-import { useState, useLayoutEffect, useRef } from 'react'
+// import { useState, useLayoutEffect, useRef } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { throttle } from './utils'
 
 const Affix = ({
@@ -22,7 +23,8 @@ const Affix = ({
   // 是否是绝对布局模式
   const fixedRef = useRef(false)
   const [fixed, setFixed] = useState(fixedRef.current)
-  useLayoutEffect(() => {
+  // useLayoutEffect(() => {
+  useEffect(() => {
     widthRef.current = width
   }, [width])
   const validValue = (value) => {
@@ -98,12 +100,14 @@ const Affix = ({
 
   const scroll = throttle(handleScroll, 20)
 
-  useLayoutEffect(() => {
+  // useLayoutEffect(() => {
+  useEffect(() => {
     // 在子节点移开父节点后保持原来占位
     setWrapperDimension()
   }, [fixed, width])
 
-  useLayoutEffect(() => {
+  // useLayoutEffect(() => {
+  useEffect(() => {
     if (target) scrollElm = target()
     scrollElm.addEventListener('scroll', scroll)
     return () => {

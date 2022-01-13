@@ -7,6 +7,7 @@ import Link from './Link'
 import Loading from '../component/Loading'
 import styles from './style/index.less'
 
+// const { useState, useLayoutEffect, useRef } = React
 const { useState, useEffect, useRef } = React
 
 const components = {
@@ -17,7 +18,17 @@ const components = {
 function Markdown(markdownProps) {
   const { props } = markdownProps
   const { relative, name } = props
-  const [MarkdownCP, setMarkdownCP] = useState(null)
+
+  const getInitMarkdownCP = () => {
+    const relativeMd = relative
+    if (!relativeMd) return null
+
+    const rmFirstSlash = relative.slice(1, relative.length - 3)
+    return () => require(`__project_root__/${rmFirstSlash}.md`).default
+  }
+  getInitMarkdownCP()
+
+  const [MarkdownCP, setMarkdownCP] = useState(getInitMarkdownCP())
   const markdownWrapperRef = useRef(null)
 
   const renderMarkdown = () => {
@@ -32,6 +43,7 @@ function Markdown(markdownProps) {
     })
   }
 
+  // useLayoutEffect(() => {
   useEffect(() => {
     renderMarkdown()
   }, [])
@@ -46,18 +58,22 @@ function Markdown(markdownProps) {
         <title>{getName()}</title>
         <meta name={getName()} content={getName()} />
       </Helmet>
-      <div className={cx('markdown', styles.markdown, styles.markdownwrapper)} ref={markdownWrapperRef}>
-        {
-          MarkdownCP
-            ?
-            <MDXProvider
-              components={components}
-            >
-              <MarkdownCP />
-            </MDXProvider>
-            : <Loading />
-        }
-      </div>
+      {
+        MarkdownCP
+          ? <div className={cx('markdown', styles.markdown, styles.markdownwrapper)} ref={markdownWrapperRef}>
+            {
+              // MarkdownCP
+              //   ?
+                <MDXProvider
+                  components={components}
+                >
+                  <MarkdownCP />
+                </MDXProvider>
+                // : <Loading />
+            }
+          </div>
+          : null
+      }
     </>
   )
 }
