@@ -371,6 +371,24 @@
   font-family: Lato, Helvetica Neue For Number, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Helvetica Neue, Helvetica, Arial, sans-serif;
 }
 
+.btn-CEAtK {
+  color: #fff;
+  background: #1890ff;
+  border-color: #1890ff;
+  text-shadow: 0 -1px 0 rgb(0 0 0%);
+  box-shadow: 0 2px #0000000b;
+  height: 40px;
+  padding: 6.4px 15px;
+  font-size: 16px;
+  border-radius: 2px;
+  line-height: 1.5715;
+  position: relative;
+  display: inline-block;
+  font-weight: 400;
+  white-space: nowrap;
+  text-align: center;
+}
+
 body {
   font-family: Helvetica Neue For Number, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Helvetica Neue, Helvetica, Arial, sans-serif;
 }
@@ -896,6 +914,7 @@ a:hover {
 .menuWrapper-y2Xvq .affixWrapper-1BGXQ {
   border-right: 1px solid #e9e9e9;
   transition: width 0.2s linear;
+  width: 0px;
 }
 .menuMask-3BhcL {
   position: absolute;
