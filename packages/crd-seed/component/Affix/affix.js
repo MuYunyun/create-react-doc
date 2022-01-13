@@ -1,4 +1,3 @@
-// import { useState, useLayoutEffect, useRef } from 'react'
 import { useState, useEffect, useRef } from 'react'
 import { throttle } from './utils'
 
@@ -23,15 +22,29 @@ const Affix = ({
   // 是否是绝对布局模式
   const fixedRef = useRef(false)
   const [fixed, setFixed] = useState(fixedRef.current)
-  // useLayoutEffect(() => {
+
   useEffect(() => {
     widthRef.current = width
   }, [width])
+
+  useEffect(() => {
+    // 在子节点移开父节点后保持原来占位
+    setWrapperDimension()
+  }, [fixed, width])
+
+  useEffect(() => {
+    if (target) scrollElm = target()
+    scrollElm.addEventListener('scroll', scroll)
+    return () => {
+      if (target) scrollElm = target()
+      scrollElm.removeEventListener('scroll', scroll)
+    }
+  }, [offsetTop, offsetBottom])
+
   const validValue = (value) => {
     return typeof value === 'number'
   }
   const setWrapperDimension = () => {
-    // eslint-disable-next-line no-shadow
     const { width: wrapperRefWidth, height: wrapperRefHeight } = wrapperRef.current
       ? wrapperRef.current.getBoundingClientRect()
       : {}
@@ -99,22 +112,6 @@ const Affix = ({
   }
 
   const scroll = throttle(handleScroll, 20)
-
-  // useLayoutEffect(() => {
-  useEffect(() => {
-    // 在子节点移开父节点后保持原来占位
-    setWrapperDimension()
-  }, [fixed, width])
-
-  // useLayoutEffect(() => {
-  useEffect(() => {
-    if (target) scrollElm = target()
-    scrollElm.addEventListener('scroll', scroll)
-    return () => {
-      if (target) scrollElm = target()
-      scrollElm.removeEventListener('scroll', scroll)
-    }
-  }, [offsetTop, offsetBottom])
 
   return (
     <div ref={placeholderRef} style={style} className={className}>
