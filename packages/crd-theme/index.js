@@ -1,11 +1,7 @@
-// import Loading from './component/Loading'
-import Markdown from './routes/Pages'
-// import { ifProd, ifPrerender } from './utils'
+import Markdown from './markdown'
 import './index.less'
 
 export default function (Lazyload, props) {
-  /** todo: how to avoid the extra logic */
-  // if (ifProd && !ifPrerender) return null
   // const LoadableComponent = Lazyload({
   //   component: () => import('./routes/Pages'),
   //   LoadingComponent: Loading,

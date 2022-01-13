@@ -1,4 +1,5 @@
-import { useState, useRef, useLayoutEffect, Fragment, Children, cloneElement } from 'react'
+// import { useState, useRef, useLayoutEffect, Fragment, Children, cloneElement } from 'react'
+import { useState, useRef, useEffect, Fragment, Children, cloneElement } from 'react'
 import cx from 'classnames'
 import Transition from './transition'
 import { getMenuStyle } from './util'
@@ -42,7 +43,8 @@ function SubMenu({
 
   const gapDistance = 4
   /** 使用 useLayoutEffect 可以避免 useEffect 产生可见的位移痕迹 */
-  useLayoutEffect(() => {
+  // useLayoutEffect(() => {
+  useEffect(() => {
     if (popupSubMenu.current && curSubmenu.current) {
       popupSubMenu.current.style.left = `${curSubmenu.current.getBoundingClientRect().right +
         gapDistance}px`
