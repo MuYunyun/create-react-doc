@@ -1,0 +1,1 @@
+(self.webpackChunkcreate_react_doc=self.webpackChunkcreate_react_doc||[]).push([[2721],{12721:(e,c,a)=>{e.exports=a.p+"static/ensureDir-sync.155c8527.md"}}]);

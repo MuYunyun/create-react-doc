@@ -1,0 +1,1 @@
+(self.webpackChunkcreate_react_doc=self.webpackChunkcreate_react_doc||[]).push([[7341],{17341:(e,c,a)=>{e.exports=a.p+"static/README.5ef783d2.md"}}]);

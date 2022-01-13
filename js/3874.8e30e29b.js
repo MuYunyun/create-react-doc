@@ -1,0 +1,1 @@
+(self.webpackChunkcreate_react_doc=self.webpackChunkcreate_react_doc||[]).push([[3874],{23874:(e,c,t)=>{e.exports=t.p+"static/emptyDir.d0488fec.md"}}]);
