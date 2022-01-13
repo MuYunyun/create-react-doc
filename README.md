@@ -30,11 +30,9 @@ abbrlink: s31w9gd1
 
 * 建站理念: `文件即站点` (Files as a Site)。
 * 开箱即用: 通过指定目录或文档, 一键生成文档、博客站点, 无需关心站点环境配置信息。
-* 性能: 通过`预渲染`、`懒加载`大幅提升站点加载速度。
+* 流畅的用户体验: 内置 SSR 首屏直出方案(基于 gp-pages 服务)，以提升用户体验。
 * 基于 mdx: 支持在 markdown 中`书写 React 组件`、数学公式等。
-* 搜索引擎优化:
-  * 支持 SEO, 让文档更易被搜索。
-  * 支持短链，以让链接持久化。
+* 搜索引擎优化: 支持 SEO, 让文档更易被搜索。
 * 个性化: 支持[自定义主题](https://muyunyun.cn/create-react-doc/9f41fc98)。
 * 工作流: 集成 Github action, 支持自动化打包、发布站点。
 
@@ -49,12 +47,10 @@ create-react-doc 提供了官方默认主题 [crd-seed](https://github.com/MuYun
 * 文档支持内嵌 codepen、codesandbox。
 * GitHub 联动。
 
-使用该主题搭建的项目有:
+[笔者博客](http://muyunyun.cn/blog) 就是使用默认主题搭建的。
 
-* [blog](https://github.com/MuYunyun/blog), [站点](http://muyunyun.cn/blog)
-  * ![](http://with.muyunyun.cn/ec330b8ac2175c828be41f446f9f9619.jpg)
-  * ![](http://with.muyunyun.cn/2e7440e4256debda2d73a4e6392c7146.jpg-300)
-* [diana](https://github.com/MuYunyun/diana)
+![](http://with.muyunyun.cn/ec330b8ac2175c828be41f446f9f9619.jpg)
+![](http://with.muyunyun.cn/2e7440e4256debda2d73a4e6392c7146.jpg-300)
 
 如果您想定制化或者分享个人主题, 可以参考[自定义主题](https://muyunyun.cn/create-react-doc/9f41fc98)。
 
