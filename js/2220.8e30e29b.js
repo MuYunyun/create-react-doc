@@ -1,1 +1,0 @@
-(self.webpackChunkcreate_react_doc=self.webpackChunkcreate_react_doc||[]).push([[2220],{12220:(e,a,c)=>{e.exports=c.p+"static/readJson.4fbb223a.md"}}]);

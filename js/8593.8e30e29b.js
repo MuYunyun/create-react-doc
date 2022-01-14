@@ -1,1 +1,0 @@
-(self.webpackChunkcreate_react_doc=self.webpackChunkcreate_react_doc||[]).push([[8593],{78593:(e,c,t)=>{e.exports=t.p+"static/writeJson-sync.195d1f25.md"}}]);

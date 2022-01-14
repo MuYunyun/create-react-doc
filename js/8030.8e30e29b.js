@@ -1,1 +1,0 @@
-(self.webpackChunkcreate_react_doc=self.webpackChunkcreate_react_doc||[]).push([[8030],{78030:(e,a,c)=>{e.exports=c.p+"static/remove-sync.daa82af6.md"}}]);
