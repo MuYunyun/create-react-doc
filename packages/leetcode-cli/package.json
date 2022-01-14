@@ -10,7 +10,7 @@
     "commander": "^2.20.0",
     "crd-utils": "^1.5.0",
     "enquirer": "^2.3.0",
-    "graphql-request": "^1.8.2",
+    "graphql-request": "^3.7.0",
     "inquirer": "^7.3.3",
     "node-fs-extra": "^0.8.2",
     "ora": "^3.4.0",
