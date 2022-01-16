@@ -27,7 +27,7 @@
     "crd-prerender-spa-plugin": "^0.2.0",
     "crd-theme": "^1.8.0",
     "crd-utils": "^1.5.0",
-    "css-loader": "^0.28.7",
+    "css-loader": "^6.5.1",
     "css-minimizer-webpack-plugin": "^1.2.0",
     "detect-port": "^1.2.2",
     "eslint": "^7.11.0",
