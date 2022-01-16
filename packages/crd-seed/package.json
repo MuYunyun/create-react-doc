@@ -4,6 +4,7 @@
   "description": "Default Theme with Create React Doc",
   "main": "index.js",
   "dependencies": {
+    "crd-client-utils": "^1.8.0",
     "react-router-dom": "^4.2.2",
     "react-switch": "^5.0.1"
   },
