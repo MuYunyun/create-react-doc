@@ -2,8 +2,8 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 69,
-    "uniques": 39
+    "count": 66,
+    "uniques": 37
   },
   {
     "path": "/MuYunyun/create-react-doc/issues",
@@ -20,14 +20,8 @@
   {
     "path": "/MuYunyun/create-react-doc/pulls",
     "title": "Pull requests · MuYunyun/create-react-doc",
-    "count": 15,
+    "count": 12,
     "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/tree/main/packages",
-    "title": "create-react-doc/packages at main · MuYunyun/create-react-doc",
-    "count": 8,
-    "uniques": 5
   },
   {
     "path": "/MuYunyun/create-react-doc/tree/main/docs",
@@ -36,27 +30,33 @@
     "uniques": 2
   },
   {
+    "path": "/MuYunyun/create-react-doc/tree/main/packages",
+    "title": "create-react-doc/packages at main · MuYunyun/create-react-doc",
+    "count": 7,
+    "uniques": 4
+  },
+  {
     "path": "/MuYunyun/create-react-doc/pull/236",
     "title": "support reference ssr by MuYunyun · Pull Request #236 · MuYunyun/create-react...",
     "count": 7,
     "uniques": 1
   },
   {
-    "path": "/MuYunyun/create-react-doc/pull/229",
-    "title": "feat: remove extra logic in prod by MuYunyun · Pull Request #229 · MuYunyun/c...",
-    "count": 6,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/actions",
-    "title": "Actions · MuYunyun/create-react-doc",
-    "count": 5,
-    "uniques": 3
-  },
-  {
     "path": "/MuYunyun/create-react-doc/tree/main/components",
     "title": "create-react-doc/components at main · MuYunyun/create-react-doc",
     "count": 5,
     "uniques": 2
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/pull/235",
+    "title": "解耦 menu 逻辑与内容区域逻辑, 加快页面渲染速度 by MuYunyun · Pull Request #235 · MuYunyun/create...",
+    "count": 4,
+    "uniques": 3
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/pull/240/files",
+    "title": "feat: combile SSR in prerender to prevent shake problem by MuYunyun · Pull Re...",
+    "count": 4,
+    "uniques": 1
   }
 ]
