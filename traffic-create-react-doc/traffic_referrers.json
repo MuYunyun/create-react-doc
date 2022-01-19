@@ -1,8 +1,8 @@
 [
   {
     "referrer": "github.com",
-    "count": 109,
-    "uniques": 12
+    "count": 119,
+    "uniques": 18
   },
   {
     "referrer": "dev.to",
@@ -28,10 +28,5 @@
     "referrer": "link.juejin.cn",
     "count": 2,
     "uniques": 2
-  },
-  {
-    "referrer": "jianshu.com",
-    "count": 1,
-    "uniques": 1
   }
 ]
