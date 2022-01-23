@@ -2,7 +2,7 @@
   {
     "referrer": "github.com",
     "count": 110,
-    "uniques": 20
+    "uniques": 21
   },
   {
     "referrer": "dev.to",
@@ -10,19 +10,19 @@
     "uniques": 3
   },
   {
+    "referrer": "jianshu.com",
+    "count": 29,
+    "uniques": 1
+  },
+  {
     "referrer": "link.segmentfault.com",
     "count": 8,
     "uniques": 3
   },
   {
-    "referrer": "muyunyun.cn",
-    "count": 5,
-    "uniques": 2
-  },
-  {
     "referrer": "link.zhihu.com",
-    "count": 4,
-    "uniques": 4
+    "count": 5,
+    "uniques": 5
   },
   {
     "referrer": "link.juejin.cn",
@@ -31,6 +31,11 @@
   },
   {
     "referrer": "v2ex.com",
+    "count": 2,
+    "uniques": 2
+  },
+  {
+    "referrer": "muyunyun.cn",
     "count": 1,
     "uniques": 1
   }
