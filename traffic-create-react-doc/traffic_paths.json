@@ -2,25 +2,25 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 74,
-    "uniques": 40
+    "count": 69,
+    "uniques": 38
   },
   {
     "path": "/MuYunyun/create-react-doc/issues",
     "title": "Issues · MuYunyun/create-react-doc",
-    "count": 20,
+    "count": 14,
     "uniques": 5
   },
   {
     "path": "/MuYunyun/create-react-doc/issues/103",
     "title": "解耦 menu 逻辑与内容区域逻辑, 加快页面渲染速度。 · Issue #103 · MuYunyun/create-react-doc",
-    "count": 17,
+    "count": 12,
     "uniques": 3
   },
   {
     "path": "/MuYunyun/create-react-doc/pulls",
     "title": "Pull requests · MuYunyun/create-react-doc",
-    "count": 13,
+    "count": 10,
     "uniques": 1
   },
   {
@@ -28,12 +28,6 @@
     "title": "Release v1.8.1: 支持 SSR 首屏直出方案(基于 gp-pages 服务) · MuYunyun/create-react-doc",
     "count": 8,
     "uniques": 6
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/pull/240/files",
-    "title": "feat: combile SSR in prerender to prevent shake problem by MuYunyun · Pull Re...",
-    "count": 7,
-    "uniques": 2
   },
   {
     "path": "/MuYunyun/create-react-doc/releases",
@@ -44,7 +38,13 @@
   {
     "path": "/MuYunyun/create-react-doc/pull/240",
     "title": "feat: combile SSR in prerender to prevent shake problem by MuYunyun · Pull Re...",
-    "count": 6,
+    "count": 4,
+    "uniques": 2
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/pull/240/files",
+    "title": "feat: combile SSR in prerender to prevent shake problem by MuYunyun · Pull Re...",
+    "count": 4,
     "uniques": 2
   },
   {
