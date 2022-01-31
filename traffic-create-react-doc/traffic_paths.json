@@ -2,8 +2,8 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 68,
-    "uniques": 42
+    "count": 60,
+    "uniques": 38
   },
   {
     "path": "/MuYunyun/create-react-doc/tree/main/packages",
@@ -42,15 +42,9 @@
     "uniques": 1
   },
   {
-    "path": "/MuYunyun/create-react-doc/releases/tag/v1.8.1",
-    "title": "Release v1.8.1: 支持 SSR 首屏直出方案(基于 gp-pages 服务) · MuYunyun/create-react-doc",
-    "count": 6,
-    "uniques": 5
-  },
-  {
     "path": "/MuYunyun/create-react-doc/issues",
-    "title": "Issues · MuYunyun/create-react-doc",
-    "count": 6,
+    "title": "Issues · MuYunyun/create-react-doc · GitHub",
+    "count": 7,
     "uniques": 4
   },
   {
@@ -58,5 +52,11 @@
     "title": "create-react-doc/packages/crd-utils at main · MuYunyun/create-react-doc",
     "count": 6,
     "uniques": 2
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/tree/main/docs",
+    "title": "create-react-doc/docs at main · MuYunyun/create-react-doc",
+    "count": 4,
+    "uniques": 3
   }
 ]
