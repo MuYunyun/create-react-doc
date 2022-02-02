@@ -12,6 +12,7 @@ const paths = require('./path')
 module.exports = function (cmd) {
   const docsConfig = getDocsConfig()
   config.mode = 'development'
+  config.devtool = 'eval-source-map'
   config.entry = [
     require.resolve('react-hot-loader/patch'),
     require.resolve('webpack-hot-dev-clients/webpackHotDevClient'),
