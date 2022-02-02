@@ -20,12 +20,12 @@
     "uniques": 3
   },
   {
-    "referrer": "link.juejin.cn",
+    "referrer": "link.zhihu.com",
     "count": 5,
     "uniques": 5
   },
   {
-    "referrer": "link.zhihu.com",
+    "referrer": "link.juejin.cn",
     "count": 5,
     "uniques": 5
   },
@@ -35,12 +35,12 @@
     "uniques": 3
   },
   {
-    "referrer": "zhihu.com",
+    "referrer": "link.segmentfault.com",
     "count": 1,
     "uniques": 1
   },
   {
-    "referrer": "link.segmentfault.com",
+    "referrer": "zhihu.com",
     "count": 1,
     "uniques": 1
   }
