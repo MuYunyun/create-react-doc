@@ -2,14 +2,8 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 41,
-    "uniques": 21
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/tree/main/packages",
-    "title": "create-react-doc/packages at main · MuYunyun/create-react-doc",
-    "count": 13,
-    "uniques": 4
+    "count": 28,
+    "uniques": 18
   },
   {
     "path": "/MuYunyun/create-react-doc/issues",
@@ -18,45 +12,51 @@
     "uniques": 3
   },
   {
-    "path": "/MuYunyun/create-react-doc/tree/main/packages/crd-scripts/src",
-    "title": "create-react-doc/packages/crd-scripts/src at main · MuYunyun/create-react-doc",
-    "count": 12,
-    "uniques": 3
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/tree/main/packages/crd-scripts",
-    "title": "create-react-doc/packages/crd-scripts at main · MuYunyun/create-react-doc",
-    "count": 11,
-    "uniques": 3
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/tree/main/packages/crd-scripts/src/conf",
-    "title": "create-react-doc/packages/crd-scripts/src/conf at main · MuYunyun/create-reac...",
-    "count": 10,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/blob/main/packages/crd-scripts/src/server.js",
-    "title": "create-react-doc/server.js at main · MuYunyun/create-react-doc",
-    "count": 9,
-    "uniques": 2
-  },
-  {
     "path": "/MuYunyun/create-react-doc/issues/238",
     "title": "本地支持调试 prod 环境代码 · Issue #238 · MuYunyun/create-react-doc",
     "count": 8,
     "uniques": 1
   },
   {
-    "path": "/MuYunyun/create-react-doc/tree/main/packages/crd-seed",
-    "title": "create-react-doc/packages/crd-seed at main · MuYunyun/create-react-doc",
-    "count": 5,
+    "path": "/MuYunyun/create-react-doc/pull/249/files",
+    "title": "fix https://github.com/MuYunyun/create-react-doc/issues/238 by MuYunyun · Pul...",
+    "count": 4,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/issues/103",
+    "title": "解耦 menu 逻辑与内容区域逻辑, 加快页面渲染速度。 · Issue #103 · MuYunyun/create-react-doc",
+    "count": 3,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/pull/249",
+    "title": "fix https://github.com/MuYunyun/create-react-doc/issues/238 by MuYunyun · Pul...",
+    "count": 3,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/releases",
+    "title": "Releases · MuYunyun/create-react-doc",
+    "count": 2,
     "uniques": 2
   },
   {
-    "path": "/MuYunyun/create-react-doc/search",
-    "title": "Search · SEO",
-    "count": 4,
+    "path": "/MuYunyun/create-react-doc/tree/main/packages",
+    "title": "create-react-doc/packages at main · MuYunyun/create-react-doc",
+    "count": 2,
+    "uniques": 2
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/tree/main/packages/crd-scripts",
+    "title": "create-react-doc/packages/crd-scripts at main · MuYunyun/create-react-doc",
+    "count": 2,
+    "uniques": 2
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/tree/main/packages/crd-scripts/src",
+    "title": "create-react-doc/packages/crd-scripts/src at main · MuYunyun/create-react-doc",
+    "count": 2,
     "uniques": 2
   }
 ]
