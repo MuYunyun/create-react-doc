@@ -2,14 +2,14 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 37,
-    "uniques": 25
+    "count": 34,
+    "uniques": 23
   },
   {
     "path": "/MuYunyun/create-react-doc/issues",
-    "title": "Issues · MuYunyun/create-react-doc · GitHub",
-    "count": 16,
-    "uniques": 4
+    "title": "Issues · MuYunyun/create-react-doc",
+    "count": 12,
+    "uniques": 2
   },
   {
     "path": "/MuYunyun/create-react-doc/issues/238",
@@ -27,12 +27,6 @@
     "path": "/MuYunyun/create-react-doc/pull/249/files",
     "title": "fix https://github.com/MuYunyun/create-react-doc/issues/238 by MuYunyun · Pul...",
     "count": 4,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/issues/103",
-    "title": "解耦 menu 逻辑与内容区域逻辑, 加快页面渲染速度。 · Issue #103 · MuYunyun/create-react-doc",
-    "count": 3,
     "uniques": 1
   },
   {
@@ -56,6 +50,12 @@
   {
     "path": "/MuYunyun/create-react-doc/tree/main/packages",
     "title": "create-react-doc/packages at main · MuYunyun/create-react-doc",
+    "count": 2,
+    "uniques": 2
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/tree/main/packages/crd-scripts",
+    "title": "create-react-doc/packages/crd-scripts at main · MuYunyun/create-react-doc",
     "count": 2,
     "uniques": 2
   }
