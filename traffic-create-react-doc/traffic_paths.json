@@ -2,14 +2,8 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 46,
+    "count": 44,
     "uniques": 28
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/issues",
-    "title": "Issues · MuYunyun/create-react-doc",
-    "count": 14,
-    "uniques": 4
   },
   {
     "path": "/MuYunyun/create-react-doc/blob/main/README-en.md",
@@ -18,16 +12,10 @@
     "uniques": 4
   },
   {
-    "path": "/MuYunyun/create-react-doc/issues/238",
-    "title": "本地支持调试 prod 环境代码 · Issue #238 · MuYunyun/create-react-doc",
-    "count": 4,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/pull/249/files",
-    "title": "fix https://github.com/MuYunyun/create-react-doc/issues/238 by MuYunyun · Pul...",
-    "count": 4,
-    "uniques": 1
+    "path": "/MuYunyun/create-react-doc/issues",
+    "title": "Issues · MuYunyun/create-react-doc",
+    "count": 7,
+    "uniques": 3
   },
   {
     "path": "/MuYunyun/create-react-doc/issues/new",
@@ -36,27 +24,39 @@
     "uniques": 3
   },
   {
-    "path": "/MuYunyun/create-react-doc/pull/249",
-    "title": "fix https://github.com/MuYunyun/create-react-doc/issues/238 by MuYunyun · Pul...",
-    "count": 3,
-    "uniques": 1
-  },
-  {
     "path": "/MuYunyun/create-react-doc/pulls",
     "title": "Pull requests · MuYunyun/create-react-doc",
     "count": 2,
     "uniques": 2
   },
   {
-    "path": "/MuYunyun/create-react-doc/tree/main/packages",
-    "title": "create-react-doc/packages at main · MuYunyun/create-react-doc",
+    "path": "/MuYunyun/create-react-doc/blob/main/README.md",
+    "title": "create-react-doc/README.md at main · MuYunyun/create-react-doc",
     "count": 2,
-    "uniques": 2
+    "uniques": 1
   },
   {
-    "path": "/MuYunyun/create-react-doc/tree/main/packages/crd-scripts",
-    "title": "create-react-doc/packages/crd-scripts at main · MuYunyun/create-react-doc",
+    "path": "/MuYunyun/create-react-doc/tree/main/docs",
+    "title": "create-react-doc/docs at main · MuYunyun/create-react-doc",
     "count": 2,
-    "uniques": 2
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/blob/main/.github/workflows/gh-pages.yml",
+    "title": "create-react-doc/gh-pages.yml at main · MuYunyun/create-react-doc",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/blob/main/packages/crd-scripts/src/server.js",
+    "title": "create-react-doc/server.js at main · MuYunyun/create-react-doc",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/commits",
+    "title": "Commits · MuYunyun/create-react-doc",
+    "count": 1,
+    "uniques": 1
   }
 ]
