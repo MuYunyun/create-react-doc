@@ -1,8 +1,8 @@
 [
   {
     "referrer": "Google",
-    "count": 25,
-    "uniques": 3
+    "count": 26,
+    "uniques": 4
   },
   {
     "referrer": "github.com",
@@ -11,18 +11,13 @@
   },
   {
     "referrer": "muyunyun.cn",
-    "count": 11,
-    "uniques": 2
+    "count": 10,
+    "uniques": 1
   },
   {
     "referrer": "link.zhihu.com",
     "count": 8,
     "uniques": 6
-  },
-  {
-    "referrer": "dev.to",
-    "count": 1,
-    "uniques": 1
   },
   {
     "referrer": "v2ex.com",
@@ -31,11 +26,6 @@
   },
   {
     "referrer": "link.juejin.cn",
-    "count": 1,
-    "uniques": 1
-  },
-  {
-    "referrer": "muyunyun.medium.com",
     "count": 1,
     "uniques": 1
   }
