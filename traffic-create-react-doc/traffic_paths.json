@@ -2,20 +2,14 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 56,
-    "uniques": 32
+    "count": 45,
+    "uniques": 29
   },
   {
     "path": "/MuYunyun/create-react-doc/issues",
     "title": "Issues · MuYunyun/create-react-doc",
-    "count": 28,
-    "uniques": 3
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/blob/main/README-en.md",
-    "title": "create-react-doc/README-en.md at main · MuYunyun/create-react-doc",
-    "count": 5,
-    "uniques": 1
+    "count": 26,
+    "uniques": 2
   },
   {
     "path": "/MuYunyun/create-react-doc/commits/main",
@@ -36,18 +30,6 @@
     "uniques": 1
   },
   {
-    "path": "/MuYunyun/create-react-doc/issues/new",
-    "title": "New Issue · MuYunyun/create-react-doc",
-    "count": 2,
-    "uniques": 2
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/pulls",
-    "title": "Pull requests · MuYunyun/create-react-doc",
-    "count": 2,
-    "uniques": 2
-  },
-  {
     "path": "/MuYunyun/create-react-doc/pull/240/files",
     "title": "feat: combile SSR in prerender to prevent shake problem by MuYunyun · Pull Re...",
     "count": 2,
@@ -56,6 +38,24 @@
   {
     "path": "/MuYunyun/create-react-doc/blob/main/CONTRIBUTING.md",
     "title": "create-react-doc/CONTRIBUTING.md at main · MuYunyun/create-react-doc",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/blob/main/.github/workflows/gh-pages.yml",
+    "title": "create-react-doc/gh-pages.yml at main · MuYunyun/create-react-doc",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/issues/147",
+    "title": "编译缺少多层级目录文件生成 · Issue #147 · MuYunyun/create-react-doc",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/issues/17",
+    "title": ".menu-item li height made scrollbar · Issue #17 · MuYunyun/create-react-doc ·...",
     "count": 1,
     "uniques": 1
   }
