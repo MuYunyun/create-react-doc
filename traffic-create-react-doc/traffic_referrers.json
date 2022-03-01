@@ -5,14 +5,14 @@
     "uniques": 9
   },
   {
-    "referrer": "Google",
-    "count": 26,
-    "uniques": 4
-  },
-  {
     "referrer": "link.zhihu.com",
     "count": 19,
     "uniques": 8
+  },
+  {
+    "referrer": "Google",
+    "count": 2,
+    "uniques": 2
   },
   {
     "referrer": "v2ex.com",
