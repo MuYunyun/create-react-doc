@@ -2,20 +2,20 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 25,
-    "uniques": 18
+    "count": 23,
+    "uniques": 17
   },
   {
     "path": "/MuYunyun/create-react-doc/tree/main/packages",
     "title": "create-react-doc/packages at main · MuYunyun/create-react-doc",
-    "count": 8,
-    "uniques": 3
+    "count": 7,
+    "uniques": 2
   },
   {
     "path": "/MuYunyun/create-react-doc/tree/main/packages/crd-scripts/src",
     "title": "create-react-doc/packages/crd-scripts/src at main · MuYunyun/create-react-doc",
-    "count": 8,
-    "uniques": 2
+    "count": 7,
+    "uniques": 1
   },
   {
     "path": "/MuYunyun/create-react-doc/blob/main/packages/crd-theme/index.js",
@@ -30,24 +30,6 @@
     "uniques": 1
   },
   {
-    "path": "/MuYunyun/create-react-doc/tree/main/packages/crd-scripts",
-    "title": "create-react-doc/packages/crd-scripts at main · MuYunyun/create-react-doc",
-    "count": 5,
-    "uniques": 2
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/tree/main/packages/crd-utils",
-    "title": "create-react-doc/packages/crd-utils at main · MuYunyun/create-react-doc",
-    "count": 5,
-    "uniques": 2
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/blob/main/packages/crd-utils/index.js",
-    "title": "create-react-doc/index.js at main · MuYunyun/create-react-doc",
-    "count": 4,
-    "uniques": 2
-  },
-  {
     "path": "/MuYunyun/create-react-doc/blob/main/packages/crd-scripts/src/conf/webpack.config.dev.js",
     "title": "create-react-doc/webpack.config.dev.js at main · MuYunyun/create-react-doc",
     "count": 4,
@@ -57,6 +39,24 @@
     "path": "/MuYunyun/create-react-doc/blob/main/packages/crd-scripts/src/server.js",
     "title": "create-react-doc/server.js at main · MuYunyun/create-react-doc",
     "count": 4,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/tree/main/packages/crd-scripts",
+    "title": "create-react-doc/packages/crd-scripts at main · MuYunyun/create-react-doc",
+    "count": 4,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/tree/main/packages/crd-utils",
+    "title": "create-react-doc/packages/crd-utils at main · MuYunyun/create-react-doc",
+    "count": 4,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/blob/main/packages/crd-theme/index.html",
+    "title": "create-react-doc/index.html at main · MuYunyun/create-react-doc",
+    "count": 3,
     "uniques": 1
   }
 ]
