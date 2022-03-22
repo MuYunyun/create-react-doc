@@ -1,6 +1,6 @@
 import styles from './index.less'
 
-const Footer = () => {
+const NoMatch = () => {
   // eslint-disable-next-line no-undef
   const { user, repo } = DOCSCONFIG || {}
   return (
@@ -18,4 +18,4 @@ const Footer = () => {
   )
 }
 
-export default Footer
+export default NoMatch

@@ -267,10 +267,10 @@ function BasicLayout({
     <div className={styles.wrapper}>
       <Header
         logo={logo}
-        href={ifAddPrefix ? `/${repo}` : `/`}
-        location={location}
-        indexProps={indexProps}
-        menuSource={menuSource}
+        // href={ifAddPrefix ? `/${repo}` : `/`}
+        // location={location}
+        // indexProps={indexProps}
+        // menuSource={menuSource}
       />
       <div
         className={cx(styles.wrapperContent, {
