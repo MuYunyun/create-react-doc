@@ -3,7 +3,19 @@
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
     "count": 37,
-    "uniques": 26
+    "uniques": 25
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/issues",
+    "title": "Issues · MuYunyun/create-react-doc",
+    "count": 13,
+    "uniques": 3
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/issues/new",
+    "title": "New Issue · MuYunyun/create-react-doc",
+    "count": 3,
+    "uniques": 2
   },
   {
     "path": "/MuYunyun/create-react-doc/blob/main/README-en.md",
@@ -12,20 +24,8 @@
     "uniques": 2
   },
   {
-    "path": "/MuYunyun/create-react-doc/issues",
-    "title": "Issues · MuYunyun/create-react-doc",
-    "count": 2,
-    "uniques": 2
-  },
-  {
     "path": "/MuYunyun/create-react-doc/issues/205",
     "title": "点击右上角 Edit in GitHub 跳转链接错误 · Issue #205 · MuYunyun/create-react-doc · GitHub",
-    "count": 2,
-    "uniques": 2
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/tree/main/packages",
-    "title": "create-react-doc/packages at main · MuYunyun/create-react-doc",
     "count": 2,
     "uniques": 2
   },
