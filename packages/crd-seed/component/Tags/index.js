@@ -1,6 +1,6 @@
 import styles from './index.less'
 
-const Tags = () => {
+const Tags = ({}) => {
   const { user, repo } = DOCSCONFIG || {}
   return (
     <div className={styles.tags}>
