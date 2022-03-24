@@ -2,8 +2,8 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 39,
-    "uniques": 26
+    "count": 43,
+    "uniques": 30
   },
   {
     "path": "/MuYunyun/create-react-doc/issues",
@@ -12,26 +12,26 @@
     "uniques": 3
   },
   {
+    "path": "/MuYunyun/create-react-doc/issues/264",
+    "title": "增加 tags 页面 · Issue #264 · MuYunyun/create-react-doc",
+    "count": 4,
+    "uniques": 1
+  },
+  {
     "path": "/MuYunyun/create-react-doc/issues/new",
     "title": "New Issue · MuYunyun/create-react-doc",
     "count": 3,
     "uniques": 2
   },
   {
-    "path": "/MuYunyun/create-react-doc/issues/205",
-    "title": "点击右上角 Edit in GitHub 跳转链接错误 · Issue #205 · MuYunyun/create-react-doc · GitHub",
+    "path": "/MuYunyun/create-react-doc/pulls",
+    "title": "Pull requests · MuYunyun/create-react-doc · GitHub",
     "count": 2,
     "uniques": 2
   },
   {
     "path": "/MuYunyun/create-react-doc/blob/main/docs/%E4%B9%A6%E5%86%99%E7%BB%84%E4%BB%B6.md",
     "title": "create-react-doc/书写组件.md at main · MuYunyun/create-react-doc",
-    "count": 2,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/issues/264",
-    "title": "增加 tags 页面 · Issue #264 · MuYunyun/create-react-doc",
     "count": 2,
     "uniques": 1
   },
