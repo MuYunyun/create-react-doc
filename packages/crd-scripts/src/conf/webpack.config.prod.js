@@ -18,7 +18,7 @@ const Renderer = PrerenderSPAPlugin.PuppeteerRenderer
 
 module.exports = function (cmd) {
   const docsConfig = getDocsConfig()
-  const dirTree = getDirTree(cmd)
+  const { dirTree, tagsArr } = getDirTree(cmd)
   const routes = getPrerenderRoutes(dirTree)
 
   config.mode = 'production'
@@ -124,6 +124,7 @@ module.exports = function (cmd) {
   config.plugins = config.plugins.concat([
     new webpack.DefinePlugin({
       env: JSON.stringify('prod'),
+      tagsArr: JSON.stringify(tagsArr)
     }),
     new HtmlWebpackPlugin({
       inject: true,

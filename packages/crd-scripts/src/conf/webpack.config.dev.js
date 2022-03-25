@@ -6,11 +6,14 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { defaultHTMLPath } = require('crd-utils')
 const FriendlyErrorsWebpackPlugin = require('@nuxtjs/friendly-errors-webpack-plugin')
 const { getDocsConfig } = require('crd-utils')
+const { getDirTree } = require('./getPrerenderRoutes')
 const config = require('./webpack.config')
 const paths = require('./path')
 
 module.exports = function (cmd) {
   const docsConfig = getDocsConfig()
+  const { tagsArr } = getDirTree(cmd)
+
   config.mode = 'development'
   config.devtool = 'eval-source-map'
   config.entry = [
@@ -113,6 +116,7 @@ module.exports = function (cmd) {
   config.plugins = config.plugins.concat([
     new webpack.DefinePlugin({
       env: JSON.stringify('dev'),
+      tagsArr: JSON.stringify(tagsArr)
     }),
     new webpack.HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({

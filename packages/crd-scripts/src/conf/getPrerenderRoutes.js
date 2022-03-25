@@ -8,36 +8,54 @@ const getDirTree = (cmd) => {
     extensions: /\.md/,
     prerender: true,
   }
+  const tagsArr = []
   const dirTree = dirs.map(path => DirectoryTree({
     path,
     options: otherProps,
+    tagsArr
   }))
-  return dirTree
+
+  return {
+    dirTree,
+    // duplicate total tags from document.
+    tagsArr: Array.from(new Set(tagsArr))
+  }
 }
 
 // eg: ['docs/quick_start.md', 'a']
 // output: ['/quick_start', '/a/b', '/a/b/c']
 const getPrerenderRoutes = (dirTree) => {
   const dpCloneDirTree = JSON.parse(JSON.stringify(dirTree))
-  const result = getPrerenderRoute(dpCloneDirTree)
+  const result = recursiveDirTree(dpCloneDirTree)
   result.push('/404')
   return result
 }
 
-function getPrerenderRoute(data) {
-  const arr = []
-  return recursive(data, '', arr)
+function recursiveDirTree(data) {
+  return recursive(
+    data,
+    '',
+    []
+  )
 }
 
-function recursive(data, routePath, arr) {
+function recursive(
+  data,
+  routePath,
+  prerenderRouteArr,
+) {
   data.forEach((item) => {
     const { mdconf } = item || {}
-    const { abbrlink } = mdconf || {}
+    const { abbrlink, tags } = mdconf || {}
     const composeRouteName = `${routePath}/${item.name}`.replace(/.md$/, '')
 
     if (item.type === 'directory') {
       if (item.children && item.children.length > 0) {
-        item.children = recursive(item.children, composeRouteName, arr)
+        item.children = recursive(
+          item.children,
+          composeRouteName,
+          prerenderRouteArr,
+        )
       } else {
         item.children = []
       }
@@ -45,10 +63,10 @@ function recursive(data, routePath, arr) {
       const prerenderRouteName = abbrlink
         ? `/${abbrlink}`
         : composeRouteName
-      arr.push(prerenderRouteName)
+      prerenderRouteArr.push(prerenderRouteName)
     }
   })
-  return arr
+  return prerenderRouteArr
 }
 
 module.exports = {
