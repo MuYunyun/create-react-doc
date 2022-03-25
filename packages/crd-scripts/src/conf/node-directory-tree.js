@@ -51,6 +51,7 @@ function safeReadDirSync(path) {
 function directoryTree({
   path,
   options,
+  tagsArr = []
 }) {
   const name = PATH.basename(path)
   const item = { name }
@@ -78,6 +79,7 @@ function directoryTree({
       const contentStr = fs.readFileSync(path).toString()
       if (!contentStr) return
       const contentMatch = contentStr.match(/^<!--([^>]*)-->/)
+      /** generate abbrlink in FrontMatter */
       if (options.generate) {
         const randomId = generateRandomId(8)
         if (!contentMatch) {
@@ -96,7 +98,13 @@ function directoryTree({
         }
       }
 
-      item.mdconf = contentMatch ? YAML.parse(contentMatch[1]) : {}
+      const yamlParse = contentMatch ? YAML.parse(contentMatch[1]) : {}
+
+      if (Array.isArray(yamlParse.tags)) {
+        tagsArr.push(...yamlParse.tags)
+      }
+
+      item.mdconf = yamlParse
       try {
         // see https://stackoverflow.com/questions/2390199/finding-the-date-time-a-file-was-first-added-to-a-git-repository/2390382#2390382
         const result = execSync(`git log --format=%aD ${path} | tail -1`)
@@ -131,6 +139,7 @@ function directoryTree({
         directoryTree({
           path: PATH.join(path, child),
           options,
+          tagsArr
         }),
       )
       .filter(e => !!e)
