@@ -9,22 +9,11 @@ const Tags = ({}) => {
     <div className={styles.tags}>
       <div className={styles['tags-title']}>tags</div>
       <div className={styles['tags-content']}>
-        <a className={styles['tags-text']}>Annual Summary</a>
-        <a className={styles['tags-text']}>css</a>
-        <a className={styles['tags-text']}>ES7</a>
-        <a className={styles['tags-text']}>hooks</a>
-        <a className={styles['tags-text']}>JavaScript</a>
-        <a className={styles['tags-text']}>Mvvm</a>
-        <a className={styles['tags-text']}>Node.js</a>
-        <a className={styles['tags-text']}>Promise</a>
-        <a className={styles['tags-text']}>Python</a>
-        <a className={styles['tags-text']}>React</a>
-        <a className={styles['tags-text']}>Redux</a>
-        <a className={styles['tags-text']}>SEO</a>
-        <a className={styles['tags-text']}>Schedule</a>
-        <a className={styles['tags-text']}>TypeScript</a>
-        <a className={styles['tags-text']}>alfred workflow</a>
-        <a className={styles['tags-text']}>blog</a>
+        {
+          tagsArr.map(tag => {
+            return <a className={styles['tags-text']}>{tag}</a>
+          })
+        }
       </div>
     </div>
   )

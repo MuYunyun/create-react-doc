@@ -12,7 +12,10 @@ const paths = require('./path')
 
 module.exports = function (cmd) {
   const docsConfig = getDocsConfig()
-  const { tagsArr } = getDirTree(cmd)
+  const { tagsArr, mapTagsWithArticle } = getDirTree(cmd)
+
+  console.log('✅✅ tagsArr', tagsArr)
+  console.log('✅✅ mapTagsWithArticle', JSON.stringify(mapTagsWithArticle))
 
   config.mode = 'development'
   config.devtool = 'eval-source-map'

@@ -51,7 +51,9 @@ function safeReadDirSync(path) {
 function directoryTree({
   path,
   options,
-  tagsArr = []
+  tagsArr = [],
+  // [{ tagName: 'custom Tag 1', mapArticle: [{ path, title }]}]
+  mapTagsWithArticle = []
 }) {
   const name = PATH.basename(path)
   const item = { name }
@@ -99,9 +101,31 @@ function directoryTree({
       }
 
       const yamlParse = contentMatch ? YAML.parse(contentMatch[1]) : {}
+      const articleTags = yamlParse.tags
+      const pathResult = yamlParse.abbrlink
+      if (Array.isArray(articleTags)) {
+        const cpArticleTags = Array.from(new Set(articleTags))
 
-      if (Array.isArray(yamlParse.tags)) {
-        tagsArr.push(...yamlParse.tags)
+        for (let i = 0; i < cpArticleTags.length; i++) {
+          const articleTag = cpArticleTags[i]
+          const articleTagIndex = tagsArr.indexOf(articleTag)
+          if (articleTagIndex > -1) {
+            mapTagsWithArticle[articleTagIndex]['mapArticle'].push({
+              path: pathResult ? pathResult : name,
+              title: name
+            })
+          } else {
+            tagsArr.push(cpArticleTags[i])
+            mapTagsWithArticle.push({
+              tagName: cpArticleTags[i],
+              mapArticle: [{
+                // todo: replace name
+                path: pathResult ? pathResult : name,
+                title: name
+              }]
+            })
+          }
+        }
       }
 
       item.mdconf = yamlParse
@@ -139,7 +163,8 @@ function directoryTree({
         directoryTree({
           path: PATH.join(path, child),
           options,
-          tagsArr
+          tagsArr,
+          mapTagsWithArticle
         }),
       )
       .filter(e => !!e)

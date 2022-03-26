@@ -7,6 +7,7 @@ import Icon from '../component/Icon'
 import Affix from '../component/Affix'
 import Header from '../component/Header'
 import Footer from '../component/Footer'
+import Tags from '../component/Tags'
 import languageMap from '../language'
 import { isMobile, ifAddPrefix } from '../utils'
 import { getOpenSubMenuKeys } from './utils'
@@ -256,6 +257,12 @@ function BasicLayout({
               />
             )
           })}
+          <Route
+            key='/tags'
+            exact
+            path={ifAddPrefix ? `/${repo}/tags` : '/tags'}
+            render={() => <Tags />}
+          />
           <Redirect to={ifAddPrefix ? `/${repo}/404` : `/404`} />
         </Switch>
         {renderPageFooter()}
@@ -265,13 +272,7 @@ function BasicLayout({
 
   return (
     <div className={styles.wrapper}>
-      <Header
-        logo={logo}
-        // href={ifAddPrefix ? `/${repo}` : `/`}
-        // location={location}
-        // indexProps={indexProps}
-        // menuSource={menuSource}
-      />
+      <Header logo={logo} />
       <div
         className={cx(styles.wrapperContent, {
           [styles.wrapperMobile]: isMobile,
