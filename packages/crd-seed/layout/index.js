@@ -213,7 +213,7 @@ function BasicLayout({
       <>
         <nav
           className={cx(styles.menuWrapper, {
-            [`${styles["menuwrapper-inlineCollapsed"]}`]: inlineCollapsed,
+            [`${styles['menuWrapper-inlineCollapsed']}`]: inlineCollapsed,
           })}
         >
           {renderMenu(menuSource)}
@@ -262,6 +262,14 @@ function BasicLayout({
             exact
             path={ifAddPrefix ? `/${repo}/tags` : '/tags'}
             render={() => <Tags />}
+          />
+          <Route
+            key='/tags/:name'
+            path={ifAddPrefix ? `/${repo}/tags/:name` : '/tags/:name'}
+            render={({ match }) => {
+              const { name } = match.params
+              return <Tags name={name} />
+            }}
           />
           <Redirect to={ifAddPrefix ? `/${repo}/404` : `/404`} />
         </Switch>

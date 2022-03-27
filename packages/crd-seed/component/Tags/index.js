@@ -1,18 +1,34 @@
+import { Link } from 'react-router-dom'
+import { ifProd } from 'crd-client-utils'
 import styles from './index.less'
 
-const Tags = ({}) => {
+const Tags = ({ name }) => {
   const { user, repo } = DOCSCONFIG || {}
-
-  console.log('tagsArr', tagsArr)
 
   return (
     <div className={styles.tags}>
-      <div className={styles['tags-title']}>tags</div>
+      <div className={styles['tags-title']}>{name || 'Tags'}</div>
       <div className={styles['tags-content']}>
         {
-          tagsArr.map(tag => {
-            return <a className={styles['tags-text']}>{tag}</a>
-          })
+          name
+            ? mapTagsWithArticle.find(({ tagName }) => tagName === name)?.mapArticle.map(({ path, title }) => {
+              return <Link
+                className={styles['tags-text']}
+                to={ifProd ? `/${repo}/${path}` : `/${path}`}
+                key={title}
+              >
+                {title}
+              </Link>
+            })
+            : mapTagsWithArticle.map(({ tagName }) => {
+              return <Link
+                className={styles['tags-text']}
+                to={ifProd ? `/${repo}/tags/${tagName}` : `/tags/${tagName}`}
+                key={tagName}
+              >
+                {tagName}
+              </Link>
+            })
         }
       </div>
     </div>

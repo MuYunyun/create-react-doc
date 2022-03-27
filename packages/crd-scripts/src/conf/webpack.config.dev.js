@@ -12,11 +12,7 @@ const paths = require('./path')
 
 module.exports = function (cmd) {
   const docsConfig = getDocsConfig()
-  const { tagsArr, mapTagsWithArticle } = getDirTree(cmd)
-
-  console.log('✅✅ tagsArr', tagsArr)
-  console.log('✅✅ mapTagsWithArticle', JSON.stringify(mapTagsWithArticle))
-
+  const { mapTagsWithArticle } = getDirTree(cmd)
   config.mode = 'development'
   config.devtool = 'eval-source-map'
   config.entry = [
@@ -119,7 +115,7 @@ module.exports = function (cmd) {
   config.plugins = config.plugins.concat([
     new webpack.DefinePlugin({
       env: JSON.stringify('dev'),
-      tagsArr: JSON.stringify(tagsArr)
+      mapTagsWithArticle: JSON.stringify(mapTagsWithArticle)
     }),
     new webpack.HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({
