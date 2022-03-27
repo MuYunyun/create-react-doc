@@ -3,7 +3,11 @@ const fs = require('fs')
 const PATH = require('path')
 const YAML = require('yamljs')
 const { execSync } = require('child_process')
-const { replaceForFrontMatter, generateRandomId } = require('crd-utils')
+const {
+  replaceForFrontMatter,
+  generateRandomId,
+  getStrAfterPointed
+} = require('crd-utils')
 const { getDigitFromDir, timeFormat } = require('../utils')
 
 const constants = {
@@ -55,7 +59,9 @@ function directoryTree({
   // [{ tagName: 'custom Tag 1', mapArticle: [{ path, title }]}]
   mapTagsWithArticle = []
 }) {
+  console.log('✅✅ path', path)
   const name = PATH.basename(path)
+  console.log('✅✅ name', name)
   const item = { name }
   if (!options.prerender) {
     item.path = path
