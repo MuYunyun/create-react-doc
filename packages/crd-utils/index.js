@@ -56,22 +56,12 @@ const generateRandomId = (n) => {
   return res
 }
 
-// get route after pointed char from a string.
-// getStrAfterPointed('/Users/mac/Developer/project/create-react-doc/docs/测试/测试路由.md', 'create-react-doc/docs/') -> 测试/测试路由.md
-const getStrAfterPointed = (path, pointedStr) => {
-  const startPosition = path.indexOf(pointedStr)
-  if (startPosition === -1) return ''
-  const endPosition = startPosition + pointedStr.length
-  return path.slice(endPosition, path.length)
-}
-
 module.exports = {
   resolveApp,
   resolveTool,
   getDocsConfig,
   replaceForFrontMatter,
   generateRandomId,
-  getStrAfterPointed,
   // common paths
   docsGitIgnore: resolveApp('.gitignore'),
   docsBase: resolveApp(''),
