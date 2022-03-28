@@ -6,9 +6,11 @@ const { execSync } = require('child_process')
 const {
   replaceForFrontMatter,
   generateRandomId,
-  getStrAfterPointed
+  // getDocsConfig
 } = require('crd-utils')
 const { getDigitFromDir, timeFormat } = require('../utils')
+
+// const docsConfig = getDocsConfig()
 
 const constants = {
   DIRECTORY: 'directory',
@@ -57,12 +59,12 @@ function directoryTree({
   options,
   tagsArr = [],
   // [{ tagName: 'custom Tag 1', mapArticle: [{ path, title }]}]
-  mapTagsWithArticle = []
+  mapTagsWithArticle = [],
+  routePath = ''
 }) {
-  console.log('✅✅ path', path)
   const name = PATH.basename(path)
-  console.log('✅✅ name', name)
   const item = { name }
+  const routePropsCurrent = `${routePath}/${name}`.replace(/.md$/, '')
   if (!options.prerender) {
     item.path = path
   }
@@ -108,16 +110,15 @@ function directoryTree({
 
       const yamlParse = contentMatch ? YAML.parse(contentMatch[1]) : {}
       const articleTags = yamlParse.tags
-      const pathResult = yamlParse.abbrlink
+      const abbrlink = yamlParse.abbrlink
       if (Array.isArray(articleTags)) {
         const cpArticleTags = Array.from(new Set(articleTags))
-
         for (let i = 0; i < cpArticleTags.length; i++) {
           const articleTag = cpArticleTags[i]
           const articleTagIndex = tagsArr.indexOf(articleTag)
           if (articleTagIndex > -1) {
             mapTagsWithArticle[articleTagIndex]['mapArticle'].push({
-              path: pathResult ? pathResult : name,
+              path: abbrlink ? `/${abbrlink}` : routePropsCurrent,
               title: name
             })
           } else {
@@ -125,8 +126,7 @@ function directoryTree({
             mapTagsWithArticle.push({
               tagName: cpArticleTags[i],
               mapArticle: [{
-                // todo: replace name
-                path: pathResult ? pathResult : name,
+                path: abbrlink ? `/${abbrlink}` : routePropsCurrent,
                 title: name
               }]
             })
@@ -170,7 +170,8 @@ function directoryTree({
           path: PATH.join(path, child),
           options,
           tagsArr,
-          mapTagsWithArticle
+          mapTagsWithArticle,
+          routePath: routePropsCurrent
         }),
       )
       .filter(e => !!e)

@@ -14,6 +14,7 @@ const Tags = ({ name }) => {
             ? mapTagsWithArticle.find(({ tagName }) => tagName === name)?.mapArticle.map(({ path, title }) => {
               return <Link
                 className={styles['tags-text']}
+                // todo
                 to={ifProd ? `/${repo}/${path}` : `/${path}`}
                 key={title}
               >
