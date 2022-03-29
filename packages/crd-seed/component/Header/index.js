@@ -1,7 +1,8 @@
 import { useState } from 'react'
-import classNames from 'classnames'
+import cx from 'classnames'
 import { Link } from 'react-router-dom'
 import Switch from 'react-switch'
+import { ifProd } from 'crd-client-utils'
 import { isMobile } from '../../utils'
 import Search from '../Search'
 import styles from './index.less'
@@ -20,7 +21,7 @@ const Header = ({
     setChecked(value)
   }
   return (
-    <div className={classNames(styles.header, className)}>
+    <div className={cx(styles.header, className)}>
       <div className={styles.wrapper}>
         <Link to="/" replace className={styles.titleLink}>
           <div className={styles.logo}>
@@ -35,6 +36,12 @@ const Header = ({
         {DOCSCONFIG && DOCSCONFIG.search ? <Search className={styles.search} /> : null}
       </div>
       <div className={styles.rightArea}>
+        <Link
+          className={styles['tags']}
+          to={ifProd ? `/${repo}/tags` : '/tags'}
+        >
+          标签
+        </Link>
         <Switch
           className={styles['no-dark-mode']}
           onChange={handleChange}
