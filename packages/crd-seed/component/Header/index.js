@@ -12,7 +12,7 @@ const Header = ({
   logo,
 }) => {
   // eslint-disable-next-line no-undef
-  const { user, repo } = DOCSCONFIG || {}
+  const { user, repo, tags } = DOCSCONFIG || {}
   const [checked, setChecked] = useState(false)
   const handleChange = (value) => {
     value
@@ -36,12 +36,16 @@ const Header = ({
         {DOCSCONFIG && DOCSCONFIG.search ? <Search className={styles.search} /> : null}
       </div>
       <div className={styles.rightArea}>
-        <Link
-          className={styles['tags']}
-          to={ifProd ? `/${repo}/tags` : '/tags'}
-        >
-          标签
-        </Link>
+        {
+          tags
+            ? <Link
+              className={styles['tags']}
+              to={ifProd ? `/${repo}/tags` : '/tags'}
+            >
+              标签
+            </Link>
+            : null
+        }
         <Switch
           className={styles['no-dark-mode']}
           onChange={handleChange}

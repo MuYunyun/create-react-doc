@@ -62,9 +62,10 @@ function directoryTree({
   mapTagsWithArticle = [],
   routePath = ''
 }) {
-  const name = PATH.basename(path)
+  const name = PATH.basename(path, '.md')
   const item = { name }
-  const routePropsCurrent = `${routePath}/${name}`.replace(/.md$/, '')
+  // const routePropsCurrent = `${routePath}/${name}`.replace(/.md$/, '')
+  const routePropsCurrent = `${routePath}/${name}`
   if (!options.prerender) {
     item.path = path
   }

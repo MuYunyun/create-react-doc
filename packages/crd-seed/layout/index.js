@@ -25,7 +25,14 @@ function BasicLayout({
   indexProps,
 }) {
   const { pathname } = location
-  const { user, repo, branch = 'main', language = 'en', menuOpenKeys } = DOCSCONFIG || {}
+  const {
+    user,
+    repo,
+    branch = 'main',
+    language = 'en',
+    menuOpenKeys,
+    tags
+  } = DOCSCONFIG || {}
   const [inlineCollapsed, setInlineCollapsed] = useState(true)
   const [selectedKey, setSelectedKey] = useState('')
   const curOpenKeys = getOpenSubMenuKeys({
@@ -153,9 +160,10 @@ function BasicLayout({
       return pathname.indexOf(r.mdconf.abbrlink) > -1 || decodeURIComponent(pathname).indexOf(r.path) > -1
     })
     const editPathName = curMenuSource[0] && curMenuSource[0].props.path
+    const isNotTagPage = location.pathname.indexOf('/tags') === -1
     return (
       <div className={cx(styles.pageHeader)}>
-        {user && repo ? (
+        {user && repo && isNotTagPage ? (
           <a
             href={`https://github.com/${user}/${
               repo
@@ -257,20 +265,26 @@ function BasicLayout({
               />
             )
           })}
-          <Route
-            key='/tags'
-            exact
-            path={ifAddPrefix ? `/${repo}/tags` : '/tags'}
-            render={() => <Tags />}
-          />
-          <Route
-            key='/tags/:name'
-            path={ifAddPrefix ? `/${repo}/tags/:name` : '/tags/:name'}
-            render={({ match }) => {
-              const { name } = match.params
-              return <Tags name={name} />
-            }}
-          />
+          {
+            tags
+              ? <>
+                <Route
+                  key='/tags'
+                  exact
+                  path={ifAddPrefix ? `/${repo}/tags` : '/tags'}
+                  render={() => <Tags />}
+                />
+                <Route
+                  key='/tags/:name'
+                  path={ifAddPrefix ? `/${repo}/tags/:name` : '/tags/:name'}
+                  render={({ match }) => {
+                    const { name } = match.params
+                    return <Tags name={name} />
+                  }}
+                />
+              </>
+              : null
+          }
           <Redirect to={ifAddPrefix ? `/${repo}/404` : `/404`} />
         </Switch>
         {renderPageFooter()}
