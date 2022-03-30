@@ -51,7 +51,7 @@
     "rimraf": "^2.6.2",
     "string-replace-loader": "^3.0.1",
     "style-loader": "^0.19.1",
-    "upath": "^1.0.2",
+    "upath": "^2.0.1",
     "url-replace-loader": "^1.0.0",
     "webpack": "^5.12.2",
     "webpack-dev-middleware": "^3.7.1",
