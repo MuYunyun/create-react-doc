@@ -3763,9 +3763,9 @@ colormin@^1.0.5:
     has "^1.0.1"
 
 colors-cli@^1.0.13, colors-cli@^1.0.17, colors-cli@^1.0.26:
-  version "1.0.27"
-  resolved "https://registry.npmjs.org/colors-cli/-/colors-cli-1.0.27.tgz#1a33f6cfc013cdb55e50bac0bff1a8f5f0866cf8"
-  integrity sha512-oyHDobdhzZDRHzVqOX+0owvXkS6recku25PUutP89BggJ3HikYTBpa7HZOoiAwhKFgHdyfJ+YNJyqxM4kBcEUg==
+  version "1.0.28"
+  resolved "https://registry.npmjs.org/colors-cli/-/colors-cli-1.0.28.tgz#edce4c6f86acaeb58910887be87ab801b833d220"
+  integrity sha512-2XE8s1mB3Jr5rvirk/fFzhWY2m9S2dpZ0mWz3Yl/mzMM8hDVBawL0Rsal5hR1gJP4lgqhQfFfEmaGZpUZgEKrA==
 
 colors@~1.1.2:
   version "1.1.2"
