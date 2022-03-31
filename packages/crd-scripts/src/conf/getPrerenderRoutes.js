@@ -8,21 +8,15 @@ const getDirTree = (cmd) => {
     extensions: /\.md/,
     prerender: true,
   }
-  // collect unique tags from all articles.
-  const tagsArr = []
   const mapTagsWithArticle = []
   const dirTree = dirs.map(path => DirectoryTree({
     path,
     options: otherProps,
-    tagsArr,
     mapTagsWithArticle
   }))
 
   return {
     dirTree,
-    // duplicate total tags from document.
-    // tagsArr: ['custom Tag 1', 'custom Tag 2']
-    tagsArr,
     // map tags with path. [{ tagName: 'custom Tag 1', mapArticle: [{ path, name }]}]
     mapTagsWithArticle
   }
@@ -34,6 +28,7 @@ const getPrerenderRoutes = (dirTree) => {
   const dpCloneDirTree = JSON.parse(JSON.stringify(dirTree))
   const result = recursiveDirTree(dpCloneDirTree)
   result.push('/404')
+  result.push('/tags')
   return result
 }
 

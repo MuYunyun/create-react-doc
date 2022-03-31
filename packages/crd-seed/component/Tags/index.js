@@ -2,6 +2,9 @@ import { Link } from 'react-router-dom'
 import { ifProd } from 'crd-client-utils'
 import styles from './index.less'
 
+/**
+ * name: the name of tag category.
+ */
 const Tags = ({ name }) => {
   const { user, repo } = DOCSCONFIG || {}
 
@@ -15,7 +18,7 @@ const Tags = ({ name }) => {
               return <Link
                 className={styles['tags-text']}
                 to={ifProd ? `/${repo}${path}` : `${path}`}
-                key={title}
+                key={path}
               >
                 {title}
               </Link>
