@@ -2,25 +2,55 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 45,
-    "uniques": 24
+    "count": 56,
+    "uniques": 28
   },
   {
     "path": "/MuYunyun/create-react-doc/issues",
     "title": "Issues · MuYunyun/create-react-doc",
-    "count": 21,
+    "count": 23,
     "uniques": 2
   },
   {
     "path": "/MuYunyun/create-react-doc/issues/264",
     "title": "增加 tags 页面 · Issue #264 · MuYunyun/create-react-doc",
-    "count": 10,
+    "count": 12,
     "uniques": 1
   },
   {
     "path": "/MuYunyun/create-react-doc/pulls",
     "title": "Pull requests · MuYunyun/create-react-doc · GitHub",
+    "count": 11,
+    "uniques": 3
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/tree/main/docs",
+    "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
+    "count": 5,
+    "uniques": 2
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/releases/tag/v1.8.1",
+    "title": "Release v1.8.1: 支持 SSR 首屏直出方案(基于 gp-pages 服务) · MuYunyun/create-react-doc",
     "count": 3,
+    "uniques": 2
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/tree/main/components",
+    "title": "create-react-doc/components at main · MuYunyun/create-react-doc · GitHub",
+    "count": 3,
+    "uniques": 2
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/pull/270/files",
+    "title": "support tags by MuYunyun · Pull Request #270 · MuYunyun/create-react-doc",
+    "count": 3,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/security",
+    "title": "Security Overview · MuYunyun/create-react-doc · GitHub",
+    "count": 2,
     "uniques": 2
   },
   {
@@ -28,35 +58,5 @@
     "title": "create-react-doc/packages at main · MuYunyun/create-react-doc",
     "count": 2,
     "uniques": 2
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/tree/main/packages/leetcode-cli",
-    "title": "create-react-doc/packages/leetcode-cli at main · MuYunyun/create-react-doc",
-    "count": 2,
-    "uniques": 2
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/issues/new",
-    "title": "New Issue · MuYunyun/create-react-doc",
-    "count": 2,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/tree/main/components",
-    "title": "create-react-doc/components at main · MuYunyun/create-react-doc · GitHub",
-    "count": 2,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/tree/main/docs",
-    "title": "create-react-doc/docs at main · MuYunyun/create-react-doc · GitHub",
-    "count": 2,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/tree/main/packages/crd-seed",
-    "title": "create-react-doc/packages/crd-seed at main · MuYunyun/create-react-doc · GitHub",
-    "count": 2,
-    "uniques": 1
   }
 ]
