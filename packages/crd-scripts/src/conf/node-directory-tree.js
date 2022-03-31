@@ -6,11 +6,8 @@ const { execSync } = require('child_process')
 const {
   replaceForFrontMatter,
   generateRandomId,
-  // getDocsConfig
 } = require('crd-utils')
 const { getDigitFromDir, timeFormat } = require('../utils')
-
-// const docsConfig = getDocsConfig()
 
 const constants = {
   DIRECTORY: 'directory',
@@ -53,18 +50,23 @@ function safeReadDirSync(path) {
  *   prerender: Boolean. Used for prerender.
  *   generate: Boolean. Used for generating info in front-matter.
  * }
+ * tagsArr: collect unique tags from all articles.
+ * mapTagsWithArticle: [{
+ *  tagName: 'customTag1',    // tag type name
+ *  mapArticle: [{
+ *    path,                   // click tag to jump route such as /tags/customTag1
+ *    title                   // the name of article
+ *  }]}]
  */
 function directoryTree({
   path,
   options,
   tagsArr = [],
-  // [{ tagName: 'custom Tag 1', mapArticle: [{ path, title }]}]
   mapTagsWithArticle = [],
   routePath = ''
 }) {
   const name = PATH.basename(path, '.md')
   const item = { name }
-  // const routePropsCurrent = `${routePath}/${name}`.replace(/.md$/, '')
   const routePropsCurrent = `${routePath}/${name}`
   if (!options.prerender) {
     item.path = path
@@ -110,8 +112,7 @@ function directoryTree({
       }
 
       const yamlParse = contentMatch ? YAML.parse(contentMatch[1]) : {}
-      const articleTags = yamlParse.tags
-      const abbrlink = yamlParse.abbrlink
+      const { tags: articleTags, abbrlink } = yamlParse
       if (Array.isArray(articleTags)) {
         const cpArticleTags = Array.from(new Set(articleTags))
         for (let i = 0; i < cpArticleTags.length; i++) {
