@@ -724,8 +724,8 @@ a:hover {
 }
 .header-2Kqjw {
   box-shadow: 0 2px 8px #f0f1f2;
-  line-height: 64px;
-  min-height: 64px;
+  line-height: 60px;
+  height: 60px;
   position: relative;
   width: 100%;
   top: 0;
@@ -779,6 +779,10 @@ a:hover {
 }
 .header-2Kqjw .rightArea-20R0l svg {
   vertical-align: bottom;
+}
+.tags-3cqKB {
+  font-size: 15px;
+  margin-right: 16px;
 }
 @keyframes octocat-wave-3mQqu {
   0%,
@@ -839,6 +843,36 @@ a:hover {
 }
 .footer-3UIyM .split-1Ybst {
   margin: 0 5px;
+}
+
+.tags-12ItN {
+  width: 100%;
+  padding: 0 20px;
+  height: 100%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-direction: column;
+      flex-direction: column;
+}
+.tags-title-3NOgD {
+  font-family: Palatino, Garamond, Times, Georgia, serif;
+  font-size: 24px;
+  font-weight: 400;
+  text-align: center;
+}
+.tags-content-3-99h {
+  width: 100%;
+  margin-top: 20px;
+}
+.tags-text-2Hxp8 {
+  color: #6f6f6f;
+  padding: 10px;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
 }
 
 .wrapper-3JU2P::after {
