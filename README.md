@@ -115,6 +115,7 @@ git push -u origin main
 * [其它工具](http://muyunyun.cn/create-react-doc/292h2c5k)
 * [Front-matter](http://muyunyun.cn/create-react-doc/49g6b239)
 
-## 扩展阅读
+## 实践分享
 
-* [SEO 在 SPA 站点中的实践](https://github.com/MuYunyun/blog/issues/84)
+* [基于 SSR 的预渲染首屏直出方案](http://muyunyun.cn/blog/g3v1c5bq)
+* [SEO 在 SPA 站点中的实践](http://muyunyun.cn/blog/ettzfags)

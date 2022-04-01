@@ -29,11 +29,11 @@ English | [简体中文](./README.md)
 * Out of box: One-click generation of documents and blog sites by specifying directories or documents, no need to care about site environment configuration information.
 * Performance: greatly improve site loading speed through pre-rendering and lazy loading.
 * Based on mdx: Support writing React components, mathematical formulas, etc. in markdown.
-* Search engine optimization: Support SEO, making documents easier to search. Related documents: [SEO Practice in SPA Site](https://github.com/MuYunyun/blog/issues/84)
-* Personalization: Support [custom theme](http://muyunyun.cn/create-react-doc/%E8%87%AA%E5%AE%9A%E4%B9%89%E4%B8%BB% E9%A2%98).
+* Search engine optimization: Support SEO, making documents easier to search.
+* Personalization: Support [custom theme](https://muyunyun.cn/create-react-doc/9f41fc98).
 * Workflow: Integrate Github actions, support automated packaging and publishing sites.
 
-> [Quick Start](http://muyunyun.cn/create-react-doc/%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B)
+> [Quick Start](https://muyunyun.cn/create-react-doc/290a4219)
 
 ## Subject
 
@@ -45,14 +45,12 @@ Create React Doc provides the official default theme [crd-seed](https://github.c
 * GitHub linkage.
 * Support using tags to customize aggregate article content.
 
-The projects built using this theme are:
+[my blog](http://muyunyun.cn/blog) is based default theme to build。
 
-* [blog](https://github.com/MuYunyun/blog), [site](http://muyunyun.cn/blog)
-  * ![](http://with.muyunyun.cn/ec330b8ac2175c828be41f446f9f9619.jpg)
-  * ![](http://with.muyunyun.cn/2e7440e4256debda2d73a4e6392c7146.jpg-300)
-* [diana](https://github.com/MuYunyun/diana), [site](https://muyunyun.cn/diana/)
+![](http://with.muyunyun.cn/ec330b8ac2175c828be41f446f9f9619.jpg)
+![](http://with.muyunyun.cn/2e7440e4256debda2d73a4e6392c7146.jpg-300)
 
-If you want to customize or share personal themes, you can refer to the [Custom Theme](http://muyunyun.cn/create-react-doc/CustomTheme) chapter.
+If you want to customize or share personal themes, you can refer to the [Custom Theme](https://muyunyun.cn/create-react-doc/9f41fc98) chapter.
 
 ## Get started quickly
 
@@ -108,3 +106,8 @@ git push -u origin main
 ```
 
 > For more content, please visit [Site Release](http://muyunyun.cn/create-react-doc/SiteRelease), [Advanced Usage](http://muyunyun.cn/create-react-doc/HighOrderusage), [other tools](http://muyunyun.cn/create-react-doc/othertools) and other chapters.
+
+## Practice Sharing
+
+* [基于 SSR 的预渲染首屏直出方案](http://muyunyun.cn/blog/g3v1c5bq)
+* [SEO 在 SPA 站点中的实践](http://muyunyun.cn/blog/ettzfags)
