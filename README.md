@@ -42,10 +42,11 @@ abbrlink: s31w9gd1
 
 create-react-doc 提供了官方默认主题 [crd-seed](https://github.com/MuYunyun/create-react-doc/tree/main/packages/crd-seed)。该主题支持以下特性:
 
-* 适配移动、PC 多端展示。
+* 适配移动、PC 端展示。
 * 支持暗黑模式。
-* 文档支持内嵌 codepen、codesandbox。
-* GitHub 联动。
+* 支持文档内嵌展示 codepen、codesandbox 案例。
+* 支持与 GitHub 文档编辑能力联动。
+* 支持配置展示标签以自定义聚合文章内容。
 
 [笔者博客](http://muyunyun.cn/blog) 就是使用默认主题搭建的。
 

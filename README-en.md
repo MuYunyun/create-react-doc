@@ -43,6 +43,7 @@ Create React Doc provides the official default theme [crd-seed](https://github.c
 * Support dark mode.
 * The document supports embedded codepen, codesandbox.
 * GitHub linkage.
+* Support using tags to customize aggregate article content.
 
 The projects built using this theme are:
 
