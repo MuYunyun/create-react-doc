@@ -9,8 +9,8 @@
     "diana": "^1.0.2",
     "less": "^3.0.2",
     "prism-react-renderer": "^1.2.1",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
     "react-helmet": "^6.1.0",
     "react-hot-loader": "^4.1.1",
     "react-markdown": "^3.3.0"
@@ -26,5 +26,9 @@
   },
   "author": "muyunyun",
   "license": "MIT",
-  "gitHead": "ffc5e4cbc94a7356da558c2dbf46e2f39bb8b199"
+  "gitHead": "ffc5e4cbc94a7356da558c2dbf46e2f39bb8b199",
+  "devDependencies": {
+    "@types/react": "^17.0.43",
+    "@types/react-dom": "^17.0.14"
+  }
 }
