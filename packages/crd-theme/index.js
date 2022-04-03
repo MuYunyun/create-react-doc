@@ -1,7 +1,8 @@
+import * as React from 'react'
 import Markdown from './markdown'
 import './index.less'
 
-export default function (Lazyload, props) {
+export default function (props) {
   // routing load component
   if (props.routeData && props.routeData.length > 0) {
     props.routeData.map((item) => {
@@ -14,7 +15,9 @@ export default function (Lazyload, props) {
   const CustomTheme = require('__project_theme__').default
 
   return (
-    // use custom theme here.
-    <CustomTheme {...props} />
+    <React.StrictMode>
+      {/* use custom theme here. */}
+      <CustomTheme {...props} />
+    </React.StrictMode>
   )
 }

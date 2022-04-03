@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Switch, Link, Route, Redirect } from 'react-router-dom'
+import { Switch, Link, Route, Redirect, useLocation } from 'react-router-dom'
 import cx from 'classnames'
 import { ifDev, ifProd, ifPrerender } from 'crd-client-utils'
 import Menu from '../component/Menu'
@@ -19,11 +19,10 @@ const { useState, useEffect } = React
 const SubMenu = Menu.SubMenu
 
 function BasicLayout({
-  location,
   routeData,
-  menuSource,
-  indexProps,
+  menuSource
 }) {
+  const location = useLocation()
   const { pathname } = location
   const {
     user,
@@ -248,21 +247,24 @@ function BasicLayout({
       >
         <Switch>
           {/* see https://reacttraining.com/react-router/web/api/Redirect/exact-bool */}
-          <Redirect exact from={ifAddPrefix ? `/${repo}` : `/`} to={ifAddPrefix ? `/${repo}/${defaultPath}` : `/${defaultPath}`} />
+          <Route
+            exact
+            path={ifAddPrefix ? `/${repo}` : `/`}
+            render={() => <Redirect to={ifAddPrefix ? `/${repo}/${defaultPath}` : `/${defaultPath}`} />}
+          />
           {routeData.map((item) => {
             const { path, mdconf, component } = item
             const { abbrlink } = mdconf
             const enhancePath = abbrlink ? `/${abbrlink}` : path
+            const Comp = component
             return (
               <Route
                 key={enhancePath}
                 exact
                 path={ifAddPrefix ? `/${repo}${enhancePath}` : enhancePath}
-                render={() => {
-                  const Comp = component
-                  return <Comp {...item} />
-                }}
-              />
+              >
+                <Comp {...item} />
+              </Route>
             )
           })}
           {
@@ -272,20 +274,20 @@ function BasicLayout({
                   key='/tags'
                   exact
                   path={ifAddPrefix ? `/${repo}/tags` : '/tags'}
-                  render={() => <Tags />}
-                />
+                >
+                  <Tags />
+                </Route>
                 <Route
                   key='/tags/:name'
                   path={ifAddPrefix ? `/${repo}/tags/:name` : '/tags/:name'}
-                  render={({ match }) => {
-                    const { name } = match.params
-                    return <Tags name={name} />
-                  }}
-                />
+                >
+                  <Tags />
+                </Route>
               </>
               : null
           }
-          <Redirect to={ifAddPrefix ? `/${repo}/404` : `/404`} />
+          {/* Todo: follow up how to use Redirect to back up the rest of route. */}
+          {/* <Redirect path='/' to={ifAddPrefix ? `/${repo}/404` : `/404`} /> */}
         </Switch>
         {renderPageFooter()}
       </div>

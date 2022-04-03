@@ -7,16 +7,12 @@ import './index.less'
 const ThemeSeed = (props) => {
   return (
     <Switch>
-      <Route
-        path="/404"
-        render={routeProps => <NoMatch {...routeProps} {...props} />}
-      />
-      <Route
-        path="/"
-        render={(routeProps) => {
-          return <BasicLayout {...routeProps} {...props} />
-        }}
-      />
+      <Route path="/404">
+        <NoMatch />
+      </Route>
+      <Route path="/">
+        <BasicLayout {...props} />
+      </Route>
     </Switch>
   )
 }
