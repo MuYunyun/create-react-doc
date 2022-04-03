@@ -1,12 +1,14 @@
-import { Link } from 'react-router-dom'
+import { Link, useRouteMatch } from 'react-router-dom'
 import { ifProd } from 'crd-client-utils'
 import styles from './index.less'
 
 /**
  * name: the name of tag category.
  */
-const Tags = ({ name }) => {
+const Tags = () => {
   const { user, repo } = DOCSCONFIG || {}
+  const routeMatch = useRouteMatch('/tags/:name') || {}
+  const { name } = routeMatch.params || {}
 
   return (
     <div className={styles.tags}>

@@ -14,8 +14,9 @@ const {{name}} = ({routeData, menuSource}) => {
               key={item.path}
               exact
               path={item.path}
-              render={() => <Comp {...item} />}
-            />
+            >
+              <Comp {...item} />
+            </Route>
           )
         })}
       </Switch>

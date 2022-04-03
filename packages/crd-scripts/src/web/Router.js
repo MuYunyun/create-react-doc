@@ -1,6 +1,5 @@
 import { BrowserRouter, withRouter, Route, Switch } from 'react-router-dom'
 import theme from 'crd-theme'
-import lazyload from './lazyload'
 import menuSource from './crd.json'
 
 /**
@@ -52,18 +51,19 @@ function menuSourceFormat(data, routePath, article) {
   return arr
 }
 
-const RoutersContainer = withRouter(({ ...props }) => {
-  const passProps = {
-    routeData: routeData(menuSource),
-    menuSource: menuSourceFormat(menuSource),
-    ...props,
-  }
+const RoutersContainer = ({ ...props }) => {
   return (
     <Switch>
-      <Route path="/" render={routeProps => theme(lazyload, { ...routeProps, ...passProps })} />
+      <Route path="/">
+        {() => theme({
+          routeData: routeData(menuSource),
+          menuSource: menuSourceFormat(menuSource),
+          ...props,
+        })}
+      </Route>
     </Switch>
   )
-})
+}
 
 export default function RouterRoot() {
   return (
