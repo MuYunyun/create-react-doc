@@ -1,5 +1,5 @@
-import { hydrateRoot } from 'react-dom/client'
 import { renderToString } from 'react-dom/server';
+import { hydrateRoot } from 'react-dom/client'
 import '@babel/polyfill'
 import { ifDev, ifPrerender } from 'crd-client-utils'
 import RouterRoot from './Router'

@@ -14,10 +14,8 @@ export default function (props) {
   // support for custom theme.
   const CustomTheme = require('__project_theme__').default
 
+  // use custom theme here.
   return (
-    <React.StrictMode>
-      {/* use custom theme here. */}
-      <CustomTheme {...props} />
-    </React.StrictMode>
+    <CustomTheme {...props} />
   )
 }
