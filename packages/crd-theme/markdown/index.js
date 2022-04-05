@@ -44,7 +44,7 @@ function Markdown(markdownProps) {
 
   useEffect(() => {
     renderMarkdown()
-  }, [])
+  }, [getRmFirstSlashMarkdownName()])
 
   const getName = () => {
     return name ? name.replace('.md', '') : ''

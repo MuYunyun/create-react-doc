@@ -1,4 +1,4 @@
-import { hydrate } from 'react-dom'
+import { hydrate, render } from 'react-dom'
 import { renderToString } from 'react-dom/server';
 // import { hydrateRoot } from 'react-dom/client'
 import '@babel/polyfill'
@@ -7,8 +7,8 @@ import RouterRoot from './Router'
 
 if (ifDev) {
   // dev render
-  document.getElementById('root').innerHTML = renderToString(<RouterRoot />)
-  hydrate(
+  // document.getElementById('root').innerHTML = renderToString(<RouterRoot />)
+  render(
     <RouterRoot />,
     document.getElementById('root'),
   )

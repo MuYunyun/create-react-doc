@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Switch, Link, Route, Redirect, useLocation } from 'react-router-dom'
+import { Routes, Link, Route, Navigate, useLocation } from 'react-router-dom'
 import cx from 'classnames'
 import { ifDev, ifProd, ifPrerender } from 'crd-client-utils'
 import Menu from '../component/Menu'
@@ -104,7 +104,7 @@ function BasicLayout({
                   </span>
                 ) : (
                   <Link
-                    to={ifProd ? `/${repo}${path}` : path}
+                    to={ifProd ? `/${repo}${path}` : `${path}`}
                     replace={pathname.indexOf(path) > -1}
                   >
                     {item && item.mdconf && item.mdconf.title
@@ -245,12 +245,11 @@ function BasicLayout({
           [`${styles["content-fullpage"]}`]: inlineCollapsed || isMobile,
         })}
       >
-        <Switch>
+        <Routes>
           {/* see https://reacttraining.com/react-router/web/api/Redirect/exact-bool */}
           <Route
-            exact
             path={ifAddPrefix ? `/${repo}` : `/`}
-            render={() => <Redirect to={ifAddPrefix ? `/${repo}/${defaultPath}` : `/${defaultPath}`} />}
+            element={<Navigate to={ifAddPrefix ? `/${repo}/${defaultPath}` : `/${defaultPath}`} replace />}
           />
           {routeData.map((item) => {
             const { path, mdconf, component } = item
@@ -260,11 +259,9 @@ function BasicLayout({
             return (
               <Route
                 key={enhancePath}
-                exact
                 path={ifAddPrefix ? `/${repo}${enhancePath}` : enhancePath}
-              >
-                <Comp {...item} />
-              </Route>
+                element={<Comp {...item} />}
+              />
             )
           })}
           {
@@ -272,23 +269,20 @@ function BasicLayout({
               ? <>
                 <Route
                   key='/tags'
-                  exact
                   path={ifAddPrefix ? `/${repo}/tags` : '/tags'}
-                >
-                  <Tags />
-                </Route>
+                  element={<Tags />}
+                />
                 <Route
                   key='/tags/:name'
                   path={ifAddPrefix ? `/${repo}/tags/:name` : '/tags/:name'}
-                >
-                  <Tags />
-                </Route>
+                  element={<Tags />}
+                />
               </>
               : null
           }
           {/* Todo: follow up how to use Redirect to back up the rest of route. */}
           {/* <Redirect path='/' to={ifAddPrefix ? `/${repo}/404` : `/404`} /> */}
-        </Switch>
+        </Routes>
         {renderPageFooter()}
       </div>
     )

@@ -1,4 +1,4 @@
-import { BrowserRouter, withRouter, Route, Switch } from 'react-router-dom'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import theme from 'crd-theme'
 import menuSource from './crd.json'
 
@@ -53,15 +53,16 @@ function menuSourceFormat(data, routePath, article) {
 
 const RoutersContainer = ({ ...props }) => {
   return (
-    <Switch>
-      <Route path="/">
-        {() => theme({
+    <Routes>
+      <Route
+        path="/*"
+        element={theme({
           routeData: routeData(menuSource),
           menuSource: menuSourceFormat(menuSource),
           ...props,
         })}
-      </Route>
-    </Switch>
+      />
+    </Routes>
   )
 }
 
