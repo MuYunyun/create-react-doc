@@ -1,6 +1,6 @@
 {
   "name": "crd-seed",
-  "version": "1.9.0",
+  "version": "1.9.1",
   "description": "Default Theme with Create React Doc",
   "main": "index.js",
   "dependencies": {
