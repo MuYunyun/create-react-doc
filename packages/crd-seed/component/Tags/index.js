@@ -1,4 +1,4 @@
-import { Link, useRouteMatch } from 'react-router-dom'
+import { Link, useMatch } from 'react-router-dom'
 import { ifProd } from 'crd-client-utils'
 import { ifAddPrefix } from '../../utils'
 import styles from './index.less'
@@ -9,7 +9,7 @@ import styles from './index.less'
 const Tags = () => {
   const { user, repo } = DOCSCONFIG || {}
   const path = ifAddPrefix ? `/${repo}/tags/:name` : '/tags/:name'
-  const routeMatch = useRouteMatch(path) || {}
+  const routeMatch = useMatch(path) || {}
   const { name } = routeMatch.params || {}
 
   return (

@@ -1,4 +1,4 @@
-import { Switch, Route } from 'react-router-dom'
+import { Routes, Route, Navigate } from 'react-router-dom'
 import BasicLayout from './layout'
 import NoMatch from './component/NoMatch'
 import './index.less'
@@ -6,14 +6,10 @@ import './index.less'
 // run in the Web/Router.js
 const ThemeSeed = (props) => {
   return (
-    <Switch>
-      <Route path="/404">
-        <NoMatch />
-      </Route>
-      <Route path="/">
-        <BasicLayout {...props} />
-      </Route>
-    </Switch>
+    <Routes>
+      <Route path="/*" element={<BasicLayout {...props} />} />
+      <Route path="/404" element={<NoMatch />} />
+    </Routes>
   )
 }
 
