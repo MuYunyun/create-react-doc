@@ -41,6 +41,18 @@ function safeReadDirSync(path) {
   return dirData
 }
 
+// collect unique tags from all articles.
+const tagsArr = []
+
+// The global arr cache has side effects, to follow up optimizing.
+// [{
+//  tagName: 'customTag1',    // tag type name
+//  mapArticle: [{
+//    path,                   // click tag to jump route such as /tags/customTag1
+//    title                   // the name of article
+//  }]
+// }]
+const mapTagsWithArticle = []
 /** build directory Tree, fork from https://github.com/mihneadb/node-directory-tree
  * path: path for file
  * options: {
@@ -50,19 +62,10 @@ function safeReadDirSync(path) {
  *   prerender: Boolean. Used for prerender.
  *   generate: Boolean. Used for generating info in front-matter.
  * }
- * tagsArr: collect unique tags from all articles.
- * mapTagsWithArticle: [{
- *  tagName: 'customTag1',    // tag type name
- *  mapArticle: [{
- *    path,                   // click tag to jump route such as /tags/customTag1
- *    title                   // the name of article
- *  }]}]
  */
 function directoryTree({
   path,
   options,
-  tagsArr = [],
-  mapTagsWithArticle = [],
   routePath = ''
 }) {
   const name = PATH.basename(path, '.md')
@@ -132,6 +135,8 @@ function directoryTree({
                 title: name
               }]
             })
+
+            console.log('mapTagsWithArticle222', mapTagsWithArticle)
           }
         }
       }
@@ -171,8 +176,6 @@ function directoryTree({
         directoryTree({
           path: PATH.join(path, child),
           options,
-          tagsArr,
-          mapTagsWithArticle,
           routePath: routePropsCurrent
         }),
       )
@@ -187,4 +190,7 @@ function directoryTree({
   return item
 }
 
-module.exports = directoryTree
+module.exports = {
+  directoryTree,
+  mapTagsWithArticle
+}

@@ -1,5 +1,5 @@
 // A variation of https://github.com/react-doc/node-directory-tree-md/blob/master/lib/directory-tree-md.js
-const DirectoryTree = require('./node-directory-tree')
+const { directoryTree } = require('./node-directory-tree')
 const PATH = require('path')
 const { ifInGitIgnore } = require('../utils/index')
 
@@ -58,7 +58,7 @@ module.exports = function (source) {
   // if (this.cacheable) this.cacheable()
   if (directoryTrees && (!include || include.test(this.resourcePath))) {
     const dirs = Array.isArray(dir) ? dir : [dir]
-    const dirTree = dirs.map(path => DirectoryTree({
+    const dirTree = dirs.map(path => directoryTree({
       path,
       options: otherProps,
     }))
