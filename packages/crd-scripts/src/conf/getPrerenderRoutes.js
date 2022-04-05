@@ -1,4 +1,7 @@
-const DirectoryTree = require('./node-directory-tree')
+const {
+  directoryTree,
+  mapTagsWithArticle
+} = require('./node-directory-tree')
 
 const getDirTree = (cmd) => {
   const dir = cmd.markdownPaths
@@ -8,13 +11,12 @@ const getDirTree = (cmd) => {
     extensions: /\.md/,
     prerender: true,
   }
-  const mapTagsWithArticle = []
-  const dirTree = dirs.map(path => DirectoryTree({
+  console.log('mapTagsWithArticle before', mapTagsWithArticle)
+  const dirTree = dirs.map(path => directoryTree({
     path,
     options: otherProps,
-    mapTagsWithArticle
   }))
-
+  console.log('mapTagsWithArticle after', mapTagsWithArticle)
   return {
     dirTree,
     // map tags with path. [{ tagName: 'custom Tag 1', mapArticle: [{ path, name }]}]

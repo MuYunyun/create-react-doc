@@ -1,6 +1,6 @@
 const fs = require('fs')
 const { docsConfig } = require('crd-utils')
-const DirectoryTree = require('./conf/node-directory-tree')
+const { directoryTree } = require('./conf/node-directory-tree')
 
 module.exports = function generate(program) {
   if (!fs.existsSync(docsConfig)) {
@@ -15,7 +15,7 @@ module.exports = function generate(program) {
     extensions: /\.md/,
     generate: true
   }
-  dirs.map(path => DirectoryTree({
+  dirs.map(path => directoryTree({
     path,
     options: otherProps,
   }))

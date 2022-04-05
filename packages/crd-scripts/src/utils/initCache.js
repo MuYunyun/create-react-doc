@@ -1,11 +1,11 @@
 const write = require('write')
 const path = require('path')
 const { cacheDirPath, getDocsConfig } = require('crd-utils')
-const DirectoryTree = require('../conf/node-directory-tree')
+const { directoryTree } = require('../conf/node-directory-tree')
 
 module.exports = function (program, cb) {
   const treeData = program.markdownPaths.map((markdownPath) => {
-    return DirectoryTree({
+    return directoryTree({
       path: markdownPath,
       options: {
         mdconf: true, // Markdown config for exsiting file.
