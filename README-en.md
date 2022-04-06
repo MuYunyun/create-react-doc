@@ -45,7 +45,7 @@ Create React Doc provides the official default theme [crd-seed](https://github.c
 * GitHub linkage.
 * Support using tags to customize aggregate article content.
 
-[my blog](http://muyunyun.cn/blog) is based default theme to build。
+[my blog](http://muyunyun.cn/blog) is based [crd-seed](https://github.com/MuYunyun/create-react-doc/tree/main/packages/crd-seed) theme to build。
 
 ![](http://with.muyunyun.cn/ec330b8ac2175c828be41f446f9f9619.jpg)
 ![](http://with.muyunyun.cn/2e7440e4256debda2d73a4e6392c7146.jpg-300)

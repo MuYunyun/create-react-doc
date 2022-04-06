@@ -44,15 +44,6 @@ function safeReadDirSync(path) {
 // collect unique tags from all articles.
 const tagsArr = []
 
-// The global arr cache has side effects, to follow up optimizing.
-// [{
-//  tagName: 'customTag1',    // tag type name
-//  mapArticle: [{
-//    path,                   // click tag to jump route such as /tags/customTag1
-//    title                   // the name of article
-//  }]
-// }]
-const mapTagsWithArticle = []
 /** build directory Tree, fork from https://github.com/mihneadb/node-directory-tree
  * path: path for file
  * options: {
@@ -62,11 +53,19 @@ const mapTagsWithArticle = []
  *   prerender: Boolean. Used for prerender.
  *   generate: Boolean. Used for generating info in front-matter.
  * }
+ * mapTagsWithArticle: [{
+ *  tagName: 'customTag1',    // tag type name
+ *  mapArticle: [{
+ *    path,                   // click tag to jump route such as /tags/customTag1
+ *    title                   // the name of article
+ *  }]
+ * }]
  */
 function directoryTree({
   path,
   options,
-  routePath = ''
+  routePath = '',
+  mapTagsWithArticle
 }) {
   const name = PATH.basename(path, '.md')
   const item = { name }
@@ -116,7 +115,7 @@ function directoryTree({
 
       const yamlParse = contentMatch ? YAML.parse(contentMatch[1]) : {}
       const { tags: articleTags, abbrlink } = yamlParse
-      if (Array.isArray(articleTags)) {
+      if (Array.isArray(articleTags) && Array.isArray(mapTagsWithArticle)) {
         const cpArticleTags = Array.from(new Set(articleTags))
         for (let i = 0; i < cpArticleTags.length; i++) {
           const articleTag = cpArticleTags[i]
@@ -176,7 +175,8 @@ function directoryTree({
         directoryTree({
           path: PATH.join(path, child),
           options,
-          routePath: routePropsCurrent
+          routePath: routePropsCurrent,
+          mapTagsWithArticle
         }),
       )
       .filter(e => !!e)
@@ -191,6 +191,5 @@ function directoryTree({
 }
 
 module.exports = {
-  directoryTree,
-  mapTagsWithArticle
+  directoryTree
 }
