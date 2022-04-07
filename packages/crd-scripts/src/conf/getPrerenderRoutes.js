@@ -14,7 +14,6 @@ const getDirTree = (cmd) => {
     options: otherProps,
     mapTagsWithArticle
   }))
-  console.log('mapTagsWithArticle after', mapTagsWithArticle)
   return {
     dirTree,
     // map tags with path. [{ tagName: 'custom Tag 1', mapArticle: [{ path, name }]}]
