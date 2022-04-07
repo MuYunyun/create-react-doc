@@ -2,36 +2,42 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 87,
-    "uniques": 27
+    "count": 93,
+    "uniques": 29
   },
   {
     "path": "/MuYunyun/create-react-doc/issues",
     "title": "Issues · MuYunyun/create-react-doc",
-    "count": 32,
+    "count": 37,
     "uniques": 4
   },
   {
     "path": "/MuYunyun/create-react-doc/pulls",
     "title": "Pull requests · MuYunyun/create-react-doc · GitHub",
-    "count": 27,
+    "count": 28,
     "uniques": 3
   },
   {
     "path": "/MuYunyun/create-react-doc/issues/264",
     "title": "增加 tags 页面 · Issue #264 · MuYunyun/create-react-doc",
-    "count": 14,
+    "count": 13,
     "uniques": 2
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/tree/gh-pages",
-    "title": "MuYunyun/create-react-doc at gh-pages",
-    "count": 11,
-    "uniques": 1
   },
   {
     "path": "/MuYunyun/create-react-doc/tree/gh-pages/js",
     "title": "create-react-doc/js at gh-pages · MuYunyun/create-react-doc",
+    "count": 13,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/tree/gh-pages",
+    "title": "MuYunyun/create-react-doc at gh-pages",
+    "count": 12,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/issues/278",
+    "title": "upgrade react/react-router-dom version · Issue #278 · MuYunyun/create-react-doc",
     "count": 11,
     "uniques": 1
   },
@@ -44,19 +50,13 @@
   {
     "path": "/MuYunyun/create-react-doc/actions",
     "title": "Actions · MuYunyun/create-react-doc · GitHub",
-    "count": 8,
+    "count": 9,
     "uniques": 2
   },
   {
-    "path": "/MuYunyun/create-react-doc/issues/278",
-    "title": "upgrade react/react-router-dom version · Issue #278 · MuYunyun/create-react-doc",
-    "count": 8,
+    "path": "/MuYunyun/create-react-doc/actions/workflows/gh-pages.yml",
+    "title": "Actions · MuYunyun/create-react-doc",
+    "count": 7,
     "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/pull/282",
-    "title": "chore: upgrade react@18.0.0 & react-router-dom@5.3.0 by MuYunyun · Pull Reque...",
-    "count": 6,
-    "uniques": 4
   }
 ]
