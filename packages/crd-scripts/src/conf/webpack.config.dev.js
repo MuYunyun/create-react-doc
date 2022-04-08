@@ -6,7 +6,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { defaultHTMLPath } = require('crd-utils')
 const FriendlyErrorsWebpackPlugin = require('@nuxtjs/friendly-errors-webpack-plugin')
 const { getDocsConfig } = require('crd-utils')
-const { getDirTree } = require('./getPrerenderRoutes')
+const { getDirTree } = require('./getDirTree')
 const config = require('./webpack.config')
 const paths = require('./path')
 

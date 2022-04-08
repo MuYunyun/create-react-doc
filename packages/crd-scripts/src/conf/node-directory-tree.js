@@ -134,8 +134,6 @@ function directoryTree({
                 title: name
               }]
             })
-
-            console.log('mapTagsWithArticle222', mapTagsWithArticle)
           }
         }
       }
