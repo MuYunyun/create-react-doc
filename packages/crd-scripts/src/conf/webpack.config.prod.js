@@ -12,7 +12,8 @@ const { defaultHTMLPath, docsBuildDist } = require('crd-utils')
 const { getDocsConfig } = require('crd-utils')
 const config = require('./webpack.config')
 const paths = require('./path')
-const { getPrerenderRoutes, getDirTree } = require('./getPrerenderRoutes')
+const { getPrerenderRoutes } = require('./getPrerenderRoutes')
+const { getDirTree } = require('./getDirTree')
 
 const Renderer = PrerenderSPAPlugin.PuppeteerRenderer
 
