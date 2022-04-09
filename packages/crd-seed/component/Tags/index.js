@@ -12,7 +12,6 @@ const Tags = () => {
   const routeMatch = useMatch(path) || {}
   const { name } = routeMatch.params || {}
 
-  console.log('mapTagsWithArticle', mapTagsWithArticle)
   return (
     <div className={styles.tags}>
       <div className={styles['tags-title']}>{name || 'Tags'}</div>
