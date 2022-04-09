@@ -38,7 +38,7 @@ Create React Doc 是一个使用 React 的 markdown 文档站点生成工具。�
 使用该主题搭建的站点
 
 * [blog](http://muyunyun.cn/blog)
-  * ![](http://with.muyunyun.cn/ec330b8ac2175c828be41f446f9f9619.jpg)
+  * ![](http://with.muyunyun.cn/90d3e357a31649b9466a828a92b6d88d.jpg)
   * ![](http://with.muyunyun.cn/2e7440e4256debda2d73a4e6392c7146.jpg-300)
 * [diana](https://muyunyun.cn/diana/)
 

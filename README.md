@@ -50,7 +50,7 @@ create-react-doc 提供了官方默认主题 [crd-seed](https://github.com/MuYun
 
 [笔者博客](http://muyunyun.cn/blog)使用的是 [crd-seed](https://github.com/MuYunyun/create-react-doc/tree/main/packages/crd-seed) 主题搭建的。
 
-![](http://with.muyunyun.cn/ec330b8ac2175c828be41f446f9f9619.jpg)
+![](http://with.muyunyun.cn/90d3e357a31649b9466a828a92b6d88d.jpg)
 ![](http://with.muyunyun.cn/2e7440e4256debda2d73a4e6392c7146.jpg-300)
 
 如果您想定制化或者分享个人主题, 可以参考[自定义主题](https://muyunyun.cn/create-react-doc/9f41fc98)。

@@ -10,7 +10,7 @@ create-react-doc 提供了官方默认主题 [crd-seed](https://github.com/MuYun
 使用该主题搭建的项目有:
 
 * [blog](https://github.com/MuYunyun/blog), [站点](http://muyunyun.cn/blog)
-  * ![](http://with.muyunyun.cn/ec330b8ac2175c828be41f446f9f9619.jpg)
+  * ![](http://with.muyunyun.cn/90d3e357a31649b9466a828a92b6d88d.jpg)
   * ![](http://with.muyunyun.cn/2e7440e4256debda2d73a4e6392c7146.jpg-300)
 * [diana](https://github.com/MuYunyun/diana), [站点](https://muyunyun.cn/diana/)
 
