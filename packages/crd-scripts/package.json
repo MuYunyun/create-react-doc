@@ -1,6 +1,6 @@
 {
   "name": "crd-scripts",
-  "version": "1.9.1",
+  "version": "1.9.2",
   "description": "Scripts using with Create React Doc",
   "main": "index.js",
   "dependencies": {
