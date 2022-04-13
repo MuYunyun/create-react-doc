@@ -2,19 +2,19 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 82,
-    "uniques": 27
+    "count": 74,
+    "uniques": 26
   },
   {
     "path": "/MuYunyun/create-react-doc/issues",
     "title": "Issues · MuYunyun/create-react-doc · GitHub",
-    "count": 36,
+    "count": 34,
     "uniques": 5
   },
   {
     "path": "/MuYunyun/create-react-doc/pulls",
     "title": "Pull requests · MuYunyun/create-react-doc",
-    "count": 29,
+    "count": 21,
     "uniques": 2
   },
   {
@@ -36,26 +36,26 @@
     "uniques": 1
   },
   {
-    "path": "/MuYunyun/create-react-doc/pull/270",
-    "title": "support tags by MuYunyun · Pull Request #270 · MuYunyun/create-react-doc",
-    "count": 10,
-    "uniques": 1
-  },
-  {
     "path": "/MuYunyun/create-react-doc/actions",
     "title": "Actions · MuYunyun/create-react-doc",
     "count": 9,
     "uniques": 1
   },
   {
-    "path": "/MuYunyun/create-react-doc/issues/264",
-    "title": "增加 tags 页面 · Issue #264 · MuYunyun/create-react-doc",
+    "path": "/MuYunyun/create-react-doc/pull/270",
+    "title": "support tags by MuYunyun · Pull Request #270 · MuYunyun/create-react-doc",
     "count": 8,
-    "uniques": 2
+    "uniques": 1
   },
   {
     "path": "/MuYunyun/create-react-doc/actions/workflows/gh-pages.yml",
     "title": "Actions · MuYunyun/create-react-doc",
+    "count": 7,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/pull/287/files",
+    "title": "fix duplication tags by MuYunyun · Pull Request #287 · MuYunyun/create-react-...",
     "count": 7,
     "uniques": 1
   }
