@@ -2,20 +2,20 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 74,
-    "uniques": 26
+    "count": 71,
+    "uniques": 28
   },
   {
     "path": "/MuYunyun/create-react-doc/issues",
     "title": "Issues · MuYunyun/create-react-doc · GitHub",
-    "count": 34,
-    "uniques": 5
+    "count": 28,
+    "uniques": 4
   },
   {
     "path": "/MuYunyun/create-react-doc/pulls",
     "title": "Pull requests · MuYunyun/create-react-doc",
-    "count": 21,
-    "uniques": 2
+    "count": 15,
+    "uniques": 1
   },
   {
     "path": "/MuYunyun/create-react-doc/tree/gh-pages/js",
@@ -38,12 +38,6 @@
   {
     "path": "/MuYunyun/create-react-doc/actions",
     "title": "Actions · MuYunyun/create-react-doc",
-    "count": 9,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/pull/270",
-    "title": "support tags by MuYunyun · Pull Request #270 · MuYunyun/create-react-doc",
     "count": 8,
     "uniques": 1
   },
@@ -58,5 +52,11 @@
     "title": "fix duplication tags by MuYunyun · Pull Request #287 · MuYunyun/create-react-...",
     "count": 7,
     "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/pull/282",
+    "title": "chore: upgrade react@18.0.0 & react-router-dom@5.3.0 by MuYunyun · Pull Reque...",
+    "count": 6,
+    "uniques": 4
   }
 ]
