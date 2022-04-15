@@ -1,8 +1,8 @@
 [
   {
     "referrer": "github.com",
-    "count": 113,
-    "uniques": 19
+    "count": 87,
+    "uniques": 18
   },
   {
     "referrer": "dev.to",
@@ -11,23 +11,18 @@
   },
   {
     "referrer": "link.zhihu.com",
-    "count": 5,
-    "uniques": 4
+    "count": 6,
+    "uniques": 5
   },
   {
     "referrer": "link.juejin.cn",
-    "count": 4,
-    "uniques": 3
+    "count": 3,
+    "uniques": 2
   },
   {
     "referrer": "Google",
     "count": 2,
     "uniques": 2
-  },
-  {
-    "referrer": "npmjs.com",
-    "count": 1,
-    "uniques": 1
   },
   {
     "referrer": "Baidu",
@@ -41,6 +36,11 @@
   },
   {
     "referrer": "muyunyun.cn",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "referrer": "npmjs.com",
     "count": 1,
     "uniques": 1
   }
