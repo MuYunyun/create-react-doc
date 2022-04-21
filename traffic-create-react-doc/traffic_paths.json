@@ -2,20 +2,14 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 31,
-    "uniques": 23
+    "count": 35,
+    "uniques": 28
   },
   {
     "path": "/MuYunyun/create-react-doc/pull/287/files",
     "title": "fix duplication tags by MuYunyun · Pull Request #287 · MuYunyun/create-react-...",
-    "count": 7,
+    "count": 6,
     "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/issues",
-    "title": "Issues · MuYunyun/create-react-doc · GitHub",
-    "count": 5,
-    "uniques": 3
   },
   {
     "path": "/MuYunyun/create-react-doc/tree/main/packages",
@@ -24,22 +18,10 @@
     "uniques": 3
   },
   {
-    "path": "/MuYunyun/create-react-doc/issues/286",
-    "title": "there are duplication tags in tag page · Issue #286 · MuYunyun/create-react-doc",
+    "path": "/MuYunyun/create-react-doc/issues",
+    "title": "Issues · MuYunyun/create-react-doc · GitHub",
     "count": 3,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/pull/287",
-    "title": "fix duplication tags by MuYunyun · Pull Request #287 · MuYunyun/create-react-...",
-    "count": 3,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/pull/287/commits",
-    "title": "fix duplication tags by MuYunyun · Pull Request #287 · MuYunyun/create-react-...",
-    "count": 3,
-    "uniques": 1
+    "uniques": 2
   },
   {
     "path": "/MuYunyun/create-react-doc/pulls",
@@ -56,6 +38,24 @@
   {
     "path": "/MuYunyun/create-react-doc/blob/main/package.json",
     "title": "create-react-doc/package.json at main · MuYunyun/create-react-doc · GitHub",
+    "count": 2,
+    "uniques": 2
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/pull/143/commits",
+    "title": "support writing React in markdown file by MuYunyun · Pull Request #143 · MuYu...",
+    "count": 2,
+    "uniques": 2
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/pull/143/files",
+    "title": "support writing React in markdown file by MuYunyun · Pull Request #143 · MuYu...",
+    "count": 2,
+    "uniques": 2
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/tree/main/components",
+    "title": "create-react-doc/components at main · MuYunyun/create-react-doc",
     "count": 2,
     "uniques": 2
   }
