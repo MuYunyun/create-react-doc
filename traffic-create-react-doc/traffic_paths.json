@@ -2,8 +2,8 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 41,
-    "uniques": 25
+    "count": 43,
+    "uniques": 27
   },
   {
     "path": "/MuYunyun/create-react-doc/issues/278",
@@ -48,15 +48,15 @@
     "uniques": 3
   },
   {
+    "path": "/MuYunyun/create-react-doc/tree/main/packages/leetcode-cli",
+    "title": "create-react-doc/packages/leetcode-cli at main · MuYunyun/create-react-doc · ...",
+    "count": 3,
+    "uniques": 3
+  },
+  {
     "path": "/MuYunyun/create-react-doc/tree/main/packages/crd-templates/theme/default",
     "title": "create-react-doc/packages/crd-templates/theme/default at main · MuYunyun/crea...",
     "count": 3,
-    "uniques": 2
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/pull/280",
-    "title": "chore: upgrade react@18 & react-router-dom@5.1 by MuYunyun · Pull Request #28...",
-    "count": 2,
     "uniques": 2
   }
 ]
