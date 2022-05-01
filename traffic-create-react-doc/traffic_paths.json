@@ -2,8 +2,8 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 47,
-    "uniques": 30
+    "count": 52,
+    "uniques": 33
   },
   {
     "path": "/MuYunyun/create-react-doc/issues/278",
@@ -12,22 +12,34 @@
     "uniques": 2
   },
   {
+    "path": "/MuYunyun/create-react-doc/issues",
+    "title": "Issues · MuYunyun/create-react-doc · GitHub",
+    "count": 9,
+    "uniques": 3
+  },
+  {
     "path": "/MuYunyun/create-react-doc/tree/main/packages",
     "title": "create-react-doc/packages at main · MuYunyun/create-react-doc · GitHub",
     "count": 8,
-    "uniques": 4
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/issues",
-    "title": "Issues · MuYunyun/create-react-doc · GitHub",
-    "count": 8,
-    "uniques": 2
+    "uniques": 5
   },
   {
     "path": "/MuYunyun/create-react-doc/tree/main/packages/crd-utils",
     "title": "create-react-doc/packages/crd-utils at main · MuYunyun/create-react-doc",
     "count": 7,
     "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/tree/main/docs",
+    "title": "create-react-doc/docs at main · MuYunyun/create-react-doc · GitHub",
+    "count": 5,
+    "uniques": 3
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/tree/main/packages/leetcode-cli",
+    "title": "create-react-doc/packages/leetcode-cli at main · MuYunyun/create-react-doc · ...",
+    "count": 4,
+    "uniques": 4
   },
   {
     "path": "/MuYunyun/create-react-doc/blob/main/package.json",
@@ -46,17 +58,5 @@
     "title": "GitHub - MuYunyun/create-react-doc at chore/update-react18",
     "count": 3,
     "uniques": 3
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/tree/main/packages/leetcode-cli",
-    "title": "create-react-doc/packages/leetcode-cli at main · MuYunyun/create-react-doc · ...",
-    "count": 3,
-    "uniques": 3
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/tree/main/packages/crd-templates/theme/default",
-    "title": "create-react-doc/packages/crd-templates/theme/default at main · MuYunyun/crea...",
-    "count": 3,
-    "uniques": 2
   }
 ]
