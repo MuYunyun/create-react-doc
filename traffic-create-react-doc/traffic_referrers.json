@@ -15,24 +15,19 @@
     "uniques": 9
   },
   {
-    "referrer": "Google",
-    "count": 7,
-    "uniques": 1
-  },
-  {
     "referrer": "npmjs.com",
     "count": 5,
     "uniques": 1
   },
   {
     "referrer": "link.zhihu.com",
-    "count": 3,
-    "uniques": 2
+    "count": 4,
+    "uniques": 3
   },
   {
     "referrer": "dev.to",
-    "count": 2,
-    "uniques": 2
+    "count": 3,
+    "uniques": 3
   },
   {
     "referrer": "jianshu.com",
