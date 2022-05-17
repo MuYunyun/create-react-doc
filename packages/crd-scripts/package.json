@@ -37,7 +37,7 @@
     "fs-extra": "^5.0.0",
     "gh-pages": "^1.2.0",
     "html-webpack-plugin": "^4.5.1",
-    "less-loader": "^7.2.1",
+    "less-loader": "^11.0.0",
     "loading-cli": "^1.0.6",
     "local-ip-url": "^1.0.1",
     "mini-css-extract-plugin": "^0.4.0",
