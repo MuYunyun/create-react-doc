@@ -6,13 +6,18 @@
   },
   {
     "referrer": "link.zhihu.com",
-    "count": 9,
+    "count": 8,
     "uniques": 4
   },
   {
     "referrer": "muyunyun.cn",
     "count": 4,
     "uniques": 2
+  },
+  {
+    "referrer": "npmjs.com",
+    "count": 2,
+    "uniques": 1
   },
   {
     "referrer": "programminghunter.com",

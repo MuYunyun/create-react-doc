@@ -2,14 +2,20 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 22,
-    "uniques": 14
+    "count": 25,
+    "uniques": 17
   },
   {
     "path": "/MuYunyun/create-react-doc/tree/main/packages/leetcode-cli",
     "title": "create-react-doc/packages/leetcode-cli at main · MuYunyun/create-react-doc",
     "count": 3,
     "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/blob/main/.npmrc",
+    "title": "create-react-doc/.npmrc at main · MuYunyun/create-react-doc · GitHub",
+    "count": 2,
+    "uniques": 2
   },
   {
     "path": "/MuYunyun/create-react-doc/pull/95/files",
@@ -24,12 +30,6 @@
     "uniques": 2
   },
   {
-    "path": "/MuYunyun/create-react-doc/search",
-    "title": "Search · redocx",
-    "count": 2,
-    "uniques": 1
-  },
-  {
     "path": "/MuYunyun/create-react-doc/blob/986a95ae103a806a7cd44fc12ad88696e3c618a9/packages/crd-templates/theme/default/_.npmrc",
     "title": "create-react-doc/_.npmrc at 986a95ae103a806a7cd44fc12ad88696e3c618a9 · MuYuny...",
     "count": 1,
@@ -42,12 +42,6 @@
     "uniques": 1
   },
   {
-    "path": "/MuYunyun/create-react-doc/blob/main/.npmrc",
-    "title": "create-react-doc/.npmrc at main · MuYunyun/create-react-doc",
-    "count": 1,
-    "uniques": 1
-  },
-  {
     "path": "/MuYunyun/create-react-doc/blob/main/package.json",
     "title": "create-react-doc/package.json at main · MuYunyun/create-react-doc",
     "count": 1,
@@ -56,6 +50,12 @@
   {
     "path": "/MuYunyun/create-react-doc/blob/main/packages/crd-theme/markdown/codeBlock.js",
     "title": "create-react-doc/codeBlock.js at main · MuYunyun/create-react-doc",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/blob/main/packages/create-react-doc/index.js",
+    "title": "create-react-doc/index.js at main · MuYunyun/create-react-doc",
     "count": 1,
     "uniques": 1
   }
