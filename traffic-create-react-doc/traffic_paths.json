@@ -2,14 +2,8 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 25,
-    "uniques": 17
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/tree/main/packages/leetcode-cli",
-    "title": "create-react-doc/packages/leetcode-cli at main · MuYunyun/create-react-doc",
-    "count": 3,
-    "uniques": 1
+    "count": 22,
+    "uniques": 15
   },
   {
     "path": "/MuYunyun/create-react-doc/blob/main/.npmrc",
@@ -22,18 +16,6 @@
     "title": "support prerender by MuYunyun · Pull Request #95 · MuYunyun/create-react-doc ...",
     "count": 2,
     "uniques": 2
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/tree/main/packages",
-    "title": "create-react-doc/packages at main · MuYunyun/create-react-doc",
-    "count": 2,
-    "uniques": 2
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/blob/986a95ae103a806a7cd44fc12ad88696e3c618a9/packages/crd-templates/theme/default/_.npmrc",
-    "title": "create-react-doc/_.npmrc at 986a95ae103a806a7cd44fc12ad88696e3c618a9 · MuYuny...",
-    "count": 1,
-    "uniques": 1
   },
   {
     "path": "/MuYunyun/create-react-doc/blob/main/config.yml",
@@ -56,6 +38,24 @@
   {
     "path": "/MuYunyun/create-react-doc/blob/main/packages/create-react-doc/index.js",
     "title": "create-react-doc/index.js at main · MuYunyun/create-react-doc",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/edit/main/docs/Front-matter.md",
+    "title": "Editing create-react-doc/Front-matter.md at main · MuYunyun/create-react-doc",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/releases/tag/v1.9.0",
+    "title": "Release v1.9: 支持配置展示标签页以自定义聚合文章内容 · MuYunyun/create-react-doc",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/tree/main/components",
+    "title": "create-react-doc/components at main · MuYunyun/create-react-doc",
     "count": 1,
     "uniques": 1
   }
