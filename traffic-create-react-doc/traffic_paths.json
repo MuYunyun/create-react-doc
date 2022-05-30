@@ -2,8 +2,8 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 18,
-    "uniques": 15
+    "count": 19,
+    "uniques": 16
   },
   {
     "path": "/MuYunyun/create-react-doc/issues",
@@ -44,6 +44,12 @@
   {
     "path": "/MuYunyun/create-react-doc/releases/tag/v1.9.0",
     "title": "Release v1.9: 支持配置展示标签页以自定义聚合文章内容 · MuYunyun/create-react-doc",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/tree/main/packages/leetcode-cli",
+    "title": "create-react-doc/packages/leetcode-cli at main · MuYunyun/create-react-doc",
     "count": 1,
     "uniques": 1
   }
