@@ -2,8 +2,8 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 17,
-    "uniques": 16
+    "count": 19,
+    "uniques": 18
   },
   {
     "path": "/MuYunyun/create-react-doc/issues",
@@ -18,6 +18,12 @@
     "uniques": 1
   },
   {
+    "path": "/MuYunyun/create-react-doc/issues/278",
+    "title": "upgrade react/react-router-dom version · Issue #278 · MuYunyun/create-react-d...",
+    "count": 1,
+    "uniques": 1
+  },
+  {
     "path": "/MuYunyun/create-react-doc/pull/95/files",
     "title": "support prerender by MuYunyun · Pull Request #95 · MuYunyun/create-react-doc ...",
     "count": 1,
@@ -26,6 +32,12 @@
   {
     "path": "/MuYunyun/create-react-doc/releases/tag/v1.9.0",
     "title": "Release v1.9: 支持配置展示标签页以自定义聚合文章内容 · MuYunyun/create-react-doc",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/search",
+    "title": "Search · 官网 · GitHub",
     "count": 1,
     "uniques": 1
   },
