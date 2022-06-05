@@ -1,16 +1,11 @@
 [
   {
     "referrer": "link.zhihu.com",
-    "count": 5,
-    "uniques": 5
+    "count": 6,
+    "uniques": 6
   },
   {
     "referrer": "link.juejin.cn",
-    "count": 2,
-    "uniques": 2
-  },
-  {
-    "referrer": "muyunyun.cn",
     "count": 2,
     "uniques": 2
   },
@@ -31,6 +26,11 @@
   },
   {
     "referrer": "link.segmentfault.com",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "referrer": "muyunyun.cn",
     "count": 1,
     "uniques": 1
   },
