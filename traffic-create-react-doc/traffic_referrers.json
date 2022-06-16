@@ -5,19 +5,19 @@
     "uniques": 3
   },
   {
-    "referrer": "link.juejin.cn",
-    "count": 2,
-    "uniques": 2
-  },
-  {
     "referrer": "link.zhihu.com",
     "count": 2,
     "uniques": 2
   },
   {
-    "referrer": "muyunyun.cn",
+    "referrer": "link.juejin.cn",
     "count": 2,
     "uniques": 2
+  },
+  {
+    "referrer": "Baidu",
+    "count": 1,
+    "uniques": 1
   },
   {
     "referrer": "v2ex.com",
@@ -25,12 +25,17 @@
     "uniques": 1
   },
   {
-    "referrer": "link.segmentfault.com",
+    "referrer": "muyunyun.cn",
     "count": 1,
     "uniques": 1
   },
   {
-    "referrer": "Baidu",
+    "referrer": "zhihu.com",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "referrer": "link.segmentfault.com",
     "count": 1,
     "uniques": 1
   }
