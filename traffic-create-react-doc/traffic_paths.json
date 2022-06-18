@@ -2,7 +2,7 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 22,
+    "count": 23,
     "uniques": 18
   },
   {
@@ -20,6 +20,12 @@
   {
     "path": "/MuYunyun/create-react-doc/search",
     "title": "Search · react dom · GitHub",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/tree/main/packages/crd-seed",
+    "title": "create-react-doc/packages/crd-seed at main · MuYunyun/create-react-doc",
     "count": 1,
     "uniques": 1
   }
