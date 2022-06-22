@@ -1,11 +1,11 @@
 [
   {
     "referrer": "link.zhihu.com",
-    "count": 4,
-    "uniques": 4
+    "count": 5,
+    "uniques": 5
   },
   {
-    "referrer": "link.juejin.cn",
+    "referrer": "Baidu",
     "count": 2,
     "uniques": 2
   },
@@ -15,12 +15,12 @@
     "uniques": 2
   },
   {
-    "referrer": "Baidu",
-    "count": 2,
-    "uniques": 2
+    "referrer": "zhihu.com",
+    "count": 1,
+    "uniques": 1
   },
   {
-    "referrer": "zhihu.com",
+    "referrer": "v2ex.com",
     "count": 1,
     "uniques": 1
   },
@@ -30,7 +30,12 @@
     "uniques": 1
   },
   {
-    "referrer": "v2ex.com",
+    "referrer": "Google",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "referrer": "link.juejin.cn",
     "count": 1,
     "uniques": 1
   }
