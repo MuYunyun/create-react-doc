@@ -5,19 +5,24 @@
     "uniques": 2
   },
   {
+    "referrer": "npmjs.com",
+    "count": 6,
+    "uniques": 1
+  },
+  {
     "referrer": "link.zhihu.com",
     "count": 5,
     "uniques": 5
   },
   {
-    "referrer": "Baidu",
-    "count": 2,
+    "referrer": "github.com",
+    "count": 3,
     "uniques": 2
   },
   {
-    "referrer": "github.com",
-    "count": 1,
-    "uniques": 1
+    "referrer": "Baidu",
+    "count": 2,
+    "uniques": 2
   },
   {
     "referrer": "zhihu.com",
