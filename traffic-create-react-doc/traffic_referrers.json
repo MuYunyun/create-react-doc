@@ -10,27 +10,32 @@
     "uniques": 1
   },
   {
+    "referrer": "link.zhihu.com",
+    "count": 6,
+    "uniques": 6
+  },
+  {
     "referrer": "npmjs.com",
     "count": 6,
     "uniques": 1
   },
   {
-    "referrer": "link.zhihu.com",
-    "count": 5,
-    "uniques": 5
-  },
-  {
     "referrer": "github.com",
-    "count": 4,
-    "uniques": 3
-  },
-  {
-    "referrer": "Baidu",
-    "count": 2,
+    "count": 3,
     "uniques": 2
   },
   {
     "referrer": "zhihu.com",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "referrer": "Baidu",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "referrer": "link.juejin.cn",
     "count": 1,
     "uniques": 1
   }
