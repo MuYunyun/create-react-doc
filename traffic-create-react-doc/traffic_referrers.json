@@ -10,14 +10,14 @@
     "uniques": 1
   },
   {
-    "referrer": "link.zhihu.com",
-    "count": 6,
-    "uniques": 6
-  },
-  {
     "referrer": "npmjs.com",
     "count": 6,
     "uniques": 1
+  },
+  {
+    "referrer": "link.zhihu.com",
+    "count": 4,
+    "uniques": 4
   },
   {
     "referrer": "github.com",
@@ -25,12 +25,12 @@
     "uniques": 2
   },
   {
-    "referrer": "Baidu",
-    "count": 1,
+    "referrer": "link.juejin.cn",
+    "count": 2,
     "uniques": 1
   },
   {
-    "referrer": "link.juejin.cn",
+    "referrer": "Baidu",
     "count": 1,
     "uniques": 1
   }
