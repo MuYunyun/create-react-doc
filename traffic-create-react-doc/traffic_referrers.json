@@ -1,12 +1,22 @@
 [
   {
     "referrer": "Google",
-    "count": 51,
-    "uniques": 2
+    "count": 50,
+    "uniques": 1
   },
   {
     "referrer": "muyunyun.cn",
     "count": 18,
+    "uniques": 1
+  },
+  {
+    "referrer": "github.com",
+    "count": 6,
+    "uniques": 5
+  },
+  {
+    "referrer": "npmjs.com",
+    "count": 6,
     "uniques": 1
   },
   {
@@ -15,24 +25,14 @@
     "uniques": 1
   },
   {
-    "referrer": "npmjs.com",
-    "count": 6,
-    "uniques": 1
-  },
-  {
-    "referrer": "github.com",
-    "count": 5,
-    "uniques": 4
-  },
-  {
-    "referrer": "link.zhihu.com",
-    "count": 4,
-    "uniques": 4
-  },
-  {
     "referrer": "jianshu.com",
     "count": 4,
     "uniques": 1
+  },
+  {
+    "referrer": "link.zhihu.com",
+    "count": 3,
+    "uniques": 3
   },
   {
     "referrer": "link.segmentfault.com",
