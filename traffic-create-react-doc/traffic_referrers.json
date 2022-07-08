@@ -1,10 +1,5 @@
 [
   {
-    "referrer": "muyunyun.cn",
-    "count": 18,
-    "uniques": 1
-  },
-  {
     "referrer": "link.juejin.cn",
     "count": 6,
     "uniques": 1
@@ -25,6 +20,11 @@
     "uniques": 1
   },
   {
+    "referrer": "Baidu",
+    "count": 2,
+    "uniques": 2
+  },
+  {
     "referrer": "link.zhihu.com",
     "count": 2,
     "uniques": 2
@@ -32,11 +32,6 @@
   {
     "referrer": "dev.to",
     "count": 2,
-    "uniques": 1
-  },
-  {
-    "referrer": "Baidu",
-    "count": 1,
     "uniques": 1
   },
   {
