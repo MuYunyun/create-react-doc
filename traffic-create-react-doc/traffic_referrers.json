@@ -1,12 +1,17 @@
 [
   {
+    "referrer": "v2ex.com",
+    "count": 9,
+    "uniques": 2
+  },
+  {
     "referrer": "github.com",
     "count": 6,
     "uniques": 5
   },
   {
     "referrer": "link.juejin.cn",
-    "count": 6,
+    "count": 5,
     "uniques": 1
   },
   {
@@ -25,22 +30,17 @@
     "uniques": 2
   },
   {
-    "referrer": "link.zhihu.com",
-    "count": 2,
-    "uniques": 2
-  },
-  {
     "referrer": "dev.to",
     "count": 2,
     "uniques": 1
   },
   {
-    "referrer": "cnblogs.com",
+    "referrer": "link.zhihu.com",
     "count": 1,
     "uniques": 1
   },
   {
-    "referrer": "v2ex.com",
+    "referrer": "cnblogs.com",
     "count": 1,
     "uniques": 1
   }
