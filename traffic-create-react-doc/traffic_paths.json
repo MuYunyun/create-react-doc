@@ -2,14 +2,8 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 30,
-    "uniques": 19
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/issues",
-    "title": "Issues · MuYunyun/create-react-doc · GitHub",
-    "count": 2,
-    "uniques": 2
+    "count": 23,
+    "uniques": 16
   },
   {
     "path": "/MuYunyun/create-react-doc/tree/main/packages/crd-generator-sitemap",
@@ -20,18 +14,6 @@
   {
     "path": "/MuYunyun/create-react-doc/blob/8b3190eda31960a47e4ca3e5ce25d3c922920f2e/packages/crd-theme/markdown/index.js",
     "title": "create-react-doc/index.js at 8b3190eda31960a47e4ca3e5ce25d3c922920f2e · MuYun...",
-    "count": 1,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/blob/main/components/index.jsx",
-    "title": "create-react-doc/index.jsx at main · MuYunyun/create-react-doc",
-    "count": 1,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/blob/main/.eslintrc.js",
-    "title": "create-react-doc/.eslintrc.js at main · MuYunyun/create-react-doc",
     "count": 1,
     "uniques": 1
   },
@@ -56,6 +38,24 @@
   {
     "path": "/MuYunyun/create-react-doc/blob/main/packages/crd-generator-sitemap/index.js",
     "title": "create-react-doc/packages/crd-generator-sitemap at main · MuYunyun/create-rea...",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/issues",
+    "title": "Issues · MuYunyun/create-react-doc · GitHub",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/issues/86",
+    "title": "跳转到 github 项目地址出现错误。 · Issue #86 · MuYunyun/create-react-doc · GitHub",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/tree/main/packages",
+    "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
     "count": 1,
     "uniques": 1
   }
