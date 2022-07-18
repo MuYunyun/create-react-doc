@@ -20,11 +20,6 @@
     "uniques": 2
   },
   {
-    "referrer": "Baidu",
-    "count": 2,
-    "uniques": 2
-  },
-  {
     "referrer": "zhihu.com",
     "count": 2,
     "uniques": 1
@@ -36,6 +31,11 @@
   },
   {
     "referrer": "DuckDuckGo",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "referrer": "Baidu",
     "count": 1,
     "uniques": 1
   },
