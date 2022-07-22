@@ -2,8 +2,8 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 45,
-    "uniques": 24
+    "count": 39,
+    "uniques": 23
   },
   {
     "path": "/MuYunyun/create-react-doc/blob/main/README-en.md",
@@ -42,20 +42,20 @@
     "uniques": 1
   },
   {
-    "path": "/MuYunyun/create-react-doc/blob/main/.npmrc",
-    "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 1,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/blob/main/package.json",
-    "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 1,
-    "uniques": 1
-  },
-  {
     "path": "/MuYunyun/create-react-doc/blob/main/README.md",
     "title": "create-react-doc/README.md at main · MuYunyun/create-react-doc",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/commits/main",
+    "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/issues/86",
+    "title": "跳转到 github 项目地址出现错误。 · Issue #86 · MuYunyun/create-react-doc · GitHub",
     "count": 1,
     "uniques": 1
   }
