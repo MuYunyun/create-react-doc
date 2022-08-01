@@ -2,8 +2,8 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 42,
-    "uniques": 26
+    "count": 34,
+    "uniques": 21
   },
   {
     "path": "/MuYunyun/create-react-doc/tree/main/docs",
@@ -48,14 +48,14 @@
     "uniques": 1
   },
   {
-    "path": "/MuYunyun/create-react-doc/blob/main/CONTRIBUTING.md",
-    "title": "create-react-doc/CONTRIBUTING.md at main · MuYunyun/create-react-doc · GitHub",
+    "path": "/MuYunyun/create-react-doc/blob/main/docs/%E4%B8%BB%E9%A2%98/%E8%87%AA%E5%AE%9A%E4%B9%89%E4%B8%BB%E9%A2%98.md",
+    "title": "create-react-doc/docs/主题 at main · MuYunyun/create-react-doc",
     "count": 1,
     "uniques": 1
   },
   {
-    "path": "/MuYunyun/create-react-doc/blob/main/docs/%E4%B8%BB%E9%A2%98/%E8%87%AA%E5%AE%9A%E4%B9%89%E4%B8%BB%E9%A2%98.md",
-    "title": "create-react-doc/docs/主题 at main · MuYunyun/create-react-doc",
+    "path": "/MuYunyun/create-react-doc/blob/main/docs/%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B.md",
+    "title": "create-react-doc/docs at main · MuYunyun/create-react-doc",
     "count": 1,
     "uniques": 1
   }
