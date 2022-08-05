@@ -1,15 +1,5 @@
 [
   {
-    "referrer": "link.zhihu.com",
-    "count": 45,
-    "uniques": 4
-  },
-  {
-    "referrer": "link.segmentfault.com",
-    "count": 4,
-    "uniques": 3
-  },
-  {
     "referrer": "muyunyun.cn",
     "count": 4,
     "uniques": 3
@@ -20,12 +10,22 @@
     "uniques": 3
   },
   {
+    "referrer": "link.zhihu.com",
+    "count": 3,
+    "uniques": 3
+  },
+  {
+    "referrer": "link.segmentfault.com",
+    "count": 2,
+    "uniques": 2
+  },
+  {
     "referrer": "link.juejin.cn",
     "count": 1,
     "uniques": 1
   },
   {
-    "referrer": "dev.to",
+    "referrer": "npmjs.com",
     "count": 1,
     "uniques": 1
   }
