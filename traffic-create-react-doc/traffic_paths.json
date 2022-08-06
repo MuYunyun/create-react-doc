@@ -2,7 +2,7 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 26,
+    "count": 27,
     "uniques": 22
   },
   {
@@ -36,12 +36,6 @@
     "uniques": 1
   },
   {
-    "path": "/MuYunyun/create-react-doc/commit/0d5c38fbcd441f94c671d676eb1a38d797a66031",
-    "title": "Merge branch 'fix/menu-init-open' into qa/latest · MuYunyun/create-react-doc@...",
-    "count": 1,
-    "uniques": 1
-  },
-  {
     "path": "/MuYunyun/create-react-doc/fork",
     "title": "Fork MuYunyun/create-react-doc",
     "count": 1,
@@ -50,6 +44,12 @@
   {
     "path": "/MuYunyun/create-react-doc/issues",
     "title": "Issues · MuYunyun/create-react-doc · GitHub",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/pulls",
+    "title": "Pull requests · MuYunyun/create-react-doc",
     "count": 1,
     "uniques": 1
   },
