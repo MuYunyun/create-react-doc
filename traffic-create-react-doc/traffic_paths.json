@@ -2,18 +2,36 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 27,
-    "uniques": 22
+    "count": 31,
+    "uniques": 25
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/tree/main/docs",
+    "title": "create-react-doc/docs at main · MuYunyun/create-react-doc · GitHub",
+    "count": 3,
+    "uniques": 2
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/blob/main/package.json",
+    "title": "create-react-doc/package.json at main · MuYunyun/create-react-doc · GitHub",
+    "count": 2,
+    "uniques": 2
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/issues",
+    "title": "Issues · MuYunyun/create-react-doc · GitHub",
+    "count": 2,
+    "uniques": 2
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/pulls",
+    "title": "Pull requests · MuYunyun/create-react-doc · GitHub",
+    "count": 2,
+    "uniques": 2
   },
   {
     "path": "/MuYunyun/create-react-doc/blob/main/docs/%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F.md",
     "title": "create-react-doc/数学公式.md at main · MuYunyun/create-react-doc",
-    "count": 2,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/tree/main/docs",
-    "title": "create-react-doc/docs at main · MuYunyun/create-react-doc",
     "count": 2,
     "uniques": 1
   },
@@ -24,38 +42,20 @@
     "uniques": 1
   },
   {
-    "path": "/MuYunyun/create-react-doc/blob/main/package.json",
-    "title": "create-react-doc/package.json at main · MuYunyun/create-react-doc",
-    "count": 1,
-    "uniques": 1
-  },
-  {
     "path": "/MuYunyun/create-react-doc/blob/main/utils/uppackage-dev.sh",
     "title": "create-react-doc/uppackage-dev.sh at main · MuYunyun/create-react-doc",
     "count": 1,
     "uniques": 1
   },
   {
+    "path": "/MuYunyun/create-react-doc/blob/main/yarn.lock",
+    "title": "create-react-doc/yarn.lock at main · MuYunyun/create-react-doc · GitHub",
+    "count": 1,
+    "uniques": 1
+  },
+  {
     "path": "/MuYunyun/create-react-doc/fork",
     "title": "Fork MuYunyun/create-react-doc",
-    "count": 1,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/issues",
-    "title": "Issues · MuYunyun/create-react-doc · GitHub",
-    "count": 1,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/pulls",
-    "title": "Pull requests · MuYunyun/create-react-doc",
-    "count": 1,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/tree/main/utils",
-    "title": "create-react-doc/utils at main · MuYunyun/create-react-doc",
     "count": 1,
     "uniques": 1
   }
