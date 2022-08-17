@@ -11,16 +11,16 @@
   },
   {
     "referrer": "link.zhihu.com",
-    "count": 4,
-    "uniques": 4
-  },
-  {
-    "referrer": "npmjs.com",
-    "count": 2,
-    "uniques": 2
+    "count": 3,
+    "uniques": 3
   },
   {
     "referrer": "Google",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "referrer": "npmjs.com",
     "count": 1,
     "uniques": 1
   }
