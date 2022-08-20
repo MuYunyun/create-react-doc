@@ -2,26 +2,8 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 18,
+    "count": 17,
     "uniques": 15
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/tree/main/docs",
-    "title": "create-react-doc/docs at main · MuYunyun/create-react-doc · GitHub",
-    "count": 2,
-    "uniques": 2
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/blob/main/package.json",
-    "title": "create-react-doc/package.json at main · MuYunyun/create-react-doc · GitHub",
-    "count": 1,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/blob/main/yarn.lock",
-    "title": "create-react-doc/yarn.lock at main · MuYunyun/create-react-doc · GitHub",
-    "count": 1,
-    "uniques": 1
   },
   {
     "path": "/MuYunyun/create-react-doc/commit/2801ac700cf2a3493e7be9d857e4f006f7ef7dcf",
@@ -36,20 +18,8 @@
     "uniques": 1
   },
   {
-    "path": "/MuYunyun/create-react-doc/issues",
-    "title": "Issues · MuYunyun/create-react-doc · GitHub",
-    "count": 1,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/pulls",
-    "title": "Pull requests · MuYunyun/create-react-doc · GitHub",
-    "count": 1,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/tree/main/components",
-    "title": "create-react-doc/components at main · MuYunyun/create-react-doc · GitHub",
+    "path": "/MuYunyun/create-react-doc/tree/main/docs",
+    "title": "create-react-doc/docs at main · MuYunyun/create-react-doc",
     "count": 1,
     "uniques": 1
   }
