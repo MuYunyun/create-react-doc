@@ -5,13 +5,13 @@
     "uniques": 6
   },
   {
-    "referrer": "link.zhihu.com",
-    "count": 3,
-    "uniques": 3
-  },
-  {
     "referrer": "link.juejin.cn",
     "count": 3,
+    "uniques": 2
+  },
+  {
+    "referrer": "link.zhihu.com",
+    "count": 2,
     "uniques": 2
   },
   {

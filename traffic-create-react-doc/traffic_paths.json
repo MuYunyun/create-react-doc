@@ -2,8 +2,8 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 17,
-    "uniques": 15
+    "count": 22,
+    "uniques": 17
   },
   {
     "path": "/MuYunyun/create-react-doc/commit/2801ac700cf2a3493e7be9d857e4f006f7ef7dcf",
@@ -18,8 +18,20 @@
     "uniques": 1
   },
   {
+    "path": "/MuYunyun/create-react-doc/releases/tag/v1.9.0",
+    "title": "Release v1.9: 支持配置展示标签页以自定义聚合文章内容 · MuYunyun/create-react-doc · GitHub",
+    "count": 1,
+    "uniques": 1
+  },
+  {
     "path": "/MuYunyun/create-react-doc/tree/main/docs",
     "title": "create-react-doc/docs at main · MuYunyun/create-react-doc",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/tree/main/packages/crd-seed",
+    "title": "create-react-doc/packages/crd-seed at main · MuYunyun/create-react-doc",
     "count": 1,
     "uniques": 1
   }
