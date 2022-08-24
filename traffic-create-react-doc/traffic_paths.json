@@ -2,12 +2,48 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 16,
-    "uniques": 13
+    "count": 20,
+    "uniques": 14
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/blob/main/gh-pages.js",
+    "title": "create-react-doc/gh-pages.js at main · MuYunyun/create-react-doc",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/blob/main/lerna.json",
+    "title": "create-react-doc/lerna.json at main · MuYunyun/create-react-doc",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/blob/main/package.json",
+    "title": "create-react-doc/package.json at main · MuYunyun/create-react-doc",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/blob/main/packages/crd-seed/component/Affix/utils/index.js",
+    "title": "create-react-doc/index.js at main · MuYunyun/create-react-doc",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/blob/main/README.md",
+    "title": "create-react-doc/README.md at main · MuYunyun/create-react-doc",
+    "count": 1,
+    "uniques": 1
   },
   {
     "path": "/MuYunyun/create-react-doc/commit/2801ac700cf2a3493e7be9d857e4f006f7ef7dcf",
     "title": "feat: remove extra logic in prod · MuYunyun/create-react-doc@2801ac7 · GitHub",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/edit/main/docs/%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B.md",
+    "title": "Editing create-react-doc/快速上手.md at main · MuYunyun/create-react-doc",
     "count": 1,
     "uniques": 1
   },
