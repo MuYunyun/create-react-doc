@@ -2,14 +2,8 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 20,
-    "uniques": 13
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/blob/main/package.json",
-    "title": "create-react-doc/package.json at main · MuYunyun/create-react-doc",
-    "count": 3,
-    "uniques": 3
+    "count": 16,
+    "uniques": 12
   },
   {
     "path": "/MuYunyun/create-react-doc/tree/main/packages",
@@ -18,22 +12,10 @@
     "uniques": 2
   },
   {
-    "path": "/MuYunyun/create-react-doc/blob/main/gh-pages.js",
-    "title": "create-react-doc/gh-pages.js at main · MuYunyun/create-react-doc",
-    "count": 1,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/blob/main/lerna.json",
-    "title": "create-react-doc/lerna.json at main · MuYunyun/create-react-doc",
-    "count": 1,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/blob/main/packages/crd-seed/component/Affix/utils/index.js",
-    "title": "create-react-doc/index.js at main · MuYunyun/create-react-doc",
-    "count": 1,
-    "uniques": 1
+    "path": "/MuYunyun/create-react-doc/blob/main/package.json",
+    "title": "create-react-doc/package.json at main · MuYunyun/create-react-doc",
+    "count": 2,
+    "uniques": 2
   },
   {
     "path": "/MuYunyun/create-react-doc/blob/main/packages/create-react-doc/package.json",
@@ -42,20 +24,20 @@
     "uniques": 1
   },
   {
-    "path": "/MuYunyun/create-react-doc/blob/main/README.md",
-    "title": "create-react-doc/README.md at main · MuYunyun/create-react-doc",
-    "count": 1,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/edit/main/docs/%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B.md",
-    "title": "Editing create-react-doc/快速上手.md at main · MuYunyun/create-react-doc",
-    "count": 1,
-    "uniques": 1
-  },
-  {
     "path": "/MuYunyun/create-react-doc/issues/103",
     "title": "解耦 menu 逻辑与内容区域逻辑, 加快页面渲染速度。 · Issue #103 · MuYunyun/create-react-doc · GitHub",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/pull/240/files",
+    "title": "feat: combile SSR in prerender to prevent shake problem by MuYunyun · Pull Re...",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/tree/main/packages/create-react-doc",
+    "title": "create-react-doc/packages/create-react-doc at main · MuYunyun/create-react-doc",
     "count": 1,
     "uniques": 1
   }
