@@ -29,6 +29,6 @@
   "gitHead": "ffc5e4cbc94a7356da558c2dbf46e2f39bb8b199",
   "devDependencies": {
     "@types/react": "^17.0.43",
-    "@types/react-dom": "^17.0.14"
+    "@types/react-dom": "^18.0.6"
   }
 }
