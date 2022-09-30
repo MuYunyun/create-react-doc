@@ -2,12 +2,30 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 17,
-    "uniques": 11
+    "count": 22,
+    "uniques": 14
   },
   {
     "path": "/MuYunyun/create-react-doc/blob/main/docs/%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F.md",
     "title": "create-react-doc/数学公式.md at main · MuYunyun/create-react-doc · GitHub",
+    "count": 2,
+    "uniques": 2
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/blob/main/package.json",
+    "title": "create-react-doc/package.json at main · MuYunyun/create-react-doc",
+    "count": 2,
+    "uniques": 2
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/tree/main/docs",
+    "title": "create-react-doc/docs at main · MuYunyun/create-react-doc · GitHub",
+    "count": 2,
+    "uniques": 2
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/tree/main/packages",
+    "title": "create-react-doc/packages at main · MuYunyun/create-react-doc",
     "count": 2,
     "uniques": 2
   },
@@ -18,8 +36,8 @@
     "uniques": 2
   },
   {
-    "path": "/MuYunyun/create-react-doc/blob/main/package.json",
-    "title": "create-react-doc/package.json at main · MuYunyun/create-react-doc",
+    "path": "/MuYunyun/create-react-doc/blob/main/packages/crd-scripts/index.js",
+    "title": "create-react-doc/index.js at main · MuYunyun/create-react-doc",
     "count": 1,
     "uniques": 1
   },
@@ -38,24 +56,6 @@
   {
     "path": "/MuYunyun/create-react-doc/blob/main/utils/uppackage.sh",
     "title": "create-react-doc/uppackage.sh at main · MuYunyun/create-react-doc",
-    "count": 1,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/edit/main/docs/%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97.md",
-    "title": "Editing create-react-doc/更新日志.md at main · MuYunyun/create-react-doc",
-    "count": 1,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/issues",
-    "title": "Issues · MuYunyun/create-react-doc",
-    "count": 1,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/tree/main/docs",
-    "title": "create-react-doc/docs at main · MuYunyun/create-react-doc · GitHub",
     "count": 1,
     "uniques": 1
   }
