@@ -16,8 +16,13 @@
   },
   {
     "referrer": "link.zhihu.com",
-    "count": 3,
-    "uniques": 3
+    "count": 2,
+    "uniques": 2
+  },
+  {
+    "referrer": "v2ex.com",
+    "count": 1,
+    "uniques": 1
   },
   {
     "referrer": "npmjs.com",
