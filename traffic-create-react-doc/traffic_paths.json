@@ -2,8 +2,14 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 16,
-    "uniques": 12
+    "count": 19,
+    "uniques": 13
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/blob/main/.npmrc",
+    "title": "create-react-doc/.npmrc at main · MuYunyun/create-react-doc",
+    "count": 1,
+    "uniques": 1
   },
   {
     "path": "/MuYunyun/create-react-doc/blob/main/package.json",
@@ -32,6 +38,12 @@
   {
     "path": "/MuYunyun/create-react-doc/tree/main/packages/crd-scripts",
     "title": "create-react-doc/packages/crd-scripts at main · MuYunyun/create-react-doc",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/tree/main/packages/leetcode-cli",
+    "title": "create-react-doc/packages/leetcode-cli at main · MuYunyun/create-react-doc",
     "count": 1,
     "uniques": 1
   }
