@@ -1,8 +1,13 @@
 [
   {
+    "referrer": "Google",
+    "count": 13,
+    "uniques": 3
+  },
+  {
     "referrer": "github.com",
-    "count": 7,
-    "uniques": 5
+    "count": 12,
+    "uniques": 6
   },
   {
     "referrer": "link.zhihu.com",
@@ -10,14 +15,14 @@
     "uniques": 3
   },
   {
-    "referrer": "Google",
-    "count": 3,
-    "uniques": 2
-  },
-  {
     "referrer": "v2ex.com",
     "count": 2,
     "uniques": 2
+  },
+  {
+    "referrer": "npmjs.com",
+    "count": 1,
+    "uniques": 1
   },
   {
     "referrer": "link.juejin.cn",
@@ -25,7 +30,7 @@
     "uniques": 1
   },
   {
-    "referrer": "npmjs.com",
+    "referrer": "muyunyun.cn",
     "count": 1,
     "uniques": 1
   }
