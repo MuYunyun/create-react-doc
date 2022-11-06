@@ -26,6 +26,8 @@ abbrlink: s31w9gd1
 
 [Create React Doc](https://github.com/MuYunyun/create-react-doc) 是一个使用 React 的 markdown 文档站点生成工具。就像 [create-react-app](https://github.com/facebook/create-react-app) 一样，开发者可以使用 Create React Doc 来开发、部署文档或者博客站点而无需关心额外的环境配置信息。
 
+try stackblitz.
+
 ## 特性
 
 * 建站理念: `文件即站点` (Files as a Site)。
