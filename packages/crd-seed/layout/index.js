@@ -2,6 +2,7 @@ import * as React from 'react'
 import { Routes, Link, Route, Navigate, useLocation } from 'react-router-dom'
 import cx from 'classnames'
 import { ifDev, ifProd, ifPrerender } from 'crd-client-utils'
+const Giscus = require('@giscus/react')
 import Menu from '../component/Menu'
 import Icon from '../component/Icon'
 import Affix from '../component/Affix'
@@ -15,7 +16,7 @@ import logo from '../crd.logo.svg'
 import styles from './index.less'
 import '../style/mobile.less'
 
-const { useState, useEffect } = React
+const { useState, useEffect, useMemo } = React
 const SubMenu = Menu.SubMenu
 
 function BasicLayout({
@@ -30,8 +31,10 @@ function BasicLayout({
     branch = 'main',
     language = 'en',
     menuOpenKeys,
-    tags
+    tags,
+    comment
   } = DOCSCONFIG || {}
+
   const [inlineCollapsed, setInlineCollapsed] = useState(true)
   const [selectedKey, setSelectedKey] = useState('')
   const curOpenKeys = getOpenSubMenuKeys({
@@ -150,7 +153,7 @@ function BasicLayout({
     )
   }
   /**
-   * this section is to show article's relevant information
+   * This section is to show article's relevant information
    * such as edit in github and so on.
    */
   const renderPageHeader = () => {
@@ -176,8 +179,34 @@ function BasicLayout({
       </div>
     )
   }
+
   /**
-   * this section is to show article's relevant information
+   * This section is to render comment area.
+   * Every pathname should has its own comment module.
+   */
+  const renderComment = useMemo(() => {
+    return <Giscus
+      key={pathname}
+      id="comments"
+      repo={`${user}/${repo}`}
+      category="General"
+      categoryId="DIC_kwDOD_mJNs4CSd1W"
+      mapping="pathname"
+      strict="0"
+      reactionsEnabled="1"
+      emitMetadata="0"
+      inputPosition="top"
+      theme="preferred_color_scheme"
+      lang="en"
+      loading="lazy"
+      crossorigin="anonymous"
+      async
+      {...comment?.GiscusConfig}
+    />
+  }, [pathname])
+
+  /**
+   * This section is to show article's relevant information
    * such as edit in created time、edited time and so on.
    */
   const renderPageFooter = () => {
@@ -283,6 +312,7 @@ function BasicLayout({
           {/* Todo: follow up how to use Redirect to back up the rest of route. */}
           {/* <Redirect path='/' to={ifAddPrefix ? `/${repo}/404` : `/404`} /> */}
         </Routes>
+        {comment?.GiscusConfig ? renderComment : null}
         {renderPageFooter()}
       </div>
     )

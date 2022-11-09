@@ -43,5 +43,11 @@ inject: injectLogic/index.js
 # Use abbrlink
 abbrlink: true
 
-# show Tags in head
+# Show Tags in head
 tags: true
+
+# Config comment section
+comment:
+  # Giscus Config, The config parameter that's supported can be seen in [giscus-component](https://github.com/giscus/giscus-component#documentation).
+  GiscusConfig:
+    id: MDEwOlJlcG9zaXRvcnkyNjgwMTE4MzA=
