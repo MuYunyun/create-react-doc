@@ -40,20 +40,23 @@ abbrlink: s31w9gd1
 
 ## 主题
 
-create-react-doc 提供了官方默认主题 [crd-seed](https://github.com/MuYunyun/create-react-doc/tree/main/packages/crd-seed)。该主题支持以下特性:
+create-react-doc 提供了默认主题 [crd-seed](https://github.com/MuYunyun/create-react-doc/tree/main/packages/crd-seed)。
 
-* 适配移动、PC 端展示。
-* 支持暗黑模式。
-* 支持文档内嵌展示 codepen、codesandbox 案例。
-* 支持与 GitHub 文档编辑能力联动。
-* 支持配置展示标签以自定义聚合文章内容。
+该主题支持以下特性:
 
-[笔者博客](http://muyunyun.cn/blog)使用的是 [crd-seed](https://github.com/MuYunyun/create-react-doc/tree/main/packages/crd-seed) 主题搭建的。
+- [x] 适配网页/移动端展示。
+- [x] 支持暗黑模式。
+- [x] 支持标签页自定义聚合文章内容。
+- [x] 内置评论模块。
+- [x] 支持内嵌展示 codepen、codesandbox 案例。
+- [x] 支持从文档页快速跳转到对应的 Github 文档页进行在线编辑。
+
+该主题效果可以参考[笔者博客](http://muyunyun.cn/blog)。
 
 ![](http://with.muyunyun.cn/90d3e357a31649b9466a828a92b6d88d.jpg)
 ![](http://with.muyunyun.cn/2e7440e4256debda2d73a4e6392c7146.jpg-300)
 
-如果您想定制化或者分享个人主题, 可以参考[自定义主题](https://muyunyun.cn/create-react-doc/9f41fc98)。
+如果您想定制化或者分享个人主题，可以参考[自定义主题](https://muyunyun.cn/create-react-doc/9f41fc98)章节。
 
 ## 快速上手
 
