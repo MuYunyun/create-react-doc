@@ -966,6 +966,12 @@ a:hover {
 .contentNoMenu-2CaiN {
   min-height: 400px;
 }
+giscus-widget {
+  display: -ms-flexbox;
+  display: flex;
+  margin: auto;
+  max-width: 940px;
+}
 
 div,
 input,
