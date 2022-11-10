@@ -50,4 +50,4 @@ tags: true
 comment:
   # Giscus Config, The config parameter that's supported can be seen in [giscus-component](https://github.com/giscus/giscus-component#documentation).
   GiscusConfig:
-    id: MDEwOlJlcG9zaXRvcnkyNjgwMTE4MzA=
+    repoId: MDEwOlJlcG9zaXRvcnkyNjgwMTE4MzA=
