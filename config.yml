@@ -51,3 +51,4 @@ comment:
   # Giscus Config, The config parameter that's supported can be seen in [giscus-component](https://github.com/giscus/giscus-component#documentation).
   GiscusConfig:
     repoId: MDEwOlJlcG9zaXRvcnkyNjgwMTE4MzA=
+    categoryId: DIC_kwDOD_mJNs4CSd1W

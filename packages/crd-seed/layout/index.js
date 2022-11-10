@@ -190,7 +190,6 @@ function BasicLayout({
       id="comments"
       repo={`${user}/${repo}`}
       category="General"
-      categoryId="DIC_kwDOD_mJNs4CSd1W"
       mapping="pathname"
       strict="0"
       reactionsEnabled="1"
