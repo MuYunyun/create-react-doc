@@ -2,8 +2,8 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc：📝 简约的 React 驱动的静态站点生成器。",
-    "count": 72,
-    "uniques": 30
+    "count": 65,
+    "uniques": 26
   },
   {
     "path": "/MuYunyun/create-react-doc/actions",
@@ -14,20 +14,14 @@
   {
     "path": "/MuYunyun/create-react-doc/issues",
     "title": "Issues · MuYunyun/create-react-doc",
-    "count": 30,
-    "uniques": 5
+    "count": 28,
+    "uniques": 4
   },
   {
     "path": "/MuYunyun/create-react-doc/actions/workflows/gh-pages.yml",
     "title": "Actions · MuYunyun/create-react-doc",
     "count": 11,
     "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/pulls",
-    "title": "Pull requests · MuYunyun/create-react-doc",
-    "count": 7,
-    "uniques": 5
   },
   {
     "path": "/MuYunyun/create-react-doc/projects",
@@ -40,6 +34,12 @@
     "title": "Discussions · MuYunyun/create-react-doc",
     "count": 7,
     "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/pulls",
+    "title": "Pull requests · MuYunyun/create-react-doc",
+    "count": 6,
+    "uniques": 4
   },
   {
     "path": "/MuYunyun/create-react-doc/pull/331",
