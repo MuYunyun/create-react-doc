@@ -51,10 +51,6 @@ module.exports = function (cmd) {
               jsx: 'automatic',
             }
           },
-          // {
-          //   loader: require.resolve('babel-loader'),
-          //   options: require('../../.babelrc'), // eslint-disable-line
-          // },
         ],
       })
       // https://ilikekillnerds.com/2018/03/disable-webpack-4-native-json-loader/
