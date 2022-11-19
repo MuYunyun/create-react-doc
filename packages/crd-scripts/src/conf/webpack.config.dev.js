@@ -39,9 +39,22 @@ module.exports = function (cmd) {
             },
           },
           {
-            loader: require.resolve('babel-loader'),
-            options: require('../../.babelrc'), // eslint-disable-line
+            loader: 'esbuild-loader',
+            options: {
+              loader: 'jsx',
+              target: 'es2015',
+              // This will make esbuild automatically generate import statements,
+              // making the ProviderPlugin unnecesary if used only for "react".
+              // Note that this option makes sense only when used in conjuction
+              // with React >16.40.0 || >17
+              // https://reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html
+              jsx: 'automatic',
+            }
           },
+          // {
+          //   loader: require.resolve('babel-loader'),
+          //   options: require('../../.babelrc'), // eslint-disable-line
+          // },
         ],
       })
       // https://ilikekillnerds.com/2018/03/disable-webpack-4-native-json-loader/
