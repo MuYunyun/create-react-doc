@@ -2,8 +2,8 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc：📝 简约的 React 驱动的静态站点生成器。",
-    "count": 74,
-    "uniques": 28
+    "count": 77,
+    "uniques": 29
   },
   {
     "path": "/MuYunyun/create-react-doc/actions",
@@ -14,7 +14,7 @@
   {
     "path": "/MuYunyun/create-react-doc/issues",
     "title": "Issues · MuYunyun/create-react-doc",
-    "count": 34,
+    "count": 38,
     "uniques": 5
   },
   {
@@ -36,6 +36,18 @@
     "uniques": 1
   },
   {
+    "path": "/MuYunyun/create-react-doc/pulls",
+    "title": "Pull requests · MuYunyun/create-react-doc",
+    "count": 6,
+    "uniques": 4
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/commits/main",
+    "title": "Commits · MuYunyun/create-react-doc",
+    "count": 6,
+    "uniques": 2
+  },
+  {
     "path": "/MuYunyun/create-react-doc/issues/327",
     "title": "Support discuss section · Issue #327 · MuYunyun/create-react-doc",
     "count": 6,
@@ -46,17 +58,5 @@
     "title": "feat: support comments module by MuYunyun · Pull Request #331 · MuYunyun/crea...",
     "count": 5,
     "uniques": 2
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/issues/337",
-    "title": "replace babel-loader with esbuild · Issue #337 · MuYunyun/create-react-doc",
-    "count": 5,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/releases",
-    "title": "Releases · MuYunyun/create-react-doc",
-    "count": 5,
-    "uniques": 1
   }
 ]
