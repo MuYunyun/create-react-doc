@@ -2,26 +2,14 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc：📝 简约的 React 驱动的静态站点生成器。",
-    "count": 60,
+    "count": 50,
     "uniques": 24
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/actions",
-    "title": "Actions · MuYunyun/create-react-doc",
-    "count": 37,
-    "uniques": 2
   },
   {
     "path": "/MuYunyun/create-react-doc/issues",
     "title": "Issues · MuYunyun/create-react-doc",
-    "count": 28,
+    "count": 25,
     "uniques": 5
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/actions/workflows/gh-pages.yml",
-    "title": "Actions · MuYunyun/create-react-doc",
-    "count": 12,
-    "uniques": 1
   },
   {
     "path": "/MuYunyun/create-react-doc/tree/main/packages",
@@ -42,12 +30,6 @@
     "uniques": 1
   },
   {
-    "path": "/MuYunyun/create-react-doc/releases",
-    "title": "Releases · MuYunyun/create-react-doc",
-    "count": 5,
-    "uniques": 1
-  },
-  {
     "path": "/MuYunyun/create-react-doc/pulls",
     "title": "Pull requests · MuYunyun/create-react-doc",
     "count": 4,
@@ -58,5 +40,23 @@
     "title": "fix: https://github.com/giscus/giscus-component/issues/783 · MuYunyun/create-...",
     "count": 4,
     "uniques": 2
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/pull/338",
+    "title": "replace babel-loader with esbuild by MuYunyun · Pull Request #338 · MuYunyun/...",
+    "count": 4,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/actions",
+    "title": "Actions · MuYunyun/create-react-doc",
+    "count": 3,
+    "uniques": 2
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/pull/338/commits",
+    "title": "replace babel-loader with esbuild by MuYunyun · Pull Request #338 · MuYunyun/...",
+    "count": 3,
+    "uniques": 1
   }
 ]
