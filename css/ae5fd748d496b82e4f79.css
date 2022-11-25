@@ -9,7 +9,6 @@
 .markdown-G1D47 {
   padding: 0 40px 20px 40px;
   margin: 0 auto;
-  font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, Courier, monospace;
   font-size: 14px;
   line-height: 1.5;
   word-wrap: break-word;
@@ -22,7 +21,6 @@
   margin-bottom: 0 !important;
 }
 .markdown-G1D47 code {
-  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
   word-wrap: normal;
 }
 .markdown-G1D47 pre {
@@ -362,7 +360,6 @@
   margin-bottom: 20px;
   margin-top: 8px;
   padding-left: 20px;
-  font-family: Lato, Helvetica Neue For Number, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Helvetica Neue, Helvetica, Arial, sans-serif;
 }
 
 .btn-CEAtK {
@@ -383,9 +380,6 @@
   text-align: center;
 }
 
-body {
-  font-family: Helvetica Neue For Number, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Helvetica Neue, Helvetica, Arial, sans-serif;
-}
 body,
 html {
   position: relative;
@@ -429,6 +423,7 @@ a:hover {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  font-weight: 600;
 }
 .menu-item-5C8Rs {
   white-space: nowrap;
@@ -806,7 +801,6 @@ a:hover {
   margin-bottom: 20px;
   margin-top: 8px;
   padding-left: 20px;
-  font-family: Lato, Helvetica Neue For Number, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Helvetica Neue, Helvetica, Arial, sans-serif;
 }
 .darkMode-MYAiq {
   filter: invert(100%) hue-rotate(180deg);
@@ -859,7 +853,6 @@ a:hover {
       flex-direction: column;
 }
 .tags-title-3NOgD {
-  font-family: Palatino, Garamond, Times, Georgia, serif;
   font-size: 24px;
   font-weight: 400;
   text-align: center;
@@ -1000,7 +993,7 @@ li {
 }
 
 body {
-  font-family: Helvetica Neue For Number, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-family: cursive, sans-serif;
 }
 body,
 html {
