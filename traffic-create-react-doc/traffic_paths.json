@@ -2,14 +2,14 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc：📝 简约的 React 驱动的静态站点生成器。",
-    "count": 50,
-    "uniques": 24
+    "count": 43,
+    "uniques": 21
   },
   {
     "path": "/MuYunyun/create-react-doc/issues",
     "title": "Issues · MuYunyun/create-react-doc",
-    "count": 25,
-    "uniques": 5
+    "count": 21,
+    "uniques": 4
   },
   {
     "path": "/MuYunyun/create-react-doc/tree/main/packages",
@@ -30,12 +30,6 @@
     "uniques": 1
   },
   {
-    "path": "/MuYunyun/create-react-doc/pulls",
-    "title": "Pull requests · MuYunyun/create-react-doc",
-    "count": 4,
-    "uniques": 3
-  },
-  {
     "path": "/MuYunyun/create-react-doc/commit/f181ae0e3f1812d816ce1e0108e6ad05f7f797ef",
     "title": "fix: https://github.com/giscus/giscus-component/issues/783 · MuYunyun/create-...",
     "count": 4,
@@ -50,6 +44,12 @@
   {
     "path": "/MuYunyun/create-react-doc/actions",
     "title": "Actions · MuYunyun/create-react-doc",
+    "count": 3,
+    "uniques": 2
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/pulls",
+    "title": "Pull requests · MuYunyun/create-react-doc",
     "count": 3,
     "uniques": 2
   },
