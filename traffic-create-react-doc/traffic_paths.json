@@ -12,15 +12,9 @@
     "uniques": 4
   },
   {
-    "path": "/MuYunyun/create-react-doc/tree/main/packages",
-    "title": "create-react-doc/packages at main · MuYunyun/create-react-doc",
-    "count": 7,
-    "uniques": 3
-  },
-  {
     "path": "/MuYunyun/create-react-doc/commits/main",
     "title": "Commits · MuYunyun/create-react-doc",
-    "count": 6,
+    "count": 9,
     "uniques": 2
   },
   {
@@ -32,6 +26,12 @@
   {
     "path": "/MuYunyun/create-react-doc/commit/f181ae0e3f1812d816ce1e0108e6ad05f7f797ef",
     "title": "fix: https://github.com/giscus/giscus-component/issues/783 · MuYunyun/create-...",
+    "count": 4,
+    "uniques": 2
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/tree/main/packages",
+    "title": "create-react-doc/packages at main · MuYunyun/create-react-doc",
     "count": 4,
     "uniques": 2
   },
