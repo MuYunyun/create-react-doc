@@ -3,7 +3,7 @@
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc：📝 简约的 React 驱动的静态站点生成器。",
     "count": 43,
-    "uniques": 21
+    "uniques": 22
   },
   {
     "path": "/MuYunyun/create-react-doc/issues",
@@ -14,7 +14,13 @@
   {
     "path": "/MuYunyun/create-react-doc/commits/main",
     "title": "Commits · MuYunyun/create-react-doc",
-    "count": 9,
+    "count": 10,
+    "uniques": 2
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/commit/f181ae0e3f1812d816ce1e0108e6ad05f7f797ef",
+    "title": "fix: https://github.com/giscus/giscus-component/issues/783 · MuYunyun/create-...",
+    "count": 5,
     "uniques": 2
   },
   {
@@ -22,12 +28,6 @@
     "title": "replace babel-loader with esbuild · Issue #337 · MuYunyun/create-react-doc",
     "count": 5,
     "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/commit/f181ae0e3f1812d816ce1e0108e6ad05f7f797ef",
-    "title": "fix: https://github.com/giscus/giscus-component/issues/783 · MuYunyun/create-...",
-    "count": 4,
-    "uniques": 2
   },
   {
     "path": "/MuYunyun/create-react-doc/tree/main/packages",
