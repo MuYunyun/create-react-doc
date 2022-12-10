@@ -8,8 +8,8 @@
   {
     "path": "/MuYunyun/create-react-doc/tree/main/packages",
     "title": "create-react-doc/packages at main · MuYunyun/create-react-doc · GitHub",
-    "count": 3,
-    "uniques": 1
+    "count": 5,
+    "uniques": 2
   },
   {
     "path": "/MuYunyun/create-react-doc/issues",
@@ -36,27 +36,27 @@
     "uniques": 2
   },
   {
+    "path": "/MuYunyun/create-react-doc/tree/main/packages/crd-generator-sitemap",
+    "title": "create-react-doc/packages/crd-generator-sitemap at main · MuYunyun/create-rea...",
+    "count": 2,
+    "uniques": 2
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/tree/main/packages/create-react-doc",
+    "title": "create-react-doc/packages/create-react-doc at main · MuYunyun/create-react-doc",
+    "count": 2,
+    "uniques": 2
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/tree/main/packages/leetcode-cli",
+    "title": "create-react-doc/packages/leetcode-cli at main · MuYunyun/create-react-doc",
+    "count": 2,
+    "uniques": 2
+  },
+  {
     "path": "/MuYunyun/create-react-doc/issues/325",
     "title": "try to use stackblitz · Issue #325 · MuYunyun/create-react-doc",
     "count": 2,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/blob/main/packages/crd-generator-sitemap/generate.js",
-    "title": "create-react-doc/generate.js at main · MuYunyun/create-react-doc · GitHub",
-    "count": 1,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/blob/main/packages/crd-generator-sitemap/index.js",
-    "title": "create-react-doc/index.js at main · MuYunyun/create-react-doc · GitHub",
-    "count": 1,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/blob/main/packages/create-react-doc/index.js",
-    "title": "create-react-doc/index.js at main · MuYunyun/create-react-doc · GitHub",
-    "count": 1,
     "uniques": 1
   }
 ]
