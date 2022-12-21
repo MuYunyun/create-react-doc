@@ -10,9 +10,9 @@
     "uniques": 3
   },
   {
-    "referrer": "muyunyun.cn",
-    "count": 2,
-    "uniques": 2
+    "referrer": "npmjs.com",
+    "count": 3,
+    "uniques": 1
   },
   {
     "referrer": "docs.corp.kuaishou.com",
@@ -20,14 +20,9 @@
     "uniques": 2
   },
   {
-    "referrer": "dev.to",
-    "count": 1,
-    "uniques": 1
-  },
-  {
-    "referrer": "Google",
-    "count": 1,
-    "uniques": 1
+    "referrer": "muyunyun.cn",
+    "count": 2,
+    "uniques": 2
   },
   {
     "referrer": "link.zhihu.com",
@@ -36,6 +31,16 @@
   },
   {
     "referrer": "DuckDuckGo",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "referrer": "dev.to",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "referrer": "Google",
     "count": 1,
     "uniques": 1
   }
