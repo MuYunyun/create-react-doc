@@ -2,13 +2,13 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 42,
-    "uniques": 18
+    "count": 41,
+    "uniques": 17
   },
   {
     "path": "/MuYunyun/create-react-doc/tree/main/packages",
     "title": "create-react-doc/packages at main · MuYunyun/create-react-doc",
-    "count": 7,
+    "count": 5,
     "uniques": 1
   },
   {
@@ -20,43 +20,43 @@
   {
     "path": "/MuYunyun/create-react-doc/tree/main/packages/crd-generator-sitemap",
     "title": "create-react-doc/packages/crd-generator-sitemap at main · MuYunyun/create-rea...",
-    "count": 3,
+    "count": 2,
     "uniques": 1
   },
   {
     "path": "/MuYunyun/create-react-doc/tree/main/packages/crd-seed",
     "title": "create-react-doc/packages/crd-seed at main · MuYunyun/create-react-doc",
-    "count": 3,
+    "count": 2,
     "uniques": 1
   },
   {
     "path": "/MuYunyun/create-react-doc/tree/main/packages/create-react-doc",
     "title": "create-react-doc/packages/create-react-doc at main · MuYunyun/create-react-doc",
-    "count": 3,
+    "count": 2,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/blob/986a95ae103a806a7cd44fc12ad88696e3c618a9/packages/crd-templates/theme/default/_.npmrc",
+    "title": "create-react-doc/_.npmrc at 986a95ae103a806a7cd44fc12ad88696e3c618a9 · MuYuny...",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/blob/main/docs/%E4%B9%A6%E5%86%99%E7%BB%84%E4%BB%B6.md",
+    "title": "create-react-doc/书写组件.md at main · MuYunyun/create-react-doc",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/blob/main/docs/Front-matter.md",
+    "title": "create-react-doc/Front-matter.md at main · MuYunyun/create-react-doc",
+    "count": 1,
     "uniques": 1
   },
   {
     "path": "/MuYunyun/create-react-doc/blob/main/injectLogic/index.js",
     "title": "create-react-doc/index.js at main · MuYunyun/create-react-doc",
-    "count": 2,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/tree/main/components",
-    "title": "create-react-doc/components at main · MuYunyun/create-react-doc",
-    "count": 2,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/tree/main/components/Button",
-    "title": "create-react-doc/components/Button at main · MuYunyun/create-react-doc",
-    "count": 2,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/tree/main/injectLogic",
-    "title": "create-react-doc/injectLogic at main · MuYunyun/create-react-doc",
-    "count": 2,
+    "count": 1,
     "uniques": 1
   }
 ]
