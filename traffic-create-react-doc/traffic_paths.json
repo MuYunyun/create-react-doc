@@ -2,36 +2,12 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 39,
+    "count": 32,
     "uniques": 15
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/tree/main/packages",
-    "title": "create-react-doc/packages at main · MuYunyun/create-react-doc",
-    "count": 5,
-    "uniques": 1
   },
   {
     "path": "/MuYunyun/create-react-doc/tree/main/docs",
     "title": "create-react-doc/docs at main · MuYunyun/create-react-doc · GitHub",
-    "count": 4,
-    "uniques": 2
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/tree/main/packages/crd-generator-sitemap",
-    "title": "create-react-doc/packages/crd-generator-sitemap at main · MuYunyun/create-rea...",
-    "count": 2,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/tree/main/packages/crd-seed",
-    "title": "create-react-doc/packages/crd-seed at main · MuYunyun/create-react-doc",
-    "count": 2,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/tree/main/packages/create-react-doc",
-    "title": "create-react-doc/packages/create-react-doc at main · MuYunyun/create-react-doc",
     "count": 2,
     "uniques": 1
   },
@@ -42,20 +18,14 @@
     "uniques": 1
   },
   {
-    "path": "/MuYunyun/create-react-doc/blob/main/docs/%E4%B9%A6%E5%86%99%E7%BB%84%E4%BB%B6.md",
-    "title": "create-react-doc/书写组件.md at main · MuYunyun/create-react-doc",
+    "path": "/MuYunyun/create-react-doc/projects",
+    "title": "Projects · create-react-doc · GitHub",
     "count": 1,
     "uniques": 1
   },
   {
-    "path": "/MuYunyun/create-react-doc/blob/main/docs/Front-matter.md",
-    "title": "create-react-doc/Front-matter.md at main · MuYunyun/create-react-doc",
-    "count": 1,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/blob/main/injectLogic/index.js",
-    "title": "create-react-doc/index.js at main · MuYunyun/create-react-doc",
+    "path": "/MuYunyun/create-react-doc/tree/986a95ae103a806a7cd44fc12ad88696e3c618a9",
+    "title": "MuYunyun/create-react-doc at 986a95ae103a806a7cd44fc12ad88696e3c618a9",
     "count": 1,
     "uniques": 1
   }
