@@ -2,8 +2,14 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 10,
-    "uniques": 5
+    "count": 7,
+    "uniques": 4
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/tree/main/packages/create-react-doc",
+    "title": "create-react-doc/packages/create-react-doc at main · MuYunyun/create-react-doc",
+    "count": 2,
+    "uniques": 1
   },
   {
     "path": "/MuYunyun/create-react-doc/blob/986a95ae103a806a7cd44fc12ad88696e3c618a9/packages/crd-templates/theme/default/_.npmrc",
@@ -18,6 +24,30 @@
     "uniques": 1
   },
   {
+    "path": "/MuYunyun/create-react-doc/blob/main/package.json",
+    "title": "create-react-doc/package.json at main · MuYunyun/create-react-doc",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/blob/main/packages/crd-seed/package.json",
+    "title": "create-react-doc/package.json at main · MuYunyun/create-react-doc",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/blob/main/packages/crd-templates/theme/default/Introduction/hello_world.md",
+    "title": "create-react-doc/hello_world.md at main · MuYunyun/create-react-doc",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/blob/main/packages/create-react-doc/index.js",
+    "title": "create-react-doc/index.js at main · MuYunyun/create-react-doc",
+    "count": 1,
+    "uniques": 1
+  },
+  {
     "path": "/MuYunyun/create-react-doc/commit/b4f6461034859ec49df76b2f38183e3c350f2369",
     "title": "feat: search component · MuYunyun/create-react-doc@b4f6461 · GitHub",
     "count": 1,
@@ -26,18 +56,6 @@
   {
     "path": "/MuYunyun/create-react-doc/projects",
     "title": "Projects · create-react-doc · GitHub",
-    "count": 1,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/tree/986a95ae103a806a7cd44fc12ad88696e3c618a9",
-    "title": "MuYunyun/create-react-doc at 986a95ae103a806a7cd44fc12ad88696e3c618a9",
-    "count": 1,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/tree/gh-pages",
-    "title": "MuYunyun/create-react-doc at gh-pages",
     "count": 1,
     "uniques": 1
   }
