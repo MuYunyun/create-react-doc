@@ -2,14 +2,20 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 14,
-    "uniques": 9
+    "count": 18,
+    "uniques": 10
   },
   {
     "path": "/MuYunyun/create-react-doc/commits/main",
     "title": "Commits · MuYunyun/create-react-doc",
     "count": 7,
     "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/tree/main/docs",
+    "title": "create-react-doc/docs at main · MuYunyun/create-react-doc · GitHub",
+    "count": 4,
+    "uniques": 2
   },
   {
     "path": "/MuYunyun/create-react-doc/commit/b4f6461034859ec49df76b2f38183e3c350f2369",
@@ -20,6 +26,18 @@
   {
     "path": "/MuYunyun/create-react-doc/commit/f18f2dedb6cea65cf89066fea3f6171d91a3d54f",
     "title": "feat: support transform leetcode table · MuYunyun/create-react-doc@f18f2de · ...",
+    "count": 2,
+    "uniques": 2
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/tree/main/packages",
+    "title": "create-react-doc/packages at main · MuYunyun/create-react-doc",
+    "count": 2,
+    "uniques": 2
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/tree/main/packages/crd-seed",
+    "title": "create-react-doc/packages/crd-seed at main · MuYunyun/create-react-doc",
     "count": 2,
     "uniques": 2
   },
@@ -38,24 +56,6 @@
   {
     "path": "/MuYunyun/create-react-doc/blob/986a95ae103a806a7cd44fc12ad88696e3c618a9/packages/crd-templates/theme/default/_.npmrc",
     "title": "create-react-doc/_.npmrc at 986a95ae103a806a7cd44fc12ad88696e3c618a9 · MuYuny...",
-    "count": 1,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/blob/gh-pages/index.html",
-    "title": "create-react-doc/index.html at gh-pages · MuYunyun/create-react-doc",
-    "count": 1,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/blob/main/package.json",
-    "title": "create-react-doc/package.json at main · MuYunyun/create-react-doc",
-    "count": 1,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/blob/main/packages/crd-seed/package.json",
-    "title": "create-react-doc/package.json at main · MuYunyun/create-react-doc",
     "count": 1,
     "uniques": 1
   }

@@ -5,9 +5,9 @@
     "uniques": 4
   },
   {
-    "referrer": "npmjs.com",
-    "count": 4,
-    "uniques": 2
+    "referrer": "javashuo.com",
+    "count": 7,
+    "uniques": 1
   },
   {
     "referrer": "link.zhihu.com",
@@ -15,8 +15,18 @@
     "uniques": 2
   },
   {
+    "referrer": "muyunyun.cn",
+    "count": 3,
+    "uniques": 1
+  },
+  {
     "referrer": "jianshu.com",
     "count": 2,
+    "uniques": 1
+  },
+  {
+    "referrer": "npmjs.com",
+    "count": 1,
     "uniques": 1
   },
   {
