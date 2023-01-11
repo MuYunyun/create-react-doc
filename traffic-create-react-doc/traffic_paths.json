@@ -2,8 +2,8 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 18,
-    "uniques": 10
+    "count": 19,
+    "uniques": 11
   },
   {
     "path": "/MuYunyun/create-react-doc/commits/main",
@@ -18,27 +18,21 @@
     "uniques": 2
   },
   {
-    "path": "/MuYunyun/create-react-doc/blob/main/packages/create-react-doc/index.js",
-    "title": "create-react-doc/index.js at main · MuYunyun/create-react-doc",
-    "count": 4,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/blob/main/package.json",
-    "title": "create-react-doc/package.json at main · MuYunyun/create-react-doc · GitHub",
-    "count": 3,
-    "uniques": 3
-  },
-  {
     "path": "/MuYunyun/create-react-doc/commit/f8d8234b4f21412b765c9aeef04aacbf1be44fcb",
     "title": "fix: script dependency · MuYunyun/create-react-doc@f8d8234 · GitHub",
     "count": 3,
     "uniques": 3
   },
   {
-    "path": "/MuYunyun/create-react-doc/tree/main/packages",
-    "title": "create-react-doc/packages at main · MuYunyun/create-react-doc",
+    "path": "/MuYunyun/create-react-doc/blob/main/packages/create-react-doc/index.js",
+    "title": "create-react-doc/index.js at main · MuYunyun/create-react-doc",
     "count": 3,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/blob/main/package.json",
+    "title": "create-react-doc/package.json at main · MuYunyun/create-react-doc · GitHub",
+    "count": 2,
     "uniques": 2
   },
   {
@@ -54,9 +48,15 @@
     "uniques": 2
   },
   {
-    "path": "/MuYunyun/create-react-doc/tree/main/packages/crd-seed",
-    "title": "create-react-doc/packages/crd-seed at main · MuYunyun/create-react-doc",
+    "path": "/MuYunyun/create-react-doc/tree/main/packages",
+    "title": "create-react-doc/packages at main · MuYunyun/create-react-doc",
     "count": 2,
     "uniques": 2
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/blob/main/packages/crd-scripts/src/server.js",
+    "title": "create-react-doc/server.js at main · MuYunyun/create-react-doc",
+    "count": 1,
+    "uniques": 1
   }
 ]
