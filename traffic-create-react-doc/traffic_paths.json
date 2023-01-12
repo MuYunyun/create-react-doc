@@ -2,8 +2,8 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 19,
-    "uniques": 11
+    "count": 17,
+    "uniques": 10
   },
   {
     "path": "/MuYunyun/create-react-doc/commits/main",
@@ -36,12 +36,6 @@
     "uniques": 2
   },
   {
-    "path": "/MuYunyun/create-react-doc/commit/b4f6461034859ec49df76b2f38183e3c350f2369",
-    "title": "feat: search component · MuYunyun/create-react-doc@b4f6461 · GitHub",
-    "count": 2,
-    "uniques": 2
-  },
-  {
     "path": "/MuYunyun/create-react-doc/commit/f18f2dedb6cea65cf89066fea3f6171d91a3d54f",
     "title": "feat: support transform leetcode table · MuYunyun/create-react-doc@f18f2de · ...",
     "count": 2,
@@ -56,6 +50,12 @@
   {
     "path": "/MuYunyun/create-react-doc/blob/main/packages/crd-scripts/src/server.js",
     "title": "create-react-doc/server.js at main · MuYunyun/create-react-doc",
+    "count": 2,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/releases/tag/v1.10.0",
+    "title": "Release v1.10.0: 支持配置开启评论模块 · MuYunyun/create-react-doc",
     "count": 1,
     "uniques": 1
   }
