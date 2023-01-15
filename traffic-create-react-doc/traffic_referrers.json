@@ -1,27 +1,22 @@
 [
   {
-    "referrer": "javashuo.com",
-    "count": 7,
-    "uniques": 1
+    "referrer": "link.zhihu.com",
+    "count": 4,
+    "uniques": 4
   },
   {
-    "referrer": "link.zhihu.com",
+    "referrer": "github.com",
     "count": 3,
     "uniques": 3
   },
   {
-    "referrer": "muyunyun.cn",
-    "count": 3,
+    "referrer": "Google",
+    "count": 2,
     "uniques": 1
   },
   {
-    "referrer": "github.com",
-    "count": 2,
-    "uniques": 2
-  },
-  {
-    "referrer": "Google",
-    "count": 2,
+    "referrer": "jianshu.com",
+    "count": 1,
     "uniques": 1
   },
   {

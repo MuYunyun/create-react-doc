@@ -2,8 +2,8 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 16,
-    "uniques": 10
+    "count": 12,
+    "uniques": 11
   },
   {
     "path": "/MuYunyun/create-react-doc/commit/f8d8234b4f21412b765c9aeef04aacbf1be44fcb",
@@ -12,20 +12,8 @@
     "uniques": 3
   },
   {
-    "path": "/MuYunyun/create-react-doc/tree/main/docs",
-    "title": "create-react-doc/docs at main · MuYunyun/create-react-doc",
-    "count": 3,
-    "uniques": 1
-  },
-  {
     "path": "/MuYunyun/create-react-doc/blob/main/package.json",
     "title": "create-react-doc/package.json at main · MuYunyun/create-react-doc · GitHub",
-    "count": 2,
-    "uniques": 2
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/tree/main/packages",
-    "title": "create-react-doc/packages at main · MuYunyun/create-react-doc",
     "count": 2,
     "uniques": 2
   },
@@ -42,8 +30,8 @@
     "uniques": 1
   },
   {
-    "path": "/MuYunyun/create-react-doc/releases/tag/v1.10.0",
-    "title": "Release v1.10.0: 支持配置开启评论模块 · MuYunyun/create-react-doc",
+    "path": "/MuYunyun/create-react-doc/tree/main/packages",
+    "title": "create-react-doc/packages at main · MuYunyun/create-react-doc",
     "count": 1,
     "uniques": 1
   },
