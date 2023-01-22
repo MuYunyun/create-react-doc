@@ -10,12 +10,12 @@
     "uniques": 6
   },
   {
-    "referrer": "link.zhihu.com",
-    "count": 4,
-    "uniques": 4
+    "referrer": "jianshu.com",
+    "count": 3,
+    "uniques": 3
   },
   {
-    "referrer": "jianshu.com",
+    "referrer": "link.zhihu.com",
     "count": 3,
     "uniques": 3
   },
@@ -25,12 +25,12 @@
     "uniques": 1
   },
   {
-    "referrer": "muyunyun.medium.com",
+    "referrer": "link.juejin.cn",
     "count": 1,
     "uniques": 1
   },
   {
-    "referrer": "link.juejin.cn",
+    "referrer": "muyunyun.medium.com",
     "count": 1,
     "uniques": 1
   },
