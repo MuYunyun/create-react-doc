@@ -2,8 +2,8 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 14,
-    "uniques": 12
+    "count": 18,
+    "uniques": 16
   },
   {
     "path": "/MuYunyun/create-react-doc/blob/gh-pages/index.html",
@@ -18,8 +18,44 @@
     "uniques": 1
   },
   {
+    "path": "/MuYunyun/create-react-doc/discussions",
+    "title": "Discussions · MuYunyun/create-react-doc",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/issues",
+    "title": "Issues · MuYunyun/create-react-doc",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/issues/18",
+    "title": "Menu search · Issue #18 · MuYunyun/create-react-doc",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/issues/21",
+    "title": "support search global · Issue #21 · MuYunyun/create-react-doc",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/pull/22",
+    "title": "WIP:add plugin for searching docs site globally by MuYunyun · Pull Request #2...",
+    "count": 1,
+    "uniques": 1
+  },
+  {
     "path": "/MuYunyun/create-react-doc/tree/gh-pages",
     "title": "MuYunyun/create-react-doc at gh-pages",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/tree/main/docs",
+    "title": "create-react-doc/docs at main · MuYunyun/create-react-doc · GitHub",
     "count": 1,
     "uniques": 1
   }
