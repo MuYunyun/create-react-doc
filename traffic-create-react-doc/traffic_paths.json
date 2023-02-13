@@ -2,14 +2,38 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 20,
-    "uniques": 18
+    "count": 27,
+    "uniques": 17
   },
   {
     "path": "/MuYunyun/create-react-doc/issues",
-    "title": "Issues · MuYunyun/create-react-doc",
+    "title": "Issues · MuYunyun/create-react-doc · GitHub",
+    "count": 6,
+    "uniques": 4
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/issues/339",
+    "title": "支持个性化字体 · Issue #339 · MuYunyun/create-react-doc",
+    "count": 3,
+    "uniques": 2
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/issues/21",
+    "title": "support search global · Issue #21 · MuYunyun/create-react-doc",
     "count": 2,
     "uniques": 2
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/tree/main/docs",
+    "title": "create-react-doc/docs at main · MuYunyun/create-react-doc · GitHub",
+    "count": 2,
+    "uniques": 2
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/pulls",
+    "title": "Pull requests · MuYunyun/create-react-doc · GitHub",
+    "count": 2,
+    "uniques": 1
   },
   {
     "path": "/MuYunyun/create-react-doc/blob/main/packages/crd-scripts/src/server.js",
@@ -24,38 +48,14 @@
     "uniques": 1
   },
   {
+    "path": "/MuYunyun/create-react-doc/edit/main/docs/%E4%B8%BB%E9%A2%98/%E8%87%AA%E5%AE%9A%E4%B9%89%E4%B8%BB%E9%A2%98.md",
+    "title": "Editing create-react-doc/自定义主题.md at main · MuYunyun/create-react-doc",
+    "count": 1,
+    "uniques": 1
+  },
+  {
     "path": "/MuYunyun/create-react-doc/issues/18",
     "title": "Menu search · Issue #18 · MuYunyun/create-react-doc",
-    "count": 1,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/issues/21",
-    "title": "support search global · Issue #21 · MuYunyun/create-react-doc",
-    "count": 1,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/issues/339",
-    "title": "支持个性化字体 · Issue #339 · MuYunyun/create-react-doc",
-    "count": 1,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/pull/22",
-    "title": "WIP:add plugin for searching docs site globally by MuYunyun · Pull Request #2...",
-    "count": 1,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/search",
-    "title": "Search · react-doc · GitHub",
-    "count": 1,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/tree/main/docs",
-    "title": "create-react-doc/docs at main · MuYunyun/create-react-doc · GitHub",
     "count": 1,
     "uniques": 1
   }
