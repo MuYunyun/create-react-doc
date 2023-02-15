@@ -1,18 +1,13 @@
 [
   {
     "referrer": "github.com",
-    "count": 11,
-    "uniques": 7
+    "count": 9,
+    "uniques": 5
   },
   {
     "referrer": "link.zhihu.com",
-    "count": 8,
+    "count": 7,
     "uniques": 4
-  },
-  {
-    "referrer": "dev.to",
-    "count": 6,
-    "uniques": 1
   },
   {
     "referrer": "npmjs.com",
@@ -20,13 +15,13 @@
     "uniques": 2
   },
   {
-    "referrer": "muyunyun.cn",
+    "referrer": "libhunt.com",
     "count": 2,
     "uniques": 1
   },
   {
-    "referrer": "libhunt.com",
-    "count": 1,
+    "referrer": "muyunyun.cn",
+    "count": 2,
     "uniques": 1
   }
 ]
