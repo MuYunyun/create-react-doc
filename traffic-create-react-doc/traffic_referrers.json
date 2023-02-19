@@ -23,5 +23,10 @@
     "referrer": "logspot-nine.vercel.app",
     "count": 1,
     "uniques": 1
+  },
+  {
+    "referrer": "dev.to",
+    "count": 1,
+    "uniques": 1
   }
 ]
