@@ -10,9 +10,9 @@
     "uniques": 4
   },
   {
-    "referrer": "libhunt.com",
+    "referrer": "dev.to",
     "count": 2,
-    "uniques": 1
+    "uniques": 2
   },
   {
     "referrer": "muyunyun.cn",
@@ -20,12 +20,12 @@
     "uniques": 1
   },
   {
-    "referrer": "logspot-nine.vercel.app",
+    "referrer": "libhunt.com",
     "count": 1,
     "uniques": 1
   },
   {
-    "referrer": "dev.to",
+    "referrer": "logspot-nine.vercel.app",
     "count": 1,
     "uniques": 1
   }
