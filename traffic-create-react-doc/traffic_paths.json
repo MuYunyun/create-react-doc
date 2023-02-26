@@ -2,13 +2,19 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 16,
-    "uniques": 10
+    "count": 18,
+    "uniques": 12
   },
   {
     "path": "/MuYunyun/create-react-doc/issues",
     "title": "Issues · MuYunyun/create-react-doc",
     "count": 3,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/blob/main/.gitignore",
+    "title": "create-react-doc/.gitignore at main · MuYunyun/create-react-doc · GitHub",
+    "count": 1,
     "uniques": 1
   }
 ]
