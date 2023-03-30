@@ -12,12 +12,6 @@
     "uniques": 1
   },
   {
-    "path": "/MuYunyun/create-react-doc/issues",
-    "title": "Issues · MuYunyun/create-react-doc · GitHub",
-    "count": 2,
-    "uniques": 1
-  },
-  {
     "path": "/MuYunyun/create-react-doc/blob/main/packages/crd-generator-sitemap/index.js",
     "title": "create-react-doc/index.js at main · MuYunyun/create-react-doc",
     "count": 1,
@@ -26,24 +20,6 @@
   {
     "path": "/MuYunyun/create-react-doc/blob/main/packages/crd-generator-sitemap/package.json",
     "title": "create-react-doc/package.json at main · MuYunyun/create-react-doc",
-    "count": 1,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/issues/21",
-    "title": "support search global · Issue #21 · MuYunyun/create-react-doc · GitHub",
-    "count": 1,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/issues/339",
-    "title": "支持个性化字体 · Issue #339 · MuYunyun/create-react-doc · GitHub",
-    "count": 1,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/pulls",
-    "title": "Pull requests · MuYunyun/create-react-doc · GitHub",
     "count": 1,
     "uniques": 1
   },
