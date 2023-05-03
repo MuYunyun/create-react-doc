@@ -2,8 +2,14 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 23,
-    "uniques": 17
+    "count": 21,
+    "uniques": 15
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/tree/main/packages",
+    "title": "create-react-doc/packages at main · MuYunyun/create-react-doc · GitHub",
+    "count": 2,
+    "uniques": 1
   },
   {
     "path": "/MuYunyun/create-react-doc/blob/main/package.json",
@@ -20,18 +26,6 @@
   {
     "path": "/MuYunyun/create-react-doc/commit/522b4750bbd665c672d9b18b917f0b1cff66a9ef",
     "title": "feat: add index page based the README in root (#9) · MuYunyun/create-react-do...",
-    "count": 1,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/forks",
-    "title": "Forks · MuYunyun/create-react-doc · GitHub",
-    "count": 1,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/tree/main/packages",
-    "title": "create-react-doc/packages at main · MuYunyun/create-react-doc · GitHub",
     "count": 1,
     "uniques": 1
   }
