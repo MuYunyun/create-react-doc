@@ -2,8 +2,8 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 16,
-    "uniques": 12
+    "count": 14,
+    "uniques": 11
   },
   {
     "path": "/MuYunyun/create-react-doc/tree/main/components",
@@ -20,6 +20,12 @@
   {
     "path": "/MuYunyun/create-react-doc/blob/main/README.md",
     "title": "create-react-doc/README.md at main · MuYunyun/create-react-doc · GitHub",
+    "count": 4,
+    "uniques": 2
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/tree/main/docs",
+    "title": "create-react-doc/docs at main · MuYunyun/create-react-doc · GitHub",
     "count": 4,
     "uniques": 2
   },
@@ -50,12 +56,6 @@
   {
     "path": "/MuYunyun/create-react-doc/blob/main/.github/dependabot.yml",
     "title": "create-react-doc/dependabot.yml at main · MuYunyun/create-react-doc · GitHub",
-    "count": 2,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/blob/main/injectLogic/index.js",
-    "title": "create-react-doc/index.js at main · MuYunyun/create-react-doc · GitHub",
     "count": 2,
     "uniques": 1
   }
