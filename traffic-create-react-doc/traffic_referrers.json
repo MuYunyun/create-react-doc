@@ -1,26 +1,21 @@
 [
   {
     "referrer": "link.zhihu.com",
-    "count": 31,
-    "uniques": 5
+    "count": 32,
+    "uniques": 6
   },
   {
-    "referrer": "link.juejin.cn",
-    "count": 3,
-    "uniques": 1
-  },
-  {
-    "referrer": "v2ex.com",
+    "referrer": "github.com",
     "count": 2,
     "uniques": 2
   },
   {
-    "referrer": "Google",
+    "referrer": "v2ex.com",
     "count": 1,
     "uniques": 1
   },
   {
-    "referrer": "github.com",
+    "referrer": "Google",
     "count": 1,
     "uniques": 1
   }
