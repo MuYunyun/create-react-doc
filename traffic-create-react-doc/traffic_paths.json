@@ -2,8 +2,8 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 16,
-    "uniques": 14
+    "count": 14,
+    "uniques": 13
   },
   {
     "path": "/MuYunyun/create-react-doc/projects",
@@ -15,6 +15,18 @@
     "path": "/MuYunyun/create-react-doc/tree/main/packages",
     "title": "create-react-doc/packages at main · MuYunyun/create-react-doc · GitHub",
     "count": 3,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/issues",
+    "title": "Issues · MuYunyun/create-react-doc · GitHub",
+    "count": 2,
+    "uniques": 2
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/blob/64e22add5834f93a1e7be133618818af0f58f24a/packages/crd-seed/component/Menu/SubMenu.js",
+    "title": "create-react-doc/SubMenu.js at 64e22add5834f93a1e7be133618818af0f58f24a · MuY...",
+    "count": 2,
     "uniques": 1
   },
   {
@@ -44,18 +56,6 @@
   {
     "path": "/MuYunyun/create-react-doc/commits",
     "title": "Commits · MuYunyun/create-react-doc · GitHub",
-    "count": 1,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/issues",
-    "title": "Issues · MuYunyun/create-react-doc · GitHub",
-    "count": 1,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/network/dependents",
-    "title": "Network Dependents · MuYunyun/create-react-doc",
     "count": 1,
     "uniques": 1
   }
