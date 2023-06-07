@@ -11,21 +11,11 @@
   },
   {
     "referrer": "link.zhihu.com",
-    "count": 3,
-    "uniques": 3
-  },
-  {
-    "referrer": "jianshu.com",
     "count": 2,
-    "uniques": 1
+    "uniques": 2
   },
   {
     "referrer": "v2ex.com",
-    "count": 1,
-    "uniques": 1
-  },
-  {
-    "referrer": "link.juejin.cn",
     "count": 1,
     "uniques": 1
   }
