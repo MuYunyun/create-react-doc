@@ -11,16 +11,11 @@
   },
   {
     "referrer": "link.zhihu.com",
-    "count": 5,
-    "uniques": 4
+    "count": 4,
+    "uniques": 3
   },
   {
     "referrer": "Google",
-    "count": 1,
-    "uniques": 1
-  },
-  {
-    "referrer": "dev.to",
     "count": 1,
     "uniques": 1
   }
