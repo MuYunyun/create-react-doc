@@ -11,8 +11,8 @@
   },
   {
     "referrer": "github.com",
-    "count": 6,
-    "uniques": 4
+    "count": 9,
+    "uniques": 5
   },
   {
     "referrer": "link.juejin.cn",
@@ -22,6 +22,16 @@
   {
     "referrer": "jianshu.com",
     "count": 2,
+    "uniques": 1
+  },
+  {
+    "referrer": "dev.to",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "referrer": "Google",
+    "count": 1,
     "uniques": 1
   },
   {
