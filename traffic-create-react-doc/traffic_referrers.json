@@ -1,16 +1,16 @@
 [
   {
-    "referrer": "link.zhihu.com",
-    "count": 3,
-    "uniques": 3
-  },
-  {
-    "referrer": "Google",
+    "referrer": "jianshu.com",
     "count": 1,
     "uniques": 1
   },
   {
-    "referrer": "jianshu.com",
+    "referrer": "link.zhihu.com",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "referrer": "Google",
     "count": 1,
     "uniques": 1
   }
