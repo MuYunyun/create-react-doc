@@ -2,20 +2,8 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 13,
-    "uniques": 12
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/blob/main/packages/crd-scripts/src/generate.js",
-    "title": "create-react-doc/packages/crd-scripts/src/generate.js at main · MuYunyun/crea...",
-    "count": 4,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/blob/main/packages/crd-scripts/src/server.js",
-    "title": "create-react-doc/packages/crd-scripts/src/server.js at main · MuYunyun/create...",
-    "count": 4,
-    "uniques": 1
+    "count": 10,
+    "uniques": 10
   },
   {
     "path": "/MuYunyun/create-react-doc/issues",
@@ -24,39 +12,21 @@
     "uniques": 2
   },
   {
-    "path": "/MuYunyun/create-react-doc/blob/main/packages/crd-scripts/index.js",
-    "title": "create-react-doc/packages/crd-scripts/index.js at main · MuYunyun/create-reac...",
+    "path": "/MuYunyun/create-react-doc/blob/main/README-en.md",
+    "title": "create-react-doc/README-en.md at main · MuYunyun/create-react-doc · GitHub",
     "count": 2,
     "uniques": 1
   },
   {
-    "path": "/MuYunyun/create-react-doc/blob/main/packages/crd-scripts/src/build.js",
-    "title": "create-react-doc/packages/crd-scripts/src/build.js at main · MuYunyun/create-...",
+    "path": "/MuYunyun/create-react-doc/tree/main/packages/crd-seed",
+    "title": "create-react-doc/packages/crd-seed at main · MuYunyun/create-react-doc · GitHub",
     "count": 2,
     "uniques": 1
   },
   {
-    "path": "/MuYunyun/create-react-doc/blob/main/packages/crd-scripts/src/commands/initProject.js",
-    "title": "create-react-doc/packages/crd-scripts/src/commands/initProject.js at main · M...",
-    "count": 2,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/blob/main/packages/crd-scripts/src/conf/webpack.config.dev.js",
-    "title": "create-react-doc/packages/crd-scripts/src/conf/webpack.config.dev.js at main ...",
-    "count": 2,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/blob/main/packages/crd-scripts/src/conf/webpack.config.js",
-    "title": "create-react-doc/packages/crd-scripts/src/conf/webpack.config.js at main · Mu...",
-    "count": 2,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/blob/main/packages/crd-scripts/src/conf/webpack.config.prod.js",
-    "title": "create-react-doc/packages/crd-scripts/src/conf/webpack.config.prod.js at main...",
-    "count": 2,
+    "path": "/MuYunyun/create-react-doc/issues/156",
+    "title": "support live code · Issue #156 · MuYunyun/create-react-doc",
+    "count": 1,
     "uniques": 1
   }
 ]
