@@ -2,13 +2,25 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 14,
-    "uniques": 9
+    "count": 15,
+    "uniques": 10
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/tree/main/packages",
+    "title": "create-react-doc/packages at main · MuYunyun/create-react-doc · GitHub",
+    "count": 7,
+    "uniques": 1
   },
   {
     "path": "/MuYunyun/create-react-doc/blob/main/package.json",
-    "title": "create-react-doc/package.json at main · MuYunyun/create-react-doc",
-    "count": 3,
+    "title": "create-react-doc/package.json at main · MuYunyun/create-react-doc · GitHub",
+    "count": 5,
+    "uniques": 2
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/tree/main/packages/create-react-doc",
+    "title": "create-react-doc/packages/create-react-doc at main · MuYunyun/create-react-do...",
+    "count": 4,
     "uniques": 1
   },
   {
@@ -18,21 +30,33 @@
     "uniques": 1
   },
   {
+    "path": "/MuYunyun/create-react-doc/tree/main/packages/crd-utils",
+    "title": "create-react-doc/packages/crd-utils at main · MuYunyun/create-react-doc · Git...",
+    "count": 3,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/blob/main/packages/crd-utils/index.js",
+    "title": "create-react-doc/packages/crd-utils/index.js at main · MuYunyun/create-react-...",
+    "count": 2,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/blob/main/packages/create-react-doc/index.js",
+    "title": "create-react-doc/packages/create-react-doc/index.js at main · MuYunyun/create...",
+    "count": 2,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/blob/main/packages/create-react-doc/package.json",
+    "title": "create-react-doc/packages/create-react-doc/package.json at main · MuYunyun/cr...",
+    "count": 2,
+    "uniques": 1
+  },
+  {
     "path": "/MuYunyun/create-react-doc/blob/main/README.md",
     "title": "create-react-doc/README.md at main · MuYunyun/create-react-doc",
     "count": 2,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/tree/main/docs",
-    "title": "create-react-doc/docs at main · MuYunyun/create-react-doc",
-    "count": 2,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/issues/205",
-    "title": "点击右上角 Edit in GitHub 跳转链接错误 · Issue #205 · MuYunyun/create-react-doc · GitHub",
-    "count": 1,
     "uniques": 1
   }
 ]
