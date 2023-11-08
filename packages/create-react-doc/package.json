@@ -24,7 +24,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@inquirer/input": "^0.0.13-alpha.0",
+    "@inquirer/input": "^1.2.14",
     "commander": "^2.12.2",
     "crd-scripts": "^1.10.3",
     "crd-templates": "^1.10.0",
