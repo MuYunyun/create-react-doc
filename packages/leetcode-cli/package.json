@@ -6,7 +6,7 @@
     "leetcode": "./src/cli.js"
   },
   "dependencies": {
-    "axios": "^0.21.1",
+    "axios": "^1.6.1",
     "commander": "^2.20.0",
     "crd-utils": "^1.5.0",
     "enquirer": "^2.3.0",
