@@ -1,5 +1,10 @@
 [
   {
+    "referrer": "github.com",
+    "count": 11,
+    "uniques": 3
+  },
+  {
     "referrer": "dev.to",
     "count": 6,
     "uniques": 2
@@ -15,22 +20,17 @@
     "uniques": 2
   },
   {
-    "referrer": "github.com",
-    "count": 2,
-    "uniques": 2
-  },
-  {
     "referrer": "npms.io",
     "count": 2,
     "uniques": 1
   },
   {
-    "referrer": "npmjs.com",
+    "referrer": "Google",
     "count": 1,
     "uniques": 1
   },
   {
-    "referrer": "Google",
+    "referrer": "npmjs.com",
     "count": 1,
     "uniques": 1
   }
