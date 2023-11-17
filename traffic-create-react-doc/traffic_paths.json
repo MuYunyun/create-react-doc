@@ -2,14 +2,8 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 24,
-    "uniques": 18
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/tree/main/packages",
-    "title": "create-react-doc/packages at main · MuYunyun/create-react-doc · GitHub",
-    "count": 7,
-    "uniques": 1
+    "count": 23,
+    "uniques": 17
   },
   {
     "path": "/MuYunyun/create-react-doc/blob/main/README-en.md",
@@ -24,20 +18,8 @@
     "uniques": 1
   },
   {
-    "path": "/MuYunyun/create-react-doc/tree/main/packages/create-react-doc",
-    "title": "create-react-doc/packages/create-react-doc at main · MuYunyun/create-react-do...",
-    "count": 4,
-    "uniques": 1
-  },
-  {
     "path": "/MuYunyun/create-react-doc/tree/main/%E6%B5%8B%E8%AF%95",
     "title": "File not found",
-    "count": 3,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/tree/main/packages/crd-utils",
-    "title": "create-react-doc/packages/crd-utils at main · MuYunyun/create-react-doc · Git...",
     "count": 3,
     "uniques": 1
   },
@@ -56,6 +38,24 @@
   {
     "path": "/MuYunyun/create-react-doc/blob/main/components/index.jsx",
     "title": "create-react-doc/components/index.jsx at main · MuYunyun/create-react-doc",
+    "count": 2,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/blob/main/docs/%E4%B9%A6%E5%86%99%E7%BB%84%E4%BB%B6.md",
+    "title": "create-react-doc/docs/书写组件.md at main · MuYunyun/create-react-doc",
+    "count": 2,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/blob/main/docs/%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F.md",
+    "title": "create-react-doc/docs/数学公式.md at main · MuYunyun/create-react-doc",
+    "count": 2,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/blob/main/docs/%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97.md",
+    "title": "create-react-doc/docs/更新日志.md at main · MuYunyun/create-react-doc",
     "count": 2,
     "uniques": 1
   }
