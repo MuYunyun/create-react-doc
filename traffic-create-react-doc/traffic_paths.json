@@ -2,8 +2,14 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 15,
+    "count": 17,
     "uniques": 13
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/commits/main",
+    "title": "Commits · MuYunyun/create-react-doc",
+    "count": 11,
+    "uniques": 1
   },
   {
     "path": "/MuYunyun/create-react-doc/blob/main/README.md",
@@ -50,12 +56,6 @@
   {
     "path": "/MuYunyun/create-react-doc/blob/main/docs/%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F.md",
     "title": "create-react-doc/docs/数学公式.md at main · MuYunyun/create-react-doc",
-    "count": 2,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/blob/main/docs/%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97.md",
-    "title": "create-react-doc/docs/更新日志.md at main · MuYunyun/create-react-doc",
     "count": 2,
     "uniques": 1
   }
