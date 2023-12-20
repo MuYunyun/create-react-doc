@@ -3,7 +3,7 @@
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
     "count": 14,
-    "uniques": 11
+    "uniques": 10
   },
   {
     "path": "/MuYunyun/create-react-doc/blob/64e22add5834f93a1e7be133618818af0f58f24a/packages/crd-scripts/src/conf/webpack.config.prod.js",
@@ -48,14 +48,14 @@
     "uniques": 1
   },
   {
-    "path": "/MuYunyun/create-react-doc/commit/09ae79dfcae8032350a623c665a8f16ad712f014",
-    "title": "try stackblitz · MuYunyun/create-react-doc@09ae79d · GitHub",
-    "count": 1,
+    "path": "/MuYunyun/create-react-doc/tree/main/packages/leetcode-cli",
+    "title": "create-react-doc/packages/leetcode-cli at main · MuYunyun/create-react-doc",
+    "count": 2,
     "uniques": 1
   },
   {
-    "path": "/MuYunyun/create-react-doc/commit/78834e88b97c9f9f83cff89e39213bb67a65b82a",
-    "title": "chore: use esbuild instead of babel · MuYunyun/create-react-doc@78834e8 · Git...",
+    "path": "/MuYunyun/create-react-doc/commit/09ae79dfcae8032350a623c665a8f16ad712f014",
+    "title": "try stackblitz · MuYunyun/create-react-doc@09ae79d · GitHub",
     "count": 1,
     "uniques": 1
   }
