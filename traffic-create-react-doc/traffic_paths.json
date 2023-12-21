@@ -2,48 +2,12 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 14,
+    "count": 12,
     "uniques": 10
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/blob/64e22add5834f93a1e7be133618818af0f58f24a/packages/crd-scripts/src/conf/webpack.config.prod.js",
-    "title": "create-react-doc/packages/crd-scripts/src/conf/webpack.config.prod.js at 64e2...",
-    "count": 2,
-    "uniques": 1
   },
   {
     "path": "/MuYunyun/create-react-doc/blob/main/README.md",
     "title": "create-react-doc/README.md at main · MuYunyun/create-react-doc",
-    "count": 2,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/tree/main",
-    "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 2,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/tree/main/packages",
-    "title": "create-react-doc/packages at main · MuYunyun/create-react-doc",
-    "count": 2,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/tree/main/packages/crd-seed",
-    "title": "create-react-doc/packages/crd-seed at main · MuYunyun/create-react-doc",
-    "count": 2,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/tree/main/packages/crd-seed/component",
-    "title": "create-react-doc/packages/crd-seed/component at main · MuYunyun/create-react-...",
-    "count": 2,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/tree/main/packages/crd-seed/component/Tags",
-    "title": "create-react-doc/packages/crd-seed/component/Tags at main · MuYunyun/create-r...",
     "count": 2,
     "uniques": 1
   },
@@ -56,6 +20,42 @@
   {
     "path": "/MuYunyun/create-react-doc/commit/09ae79dfcae8032350a623c665a8f16ad712f014",
     "title": "try stackblitz · MuYunyun/create-react-doc@09ae79d · GitHub",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/commit/78834e88b97c9f9f83cff89e39213bb67a65b82a",
+    "title": "chore: use esbuild instead of babel · MuYunyun/create-react-doc@78834e8 · Git...",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/commit/8453c72f9035fecdd9b9f792317c19444797b31d",
+    "title": "fix: update config.yml · MuYunyun/create-react-doc@8453c72 · GitHub",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/commit/bde4e78ec28da2e4b8780cece63fde72522b40df",
+    "title": "feat: support comments module · MuYunyun/create-react-doc@bde4e78 · GitHub",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/commit/c0aefd6b7c0c5fac468ad2bc9055dd63d28d9e06",
+    "title": "chore: update font style · MuYunyun/create-react-doc@c0aefd6 · GitHub",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/commit/c6cfff0c7ca39eb73d4c9de6dc28e17d878e6490",
+    "title": "chore: use esbuild instead of babel · MuYunyun/create-react-doc@c6cfff0 · Git...",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/pull/331",
+    "title": "feat: support comments module by MuYunyun · Pull Request #331 · MuYunyun/crea...",
     "count": 1,
     "uniques": 1
   }
