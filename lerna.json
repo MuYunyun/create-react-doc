@@ -1,0 +1,20 @@
+{
+  "version": "1.10.3",
+  "command": {
+    "bootstrap": {
+      "npmClientArgs": [
+        "--no-package-lock"
+      ]
+    },
+    "publish": {
+      "allowBranch": [
+        "main",
+        "qa/latest"
+      ],
+      "message": "chore: publish"
+    }
+  },
+  "//": "set yarn workspaces in root",
+  "useWorkspaces": true,
+  "npmClient": "yarn"
+}

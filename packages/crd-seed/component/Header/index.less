@@ -1,0 +1,117 @@
+@import '../../style/base.less';
+
+.logo {
+  float: left;
+  padding: 0 0 0 15px;
+
+  img {
+    height: 28px;
+    vertical-align: middle;
+  }
+
+  span {
+    vertical-align: middle;
+  }
+
+  img+span {
+    margin-left: 10px;
+  }
+}
+
+.header {
+  box-shadow: 0 2px 8px #f0f1f2;
+  line-height: 60px;
+  height: 60px;
+  position: relative;
+  width: 100%;
+  top: 0;
+  z-index: @header-zIndex;
+  display: flex;
+
+  .wrapper {
+    flex: 1;
+    display: flex;
+    align-items: center;
+
+    .titleLink {
+      display: inline-block;
+    }
+
+    .search {
+      margin-left: 40px;
+      max-width: 200px;
+      display: flex;
+      align-items: center;
+    }
+
+    .select {
+      width: 200px;
+    }
+  }
+
+  .rightArea {
+    display: flex;
+    align-items: center;
+
+    .sun {
+      position: absolute;
+      left: 5px;
+      top: 4px;
+    }
+
+    .moon {
+      position: absolute;
+      right: 5px;
+      top: 4px;
+    }
+
+    .github-corner {
+      display: block;
+
+      &:hover {
+        .octo-arm {
+          animation: octocat-wave 560ms ease-in-out;
+        }
+      }
+    }
+
+    svg {
+      vertical-align: bottom;
+    }
+  }
+}
+
+.tags {
+  font-size: 15px;
+  margin-right: 16px;
+}
+
+@keyframes octocat-wave {
+  0%, 100% {
+    transform: rotate(0);
+  }
+  20%, 60% {
+    transform: rotate(-25deg);
+  }
+  40%, 80% {
+    transform: rotate(100deg);
+  }
+}
+
+.pageTitle {
+  font-size: 30px;
+  line-height: 38px;
+  color: #0d1a26;
+  font-weight: 500;
+  margin-bottom: 20px;
+  margin-top: 8px;
+  padding-left: 20px;
+}
+
+.darkMode {
+  filter: invert(100%) hue-rotate(180deg);
+
+  .no-dark-mode {
+    filter: invert(100%) hue-rotate(180deg);
+  }
+}

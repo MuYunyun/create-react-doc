@@ -1,0 +1,24 @@
+{
+  "name": "crd-seed",
+  "version": "1.10.3",
+  "description": "Default Theme with Create React Doc",
+  "main": "index.js",
+  "dependencies": {
+    "@giscus/react": "2.2.2",
+    "crd-client-utils": "^1.8.2",
+    "react-router-dom": "^6.3.0",
+    "react-switch": "^5.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MuYunyun/create-react-doc",
+    "directory": "packages/theme-seed"
+  },
+  "keywords": [],
+  "publishConfig": {
+    "access": "public"
+  },
+  "author": "muyunyun",
+  "license": "MIT",
+  "gitHead": "ffc5e4cbc94a7356da558c2dbf46e2f39bb8b199"
+}

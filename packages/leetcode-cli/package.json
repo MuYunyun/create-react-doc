@@ -1,0 +1,35 @@
+{
+  "name": "crd-leetcode-cli",
+  "version": "1.10.2",
+  "description": "Generate leetcode table autoly",
+  "bin": {
+    "leetcode": "./src/cli.js"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "commander": "^2.20.0",
+    "crd-utils": "^1.5.0",
+    "enquirer": "^2.3.0",
+    "graphql-request": "^1.8.2",
+    "inquirer": "^7.3.3",
+    "node-fs-extra": "^0.8.2",
+    "ora": "^3.4.0",
+    "puppeteer": "^5.3.0",
+    "puppeteer-extra": "^3.1.15",
+    "puppeteer-extra-plugin-stealth": "^2.6.1",
+    "request": "^2.88.0",
+    "shelljs": "^0.8.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MuYunyun/create-react-doc",
+    "directory": "packages/leetcode"
+  },
+  "keywords": [],
+  "publishConfig": {
+    "access": "public"
+  },
+  "author": "muyunyun",
+  "license": "MIT",
+  "gitHead": "d8a8dff5697da28623361231bd9b3d848d050e8b"
+}
