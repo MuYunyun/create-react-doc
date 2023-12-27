@@ -2,8 +2,20 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 9,
-    "uniques": 7
+    "count": 8,
+    "uniques": 6
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/commits/main",
+    "title": "Commits · MuYunyun/create-react-doc",
+    "count": 6,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/commit/522b4750bbd665c672d9b18b917f0b1cff66a9ef",
+    "title": "feat: add index page based the README in root (#9) · MuYunyun/create-react-do...",
+    "count": 3,
+    "uniques": 2
   },
   {
     "path": "/MuYunyun/create-react-doc/blob/main/README.md",
@@ -12,9 +24,21 @@
     "uniques": 1
   },
   {
+    "path": "/MuYunyun/create-react-doc/edit/main/README.md",
+    "title": "Editing create-react-doc/README.md at main · MuYunyun/create-react-doc",
+    "count": 2,
+    "uniques": 1
+  },
+  {
     "path": "/MuYunyun/create-react-doc/tree/main/packages/leetcode-cli",
     "title": "create-react-doc/packages/leetcode-cli at main · MuYunyun/create-react-doc",
     "count": 2,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/commit/c459434ab641360caf23d278c657242f33c60422",
+    "title": "docs: update CONTRIBUTING · MuYunyun/create-react-doc@c459434",
+    "count": 1,
     "uniques": 1
   }
 ]
