@@ -2,8 +2,8 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 17,
-    "uniques": 16
+    "count": 16,
+    "uniques": 15
   },
   {
     "path": "/MuYunyun/create-react-doc/tree/main/packages/crd-seed",
@@ -14,12 +14,6 @@
   {
     "path": "/MuYunyun/create-react-doc/blob/main/docs/%E5%85%B6%E5%AE%83%E5%B7%A5%E5%85%B7.md",
     "title": "create-react-doc/docs/其它工具.md at main · MuYunyun/create-react-doc",
-    "count": 6,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/commits/main",
-    "title": "Commits · MuYunyun/create-react-doc",
     "count": 6,
     "uniques": 1
   },
@@ -42,12 +36,6 @@
     "uniques": 1
   },
   {
-    "path": "/MuYunyun/create-react-doc/commit/522b4750bbd665c672d9b18b917f0b1cff66a9ef",
-    "title": "feat: add index page based the README in root (#9) · MuYunyun/create-react-do...",
-    "count": 3,
-    "uniques": 2
-  },
-  {
     "path": "/MuYunyun/create-react-doc/blob/main/docs/%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97.md",
     "title": "create-react-doc/docs/更新日志.md at main · MuYunyun/create-react-doc",
     "count": 3,
@@ -56,6 +44,18 @@
   {
     "path": "/MuYunyun/create-react-doc/blob/main/components/Button/index.jsx",
     "title": "create-react-doc/components/Button/index.jsx at main · MuYunyun/create-react-...",
+    "count": 2,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/blob/main/components/index.jsx",
+    "title": "create-react-doc/components/index.jsx at main · MuYunyun/create-react-doc",
+    "count": 2,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/blob/main/docs/Front-matter.md",
+    "title": "create-react-doc/docs/Front-matter.md at main · MuYunyun/create-react-doc",
     "count": 2,
     "uniques": 1
   }
