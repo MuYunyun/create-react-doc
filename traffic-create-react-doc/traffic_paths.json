@@ -2,20 +2,14 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 15,
-    "uniques": 14
+    "count": 14,
+    "uniques": 13
   },
   {
     "path": "/MuYunyun/create-react-doc/blob/main/docs/%E5%85%B6%E5%AE%83%E5%B7%A5%E5%85%B7.md",
     "title": "create-react-doc/docs/其它工具.md at main · MuYunyun/create-react-doc",
     "count": 6,
     "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/tree/main/packages",
-    "title": "create-react-doc/packages at main · MuYunyun/create-react-doc",
-    "count": 4,
-    "uniques": 2
   },
   {
     "path": "/MuYunyun/create-react-doc/tree/main/components",
@@ -54,8 +48,14 @@
     "uniques": 1
   },
   {
-    "path": "/MuYunyun/create-react-doc/blob/main/package.json",
-    "title": "create-react-doc/package.json at main · MuYunyun/create-react-doc",
+    "path": "/MuYunyun/create-react-doc/blob/main/packages/crd-generator-sitemap/generate.js",
+    "title": "create-react-doc/packages/crd-generator-sitemap/generate.js at main · MuYunyu...",
+    "count": 2,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/blob/main/packages/crd-generator-sitemap/index.js",
+    "title": "create-react-doc/packages/crd-generator-sitemap/index.js at main · MuYunyun/c...",
     "count": 2,
     "uniques": 1
   }
