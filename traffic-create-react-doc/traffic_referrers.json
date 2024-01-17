@@ -6,8 +6,8 @@
   },
   {
     "referrer": "link.zhihu.com",
-    "count": 11,
-    "uniques": 4
+    "count": 13,
+    "uniques": 5
   },
   {
     "referrer": "classic.yarnpkg.com",
@@ -21,7 +21,12 @@
   },
   {
     "referrer": "dev.to",
-    "count": 3,
-    "uniques": 3
+    "count": 2,
+    "uniques": 2
+  },
+  {
+    "referrer": "npms.io",
+    "count": 1,
+    "uniques": 1
   }
 ]
