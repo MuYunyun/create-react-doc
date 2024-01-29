@@ -2,8 +2,8 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 9,
-    "uniques": 8
+    "count": 7,
+    "uniques": 6
   },
   {
     "path": "/MuYunyun/create-react-doc/tree/main/components",
@@ -33,12 +33,6 @@
     "path": "/MuYunyun/create-react-doc/blob/main/README.md",
     "title": "create-react-doc/README.md at main · MuYunyun/create-react-doc",
     "count": 2,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/pull/240/files",
-    "title": "feat: combile SSR in prerender to prevent shake problem by MuYunyun · Pull Re...",
-    "count": 1,
     "uniques": 1
   }
 ]
