@@ -24,6 +24,12 @@
     "uniques": 2
   },
   {
+    "path": "/MuYunyun/create-react-doc/tree/main/packages/crd-seed",
+    "title": "create-react-doc/packages/crd-seed at main · MuYunyun/create-react-doc · GitHub",
+    "count": 4,
+    "uniques": 2
+  },
+  {
     "path": "/MuYunyun/create-react-doc/blob/main/packages/create-react-doc/index.js",
     "title": "create-react-doc/packages/create-react-doc/index.js at main · MuYunyun/create...",
     "count": 4,
@@ -38,12 +44,6 @@
   {
     "path": "/MuYunyun/create-react-doc/blob/main/components/index.jsx",
     "title": "create-react-doc/components/index.jsx at main · MuYunyun/create-react-doc",
-    "count": 2,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/tree/main/packages/crd-seed",
-    "title": "create-react-doc/packages/crd-seed at main · MuYunyun/create-react-doc",
     "count": 2,
     "uniques": 1
   },
