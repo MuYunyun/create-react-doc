@@ -2,19 +2,25 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc：📝极简的 React 驱动的静态站点生成器。 --- MuYunyun/create-react-d...",
-    "count": 11,
-    "uniques": 6
+    "count": 12,
+    "uniques": 7
   },
   {
     "path": "/MuYunyun/create-react-doc/issues",
     "title": "Issues · MuYunyun/create-react-doc · GitHub",
-    "count": 4,
-    "uniques": 2
+    "count": 7,
+    "uniques": 3
   },
   {
     "path": "/MuYunyun/create-react-doc/tree/main/packages/crd-seed",
     "title": "create-react-doc/packages/crd-seed at main · MuYunyun/create-react-doc · GitHub",
     "count": 4,
+    "uniques": 2
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/issues/18",
+    "title": "Menu search · Issue #18 · MuYunyun/create-react-doc · GitHub",
+    "count": 2,
     "uniques": 2
   },
   {
@@ -50,12 +56,6 @@
   {
     "path": "/MuYunyun/create-react-doc/issues/97",
     "title": "support windows platform · Issue #97 · MuYunyun/create-react-doc · GitHub",
-    "count": 1,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/pull/22",
-    "title": "WIP:add plugin for searching docs site globally by MuYunyun · Pull Request #2...",
     "count": 1,
     "uniques": 1
   }
