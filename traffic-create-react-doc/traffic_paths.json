@@ -2,8 +2,8 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc：📝极简的 React 驱动的静态站点生成器。 --- MuYunyun/create-react-d...",
-    "count": 14,
-    "uniques": 8
+    "count": 16,
+    "uniques": 9
   },
   {
     "path": "/MuYunyun/create-react-doc/issues",
@@ -15,6 +15,12 @@
     "path": "/MuYunyun/create-react-doc/tree/main/packages/crd-seed",
     "title": "create-react-doc/packages/crd-seed at main · MuYunyun/create-react-doc · GitHub",
     "count": 6,
+    "uniques": 3
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/issues/20",
+    "title": "unexpected white placeholder in dark mode · Issue #20 · MuYunyun/create-react...",
+    "count": 3,
     "uniques": 3
   },
   {
@@ -50,12 +56,6 @@
   {
     "path": "/MuYunyun/create-react-doc/issues/132",
     "title": "Github镜像站-多版本文档切换 · Issue #132 · MuYunyun/create-react-doc · GitHub",
-    "count": 1,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/issues/157",
-    "title": "Github镜像站-unable to create a react doc · Issue #157 · MuYunyun/create-react-d...",
     "count": 1,
     "uniques": 1
   }
