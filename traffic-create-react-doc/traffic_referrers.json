@@ -1,12 +1,7 @@
 [
   {
     "referrer": "Google",
-    "count": 5,
-    "uniques": 2
-  },
-  {
-    "referrer": "link.zhihu.com",
-    "count": 4,
+    "count": 8,
     "uniques": 3
   },
   {
@@ -15,13 +10,13 @@
     "uniques": 1
   },
   {
-    "referrer": "dev.to",
-    "count": 2,
-    "uniques": 1
+    "referrer": "link.zhihu.com",
+    "count": 3,
+    "uniques": 2
   },
   {
-    "referrer": "link.juejin.cn",
-    "count": 1,
+    "referrer": "dev.to",
+    "count": 2,
     "uniques": 1
   }
 ]
