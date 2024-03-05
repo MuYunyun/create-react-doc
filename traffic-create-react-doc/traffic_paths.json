@@ -2,8 +2,8 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc：📝极简的 React 驱动的静态站点生成器。 --- MuYunyun/create-react-d...",
-    "count": 16,
-    "uniques": 7
+    "count": 17,
+    "uniques": 8
   },
   {
     "path": "/MuYunyun/create-react-doc/issues",
@@ -30,6 +30,12 @@
     "uniques": 3
   },
   {
+    "path": "/MuYunyun/create-react-doc/commit/f8d8234b4f21412b765c9aeef04aacbf1be44fcb",
+    "title": "fix: script dependency · MuYunyun/create-react-doc@f8d8234 · GitHub",
+    "count": 3,
+    "uniques": 3
+  },
+  {
     "path": "/MuYunyun/create-react-doc/compare/chore/usingHydrate",
     "title": "Comparing main...chore/usingHydrate · MuYunyun/create-react-doc · GitHub",
     "count": 3,
@@ -52,11 +58,5 @@
     "title": "Comparing main...feature/tags · MuYunyun/create-react-doc · GitHub",
     "count": 3,
     "uniques": 3
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/issues/18",
-    "title": "Menu search · Issue #18 · MuYunyun/create-react-doc · GitHub",
-    "count": 3,
-    "uniques": 2
   }
 ]
