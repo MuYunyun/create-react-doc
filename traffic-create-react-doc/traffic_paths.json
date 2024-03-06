@@ -1,20 +1,14 @@
 [
   {
     "path": "/MuYunyun/create-react-doc",
-    "title": "MuYunyun/create-react-doc：📝极简的 React 驱动的静态站点生成器。 --- MuYunyun/create-react-d...",
-    "count": 17,
-    "uniques": 8
+    "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
+    "count": 11,
+    "uniques": 6
   },
   {
     "path": "/MuYunyun/create-react-doc/issues",
     "title": "Issues · MuYunyun/create-react-doc · GitHub",
-    "count": 12,
-    "uniques": 4
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/tree/main/packages/crd-seed",
-    "title": "create-react-doc/packages/crd-seed at main · MuYunyun/create-react-doc · GitHub",
-    "count": 6,
+    "count": 11,
     "uniques": 3
   },
   {
@@ -22,6 +16,12 @@
     "title": "Comparing main...feature/comment-section · MuYunyun/create-react-doc · GitHub",
     "count": 4,
     "uniques": 4
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/tree/main/packages/crd-seed",
+    "title": "create-react-doc/packages/crd-seed at main · MuYunyun/create-react-doc · GitHub",
+    "count": 4,
+    "uniques": 2
   },
   {
     "path": "/MuYunyun/create-react-doc/commit/b4f6461034859ec49df76b2f38183e3c350f2369",
@@ -48,14 +48,14 @@
     "uniques": 3
   },
   {
-    "path": "/MuYunyun/create-react-doc/compare/feature/split-menu-content",
-    "title": "Comparing main...feature/split-menu-content · MuYunyun/create-react-doc · Git...",
+    "path": "/MuYunyun/create-react-doc/compare/feature/combineSSR",
+    "title": "Comparing main...feature/combineSSR · MuYunyun/create-react-doc · GitHub",
     "count": 3,
     "uniques": 3
   },
   {
-    "path": "/MuYunyun/create-react-doc/compare/feature/tags",
-    "title": "Comparing main...feature/tags · MuYunyun/create-react-doc · GitHub",
+    "path": "/MuYunyun/create-react-doc/compare/feature/split-menu-content",
+    "title": "Comparing main...feature/split-menu-content · MuYunyun/create-react-doc · Git...",
     "count": 3,
     "uniques": 3
   }
