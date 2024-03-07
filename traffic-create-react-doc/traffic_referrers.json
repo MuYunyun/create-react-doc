@@ -5,13 +5,13 @@
     "uniques": 2
   },
   {
-    "referrer": "link.zhihu.com",
-    "count": 3,
-    "uniques": 2
+    "referrer": "dev.to",
+    "count": 4,
+    "uniques": 3
   },
   {
-    "referrer": "dev.to",
-    "count": 2,
+    "referrer": "link.zhihu.com",
+    "count": 1,
     "uniques": 1
   }
 ]
