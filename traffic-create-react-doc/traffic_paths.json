@@ -12,12 +12,6 @@
     "uniques": 2
   },
   {
-    "path": "/MuYunyun/create-react-doc/compare/feature/combineSSR",
-    "title": "Comparing main...feature/combineSSR · MuYunyun/create-react-doc · GitHub",
-    "count": 3,
-    "uniques": 3
-  },
-  {
     "path": "/MuYunyun/create-react-doc/tree/main/packages/create-react-doc",
     "title": "create-react-doc/packages/create-react-doc at main · MuYunyun/create-react-doc",
     "count": 3,
@@ -56,6 +50,12 @@
   {
     "path": "/MuYunyun/create-react-doc/commit/c0aefd6b7c0c5fac468ad2bc9055dd63d28d9e06",
     "title": "chore: update font style · MuYunyun/create-react-doc@c0aefd6 · GitHub",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/compare/feat/esbuild",
+    "title": "Comparing main...feat/esbuild · MuYunyun/create-react-doc · GitHub",
     "count": 1,
     "uniques": 1
   }
