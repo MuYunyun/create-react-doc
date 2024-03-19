@@ -2,8 +2,8 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 15,
-    "uniques": 13
+    "count": 14,
+    "uniques": 12
   },
   {
     "path": "/MuYunyun/create-react-doc/blob/main/package.json",
@@ -54,8 +54,8 @@
     "uniques": 1
   },
   {
-    "path": "/MuYunyun/create-react-doc/compare/feat/esbuild",
-    "title": "Comparing main...feat/esbuild · MuYunyun/create-react-doc · GitHub",
+    "path": "/MuYunyun/create-react-doc/compare/fix/template",
+    "title": "Comparing main...fix/template · MuYunyun/create-react-doc · GitHub",
     "count": 1,
     "uniques": 1
   }
