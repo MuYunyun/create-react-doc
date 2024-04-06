@@ -2,8 +2,50 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 12,
-    "uniques": 9
+    "count": 14,
+    "uniques": 10
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/tree/main/.github",
+    "title": "create-react-doc/.github at main · MuYunyun/create-react-doc",
+    "count": 9,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/tree/main/.github/workflows",
+    "title": "create-react-doc/.github/workflows at main · MuYunyun/create-react-doc",
+    "count": 8,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/blob/main/.github/dependabot.yml",
+    "title": "create-react-doc/.github/dependabot.yml at main · MuYunyun/create-react-doc",
+    "count": 6,
+    "uniques": 2
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/blob/main/packages/templates/default/.github/workflows/gh-pages.yml",
+    "title": "File not found",
+    "count": 6,
+    "uniques": 2
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/blob/main/.github/config.yml",
+    "title": "create-react-doc/.github/config.yml at main · MuYunyun/create-react-doc",
+    "count": 4,
+    "uniques": 2
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/blob/main/.github/stale.yml",
+    "title": "create-react-doc/.github/stale.yml at main · MuYunyun/create-react-doc",
+    "count": 4,
+    "uniques": 2
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/blob/main/.github/workflows/gh-pages.yml",
+    "title": "create-react-doc/.github/workflows/gh-pages.yml at main · MuYunyun/create-rea...",
+    "count": 4,
+    "uniques": 2
   },
   {
     "path": "/MuYunyun/create-react-doc/blob/main/README.md",
@@ -16,47 +58,5 @@
     "title": "create-react-doc/packages at main · MuYunyun/create-react-doc · GitHub",
     "count": 4,
     "uniques": 2
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/blob/main/.github/dependabot.yml",
-    "title": "create-react-doc/.github/dependabot.yml at main · MuYunyun/create-react-doc",
-    "count": 4,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/blob/main/packages/templates/default/.github/workflows/gh-pages.yml",
-    "title": "File not found",
-    "count": 4,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/blob/main/package.json",
-    "title": "create-react-doc/package.json at main · MuYunyun/create-react-doc",
-    "count": 3,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/blob/36c56cecb7ae5711890c16c570c5d86cf929da67/packages/crd-scripts/src/commands/initProject.js",
-    "title": "create-react-doc/packages/crd-scripts/src/commands/initProject.js at 36c56cec...",
-    "count": 2,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/blob/main/config.yml",
-    "title": "create-react-doc/config.yml at main · MuYunyun/create-react-doc",
-    "count": 2,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/blob/main/gh-pages.js",
-    "title": "create-react-doc/gh-pages.js at main · MuYunyun/create-react-doc",
-    "count": 2,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/blob/main/.github/config.yml",
-    "title": "create-react-doc/.github/config.yml at main · MuYunyun/create-react-doc",
-    "count": 2,
-    "uniques": 1
   }
 ]
