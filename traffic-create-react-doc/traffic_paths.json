@@ -2,8 +2,8 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 12,
-    "uniques": 9
+    "count": 14,
+    "uniques": 11
   },
   {
     "path": "/MuYunyun/create-react-doc/tree/main/.github",
@@ -18,44 +18,44 @@
     "uniques": 1
   },
   {
-    "path": "/MuYunyun/create-react-doc/blob/main/.github/dependabot.yml",
-    "title": "create-react-doc/.github/dependabot.yml at main · MuYunyun/create-react-doc",
-    "count": 6,
+    "path": "/MuYunyun/create-react-doc/blob/main/README-en.md",
+    "title": "create-react-doc/README-en.md at main · MuYunyun/create-react-doc · GitHub",
+    "count": 4,
     "uniques": 2
   },
   {
-    "path": "/MuYunyun/create-react-doc/blob/main/packages/templates/default/.github/workflows/gh-pages.yml",
-    "title": "File not found",
-    "count": 6,
+    "path": "/MuYunyun/create-react-doc/commits/main",
+    "title": "Commits · MuYunyun/create-react-doc · GitHub",
+    "count": 4,
     "uniques": 2
   },
   {
     "path": "/MuYunyun/create-react-doc/blob/main/.github/config.yml",
     "title": "create-react-doc/.github/config.yml at main · MuYunyun/create-react-doc",
-    "count": 4,
-    "uniques": 2
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/blob/main/.github/stale.yml",
-    "title": "create-react-doc/.github/stale.yml at main · MuYunyun/create-react-doc",
-    "count": 4,
-    "uniques": 2
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/blob/main/.github/workflows/gh-pages.yml",
-    "title": "create-react-doc/.github/workflows/gh-pages.yml at main · MuYunyun/create-rea...",
-    "count": 4,
-    "uniques": 2
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/blob/main/config.yml",
-    "title": "create-react-doc/config.yml at main · MuYunyun/create-react-doc",
     "count": 2,
     "uniques": 1
   },
   {
-    "path": "/MuYunyun/create-react-doc/blob/main/gh-pages.js",
-    "title": "create-react-doc/gh-pages.js at main · MuYunyun/create-react-doc",
+    "path": "/MuYunyun/create-react-doc/blob/main/.github/dependabot.yml",
+    "title": "create-react-doc/.github/dependabot.yml at main · MuYunyun/create-react-doc",
+    "count": 2,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/blob/main/.github/FUNDING.yml",
+    "title": "create-react-doc/.github/FUNDING.yml at main · MuYunyun/create-react-doc",
+    "count": 2,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/blob/main/.github/stale.yml",
+    "title": "create-react-doc/.github/stale.yml at main · MuYunyun/create-react-doc",
+    "count": 2,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/blob/main/.github/workflows/gh-pages.yml",
+    "title": "create-react-doc/.github/workflows/gh-pages.yml at main · MuYunyun/create-rea...",
     "count": 2,
     "uniques": 1
   }
