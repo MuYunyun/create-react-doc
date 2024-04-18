@@ -1,21 +1,16 @@
 [
   {
-    "referrer": "muyunyun.cn",
-    "count": 37,
-    "uniques": 1
-  },
-  {
-    "referrer": "link.zhihu.com",
-    "count": 4,
-    "uniques": 3
-  },
-  {
     "referrer": "v2ex.com",
     "count": 3,
     "uniques": 2
   },
   {
     "referrer": "github.com",
+    "count": 3,
+    "uniques": 2
+  },
+  {
+    "referrer": "link.zhihu.com",
     "count": 3,
     "uniques": 2
   },

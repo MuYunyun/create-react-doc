@@ -2,20 +2,8 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 15,
-    "uniques": 12
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/tree/main/.github",
-    "title": "create-react-doc/.github at main · MuYunyun/create-react-doc",
-    "count": 9,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/tree/main/.github/workflows",
-    "title": "create-react-doc/.github/workflows at main · MuYunyun/create-react-doc",
-    "count": 8,
-    "uniques": 1
+    "count": 13,
+    "uniques": 11
   },
   {
     "path": "/MuYunyun/create-react-doc/blob/main/README-en.md",
@@ -30,33 +18,21 @@
     "uniques": 2
   },
   {
-    "path": "/MuYunyun/create-react-doc/blob/main/.github/config.yml",
-    "title": "create-react-doc/.github/config.yml at main · MuYunyun/create-react-doc",
+    "path": "/MuYunyun/create-react-doc/tree/main/packages/leetcode-cli",
+    "title": "create-react-doc/packages/leetcode-cli at main · MuYunyun/create-react-doc · ...",
     "count": 2,
     "uniques": 1
   },
   {
-    "path": "/MuYunyun/create-react-doc/blob/main/.github/dependabot.yml",
-    "title": "create-react-doc/.github/dependabot.yml at main · MuYunyun/create-react-doc",
-    "count": 2,
+    "path": "/MuYunyun/create-react-doc/issues",
+    "title": "Issues · MuYunyun/create-react-doc · GitHub",
+    "count": 1,
     "uniques": 1
   },
   {
-    "path": "/MuYunyun/create-react-doc/blob/main/.github/FUNDING.yml",
-    "title": "create-react-doc/.github/FUNDING.yml at main · MuYunyun/create-react-doc",
-    "count": 2,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/blob/main/.github/stale.yml",
-    "title": "create-react-doc/.github/stale.yml at main · MuYunyun/create-react-doc",
-    "count": 2,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/blob/main/.github/workflows/gh-pages.yml",
-    "title": "create-react-doc/.github/workflows/gh-pages.yml at main · MuYunyun/create-rea...",
-    "count": 2,
+    "path": "/MuYunyun/create-react-doc/pulls",
+    "title": "Pull requests · MuYunyun/create-react-doc · GitHub",
+    "count": 1,
     "uniques": 1
   }
 ]
