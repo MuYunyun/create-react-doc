@@ -1,13 +1,13 @@
 [
   {
-    "referrer": "link.zhihu.com",
-    "count": 4,
-    "uniques": 4
-  },
-  {
     "referrer": "npms.io",
     "count": 4,
     "uniques": 1
+  },
+  {
+    "referrer": "link.zhihu.com",
+    "count": 3,
+    "uniques": 3
   },
   {
     "referrer": "Google",
