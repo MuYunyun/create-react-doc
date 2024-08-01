@@ -1,10 +1,5 @@
 [
   {
-    "referrer": "github.com",
-    "count": 2,
-    "uniques": 2
-  },
-  {
     "referrer": "jianshu.com",
     "count": 1,
     "uniques": 1
@@ -15,7 +10,7 @@
     "uniques": 1
   },
   {
-    "referrer": "link.segmentfault.com",
+    "referrer": "github.com",
     "count": 1,
     "uniques": 1
   }
