@@ -10,12 +10,17 @@
     "uniques": 1
   },
   {
-    "referrer": "hk.v2ex.com",
+    "referrer": "Google",
     "count": 1,
     "uniques": 1
   },
   {
     "referrer": "link.segmentfault.com",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "referrer": "muyunyun.cn",
     "count": 1,
     "uniques": 1
   }
