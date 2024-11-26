@@ -2,12 +2,42 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
+    "count": 4,
+    "uniques": 4
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/blob/36c56cecb7ae5711890c16c570c5d86cf929da67/packages/crd-seed/component/Icon/loadSprite.js",
+    "title": "create-react-doc/packages/crd-seed/component/Icon/loadSprite.js at 36c56cecb7...",
     "count": 3,
-    "uniques": 3
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/blob/36c56cecb7ae5711890c16c570c5d86cf929da67/packages/crd-seed/component/Icon/iconsInfo.js",
+    "title": "create-react-doc/packages/crd-seed/component/Icon/iconsInfo.js at 36c56cecb7a...",
+    "count": 2,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/blob/36c56cecb7ae5711890c16c570c5d86cf929da67/packages/crd-seed/component/Icon/index.js",
+    "title": "create-react-doc/packages/crd-seed/component/Icon/index.js at 36c56cecb7ae571...",
+    "count": 2,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/blob/36c56cecb7ae5711890c16c570c5d86cf929da67/packages/crd-seed/component/Icon/Icon.js",
+    "title": "create-react-doc/packages/crd-seed/component/Icon/Icon.js at 36c56cecb7ae5711...",
+    "count": 1,
+    "uniques": 1
   },
   {
     "path": "/MuYunyun/create-react-doc/blob/main/README.md",
     "title": "create-react-doc/README.md at main · MuYunyun/create-react-doc",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/tree/36c56cecb7ae5711890c16c570c5d86cf929da67/packages/crd-seed/component/Icon",
+    "title": "create-react-doc/packages/crd-seed/component/Icon at 36c56cecb7ae5711890c16c5...",
     "count": 1,
     "uniques": 1
   }
