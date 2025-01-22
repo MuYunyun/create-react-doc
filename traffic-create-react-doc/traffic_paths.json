@@ -2,8 +2,8 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 11,
-    "uniques": 8
+    "count": 12,
+    "uniques": 7
   },
   {
     "path": "/MuYunyun/create-react-doc/blob/36c56cecb7ae5711890c16c570c5d86cf929da67/docs/%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97.md",
@@ -14,12 +14,6 @@
   {
     "path": "/MuYunyun/create-react-doc/blob/36c56cecb7ae5711890c16c570c5d86cf929da67/package.json",
     "title": "create-react-doc/package.json at 36c56cecb7ae5711890c16c570c5d86cf929da67 · M...",
-    "count": 1,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/blob/main/gh-pages.js",
-    "title": "create-react-doc/gh-pages.js at main · MuYunyun/create-react-doc · GitHub",
     "count": 1,
     "uniques": 1
   },
@@ -56,6 +50,12 @@
   {
     "path": "/muyunyun/create-react-doc/pull/29",
     "title": "support pick theme by MuYunyun · Pull Request #29 · MuYunyun/create-react-doc...",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/pulls",
+    "title": "Pull requests · MuYunyun/create-react-doc · GitHub",
     "count": 1,
     "uniques": 1
   }
