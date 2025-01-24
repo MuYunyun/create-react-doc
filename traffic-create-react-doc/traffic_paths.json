@@ -30,12 +30,6 @@
     "uniques": 1
   },
   {
-    "path": "/muyunyun/create-react-doc/pull/16",
-    "title": "monorepo: Lerna by MuYunyun · Pull Request #16 · MuYunyun/create-react-doc · ...",
-    "count": 1,
-    "uniques": 1
-  },
-  {
     "path": "/MuYunyun/create-react-doc/pull/16/commits/0eb0914afb4f2fc6accd2d656104a0f872c56671",
     "title": "monorepo: Lerna by MuYunyun · Pull Request #16 · MuYunyun/create-react-doc · ...",
     "count": 1,
@@ -56,6 +50,12 @@
   {
     "path": "/MuYunyun/create-react-doc/pulls",
     "title": "Pull requests · MuYunyun/create-react-doc · GitHub",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/releases/tag/v1.10.0",
+    "title": "Release v1.10.0: 支持配置开启评论模块 · MuYunyun/create-react-doc · GitHub",
     "count": 1,
     "uniques": 1
   }
