@@ -6,6 +6,11 @@
   },
   {
     "referrer": "link.zhihu.com",
+    "count": 2,
+    "uniques": 2
+  },
+  {
+    "referrer": "npmjs.com",
     "count": 1,
     "uniques": 1
   }
