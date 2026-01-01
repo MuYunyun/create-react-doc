@@ -1,9 +1,9 @@
 [
   {
-    "path": "/MuYunyun/create-react-doc",
-    "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
+    "path": "/MuYunyun/create-react-doc/tree/main/packages/leetcode-cli",
+    "title": "create-react-doc/packages/leetcode-cli at main · MuYunyun/create-react-doc · ...",
     "count": 3,
-    "uniques": 2
+    "uniques": 3
   },
   {
     "path": "/MuYunyun/create-react-doc/actions/workflows/traffic2badge.yml",
@@ -12,10 +12,10 @@
     "uniques": 2
   },
   {
-    "path": "/MuYunyun/create-react-doc/tree/main/packages/leetcode-cli",
-    "title": "create-react-doc/packages/leetcode-cli at main · MuYunyun/create-react-doc · ...",
+    "path": "/MuYunyun/create-react-doc",
+    "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
     "count": 2,
-    "uniques": 2
+    "uniques": 1
   },
   {
     "path": "/MuYunyun/create-react-doc/actions/runs/13913589459/workflow",
@@ -42,6 +42,12 @@
     "uniques": 1
   },
   {
+    "path": "/MuYunyun/create-react-doc/pull/373/files",
+    "title": "chore(deps): bump webpack-dev-server from 3.11.0 to 4.15.0 by dependabot[bot]...",
+    "count": 1,
+    "uniques": 1
+  },
+  {
     "path": "/MuYunyun/create-react-doc/pull/396/files",
     "title": "chore(deps): bump actions/checkout from 2.3.3 to 3.6.0 by dependabot[bot] · P...",
     "count": 1,
@@ -50,12 +56,6 @@
   {
     "path": "/MuYunyun/create-react-doc/pull/414",
     "title": "build(deps): bump follow-redirects from 1.13.1 to 1.15.4 by dependabot[bot] ·...",
-    "count": 1,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/pull/66/checks",
-    "title": "chore(deps): bump ora from 3.4.0 to 5.2.0 by dependabot[bot] · Pull Request #...",
     "count": 1,
     "uniques": 1
   }
