@@ -12,6 +12,12 @@
     "uniques": 2
   },
   {
+    "path": "/MuYunyun/create-react-doc/commit/50a6e4288a4a4d85a3db3eaadbefbba13b6b6df7",
+    "title": "feat: support file .gitignore filter · MuYunyun/create-react-doc@50a6e42 · Gi...",
+    "count": 2,
+    "uniques": 2
+  },
+  {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
     "count": 2,
@@ -36,26 +42,20 @@
     "uniques": 1
   },
   {
+    "path": "/MuYunyun/create-react-doc/blob/22e2f69371bf9b12d8ebe1f08e9e2abdb8402025/README.md",
+    "title": "create-react-doc/README.md at 22e2f69371bf9b12d8ebe1f08e9e2abdb8402025 · MuYu...",
+    "count": 1,
+    "uniques": 1
+  },
+  {
     "path": "/MuYunyun/create-react-doc/commit/43dece110f6d4dadc1b6fa4921fb25de5a709edf",
     "title": "fix: dark toggle mode · MuYunyun/create-react-doc@43dece1 · GitHub",
     "count": 1,
     "uniques": 1
   },
   {
-    "path": "/MuYunyun/create-react-doc/pull/373/files",
-    "title": "chore(deps): bump webpack-dev-server from 3.11.0 to 4.15.0 by dependabot[bot]...",
-    "count": 1,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/pull/394",
-    "title": "chore(deps-dev): bump eslint-plugin-react from 7.21.5 to 7.33.1 by dependabot...",
-    "count": 1,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/pull/396/files",
-    "title": "chore(deps): bump actions/checkout from 2.3.3 to 3.6.0 by dependabot[bot] · P...",
+    "path": "/MuYunyun/create-react-doc/commit/612ed00ed6ee0acce8fe74ab4d1b519273e2d1d1",
+    "title": "feat: mobile friendly · MuYunyun/create-react-doc@612ed00 · GitHub",
     "count": 1,
     "uniques": 1
   }
