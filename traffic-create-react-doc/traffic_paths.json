@@ -6,12 +6,6 @@
     "uniques": 5
   },
   {
-    "path": "/MuYunyun/create-react-doc/actions/workflows/traffic2badge.yml",
-    "title": "traffic2badge · Workflow runs · MuYunyun/create-react-doc · GitHub",
-    "count": 2,
-    "uniques": 2
-  },
-  {
     "path": "/MuYunyun/create-react-doc/commit/50a6e4288a4a4d85a3db3eaadbefbba13b6b6df7",
     "title": "feat: support file .gitignore filter · MuYunyun/create-react-doc@50a6e42 · Gi...",
     "count": 2,
@@ -38,6 +32,12 @@
   {
     "path": "/MuYunyun/create-react-doc/actions/runs/19809108849/workflow",
     "title": "feat: crete react doc · MuYunyun/create-react-doc@36c56ce · GitHub",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/actions/workflows/traffic2badge.yml",
+    "title": "traffic2badge · Workflow runs · MuYunyun/create-react-doc · GitHub",
     "count": 1,
     "uniques": 1
   },
