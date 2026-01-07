@@ -12,12 +12,6 @@
     "uniques": 2
   },
   {
-    "path": "/MuYunyun/create-react-doc",
-    "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 2,
-    "uniques": 1
-  },
-  {
     "path": "/MuYunyun/create-react-doc/actions/runs/13913589459/workflow",
     "title": "feat: crete react doc · MuYunyun/create-react-doc@36c56ce · GitHub",
     "count": 1,
@@ -56,6 +50,12 @@
   {
     "path": "/MuYunyun/create-react-doc/commit/612ed00ed6ee0acce8fe74ab4d1b519273e2d1d1",
     "title": "feat: mobile friendly · MuYunyun/create-react-doc@612ed00 · GitHub",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/commit/8950326a367d72b6cf5df9ce23c54e256586b53e",
+    "title": "feat: open menu autuly with url · MuYunyun/create-react-doc@8950326 · GitHub",
     "count": 1,
     "uniques": 1
   }
