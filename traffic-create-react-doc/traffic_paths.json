@@ -1,13 +1,13 @@
 [
   {
-    "path": "/MuYunyun/create-react-doc/commit/50a6e4288a4a4d85a3db3eaadbefbba13b6b6df7",
-    "title": "feat: support file .gitignore filter · MuYunyun/create-react-doc@50a6e42 · Gi...",
+    "path": "/MuYunyun/create-react-doc",
+    "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
     "count": 2,
     "uniques": 2
   },
   {
-    "path": "/MuYunyun/create-react-doc/tree/main/packages/leetcode-cli",
-    "title": "create-react-doc/packages/leetcode-cli at main · MuYunyun/create-react-doc · ...",
+    "path": "/MuYunyun/create-react-doc/commit/50a6e4288a4a4d85a3db3eaadbefbba13b6b6df7",
+    "title": "feat: support file .gitignore filter · MuYunyun/create-react-doc@50a6e42 · Gi...",
     "count": 2,
     "uniques": 2
   },
@@ -15,12 +15,6 @@
     "path": "/MuYunyun/create-react-doc/tree/main/packages",
     "title": "create-react-doc/packages at main · MuYunyun/create-react-doc",
     "count": 2,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc",
-    "title": "GitHub - MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site ...",
-    "count": 1,
     "uniques": 1
   },
   {
@@ -56,6 +50,12 @@
   {
     "path": "/MuYunyun/create-react-doc/pull/398",
     "title": "chore(deps): bump puppeteer-extra from 3.1.15 to 3.3.6 by dependabot[bot] · P...",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/pull/81/files",
+    "title": "chore(deps): bump ora from 3.4.0 to 5.3.0 by dependabot[bot] · Pull Request #...",
     "count": 1,
     "uniques": 1
   }
