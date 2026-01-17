@@ -30,6 +30,12 @@
     "uniques": 1
   },
   {
+    "path": "/MuYunyun/create-react-doc/commit/1b720b38537f6fb3acb915fbe963f75c9c25710f",
+    "title": "feat: menu support sticky · MuYunyun/create-react-doc@1b720b3 · GitHub",
+    "count": 1,
+    "uniques": 1
+  },
+  {
     "path": "/MuYunyun/create-react-doc/commit/612ed00ed6ee0acce8fe74ab4d1b519273e2d1d1",
     "title": "feat: mobile friendly · MuYunyun/create-react-doc@612ed00 · GitHub",
     "count": 1,
@@ -42,20 +48,14 @@
     "uniques": 1
   },
   {
+    "path": "/MuYunyun/create-react-doc/commit/e4007ecd4f1486754e5fb3ed1feec4c8363eccc8",
+    "title": "feat: menu · MuYunyun/create-react-doc@e4007ec · GitHub",
+    "count": 1,
+    "uniques": 1
+  },
+  {
     "path": "/MuYunyun/create-react-doc/pull/394",
     "title": "chore(deps-dev): bump eslint-plugin-react from 7.21.5 to 7.33.1 by dependabot...",
-    "count": 1,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/pull/398",
-    "title": "chore(deps): bump puppeteer-extra from 3.1.15 to 3.3.6 by dependabot[bot] · P...",
-    "count": 1,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/pull/81/files",
-    "title": "chore(deps): bump ora from 3.4.0 to 5.3.0 by dependabot[bot] · Pull Request #...",
     "count": 1,
     "uniques": 1
   }
