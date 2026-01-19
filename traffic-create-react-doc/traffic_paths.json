@@ -2,25 +2,13 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 2,
-    "uniques": 2
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/commit/50a6e4288a4a4d85a3db3eaadbefbba13b6b6df7",
-    "title": "feat: support file .gitignore filter · MuYunyun/create-react-doc@50a6e42 · Gi...",
-    "count": 2,
-    "uniques": 2
+    "count": 4,
+    "uniques": 4
   },
   {
     "path": "/MuYunyun/create-react-doc/tree/main/packages",
     "title": "create-react-doc/packages at main · MuYunyun/create-react-doc",
     "count": 2,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/blob/22e2f69371bf9b12d8ebe1f08e9e2abdb8402025/README.md",
-    "title": "create-react-doc/README.md at 22e2f69371bf9b12d8ebe1f08e9e2abdb8402025 · MuYu...",
-    "count": 1,
     "uniques": 1
   },
   {
@@ -32,12 +20,6 @@
   {
     "path": "/MuYunyun/create-react-doc/commit/1b720b38537f6fb3acb915fbe963f75c9c25710f",
     "title": "feat: menu support sticky · MuYunyun/create-react-doc@1b720b3 · GitHub",
-    "count": 1,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/commit/612ed00ed6ee0acce8fe74ab4d1b519273e2d1d1",
-    "title": "feat: mobile friendly · MuYunyun/create-react-doc@612ed00 · GitHub",
     "count": 1,
     "uniques": 1
   },
@@ -56,6 +38,12 @@
   {
     "path": "/MuYunyun/create-react-doc/pull/398",
     "title": "chore(deps): bump puppeteer-extra from 3.1.15 to 3.3.6 by dependabot[bot] · P...",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/pull/81/files",
+    "title": "chore(deps): bump ora from 3.4.0 to 5.3.0 by dependabot[bot] · Pull Request #...",
     "count": 1,
     "uniques": 1
   }
