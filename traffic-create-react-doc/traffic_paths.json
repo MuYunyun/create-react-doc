@@ -2,8 +2,8 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 4,
-    "uniques": 4
+    "count": 5,
+    "uniques": 5
   },
   {
     "path": "/MuYunyun/create-react-doc/tree/main/packages",
@@ -24,8 +24,20 @@
     "uniques": 1
   },
   {
-    "path": "/MuYunyun/create-react-doc/commit/8950326a367d72b6cf5df9ce23c54e256586b53e",
-    "title": "feat: open menu autuly with url · MuYunyun/create-react-doc@8950326 · GitHub",
+    "path": "/MuYunyun/create-react-doc/commit/6e4e48849c8233b52d7b4718d24344ad9eda5c25",
+    "title": "doc: update · MuYunyun/create-react-doc@6e4e488 · GitHub",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/commit/8380c008dffb0659a6461eb668811c2a453161f0",
+    "title": "feat: add custom folder logo · MuYunyun/create-react-doc@8380c00 · GitHub",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/commit/bd696ed72d5fe3647e60a034718717a13d22dcb2",
+    "title": "feat: add toggle button · MuYunyun/create-react-doc@bd696ed · GitHub",
     "count": 1,
     "uniques": 1
   },
