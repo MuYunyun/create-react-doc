@@ -2,8 +2,8 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site generator.",
-    "count": 5,
-    "uniques": 5
+    "count": 6,
+    "uniques": 6
   },
   {
     "path": "/MuYunyun/create-react-doc/tree/main/packages",
@@ -14,6 +14,12 @@
   {
     "path": "/MuYunyun/create-react-doc/blob/main/README-en.md",
     "title": "create-react-doc/README-en.md at main · MuYunyun/create-react-doc · GitHub",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/commit/1a7a4ecb8104be7eb55ef4a8c33dd85c268566d5",
+    "title": "feat: adjust layout · MuYunyun/create-react-doc@1a7a4ec · GitHub",
     "count": 1,
     "uniques": 1
   },
@@ -50,12 +56,6 @@
   {
     "path": "/MuYunyun/create-react-doc/commit/e4007ecd4f1486754e5fb3ed1feec4c8363eccc8",
     "title": "feat: menu · MuYunyun/create-react-doc@e4007ec · GitHub",
-    "count": 1,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/pull/398",
-    "title": "chore(deps): bump puppeteer-extra from 3.1.15 to 3.3.6 by dependabot[bot] · P...",
     "count": 1,
     "uniques": 1
   }
