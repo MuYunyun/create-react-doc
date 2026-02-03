@@ -2,8 +2,8 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "GitHub - MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site ...",
-    "count": 3,
-    "uniques": 3
+    "count": 2,
+    "uniques": 2
   },
   {
     "path": "/MuYunyun/create-react-doc/commit/1a7a4ecb8104be7eb55ef4a8c33dd85c268566d5",
@@ -30,12 +30,6 @@
     "uniques": 1
   },
   {
-    "path": "/MuYunyun/create-react-doc/commit/6e4e48849c8233b52d7b4718d24344ad9eda5c25",
-    "title": "doc: update · MuYunyun/create-react-doc@6e4e488 · GitHub",
-    "count": 1,
-    "uniques": 1
-  },
-  {
     "path": "/MuYunyun/create-react-doc/commit/7fc431ef9b55582be2a0c32da5fbc9a814495d63",
     "title": "chore: update bin · MuYunyun/create-react-doc@7fc431e · GitHub",
     "count": 1,
@@ -48,14 +42,20 @@
     "uniques": 1
   },
   {
-    "path": "/MuYunyun/create-react-doc/commit/8380c008dffb0659a6461eb668811c2a453161f0",
-    "title": "feat: add custom folder logo · MuYunyun/create-react-doc@8380c00 · GitHub",
+    "path": "/MuYunyun/create-react-doc/commit/916d3bbc30e5fe2b161631f7b82906962296a0db",
+    "title": "fix: level in menu · MuYunyun/create-react-doc@916d3bb · GitHub",
     "count": 1,
     "uniques": 1
   },
   {
-    "path": "/MuYunyun/create-react-doc/commit/916d3bbc30e5fe2b161631f7b82906962296a0db",
-    "title": "fix: level in menu · MuYunyun/create-react-doc@916d3bb · GitHub",
+    "path": "/MuYunyun/create-react-doc/commit/b0fc4c69ab68519003a10b6563f98fa3aae5253b",
+    "title": "feat: enhance menu · MuYunyun/create-react-doc@b0fc4c6 · GitHub",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/pull/402/files",
+    "title": "chore(deps): bump @inquirer/input from 0.0.13-alpha.0 to 1.2.13 by dependabot...",
     "count": 1,
     "uniques": 1
   }
