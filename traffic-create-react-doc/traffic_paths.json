@@ -2,8 +2,8 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "GitHub - MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site ...",
-    "count": 2,
-    "uniques": 2
+    "count": 3,
+    "uniques": 3
   },
   {
     "path": "/MuYunyun/create-react-doc/discussions",
@@ -30,6 +30,12 @@
     "uniques": 1
   },
   {
+    "path": "/MuYunyun/create-react-doc/commit/2a36b80c9b2bf636254590ba687396af304a93a7",
+    "title": "fix: setect status in menu · MuYunyun/create-react-doc@2a36b80 · GitHub",
+    "count": 1,
+    "uniques": 1
+  },
+  {
     "path": "/MuYunyun/create-react-doc/commit/5396f00750ad6ac35b3426b3996e7427c4929f2a",
     "title": "feat: support fold unfold menu · MuYunyun/create-react-doc@5396f00 · GitHub",
     "count": 1,
@@ -50,12 +56,6 @@
   {
     "path": "/MuYunyun/create-react-doc/commit/7fc431ef9b55582be2a0c32da5fbc9a814495d63",
     "title": "chore: update bin · MuYunyun/create-react-doc@7fc431e · GitHub",
-    "count": 1,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/commit/916d3bbc30e5fe2b161631f7b82906962296a0db",
-    "title": "fix: level in menu · MuYunyun/create-react-doc@916d3bb · GitHub",
     "count": 1,
     "uniques": 1
   }
