@@ -2,8 +2,8 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "GitHub - MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site ...",
-    "count": 3,
-    "uniques": 3
+    "count": 4,
+    "uniques": 4
   },
   {
     "path": "/MuYunyun/create-react-doc/discussions",
@@ -14,12 +14,6 @@
   {
     "path": "/MuYunyun/create-react-doc/commit/14b25cdb2caab9c4f3e883d8e8da56ab3b2a97ed",
     "title": "feat: show all router · MuYunyun/create-react-doc@14b25cd · GitHub",
-    "count": 1,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/commit/1a7a4ecb8104be7eb55ef4a8c33dd85c268566d5",
-    "title": "feat: adjust layout · MuYunyun/create-react-doc@1a7a4ec · GitHub",
     "count": 1,
     "uniques": 1
   },
@@ -56,6 +50,12 @@
   {
     "path": "/MuYunyun/create-react-doc/commit/f0af0cf5c00fa12e78e5733a3699bf23e82ce711",
     "title": "feat: support dark mode · MuYunyun/create-react-doc@f0af0cf · GitHub",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/pulls",
+    "title": "Pull requests · MuYunyun/create-react-doc · GitHub",
     "count": 1,
     "uniques": 1
   }
