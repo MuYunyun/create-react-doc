@@ -2,12 +2,18 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "GitHub - MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site ...",
-    "count": 2,
-    "uniques": 2
+    "count": 1,
+    "uniques": 1
   },
   {
     "path": "/MuYunyun/create-react-doc/commit/2d957156fe0da3b5ff00c37b808115925cbcf560",
     "title": "feat: support to hide private markdown · MuYunyun/create-react-doc@2d95715 · ...",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/commit/2d99eba7414878dd25e370775746532d73139fb3",
+    "title": "fix: problem about toggle menu scrollto top · MuYunyun/create-react-doc@2d99e...",
     "count": 1,
     "uniques": 1
   },
