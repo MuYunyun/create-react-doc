@@ -6,12 +6,6 @@
     "uniques": 3
   },
   {
-    "path": "/MuYunyun/create-react-doc/commit/a0a1c8d1d05fa230cbd38b74e49d51da0706d5d8",
-    "title": "fix: https://github.com/MuYunyun/create-react-doc/issues/17 · MuYunyun/create...",
-    "count": 2,
-    "uniques": 2
-  },
-  {
     "path": "/MuYunyun/create-react-doc/commit/36c56cecb7ae5711890c16c570c5d86cf929da67",
     "title": "feat: crete react doc · MuYunyun/create-react-doc@36c56ce · GitHub",
     "count": 2,
@@ -36,6 +30,12 @@
     "uniques": 1
   },
   {
+    "path": "/MuYunyun/create-react-doc/commit/a0a1c8d1d05fa230cbd38b74e49d51da0706d5d8",
+    "title": "fix: https://github.com/MuYunyun/create-react-doc/issues/17 · MuYunyun/create...",
+    "count": 1,
+    "uniques": 1
+  },
+  {
     "path": "/MuYunyun/create-react-doc/commit/dc3fe88539f53e770ac9d36b8509dc1cf47dc53e",
     "title": "fix: https://github.com/MuYunyun/create-react-doc/issues/20 · MuYunyun/create...",
     "count": 1,
@@ -44,6 +44,12 @@
   {
     "path": "/MuYunyun/create-react-doc/commits",
     "title": "Commits · MuYunyun/create-react-doc · GitHub",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/issues",
+    "title": "Issues · MuYunyun/create-react-doc · GitHub",
     "count": 1,
     "uniques": 1
   },
