@@ -2,7 +2,7 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "GitHub - MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site ...",
-    "count": 4,
+    "count": 3,
     "uniques": 3
   },
   {
@@ -30,6 +30,12 @@
     "uniques": 1
   },
   {
+    "path": "/MuYunyun/create-react-doc/blob/main/packages/templates/default/.github/workflows/gh-pages.yml",
+    "title": "File not found · GitHub",
+    "count": 1,
+    "uniques": 1
+  },
+  {
     "path": "/MuYunyun/create-react-doc/commit/a0a1c8d1d05fa230cbd38b74e49d51da0706d5d8",
     "title": "fix: https://github.com/MuYunyun/create-react-doc/issues/17 · MuYunyun/create...",
     "count": 1,
@@ -48,14 +54,8 @@
     "uniques": 1
   },
   {
-    "path": "/MuYunyun/create-react-doc/issues",
-    "title": "Issues · MuYunyun/create-react-doc · GitHub",
-    "count": 1,
-    "uniques": 1
-  },
-  {
-    "path": "/muyunyun/create-react-doc/pull/29",
-    "title": "support pick theme by MuYunyun · Pull Request #29 · MuYunyun/create-react-doc...",
+    "path": "/MuYunyun/create-react-doc/compare/main...DataStructureAndVen-Top:create-react-doc:main",
+    "title": "Comparing MuYunyun:main...DataStructureAndVen-Top:main · MuYunyun/create-reac...",
     "count": 1,
     "uniques": 1
   }
