@@ -1,61 +1,61 @@
 [
   {
     "path": "/MuYunyun/create-react-doc",
-    "title": "GitHub - MuYunyun/create-react-doc: 📝 Minimalistic React-powered static site ...",
+    "title": "Overview",
     "count": 4,
     "uniques": 4
   },
   {
     "path": "/MuYunyun/create-react-doc/commit/36c56cecb7ae5711890c16c570c5d86cf929da67",
-    "title": "feat: crete react doc · MuYunyun/create-react-doc@36c56ce · GitHub",
+    "title": "/commit/36c56cecb7ae5711890c16c570c5d86cf929da67",
     "count": 2,
     "uniques": 1
   },
   {
     "path": "/MuYunyun/create-react-doc/activity",
-    "title": "Activity · MuYunyun/create-react-doc · GitHub",
+    "title": "/activity",
     "count": 1,
     "uniques": 1
   },
   {
     "path": "/MuYunyun/create-react-doc/blob/main/.eslintrc.js",
-    "title": "create-react-doc/.eslintrc.js at main · MuYunyun/create-react-doc · GitHub",
+    "title": "/blob/main/.eslintrc.js",
     "count": 1,
     "uniques": 1
   },
   {
     "path": "/MuYunyun/create-react-doc/blob/main/.gitignore",
-    "title": "create-react-doc/.gitignore at main · MuYunyun/create-react-doc · GitHub",
+    "title": "/blob/main/.gitignore",
     "count": 1,
     "uniques": 1
   },
   {
     "path": "/MuYunyun/create-react-doc/blob/main/packages/templates/default/.github/workflows/gh-pages.yml",
-    "title": "File not found · GitHub",
+    "title": "/blob/main/packages/templates/default/.github/workflows/gh-pages.yml",
     "count": 1,
     "uniques": 1
   },
   {
     "path": "/MuYunyun/create-react-doc/commit/dc3fe88539f53e770ac9d36b8509dc1cf47dc53e",
-    "title": "fix: https://github.com/MuYunyun/create-react-doc/issues/20 · MuYunyun/create...",
+    "title": "/commit/dc3fe88539f53e770ac9d36b8509dc1cf47dc53e",
     "count": 1,
     "uniques": 1
   },
   {
     "path": "/MuYunyun/create-react-doc/commits",
-    "title": "Commits · MuYunyun/create-react-doc · GitHub",
+    "title": "/commits",
     "count": 1,
     "uniques": 1
   },
   {
     "path": "/MuYunyun/create-react-doc/compare/main...DataStructureAndVen-Top:create-react-doc:main",
-    "title": "Comparing MuYunyun:main...DataStructureAndVen-Top:main · MuYunyun/create-reac...",
+    "title": "/compare/main...DataStructureAndVen-Top:create-react-doc:main",
     "count": 1,
     "uniques": 1
   },
   {
     "path": "/MuYunyun/create-react-doc/discussions",
-    "title": "MuYunyun/create-react-doc · Discussions · GitHub",
+    "title": "/discussions",
     "count": 1,
     "uniques": 1
   }
