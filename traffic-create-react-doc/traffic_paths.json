@@ -2,8 +2,8 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "Overview",
-    "count": 4,
-    "uniques": 4
+    "count": 3,
+    "uniques": 3
   },
   {
     "path": "/MuYunyun/create-react-doc/commit/36c56cecb7ae5711890c16c570c5d86cf929da67",
@@ -24,12 +24,6 @@
     "uniques": 1
   },
   {
-    "path": "/MuYunyun/create-react-doc/blob/main/.gitignore",
-    "title": "/blob/main/.gitignore",
-    "count": 1,
-    "uniques": 1
-  },
-  {
     "path": "/MuYunyun/create-react-doc/blob/main/packages/templates/default/.github/workflows/gh-pages.yml",
     "title": "/blob/main/packages/templates/default/.github/workflows/gh-pages.yml",
     "count": 1,
@@ -42,12 +36,6 @@
     "uniques": 1
   },
   {
-    "path": "/MuYunyun/create-react-doc/commits",
-    "title": "/commits",
-    "count": 1,
-    "uniques": 1
-  },
-  {
     "path": "/MuYunyun/create-react-doc/compare/main...DataStructureAndVen-Top:create-react-doc:main",
     "title": "/compare/main...DataStructureAndVen-Top:create-react-doc:main",
     "count": 1,
@@ -56,6 +44,18 @@
   {
     "path": "/MuYunyun/create-react-doc/discussions",
     "title": "/discussions",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/issues",
+    "title": "/issues",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/pulls",
+    "title": "/pulls",
     "count": 1,
     "uniques": 1
   }
