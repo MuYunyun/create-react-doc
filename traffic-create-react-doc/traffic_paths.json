@@ -6,18 +6,6 @@
     "uniques": 3
   },
   {
-    "path": "/MuYunyun/create-react-doc/commit/36c56cecb7ae5711890c16c570c5d86cf929da67",
-    "title": "/commit/36c56cecb7ae5711890c16c570c5d86cf929da67",
-    "count": 2,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/activity",
-    "title": "/activity",
-    "count": 1,
-    "uniques": 1
-  },
-  {
     "path": "/MuYunyun/create-react-doc/blob/main/.eslintrc.js",
     "title": "/blob/main/.eslintrc.js",
     "count": 1,
@@ -26,12 +14,6 @@
   {
     "path": "/MuYunyun/create-react-doc/blob/main/packages/templates/default/.github/workflows/gh-pages.yml",
     "title": "/blob/main/packages/templates/default/.github/workflows/gh-pages.yml",
-    "count": 1,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/commit/dc3fe88539f53e770ac9d36b8509dc1cf47dc53e",
-    "title": "/commit/dc3fe88539f53e770ac9d36b8509dc1cf47dc53e",
     "count": 1,
     "uniques": 1
   },
@@ -56,6 +38,12 @@
   {
     "path": "/MuYunyun/create-react-doc/pulls",
     "title": "/pulls",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/tree/main/packages/crd-seed",
+    "title": "/tree/main/packages/crd-seed",
     "count": 1,
     "uniques": 1
   }
