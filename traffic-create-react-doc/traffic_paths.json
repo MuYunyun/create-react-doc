@@ -6,10 +6,10 @@
     "uniques": 3
   },
   {
-    "path": "/MuYunyun/create-react-doc/blob/main/.eslintrc.js",
-    "title": "/blob/main/.eslintrc.js",
-    "count": 1,
-    "uniques": 1
+    "path": "/MuYunyun/create-react-doc/discussions",
+    "title": "/discussions",
+    "count": 2,
+    "uniques": 2
   },
   {
     "path": "/MuYunyun/create-react-doc/blob/main/packages/templates/default/.github/workflows/gh-pages.yml",
@@ -20,12 +20,6 @@
   {
     "path": "/MuYunyun/create-react-doc/compare/main...DataStructureAndVen-Top:create-react-doc:main",
     "title": "/compare/main...DataStructureAndVen-Top:create-react-doc:main",
-    "count": 1,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/discussions",
-    "title": "/discussions",
     "count": 1,
     "uniques": 1
   },
