@@ -8,18 +8,24 @@
   {
     "path": "/MuYunyun/create-react-doc/discussions",
     "title": "/discussions",
-    "count": 2,
-    "uniques": 2
+    "count": 3,
+    "uniques": 3
   },
   {
     "path": "/MuYunyun/create-react-doc/issues",
     "title": "/issues",
-    "count": 2,
+    "count": 3,
     "uniques": 2
   },
   {
     "path": "/MuYunyun/create-react-doc/blob/main/packages/templates/default/.github/workflows/gh-pages.yml",
     "title": "/blob/main/packages/templates/default/.github/workflows/gh-pages.yml",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/commit/dab74adb81f6f9a28f9fdc0f6fecec6cedff6066",
+    "title": "/commit/dab74adb81f6f9a28f9fdc0f6fecec6cedff6066",
     "count": 1,
     "uniques": 1
   },
