@@ -2,8 +2,8 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "Overview",
-    "count": 6,
-    "uniques": 6
+    "count": 5,
+    "uniques": 5
   },
   {
     "path": "/MuYunyun/create-react-doc/discussions",
@@ -18,10 +18,10 @@
     "uniques": 2
   },
   {
-    "path": "/MuYunyun/create-react-doc/blob/main/packages/templates/default/.github/workflows/gh-pages.yml",
-    "title": "/blob/main/packages/templates/default/.github/workflows/gh-pages.yml",
-    "count": 1,
-    "uniques": 1
+    "path": "/MuYunyun/create-react-doc/pulls",
+    "title": "/pulls",
+    "count": 2,
+    "uniques": 2
   },
   {
     "path": "/MuYunyun/create-react-doc/commit/dab74adb81f6f9a28f9fdc0f6fecec6cedff6066",
@@ -30,26 +30,8 @@
     "uniques": 1
   },
   {
-    "path": "/MuYunyun/create-react-doc/compare/main...DataStructureAndVen-Top:create-react-doc:main",
-    "title": "/compare/main...DataStructureAndVen-Top:create-react-doc:main",
-    "count": 1,
-    "uniques": 1
-  },
-  {
     "path": "/MuYunyun/create-react-doc/issues/203",
     "title": "/issues/203",
-    "count": 1,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/pulls",
-    "title": "/pulls",
-    "count": 1,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/tree/main/packages/crd-seed",
-    "title": "/tree/main/packages/crd-seed",
     "count": 1,
     "uniques": 1
   }
