@@ -2,7 +2,7 @@
   {
     "path": "/MuYunyun/create-react-doc/discussions",
     "title": "/discussions",
-    "count": 7,
+    "count": 8,
     "uniques": 5
   },
   {
@@ -26,6 +26,12 @@
   {
     "path": "/MuYunyun/create-react-doc/actions",
     "title": "/actions",
+    "count": 2,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/actions/runs/23522329666",
+    "title": "/actions/runs/23522329666",
     "count": 1,
     "uniques": 1
   },
@@ -42,20 +48,14 @@
     "uniques": 1
   },
   {
+    "path": "/MuYunyun/create-react-doc/blob/main/lerna.json",
+    "title": "/blob/main/lerna.json",
+    "count": 1,
+    "uniques": 1
+  },
+  {
     "path": "/MuYunyun/create-react-doc/commit/dab74adb81f6f9a28f9fdc0f6fecec6cedff6066",
     "title": "/commit/dab74adb81f6f9a28f9fdc0f6fecec6cedff6066",
-    "count": 1,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/discussions/332",
-    "title": "/discussions/332",
-    "count": 1,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/discussions/categories/q-a",
-    "title": "/discussions/categories/q-a",
     "count": 1,
     "uniques": 1
   }
