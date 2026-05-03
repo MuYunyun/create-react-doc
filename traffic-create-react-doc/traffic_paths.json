@@ -1,21 +1,21 @@
 [
   {
-    "path": "/MuYunyun/create-react-doc/discussions",
-    "title": "/discussions",
-    "count": 6,
-    "uniques": 3
-  },
-  {
     "path": "/MuYunyun/create-react-doc",
     "title": "Overview",
-    "count": 5,
-    "uniques": 4
+    "count": 6,
+    "uniques": 5
   },
   {
     "path": "/MuYunyun/create-react-doc/pulls",
     "title": "/pulls",
-    "count": 4,
-    "uniques": 3
+    "count": 5,
+    "uniques": 4
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/discussions",
+    "title": "/discussions",
+    "count": 5,
+    "uniques": 2
   },
   {
     "path": "/MuYunyun/create-react-doc/issues",
@@ -24,26 +24,14 @@
     "uniques": 2
   },
   {
-    "path": "/MuYunyun/create-react-doc/actions",
-    "title": "/actions",
-    "count": 1,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/actions/runs/23522329666",
-    "title": "/actions/runs/23522329666",
-    "count": 1,
+    "path": "/MuYunyun/create-react-doc/discussions/categories/ideas",
+    "title": "/discussions/categories/ideas",
+    "count": 2,
     "uniques": 1
   },
   {
     "path": "/MuYunyun/create-react-doc/actions/runs/23628775770/workflow",
     "title": "/actions/runs/23628775770/workflow",
-    "count": 1,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/blob/main/lerna.json",
-    "title": "/blob/main/lerna.json",
     "count": 1,
     "uniques": 1
   },
@@ -56,6 +44,12 @@
   {
     "path": "/MuYunyun/create-react-doc/commit/796cb18200601c927a79c2875a6b071cb959b219",
     "title": "/commit/796cb18200601c927a79c2875a6b071cb959b219",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/commits",
+    "title": "/commits",
     "count": 1,
     "uniques": 1
   }
