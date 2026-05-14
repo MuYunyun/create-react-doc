@@ -1,11 +1,5 @@
 [
   {
-    "path": "/MuYunyun/create-react-doc/discussions",
-    "title": "/discussions",
-    "count": 5,
-    "uniques": 3
-  },
-  {
     "path": "/MuYunyun/create-react-doc",
     "title": "Overview",
     "count": 4,
@@ -18,10 +12,10 @@
     "uniques": 4
   },
   {
-    "path": "/MuYunyun/create-react-doc/pulls",
-    "title": "/pulls",
-    "count": 2,
-    "uniques": 2
+    "path": "/MuYunyun/create-react-doc/discussions",
+    "title": "/discussions",
+    "count": 4,
+    "uniques": 3
   },
   {
     "path": "/MuYunyun/create-react-doc/blob/main/.editorconfig",
@@ -38,6 +32,12 @@
   {
     "path": "/MuYunyun/create-react-doc/discussions/categories/ideas",
     "title": "/discussions/categories/ideas",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/pulls",
+    "title": "/pulls",
     "count": 1,
     "uniques": 1
   }
