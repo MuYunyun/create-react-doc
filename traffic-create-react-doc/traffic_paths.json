@@ -12,6 +12,12 @@
     "uniques": 2
   },
   {
+    "path": "/MuYunyun/create-react-doc/pulls",
+    "title": "/pulls",
+    "count": 2,
+    "uniques": 2
+  },
+  {
     "path": "/MuYunyun/create-react-doc",
     "title": "Overview",
     "count": 1,
@@ -20,6 +26,12 @@
   {
     "path": "/MuYunyun/create-react-doc/milestones",
     "title": "/milestones",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/tree/dependabot/github_actions/actions/first-interaction-3",
+    "title": "/tree/dependabot/github_actions/actions/first-interaction-3",
     "count": 1,
     "uniques": 1
   }
