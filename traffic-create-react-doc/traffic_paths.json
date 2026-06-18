@@ -8,8 +8,8 @@
   {
     "path": "/MuYunyun/create-react-doc/discussions",
     "title": "/discussions",
-    "count": 2,
-    "uniques": 2
+    "count": 3,
+    "uniques": 3
   },
   {
     "path": "/MuYunyun/create-react-doc/blob/71a7681c42ff67d03cf3794671f1af145e5140e6/README.md",
@@ -32,12 +32,6 @@
   {
     "path": "/MuYunyun/create-react-doc/pull/240/files",
     "title": "/pull/240/files",
-    "count": 1,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/pulls",
-    "title": "/pulls",
     "count": 1,
     "uniques": 1
   }
