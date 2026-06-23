@@ -2,8 +2,8 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "Overview",
-    "count": 4,
-    "uniques": 3
+    "count": 5,
+    "uniques": 4
   },
   {
     "path": "/MuYunyun/create-react-doc/discussions",
@@ -32,6 +32,12 @@
   {
     "path": "/MuYunyun/create-react-doc/pull/240/files",
     "title": "/pull/240/files",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/releases",
+    "title": "/releases",
     "count": 1,
     "uniques": 1
   }
