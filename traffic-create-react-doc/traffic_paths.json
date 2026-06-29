@@ -1,15 +1,15 @@
 [
   {
-    "path": "/MuYunyun/create-react-doc/discussions",
-    "title": "/discussions",
+    "path": "/MuYunyun/create-react-doc",
+    "title": "Overview",
     "count": 3,
     "uniques": 2
   },
   {
-    "path": "/MuYunyun/create-react-doc",
-    "title": "Overview",
-    "count": 2,
-    "uniques": 1
+    "path": "/MuYunyun/create-react-doc/discussions",
+    "title": "/discussions",
+    "count": 3,
+    "uniques": 2
   },
   {
     "path": "/MuYunyun/create-react-doc/blob/main/packages/templates/default/.github/workflows/gh-pages.yml",
@@ -24,14 +24,8 @@
     "uniques": 1
   },
   {
-    "path": "/MuYunyun/create-react-doc/pull/104",
-    "title": "/pull/104",
-    "count": 1,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/pull/240/files",
-    "title": "/pull/240/files",
+    "path": "/MuYunyun/create-react-doc/milestones",
+    "title": "/milestones",
     "count": 1,
     "uniques": 1
   },
