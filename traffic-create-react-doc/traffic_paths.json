@@ -2,7 +2,7 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "Overview",
-    "count": 6,
+    "count": 5,
     "uniques": 4
   },
   {
@@ -18,8 +18,20 @@
     "uniques": 2
   },
   {
+    "path": "/MuYunyun/create-react-doc/pull/290",
+    "title": "/pull/290",
+    "count": 2,
+    "uniques": 2
+  },
+  {
     "path": "/MuYunyun/create-react-doc/pull/294",
     "title": "/pull/294",
+    "count": 2,
+    "uniques": 2
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/pull/55",
+    "title": "/pull/55",
     "count": 2,
     "uniques": 2
   },
@@ -42,20 +54,8 @@
     "uniques": 1
   },
   {
-    "path": "/MuYunyun/create-react-doc/milestones",
-    "title": "/milestones",
-    "count": 1,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/pull/290",
-    "title": "/pull/290",
-    "count": 1,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/pull/292",
-    "title": "/pull/292",
+    "path": "/MuYunyun/create-react-doc/issues/52",
+    "title": "/issues/52",
     "count": 1,
     "uniques": 1
   }
