@@ -30,14 +30,14 @@
     "uniques": 2
   },
   {
-    "path": "/MuYunyun/create-react-doc/discussions",
-    "title": "/discussions",
-    "count": 2,
+    "path": "/MuYunyun/create-react-doc/actions",
+    "title": "/actions",
+    "count": 1,
     "uniques": 1
   },
   {
-    "path": "/MuYunyun/create-react-doc/actions",
-    "title": "/actions",
+    "path": "/MuYunyun/create-react-doc/discussions",
+    "title": "/discussions",
     "count": 1,
     "uniques": 1
   },
