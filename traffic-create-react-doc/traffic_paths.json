@@ -18,12 +18,6 @@
     "uniques": 1
   },
   {
-    "path": "/MuYunyun/create-react-doc/discussions/categories/polls",
-    "title": "/discussions/categories/polls",
-    "count": 1,
-    "uniques": 1
-  },
-  {
     "path": "/MuYunyun/create-react-doc/issues/52",
     "title": "/issues/52",
     "count": 1,
@@ -56,6 +50,12 @@
   {
     "path": "/MuYunyun/create-react-doc/issues/69",
     "title": "/issues/69",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/issues/72",
+    "title": "/issues/72",
     "count": 1,
     "uniques": 1
   }
