@@ -1,7 +1,25 @@
 [
   {
+    "path": "/MuYunyun/create-react-doc/blob/main/packages/templates/default/.github/workflows/gh-pages.yml",
+    "title": "/blob/main/packages/templates/default/.github/workflows/gh-pages.yml",
+    "count": 3,
+    "uniques": 3
+  },
+  {
+    "path": "/MuYunyun/create-react-doc",
+    "title": "Overview",
+    "count": 2,
+    "uniques": 2
+  },
+  {
     "path": "/MuYunyun/create-react-doc/issues/87",
     "title": "/issues/87",
+    "count": 2,
+    "uniques": 2
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/labels/dependencies",
+    "title": "/labels/dependencies",
     "count": 2,
     "uniques": 2
   },
@@ -9,12 +27,6 @@
     "path": "/MuYunyun/create-react-doc/tree/main/docs",
     "title": "/tree/main/docs",
     "count": 2,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc",
-    "title": "Overview",
-    "count": 1,
     "uniques": 1
   },
   {
@@ -30,32 +42,20 @@
     "uniques": 1
   },
   {
+    "path": "/MuYunyun/create-react-doc/issues/138",
+    "title": "/issues/138",
+    "count": 1,
+    "uniques": 1
+  },
+  {
     "path": "/MuYunyun/create-react-doc/issues/203",
     "title": "/issues/203",
     "count": 1,
     "uniques": 1
   },
   {
-    "path": "/MuYunyun/create-react-doc/pull/107",
-    "title": "/pull/107",
-    "count": 1,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/pull/193",
-    "title": "/pull/193",
-    "count": 1,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/pull/433",
-    "title": "/pull/433",
-    "count": 1,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/pulls",
-    "title": "/pulls",
+    "path": "/MuYunyun/create-react-doc/labels/wontfix",
+    "title": "/labels/wontfix",
     "count": 1,
     "uniques": 1
   }
