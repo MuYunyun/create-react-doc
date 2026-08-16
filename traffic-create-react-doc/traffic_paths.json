@@ -42,12 +42,6 @@
     "uniques": 1
   },
   {
-    "path": "/MuYunyun/create-react-doc/commit/1d93d2543be11dfc856dd517738129751ad7c0ff",
-    "title": "/commit/1d93d2543be11dfc856dd517738129751ad7c0ff",
-    "count": 1,
-    "uniques": 1
-  },
-  {
     "path": "/MuYunyun/create-react-doc/issues/106",
     "title": "/issues/106",
     "count": 1,
@@ -56,6 +50,12 @@
   {
     "path": "/MuYunyun/create-react-doc/issues/132",
     "title": "/issues/132",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/issues/138",
+    "title": "/issues/138",
     "count": 1,
     "uniques": 1
   }
