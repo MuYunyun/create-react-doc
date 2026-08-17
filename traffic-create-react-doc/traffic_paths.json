@@ -14,20 +14,14 @@
   {
     "path": "/MuYunyun/create-react-doc/issues/87",
     "title": "/issues/87",
-    "count": 4,
-    "uniques": 4
+    "count": 5,
+    "uniques": 5
   },
   {
     "path": "/MuYunyun/create-react-doc/labels/dependencies",
     "title": "/labels/dependencies",
     "count": 2,
     "uniques": 2
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/tree/main/docs",
-    "title": "/tree/main/docs",
-    "count": 2,
-    "uniques": 1
   },
   {
     "path": "/MuYunyun/create-react-doc/actions",
@@ -38,6 +32,12 @@
   {
     "path": "/MuYunyun/create-react-doc/actions/workflows/traffic2badge.yml",
     "title": "/actions/workflows/traffic2badge.yml",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/blob/dependabot/github_actions/actions/checkout-6.0.1/README.md",
+    "title": "/blob/dependabot/github_actions/actions/checkout-6.0.1/README.md",
     "count": 1,
     "uniques": 1
   },
