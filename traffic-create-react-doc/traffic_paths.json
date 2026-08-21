@@ -1,25 +1,19 @@
 [
   {
-    "path": "/MuYunyun/create-react-doc/blob/main/packages/templates/default/.github/workflows/gh-pages.yml",
-    "title": "/blob/main/packages/templates/default/.github/workflows/gh-pages.yml",
-    "count": 9,
-    "uniques": 9
-  },
-  {
     "path": "/MuYunyun/create-react-doc",
     "title": "Overview",
-    "count": 6,
-    "uniques": 4
+    "count": 5,
+    "uniques": 3
   },
   {
     "path": "/MuYunyun/create-react-doc/issues/87",
     "title": "/issues/87",
-    "count": 5,
-    "uniques": 5
+    "count": 4,
+    "uniques": 4
   },
   {
-    "path": "/MuYunyun/create-react-doc/labels/dependencies",
-    "title": "/labels/dependencies",
+    "path": "/MuYunyun/create-react-doc/blob/main/packages/templates/default/.github/workflows/gh-pages.yml",
+    "title": "/blob/main/packages/templates/default/.github/workflows/gh-pages.yml",
     "count": 2,
     "uniques": 2
   },
@@ -48,14 +42,20 @@
     "uniques": 1
   },
   {
+    "path": "/MuYunyun/create-react-doc/issues",
+    "title": "/issues",
+    "count": 1,
+    "uniques": 1
+  },
+  {
     "path": "/MuYunyun/create-react-doc/issues/132",
     "title": "/issues/132",
     "count": 1,
     "uniques": 1
   },
   {
-    "path": "/MuYunyun/create-react-doc/issues/138",
-    "title": "/issues/138",
+    "path": "/MuYunyun/create-react-doc/issues/156",
+    "title": "/issues/156",
     "count": 1,
     "uniques": 1
   }
