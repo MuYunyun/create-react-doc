@@ -1,33 +1,15 @@
 [
   {
+    "path": "/MuYunyun/create-react-doc/issues/87",
+    "title": "/issues/87",
+    "count": 5,
+    "uniques": 5
+  },
+  {
     "path": "/MuYunyun/create-react-doc",
     "title": "Overview",
     "count": 5,
     "uniques": 3
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/issues/87",
-    "title": "/issues/87",
-    "count": 4,
-    "uniques": 4
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/blob/main/packages/templates/default/.github/workflows/gh-pages.yml",
-    "title": "/blob/main/packages/templates/default/.github/workflows/gh-pages.yml",
-    "count": 2,
-    "uniques": 2
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/actions",
-    "title": "/actions",
-    "count": 1,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/actions/workflows/traffic2badge.yml",
-    "title": "/actions/workflows/traffic2badge.yml",
-    "count": 1,
-    "uniques": 1
   },
   {
     "path": "/MuYunyun/create-react-doc/blob/dependabot/github_actions/actions/checkout-6.0.1/README.md",
@@ -48,14 +30,32 @@
     "uniques": 1
   },
   {
-    "path": "/MuYunyun/create-react-doc/issues/132",
-    "title": "/issues/132",
+    "path": "/MuYunyun/create-react-doc/issues/190",
+    "title": "/issues/190",
     "count": 1,
     "uniques": 1
   },
   {
-    "path": "/MuYunyun/create-react-doc/issues/156",
-    "title": "/issues/156",
+    "path": "/MuYunyun/create-react-doc/issues/206",
+    "title": "/issues/206",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/pull/188",
+    "title": "/pull/188",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/pull/207/checks",
+    "title": "/pull/207/checks",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/pull/224",
+    "title": "/pull/224",
     "count": 1,
     "uniques": 1
   }
