@@ -2,20 +2,20 @@
   {
     "path": "/MuYunyun/create-react-doc/issues/87",
     "title": "/issues/87",
-    "count": 4,
-    "uniques": 4
-  },
-  {
-    "path": "/MuYunyun/create-react-doc",
-    "title": "Overview",
-    "count": 2,
-    "uniques": 2
+    "count": 3,
+    "uniques": 3
   },
   {
     "path": "/MuYunyun/create-react-doc/issues/206",
     "title": "/issues/206",
     "count": 2,
     "uniques": 2
+  },
+  {
+    "path": "/MuYunyun/create-react-doc",
+    "title": "Overview",
+    "count": 1,
+    "uniques": 1
   },
   {
     "path": "/MuYunyun/create-react-doc/blob/dependabot/github_actions/actions/checkout-6.0.1/README.md",
@@ -26,6 +26,12 @@
   {
     "path": "/MuYunyun/create-react-doc/blob/main/gh-pages.js",
     "title": "/blob/main/gh-pages.js",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/discussions",
+    "title": "/discussions",
     "count": 1,
     "uniques": 1
   },
@@ -50,12 +56,6 @@
   {
     "path": "/MuYunyun/create-react-doc/pull/240/files",
     "title": "/pull/240/files",
-    "count": 1,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/pull/301",
-    "title": "/pull/301",
     "count": 1,
     "uniques": 1
   }
