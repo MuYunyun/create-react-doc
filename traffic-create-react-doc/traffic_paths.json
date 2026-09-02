@@ -6,22 +6,16 @@
     "uniques": 2
   },
   {
-    "path": "/MuYunyun/create-react-doc/issues/87",
-    "title": "/issues/87",
-    "count": 2,
-    "uniques": 2
-  },
-  {
     "path": "/MuYunyun/create-react-doc/pull/349",
     "title": "/pull/349",
     "count": 2,
     "uniques": 2
   },
   {
-    "path": "/MuYunyun/create-react-doc/blob/main/gh-pages.js",
-    "title": "/blob/main/gh-pages.js",
-    "count": 1,
-    "uniques": 1
+    "path": "/MuYunyun/create-react-doc/pull/380",
+    "title": "/pull/380",
+    "count": 2,
+    "uniques": 2
   },
   {
     "path": "/MuYunyun/create-react-doc/discussions",
@@ -54,8 +48,14 @@
     "uniques": 1
   },
   {
-    "path": "/MuYunyun/create-react-doc/pull/207/checks",
-    "title": "/pull/207/checks",
+    "path": "/MuYunyun/create-react-doc/issues/87",
+    "title": "/issues/87",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/pull/308",
+    "title": "/pull/308",
     "count": 1,
     "uniques": 1
   }
