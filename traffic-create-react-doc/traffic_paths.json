@@ -2,7 +2,13 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "Overview",
-    "count": 2,
+    "count": 3,
+    "uniques": 2
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/discussions",
+    "title": "/discussions",
+    "count": 3,
     "uniques": 2
   },
   {
@@ -20,12 +26,6 @@
   {
     "path": "/MuYunyun/create-react-doc/commit/39fe15039c2785c5f4334afea0911be844a1fdd6",
     "title": "/commit/39fe15039c2785c5f4334afea0911be844a1fdd6",
-    "count": 1,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/discussions",
-    "title": "/discussions",
     "count": 1,
     "uniques": 1
   },
