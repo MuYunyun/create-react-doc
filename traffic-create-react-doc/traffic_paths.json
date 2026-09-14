@@ -2,7 +2,7 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "Overview",
-    "count": 8,
+    "count": 7,
     "uniques": 4
   },
   {
@@ -10,12 +10,6 @@
     "title": "/discussions",
     "count": 3,
     "uniques": 3
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/pull/349",
-    "title": "/pull/349",
-    "count": 2,
-    "uniques": 2
   },
   {
     "path": "/MuYunyun/create-react-doc/pull/380",
@@ -42,20 +36,26 @@
     "uniques": 1
   },
   {
-    "path": "/MuYunyun/create-react-doc/pull/346",
-    "title": "/pull/346",
-    "count": 1,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/pull/347",
-    "title": "/pull/347",
+    "path": "/MuYunyun/create-react-doc/issues/15",
+    "title": "/issues/15",
     "count": 1,
     "uniques": 1
   },
   {
     "path": "/MuYunyun/create-react-doc/pull/350",
     "title": "/pull/350",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/pull/351",
+    "title": "/pull/351",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/pull/352",
+    "title": "/pull/352",
     "count": 1,
     "uniques": 1
   }
