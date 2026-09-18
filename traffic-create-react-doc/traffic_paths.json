@@ -2,8 +2,8 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "Overview",
-    "count": 8,
-    "uniques": 4
+    "count": 9,
+    "uniques": 5
   },
   {
     "path": "/MuYunyun/create-react-doc/discussions",
@@ -16,12 +16,6 @@
     "title": "/issues",
     "count": 3,
     "uniques": 2
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/commit/39fe15039c2785c5f4334afea0911be844a1fdd6",
-    "title": "/commit/39fe15039c2785c5f4334afea0911be844a1fdd6",
-    "count": 1,
-    "uniques": 1
   },
   {
     "path": "/MuYunyun/create-react-doc/commit/89fa5c6420839bfab782a448890eb6d39c265b2e",
@@ -38,6 +32,12 @@
   {
     "path": "/MuYunyun/create-react-doc/issues/195",
     "title": "/issues/195",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/issues/286",
+    "title": "/issues/286",
     "count": 1,
     "uniques": 1
   },
