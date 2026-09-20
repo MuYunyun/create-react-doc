@@ -2,8 +2,8 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "Overview",
-    "count": 8,
-    "uniques": 5
+    "count": 9,
+    "uniques": 6
   },
   {
     "path": "/MuYunyun/create-react-doc/discussions",
@@ -18,8 +18,26 @@
     "uniques": 2
   },
   {
+    "path": "/MuYunyun/create-react-doc/blob/main/.github/FUNDING.yml",
+    "title": "/blob/main/.github/FUNDING.yml",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/blob/main/.github/stale.yml",
+    "title": "/blob/main/.github/stale.yml",
+    "count": 1,
+    "uniques": 1
+  },
+  {
     "path": "/MuYunyun/create-react-doc/commit/89fa5c6420839bfab782a448890eb6d39c265b2e",
     "title": "/commit/89fa5c6420839bfab782a448890eb6d39c265b2e",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/compare",
+    "title": "/compare",
     "count": 1,
     "uniques": 1
   },
@@ -38,24 +56,6 @@
   {
     "path": "/MuYunyun/create-react-doc/issues/286",
     "title": "/issues/286",
-    "count": 1,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/pull/402",
-    "title": "/pull/402",
-    "count": 1,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/pull/406",
-    "title": "/pull/406",
-    "count": 1,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/pull/407",
-    "title": "/pull/407",
     "count": 1,
     "uniques": 1
   }
