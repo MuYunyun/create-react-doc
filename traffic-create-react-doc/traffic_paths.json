@@ -8,14 +8,14 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "Overview",
-    "count": 5,
+    "count": 6,
     "uniques": 5
   },
   {
     "path": "/MuYunyun/create-react-doc/discussions",
     "title": "/discussions",
-    "count": 3,
-    "uniques": 2
+    "count": 4,
+    "uniques": 3
   },
   {
     "path": "/MuYunyun/create-react-doc/pull/240/files",
@@ -48,14 +48,14 @@
     "uniques": 1
   },
   {
-    "path": "/MuYunyun/create-react-doc/compare",
-    "title": "/compare",
+    "path": "/MuYunyun/create-react-doc/blob/main/README-en.md",
+    "title": "/blob/main/README-en.md",
     "count": 1,
     "uniques": 1
   },
   {
-    "path": "/MuYunyun/create-react-doc/issues/146",
-    "title": "/issues/146",
+    "path": "/MuYunyun/create-react-doc/compare",
+    "title": "/compare",
     "count": 1,
     "uniques": 1
   }
