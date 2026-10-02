@@ -1,15 +1,15 @@
 [
   {
-    "path": "/MuYunyun/create-react-doc",
-    "title": "Overview",
-    "count": 6,
-    "uniques": 5
-  },
-  {
     "path": "/MuYunyun/create-react-doc/issues",
     "title": "/issues",
     "count": 5,
     "uniques": 5
+  },
+  {
+    "path": "/MuYunyun/create-react-doc",
+    "title": "Overview",
+    "count": 5,
+    "uniques": 4
   },
   {
     "path": "/MuYunyun/create-react-doc/discussions",
