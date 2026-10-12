@@ -2,7 +2,7 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "Overview",
-    "count": 5,
+    "count": 4,
     "uniques": 4
   },
   {
@@ -20,6 +20,12 @@
   {
     "path": "/MuYunyun/create-react-doc/blob/main/CONTRIBUTING.md",
     "title": "/blob/main/CONTRIBUTING.md",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/blob/main/README-en.md",
+    "title": "/blob/main/README-en.md",
     "count": 1,
     "uniques": 1
   },
@@ -50,12 +56,6 @@
   {
     "path": "/MuYunyun/create-react-doc/issues/238",
     "title": "/issues/238",
-    "count": 1,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/issues/26",
-    "title": "/issues/26",
     "count": 1,
     "uniques": 1
   }
