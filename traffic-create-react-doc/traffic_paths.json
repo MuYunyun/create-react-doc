@@ -6,26 +6,20 @@
     "uniques": 2
   },
   {
-    "path": "/MuYunyun/create-react-doc/blob/main/CONTRIBUTING.md",
-    "title": "/blob/main/CONTRIBUTING.md",
-    "count": 2,
-    "uniques": 2
-  },
-  {
     "path": "/MuYunyun/create-react-doc/discussions",
     "title": "/discussions",
     "count": 2,
     "uniques": 1
   },
   {
-    "path": "/MuYunyun/create-react-doc/blob/main/README-en.md",
-    "title": "/blob/main/README-en.md",
+    "path": "/MuYunyun/create-react-doc/blob/main/CONTRIBUTING.md",
+    "title": "/blob/main/CONTRIBUTING.md",
     "count": 1,
     "uniques": 1
   },
   {
-    "path": "/MuYunyun/create-react-doc/issues/278",
-    "title": "/issues/278",
+    "path": "/MuYunyun/create-react-doc/blob/main/README-en.md",
+    "title": "/blob/main/README-en.md",
     "count": 1,
     "uniques": 1
   },
@@ -36,26 +30,14 @@
     "uniques": 1
   },
   {
-    "path": "/MuYunyun/create-react-doc/pull/272",
-    "title": "/pull/272",
+    "path": "/MuYunyun/create-react-doc/pull/289",
+    "title": "/pull/289",
     "count": 1,
     "uniques": 1
   },
   {
-    "path": "/MuYunyun/create-react-doc/pull/275",
-    "title": "/pull/275",
-    "count": 1,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/pull/276",
-    "title": "/pull/276",
-    "count": 1,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/pull/279",
-    "title": "/pull/279",
+    "path": "/MuYunyun/create-react-doc/pulls",
+    "title": "/pulls",
     "count": 1,
     "uniques": 1
   }
