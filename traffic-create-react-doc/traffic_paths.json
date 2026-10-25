@@ -1,15 +1,15 @@
 [
   {
+    "path": "/MuYunyun/create-react-doc/discussions",
+    "title": "/discussions",
+    "count": 3,
+    "uniques": 2
+  },
+  {
     "path": "/MuYunyun/create-react-doc",
     "title": "Overview",
     "count": 2,
     "uniques": 2
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/discussions",
-    "title": "/discussions",
-    "count": 2,
-    "uniques": 1
   },
   {
     "path": "/MuYunyun/create-react-doc/blob/main/CONTRIBUTING.md",
