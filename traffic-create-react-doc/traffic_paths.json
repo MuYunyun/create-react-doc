@@ -18,14 +18,14 @@
     "uniques": 3
   },
   {
-    "path": "/MuYunyun/create-react-doc/discussions",
-    "title": "/discussions",
-    "count": 3,
+    "path": "/MuYunyun/create-react-doc",
+    "title": "Overview",
+    "count": 2,
     "uniques": 2
   },
   {
-    "path": "/MuYunyun/create-react-doc",
-    "title": "Overview",
+    "path": "/MuYunyun/create-react-doc/discussions",
+    "title": "/discussions",
     "count": 2,
     "uniques": 2
   },
