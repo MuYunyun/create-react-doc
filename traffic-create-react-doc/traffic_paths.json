@@ -1,5 +1,11 @@
 [
   {
+    "path": "/MuYunyun/create-react-doc",
+    "title": "Overview",
+    "count": 3,
+    "uniques": 3
+  },
+  {
     "path": "/MuYunyun/create-react-doc/blob/main/CONTRIBUTING.md",
     "title": "/blob/main/CONTRIBUTING.md",
     "count": 3,
@@ -18,8 +24,8 @@
     "uniques": 3
   },
   {
-    "path": "/MuYunyun/create-react-doc",
-    "title": "Overview",
+    "path": "/MuYunyun/create-react-doc/blob/main/.gitignore",
+    "title": "/blob/main/.gitignore",
     "count": 2,
     "uniques": 2
   },
@@ -38,12 +44,6 @@
   {
     "path": "/MuYunyun/create-react-doc/blob/main/.eslintrc.js",
     "title": "/blob/main/.eslintrc.js",
-    "count": 1,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/blob/main/.gitignore",
-    "title": "/blob/main/.gitignore",
     "count": 1,
     "uniques": 1
   },
