@@ -36,12 +36,6 @@
     "uniques": 2
   },
   {
-    "path": "/MuYunyun/create-react-doc/discussions",
-    "title": "/discussions",
-    "count": 2,
-    "uniques": 2
-  },
-  {
     "path": "/MuYunyun/create-react-doc/tree/main/components",
     "title": "/tree/main/components",
     "count": 2,
@@ -56,6 +50,12 @@
   {
     "path": "/MuYunyun/create-react-doc/blob/main/.editorconfig",
     "title": "/blob/main/.editorconfig",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/blob/main/.eslintrc.js",
+    "title": "/blob/main/.eslintrc.js",
     "count": 1,
     "uniques": 1
   }
