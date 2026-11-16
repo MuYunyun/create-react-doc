@@ -2,38 +2,8 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "Overview",
-    "count": 8,
-    "uniques": 5
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/blob/main/README-en.md",
-    "title": "/blob/main/README-en.md",
-    "count": 4,
+    "count": 7,
     "uniques": 4
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/blob/main/README.md",
-    "title": "/blob/main/README.md",
-    "count": 4,
-    "uniques": 4
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/blob/main/CONTRIBUTING.md",
-    "title": "/blob/main/CONTRIBUTING.md",
-    "count": 3,
-    "uniques": 3
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/blob/main/.gitignore",
-    "title": "/blob/main/.gitignore",
-    "count": 2,
-    "uniques": 2
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/blob/main/.yarnrc",
-    "title": "/blob/main/.yarnrc",
-    "count": 2,
-    "uniques": 2
   },
   {
     "path": "/MuYunyun/create-react-doc/tree/main/components",
@@ -48,14 +18,44 @@
     "uniques": 1
   },
   {
-    "path": "/MuYunyun/create-react-doc/blob/main/.editorconfig",
-    "title": "/blob/main/.editorconfig",
+    "path": "/MuYunyun/create-react-doc/blob/main/.gitignore",
+    "title": "/blob/main/.gitignore",
     "count": 1,
     "uniques": 1
   },
   {
-    "path": "/MuYunyun/create-react-doc/blob/main/.eslintrc.js",
-    "title": "/blob/main/.eslintrc.js",
+    "path": "/MuYunyun/create-react-doc/blob/main/.yarnrc",
+    "title": "/blob/main/.yarnrc",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/blob/main/README-en.md",
+    "title": "/blob/main/README-en.md",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/blob/main/README.md",
+    "title": "/blob/main/README.md",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/commits/c5105c775bed48a2e1c0a4ce4c910e8c862ee8b9",
+    "title": "/commits/c5105c775bed48a2e1c0a4ce4c910e8c862ee8b9",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/discussions",
+    "title": "/discussions",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/create-react-doc/graphs/contributors",
+    "title": "/graphs/contributors",
     "count": 1,
     "uniques": 1
   }
