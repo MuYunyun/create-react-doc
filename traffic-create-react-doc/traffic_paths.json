@@ -2,8 +2,8 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "Overview",
-    "count": 7,
-    "uniques": 4
+    "count": 6,
+    "uniques": 3
   },
   {
     "path": "/MuYunyun/create-react-doc/tree/main/components",
@@ -12,14 +12,14 @@
     "uniques": 2
   },
   {
-    "path": "/MuYunyun/create-react-doc/blob/2d6b51a0140ecbd4fd49ea43ef232a162e12a671/docs/更新日志.md",
-    "title": "/blob/2d6b51a0140ecbd4fd49ea43ef232a162e12a671/docs/更新日志.md",
-    "count": 1,
+    "path": "/MuYunyun/create-react-doc/issues",
+    "title": "/issues",
+    "count": 2,
     "uniques": 1
   },
   {
-    "path": "/MuYunyun/create-react-doc/blob/main/.gitignore",
-    "title": "/blob/main/.gitignore",
+    "path": "/MuYunyun/create-react-doc/blob/2d6b51a0140ecbd4fd49ea43ef232a162e12a671/docs/更新日志.md",
+    "title": "/blob/2d6b51a0140ecbd4fd49ea43ef232a162e12a671/docs/更新日志.md",
     "count": 1,
     "uniques": 1
   },
