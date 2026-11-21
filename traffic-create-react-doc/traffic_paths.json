@@ -2,38 +2,14 @@
   {
     "path": "/MuYunyun/create-react-doc",
     "title": "Overview",
-    "count": 5,
+    "count": 4,
     "uniques": 4
   },
   {
     "path": "/MuYunyun/create-react-doc/issues",
     "title": "/issues",
-    "count": 3,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/tree/main/components",
-    "title": "/tree/main/components",
-    "count": 2,
+    "count": 4,
     "uniques": 2
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/commits/c5105c775bed48a2e1c0a4ce4c910e8c862ee8b9",
-    "title": "/commits/c5105c775bed48a2e1c0a4ce4c910e8c862ee8b9",
-    "count": 1,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/discussions",
-    "title": "/discussions",
-    "count": 1,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/graphs/contributors",
-    "title": "/graphs/contributors",
-    "count": 1,
-    "uniques": 1
   },
   {
     "path": "/MuYunyun/create-react-doc/pull/16",
@@ -44,12 +20,6 @@
   {
     "path": "/MuYunyun/create-react-doc/tree/main/.github",
     "title": "/tree/main/.github",
-    "count": 1,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/create-react-doc/tree/main/packages/crd-generator-sitemap",
-    "title": "/tree/main/packages/crd-generator-sitemap",
     "count": 1,
     "uniques": 1
   }
